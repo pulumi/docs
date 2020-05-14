@@ -30,6 +30,75 @@ does not have an App Engine app, you must create one.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudscheduler</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">attempt_deadline</span><span class="o">=</span><span class="s2">&quot;320s&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test http job&quot;</span><span class="p">,</span>
+    <span class="n">http_target</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/ping&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/8 * * * *&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudscheduler</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">app_engine_http_target</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;appEngineRouting&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;instance&quot;</span><span class="p">:</span> <span class="s2">&quot;my-instance-001&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;web&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;relativeUri&quot;</span><span class="p">:</span> <span class="s2">&quot;/ping&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">attempt_deadline</span><span class="o">=</span><span class="s2">&quot;320s&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test app engine job&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/4 * * * *&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;Europe/London&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudscheduler</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test http job&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/8 * * * *&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">,</span>
+    <span class="n">attempt_deadline</span><span class="o">=</span><span class="s2">&quot;320s&quot;</span><span class="p">,</span>
+    <span class="n">http_target</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oauth_token&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;serviceAccountEmail&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudscheduler</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test http job&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/8 * * * *&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">,</span>
+    <span class="n">attempt_deadline</span><span class="o">=</span><span class="s2">&quot;320s&quot;</span><span class="p">,</span>
+    <span class="n">http_target</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/ping&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oidc_token&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;serviceAccountEmail&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

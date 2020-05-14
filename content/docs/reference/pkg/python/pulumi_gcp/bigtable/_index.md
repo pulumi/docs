@@ -19,6 +19,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Creates a Google Cloud Bigtable GC Policy inside a family. For more information see
 <a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">column_family</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">GCPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">column_family</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="n">max_age</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -162,23 +185,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.bigtable.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigtable.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clusters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Google Bigtable instance. For more information see
-<a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
-<a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>clusters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.</p></li>
-<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable display name of the Bigtable instance. Defaults to the instance <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type to create. One of <code class="docutils literal notranslate"><span class="pre">&quot;DEVELOPMENT&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;PRODUCTION&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;PRODUCTION&quot;</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Instance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] clusters: A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+:param pulumi.Input[str] display_name: The human-readable display name of the Bigtable instance. Defaults to the instance <code class="docutils literal notranslate"><span class="pre">name</span></code>.
+:param pulumi.Input[str] instance_type: The instance type to create. One of <code class="docutils literal notranslate"><span class="pre">&quot;DEVELOPMENT&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;PRODUCTION&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;PRODUCTION&quot;</span></code>.
+:param pulumi.Input[str] name: The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs. If it</p>
+<blockquote>
+<div><p>is not provided, the provider project is used.</p>
+</div></blockquote>
 <p>The <strong>clusters</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
@@ -318,6 +335,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamPolicy</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamBinding</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -445,6 +493,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamPolicy</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamBinding</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -572,6 +651,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamPolicy</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamBinding</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">InstanceIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;your-bigtable-instance&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -671,23 +781,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.bigtable.Table">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigtable.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">column_families</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">split_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Table" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Google Cloud Bigtable table inside an instance. For more information see
-<a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
-<a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>column_families</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>split_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of predefined keys to split the table on.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Table resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] column_families: A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
+:param pulumi.Input[str] instance_name: The name of the Bigtable instance.
+:param pulumi.Input[str] name: The name of the table.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs. If it</p>
+<blockquote>
+<div><p>is not provided, the provider project is used.</p>
+</div></blockquote>
 <p>The <strong>column_families</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the column family.</p></li>
@@ -720,12 +823,6 @@ is not provided, the provider project is used.</p></li>
 is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="py attribute">
-<dt id="pulumi_gcp.bigtable.Table.split_keys">
-<code class="sig-name descname">split_keys</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.Table.split_keys" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of predefined keys to split the table on.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_gcp.bigtable.Table.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">column_families</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">split_keys</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Table.get" title="Permalink to this definition">¶</a></dt>
@@ -742,7 +839,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>split_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of predefined keys to split the table on.</p></li>
 </ul>
 </dd>
 </dl>

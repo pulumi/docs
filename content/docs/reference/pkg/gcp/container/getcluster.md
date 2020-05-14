@@ -2046,6 +2046,14 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>Kalm<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Kubernetes<wbr>Dashboards</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard<wbr>Args&gt;</a></span>
@@ -2112,6 +2120,14 @@ The following output properties are available:
         <span>Istio<wbr>Configs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">[]Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Kalm<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">[]Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2188,6 +2204,14 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>kalm<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>kubernetes<wbr>Dashboards</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard[]</a></span>
@@ -2254,6 +2278,14 @@ The following output properties are available:
         <span>istio<wbr>Configs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>kalm<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2768,6 +2800,84 @@ The following output properties are available:
     <dt class="property-required"
             title="Required">
         <span>disabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusteraddonsconfigkalmconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigKalmConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterAddonsConfigKalmConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigKalmConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

@@ -26,6 +26,37 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">note</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">containeranalysis</span><span class="o">.</span><span class="n">Note</span><span class="p">(</span><span class="s2">&quot;note&quot;</span><span class="p">,</span> <span class="n">attestation_authority</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;hint&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;humanReadableName&quot;</span><span class="p">:</span> <span class="s2">&quot;Attestor Note&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+<span class="n">attestor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">Attestor</span><span class="p">(</span><span class="s2">&quot;attestor&quot;</span><span class="p">,</span> <span class="n">attestation_authority_note</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;noteReference&quot;</span><span class="p">:</span> <span class="n">note</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;public_keys&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;asciiArmoredPgpPublicKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl</span>
+<span class="s2">bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0</span>
+<span class="s2">oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6</span>
+<span class="s2">V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD</span>
+<span class="s2">Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX</span>
+<span class="s2">83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y</span>
+<span class="s2">IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L</span>
+<span class="s2">uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6</span>
+<span class="s2">0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC</span>
+<span class="s2">51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U</span>
+<span class="s2">WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h</span>
+<span class="s2">MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l</span>
+<span class="s2">+OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1</span>
+<span class="s2">qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg</span>
+<span class="s2">=6Bvm</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -321,6 +352,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -448,6 +512,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -575,6 +672,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">AttestorIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">attestor</span><span class="o">=</span><span class="n">google_binary_authorization_attestor</span><span class="p">[</span><span class="s2">&quot;attestor&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -687,6 +817,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">note</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">containeranalysis</span><span class="o">.</span><span class="n">Note</span><span class="p">(</span><span class="s2">&quot;note&quot;</span><span class="p">,</span> <span class="n">attestation_authority</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;hint&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;humanReadableName&quot;</span><span class="p">:</span> <span class="s2">&quot;My attestor&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+<span class="n">attestor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">Attestor</span><span class="p">(</span><span class="s2">&quot;attestor&quot;</span><span class="p">,</span> <span class="n">attestation_authority_note</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;noteReference&quot;</span><span class="p">:</span> <span class="n">note</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">admission_whitelist_patterns</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;namePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;gcr.io/google_containers/*&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">default_admission_rule</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;evaluationMode&quot;</span><span class="p">:</span> <span class="s2">&quot;ALWAYS_ALLOW&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enforcementMode&quot;</span><span class="p">:</span> <span class="s2">&quot;ENFORCED_BLOCK_AND_AUDIT_LOG&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">cluster_admission_rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cluster&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-a.prod-cluster&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;evaluationMode&quot;</span><span class="p">:</span> <span class="s2">&quot;REQUIRE_ATTESTATION&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enforcementMode&quot;</span><span class="p">:</span> <span class="s2">&quot;ENFORCED_BLOCK_AND_AUDIT_LOG&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requireAttestationsBies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">attestor</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">note</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">containeranalysis</span><span class="o">.</span><span class="n">Note</span><span class="p">(</span><span class="s2">&quot;note&quot;</span><span class="p">,</span> <span class="n">attestation_authority</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;hint&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;humanReadableName&quot;</span><span class="p">:</span> <span class="s2">&quot;My attestor&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+<span class="n">attestor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">Attestor</span><span class="p">(</span><span class="s2">&quot;attestor&quot;</span><span class="p">,</span> <span class="n">attestation_authority_note</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;noteReference&quot;</span><span class="p">:</span> <span class="n">note</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">binaryauthorization</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">default_admission_rule</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;evaluationMode&quot;</span><span class="p">:</span> <span class="s2">&quot;REQUIRE_ATTESTATION&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enforcementMode&quot;</span><span class="p">:</span> <span class="s2">&quot;ENFORCED_BLOCK_AND_AUDIT_LOG&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requireAttestationsBies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">attestor</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">global_policy_evaluation_mode</span><span class="o">=</span><span class="s2">&quot;ENABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

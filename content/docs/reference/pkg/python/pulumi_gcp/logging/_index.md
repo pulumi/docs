@@ -14,6 +14,121 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.logging"></span><dl class="py class">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">BillingAccountBucketConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a BillingAccountBucketConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] billing_account: The parent resource that contains the logging bucket.
+:param pulumi.Input[str] bucket_id: The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.
+:param pulumi.Input[str] description: Describes this bucket.
+:param pulumi.Input[str] location: The location of the bucket. The supported locations are: “global” “us-central1”
+:param pulumi.Input[float] retention_days: Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.billing_account">
+<code class="sig-name descname">billing_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.billing_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent resource that contains the logging bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.bucket_id">
+<code class="sig-name descname">bucket_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.bucket_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes this bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.lifecycle_state">
+<code class="sig-name descname">lifecycle_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the bucket. The supported locations are: “global” “us-central1”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the bucket. For example: “projects/my-project-id/locations/my-location/buckets/my-bucket-id”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.retention_days">
+<code class="sig-name descname">retention_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.retention_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BillingAccountBucketConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent resource that contains the logging bucket.</p></li>
+<li><p><strong>bucket_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes this bucket.</p></li>
+<li><p><strong>lifecycle_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the bucket. The supported locations are: “global” “us-central1”</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the bucket. For example: “projects/my-project-id/locations/my-location/buckets/my-bucket-id”</p></li>
+<li><p><strong>retention_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.BillingAccountBucketConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountBucketConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.logging.BillingAccountExclusion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">BillingAccountExclusion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a billing account logging exclusion. For more information see
@@ -21,6 +136,15 @@ anything, please consult the source <a class="reference external" href="https://
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with the provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_exclusion</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">BillingAccountExclusion</span><span class="p">(</span><span class="s2">&quot;my-exclusion&quot;</span><span class="p">,</span>
+    <span class="n">billing_account</span><span class="o">=</span><span class="s2">&quot;ABCDEF-012345-GHIJKL&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Exclude GCE instance debug logs&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &lt;= DEBUG&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -145,6 +269,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the credentials used with this provider. <a class="reference external" href="https://cloud.google.com/billing/docs/how-to/billing-access">IAM roles granted on a billing account</a> are separate from the
 typical IAM roles granted on a project.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">log_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;log-bucket&quot;</span><span class="p">)</span>
+<span class="n">my_sink</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">BillingAccountSink</span><span class="p">(</span><span class="s2">&quot;my-sink&quot;</span><span class="p">,</span>
+    <span class="n">billing_account</span><span class="o">=</span><span class="s2">&quot;ABCDEF-012345-GHIJKL&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="n">log_bucket</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;storage.googleapis.com/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">log_writer</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;log-writer&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/storage.objectCreator&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="n">my_sink</span><span class="o">.</span><span class="n">writer_identity</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -153,8 +289,19 @@ typical IAM roles granted on a project.</p>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account exported to the sink.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -192,8 +339,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 <dt id="pulumi_gcp.logging.BillingAccountSink.destination">
 <code class="sig-name descname">destination</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -231,8 +381,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account exported to the sink.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -291,6 +452,121 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.logging.FolderBucketConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">FolderBucketConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a FolderBucketConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket_id: The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.
+:param pulumi.Input[str] description: Describes this bucket.
+:param pulumi.Input[str] folder: The parent resource that contains the logging bucket.
+:param pulumi.Input[str] location: The location of the bucket. The supported locations are: “global” “us-central1”
+:param pulumi.Input[float] retention_days: Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.bucket_id">
+<code class="sig-name descname">bucket_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.bucket_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes this bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.folder">
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent resource that contains the logging bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.lifecycle_state">
+<code class="sig-name descname">lifecycle_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the bucket. The supported locations are: “global” “us-central1”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the bucket. For example: “folders/my-folder-id/locations/my-location/buckets/my-bucket-id”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.retention_days">
+<code class="sig-name descname">retention_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.retention_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FolderBucketConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes this bucket.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent resource that contains the logging bucket.</p></li>
+<li><p><strong>lifecycle_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the bucket. The supported locations are: “global” “us-central1”</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the bucket. For example: “folders/my-folder-id/locations/my-location/buckets/my-bucket-id”</p></li>
+<li><p><strong>retention_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.FolderBucketConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderBucketConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.logging.FolderExclusion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">FolderExclusion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a folder-level logging exclusion. For more information see
@@ -298,6 +574,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_folder</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Folder</span><span class="p">(</span><span class="s2">&quot;my-folder&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My folder&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="s2">&quot;organizations/123456&quot;</span><span class="p">)</span>
+<span class="n">my_exclusion</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">FolderExclusion</span><span class="p">(</span><span class="s2">&quot;my-exclusion&quot;</span><span class="p">,</span>
+    <span class="n">folder</span><span class="o">=</span><span class="n">my_folder</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Exclude GCE instance debug logs&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &lt;= DEBUG&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -422,6 +710,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">log_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;log-bucket&quot;</span><span class="p">)</span>
+<span class="n">my_folder</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Folder</span><span class="p">(</span><span class="s2">&quot;my-folder&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My folder&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="s2">&quot;organizations/123456&quot;</span><span class="p">)</span>
+<span class="n">my_sink</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">FolderSink</span><span class="p">(</span><span class="s2">&quot;my-sink&quot;</span><span class="p">,</span>
+    <span class="n">folder</span><span class="o">=</span><span class="n">my_folder</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="n">log_bucket</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;storage.googleapis.com/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &gt;= WARN&quot;</span><span class="p">)</span>
+<span class="n">log_writer</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;log-writer&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/storage.objectCreator&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="n">my_sink</span><span class="o">.</span><span class="n">writer_identity</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -429,8 +733,19 @@ granted to the credentials used with this provider.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -466,8 +781,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 <dt id="pulumi_gcp.logging.FolderSink.destination">
 <code class="sig-name descname">destination</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -518,8 +836,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -596,6 +925,73 @@ an optional histogram of the values as specified by the bucket options.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">logging_metric</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">Metric</span><span class="p">(</span><span class="s2">&quot;loggingMetric&quot;</span><span class="p">,</span>
+    <span class="n">bucket_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;linearBuckets&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;numFiniteBuckets&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type=gae_app AND severity&gt;=ERROR&quot;</span><span class="p">,</span>
+    <span class="n">label_extractors</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mass&quot;</span><span class="p">:</span> <span class="s2">&quot;EXTRACT(jsonPayload.request)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;EXTRACT(jsonPayload.id)&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_descriptor</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;My metric&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;amount of matter&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;mass&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Identifying number for item&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;sku&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;INT64&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;metricKind&quot;</span><span class="p">:</span> <span class="s2">&quot;DELTA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;DISTRIBUTION&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">value_extractor</span><span class="o">=</span><span class="s2">&quot;EXTRACT(jsonPayload.request)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">logging_metric</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">Metric</span><span class="p">(</span><span class="s2">&quot;loggingMetric&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type=gae_app AND severity&gt;=ERROR&quot;</span><span class="p">,</span>
+    <span class="n">metric_descriptor</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;metricKind&quot;</span><span class="p">:</span> <span class="s2">&quot;DELTA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;INT64&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">logging_metric</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">Metric</span><span class="p">(</span><span class="s2">&quot;loggingMetric&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type=gae_app AND severity&gt;=ERROR&quot;</span><span class="p">,</span>
+    <span class="n">label_extractors</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mass&quot;</span><span class="p">:</span> <span class="s2">&quot;EXTRACT(jsonPayload.request)&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_descriptor</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;amount of matter&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;mass&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;metricKind&quot;</span><span class="p">:</span> <span class="s2">&quot;DELTA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;valueType&quot;</span><span class="p">:</span> <span class="s2">&quot;INT64&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -916,6 +1312,121 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">OrganizationBucketConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a OrganizationBucketConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket_id: The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.
+:param pulumi.Input[str] description: Describes this bucket.
+:param pulumi.Input[str] location: The location of the bucket. The supported locations are: “global” “us-central1”
+:param pulumi.Input[str] organization: The parent resource that contains the logging bucket.
+:param pulumi.Input[float] retention_days: Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.bucket_id">
+<code class="sig-name descname">bucket_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.bucket_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes this bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.lifecycle_state">
+<code class="sig-name descname">lifecycle_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the bucket. The supported locations are: “global” “us-central1”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the bucket. For example: “organizations/my-organization-id/locations/my-location/buckets/my-bucket-id”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.organization">
+<code class="sig-name descname">organization</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent resource that contains the logging bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.retention_days">
+<code class="sig-name descname">retention_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.retention_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OrganizationBucketConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes this bucket.</p></li>
+<li><p><strong>lifecycle_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the bucket. The supported locations are: “global” “us-central1”</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the bucket. For example: “organizations/my-organization-id/locations/my-location/buckets/my-bucket-id”</p></li>
+<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent resource that contains the logging bucket.</p></li>
+<li><p><strong>retention_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.OrganizationBucketConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationBucketConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.logging.OrganizationExclusion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">OrganizationExclusion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an organization-level logging exclusion. For more information see
@@ -923,6 +1434,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_exclusion</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">OrganizationExclusion</span><span class="p">(</span><span class="s2">&quot;my-exclusion&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Exclude GCE instance debug logs&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &lt;= DEBUG&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1044,6 +1564,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">log_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;log-bucket&quot;</span><span class="p">)</span>
+<span class="n">my_sink</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">OrganizationSink</span><span class="p">(</span><span class="s2">&quot;my-sink&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="n">log_bucket</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;storage.googleapis.com/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &gt;= WARN&quot;</span><span class="p">)</span>
+<span class="n">log_writer</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;log-writer&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/storage.objectCreator&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">my_sink</span><span class="o">.</span><span class="n">writer_identity</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1051,8 +1584,19 @@ granted to the credentials used with this provider.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -1087,8 +1631,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 <dt id="pulumi_gcp.logging.OrganizationSink.destination">
 <code class="sig-name descname">destination</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1138,8 +1685,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -1201,6 +1759,121 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">ProjectBucketConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ProjectBucketConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket_id: The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.
+:param pulumi.Input[str] description: Describes this bucket.
+:param pulumi.Input[str] location: The location of the bucket. The supported locations are: “global” “us-central1”
+:param pulumi.Input[str] project: The parent resource that contains the logging bucket.
+:param pulumi.Input[float] retention_days: Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.bucket_id">
+<code class="sig-name descname">bucket_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.bucket_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes this bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.lifecycle_state">
+<code class="sig-name descname">lifecycle_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the bucket. The supported locations are: “global” “us-central1”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the bucket. For example: “projects/my-project-id/locations/my-location/buckets/my-bucket-id”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent resource that contains the logging bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.retention_days">
+<code class="sig-name descname">retention_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.retention_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectBucketConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging bucket. Logging automatically creates two log buckets: <code class="docutils literal notranslate"><span class="pre">_Required</span></code> and <code class="docutils literal notranslate"><span class="pre">_Default</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes this bucket.</p></li>
+<li><p><strong>lifecycle_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The bucket’s lifecycle such as active or deleted. See <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState">LifecycleState</a>.</p>
+</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the bucket. The supported locations are: “global” “us-central1”</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the bucket. For example: “projects/my-project-id/locations/my-location/buckets/my-bucket-id”</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent resource that contains the logging bucket.</p></li>
+<li><p><strong>retention_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.logging.ProjectBucketConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectBucketConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.logging.ProjectExclusion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">ProjectExclusion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a project-level logging exclusion. For more information see
@@ -1208,6 +1881,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_exclusion</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">ProjectExclusion</span><span class="p">(</span><span class="s2">&quot;my-exclusion&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Exclude GCE instance debug logs&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &lt;= DEBUG&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1336,6 +2017,15 @@ and
 <div><p><strong>Note:</strong> You must have <a class="reference external" href="https://cloud.google.com/logging/docs/access-control">granted the “Logs Configuration Writer”</a> IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>) to the credentials used with this provider.</p>
 <p><strong>Note</strong> You must <a class="reference external" href="https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com">enable the Cloud Resource Manager API</a></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_sink</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">ProjectSink</span><span class="p">(</span><span class="s2">&quot;my-sink&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;pubsub.googleapis.com/projects/my-project/topics/instance-activity&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.type = gce_instance AND severity &gt;= WARN&quot;</span><span class="p">,</span>
+    <span class="n">unique_writer_identity</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1343,8 +2033,19 @@ and
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -1382,8 +2083,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 <dt id="pulumi_gcp.logging.ProjectSink.destination">
 <code class="sig-name descname">destination</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1436,8 +2140,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+import pulumi
+```
+The writer associated with the sink must have access to write to the above resource.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>

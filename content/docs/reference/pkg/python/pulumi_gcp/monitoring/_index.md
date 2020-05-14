@@ -28,6 +28,29 @@ about this state.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">alert_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;alertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">combiner</span><span class="o">=</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;conditionThreshold&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;aggregations&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;alignmentPeriod&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;perSeriesAligner&quot;</span><span class="p">:</span> <span class="s2">&quot;ALIGN_RATE&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPARISON_GT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;metric.type=&quot;</span><span class="n">compute</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">instance</span><span class="o">/</span><span class="n">disk</span><span class="o">/</span><span class="n">write_bytes_count</span><span class="s2">&quot; AND resource.type=&quot;</span><span class="n">gce_instance</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;test condition&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Alert Policy&quot;</span><span class="p">,</span>
+    <span class="n">user_labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1548,6 +1571,17 @@ the service are accessible</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">CustomService</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Custom Service custom-srv&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="s2">&quot;custom-srv&quot;</span><span class="p">,</span>
+    <span class="n">telemetry</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;//product.googleapis.com/foo/foo/services/test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1773,6 +1807,26 @@ resource, then that resource is a member of that group.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">parent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringParentGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">subgroup</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;subgroup&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringSubGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">parent_name</span><span class="o">=</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1930,6 +1984,35 @@ This provides the channel type and all of the required labels that must be passe
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">sensitive_labels.auth_token</span></code>, <code class="docutils literal notranslate"><span class="pre">sensitive_labels.password</span></code>, and <code class="docutils literal notranslate"><span class="pre">sensitive_labels.service_key</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">NotificationChannel</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Notification Channel&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;fake_email@blahblah.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">NotificationChannel</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Slack Channel&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;channel_name&quot;</span><span class="p">:</span> <span class="s2">&quot;#foobar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">sensitive_labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;authToken&quot;</span><span class="p">:</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;slack&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1959,9 +2042,9 @@ to a different credential configuration in the config will require an apply to u
 </dl>
 <p>The <strong>sensitive_labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.description">
@@ -2016,9 +2099,9 @@ in the <code class="docutils literal notranslate"><span class="pre">labels</span
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -2090,9 +2173,9 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 </dl>
 <p>The <strong>sensitive_labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -2137,32 +2220,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.monitoring.Slo">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Service-Level Objective (SLO) describes the level of desired good
-service. It consists of a service-level indicator (SLI), a performance
-goal, and a period over which the objective is to be evaluated against
-that goal. The SLO can use SLIs defined in a number of different manners.
-Typical SLOs might include “99% of requests in each rolling week have
-latency below 200 milliseconds” or “99.5% of requests in each calendar
-month return successfully.”</p>
-<p>To get more information about Slo, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services.serviceLevelObjectives">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/monitoring/service-monitoring">Service Monitoring</a></p></li>
-<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Slo resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] basic_sli: Basic Service-Level Indicator (SLI) on a well-known service type.</p>
+<blockquote>
+<div><p>Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.  Structure is documented below.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type.
-Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p></li>
 <li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current
 <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
@@ -2406,6 +2475,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">http_check.auth_info.password</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">content_matchers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;http-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">http_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/some-path&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8010&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">monitored_resource</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-project-name&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uptime_url&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="n">content_matchers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;https-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">http_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/some-path&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useSsl&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;validateSsl&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">monitored_resource</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-project-name&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uptime_url&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;check&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;uptime-check-group&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.name=has_substring(&quot;</span><span class="n">foo</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="n">tcp_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;tcpGroup&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tcp-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+    <span class="n">tcp_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">888</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_group</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;INSTANCE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;groupId&quot;</span><span class="p">:</span> <span class="n">check</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2433,7 +2570,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2480,7 +2617,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2596,7 +2733,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2679,6 +2816,32 @@ App Engine services.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">myapp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">srv</span> <span class="o">=</span> <span class="n">myapp</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">service</span><span class="p">:</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_app_engine_service</span><span class="p">(</span><span class="n">module_id</span><span class="o">=</span><span class="n">service</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2708,6 +2871,28 @@ like authentication tokens or contact info are only partially populated on retri
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_notification_channel</span><span class="p">(</span><span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Notification Channel&quot;</span><span class="p">)</span>
+<span class="n">alert_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;alertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Alert Policy&quot;</span><span class="p">,</span>
+    <span class="n">notification_channels</span><span class="o">=</span><span class="p">[</span><span class="n">basic</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">combiner</span><span class="o">=</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;test condition&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;condition_threshold&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;metric.type=&quot;</span><span class="n">compute</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">instance</span><span class="o">/</span><span class="n">disk</span><span class="o">/</span><span class="n">write_bytes_count</span><span class="s2">&quot; AND resource.type=&quot;</span><span class="n">gce_instance</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPARISON_GT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;aggregations&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;alignmentPeriod&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;perSeriesAligner&quot;</span><span class="p">:</span> <span class="s2">&quot;ALIGN_RATE&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2727,7 +2912,13 @@ If it is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.monitoring.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
-<p>Deprecated: gcp.getSecretVersion has been deprecated in favour of gcp.getSecretVersion</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">get_secret_version</span><span class="p">(</span><span class="n">secret</span><span class="o">=</span><span class="s2">&quot;my-secret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Deprecated: gcp.monitoring.getSecretVersion has been deprecated in favour of gcp.secretmanager.getSecretVersion</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2746,6 +2937,13 @@ is not provided, the latest version is retrieved.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_uptime_check_i_ps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_uptime_check_i_ps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the list of IP addresses that checkers run from. For more information see
 the <a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks#get-ips">official documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ips</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_uptime_check_i_ps</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;ipList&quot;</span><span class="p">,</span> <span class="n">ips</span><span class="o">.</span><span class="n">uptime_check_ips</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

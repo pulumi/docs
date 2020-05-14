@@ -64,15 +64,17 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
-    port: 80,
-}});
-const default = new gcp.compute.RegionBackendService("default", {
-    region: "us-central1",
-    healthChecks: [healthCheck.selfLink],
-    protocol: "HTTP",
+const healthCheck = new gcp.compute.HealthCheck("health_check", {
+    httpHealthCheck: {
+        port: 80,
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("default", {
+    healthChecks: healthCheck.selfLink,
     loadBalancingScheme: "INTERNAL_MANAGED",
     localityLbPolicy: "ROUND_ROBIN",
+    protocol: "HTTP",
+    region: "us-central1",
 });
 ```
 ```python
@@ -83,11 +85,11 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.RegionBackendService("default",
-    region="us-central1",
-    health_checks=[health_check.self_link],
-    protocol="HTTP",
+    health_checks=health_check.self_link,
     load_balancing_scheme="INTERNAL_MANAGED",
-    locality_lb_policy="ROUND_ROBIN")
+    locality_lb_policy="ROUND_ROBIN",
+    protocol="HTTP",
+    region="us-central1")
 ```
 ## Example Usage - Region Backend Service Ilb Ring Hash
 
@@ -96,31 +98,33 @@ default = gcp.compute.RegionBackendService("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
-    port: 80,
-}});
-const default = new gcp.compute.RegionBackendService("default", {
-    region: "us-central1",
-    healthChecks: [healthCheck.selfLink],
-    loadBalancingScheme: "INTERNAL_MANAGED",
-    localityLbPolicy: "RING_HASH",
-    sessionAffinity: "HTTP_COOKIE",
-    protocol: "HTTP",
-    circuit_breakers: {
+const healthCheck = new gcp.compute.HealthCheck("health_check", {
+    httpHealthCheck: {
+        port: 80,
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("default", {
+    circuitBreakers: {
         maxConnections: 10,
     },
-    consistent_hash: {
-        http_cookie: {
-            ttl: {
-                seconds: 11,
-                nanos: 1111,
-            },
+    consistentHash: {
+        httpCookie: {
             name: "mycookie",
+            ttl: {
+                nanos: 1111,
+                seconds: 11,
+            },
         },
     },
-    outlier_detection: {
+    healthChecks: healthCheck.selfLink,
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    localityLbPolicy: "RING_HASH",
+    outlierDetection: {
         consecutiveErrors: 2,
     },
+    protocol: "HTTP",
+    region: "us-central1",
+    sessionAffinity: "HTTP_COOKIE",
 });
 ```
 ```python
@@ -131,27 +135,27 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.RegionBackendService("default",
-    region="us-central1",
-    health_checks=[health_check.self_link],
-    load_balancing_scheme="INTERNAL_MANAGED",
-    locality_lb_policy="RING_HASH",
-    session_affinity="HTTP_COOKIE",
-    protocol="HTTP",
     circuit_breakers={
         "maxConnections": 10,
     },
     consistent_hash={
-        "http_cookie": {
-            "ttl": {
-                "seconds": 11,
-                "nanos": 1111,
-            },
+        "httpCookie": {
             "name": "mycookie",
+            "ttl": {
+                "nanos": 1111,
+                "seconds": 11,
+            },
         },
     },
+    health_checks=health_check.self_link,
+    load_balancing_scheme="INTERNAL_MANAGED",
+    locality_lb_policy="RING_HASH",
     outlier_detection={
         "consecutiveErrors": 2,
-    })
+    },
+    protocol="HTTP",
+    region="us-central1",
+    session_affinity="HTTP_COOKIE")
 ```
 ## Example Usage - Region Backend Service Balancing Mode
 

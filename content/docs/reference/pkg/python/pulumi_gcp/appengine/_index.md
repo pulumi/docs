@@ -25,6 +25,17 @@ This provider is not able to delete App Engine applications.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myProject&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">location_id</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -247,6 +258,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">admin_v3</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;adminV3&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v3&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">noop_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">web_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">ApplicationUrlDispatchRules</span><span class="p">(</span><span class="s2">&quot;webService&quot;</span><span class="p">,</span> <span class="n">dispatch_rules</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/admin/*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">admin_v3</span><span class="o">.</span><span class="n">service</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -367,6 +415,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">domain_mapping</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">DomainMapping</span><span class="p">(</span><span class="s2">&quot;domainMapping&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;verified-domain.com&quot;</span><span class="p">,</span>
+    <span class="n">ssl_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;sslManagementType&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTOMATIC&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -552,6 +610,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">liveapp_v1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;liveappV1&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;liveapp&quot;</span><span class="p">,</span>
+    <span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">liveapp_v2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;liveappV2&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v2&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;liveapp&quot;</span><span class="p">,</span>
+    <span class="n">noop_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">liveapp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">EngineSplitTraffic</span><span class="p">(</span><span class="s2">&quot;liveapp&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="n">liveapp_v2</span><span class="o">.</span><span class="n">service</span><span class="p">,</span>
+    <span class="n">migrate_traffic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shardBy&quot;</span><span class="p">:</span> <span class="s2">&quot;IP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;allocations&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">liveapp_v1</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span> <span class="n">liveapp_v2</span><span class="o">.</span><span class="n">version_id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">liveappV1Version_id</span><span class="p">,</span> <span class="n">liveappV2Version_id</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">liveapp_v1_version_id</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+            <span class="n">liveapp_v2_version_id</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+        <span class="p">}),</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -677,6 +786,22 @@ and provides an action to take on matched requests.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myProject&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;ae-project&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">location_id</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">)</span>
+<span class="n">rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;rule&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;ALLOW&quot;</span><span class="p">,</span>
+    <span class="n">source_range</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -814,6 +939,59 @@ It should have the App Engine Flexible Environment Service Agent role, which wil
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myProject&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;appeng-flex&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+    <span class="n">billing_account</span><span class="o">=</span><span class="s2">&quot;000000-0000000-0000000-000000&quot;</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">location_id</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">)</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;service&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;appengineflex.googleapis.com&quot;</span><span class="p">,</span>
+    <span class="n">disable_dependent_services</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">gae_api</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;gaeApi&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">service</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/compute.networkUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">number</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">number</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;serviceAccount:service-</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">@gae-api-prod.google.com.iam.gserviceaccount.com&quot;</span><span class="p">))</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">myapp_v1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">FlexibleAppVersion</span><span class="p">(</span><span class="s2">&quot;myappV1&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">gae_api</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">liveness_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">readiness_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">automatic_scaling</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;coolDownPeriod&quot;</span><span class="p">:</span> <span class="s2">&quot;120s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cpu_utilization&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;targetUtilization&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">noop_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -849,8 +1027,7 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 <li><p><strong>runtime_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The channel of the runtime to use. Only available for some runtimes.</p></li>
 <li><p><strong>runtime_main_executable_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path or name of the app’s main executable.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AppEngine service resource</p></li>
-<li><p><strong>serving_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.</p></li>
+<li><p><strong>serving_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative name of the version within the service. For example, <code class="docutils literal notranslate"><span class="pre">v1</span></code>. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,”default”, “latest”, and any name with the prefix “ah-“.</p></li>
 <li><p><strong>vpc_access_connector</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Enables VPC connectivity for standard apps.  Structure is documented below.</p></li>
@@ -859,8 +1036,8 @@ Reserved names,”default”, “latest”, and any name with the prefix “ah-�
 </dl>
 <p>The <strong>api_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when users access resources that require authentication. Defaults to “AUTH_FAIL_ACTION_REDIRECT”.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Level of login required to access this resource. Defaults to “LOGIN_OPTIONAL”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when users access resources that require authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Level of login required to access this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the script from the application root directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Security (HTTPS) enforcement for this URL.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to serve the endpoint at.</p></li>
@@ -947,7 +1124,7 @@ Endpoints also has a rollout strategy called “MANAGED”. When using this, End
 the configuration ID. In this case, configId must be omitted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableTraceSampling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable trace sampling. By default, this is set to false for enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is “FIXED”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.</p></li>
 </ul>
 <p>The <strong>entrypoint</strong> object supports the following:</p>
 <ul class="simple">
@@ -965,7 +1142,9 @@ the configuration ID. In this case, configId must be omitted.</p></li>
 </ul>
 <p>The <strong>manual_scaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
 </ul>
 <p>The <strong>network</strong> object supports the following:</p>
 <ul class="simple">
@@ -1012,8 +1191,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: “300s”
 <code class="sig-name descname">api_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FlexibleAppVersion.api_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serving configuration for Google Cloud Endpoints.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Action to take when users access resources that require authentication. Defaults to “AUTH_FAIL_ACTION_REDIRECT”.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Level of login required to access this resource. Defaults to “LOGIN_OPTIONAL”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Action to take when users access resources that require authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Level of login required to access this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to the script from the application root directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Security (HTTPS) enforcement for this URL.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - URL to serve the endpoint at.</p></li>
@@ -1134,7 +1313,7 @@ Endpoints also has a rollout strategy called “MANAGED”. When using this, End
 the configuration ID. In this case, configId must be omitted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableTraceSampling</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable or disable trace sampling. By default, this is set to false for enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is “FIXED”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.</p></li>
 </ul>
 </dd></dl>
 
@@ -1188,7 +1367,9 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.</p>
 <code class="sig-name descname">manual_scaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FlexibleAppVersion.manual_scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
 </ul>
 </dd></dl>
 
@@ -1302,8 +1483,7 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 <dl class="py attribute">
 <dt id="pulumi_gcp.appengine.FlexibleAppVersion.serving_status">
 <code class="sig-name descname">serving_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FlexibleAppVersion.serving_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.</p>
+<dd><p>Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1364,8 +1544,7 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 <li><p><strong>runtime_channel</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The channel of the runtime to use. Only available for some runtimes.</p></li>
 <li><p><strong>runtime_main_executable_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path or name of the app’s main executable.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AppEngine service resource</p></li>
-<li><p><strong>serving_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.</p></li>
+<li><p><strong>serving_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative name of the version within the service. For example, <code class="docutils literal notranslate"><span class="pre">v1</span></code>. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,”default”, “latest”, and any name with the prefix “ah-“.</p></li>
 <li><p><strong>vpc_access_connector</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Enables VPC connectivity for standard apps.  Structure is documented below.</p></li>
@@ -1374,8 +1553,8 @@ Reserved names,”default”, “latest”, and any name with the prefix “ah-�
 </dl>
 <p>The <strong>api_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when users access resources that require authentication. Defaults to “AUTH_FAIL_ACTION_REDIRECT”.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Level of login required to access this resource. Defaults to “LOGIN_OPTIONAL”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when users access resources that require authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Level of login required to access this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the script from the application root directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Security (HTTPS) enforcement for this URL.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to serve the endpoint at.</p></li>
@@ -1462,7 +1641,7 @@ Endpoints also has a rollout strategy called “MANAGED”. When using this, End
 the configuration ID. In this case, configId must be omitted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableTraceSampling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable trace sampling. By default, this is set to false for enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is “FIXED”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rolloutStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.</p></li>
 </ul>
 <p>The <strong>entrypoint</strong> object supports the following:</p>
 <ul class="simple">
@@ -1480,7 +1659,9 @@ the configuration ID. In this case, configId must be omitted.</p></li>
 </ul>
 <p>The <strong>manual_scaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
 </ul>
 <p>The <strong>network</strong> object supports the following:</p>
 <ul class="simple">
@@ -1564,10 +1745,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.appengine.StandardAppVersion">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">StandardAppVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handlers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">libraries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noop_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threadsafe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">StandardAppVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automatic_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handlers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">libraries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manual_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noop_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threadsafe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Standard App Version resource to create a new version of standard GAE Application.
-Currently supporting Zip and File Containers.
-Currently does not support async operation checking.</p>
+Learn about the differences between the standard environment and the flexible environment
+at <a class="reference external" href="https://cloud.google.com/appengine/docs/the-appengine-environments">https://cloud.google.com/appengine/docs/the-appengine-environments</a>.
+Currently supporting Zip and File Containers.</p>
 <p>To get more information about StandardAppVersion, see:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions">API documentation</a></p></li>
@@ -1577,11 +1759,70 @@ Currently does not support async operation checking.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">myapp_v1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;myappV1&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">automatic_scaling</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxConcurrentRequests&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;minIdleInstances&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;maxIdleInstances&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;minPendingLatency&quot;</span><span class="p">:</span> <span class="s2">&quot;1s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxPendingLatency&quot;</span><span class="p">:</span> <span class="s2">&quot;5s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;standard_scheduler_settings&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;targetCpuUtilization&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+            <span class="s2">&quot;targetThroughputUtilization&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+            <span class="s2">&quot;minInstances&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;maxInstances&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">myapp_v2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;myappV2&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v2&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">basic_scaling</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxInstances&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">noop_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automatic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p></li>
+<li><p><strong>basic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p></li>
 <li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
@@ -1589,9 +1830,11 @@ Currently does not support async operation checking.</p>
 <li><p><strong>handlers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.</p></li>
 <li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)</p></li>
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.</p></li>
 <li><p><strong>libraries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.</p></li>
+<li><p><strong>manual_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.</p></li>
 <li><p><strong>noop_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the application version will not be deleted.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -1604,12 +1847,37 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 </ul>
 </dd>
 </dl>
+<p>The <strong>automatic_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of idle instances that should be maintained for this version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">standardSchedulerSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Scheduler settings for standard environment.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetThroughputUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>basic_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”. Defaults to 900s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+</ul>
 <p>The <strong>deployment</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha1Sum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SHA1 checksum of the file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source URL</p></li>
 </ul>
@@ -1656,9 +1924,50 @@ All URLs that begin with this prefix are handled by this handler, using the port
 </ul>
 <p>The <strong>libraries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the library to select, or “latest”.</p></li>
 </ul>
+<p>The <strong>manual_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.automatic_scaling">
+<code class="sig-name descname">automatic_scaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.automatic_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of idle instances that should be maintained for this version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">standardSchedulerSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Scheduler settings for standard environment.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetThroughputUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.basic_scaling">
+<code class="sig-name descname">basic_scaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.basic_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”. Defaults to 900s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+</ul>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_gcp.appengine.StandardAppVersion.delete_service_on_destroy">
 <code class="sig-name descname">delete_service_on_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.delete_service_on_destroy" title="Permalink to this definition">¶</a></dt>
@@ -1673,7 +1982,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha1Sum</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - SHA1 checksum of the file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Source URL</p></li>
 </ul>
@@ -1741,8 +2050,9 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <dt id="pulumi_gcp.appengine.StandardAppVersion.instance_class">
 <code class="sig-name descname">instance_class</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.instance_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)</p>
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1750,15 +2060,26 @@ AutomaticScaling F1, F2, F4, F4_1G
 <code class="sig-name descname">libraries</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.libraries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Version of the library to select, or “latest”.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.manual_scaling">
+<code class="sig-name descname">manual_scaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.manual_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_gcp.appengine.StandardAppVersion.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier for this object. Format specified above.</p>
+<dd><p>Name of the library. Example “django”.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1807,7 +2128,7 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 
 <dl class="py method">
 <dt id="pulumi_gcp.appengine.StandardAppVersion.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handlers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">libraries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noop_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threadsafe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automatic_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handlers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">libraries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manual_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noop_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threadsafe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StandardAppVersion resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1816,6 +2137,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automatic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p></li>
+<li><p><strong>basic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p></li>
 <li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
@@ -1823,10 +2146,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>handlers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.</p></li>
 <li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)</p></li>
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.</p></li>
 <li><p><strong>libraries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier for this object. Format specified above.</p></li>
+<li><p><strong>manual_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the library. Example “django”.</p></li>
 <li><p><strong>noop_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the application version will not be deleted.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -1839,12 +2164,37 @@ Please see the app.yaml reference for valid values at <a class="reference extern
 </ul>
 </dd>
 </dl>
+<p>The <strong>automatic_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of idle instances that should be maintained for this version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minIdleInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minPendingLatency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">standardSchedulerSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Scheduler settings for standard environment.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetThroughputUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>basic_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”. Defaults to 900s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].</p></li>
+</ul>
 <p>The <strong>deployment</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha1Sum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SHA1 checksum of the file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source URL</p></li>
 </ul>
@@ -1891,8 +2241,14 @@ All URLs that begin with this prefix are handled by this handler, using the port
 </ul>
 <p>The <strong>libraries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the library. Example “django”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the library to select, or “latest”.</p></li>
+</ul>
+<p>The <strong>manual_scaling</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances to assign to the service at the start.
+<strong>Note:</strong> When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;manual_scaling&quot;[0].instances]</span></code> to prevent drift detection.</p></li>
 </ul>
 </dd></dl>
 

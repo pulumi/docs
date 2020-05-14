@@ -36,12 +36,12 @@ const mirror = new gcp.compute.Instance("mirror", {
         },
     },
     network_interface: [{
-        network: defaultNetwork.selfLink,
+        network: defaultNetwork.id,
         access_config: [{}],
     }],
 });
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
     ipCidrRange: "10.2.0.0/16",
 });
 const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
@@ -51,29 +51,29 @@ const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
         port: "80",
     },
 });
-const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.selfLink]});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.id]});
 const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
     isMirroringCollector: true,
     ipProtocol: "TCP",
     loadBalancingScheme: "INTERNAL",
-    backendService: defaultRegionBackendService.selfLink,
+    backendService: defaultRegionBackendService.id,
     allPorts: true,
-    network: defaultNetwork.selfLink,
-    subnetwork: defaultSubnetwork.selfLink,
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
     networkTier: "PREMIUM",
 });
 const foobar = new gcp.compute.PacketMirroring("foobar", {
     description: "bar",
     network: {
-        url: defaultNetwork.selfLink,
+        url: defaultNetwork.id,
     },
     collector_ilb: {
-        url: defaultForwardingRule.selfLink,
+        url: defaultForwardingRule.id,
     },
     mirrored_resources: {
         tags: ["foo"],
         instances: [{
-            url: mirror.selfLink,
+            url: mirror.id,
         }],
     },
     filter: {
@@ -95,11 +95,11 @@ mirror = gcp.compute.Instance("mirror",
         },
     },
     network_interface=[{
-        "network": default_network.self_link,
+        "network": default_network.id,
         "access_config": [{}],
     }])
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
-    network=default_network.self_link,
+    network=default_network.id,
     ip_cidr_range="10.2.0.0/16")
 default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
     check_interval_sec=1,
@@ -107,28 +107,28 @@ default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
     tcp_health_check={
         "port": "80",
     })
-default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.self_link])
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.id])
 default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     is_mirroring_collector=True,
     ip_protocol="TCP",
     load_balancing_scheme="INTERNAL",
-    backend_service=default_region_backend_service.self_link,
+    backend_service=default_region_backend_service.id,
     all_ports=True,
-    network=default_network.self_link,
-    subnetwork=default_subnetwork.self_link,
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
     network_tier="PREMIUM")
 foobar = gcp.compute.PacketMirroring("foobar",
     description="bar",
     network={
-        "url": default_network.self_link,
+        "url": default_network.id,
     },
     collector_ilb={
-        "url": default_forwarding_rule.self_link,
+        "url": default_forwarding_rule.id,
     },
     mirrored_resources={
         "tags": ["foo"],
         "instances": [{
-            "url": mirror.self_link,
+            "url": mirror.id,
         }],
     },
     filter={

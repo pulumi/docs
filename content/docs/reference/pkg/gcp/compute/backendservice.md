@@ -24,9 +24,6 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
-> **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
-state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
-
 ## Example Usage - Backend Service Basic
 
 
@@ -39,7 +36,7 @@ const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealt
     checkIntervalSec: 1,
     timeoutSec: 1,
 });
-const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.selfLink]});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
 ```
 ```python
 import pulumi
@@ -49,7 +46,7 @@ default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck"
     request_path="/",
     check_interval_sec=1,
     timeout_sec=1)
-default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.self_link])
+default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
 ```
 ## Example Usage - Backend Service Traffic Director Round Robin
 
@@ -62,7 +59,7 @@ const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_chec
     port: 80,
 }});
 const default = new gcp.compute.BackendService("default", {
-    healthChecks: [healthCheck.selfLink],
+    healthChecks: [healthCheck.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
     localityLbPolicy: "ROUND_ROBIN",
 });
@@ -75,7 +72,7 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.BackendService("default",
-    health_checks=[health_check.self_link],
+    health_checks=[health_check.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED",
     locality_lb_policy="ROUND_ROBIN")
 ```
@@ -90,7 +87,7 @@ const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_chec
     port: 80,
 }});
 const default = new gcp.compute.BackendService("default", {
-    healthChecks: [healthCheck.selfLink],
+    healthChecks: [healthCheck.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
     localityLbPolicy: "RING_HASH",
     sessionAffinity: "HTTP_COOKIE",
@@ -119,7 +116,7 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.BackendService("default",
-    health_checks=[health_check.self_link],
+    health_checks=[health_check.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED",
     locality_lb_policy="RING_HASH",
     session_affinity="HTTP_COOKIE",
@@ -392,9 +389,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -650,9 +645,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -908,9 +901,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -1166,9 +1157,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -1717,9 +1706,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -2002,9 +1989,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -2287,9 +2272,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the
@@ -2572,9 +2555,7 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
     </dt>
-    <dd>{{% md %}}-
-(Optional))
-Consistent Hash-based load balancing can be used to provide soft session
+    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
 destination host will be lost when one or more hosts are added/removed from the

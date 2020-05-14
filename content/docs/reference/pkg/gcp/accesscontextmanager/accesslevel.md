@@ -27,6 +27,10 @@ To get more information about AccessLevel, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
 const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
     basic: {
         conditions: [{
@@ -43,18 +47,17 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
             ],
         }],
     },
-    parent: pulumi.interpolate`accessPolicies/${google_access_context_manager_access_policy_test_access.name}`,
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
     title: "chromeos_no_lock",
-});
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
 });
 ```
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
 access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     basic={
         "conditions": [{
@@ -71,11 +74,8 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
             ],
         }],
     },
-    parent=f"accessPolicies/{google_access_context_manager_access_policy['test-access']['name']}",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
 ```
 
 

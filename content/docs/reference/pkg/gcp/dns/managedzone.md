@@ -66,10 +66,10 @@ const private-zone = new gcp.dns.ManagedZone("private-zone", {
     private_visibility_config: {
         networks: [
             {
-                networkUrl: network-1.selfLink,
+                networkUrl: network-1.id,
             },
             {
-                networkUrl: network-2.selfLink,
+                networkUrl: network-2.id,
             },
         ],
     },
@@ -91,10 +91,10 @@ private_zone = gcp.dns.ManagedZone("private-zone",
     private_visibility_config={
         "networks": [
             {
-                "networkUrl": network_1.self_link,
+                "networkUrl": network_1.id,
             },
             {
-                "networkUrl": network_2.self_link,
+                "networkUrl": network_2.id,
             },
         ],
     })
@@ -118,10 +118,10 @@ const private-zone = new gcp.dns.ManagedZone("private-zone", {
     private_visibility_config: {
         networks: [
             {
-                networkUrl: network-1.selfLink,
+                networkUrl: network-1.id,
             },
             {
-                networkUrl: network-2.selfLink,
+                networkUrl: network-2.id,
             },
         ],
     },
@@ -153,10 +153,10 @@ private_zone = gcp.dns.ManagedZone("private-zone",
     private_visibility_config={
         "networks": [
             {
-                "networkUrl": network_1.self_link,
+                "networkUrl": network_1.id,
             },
             {
-                "networkUrl": network_2.self_link,
+                "networkUrl": network_2.id,
             },
         ],
     },
@@ -186,12 +186,12 @@ const peering-zone = new gcp.dns.ManagedZone("peering-zone", {
     visibility: "private",
     private_visibility_config: {
         networks: [{
-            networkUrl: network-source.selfLink,
+            networkUrl: network-source.id,
         }],
     },
     peering_config: {
         target_network: {
-            networkUrl: network-target.selfLink,
+            networkUrl: network-target.id,
         },
     },
 });
@@ -208,12 +208,12 @@ peering_zone = gcp.dns.ManagedZone("peering-zone",
     visibility="private",
     private_visibility_config={
         "networks": [{
-            "networkUrl": network_source.self_link,
+            "networkUrl": network_source.id,
         }],
     },
     peering_config={
         "target_network": {
-            "networkUrl": network_target.self_link,
+            "networkUrl": network_target.id,
         },
     })
 ```
@@ -546,8 +546,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -671,8 +670,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,8 +794,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -921,8 +918,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1288,8 +1284,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,8 +1417,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1556,8 +1550,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1690,8 +1683,7 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

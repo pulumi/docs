@@ -416,7 +416,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,7 +565,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -714,7 +714,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +863,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1333,7 +1333,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1509,7 +1509,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,7 +1685,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1861,7 +1861,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2552,7 +2552,7 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>minimal<wbr>Action</span>
+        <span>minimal_<wbr>action</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

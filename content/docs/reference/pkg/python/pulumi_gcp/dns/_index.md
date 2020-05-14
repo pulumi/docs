@@ -88,7 +88,7 @@ while private zones are visible only to Virtual Private Cloud resources.</p>
 
 <dl class="py class">
 <dt id="pulumi_gcp.dns.ManagedZone">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">ManagedZone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forwarding_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_visibility_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_lookup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">ManagedZone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forwarding_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_visibility_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_lookup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_directory_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone" title="Permalink to this definition">¶</a></dt>
 <dd><p>A zone is a subtree of the DNS namespace under one administrative
 responsibility. A ManagedZone is a resource that represents a DNS zone
 hosted by the Cloud DNS service.</p>
@@ -101,6 +101,114 @@ hosted by the Cloud DNS service.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;example-zone&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example DNS zone&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;my-domain.com.&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network_1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-1&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-2&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">private_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;private-zone&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;private.example.com.&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example private DNS zone&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">private_visibility_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network_1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-1&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-2&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">private_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;private-zone&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;private.example.com.&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example private DNS zone&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">private_visibility_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">forwarding_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;target_name_servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;ipv4Address&quot;</span><span class="p">:</span> <span class="s2">&quot;172.16.1.10&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;ipv4Address&quot;</span><span class="p">:</span> <span class="s2">&quot;172.16.1.20&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network_source</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-source&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_target</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-target&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">peering_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;peering-zone&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;peering.example.com.&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example private DNS peering zone&quot;</span><span class="p">,</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">private_visibility_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_source</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">peering_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;target_network&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_target</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">servicedirectory</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">namespace_id</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">sd_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;sd-zone&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;services.example.com.&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example private DNS Service Directory zone&quot;</span><span class="p">,</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">service_directory_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;namespaceUrl&quot;</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -124,9 +232,10 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
 to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
+<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
-while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
+while private zones are visible only to Virtual Private Cloud resources.</p></li>
 </ul>
 </dd>
 </dl>
@@ -183,6 +292,18 @@ This should be formatted like
 <li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
 This should be formatted like
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_directory_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The namespace associated with the zone.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+or simply <code class="docutils literal notranslate"><span class="pre">projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+Ignored for <code class="docutils literal notranslate"><span class="pre">public</span></code> visibility zones.</p></li>
 </ul>
 </li>
 </ul>
@@ -313,16 +434,33 @@ to networks listed under <code class="docutils literal notranslate"><span class=
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.dns.ManagedZone.service_directory_config">
+<code class="sig-name descname">service_directory_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.service_directory_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The namespace associated with the zone.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+or simply <code class="docutils literal notranslate"><span class="pre">projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+Ignored for <code class="docutils literal notranslate"><span class="pre">public</span></code> visibility zones.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.visibility">
 <code class="sig-name descname">visibility</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.visibility" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone’s visibility: public zones are exposed to the Internet,
-while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p>
+while private zones are visible only to Virtual Private Cloud resources.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_gcp.dns.ManagedZone.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forwarding_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_visibility_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_lookup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forwarding_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_visibility_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_lookup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_directory_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ManagedZone resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -350,9 +488,10 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
 to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
+<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
-while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
+while private zones are visible only to Virtual Private Cloud resources.</p></li>
 </ul>
 </dd>
 </dl>
@@ -412,6 +551,18 @@ This should be formatted like
 </ul>
 </li>
 </ul>
+<p>The <strong>service_directory_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The namespace associated with the zone.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+or simply <code class="docutils literal notranslate"><span class="pre">projects/{project}/locations/{location}/namespaces/{namespace_id}</span></code>
+Ignored for <code class="docutils literal notranslate"><span class="pre">public</span></code> visibility zones.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -466,6 +617,34 @@ Private Cloud resources.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network_1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-1&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network-2&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">example_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;example-policy&quot;</span><span class="p">,</span>
+    <span class="n">enable_inbound_forwarding</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_logging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">alternative_name_server_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;target_name_servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;ipv4Address&quot;</span><span class="p">:</span> <span class="s2">&quot;172.16.1.10&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;ipv4Address&quot;</span><span class="p">:</span> <span class="s2">&quot;172.16.1.20&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">networks</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -662,6 +841,79 @@ the default records) for the given type will be overwritten when you create this
 In addition, the Google Cloud DNS API requires NS records to be present at all times, so the provider 
 will not actually remove NS records during destroy but will report that it did.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">frontend_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;frontendInstance&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;g1-small&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_config&quot;</span><span class="p">:</span> <span class="p">[{}],</span>
+    <span class="p">}])</span>
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">frontend_record_set</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;frontendRecordSet&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="n">frontend_instance</span><span class="o">.</span><span class="n">network_interfaces</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;accessConfigs&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;natIp&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">record_set</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;recordSet&quot;</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">mx</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MX&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;1 aspmx.l.google.com.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;5 alt1.aspmx.l.google.com.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;5 alt2.aspmx.l.google.com.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;10 alt3.aspmx.l.google.com.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;10 alt4.aspmx.l.google.com.&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">spf</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;spf&quot;</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="n">v</span><span class="o">=</span><span class="n">spf1</span> <span class="n">ip4</span><span class="p">:</span><span class="mf">111.111</span><span class="o">.</span><span class="mf">111.111</span> <span class="n">include</span><span class="p">:</span><span class="n">backoff</span><span class="o">.</span><span class="n">email</span><span class="o">-</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="nb">all</span><span class="s2">&quot;&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">cname</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;cname&quot;</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;frontend.mydomain.com.&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -787,6 +1039,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
 <a class="reference external" href="https://cloud.google.com/dns/docs/dnskeys/">official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/dns/docs/reference/v1/dnsKeys">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;foo.bar.&quot;</span><span class="p">,</span>
+    <span class="n">dnssec_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nonExistence&quot;</span><span class="p">:</span> <span class="s2">&quot;nsec3&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_dns_keys</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">get_keys</span><span class="p">(</span><span class="n">managed_zone</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;fooDnsDsRecord&quot;</span><span class="p">,</span> <span class="n">foo_dns_keys</span><span class="o">.</span><span class="n">key_signing_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;dsRecord&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -805,6 +1070,17 @@ For more information see
 <a class="reference external" href="https://cloud.google.com/dns/zones/">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/dns/api/v1/managedZones">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">env_dns_zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">get_managed_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;qa-zone&quot;</span><span class="p">)</span>
+<span class="n">dns</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;dns&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">env_dns_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

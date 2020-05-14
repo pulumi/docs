@@ -50,6 +50,61 @@ against GCP Cloud Composer before filing bugs against this provider.</p></li>
 deletion. <a class="reference external" href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer’s use of Cloud Storage</a>.</p></li>
 </ul>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">test_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;testNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">test_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;testSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">test_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_account</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;testAccount&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;composer-env-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Service Account for Composer Environment&quot;</span><span class="p">)</span>
+<span class="n">composer_worker</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;composer-worker&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/composer.worker&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">test_account</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">email</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;serviceAccount:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">test_environment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;testEnvironment&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;node_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="n">test_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnetwork&quot;</span><span class="p">:</span> <span class="n">test_subnetwork</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;serviceAccount&quot;</span><span class="p">:</span> <span class="n">test_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;softwareConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;airflowConfigOverrides&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;core-loadExample&quot;</span><span class="p">:</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;envVariables&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;FOO&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;pypiPackages&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;numpy&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;scipy&quot;</span><span class="p">:</span> <span class="s2">&quot;==1.1.0&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -563,6 +618,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.composer.get_image_versions">
 <code class="sig-prename descclassname">pulumi_gcp.composer.</code><code class="sig-name descname">get_image_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.get_image_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Cloud Composer versions in a region for a given project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">get_image_versions</span><span class="p">()</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;software_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;imageVersion&quot;</span><span class="p">:</span> <span class="nb">all</span><span class="o">.</span><span class="n">image_versions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;imageVersionId&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

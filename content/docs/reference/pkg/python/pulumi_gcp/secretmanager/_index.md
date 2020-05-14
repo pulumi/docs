@@ -69,6 +69,28 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">secret_basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">Secret</span><span class="p">(</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">,</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;my-label&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">replication</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;user_managed&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;replicas&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east1&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -257,6 +279,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -376,6 +431,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -495,6 +583,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">member</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretIamMember</span><span class="p">(</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="n">google_secret_manager_secret</span><span class="p">[</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">][</span><span class="s2">&quot;secret_id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/viewer&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -590,6 +711,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.secretmanager.SecretVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">SecretVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>A secret version resource.</p>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">payload.secret_data</span></code> will be stored in the raw
+state as plain-text.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">secret_basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">Secret</span><span class="p">(</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">,</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="s2">&quot;secret-version&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;my-label&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">replication</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;automatic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">secret_version_basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretVersion</span><span class="p">(</span><span class="s2">&quot;secret-version-basic&quot;</span><span class="p">,</span>
+    <span class="n">secret</span><span class="o">=</span><span class="n">secret_basic</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">secret_data</span><span class="o">=</span><span class="s2">&quot;secret-data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -597,7 +738,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The current state of the SecretVersion.</p></li>
 <li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Secret Manager secret resource</p></li>
-<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret data. Must be no larger than 64KiB.</p></li>
+<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret data. Must be no larger than 64KiB.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd>
 </dl>
@@ -634,7 +775,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_gcp.secretmanager.SecretVersion.secret_data">
 <code class="sig-name descname">secret_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.secret_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The secret data. Must be no larger than 64KiB.</p>
+<dd><p>The secret data. Must be no larger than 64KiB.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -653,7 +794,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The current state of the SecretVersion.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the SecretVersion. Format: ‘projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}’</p></li>
 <li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Secret Manager secret resource</p></li>
-<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret data. Must be no larger than 64KiB.</p></li>
+<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret data. Must be no larger than 64KiB.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd>
 </dl>
@@ -701,6 +842,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.secretmanager.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">get_secret_version</span><span class="p">(</span><span class="n">secret</span><span class="o">=</span><span class="s2">&quot;my-secret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

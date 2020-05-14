@@ -16,31 +16,22 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.redis"></span><dl class="py class">
 <dt id="pulumi_gcp.redis.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.redis.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alternative_location_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorized_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reserved_ip_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Google Cloud Redis instance.</p>
-<p>To get more information about Instance, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/reference/rest/">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Instance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] alternative_location_id: Only applicable to STANDARD_HA tier which protects the instance</p>
+<blockquote>
+<div><p>against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance
-against zonal failures by provisioning it across two zones.
-If provided, it must be a different zone from the one provided in
-[locationId].</p></li>
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An arbitrary and optional user-provided name for the instance.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided,
@@ -101,9 +92,7 @@ will be used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.redis.Instance.connect_mode">
 <code class="sig-name descname">connect_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.connect_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p>
+<dd><p>The connection mode of the Redis instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -236,9 +225,7 @@ If provided, it must be a different zone from the one provided in
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the instance was created in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p></li>
 <li><p><strong>current_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or

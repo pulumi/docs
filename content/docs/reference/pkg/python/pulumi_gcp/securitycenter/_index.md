@@ -29,6 +29,15 @@ monitor, etc.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom_source</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">securitycenter</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="s2">&quot;customSource&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My custom Cloud Security Command Center Finding Source&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Source&quot;</span><span class="p">,</span>
+    <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -239,6 +239,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_game_server_deployment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerDeployment</span><span class="p">(</span><span class="s2">&quot;defaultGameServerDeployment&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="s2">&quot;tf-test-deployment&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a deployment description&quot;</span><span class="p">)</span>
+<span class="n">default_game_server_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerConfig</span><span class="p">(</span><span class="s2">&quot;defaultGameServerConfig&quot;</span><span class="p">,</span>
+    <span class="n">config_id</span><span class="o">=</span><span class="s2">&quot;tf-test-config&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="n">default_game_server_deployment</span><span class="o">.</span><span class="n">deployment_id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a config description&quot;</span><span class="p">,</span>
+    <span class="n">fleet_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;something-unique&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fleetSpec&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+            <span class="s2">&quot;replicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;scheduling&quot;</span><span class="p">:</span> <span class="s2">&quot;Packed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-game-server-template&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;containers&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;simple-udp-server&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;gcr.io/agones-images/udp-server:0.14&quot;</span><span class="p">,</span>
+                            <span class="p">}],</span>
+                        <span class="p">},</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">}),</span>
+    <span class="p">}],</span>
+    <span class="n">scaling_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;scaling-config-name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fleetAutoscalerSpec&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+            <span class="s2">&quot;policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;webhook&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscaler-webhook-service&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;scale&quot;</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">}),</span>
+        <span class="s2">&quot;selectors&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;schedules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;cronJobDuration&quot;</span><span class="p">:</span> <span class="s2">&quot;3.500s&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cronSpec&quot;</span><span class="p">:</span> <span class="s2">&quot;0 0 * * 0&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -515,6 +574,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerDeployment</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="s2">&quot;tf-test-deployment&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a deployment description&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -648,6 +715,44 @@ deployment.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_game_server_deployment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerDeployment</span><span class="p">(</span><span class="s2">&quot;defaultGameServerDeployment&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="s2">&quot;tf-test-deployment&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a deployment description&quot;</span><span class="p">)</span>
+<span class="n">default_game_server_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerConfig</span><span class="p">(</span><span class="s2">&quot;defaultGameServerConfig&quot;</span><span class="p">,</span>
+    <span class="n">config_id</span><span class="o">=</span><span class="s2">&quot;tf-test-config&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="n">default_game_server_deployment</span><span class="o">.</span><span class="n">deployment_id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a config description&quot;</span><span class="p">,</span>
+    <span class="n">fleet_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;some-non-guid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fleetSpec&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+            <span class="s2">&quot;replicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;scheduling&quot;</span><span class="p">:</span> <span class="s2">&quot;Packed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-game-server-template&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;containers&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;simple-udp-server&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;gcr.io/agones-images/udp-server:0.14&quot;</span><span class="p">,</span>
+                            <span class="p">}],</span>
+                        <span class="p">},</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">}),</span>
+    <span class="p">}])</span>
+<span class="n">default_game_server_deployment_rollout</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">GameServerDeploymentRollout</span><span class="p">(</span><span class="s2">&quot;defaultGameServerDeploymentRollout&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="n">default_game_server_deployment</span><span class="o">.</span><span class="n">deployment_id</span><span class="p">,</span>
+    <span class="n">default_game_server_config</span><span class="o">=</span><span class="n">default_game_server_config</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -808,6 +913,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">gameservices</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="s2">&quot;tf-test-realm&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;EST&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;one of the nine&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

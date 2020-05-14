@@ -20,6 +20,16 @@ anything, please consult the source <a class="reference external" href="https://
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">idp_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">DefaultSupportedIdpConfig</span><span class="p">(</span><span class="s2">&quot;idpConfig&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;client-id&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">idp_id</span><span class="o">=</span><span class="s2">&quot;playgames.google.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -185,6 +195,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">saml_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">InboundSamlConfig</span><span class="p">(</span><span class="s2">&quot;samlConfig&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Display Name&quot;</span><span class="p">,</span>
+    <span class="n">idp_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;idpEntityId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-idp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;signRequest&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ssoUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;idp_certificates&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;x509Certificate&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;test-fixtures/rsa_cert.pem&quot;</span><span class="p">),</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">sp_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;spEntityId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-sp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;callbackUri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -384,6 +413,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">oauth_idp_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">OauthIdpConfig</span><span class="p">(</span><span class="s2">&quot;oauthIdpConfig&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;client-id&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Display Name&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">issuer</span><span class="o">=</span><span class="s2">&quot;issuer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,6 +554,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the marketplace prior to using this resource.</p>
 <p>You must <a class="reference external" href="https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart">enable multi-tenancy</a> via
 the Cloud Console prior to creating tenants.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tenant</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">Tenant</span><span class="p">(</span><span class="s2">&quot;tenant&quot;</span><span class="p">,</span>
+    <span class="n">allow_password_signup</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tenant&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -639,6 +687,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tenant</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">Tenant</span><span class="p">(</span><span class="s2">&quot;tenant&quot;</span><span class="p">,</span> <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tenant&quot;</span><span class="p">)</span>
+<span class="n">idp_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">TenantDefaultSupportedIdpConfig</span><span class="p">(</span><span class="s2">&quot;idpConfig&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tenant</span><span class="o">=</span><span class="n">tenant</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">idp_id</span><span class="o">=</span><span class="s2">&quot;playgames.google.com&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;my-client-id&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -814,6 +874,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tenant</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">Tenant</span><span class="p">(</span><span class="s2">&quot;tenant&quot;</span><span class="p">,</span> <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tenant&quot;</span><span class="p">)</span>
+<span class="n">tenant_saml_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">TenantInboundSamlConfig</span><span class="p">(</span><span class="s2">&quot;tenantSamlConfig&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Display Name&quot;</span><span class="p">,</span>
+    <span class="n">tenant</span><span class="o">=</span><span class="n">tenant</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">idp_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;idpEntityId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-idp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;signRequest&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ssoUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;idp_certificates&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;x509Certificate&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;test-fixtures/rsa_cert.pem&quot;</span><span class="p">),</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">sp_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;spEntityId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-sp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;callbackUri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1021,6 +1102,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tenant</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">Tenant</span><span class="p">(</span><span class="s2">&quot;tenant&quot;</span><span class="p">,</span> <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tenant&quot;</span><span class="p">)</span>
+<span class="n">tenant_oauth_idp_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">identityplatform</span><span class="o">.</span><span class="n">TenantOauthIdpConfig</span><span class="p">(</span><span class="s2">&quot;tenantOauthIdpConfig&quot;</span><span class="p">,</span>
+    <span class="n">tenant</span><span class="o">=</span><span class="n">tenant</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Display Name&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;client-id&quot;</span><span class="p">,</span>
+    <span class="n">issuer</span><span class="o">=</span><span class="s2">&quot;issuer&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

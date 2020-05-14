@@ -29,6 +29,27 @@ agent to handle the types of conversations required for your system.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">full_agent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">diagflow</span><span class="o">.</span><span class="n">Agent</span><span class="p">(</span><span class="s2">&quot;fullAgent&quot;</span><span class="p">,</span>
+    <span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;API_VERSION_V2_BETA_1&quot;</span><span class="p">,</span>
+    <span class="n">avatar_uri</span><span class="o">=</span><span class="s2">&quot;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&quot;</span><span class="p">,</span>
+    <span class="n">classification_threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">default_language_code</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example description.&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;dialogflow-agent&quot;</span><span class="p">,</span>
+    <span class="n">enable_logging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">match_mode</span><span class="o">=</span><span class="s2">&quot;MATCH_MODE_ML_ONLY&quot;</span><span class="p">,</span>
+    <span class="n">supported_language_codes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;fr&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;de&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;es&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;TIER_STANDARD&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -331,6 +352,16 @@ is an extraction of a user command or sentence semantics.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic_agent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">diagflow</span><span class="o">.</span><span class="n">Agent</span><span class="p">(</span><span class="s2">&quot;basicAgent&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>
+    <span class="n">default_language_code</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
+<span class="n">basic_intent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">diagflow</span><span class="o">.</span><span class="n">Intent</span><span class="p">(</span><span class="s2">&quot;basicIntent&quot;</span><span class="p">,</span> <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;basic-intent&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

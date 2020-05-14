@@ -67,6 +67,115 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Be careful!</strong> You can accidentally lock yourself out of your project</dt><dd><p>using this resource. Deleting a <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> removes access
+from anyone without organization-level access to the project. Proceed with caution.
+It’s not recommended to use <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> with your provider project
+to avoid locking yourself out, and it should generally only be used with projects
+fully managed by this provider. If you do use this resource, it is recommended to <strong>import</strong> the policy before
+applying the change.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> If <code class="docutils literal notranslate"><span class="pre">role</span></code> is set to <code class="docutils literal notranslate"><span class="pre">roles/owner</span></code> and you don’t specify a user or service account you have access to in <code class="docutils literal notranslate"><span class="pre">members</span></code>, you can lock yourself out of your project.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMAuditConfig</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">audit_log_configs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;ADMIN_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;exemptedMembers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:joebloggs@hashicorp.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;allServices&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,6 +303,115 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Be careful!</strong> You can accidentally lock yourself out of your project</dt><dd><p>using this resource. Deleting a <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> removes access
+from anyone without organization-level access to the project. Proceed with caution.
+It’s not recommended to use <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> with your provider project
+to avoid locking yourself out, and it should generally only be used with projects
+fully managed by this provider. If you do use this resource, it is recommended to <strong>import</strong> the policy before
+applying the change.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> If <code class="docutils literal notranslate"><span class="pre">role</span></code> is set to <code class="docutils literal notranslate"><span class="pre">roles/owner</span></code> and you don’t specify a user or service account you have access to in <code class="docutils literal notranslate"><span class="pre">members</span></code>, you can lock yourself out of your project.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMAuditConfig</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">audit_log_configs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;ADMIN_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;exemptedMembers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:joebloggs@hashicorp.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;allServices&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -337,6 +555,20 @@ by the provider, and new roles cannot share that name.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_custom_role</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMCustomRole</span><span class="p">(</span><span class="s2">&quot;my-custom-role&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A description&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;iam.roles.list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;iam.roles.create&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;iam.roles.delete&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role_id</span><span class="o">=</span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My Custom Role&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -485,6 +717,115 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Be careful!</strong> You can accidentally lock yourself out of your project</dt><dd><p>using this resource. Deleting a <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> removes access
+from anyone without organization-level access to the project. Proceed with caution.
+It’s not recommended to use <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> with your provider project
+to avoid locking yourself out, and it should generally only be used with projects
+fully managed by this provider. If you do use this resource, it is recommended to <strong>import</strong> the policy before
+applying the change.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> If <code class="docutils literal notranslate"><span class="pre">role</span></code> is set to <code class="docutils literal notranslate"><span class="pre">roles/owner</span></code> and you don’t specify a user or service account you have access to in <code class="docutils literal notranslate"><span class="pre">members</span></code>, you can lock yourself out of your project.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMAuditConfig</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">audit_log_configs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;ADMIN_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;exemptedMembers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:joebloggs@hashicorp.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;allServices&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -626,6 +967,115 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Be careful!</strong> You can accidentally lock yourself out of your project</dt><dd><p>using this resource. Deleting a <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> removes access
+from anyone without organization-level access to the project. Proceed with caution.
+It’s not recommended to use <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> with your provider project
+to avoid locking yourself out, and it should generally only be used with projects
+fully managed by this provider. If you do use this resource, it is recommended to <strong>import</strong> the policy before
+applying the change.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> If <code class="docutils literal notranslate"><span class="pre">role</span></code> is set to <code class="docutils literal notranslate"><span class="pre">roles/owner</span></code> and you don’t specify a user or service account you have access to in <code class="docutils literal notranslate"><span class="pre">members</span></code>, you can lock yourself out of your project.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMAuditConfig</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">audit_log_configs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;ADMIN_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;exemptedMembers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:joebloggs@hashicorp.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_READ&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;allServices&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -730,6 +1180,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">serial_port_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">OrganizationPolicy</span><span class="p">(</span><span class="s2">&quot;serialPortPolicy&quot;</span><span class="p">,</span>
+    <span class="n">boolean_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enforced&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">constraint</span><span class="o">=</span><span class="s2">&quot;compute.disableSerialPortAccess&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -936,6 +1397,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of a single API service for an existing Google Cloud Platform project.</p>
 <p>For a list of services available, visit the
 <a class="reference external" href="https://console.cloud.google.com/apis/library">API library page</a> or run <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">services</span> <span class="pre">list</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">disable_dependent_services</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;iam.googleapis.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1043,6 +1513,14 @@ See the <a class="reference external" href="https://cloud.google.com/resource-ma
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myProject&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;1234567&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1111,6 +1589,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of Organization policies for a Google Project. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">get_organization_policy</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s2">&quot;project-id&quot;</span><span class="p">,</span>
+    <span class="n">constraint</span><span class="o">=</span><span class="s2">&quot;constraints/serviceuser.services&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1128,6 +1614,13 @@ documentation</a></p>
 <dd><p>Retrieve information about a set of projects based on a filter. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list">REST API</a>
 for more details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_org_projects</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;parent.id:012345678910 lifecycleState:DELETE_REQUESTED&quot;</span><span class="p">)</span>
+<span class="n">deletion_candidate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">my_org_projects</span><span class="o">.</span><span class="n">projects</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filter</strong> (<em>str</em>) – <p>A string filter as defined in the <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters">REST API</a>.</p>

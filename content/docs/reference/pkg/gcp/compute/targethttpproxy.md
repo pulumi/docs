@@ -93,6 +93,7 @@ import * as gcp from "@pulumi/gcp";
 
 const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {default_url_redirect: {
     httpsRedirect: true,
+    stripQuery: false,
 }});
 const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {urlMap: defaultURLMap.selfLink});
 ```
@@ -102,6 +103,7 @@ import pulumi_gcp as gcp
 
 default_url_map = gcp.compute.URLMap("defaultURLMap", default_url_redirect={
     "httpsRedirect": True,
+    "stripQuery": False,
 })
 default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", url_map=default_url_map.self_link)
 ```

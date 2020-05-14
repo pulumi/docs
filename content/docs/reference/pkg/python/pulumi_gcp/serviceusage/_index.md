@@ -28,6 +28,21 @@ producer overrides, or the default limit of the service.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myProject&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;quota&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+<span class="n">override</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">serviceusage</span><span class="o">.</span><span class="n">ConsumerQuotaOverride</span><span class="p">(</span><span class="s2">&quot;override&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">my_project</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;servicemanagement.googleapis.com&quot;</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;servicemanagement.googleapis.com</span><span class="si">%2F</span><span class="s2">default_requests&quot;</span><span class="p">,</span>
+    <span class="n">limit</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%2F</span><span class="s2">min</span><span class="si">%2F</span><span class="s2">project&quot;</span><span class="p">,</span>
+    <span class="n">override_value</span><span class="o">=</span><span class="s2">&quot;95&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

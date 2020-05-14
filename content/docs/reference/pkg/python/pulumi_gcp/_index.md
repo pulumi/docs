@@ -17,6 +17,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="accesscontextmanager/">accesscontextmanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appengine/">appengine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="artifactregistry/">artifactregistry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bigquery/">bigquery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bigtable/">bigtable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="billing/">billing</a></li>

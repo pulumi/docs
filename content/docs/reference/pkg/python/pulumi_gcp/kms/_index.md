@@ -60,6 +60,27 @@ to the resource to prevent accidental destruction.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">example_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;example-key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">example_asymmetric_sign_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;example-asymmetric-sign-key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;ASYMMETRIC_SIGN&quot;</span><span class="p">,</span>
+    <span class="n">version_template</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;EC_SIGN_P384_SHA384&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -219,9 +240,85 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMPolicy</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -361,9 +458,85 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMPolicy</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -504,9 +677,85 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.CryptoKeyIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMPolicy</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">bindings</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMBinding</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -744,6 +993,12 @@ Destroying a provider-managed KeyRing will remove it from state but
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">example_keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;example-keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -849,6 +1104,86 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -992,6 +1327,86 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1135,6 +1550,86 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}])</span>
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMPolicy</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMBinding</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRingIAMMember</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">key_ring_id</span><span class="o">=</span><span class="s2">&quot;your-key-ring-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1235,7 +1730,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.kms.Registry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_notification_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mqtt_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: gcp.Registry has been deprecated in favour of gcp.Registry</p>
+<dd><p>Deprecated: gcp.kms.Registry has been deprecated in favour of gcp.iot.Registry</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1369,22 +1864,53 @@ data outside of resource definitions.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">plaintext</span></code> and <code class="docutils literal notranslate"><span class="pre">additional_authenticated_data</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
+<span class="n">cryptokey</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;cryptokey&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
+<span class="n">my_password</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">SecretCiphertext</span><span class="p">(</span><span class="s2">&quot;myPassword&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key</span><span class="o">=</span><span class="n">cryptokey</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">plaintext</span><span class="o">=</span><span class="s2">&quot;my-secret-password&quot;</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_config&quot;</span><span class="p">:</span> <span class="p">[{}],</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">my_password</span><span class="o">.</span><span class="n">ciphertext</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.</p></li>
+<li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'</span></code></p></li>
-<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p></li>
+<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py attribute">
 <dt id="pulumi_gcp.kms.SecretCiphertext.additional_authenticated_data">
 <code class="sig-name descname">additional_authenticated_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.additional_authenticated_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The additional authenticated data used for integrity checks during encryption and decryption.</p>
+<dd><p>The additional authenticated data used for integrity checks during encryption and decryption.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1403,7 +1929,7 @@ Format: <code class="docutils literal notranslate"><span class="pre">'projects/{
 <dl class="py attribute">
 <dt id="pulumi_gcp.kms.SecretCiphertext.plaintext">
 <code class="sig-name descname">plaintext</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.plaintext" title="Permalink to this definition">¶</a></dt>
-<dd><p>The plaintext to be encrypted.</p>
+<dd><p>The plaintext to be encrypted.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1417,11 +1943,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.</p></li>
+<li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>ciphertext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the result of encrypting the provided plaintext, encoded in base64.</p></li>
 <li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'</span></code></p></li>
-<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p></li>
+<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1474,6 +2000,15 @@ and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API</a>.</p>
 <p>A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_key_ring</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-key-ring&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">my_crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_crypto_key</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-crypto-key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">my_key_ring</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1493,6 +2028,16 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions">API</a>.</p>
 <p>A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_key_ring</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-key-ring&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">my_crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_crypto_key</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-crypto-key&quot;</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">my_key_ring</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">my_crypto_key_version</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_crypto_key_version</span><span class="p">(</span><span class="n">crypto_key</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;google_kms_key&quot;</span><span class="p">][</span><span class="s2">&quot;my_key&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1512,6 +2057,13 @@ and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings">API</a>.</p>
 <p>A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing belongs to a Google Cloud Platform Project
 and resides in a specific location.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_kms_key_ring</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-key-ring&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

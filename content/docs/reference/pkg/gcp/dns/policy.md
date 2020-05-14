@@ -43,10 +43,10 @@ const example-policy = new gcp.dns.Policy("example-policy", {
     },
     networks: [
         {
-            networkUrl: network-1.selfLink,
+            networkUrl: network-1.id,
         },
         {
-            networkUrl: network-2.selfLink,
+            networkUrl: network-2.id,
         },
     ],
 });
@@ -72,10 +72,10 @@ example_policy = gcp.dns.Policy("example-policy",
     },
     networks=[
         {
-            "networkUrl": network_1.self_link,
+            "networkUrl": network_1.id,
         },
         {
-            "networkUrl": network_2.self_link,
+            "networkUrl": network_2.id,
         },
     ])
 ```

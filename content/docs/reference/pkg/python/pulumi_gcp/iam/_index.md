@@ -52,6 +52,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_gcp.iam.get_rule">
 <code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google IAM Role.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">roleinfo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;roles/compute.viewer&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;theRolePermissions&quot;</span><span class="p">,</span> <span class="n">roleinfo</span><span class="o">.</span><span class="n">included_permissions</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Role to lookup in the form <code class="docutils literal notranslate"><span class="pre">roles/{ROLE_NAME}</span></code>, <code class="docutils literal notranslate"><span class="pre">organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}</span></code> or <code class="docutils literal notranslate"><span class="pre">projects/{PROJECT_ID}/roles/{ROLE_NAME}</span></code></p>

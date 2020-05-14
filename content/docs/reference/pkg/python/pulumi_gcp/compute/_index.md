@@ -37,6 +37,57 @@ static.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ip_address</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;ipAddress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">internal_with_subnet_and_address</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;internalWithSubnetAndAddress&quot;</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">address_type</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;10.0.42.42&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">internal_with_gce_endpoint</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;internalWithGceEndpoint&quot;</span><span class="p">,</span>
+    <span class="n">address_type</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;GCE_ENDPOINT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">static</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;static&quot;</span><span class="p">)</span>
+<span class="n">debian_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">instance_with_ip</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instanceWithIp&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;f1-micro&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">debian_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;natIp&quot;</span><span class="p">:</span> <span class="n">static</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -46,8 +97,7 @@ static.</p>
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
 if any.</p></li>
-<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.</p></li>
+<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of address to reserve.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. The name must be 1-63 characters long, and
@@ -56,8 +106,7 @@ long and match the regular expression <code class="docutils literal notranslate"
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.</p></li>
-<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -93,8 +142,7 @@ if any.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Address.address_type">
 <code class="sig-name descname">address_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Address.address_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.</p>
+<dd><p>The type of address to reserve.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -135,8 +183,7 @@ except the last character, which cannot be a dash.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Address.network_tier">
 <code class="sig-name descname">network_tier</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Address.network_tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<dd><p>The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p>
 </dd></dl>
 
@@ -200,8 +247,7 @@ properties used to qualify the lookup.</p>
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
 if any.</p></li>
-<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.</p></li>
+<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of address to reserve.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
@@ -212,8 +258,7 @@ long and match the regular expression <code class="docutils literal notranslate"
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.</p></li>
-<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -297,6 +342,25 @@ numbers of disks using the <code class="docutils literal notranslate"><span clas
 </li>
 </ul>
 <p><strong>Note:</strong> When using <code class="docutils literal notranslate"><span class="pre">compute.AttachedDisk</span></code> you <strong>must</strong> use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;attached_disk&quot;]</span></code> on the <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code> resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-west1-a&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">default_attached_disk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">AttachedDisk</span><span class="p">(</span><span class="s2">&quot;defaultAttachedDisk&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="n">google_compute_disk</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -456,7 +520,109 @@ define.</p>
 </ul>
 </li>
 </ul>
-<p>Deprecated: gcp.Autoscalar has been deprecated in favour of gcp.Autoscaler</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian9</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">default_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;defaultInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian9</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">default_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;defaultTargetPool&quot;</span><span class="p">)</span>
+<span class="n">default_instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;defaultInstanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">default_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">default_target_pool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;autoscaler-sample&quot;</span><span class="p">)</span>
+<span class="n">default_autoscaler</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Autoscaler</span><span class="p">(</span><span class="s2">&quot;defaultAutoscaler&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_instance_group_manager</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxReplicas&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cooldownPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pubsub.googleapis.com/subscription/num_undelivered_messages&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;singleInstanceAssignment&quot;</span><span class="p">:</span> <span class="mi">65535</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian9</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">foobar_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;foobarInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian9</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">foobar_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;foobarTargetPool&quot;</span><span class="p">)</span>
+<span class="n">foobar_instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;foobarInstanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">foobar_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">foobar_target_pool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">foobar_autoscaler</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Autoscaler</span><span class="p">(</span><span class="s2">&quot;foobarAutoscaler&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">foobar_instance_group_manager</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxReplicas&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cooldownPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;cpu_utilization&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Deprecated: gcp.compute.Autoscalar has been deprecated in favour of gcp.compute.Autoscaler</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -561,8 +727,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -658,8 +823,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -828,8 +992,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -893,6 +1056,108 @@ define.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian9</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">default_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;defaultInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian9</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">default_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;defaultTargetPool&quot;</span><span class="p">)</span>
+<span class="n">default_instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;defaultInstanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">default_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">default_target_pool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;autoscaler-sample&quot;</span><span class="p">)</span>
+<span class="n">default_autoscaler</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Autoscaler</span><span class="p">(</span><span class="s2">&quot;defaultAutoscaler&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_instance_group_manager</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxReplicas&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cooldownPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pubsub.googleapis.com/subscription/num_undelivered_messages&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;singleInstanceAssignment&quot;</span><span class="p">:</span> <span class="mi">65535</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian9</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">foobar_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;foobarInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian9</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">foobar_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;foobarTargetPool&quot;</span><span class="p">)</span>
+<span class="n">foobar_instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;foobarInstanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">foobar_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">foobar_target_pool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">foobar_autoscaler</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Autoscaler</span><span class="p">(</span><span class="s2">&quot;foobarAutoscaler&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">foobar_instance_group_manager</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxReplicas&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cooldownPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;cpu_utilization&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -997,8 +1262,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -1094,8 +1358,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -1264,8 +1527,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -1451,6 +1713,16 @@ to a virtual machine instance.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">image_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;imageBucket&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EU&quot;</span><span class="p">)</span>
+<span class="n">image_backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendBucket</span><span class="p">(</span><span class="s2">&quot;imageBackend&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Contains beautiful images&quot;</span><span class="p">,</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="n">image_bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enable_cdn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1644,6 +1916,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">key_value</span></code> will be stored in the raw
+state as plain-text.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EU&quot;</span><span class="p">)</span>
+<span class="n">test_backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendBucket</span><span class="p">(</span><span class="s2">&quot;testBackend&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Contains beautiful images&quot;</span><span class="p">,</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enable_cdn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">backend_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendBucketSignedUrlKey</span><span class="p">(</span><span class="s2">&quot;backendKey&quot;</span><span class="p">,</span>
+    <span class="n">key_value</span><span class="o">=</span><span class="s2">&quot;pPsVemX8GM46QVeezid6Rw==&quot;</span><span class="p">,</span>
+    <span class="n">backend_bucket</span><span class="o">=</span><span class="n">test_backend</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1651,7 +1940,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>backend_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend bucket this signed URL key belongs.</p></li>
 <li><p><strong>key_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p></li>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the signed URL key.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -1668,7 +1957,7 @@ If it is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.compute.BackendBucketSignedUrlKey.key_value">
 <code class="sig-name descname">key_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendBucketSignedUrlKey.key_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1697,7 +1986,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>backend_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend bucket this signed URL key belongs.</p></li>
 <li><p><strong>key_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p></li>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the signed URL key.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -1761,6 +2050,60 @@ For managed internal load balancing, use a regional backend service instead.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">iap.oauth2_client_secret</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.oauth2_client_secret_sha256</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span> <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">locality_lb_policy</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">locality_lb_policy</span><span class="o">=</span><span class="s2">&quot;RING_HASH&quot;</span><span class="p">,</span>
+    <span class="n">session_affinity</span><span class="o">=</span><span class="s2">&quot;HTTP_COOKIE&quot;</span><span class="p">,</span>
+    <span class="n">circuit_breakers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxConnections&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">consistent_hash</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;http_cookie&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">1111</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mycookie&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">outlier_detection</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;consecutiveErrors&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1802,8 +2145,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <li><p><strong>iap</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_SELF_MANAGED</span></code> for a global backend service. Defaults to <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p></li>
+load balancing cannot be used with the other.</p></li>
 <li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
 The possible values are -
 ROUND_ROBIN - This is a simple policy in which each healthy backend
@@ -1838,8 +2180,7 @@ scheme is EXTERNAL.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p></li>
 <li><p><strong>security_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security policy associated with this backend service.</p></li>
 <li><p><strong>session_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of session affinity to use. The default is NONE. Session affinity is
@@ -1998,9 +2339,9 @@ Defaults to 1024.</p></li>
 <p>The <strong>iap</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client ID for IAP</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client Secret for IAP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client Secret for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecretSha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
-OAuth2 Client Secret SHA-256 for IAP</p></li>
+OAuth2 Client Secret SHA-256 for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 <p>The <strong>log_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -2308,9 +2649,9 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <dd><p>Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OAuth2 Client ID for IAP</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OAuth2 Client Secret for IAP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OAuth2 Client Secret for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecretSha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
-OAuth2 Client Secret SHA-256 for IAP</p></li>
+OAuth2 Client Secret SHA-256 for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -2319,8 +2660,7 @@ OAuth2 Client Secret SHA-256 for IAP</p></li>
 <code class="sig-name descname">load_balancing_scheme</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.load_balancing_scheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_SELF_MANAGED</span></code> for a global backend service. Defaults to <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p>
+load balancing cannot be used with the other.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2452,8 +2792,7 @@ If it is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.compute.BackendService.protocol">
 <code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p>
 </dd></dl>
 
@@ -2532,8 +2871,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <li><p><strong>iap</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_SELF_MANAGED</span></code> for a global backend service. Defaults to <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p></li>
+load balancing cannot be used with the other.</p></li>
 <li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
 The possible values are -
 ROUND_ROBIN - This is a simple policy in which each healthy backend
@@ -2568,8 +2906,7 @@ scheme is EXTERNAL.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p></li>
 <li><p><strong>security_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security policy associated with this backend service.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -2729,9 +3066,9 @@ Defaults to 1024.</p></li>
 <p>The <strong>iap</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client ID for IAP</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client Secret for IAP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OAuth2 Client Secret for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecretSha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
-OAuth2 Client Secret SHA-256 for IAP</p></li>
+OAuth2 Client Secret SHA-256 for IAP  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 <p>The <strong>log_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -2850,6 +3187,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">key_value</span></code> will be stored in the raw
+state as plain-text.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">webserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;webserver&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">webservers</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;webservers&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">webserver</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;webserver&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;exampleBackend&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Our company website&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">enable_cdn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">webservers</span><span class="o">.</span><span class="n">instance_group</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">backend_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendServiceSignedUrlKey</span><span class="p">(</span><span class="s2">&quot;backendKey&quot;</span><span class="p">,</span>
+    <span class="n">key_value</span><span class="o">=</span><span class="s2">&quot;pPsVemX8GM46QVeezid6Rw==&quot;</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">example_backend</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2857,7 +3238,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>backend_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service this signed URL key belongs.</p></li>
 <li><p><strong>key_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p></li>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the signed URL key.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -2874,7 +3255,7 @@ If it is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.compute.BackendServiceSignedUrlKey.key_value">
 <code class="sig-name descname">key_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendServiceSignedUrlKey.key_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2903,7 +3284,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>backend_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service this signed URL key belongs.</p></li>
 <li><p><strong>key_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.</p></li>
+valid RFC 4648 Section 5 base64url encoded string.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the signed URL key.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -2976,10 +3357,22 @@ affordable storage with consistent performance characteristics.</p>
 </li>
 </ul>
 <blockquote>
-<div><p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">disk_encryption_key.raw_key</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;debian-8-jessie-v20170523&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">physical_block_size_bytes</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3494,6 +3887,31 @@ which will be applied to this disk for scheduling snapshot creation.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource does not support regional disks (<code class="docutils literal notranslate"><span class="pre">compute.RegionDisk</span></code>).</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">ssd</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;ssd&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="n">my_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">attachment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DiskResourcePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;attachment&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="n">ssd</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;daily_schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;daysInCycle&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;04:00&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3602,6 +4020,77 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/externalVpnGateways">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">routing_mode</span><span class="o">=</span><span class="s2">&quot;GLOBAL&quot;</span><span class="p">,</span>
+    <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ha_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HaVpnGateway</span><span class="p">(</span><span class="s2">&quot;haGateway&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">external_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ExternalVpnGateway</span><span class="p">(</span><span class="s2">&quot;externalGateway&quot;</span><span class="p">,</span>
+    <span class="n">redundancy_type</span><span class="o">=</span><span class="s2">&quot;SINGLE_IP_INTERNALLY_REDUNDANT&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;An externally managed VPN gateway&quot;</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;ipAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">network_subnet1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;networkSubnet1&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network_subnet2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;networkSubnet2&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">router1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64514</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_external_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">tunnel2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel2&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_external_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">self_link</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">self_link</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">router1_interface1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router1Interface1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.0.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_peer1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router1Peer1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.0.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64515</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router1_interface1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_interface2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router1Interface2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.1.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_peer2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router1Peer2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.1.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64515</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router1_interface2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3798,6 +4287,28 @@ you need.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">)</span>
+<span class="n">default_firewall</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;defaultFirewall&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;icmp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;1000-2000&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">source_tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;web&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4270,6 +4781,199 @@ of target virtual machines to forward a packet to if it matches the given
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hc</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;hc&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="n">hc</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="c1"># Forwarding rule for Internal Load Balancing</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">all_ports</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">allow_global_access</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;defaultTargetPool&quot;</span><span class="p">)</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_target_pool</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hc</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;hc&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">hc</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="c1"># Forwarding rule for Internal Load Balancing</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">all_ports</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span>
+    <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">routing_mode</span><span class="o">=</span><span class="s2">&quot;REGIONAL&quot;</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.1.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;subnetwork&quot;</span><span class="p">:</span> <span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;allow-ssh&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;load-balanced-backend&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">rigm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;rigm&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fw1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;fw1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.1.2.0/24&quot;</span><span class="p">],</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;udp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;icmp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INGRESS&quot;</span><span class="p">)</span>
+<span class="n">fw2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;fw2&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;22&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">target_tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;allow-ssh&quot;</span><span class="p">],</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INGRESS&quot;</span><span class="p">)</span>
+<span class="n">fw3</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;fw3&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;130.211.0.0/22&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;35.191.0.0/16&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;load-balanced-backend&quot;</span><span class="p">],</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INGRESS&quot;</span><span class="p">)</span>
+<span class="n">fw4</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;fw4&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.129.0.0/26&quot;</span><span class="p">],</span>
+    <span class="n">target_tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;load-balanced-backend&quot;</span><span class="p">],</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;443&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;8000&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INGRESS&quot;</span><span class="p">)</span>
+<span class="n">default_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultRegionHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_SERVING_PORT&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">rigm</span><span class="o">.</span><span class="n">instance_group</span><span class="p">,</span>
+        <span class="s2">&quot;balancingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;UTILIZATION&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacityScaler&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_region_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;defaultRegionUrlMap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">default_region_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpProxy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;proxy&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.129.0.0/26&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;INTERNAL_HTTPS_LOAD_BALANCER&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">)</span>
+<span class="c1"># Forwarding rule for Internal Load Balancing</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_region_target_http_proxy</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">network_tier</span><span class="o">=</span><span class="s2">&quot;PREMIUM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4306,8 +5010,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.</p></li>
 <li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used
@@ -4335,8 +5038,7 @@ character, which cannot be a dash.</p></li>
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.</p></li>
-<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p></li>
 <li><p><strong>port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -4460,8 +5162,7 @@ or unnecessary diffs.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.ip_protocol">
 <code class="sig-name descname">ip_protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.ip_protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+<dd><p>The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.</p>
 </dd></dl>
@@ -4525,8 +5226,7 @@ This field is only used for INTERNAL load balancing.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.network_tier">
 <code class="sig-name descname">network_tier</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.network_tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<dd><p>The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p>
 </dd></dl>
 
@@ -4668,8 +5368,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.</p></li>
 <li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used
@@ -4698,8 +5397,7 @@ character, which cannot be a dash.</p></li>
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.</p></li>
-<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+<li><p><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.</p></li>
 <li><p><strong>port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -5863,6 +6561,12 @@ HTTP(S) load balancing.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalAddress</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5871,7 +6575,7 @@ HTTP(S) load balancing.</p>
 <li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address or beginning of the address range represented by this
 resource. This can be supplied as an input to reserve a specific
 address or omitted to allow GCP to choose a valid one for you.</p></li>
-<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the address to reserve, default is EXTERNAL.</p></li>
+<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the address to reserve.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5883,8 +6587,7 @@ address or omitted to allow GCP to choose a valid one for you.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
-<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. Valid options are
-<code class="docutils literal notranslate"><span class="pre">IPV4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPV6</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
+<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -5921,7 +6624,7 @@ address or omitted to allow GCP to choose a valid one for you.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalAddress.address_type">
 <code class="sig-name descname">address_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress.address_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the address to reserve, default is EXTERNAL.</p>
+<dd><p>The type of the address to reserve.</p>
 <ul class="simple">
 <li><p>EXTERNAL indicates public/external single IP address.</p></li>
 <li><p>INTERNAL indicates internal IP ranges belonging to some network.</p></li>
@@ -5943,8 +6646,7 @@ address or omitted to allow GCP to choose a valid one for you.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalAddress.ip_version">
 <code class="sig-name descname">ip_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress.ip_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP Version that will be used by this address. Valid options are
-<code class="docutils literal notranslate"><span class="pre">IPV4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPV6</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p>
+<dd><p>The IP Version that will be used by this address. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -6025,7 +6727,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address or beginning of the address range represented by this
 resource. This can be supplied as an input to reserve a specific
 address or omitted to allow GCP to choose a valid one for you.</p></li>
-<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the address to reserve, default is EXTERNAL.</p></li>
+<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the address to reserve.</p></li>
 </ul>
 </dd>
 </dl>
@@ -6038,8 +6740,7 @@ address or omitted to allow GCP to choose a valid one for you.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
-<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. Valid options are
-<code class="docutils literal notranslate"><span class="pre">IPV4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPV6</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
+<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
@@ -6120,6 +6821,114 @@ balancing. Global forwarding rules can only be used for HTTP load
 balancing.</p>
 <p>For more information, see
 <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/">https://cloud.google.com/compute/docs/load-balancing/http/</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">default_global_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultGlobalForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_target_http_proxy</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">igm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;igm&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">igm</span><span class="o">.</span><span class="n">instance_group</span><span class="p">,</span>
+        <span class="s2">&quot;balancingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;RATE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacityScaler&quot;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span>
+        <span class="s2">&quot;maxRatePerInstance&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">default_global_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultGlobalForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_target_http_proxy</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span>
+    <span class="n">metadata_filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;filterMatchCriteria&quot;</span><span class="p">:</span> <span class="s2">&quot;MATCH_ANY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filter_labels&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PLANET&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;MARS&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6147,11 +6956,9 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.</p></li>
-<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.</p></li>
+<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the GlobalForwardingRule will be used for.
 The value of INTERNAL_SELF_MANAGED means that this will be used for
@@ -6268,16 +7075,14 @@ or unnecessary diffs.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.ip_protocol">
 <code class="sig-name descname">ip_protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.ip_protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+<dd><p>The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.ip_version">
 <code class="sig-name descname">ip_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.ip_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.</p>
+<dd><p>The IP Version that will be used by this global forwarding rule.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -6436,11 +7241,9 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.</p></li>
-<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.</p></li>
+<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the GlobalForwardingRule will be used for.
@@ -6579,6 +7382,20 @@ global network endpoint group.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_endpoint</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalNetworkEndpoint</span><span class="p">(</span><span class="s2">&quot;default-endpoint&quot;</span><span class="p">,</span>
+    <span class="n">global_network_endpoint_group</span><span class="o">=</span><span class="n">google_compute_network_endpoint_group</span><span class="p">[</span><span class="s2">&quot;neg&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">fqdn</span><span class="o">=</span><span class="s2">&quot;www.example.com&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="n">google_compute_network_endpoint_group</span><span class="p">[</span><span class="s2">&quot;neg&quot;</span><span class="p">][</span><span class="s2">&quot;default_port&quot;</span><span class="p">],</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;endpoint-instance&quot;</span><span class="p">][</span><span class="s2">&quot;network_interface&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;network_ip&quot;</span><span class="p">])</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalNetworkEndpointGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">default_port</span><span class="o">=</span><span class="s2">&quot;90&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6701,6 +7518,22 @@ Currently a global network endpoint group can only support a single endpoint.</p
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">neg</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalNetworkEndpointGroup</span><span class="p">(</span><span class="s2">&quot;neg&quot;</span><span class="p">,</span>
+    <span class="n">default_port</span><span class="o">=</span><span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="n">network_endpoint_type</span><span class="o">=</span><span class="s2">&quot;INTERNET_FQDN_PORT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">neg</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalNetworkEndpointGroup</span><span class="p">(</span><span class="s2">&quot;neg&quot;</span><span class="p">,</span>
+    <span class="n">default_port</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+    <span class="n">network_endpoint_type</span><span class="o">=</span><span class="s2">&quot;INTERNET_IP_PORT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6717,18 +7550,10 @@ the regular expression <code class="docutils literal notranslate"><span class="p
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Supported values are:</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">INTERNET_IP_PORT</span>
-<span class="o">*</span> <span class="n">INTERNET_FQDN_PORT</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -6760,11 +7585,7 @@ character, which cannot be a dash.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.network_endpoint_type">
 <code class="sig-name descname">network_endpoint_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.network_endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of network endpoints in this network endpoint group. Supported values are:</p>
-<ul class="simple">
-<li><p>INTERNET_IP_PORT</p></li>
-<li><p>INTERNET_FQDN_PORT</p></li>
-</ul>
+<dd><p>Type of network endpoints in this network endpoint group.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -6802,17 +7623,7 @@ the regular expression <code class="docutils literal notranslate"><span class="p
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Supported values are:</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">INTERNET_IP_PORT</span>
-<span class="o">*</span> <span class="n">INTERNET_FQDN_PORT</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -6875,6 +7686,134 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ha_gateway1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HaVpnGateway</span><span class="p">(</span><span class="s2">&quot;haGateway1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span>
+    <span class="n">routing_mode</span><span class="o">=</span><span class="s2">&quot;GLOBAL&quot;</span><span class="p">,</span>
+    <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ha_gateway1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HaVpnGateway</span><span class="p">(</span><span class="s2">&quot;haGateway1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network2&quot;</span><span class="p">,</span>
+    <span class="n">routing_mode</span><span class="o">=</span><span class="s2">&quot;GLOBAL&quot;</span><span class="p">,</span>
+    <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ha_gateway2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HaVpnGateway</span><span class="p">(</span><span class="s2">&quot;haGateway2&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network2</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network1_subnet1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network1Subnet1&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network1_subnet2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network1Subnet2&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network2_subnet1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network2Subnet1&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network2</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">network2_subnet2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network2Subnet2&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;192.168.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network2</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">router1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64514</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">router2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router2&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64515</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_gcp_gateway</span><span class="o">=</span><span class="n">ha_gateway2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">tunnel2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel2&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_gcp_gateway</span><span class="o">=</span><span class="n">ha_gateway2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tunnel3</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel3&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_gcp_gateway</span><span class="o">=</span><span class="n">ha_gateway1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">tunnel4</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel4&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_gcp_gateway</span><span class="o">=</span><span class="n">ha_gateway1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">router1_interface1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router1Interface1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.0.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_peer1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router1Peer1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.0.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64515</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router1_interface1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_interface2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router1Interface2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.1.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router1_peer2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router1Peer2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.1.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64515</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router1_interface2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router2_interface1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router2Interface1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.0.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel3</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router2_peer1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router2Peer1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.0.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64514</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router2_interface1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router2_interface2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router2Interface2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.1.1/30&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="n">tunnel4</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">router2_peer2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;router2Peer2&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.1.2&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">64514</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="n">router2_interface2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7043,6 +7982,168 @@ healthy again and can receive new connections.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tcp_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;tcp-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tcp_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;tcp-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via tcp&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ssl_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;ssl-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ssl_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;ssl-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via ssl&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;http-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;http-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via http&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;https-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;https-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via https&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http2_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;http2-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http2_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;http2-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via http2&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">health_check_with_logging</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;health-check-with-logging&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">log_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7100,7 +8201,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7130,7 +8231,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7160,7 +8261,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7192,7 +8293,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7221,7 +8322,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7283,7 +8384,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7318,7 +8419,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7353,7 +8454,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7420,7 +8521,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7454,7 +8555,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7552,7 +8653,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7582,7 +8683,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7612,7 +8713,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -7644,7 +8745,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7673,7 +8774,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -7743,6 +8844,15 @@ which still require the legacy version.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/health_check&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7971,6 +9081,15 @@ which still require the legacy version.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpsHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/health_check&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8203,6 +9322,31 @@ to create an instance.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">raw_disk</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">guest_os_features</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SECURE_BOOT&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MULTI_IP_SUBNET&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">raw_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8471,6 +9615,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initializeParams&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metadata_startup_script</span><span class="o">=</span><span class="s2">&quot;echo hi &gt; /test.txt&quot;</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;accessConfig&quot;</span><span class="p">:</span> <span class="p">[{}],</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">scratch_disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;interface&quot;</span><span class="p">:</span> <span class="s2">&quot;SCSI&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9336,6 +10515,33 @@ and
 <p>This resource is specifically to create a compute instance from a given
 <code class="docutils literal notranslate"><span class="pre">source_instance_template</span></code>. To create an instance without a template, use the
 <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tpl_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;tplInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tpl_instance_from_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceFromTemplate</span><span class="p">(</span><span class="s2">&quot;tplInstanceFromTemplate&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">source_instance_template</span><span class="o">=</span><span class="n">tpl_instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;my_key&quot;</span><span class="p">:</span> <span class="s2">&quot;my_value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9601,6 +10807,79 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">google_compute_network</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">webservers</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;webservers&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8443&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Recreating an instance group that’s in use by another resource will give a
+<code class="docutils literal notranslate"><span class="pre">resourceInUseByAnotherResource</span></code> error. Use <code class="docutils literal notranslate"><span class="pre">lifecycle.create_before_destroy</span></code>
+as shown in this example to avoid this type of error.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">staging_vm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;stagingVm&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">debian_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">staging_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;stagingGroup&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8443&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">staging_health</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpsHealthCheck</span><span class="p">(</span><span class="s2">&quot;stagingHealth&quot;</span><span class="p">,</span> <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/health_check&quot;</span><span class="p">)</span>
+<span class="n">staging_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;stagingService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">staging_group</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">staging_health</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9773,7 +11052,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.InstanceGroupManager">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceGroupManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceGroupManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stateful_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Compute Engine Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/manager">the official documentation</a>
@@ -9781,6 +11060,58 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <blockquote>
 <div><p><strong>Note:</strong> Use <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html">compute.RegionInstanceGroupManager</a> to create a regional (multi-zone) instance group manager.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">autohealing</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;autohealing&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">]],</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">named_port</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;customHTTP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8888</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">auto_healing_policies</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;initialDelaySec&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;appserver-canary&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;target_size&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;fixed&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9805,6 +11136,8 @@ group manager.</p></li>
 for details on configuration.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
+<li><p><strong>stateful_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>.</p>
+</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
@@ -9814,15 +11147,6 @@ not affect existing instances.</p></li>
 </p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</p></li>
@@ -9844,6 +11168,11 @@ it applies autohealing policies to new instances or recently recreated instances
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
 <li></li>
+</ul>
+<p>The <strong>stateful_disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , The device name of the disk to be attached.</p></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -9943,6 +11272,16 @@ is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupManager.stateful_disks">
+<code class="sig-name descname">stateful_disks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.stateful_disks" title="Permalink to this definition">¶</a></dt>
+<dd><p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - , The device name of the disk to be attached.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.target_pools">
 <code class="sig-name descname">target_pools</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.target_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>The full URL of all target pools to which new
@@ -10010,7 +11349,7 @@ in.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stateful_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceGroupManager resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -10042,6 +11381,8 @@ for details on configuration.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the created resource.</p></li>
+<li><p><strong>stateful_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>.</p>
+</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
@@ -10051,15 +11392,6 @@ not affect existing instances.</p></li>
 </p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</p></li>
@@ -10081,6 +11413,11 @@ it applies autohealing policies to new instances or recently recreated instances
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
 <li></li>
+</ul>
+<p>The <strong>stateful_disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , The device name of the disk to be attached.</p></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -10161,6 +11498,33 @@ tools.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">container_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;containerNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">container_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;containerSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">container_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.36.0/24&quot;</span><span class="p">)</span>
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">container_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">container_subnetwork</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_allocation_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterIpv4CidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;/19&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;servicesIpv4CidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;/22&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">my_port</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupNamedPort</span><span class="p">(</span><span class="s2">&quot;myPort&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">instance_group_urls</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">my_ports</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupNamedPort</span><span class="p">(</span><span class="s2">&quot;myPorts&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">instance_group_urls</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">4443</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10272,23 +11636,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
+<dd><p>Create a InstanceIAMBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>Structure is documented below.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -10430,24 +11787,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.InstanceIAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
+<dd><p>Create a InstanceIAMMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>Structure is documented below.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p>
-</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -10589,24 +11938,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
+<dd><p>Create a InstanceIAMPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] instance_name: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
@@ -10719,6 +12061,126 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/compute/docs/instance-templates">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceTemplates">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="n">my_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This template is used to create app server instances.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">instance_description</span><span class="o">=</span><span class="s2">&quot;description assigned to instances&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">scheduling</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;automaticRestart&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;onHostMaintenance&quot;</span><span class="p">:</span> <span class="s2">&quot;MIGRATE&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">foobar</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Instance Templates cannot be updated after creation with the Google
+Cloud Platform API. In order to update an Instance Template, this provider will
+create a replacement. In order to effectively
+use an Instance Template resource with an <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html">Instance Group Manager resource</a>.
+Either omit the Instance Template <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute, or specify a partial name
+with <code class="docutils literal notranslate"><span class="pre">name_prefix</span></code>. Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;instance-template-&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{}])</span>
+<span class="n">instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;instanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">instance_template</span><span class="o">=</span><span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;instance-group-manager&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With this setup, this provider generates a unique name for your Instance
+Template and can then update the Instance Group manager without conflict before
+destroying the previous Instance Template.</p>
+<p>A common way to use instance templates and managed instance groups is to deploy the
+latest image in a family, usually the latest build of your application. There are two
+ways to do this in the provider, and they have their pros and cons. The difference ends
+up being in how “latest” is interpreted. You can either deploy the latest image available
+when the provider runs, or you can have each instance check what the latest image is when
+it’s being created, either as part of a scaling event or being rebuilt by the instance
+group manager.</p>
+<p>If you’re not sure, we recommend deploying the latest image available when the provider runs,
+because this means all the instances in your group will be based on the same image, always,
+and means that no upgrades or changes to your instances happen outside of a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>.
+You can achieve this by using the <code class="docutils literal notranslate"><span class="pre">compute.Image</span></code>
+data source, which will retrieve the latest image on every <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">apply</span></code>, and will update
+the template to use that specific image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;instance-template-&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">google_compute_image</span><span class="p">[</span><span class="s2">&quot;my_image&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<p>To have instances update to the latest on every scaling event or instance re-creation,
+use the family as the image for the disk, and it will use GCP’s default behavior, setting
+the image for the template to the family:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;instance-template-&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11435,6 +12897,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InterconnectAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">candidate_subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edge_availability_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interconnect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">router</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_tag8021q</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InterconnectAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an InterconnectAttachment (VLAN attachment) resource. For more
 information, see Creating VLAN Attachments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="n">network</span><span class="o">=</span><span class="n">google_compute_network</span><span class="p">[</span><span class="s2">&quot;foobar&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">on_prem</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InterconnectAttachment</span><span class="p">(</span><span class="s2">&quot;onPrem&quot;</span><span class="p">,</span>
+    <span class="n">interconnect</span><span class="o">=</span><span class="s2">&quot;my-interconnect-id&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11788,6 +13259,50 @@ some time, and migrating from self-managed certificates to Google-managed
 certificates may entail some downtime while the certificate provisions.</p>
 </div></blockquote>
 <p>In conclusion: Be extremely cautious.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_managed_ssl_certificate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedSslCertificate</span><span class="p">(</span><span class="s2">&quot;defaultManagedSslCertificate&quot;</span><span class="p">,</span> <span class="n">managed</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;domains&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sslcert.tf-test.club.&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sslcert.tf-test.club&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_target_https_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpsProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpsProxy&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ssl_certificates</span><span class="o">=</span><span class="p">[</span><span class="n">default_managed_ssl_certificate</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">zone</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;zone&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;sslcert.tf-test.club.&quot;</span><span class="p">)</span>
+<span class="n">default_global_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultGlobalForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">default_target_https_proxy</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="mi">443</span><span class="p">)</span>
+<span class="nb">set</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="n">default_global_forwarding_rule</span><span class="o">.</span><span class="n">ip_address</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11970,7 +13485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.MangedSslCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">MangedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate</p>
+<dd><p>Deprecated: gcp.compute.MangedSslCertificate has been deprecated in favour of gcp.compute.ManagedSslCertificate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11985,7 +13500,8 @@ comply with RFC1035. Specifically, the name must be 1-63 characters long and mat
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
 namespace as the managed SSL certificates.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is. Default value: “MANAGED”
+Possible values: [“MANAGED”]</p></li>
 </ul>
 </dd>
 </dl>
@@ -12046,7 +13562,8 @@ namespace as the managed SSL certificates.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.MangedSslCertificate.type">
 <code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is.</p>
+<dd><p>Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is. Default value: “MANAGED”
+Possible values: [“MANAGED”]</p>
 </dd></dl>
 
 <dl class="py method">
@@ -12073,7 +13590,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
 namespace as the managed SSL certificates.</p>
 </p></li>
 <li><p><strong>subject_alternative_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Domains associated with the certificate via Subject Alternative Name.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enum field whose value is always ‘MANAGED’ - used to signal to the API which type this is. Default value: “MANAGED”
+Possible values: [“MANAGED”]</p></li>
 </ul>
 </dd>
 </dl>
@@ -12134,6 +13652,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">vpc_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;vpcNetwork&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12326,6 +13850,39 @@ network endpoint group.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.1/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">endpoint_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;endpoint-instance&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">my_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;subnetwork&quot;</span><span class="p">:</span> <span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;access_config&quot;</span><span class="p">:</span> <span class="p">[{}],</span>
+    <span class="p">}])</span>
+<span class="n">default_endpoint</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkEndpoint</span><span class="p">(</span><span class="s2">&quot;default-endpoint&quot;</span><span class="p">,</span>
+    <span class="n">network_endpoint_group</span><span class="o">=</span><span class="n">google_compute_network_endpoint_group</span><span class="p">[</span><span class="s2">&quot;neg&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">endpoint_instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="n">google_compute_network_endpoint_group</span><span class="p">[</span><span class="s2">&quot;neg&quot;</span><span class="p">][</span><span class="s2">&quot;default_port&quot;</span><span class="p">],</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">endpoint_instance</span><span class="o">.</span><span class="n">network_interfaces</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;networkIp&quot;</span><span class="p">])</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkEndpointGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">default_port</span><span class="o">=</span><span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12472,6 +14029,21 @@ fashion among applications or containers running within VM instances.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">neg</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkEndpointGroup</span><span class="p">(</span><span class="s2">&quot;neg&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">default_port</span><span class="o">=</span><span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12490,7 +14062,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which all network endpoints in the NEG belong.
 Uses “default” project network if unspecified.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional subnetwork to which all network endpoints in the NEG belong.</p></li>
@@ -12534,7 +14106,7 @@ Uses “default” project network if unspecified.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.NetworkEndpointGroup.network_endpoint_type">
 <code class="sig-name descname">network_endpoint_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.network_endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p>
+<dd><p>Type of network endpoints in this network endpoint group.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -12592,7 +14164,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which all network endpoints in the NEG belong.
 Uses “default” project network if unspecified.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -12654,6 +14226,19 @@ and
 to be functional.</p>
 <p>Subnets IP ranges across peered VPC networks cannot overlap.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">other</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;other&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">peering1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">peering2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering2&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12791,6 +14376,26 @@ resource is a no-op and the peering will not be modified.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network_primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;networkPrimary&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">network_secondary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;networkSecondary&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">peering_primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peeringPrimary&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network_primary</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">network_secondary</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">import_custom_routes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">export_custom_routes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">peering_primary_routes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeeringRoutesConfig</span><span class="p">(</span><span class="s2">&quot;peeringPrimaryRoutes&quot;</span><span class="p">,</span>
+    <span class="n">peering</span><span class="o">=</span><span class="n">peering_primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network_primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">import_custom_routes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">export_custom_routes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">peering_secondary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peeringSecondary&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network_secondary</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">network_primary</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12915,6 +14520,39 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">soletenant_tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;soletenant-tmpl&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example compute.NodeGroup for the Google Provider&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_template</span><span class="o">=</span><span class="n">soletenant_tmpl</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">soletenant_tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;soletenant-tmpl&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example compute.NodeGroup for the Google Provider&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_template</span><span class="o">=</span><span class="n">soletenant_tmpl</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ON&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minNodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;maxNodes&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13126,6 +14764,30 @@ requirements, node affinity labels, and region.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">node_affinity_labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">server_binding</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RESTART_NODE_ON_MINIMAL_SERVERS&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13366,6 +15028,60 @@ and monitor application performance.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">)</span>
+<span class="n">mirror</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;mirror&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;access_config&quot;</span><span class="p">:</span> <span class="p">[{}],</span>
+    <span class="p">}])</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span> <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">is_mirroring_collector</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">all_ports</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">network_tier</span><span class="o">=</span><span class="s2">&quot;PREMIUM&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">PacketMirroring</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">collector_ilb</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">default_forwarding_rule</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">mirrored_resources</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instances&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">mirror</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ipProtocols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tcp&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cidrRanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13615,6 +15331,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 for a project.</p>
 <p>For more information, see,
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier">the Project API documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ProjectDefaultNetworkTier</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">network_tier</span><span class="o">=</span><span class="s2">&quot;PREMIUM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13712,6 +15434,16 @@ Keys unset in config but set on the server will be removed. If you want to manag
 key/value pairs within the project metadata rather than the entire set, then use
 google_compute_project_metadata_item.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ProjectMetadata</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;13&quot;</span><span class="p">:</span> <span class="s2">&quot;42&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fizz&quot;</span><span class="p">:</span> <span class="s2">&quot;buzz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13800,6 +15532,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 a project in GCE. Using <code class="docutils literal notranslate"><span class="pre">compute.ProjectMetadataItem</span></code> lets you
 manage a single key/value setting in the provider rather than the entire
 project metadata map.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ProjectMetadataItem</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;my_metadata&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my_value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13905,6 +15645,56 @@ define.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian9</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">foobar_instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;foobarInstanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian9</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userinfo-email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;compute-ro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;storage-ro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">foobar_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;foobarTargetPool&quot;</span><span class="p">)</span>
+<span class="n">foobar_region_instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;foobarRegionInstanceGroupManager&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">foobar_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">foobar_target_pool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">foobar_region_autoscaler</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionAutoscaler</span><span class="p">(</span><span class="s2">&quot;foobarRegionAutoscaler&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">foobar_region_instance_group_manager</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxReplicas&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cooldownPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;cpu_utilization&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14009,8 +15799,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -14106,8 +15895,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -14276,8 +16064,7 @@ instead.</p></li>
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.</p></li>
+Stackdriver Monitoring metric.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of replicas that the autoscaler can scale down
@@ -14339,6 +16126,119 @@ machines that will serve traffic for load balancing.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">connection_draining_timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">session_affinity</span><span class="o">=</span><span class="s2">&quot;CLIENT_IP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">locality_lb_policy</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">locality_lb_policy</span><span class="o">=</span><span class="s2">&quot;RING_HASH&quot;</span><span class="p">,</span>
+    <span class="n">session_affinity</span><span class="o">=</span><span class="s2">&quot;HTTP_COOKIE&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">circuit_breakers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxConnections&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">consistent_hash</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;http_cookie&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">1111</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mycookie&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">outlier_detection</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;consecutiveErrors&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span>
+    <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">routing_mode</span><span class="o">=</span><span class="s2">&quot;REGIONAL&quot;</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.1.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">instance_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceTemplate</span><span class="p">(</span><span class="s2">&quot;instanceTemplate&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;subnetwork&quot;</span><span class="p">:</span> <span class="n">default_subnetwork</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="n">debian_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;allow-ssh&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;load-balanced-backend&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">rigm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;rigm&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultRegionHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_SERVING_PORT&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">rigm</span><span class="o">.</span><span class="n">instance_group</span><span class="p">,</span>
+        <span class="s2">&quot;balancingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;UTILIZATION&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacityScaler&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14370,8 +16270,7 @@ this RegionBackendService. Currently at most one health
 check can be specified, and a health check is required.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_MANAGED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code>.</p></li>
+balancing cannot be used with the other(s).</p></li>
 <li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
 The possible values are -
 ROUND_ROBIN - This is a simple policy in which each healthy backend
@@ -14405,8 +16304,7 @@ to INTERNAL_MANAGED and the <code class="docutils literal notranslate"><span cla
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.</p></li>
@@ -14419,7 +16317,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].</p></li>
 </dl>
 <p>The <strong>backends</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the balancing mode for this backend. Defaults to CONNECTION.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the balancing mode for this backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">capacityScaler</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A multiplier applied to the group’s maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
 ~&gt;<strong>NOTE</strong>: This field cannot be set for
@@ -14639,7 +16537,7 @@ When the load balancing scheme is INTERNAL, this field is not used.</p>
 <code class="sig-name descname">backends</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.backends" title="Permalink to this definition">¶</a></dt>
 <dd><p>The set of backends that serve this RegionBackendService.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the balancing mode for this backend. Defaults to CONNECTION.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the balancing mode for this backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">capacityScaler</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A multiplier applied to the group’s maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
 ~&gt;<strong>NOTE</strong>: This field cannot be set for
@@ -14844,8 +16742,7 @@ check can be specified, and a health check is required.</p>
 <code class="sig-name descname">load_balancing_scheme</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.load_balancing_scheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_MANAGED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code>.</p>
+balancing cannot be used with the other(s).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -14976,8 +16873,7 @@ If it is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.compute.RegionBackendService.protocol">
 <code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p>
 </dd></dl>
 
@@ -15047,8 +16943,7 @@ this RegionBackendService. Currently at most one health
 check can be specified, and a health check is required.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code> or
-<code class="docutils literal notranslate"><span class="pre">INTERNAL_MANAGED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code>.</p></li>
+balancing cannot be used with the other(s).</p></li>
 <li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
 The possible values are -
 ROUND_ROBIN - This is a simple policy in which each healthy backend
@@ -15082,8 +16977,7 @@ to INTERNAL_MANAGED and the <code class="docutils literal notranslate"><span cla
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.</p></li>
@@ -15097,7 +16991,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].</p></li>
 </dl>
 <p>The <strong>backends</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the balancing mode for this backend. Defaults to CONNECTION.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the balancing mode for this backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">capacityScaler</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A multiplier applied to the group’s maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
 ~&gt;<strong>NOTE</strong>: This field cannot be set for
@@ -15368,10 +17262,31 @@ affordable storage with consistent performance characteristics.</p>
 </li>
 </ul>
 <blockquote>
-<div><p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">disk_encryption_key.raw_key</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">disk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;disk&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">snapdisk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;snapdisk&quot;</span><span class="p">,</span>
+    <span class="n">source_disk</span><span class="o">=</span><span class="n">disk</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">regiondisk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionDisk</span><span class="p">(</span><span class="s2">&quot;regiondisk&quot;</span><span class="p">,</span>
+    <span class="n">snapshot</span><span class="o">=</span><span class="n">snapdisk</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">physical_block_size_bytes</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
+    <span class="n">replica_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15766,6 +17681,43 @@ which will be applied to this disk for scheduling snapshot creation.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource does not support zonal disks (<code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>).</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">disk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;disk&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">snapdisk</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;snapdisk&quot;</span><span class="p">,</span>
+    <span class="n">source_disk</span><span class="o">=</span><span class="n">disk</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">ssd</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionDisk</span><span class="p">(</span><span class="s2">&quot;ssd&quot;</span><span class="p">,</span>
+    <span class="n">replica_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">snapshot</span><span class="o">=</span><span class="n">snapdisk</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">attachment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionDiskResourcePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;attachment&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="n">ssd</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;daily_schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;daysInCycle&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;04:00&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15888,6 +17840,168 @@ healthy again and can receive new connections.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tcp_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;tcp-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">tcp_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;tcp-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via tcp&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ssl_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;ssl-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ssl_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;ssl-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via ssl&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;http-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;http-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">log_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;http-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via http&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;https-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;https-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via https&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http2_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;http2-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http2_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;http2-region-health-check&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via http2&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15947,7 +18061,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -15977,7 +18091,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16007,7 +18121,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16039,7 +18153,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16068,7 +18182,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16130,7 +18244,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16165,7 +18279,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16200,7 +18314,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16274,7 +18388,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16308,7 +18422,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16408,7 +18522,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16438,7 +18552,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16468,7 +18582,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request path of the HTTP2 health check request.
 The default value is /.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bytes to match against the beginning of the response data. If left empty
@@ -16500,7 +18614,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16529,7 +18643,7 @@ If not specified, HTTP2 health check follows behavior specified in <code class="
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
@@ -16580,7 +18694,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionInstanceGroupManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distribution_policy_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionInstanceGroupManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distribution_policy_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stateful_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Compute Engine Regional Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">the official documentation</a>
@@ -16588,6 +18702,60 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <blockquote>
 <div><p><strong>Note:</strong> Use <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html">compute.InstanceGroupManager</a> to create a single-zone instance group manager.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">autohealing</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;autohealing&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">distribution_policy_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">]],</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">named_port</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;custom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8888</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">auto_healing_policies</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;initialDelaySec&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
+    <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;target_size&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;fixed&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -16608,15 +18776,6 @@ group manager.</p></li>
 <li><p><strong>distribution_policy_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>The distribution policy for this managed instance
 group. You can specify one or more values. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones">official documentation</a>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
 <li><p>Version name.</p></li>
 </ul>
@@ -16626,6 +18785,8 @@ for details on configuration.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the managed instance group resides.</p></li>
+<li><p><strong>stateful_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the <code class="docutils literal notranslate"><span class="pre">update_policy</span></code>.</p>
+</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
@@ -16654,6 +18815,11 @@ it applies autohealing policies to new instances or recently recreated instances
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
 <li></li>
+</ul>
+<p>The <strong>stateful_disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , The device name of the disk to be attached.</p></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -16767,6 +18933,16 @@ is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.compute.RegionInstanceGroupManager.stateful_disks">
+<code class="sig-name descname">stateful_disks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.stateful_disks" title="Permalink to this definition">¶</a></dt>
+<dd><p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the <code class="docutils literal notranslate"><span class="pre">update_policy</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - , The device name of the disk to be attached.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.target_pools">
 <code class="sig-name descname">target_pools</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.target_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>The full URL of all target pools to which new
@@ -16828,7 +19004,7 @@ continue trying until it times out.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distribution_policy_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distribution_policy_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stateful_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_instances</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegionInstanceGroupManager resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -16852,15 +19028,6 @@ group manager.</p></li>
 <li><p><strong>distribution_policy_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>The distribution policy for this managed instance
 group. You can specify one or more values. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones">official documentation</a>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the instance group manager.</p></li>
 <li><p><strong>instance_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full URL of the instance group created by the manager.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
@@ -16873,6 +19040,8 @@ for details on configuration.</p></li>
 is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the managed instance group resides.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the created resource.</p></li>
+<li><p><strong>stateful_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs">official documentation</a>. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the <code class="docutils literal notranslate"><span class="pre">update_policy</span></code>.</p>
+</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
@@ -16901,6 +19070,11 @@ it applies autohealing policies to new instances or recently recreated instances
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
 <li></li>
+</ul>
+<p>The <strong>stateful_disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> and <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code>. <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> detatch the disk when the VM is deleted, but not delete the disk. <code class="docutils literal notranslate"><span class="pre">ON_PERMANENT_INSTANCE_DELETION</span></code> will delete the stateful disk when the VM is permanently deleted from the instance group. The default is <code class="docutils literal notranslate"><span class="pre">NEVER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - , The device name of the disk to be attached.</p></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -16981,6 +19155,70 @@ the load balancer to serve secure connections from the user.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">private_key</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionSslCertificate</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;my-certificate-&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/private.key&quot;</span><span class="p">),</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/certificate.crt&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="c1"># Using with Region Target HTTPS Proxies</span>
+<span class="c1">#</span>
+<span class="c1"># SSL certificates cannot be updated after creation. In order to apply</span>
+<span class="c1"># the specified configuration, the provider will destroy the existing</span>
+<span class="c1"># resource and create a replacement. To effectively use an SSL</span>
+<span class="c1"># certificate resource with a Target HTTPS Proxy resource, it&#39;s</span>
+<span class="c1"># recommended to specify create_before_destroy in a lifecycle block.</span>
+<span class="c1"># Either omit the Instance Template name attribute, specify a partial</span>
+<span class="c1"># name with name_prefix, or use random_id resource. Example:</span>
+<span class="n">default_region_ssl_certificate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionSslCertificate</span><span class="p">(</span><span class="s2">&quot;defaultRegionSslCertificate&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;my-certificate-&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/private.key&quot;</span><span class="p">),</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/certificate.crt&quot;</span><span class="p">))</span>
+<span class="n">default_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultRegionHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_region_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;defaultRegionUrlMap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_region_target_https_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpsProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpsProxy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ssl_certificates</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_ssl_certificate</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -16988,7 +19226,7 @@ the load balancer to serve secure connections from the user.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p></li>
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -16999,7 +19237,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
 specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.</p></li>
+<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created regional ssl certificate should reside.
@@ -17012,7 +19250,7 @@ If it is not provided, the provider region is used.</p></li>
 <code class="sig-name descname">certificate</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p>
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -17055,7 +19293,7 @@ specified prefix. Conflicts with <code class="docutils literal notranslate"><spa
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.RegionSslCertificate.private_key">
 <code class="sig-name descname">private_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.private_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>The write-only private key in PEM format.</p>
+<dd><p>The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -17091,7 +19329,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p></li>
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
@@ -17104,7 +19342,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
 specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.</p></li>
+<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created regional ssl certificate should reside.
@@ -17167,6 +19405,52 @@ forwarding rules to route incoming HTTP requests to a URL map.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultRegionHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_region_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;defaultRegionUrlMap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_region_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpProxy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_region_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;defaultRegionUrlMap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">default_url_redirect</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpsRedirect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpProxy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -17331,6 +19615,45 @@ forwarding rules to route incoming HTTPS requests to a URL map.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_region_ssl_certificate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionSslCertificate</span><span class="p">(</span><span class="s2">&quot;defaultRegionSslCertificate&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/private.key&quot;</span><span class="p">),</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/certificate.crt&quot;</span><span class="p">))</span>
+<span class="n">default_region_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultRegionHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_region_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;defaultRegionBackendService&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_region_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;defaultRegionUrlMap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_region_target_https_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpsProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpsProxy&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ssl_certificates</span><span class="o">=</span><span class="p">[</span><span class="n">default_region_ssl_certificate</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -17497,9 +19820,338 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.RegionUrlMap">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionUrlMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionUrlMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">login</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">regionurlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;regionurlmap&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/login&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">login</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">regionurlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;regionurlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cors_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowCredentials&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;allowHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed content&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowMethods&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed origin&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;exposeHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Exposed header&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;maxAge&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;fault_injection_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;abort&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;httpStatus&quot;</span><span class="p">:</span> <span class="mi">234</span><span class="p">,</span>
+                        <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="mf">5.6</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;delay&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;fixed_delay&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="mf">7.8</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;request_mirror_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;retry_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;numRetries&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;per_try_timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;retryConditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;5xx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;deadline-exceeded&quot;</span><span class="p">,</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">750000000</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;url_rewrite&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;hostRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement header&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                    <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;request_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                        <span class="s2">&quot;responseHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                    <span class="p">},</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">regionurlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;regionurlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;retry_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;numRetries&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;per_try_timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;retryConditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;5xx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;deadline-exceeded&quot;</span><span class="p">,</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">750000000</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;url_rewrite&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;hostRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement header&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                    <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                    <span class="p">},</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">regionurlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;regionurlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe2&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;request_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddSomethingElse&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyOtherValue&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;responseHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe3&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;match_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;fullPathMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;a full path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;header_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;someheader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;exactMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;match this exactly&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;invertMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;ignoreCase&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;metadata_filters&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;filterMatchCriteria&quot;</span><span class="p">:</span> <span class="s2">&quot;MATCH_ANY&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;filter_labels&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PLANET&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;MARS&quot;</span><span class="p">,</span>
+                    <span class="p">}],</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;query_parameter_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;a query parameter&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;presentMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;url_redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hostRedirect&quot;</span><span class="p">:</span> <span class="s2">&quot;A host&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;httpsRedirect&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;pathRedirect&quot;</span><span class="p">:</span> <span class="s2">&quot;some/path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;redirectResponseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMPORARY_REDIRECT&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stripQuery&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">regionurlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionUrlMap</span><span class="p">(</span><span class="s2">&quot;regionurlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe2&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;match_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;fullPathMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;a full path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;header_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;someheader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;exactMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;match this exactly&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;invertMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;query_parameter_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;a query parameter&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;presentMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">}],</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -17508,6 +20160,9 @@ that you define for the host and path of an incoming URL.</p>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p></li>
+<li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>host_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of HostRules to use against the URL.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the query parameter to match. The query parameter must exist in the
@@ -17523,6 +20178,40 @@ succeed only if all of the test cases pass.  Structure is documented below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_url_redirect</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 <p>The <strong>host_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
@@ -17538,6 +20227,43 @@ the URL if the hostRule matches the URL’s host portion.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.</p></li>
@@ -17741,21 +20467,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -17767,9 +20498,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -18113,21 +20845,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -18139,9 +20876,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -18166,6 +20904,47 @@ original URL is retained.</p></li>
 <dd><p>A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.RegionUrlMap.default_url_redirect">
+<code class="sig-name descname">default_url_redirect</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap.default_url_redirect" title="Permalink to this definition">¶</a></dt>
+<dd><p>When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -18217,6 +20996,43 @@ the URL if the hostRule matches the URL’s host portion.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.</p></li>
@@ -18420,21 +21236,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -18446,9 +21267,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -18792,21 +21614,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -18818,9 +21645,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -18863,7 +21691,7 @@ succeed only if all of the test cases pass.  Structure is documented below.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.RegionUrlMap.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegionUrlMap resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -18876,6 +21704,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p></li>
+<li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fingerprint of this resource. This field is used internally during updates of this resource.</p></li>
 <li><p><strong>host_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of HostRules to use against the URL.  Structure is documented below.</p></li>
@@ -18894,6 +21725,40 @@ succeed only if all of the test cases pass.  Structure is documented below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_url_redirect</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 <p>The <strong>host_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
@@ -18909,6 +21774,43 @@ the URL if the hostRule matches the URL’s host portion.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL’s path portion.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.</p></li>
@@ -19112,21 +22014,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -19138,9 +22045,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -19484,21 +22392,26 @@ The value must be between 0 and 1000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A reference to expected RegionBackendService resource the given URL should be mapped to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
 <ul>
 <li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
@@ -19510,9 +22423,10 @@ will be retained.</p></li>
 the request method will be retained.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -19584,6 +22498,20 @@ like Cloud SQL and Dataflow.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">gce_reservation</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Reservation</span><span class="p">(</span><span class="s2">&quot;gceReservation&quot;</span><span class="p">,</span>
+    <span class="n">specific_reservation</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;instanceProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n2-standard-2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;minCpuPlatform&quot;</span><span class="p">:</span> <span class="s2">&quot;Intel Cascade Lake&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -19628,8 +22556,7 @@ If you are creating an instance template, specify only the accelerator name.</p>
 reserves disks of type <code class="docutils literal notranslate"><span class="pre">local-ssd</span></code>.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk in base-2 GB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk, one
-of <code class="docutils literal notranslate"><span class="pre">SCSI</span></code> or <code class="docutils literal notranslate"><span class="pre">NVME</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">SCSI</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the machine type to reserve.</p></li>
@@ -19707,8 +22634,7 @@ If you are creating an instance template, specify only the accelerator name.</p>
 reserves disks of type <code class="docutils literal notranslate"><span class="pre">local-ssd</span></code>.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the disk in base-2 GB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The disk interface to use for attaching this disk, one
-of <code class="docutils literal notranslate"><span class="pre">SCSI</span></code> or <code class="docutils literal notranslate"><span class="pre">NVME</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">SCSI</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The disk interface to use for attaching this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the machine type to reserve.</p></li>
@@ -19795,8 +22721,7 @@ If you are creating an instance template, specify only the accelerator name.</p>
 reserves disks of type <code class="docutils literal notranslate"><span class="pre">local-ssd</span></code>.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk in base-2 GB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk, one
-of <code class="docutils literal notranslate"><span class="pre">SCSI</span></code> or <code class="docutils literal notranslate"><span class="pre">NVME</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">SCSI</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the machine type to reserve.</p></li>
@@ -19851,6 +22776,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.compute.ResourcePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">ResourcePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_placement_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy that can be attached to a resource to specify or schedule actions on that resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dailySchedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;daysInCycle&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;04:00&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;maxRetentionDays&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;onSourceDiskDelete&quot;</span><span class="p">:</span> <span class="s2">&quot;KEEP_AUTO_SNAPSHOTS&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hourlySchedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hoursInCycle&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;snapshotProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;guestFlush&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;myLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;storageLocations&quot;</span><span class="p">:</span> <span class="s2">&quot;us&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">baz</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="n">group_placement_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;collocation&quot;</span><span class="p">:</span> <span class="s2">&quot;COLLOCATED&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vmCount&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -19887,8 +22864,7 @@ attached.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum age of the snapshot that is allowed to be kept.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onSourceDiskDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the behavior to apply to scheduled snapshots when
-the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY</p></li>
+the source disk is deleted.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains one of an <code class="docutils literal notranslate"><span class="pre">hourlySchedule</span></code>, <code class="docutils literal notranslate"><span class="pre">dailySchedule</span></code>, or <code class="docutils literal notranslate"><span class="pre">weeklySchedule</span></code>.  Structure is documented below.</p>
@@ -19984,8 +22960,7 @@ If it is not provided, the provider project is used.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum age of the snapshot that is allowed to be kept.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onSourceDiskDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the behavior to apply to scheduled snapshots when
-the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY</p></li>
+the source disk is deleted.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Contains one of an <code class="docutils literal notranslate"><span class="pre">hourlySchedule</span></code>, <code class="docutils literal notranslate"><span class="pre">dailySchedule</span></code>, or <code class="docutils literal notranslate"><span class="pre">weeklySchedule</span></code>.  Structure is documented below.</p>
@@ -20071,8 +23046,7 @@ attached.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum age of the snapshot that is allowed to be kept.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onSourceDiskDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the behavior to apply to scheduled snapshots when
-the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY</p></li>
+the source disk is deleted.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains one of an <code class="docutils literal notranslate"><span class="pre">hourlySchedule</span></code>, <code class="docutils literal notranslate"><span class="pre">dailySchedule</span></code>, or <code class="docutils literal notranslate"><span class="pre">weeklySchedule</span></code>.  Structure is documented below.</p>
@@ -20184,6 +23158,48 @@ nextHopIlb.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">)</span>
+<span class="n">default_route</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;defaultRoute&quot;</span><span class="p">,</span>
+    <span class="n">dest_range</span><span class="o">=</span><span class="s2">&quot;15.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">next_hop_ip</span><span class="o">=</span><span class="s2">&quot;10.132.1.5&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">default_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;defaultSubnetwork&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">hc</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;hc&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">hc</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;defaultForwardingRule&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">all_ports</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="n">default_subnetwork</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">route_ilb</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route-ilb&quot;</span><span class="p">,</span>
+    <span class="n">dest_range</span><span class="o">=</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">next_hop_ilb</span><span class="o">=</span><span class="n">default_forwarding_rule</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -20506,6 +23522,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foobar_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;foobarNetwork&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">foobar_router</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;foobarRouter&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">foobar_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64514</span><span class="p">,</span>
+        <span class="s2">&quot;advertiseMode&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;advertisedGroups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ALL_SUBNETS&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;advertised_ip_ranges&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;range&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;range&quot;</span><span class="p">:</span> <span class="s2">&quot;6.7.0.0/16&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -20528,8 +23565,7 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>bgp</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User-specified flag to indicate which mode to use for advertisement.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">advertised_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - User-specified list of prefix groups to advertise in custom mode.
 This field can only be populated if advertiseMode is CUSTOM and
 is advertised to all peers of the router. These groups will be
@@ -20557,8 +23593,7 @@ will have the same local ASN.</p></li>
 <code class="sig-name descname">bgp</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Router.bgp" title="Permalink to this definition">¶</a></dt>
 <dd><p>BGP information specific to this router.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - User-specified flag to indicate which mode to use for advertisement.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">advertised_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - User-specified list of prefix groups to advertise in custom mode.
 This field can only be populated if advertiseMode is CUSTOM and
 is advertised to all peers of the router. These groups will be
@@ -20661,8 +23696,7 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>bgp</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User-specified flag to indicate which mode to use for advertisement.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">advertised_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - User-specified list of prefix groups to advertise in custom mode.
 This field can only be populated if advertiseMode is CUSTOM and
 is advertised to all peers of the router. These groups will be
@@ -20732,6 +23766,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/compute/docs/cloudrouter">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/routers">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;169.254.1.1/30&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="s2">&quot;router-1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_tunnel</span><span class="o">=</span><span class="s2">&quot;tunnel-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -20896,6 +23940,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;net&quot;</span><span class="p">)</span>
+<span class="n">subnet</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">router</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">subnet</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64514</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">nat</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterNat</span><span class="p">(</span><span class="s2">&quot;nat&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">nat_ip_allocate_option</span><span class="o">=</span><span class="s2">&quot;AUTO_ONLY&quot;</span><span class="p">,</span>
+    <span class="n">source_subnetwork_ip_ranges_to_nat</span><span class="o">=</span><span class="s2">&quot;ALL_SUBNETWORKS_ALL_IP_RANGES&quot;</span><span class="p">,</span>
+    <span class="n">log_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;ERRORS_ONLY&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;net&quot;</span><span class="p">)</span>
+<span class="n">subnet</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">router</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">subnet</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">address</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">address</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;address-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">subnet</span><span class="o">.</span><span class="n">region</span><span class="p">))</span>
+<span class="n">nat_manual</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterNat</span><span class="p">(</span><span class="s2">&quot;natManual&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">nat_ip_allocate_option</span><span class="o">=</span><span class="s2">&quot;MANUAL_ONLY&quot;</span><span class="p">,</span>
+    <span class="n">nat_ips</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">self_link</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">address</span><span class="p">],</span>
+    <span class="n">source_subnetwork_ip_ranges_to_nat</span><span class="o">=</span><span class="s2">&quot;LIST_OF_SUBNETWORKS&quot;</span><span class="p">,</span>
+    <span class="n">subnetwork</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">google_compute_subnetwork</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;sourceIpRangesToNats&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ALL_IP_RANGES&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -20939,8 +24034,7 @@ Defaults to 30s if not set.</p></li>
 <p>The <strong>log_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether or not to export logs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the desired filtering of logs on this NAT. Valid
-values are: <code class="docutils literal notranslate"><span class="pre">&quot;ERRORS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TRANSLATIONS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ALL&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the desired filtering of logs on this NAT.</p></li>
 </ul>
 <p>The <strong>subnetworks</strong> object supports the following:</p>
 <ul class="simple">
@@ -20973,8 +24067,7 @@ valid static external IPs that have been assigned to the NAT.</p>
 <dd><p>Configuration for logging on NAT  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether or not to export logs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the desired filtering of logs on this NAT. Valid
-values are: <code class="docutils literal notranslate"><span class="pre">&quot;ERRORS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TRANSLATIONS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ALL&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the desired filtering of logs on this NAT.</p></li>
 </ul>
 </dd></dl>
 
@@ -21126,8 +24219,7 @@ Defaults to 30s if not set.</p></li>
 <p>The <strong>log_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether or not to export logs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the desired filtering of logs on this NAT. Valid
-values are: <code class="docutils literal notranslate"><span class="pre">&quot;ERRORS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TRANSLATIONS_ONLY&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ALL&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the desired filtering of logs on this NAT.</p></li>
 </ul>
 <p>The <strong>subnetworks</strong> object supports the following:</p>
 <ul class="simple">
@@ -21197,6 +24289,18 @@ Please refer to RFC4273.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">peer</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterPeer</span><span class="p">(</span><span class="s2">&quot;peer&quot;</span><span class="p">,</span>
+    <span class="n">advertised_route_priority</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s2">&quot;interface-1&quot;</span><span class="p">,</span>
+    <span class="n">peer_asn</span><span class="o">=</span><span class="mi">65513</span><span class="p">,</span>
+    <span class="n">peer_ip_address</span><span class="o">=</span><span class="s2">&quot;169.254.1.2&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="s2">&quot;my-router&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -21465,26 +24569,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.SSLCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SSLCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>An SslCertificate resource, used for HTTPS load balancing. This resource
-provides a mechanism to upload an SSL key and certificate to
-the load balancer to serve secure connections from the user.</p>
-<p>To get more information about SslCertificate, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a SSLCertificate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] certificate: The certificate in PEM format.</p>
+<blockquote>
+<div><p>The certificate chain must be no greater than 5 certs long.
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate in PEM format.
-The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -21495,7 +24590,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
 specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.</p></li>
+<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -21506,7 +24601,7 @@ If it is not provided, the provider project is used.</p></li>
 <code class="sig-name descname">certificate</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p>
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -21549,7 +24644,7 @@ specified prefix. Conflicts with <code class="docutils literal notranslate"><spa
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.SSLCertificate.private_key">
 <code class="sig-name descname">private_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate.private_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>The write-only private key in PEM format.</p>
+<dd><p>The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -21578,7 +24673,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.</p></li>
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
@@ -21591,7 +24686,7 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
 specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.</p></li>
+<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -21652,6 +24747,22 @@ features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">prod_ssl_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SSLPolicy</span><span class="p">(</span><span class="s2">&quot;prod-ssl-policy&quot;</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;MODERN&quot;</span><span class="p">)</span>
+<span class="n">nonprod_ssl_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SSLPolicy</span><span class="p">(</span><span class="s2">&quot;nonprod-ssl-policy&quot;</span><span class="p">,</span>
+    <span class="n">min_tls_version</span><span class="o">=</span><span class="s2">&quot;TLS_1_2&quot;</span><span class="p">,</span>
+    <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;MODERN&quot;</span><span class="p">)</span>
+<span class="n">custom_ssl_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SSLPolicy</span><span class="p">(</span><span class="s2">&quot;custom-ssl-policy&quot;</span><span class="p">,</span>
+    <span class="n">custom_features</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">min_tls_version</span><span class="o">=</span><span class="s2">&quot;TLS_1_2&quot;</span><span class="p">,</span>
+    <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;CUSTOM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -21669,9 +24780,7 @@ for which ciphers are available to use. <strong>Note</strong>: this argument
 </p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>min_tls_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-<code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.
-Default is <code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>.</p></li>
+to establish a connection with the load balancer.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -21680,14 +24789,12 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-<code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>, <code class="docutils literal notranslate"><span class="pre">MODERN</span></code>, <code class="docutils literal notranslate"><span class="pre">RESTRICTED</span></code>, or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
+load balancer when negotiating SSL with clients. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
 the set of SSL features to enable must be specified in the
 <code class="docutils literal notranslate"><span class="pre">customFeatures</span></code> field.
 See the <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport">official documentation</a>
 for information on what cipher suites each profile provides. If
-<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.
-Default is <code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -21736,9 +24843,7 @@ for which ciphers are available to use. <strong>Note</strong>: this argument
 <dt id="pulumi_gcp.compute.SSLPolicy.min_tls_version">
 <code class="sig-name descname">min_tls_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy.min_tls_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-<code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.
-Default is <code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>.</p>
+to establish a connection with the load balancer.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -21757,14 +24862,12 @@ character, which cannot be a dash.</p>
 <dt id="pulumi_gcp.compute.SSLPolicy.profile">
 <code class="sig-name descname">profile</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy.profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-<code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>, <code class="docutils literal notranslate"><span class="pre">MODERN</span></code>, <code class="docutils literal notranslate"><span class="pre">RESTRICTED</span></code>, or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
+load balancer when negotiating SSL with clients. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
 the set of SSL features to enable must be specified in the
 <code class="docutils literal notranslate"><span class="pre">customFeatures</span></code> field.
 See the <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport">official documentation</a>
 for information on what cipher suites each profile provides. If
-<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.
-Default is <code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -21806,9 +24909,7 @@ for which ciphers are available to use. <strong>Note</strong>: this argument
 <li><p><strong>enabled_features</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of features enabled in the SSL policy.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</p></li>
 <li><p><strong>min_tls_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-<code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.
-Default is <code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code>.</p></li>
+to establish a connection with the load balancer.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -21817,14 +24918,12 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.</p></li>
 <li><p><strong>profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-<code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>, <code class="docutils literal notranslate"><span class="pre">MODERN</span></code>, <code class="docutils literal notranslate"><span class="pre">RESTRICTED</span></code>, or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
+load balancer when negotiating SSL with clients. If using <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>,
 the set of SSL features to enable must be specified in the
 <code class="docutils literal notranslate"><span class="pre">customFeatures</span></code> field.
 See the <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport">official documentation</a>
 for information on what cipher suites each profile provides. If
-<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.
-Default is <code class="docutils literal notranslate"><span class="pre">COMPATIBLE</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> is used, the <code class="docutils literal notranslate"><span class="pre">custom_features</span></code> attribute <strong>must be set</strong>.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -21878,6 +24977,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
 see the <a class="reference external" href="https://cloud.google.com/armor/docs/configure-security-policies">official documentation</a>
 and the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SecurityPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;deny(403)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny access to IPs in 9.9.9.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;match&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;srcIpRanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;9.9.9.0/24&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;versionedExpr&quot;</span><span class="p">:</span> <span class="s2">&quot;SRC_IPS_V1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;default rule&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;match&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;srcIpRanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;versionedExpr&quot;</span><span class="p">:</span> <span class="s2">&quot;SRC_IPS_V1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;2147483647&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22133,6 +25261,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">authentication.google_account.password</span></code> and <code class="docutils literal notranslate"><span class="pre">authentication.custom_account.password</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">scanner_static_ip</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;scannerStaticIp&quot;</span><span class="p">)</span>
+<span class="n">scan_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SecurityScanConfig</span><span class="p">(</span><span class="s2">&quot;scan-config&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;scan-config&quot;</span><span class="p">,</span>
+    <span class="n">starting_urls</span><span class="o">=</span><span class="p">[</span><span class="n">scanner_static_ip</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">address</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">address</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)],</span>
+    <span class="n">target_platforms</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;COMPUTE&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22161,14 +25303,14 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">loginUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The login form URL of the website.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">googleAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes authentication configuration that uses a Google account.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
@@ -22190,14 +25332,14 @@ If specified, service will use the authentication configuration during scanning.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">loginUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The login form URL of the website.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">googleAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Describes authentication configuration that uses a Google account.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
@@ -22308,14 +25450,14 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">loginUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The login form URL of the website.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">googleAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes authentication configuration that uses a Google account.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the custom account. The credential is stored encrypted
-in GCP.</p></li>
+in GCP.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of the custom account.</p></li>
 </ul>
 </li>
@@ -22376,6 +25518,21 @@ feature for a project, assigning it as a Shared VPC host project.</p>
 <p>For more information, see,
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name “XPN”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="c1"># A host project provides network resources to associated service projects.</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedVPCHostProject</span><span class="p">(</span><span class="s2">&quot;host&quot;</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s2">&quot;host-project-id&quot;</span><span class="p">)</span>
+<span class="c1"># A service project gains access to network resources provided by its</span>
+<span class="c1"># associated host project.</span>
+<span class="n">service1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedVPCServiceProject</span><span class="p">(</span><span class="s2">&quot;service1&quot;</span><span class="p">,</span>
+    <span class="n">host_project</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">service_project</span><span class="o">=</span><span class="s2">&quot;service-project-id-1&quot;</span><span class="p">)</span>
+<span class="n">service2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedVPCServiceProject</span><span class="p">(</span><span class="s2">&quot;service2&quot;</span><span class="p">,</span>
+    <span class="n">host_project</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">service_project</span><span class="o">=</span><span class="s2">&quot;service-project-id-2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22456,6 +25613,14 @@ with a given host project.</p>
 <p>For more information, see,
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name “XPN”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">service1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedVPCServiceProject</span><span class="p">(</span><span class="s2">&quot;service1&quot;</span><span class="p">,</span>
+    <span class="n">host_project</span><span class="o">=</span><span class="s2">&quot;host-project-id&quot;</span><span class="p">,</span>
+    <span class="n">service_project</span><span class="o">=</span><span class="s2">&quot;service-project-id-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22556,6 +25721,28 @@ created a full image of the disk.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">snapshot_encryption_key.raw_key</span></code> and <code class="docutils literal notranslate"><span class="pre">source_disk_encryption_key.raw_key</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">persistent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Disk</span><span class="p">(</span><span class="s2">&quot;persistent&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="n">debian</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;snapshot&quot;</span><span class="p">,</span>
+    <span class="n">source_disk</span><span class="o">=</span><span class="n">persistent</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;my_label&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22585,7 +25772,7 @@ key.  Structure is documented below.</p></li>
 <p>The <strong>snapshot_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.</p></li>
@@ -22593,7 +25780,7 @@ encryption key that protects this resource.</p></li>
 <p>The <strong>source_disk_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Snapshot.creation_timestamp">
@@ -22665,7 +25852,7 @@ If it is not provided, the provider project is used.</p>
 source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.</p></li>
@@ -22692,7 +25879,7 @@ if the source snapshot is protected by a customer-supplied encryption
 key.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -22754,7 +25941,7 @@ snapshot creation/deletion.</p></li>
 <p>The <strong>snapshot_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.</p></li>
@@ -22762,7 +25949,7 @@ encryption key that protects this resource.</p></li>
 <p>The <strong>source_disk_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
+RFC 4648 base64 to either encrypt or decrypt this resource.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -22836,6 +26023,47 @@ of the network, even entire subnets, using firewall rules.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom_test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;custom-test&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_with_private_secondary_ip_ranges</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network-with-private-secondary-ip-ranges&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">custom_test</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">secondary_ip_range</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;rangeName&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-secondary-range-update1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ipCidrRange&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.10.0/24&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom_test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;custom-test&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">subnet_with_logging</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;subnet-with-logging&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">custom_test</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">log_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;aggregationInterval&quot;</span><span class="p">:</span> <span class="s2">&quot;INTERVAL_10_MIN&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flowSampling&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="s2">&quot;INCLUDE_ALL_METADATA&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom_test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;custom-test&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">network_for_l7lb</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;network-for-l7lb&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/22&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;INTERNAL_HTTPS_LOAD_BALANCER&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">custom_test</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -22898,7 +26126,7 @@ reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is <code class="docutils literal notranslate"><span class="pre">INCLUDE_ALL_METADATA</span></code>.</p></li>
+flow logs.</p></li>
 </ul>
 <p>The <strong>secondary_ip_ranges</strong> object supports the following:</p>
 <ul class="simple">
@@ -22966,7 +26194,7 @@ reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is <code class="docutils literal notranslate"><span class="pre">INCLUDE_ALL_METADATA</span></code>.</p></li>
+flow logs.</p></li>
 </ul>
 </dd></dl>
 
@@ -23127,7 +26355,7 @@ reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is <code class="docutils literal notranslate"><span class="pre">INCLUDE_ALL_METADATA</span></code>.</p></li>
+flow logs.</p></li>
 </ul>
 <p>The <strong>secondary_ip_ranges</strong> object supports the following:</p>
 <ul class="simple">
@@ -23183,24 +26411,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</p></li>
-</ul>
+<dd><p>Create a SubnetworkIAMBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>Structure is documented below.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p>
-</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
@@ -23345,24 +26565,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</p></li>
-</ul>
+<dd><p>Create a SubnetworkIAMMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>Structure is documented below.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p>
-</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
@@ -23507,23 +26719,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</p></li>
-</ul>
+<dd><p>Create a SubnetworkIAMPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
@@ -23647,6 +26852,44 @@ forwarding rule to route incoming HTTP requests to a URL map.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span> <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span> <span class="n">default_url_redirect</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;httpsRedirect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span> <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -23800,6 +27043,41 @@ global forwarding rule to route incoming HTTPS requests to a URL map.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_ssl_certificate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SSLCertificate</span><span class="p">(</span><span class="s2">&quot;defaultSSLCertificate&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/private.key&quot;</span><span class="p">),</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/certificate.crt&quot;</span><span class="p">))</span>
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_url_map</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;defaultURLMap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">default_target_https_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpsProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpsProxy&quot;</span><span class="p">,</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ssl_certificates</span><span class="o">=</span><span class="p">[</span><span class="n">default_ssl_certificate</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -23819,8 +27097,7 @@ If it is not provided, the provider project is used.</p></li>
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.</p></li>
+equivalent to DISABLE.</p></li>
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one SSL
 certificate must be specified.</p></li>
@@ -23876,8 +27153,7 @@ If it is not provided, the provider project is used.</p>
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.</p>
+equivalent to DISABLE.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -23936,8 +27212,7 @@ If it is not provided, the provider project is used.</p></li>
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.</p></li>
+equivalent to DISABLE.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one SSL
@@ -24008,6 +27283,25 @@ corresponding forwarding rules.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">vmimage</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="n">target_vm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;target-vm&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">vmimage</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetInstance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">target_vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -24179,6 +27473,21 @@ target of a network load balancer (Forwarding Rule). For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/network/target-pools">the official
 documentation</a>
 and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/targetPools">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_http_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHttpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">default_target_pool</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetPool</span><span class="p">(</span><span class="s2">&quot;defaultTargetPool&quot;</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-central1-a/myinstance1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-central1-b/myinstance2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_http_health_check</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -24371,6 +27680,26 @@ service.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_ssl_certificate</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SSLCertificate</span><span class="p">(</span><span class="s2">&quot;defaultSSLCertificate&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/private.key&quot;</span><span class="p">),</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/certificate.crt&quot;</span><span class="p">))</span>
+<span class="n">default_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;SSL&quot;</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_target_ssl_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetSSLProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetSSLProxy&quot;</span><span class="p">,</span>
+    <span class="n">backend_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">ssl_certificates</span><span class="o">=</span><span class="p">[</span><span class="n">default_ssl_certificate</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -24388,7 +27717,7 @@ character, which cannot be a dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>proxy_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+the backend.</p></li>
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. Currently, exactly
 one SSL certificate must be specified.</p></li>
@@ -24439,7 +27768,7 @@ If it is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.compute.TargetSSLProxy.proxy_header">
 <code class="sig-name descname">proxy_header</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetSSLProxy.proxy_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p>
+the backend.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -24494,7 +27823,7 @@ character, which cannot be a dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>proxy_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+the backend.</p></li>
 <li><p><strong>proxy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of SslCertificate resources that are used to authenticate
@@ -24561,6 +27890,22 @@ service.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_health_check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;defaultHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_backend_service</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;defaultBackendService&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default_health_check</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">default_target_tcp_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetTCPProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetTCPProxy&quot;</span><span class="p">,</span> <span class="n">backend_service</span><span class="o">=</span><span class="n">default_backend_service</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -24578,7 +27923,7 @@ character, which cannot be a dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>proxy_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+the backend.</p></li>
 </ul>
 </dd>
 </dl>
@@ -24623,7 +27968,7 @@ If it is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.compute.TargetTCPProxy.proxy_header">
 <code class="sig-name descname">proxy_header</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetTCPProxy.proxy_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p>
+the backend.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -24662,7 +28007,7 @@ character, which cannot be a dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>proxy_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.</p></li>
+the backend.</p></li>
 <li><p><strong>proxy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 </ul>
@@ -24710,19 +28055,366 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.URLMap">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">URLMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">URLMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.</p>
 <p>To get more information about UrlMap, see:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/urlMaps">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HttpHealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">check_interval_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">login</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+<span class="n">static_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;staticBucket&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">static_backend_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendBucket</span><span class="p">(</span><span class="s2">&quot;staticBackendBucket&quot;</span><span class="p">,</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="n">static_bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enable_cdn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">urlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;urlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;mysite&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;myothersite.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;otherpaths&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/login&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">login</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/static&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">static_backend_bucket</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;otherpaths&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">urlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;urlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe2&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;request_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddSomethingElse&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyOtherValue&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;responseHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe3&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;match_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;fullPathMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;a full path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;header_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;someheader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;exactMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;match this exactly&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;invertMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;ignoreCase&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;metadata_filters&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;filterMatchCriteria&quot;</span><span class="p">:</span> <span class="s2">&quot;MATCH_ANY&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;filter_labels&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PLANET&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;MARS&quot;</span><span class="p">,</span>
+                    <span class="p">}],</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;query_parameter_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;a query parameter&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;presentMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;url_redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hostRedirect&quot;</span><span class="p">:</span> <span class="s2">&quot;A host&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;httpsRedirect&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;pathRedirect&quot;</span><span class="p">:</span> <span class="s2">&quot;some/path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;redirectResponseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMPORARY_REDIRECT&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stripQuery&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">urlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;urlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;match_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;prefixMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;/someprefix&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;header_matches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;someheader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;exactMatch&quot;</span><span class="p">:</span> <span class="s2">&quot;match this exactly&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;invertMatch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;url_redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;pathRedirect&quot;</span><span class="p">:</span> <span class="s2">&quot;some/path&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;redirectResponseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMPORARY_REDIRECT&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">urlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;urlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cors_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowCredentials&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;allowHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed content&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowMethods&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowOriginRegexes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abc.*&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed origin&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;exposeHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Exposed header&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;maxAge&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;fault_injection_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;abort&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;httpStatus&quot;</span><span class="p">:</span> <span class="mi">234</span><span class="p">,</span>
+                        <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="mf">5.6</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;delay&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;fixed_delay&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="mf">7.8</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;request_mirror_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;retry_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;numRetries&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;per_try_timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;retryConditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;5xx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;deadline-exceeded&quot;</span><span class="p">,</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;nanos&quot;</span><span class="p">:</span> <span class="mi">750000000</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;url_rewrite&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;hostRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement header&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                    <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;request_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                        <span class="s2">&quot;responseHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                    <span class="p">},</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BackendService</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">load_balancing_scheme</span><span class="o">=</span><span class="s2">&quot;INTERNAL_SELF_MANAGED&quot;</span><span class="p">)</span>
+<span class="n">urlmap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">URLMap</span><span class="p">(</span><span class="s2">&quot;urlmap&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a description&quot;</span><span class="p">,</span>
+    <span class="n">default_service</span><span class="o">=</span><span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">host_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hosts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysite.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pathMatcher&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cors_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowCredentials&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;allowHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed content&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowMethods&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowOriginRegexes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abc.*&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;allowOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Allowed origin&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;exposeHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Exposed header&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;maxAge&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                    <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;request_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                        <span class="s2">&quot;responseHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;AddMe&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;MyValue&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;replace&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                    <span class="p">},</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;hi.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service or backend bucket to use when none of the given paths match.</p></li>
+<li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>header_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
@@ -24740,6 +28432,40 @@ tests per UrlMap.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_url_redirect</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 <p>The <strong>header_action</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
@@ -24778,6 +28504,43 @@ hostRule matches the URL’s host portion.</p></li>
 <p>The <strong>path_matchers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
@@ -25019,24 +28782,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -25389,24 +29163,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -25429,6 +29214,47 @@ original URL is retained. Defaults to false.</p></li>
 <dt id="pulumi_gcp.compute.URLMap.default_service">
 <code class="sig-name descname">default_service</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.default_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The backend service or backend bucket to use when none of the given paths match.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.URLMap.default_url_redirect">
+<code class="sig-name descname">default_url_redirect</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.default_url_redirect" title="Permalink to this definition">¶</a></dt>
+<dd><p>When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -25510,6 +29336,43 @@ request, in the absence of which the request match fails.</p>
 hostRule matches the URL’s host portion.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
@@ -25751,24 +29614,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -26121,24 +29995,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -26175,7 +30060,7 @@ tests per UrlMap.  Structure is documented below.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.URLMap.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing URLMap resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -26186,6 +30071,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service or backend bucket to use when none of the given paths match.</p></li>
+<li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</p></li>
 <li><p><strong>header_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies changes to request and response headers that need to take effect for
@@ -26206,6 +30094,40 @@ tests per UrlMap.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_url_redirect</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
 <p>The <strong>header_action</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
@@ -26244,6 +30166,43 @@ hostRule matches the URL’s host portion.</p></li>
 <p>The <strong>path_matchers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
@@ -26485,24 +30444,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -26855,24 +30825,35 @@ set.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pathRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.</p></li>
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefixRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:   -
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
-FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP Status code to use for this RedirectAction. Supported values are:</p>
+<ul>
+<li><p>MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.</p></li>
+<li><p>FOUND, which corresponds to 302.</p></li>
+<li><p>SEE_OTHER which corresponds to 303.</p></li>
+<li><p>TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.</p></li>
+<li><p>PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained. Defaults to false.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stripQuery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained. The default is set to false.
+This field is required to ensure an empty block is not set. The normal default value is false.</p></li>
 </ul>
 </li>
 </ul>
@@ -26934,6 +30915,37 @@ by Google, but used only by you.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways">API documentation</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">target_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNGateway</span><span class="p">(</span><span class="s2">&quot;targetGateway&quot;</span><span class="p">,</span> <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">vpn_static_ip</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;vpnStaticIp&quot;</span><span class="p">)</span>
+<span class="n">fr_esp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frEsp&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;ESP&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp4500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip</span><span class="o">=</span><span class="s2">&quot;15.0.0.120&quot;</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">target_vpn_gateway</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">route1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">dest_range</span><span class="o">=</span><span class="s2">&quot;15.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">next_hop_vpn_tunnel</span><span class="o">=</span><span class="n">tunnel1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27092,6 +31104,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">shared_secret</span></code> will be stored in the raw
+state as plain-text.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">target_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNGateway</span><span class="p">(</span><span class="s2">&quot;targetGateway&quot;</span><span class="p">,</span> <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">vpn_static_ip</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;vpnStaticIp&quot;</span><span class="p">)</span>
+<span class="n">fr_esp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frEsp&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;ESP&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp4500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip</span><span class="o">=</span><span class="s2">&quot;15.0.0.120&quot;</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">target_vpn_gateway</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">route1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">dest_range</span><span class="o">=</span><span class="s2">&quot;15.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">next_hop_vpn_tunnel</span><span class="o">=</span><span class="n">tunnel1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">target_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNGateway</span><span class="p">(</span><span class="s2">&quot;targetGateway&quot;</span><span class="p">,</span> <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">vpn_static_ip</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="s2">&quot;vpnStaticIp&quot;</span><span class="p">)</span>
+<span class="n">fr_esp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frEsp&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;ESP&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">fr_udp4500</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ForwardingRule</span><span class="p">(</span><span class="s2">&quot;frUdp4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;UDP&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;4500&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">vpn_static_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
+    <span class="n">peer_ip</span><span class="o">=</span><span class="s2">&quot;15.0.0.120&quot;</span><span class="p">,</span>
+    <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
+    <span class="n">target_vpn_gateway</span><span class="o">=</span><span class="n">target_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">route1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">dest_range</span><span class="o">=</span><span class="s2">&quot;15.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">next_hop_vpn_tunnel</span><span class="o">=</span><span class="n">tunnel1</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27129,7 +31210,7 @@ for example <code class="docutils literal notranslate"><span class="pre">192.168
 Only IPv4 is supported.</p></li>
 <li><p><strong>router</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of router resource to be used for dynamic routing.</p></li>
 <li><p><strong>shared_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.</p></li>
+gateway and the peer VPN gateway.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>target_vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the Target VPN gateway with which this VPN tunnel is
 associated.</p></li>
 <li><p><strong>vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the VPN gateway with which this VPN tunnel is associated.
@@ -27263,7 +31344,7 @@ Only IPv4 is supported.</p>
 <dt id="pulumi_gcp.compute.VPNTunnel.shared_secret">
 <code class="sig-name descname">shared_secret</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel.shared_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.</p>
+gateway and the peer VPN gateway.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -27346,7 +31427,7 @@ Only IPv4 is supported.</p></li>
 <li><p><strong>router</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of router resource to be used for dynamic routing.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>shared_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.</p></li>
+gateway and the peer VPN gateway.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><strong>shared_secret_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hash of the shared secret.</p></li>
 <li><p><strong>target_vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the Target VPN gateway with which this VPN tunnel is
 associated.</p></li>
@@ -27403,6 +31484,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/addresses/get">API</a> documentation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_address</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_address</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">frontend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;frontend&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="n">my_address</span><span class="o">.</span><span class="n">address</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27420,6 +31513,12 @@ If it is not provided, the provider region is used.</p></li>
 <dt id="pulumi_gcp.compute.get_backend_bucket">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_backend_bucket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_backend_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a BackendBucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_backend_bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_backend_bucket</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-backend&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27451,6 +31550,15 @@ and the <a class="reference external" href="https://cloud.google.com/compute/doc
 <dt id="pulumi_gcp.compute.get_certificate">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a Google Compute SSL Certificate from its name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_cert</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-cert&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;certificate&quot;</span><span class="p">,</span> <span class="n">my_cert</span><span class="o">.</span><span class="n">certificate</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;certificateId&quot;</span><span class="p">,</span> <span class="n">my_cert</span><span class="o">.</span><span class="n">certificate_id</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;selfLink&quot;</span><span class="p">,</span> <span class="n">my_cert</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27466,6 +31574,13 @@ is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.compute.get_default_service_account">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_default_service_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_default_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve default service account for this project</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;defaultAccount&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project ID. If it is not provided, the provider project is used.</p>
@@ -27477,6 +31592,12 @@ is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.compute.get_forwarding_rule">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_forwarding_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_forwarding_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a forwarding rule within GCE from its name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_forwarding_rule</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_forwarding_rule</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;forwarding-rule-us-east1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27495,6 +31616,18 @@ is not provided, the project region is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_global_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_global_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/globalAddresses">API</a> documentation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_address</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_global_address</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">prod</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ManagedZone</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">dns_name</span><span class="o">=</span><span class="s2">&quot;prod.mydomain.com.&quot;</span><span class="p">)</span>
+<span class="n">frontend</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">RecordSet</span><span class="p">(</span><span class="s2">&quot;frontend&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">managed_zone</span><span class="o">=</span><span class="n">prod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rrdatas</span><span class="o">=</span><span class="p">[</span><span class="n">my_address</span><span class="o">.</span><span class="n">address</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27511,6 +31644,19 @@ is not provided, the provider project is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a Google Compute Image. Check that your service account has the <code class="docutils literal notranslate"><span class="pre">compute.imageUser</span></code> role if you want to share <a class="reference external" href="https://cloud.google.com/compute/docs/images/sharing-images-across-projects">custom images</a> from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/images">the official documentation</a> and its <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/images">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;debian-9&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;debian-cloud&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">my_image</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27534,6 +31680,13 @@ provided, the provider project is used. If you are using a
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_instance</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;primary-application-server&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27556,6 +31709,13 @@ provider zone is used.</p></li>
 <dd><p>Get a Compute Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_instance_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;instance-group-name&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27575,6 +31735,15 @@ and <code class="docutils literal notranslate"><span class="pre">zone</span></co
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_instance_serial_port</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_instance_serial_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the serial port output from a Compute Instance. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/instances/viewing-serial-port-output">API</a> documentation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">serial</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_instance_serial_port</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="s2">&quot;my-instance&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;serialOut&quot;</span><span class="p">,</span> <span class="n">serial</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27594,12 +31763,49 @@ If it is not provided, the provider zone is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_lbip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_lbip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access IP ranges in your firewall rules.</p>
 <p><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules">https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_lbip_ranges</span><span class="p">()</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">google_compute_network</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">networks</span><span class="p">,</span>
+    <span class="n">target_tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;InstanceBehindLoadBalancer&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_gcp.compute.get_netblock_ip_ranges">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_netblock_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">range_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_netblock_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">netblock</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_netblock_ip_ranges</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cidrBlocks&quot;</span><span class="p">,</span> <span class="n">netblock</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cidrBlocksIpv4&quot;</span><span class="p">,</span> <span class="n">netblock</span><span class="o">.</span><span class="n">cidr_blocks_ipv4s</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cidrBlocksIpv6&quot;</span><span class="p">,</span> <span class="n">netblock</span><span class="o">.</span><span class="n">cidr_blocks_ipv6s</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">legacy_hcs</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_netblock_ip_ranges</span><span class="p">(</span><span class="n">range_type</span><span class="o">=</span><span class="s2">&quot;legacy-health-checkers&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="n">allow_hcs</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;allow-hcs&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="n">legacy_hcs</span><span class="o">.</span><span class="n">cidr_blocks_ipv4s</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>range_type</strong> (<em>str</em>) – The type of range for which to provide results.</p>
@@ -27611,6 +31817,12 @@ If it is not provided, the provider zone is used.</p></li>
 <dt id="pulumi_gcp.compute.get_network">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a network within GCE from its name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default-us-east1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27627,6 +31839,14 @@ is not provided, the provider project is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_network_endpoint_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network_endpoint_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access a Network Endpoint Group’s attributes.</p>
 <p>The NEG may be found by providing either a <code class="docutils literal notranslate"><span class="pre">self_link</span></code>, or a <code class="docutils literal notranslate"><span class="pre">name</span></code> and a <code class="docutils literal notranslate"><span class="pre">zone</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">neg1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network_endpoint_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;k8s1-abcdef01-myns-mysvc-8080-4b6bac43&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
+<span class="n">neg2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network_endpoint_group</span><span class="p">(</span><span class="n">self_link</span><span class="o">=</span><span class="s2">&quot;https://www.googleapis.com/compute/v1/projects/myproject/zones/us-central1-a/networkEndpointGroups/k8s1-abcdef01-myns-mysvc-8080-4b6bac43&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27644,6 +31864,15 @@ Provide either this or a <code class="docutils literal notranslate"><span class=
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_node_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_node_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/nodes/#types">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1b</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">)</span>
+<span class="n">tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;tmpl&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;compute.getNodeTypes&quot;</span><span class="p">][</span><span class="s2">&quot;types&quot;</span><span class="p">][</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27662,6 +31891,12 @@ instead.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_region_instance_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_region_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Compute Region Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_region_instance_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;instance-group-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -27684,6 +31919,18 @@ provided, the provider region is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_regions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute regions for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">regions and zones</a> in the upstream docs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_regions</span><span class="p">()</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">))]:</span>
+    <span class="n">cluster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cluster-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">ip_cidr_range</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;10.36.</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.0/24&quot;</span><span class="p">,</span>
+        <span class="n">network</span><span class="o">=</span><span class="s2">&quot;my-network&quot;</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]]))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27699,6 +31946,13 @@ Defaults to no filtering (all available regions - both <code class="docutils lit
 <dt id="pulumi_gcp.compute.get_resource_policy">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_resource_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_resource_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provide access to a Resource Policy’s attributes. For more information see <a class="reference external" href="https://cloud.google.com/compute/docs/disks/scheduled-snapshots">the official documentation</a> or the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">daily</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_resource_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;daily&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27714,6 +31968,13 @@ Defaults to no filtering (all available regions - both <code class="docutils lit
 <dt id="pulumi_gcp.compute.get_router">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_router</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a router within GCE from its name and VPC.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_router</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_router</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;myrouter-us-east1&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;my-network&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27735,6 +31996,12 @@ unspecified, this defaults to the region configured in the provider.</p></li>
 <dt>Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.</dt><dd><p>For more information see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies">the official documentation</a>.</p>
 </dd>
 </dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_ssl_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_ssl_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;production-ssl-policy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27750,6 +32017,13 @@ is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.compute.get_subnetwork">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_subnetwork</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a subnetwork within GCE from its name and region.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_subnetwork</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_subnetwork</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default-us-east1&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27770,6 +32044,12 @@ specified, <code class="docutils literal notranslate"><span class="pre">name</sp
 <dt id="pulumi_gcp.compute.get_vpn_gateway">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_vpn_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a VPN gateway within GCE from its name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_vpn_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_vpn_gateway</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;vpn-gateway-us-east1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27788,6 +32068,19 @@ is not provided, the project region is used.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute zones in a region for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/regions-zones">regions and zones</a> in the upstream docs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">))]:</span>
+    <span class="n">foo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;foo-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">instance_template</span><span class="o">=</span><span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;foobar&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="n">base_instance_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;foobar-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">zone</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]],</span>
+        <span class="n">target_size</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
