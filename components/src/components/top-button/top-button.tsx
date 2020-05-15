@@ -23,9 +23,7 @@ export class TopButton {
     render() {
         let buttonClass = `top-button fas fa-chevron-up ${this.visible}`
         return (
-            <div>
-                <a class={buttonClass} title="Scroll to top" href="#top" ></a>
-            </div>
+                <a class={buttonClass} title="Scroll to top" href="#"></a>
         );
     }
 

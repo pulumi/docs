@@ -85,10 +85,6 @@
 }
 
 .top-button {
-    @apply text-white cursor-pointer opacity-50 rounded-sm fixed w-8 h-4 z-0;
-    
-    @include transition(all, .5s, ease-in-out);
+    @apply text-white text-center cursor-pointer opacity-50 rounded-sm mt-8 w-8 h-4;
     @include bg-gradient(#90a4ae,#78909c, 30em, 0, 0);
-
-    text-align: center;
 }
