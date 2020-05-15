@@ -85,6 +85,5 @@
 }
 
 .btn-scroll-top {
-    @apply text-white text-center cursor-pointer opacity-50 rounded-sm mt-8 w-8 h-4;
-    @include bg-gradient(#90a4ae,#78909c, 30em, 0, 0);
+    @apply text-white text-center opacity-75 rounded-sm bg-gray-500 mt-8 w-8 h-4;
 }
