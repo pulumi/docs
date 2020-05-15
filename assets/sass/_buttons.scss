@@ -83,3 +83,12 @@
         @apply border-gray-700 text-gray-700 bg-transparent;
     }
 }
+
+.top-button {
+    @apply text-white cursor-pointer opacity-50 rounded-sm fixed w-8 h-4 z-0;
+    
+    @include transition(all, .5s, ease-in-out);
+    @include bg-gradient(#90a4ae,#78909c, 30em, 0, 0);
+
+    text-align: center;
+}
