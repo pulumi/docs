@@ -22,15 +22,12 @@ Explore the resources and functions of the batch/v2alpha1 module in the Kubernet
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Batch.V2Alpha1.html" title="Pulumi.Kubernetes.Batch.V2Alpha1">Pulumi.Kubernetes.Batch.V2Alpha1</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/batch/v2alpha1?tab=doc#" title="kubernetes/batch/v2alpha1">kubernetes/batch/v2alpha1</a></dd>
