@@ -21,15 +21,12 @@ Explore the resources and functions of the helm/v3 module in the Kubernetes pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Helm.V3.html" title="Pulumi.Kubernetes.Helm.V3">Pulumi.Kubernetes.Helm.V3</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v3?tab=doc#" title="kubernetes/helm/v3">kubernetes/helm/v3</a></dd>

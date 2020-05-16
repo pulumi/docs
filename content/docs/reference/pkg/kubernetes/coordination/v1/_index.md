@@ -22,15 +22,12 @@ Explore the resources and functions of the coordination/v1 module in the Kuberne
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Coordination.V1.html" title="Pulumi.Kubernetes.Coordination.V1">Pulumi.Kubernetes.Coordination.V1</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/coordination/v1?tab=doc#" title="kubernetes/coordination/v1">kubernetes/coordination/v1</a></dd>

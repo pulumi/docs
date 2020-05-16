@@ -22,15 +22,12 @@ Explore the resources and functions of the storage/v1alpha1 module in the Kubern
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Storage.V1Alpha1.html" title="Pulumi.Kubernetes.Storage.V1Alpha1">Pulumi.Kubernetes.Storage.V1Alpha1</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/storage/v1alpha1?tab=doc#" title="kubernetes/storage/v1alpha1">kubernetes/storage/v1alpha1</a></dd>
