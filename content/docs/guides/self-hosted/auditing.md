@@ -8,6 +8,12 @@ menu:
     weight: 2
 ---
 
+<div class="note note-info" role="alert">
+    <p>
+        Audit Logs are only available with the <strong>Pulumi Enterprise Edition</strong>.
+    </p>
+</div>
+
 ## Overview
 
 Audit logs enable you to track the activity of users within an
