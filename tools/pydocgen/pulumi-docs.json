@@ -20,6 +20,12 @@
       "terraform_provider_name": "alicloud"
     },
     {
+      "name": "Pulumi Auth0",
+      "package_name": "pulumi_auth0",
+      "pulumi_provider_name": "auth0",
+      "terraform_provider_name": "auth0"
+    },
+    {
       "name": "Pulumi Random",
       "package_name": "pulumi_random",
       "pulumi_provider_name": "random",
