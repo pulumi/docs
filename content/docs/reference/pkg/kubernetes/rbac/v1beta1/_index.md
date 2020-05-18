@@ -28,15 +28,12 @@ Explore the resources and functions of the rbac/v1beta1 module in the Kubernetes
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Rbac.V1Beta1.html" title="Pulumi.Kubernetes.Rbac.V1Beta1">Pulumi.Kubernetes.Rbac.V1Beta1</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/rbac/v1beta1?tab=doc#" title="kubernetes/rbac/v1beta1">kubernetes/rbac/v1beta1</a></dd>

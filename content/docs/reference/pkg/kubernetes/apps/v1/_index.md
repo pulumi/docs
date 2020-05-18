@@ -30,15 +30,12 @@ Explore the resources and functions of the apps/v1 module in the Kubernetes pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 
 
 <dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Apps.V1.html" title="Pulumi.Kubernetes.Apps.V1">Pulumi.Kubernetes.Apps.V1</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#" title="kubernetes/apps/v1">kubernetes/apps/v1</a></dd>
