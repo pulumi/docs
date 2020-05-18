@@ -966,5 +966,5 @@ The tests above cover the basics of unit testing with Pulumi .NET SDK. You can t
 Here are several useful pointers to get started with testing in Pulumi:
 
 - [Testing Guide]({{< relref "/docs/guides/testing" >}})
-- Full code for this blog post: [C#](TODO link in examples), [F#](TODO link in examples).
+- Full code for this blog post: [C#](https://github.com/pulumi/examples/tree/72c9480f4c1240f795f6020f50801733fbef37f2/testing-unit-cs-mocks), [F#](https://github.com/pulumi/examples/tree/72c9480f4c1240f795f6020f50801733fbef37f2/testing-unit-fs-mocks).
 - [Another example of unit testing in C#](https://github.com/pulumi/examples/tree/de060e659e1bb4af15d895fe4de7a3f10218b669/testing-unit-cs)
