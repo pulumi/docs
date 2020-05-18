@@ -48,12 +48,16 @@ $ pip3 install pulumi_terraform
 {{% /choosable %}}
 {{% choosable language go %}}
 
-> Terraform RemoteStateReference is not yet supported in Go. See <https://github.com/pulumi/pulumi-terraform/issues/518>.
+```bash
+$ go get github.com/pulumi/pulumi-terraform/sdk/v2
+```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-> Terraform RemoteStateReference is not yet supported in .NET. See <https://github.com/pulumi/pulumi-terraform/issues/516>.
+```bash
+$ dotnet add package Pulumi.Terraform
+```
 
 {{% /choosable %}}
 
@@ -144,18 +148,89 @@ for i in range(2):
 {{% choosable language go %}}
 
 ```go
-// Terraform RemoteStateReference is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi-terraform/issues/518.
+package main
+
+import (
+    "os"
+
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi-terraform/sdk/v2/go/state"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        cwd, err := os.Getwd()
+        if err != nil {
+            return err
+        }
+
+        state, err := state.NewRemoteStateReference(ctx, "localstate", &state.LocalStateArgs{
+            Path: pulumi.String(filepath.Join(cwd, "terraform.tfstate")),
+        })
+        if err != nil {
+            return err
+        }
+
+        publicSubnetIds := stateRef.Outputs.ApplyT(func(args interface{}) ([]string, error) {
+            ids := args.(map[string]interface{})["public_subnet_ids"].([]interface{})
+            subnetIds := make([]string, len(ids))
+            for i, v := range ids {
+                subnetIds[i] = v.(string)
+            }
+            return subnetIds, nil
+        }).(pulumi.StringArrayOutput)
+
+        for x := 0; x < 2; x++ {
+            _, err := ec2.NewInstance(ctx, fmt.Sprintf("instance-%d", ii), &ec2.InstanceArgs{
+                Ami:          pulumi.String("ami-7172b611"),
+                InstanceType: pulumi.String("t2.medium"),
+                SubnetId:     publicSubnetIds.Index(pulumi.Int(x)),
+            })
+            if err != nil {
+                return err
+            }
+        }
+
+        return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-// Terraform RemoteStateReference is not yet supported in .NET.
-//
-// See https://github.com/pulumi/pulumi-terraform/issues/516.
+using System.Collections.Immutable;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Pulumi;
+using Pulumi.Aws.Ec2;
+using Pulumi.Terraform.State;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+          var remoteState = new RemoteStateReference("localstate", new LocalBackendRemoteStateReferenceArgs
+          {
+              Path = Path.GetFullPath("terraform.tfstate"),
+          });
+
+          var subnetIds = remoteState.GetOutput("public_subnet_ids").
+              Apply(ids => ((ImmutableArray<object>) ids).Cast<string>().ToImmutableArray());
+
+          for (int i = 0; i < 2; i++)
+          {
+              var server = new Instance($"instance-{i}", new InstanceArgs
+              {
+                  Ami = "ami-7172b611",
+                  InstanceType = "t2.micro",
+                  SubnetId = subnetIds.GetAt(i),
+              });
+          }
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -252,18 +327,69 @@ network_state = terraform.state.RemoteStateReference('network',
 {{% choosable language go %}}
 
 ```go
-// Terraform RemoteStateReference is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi-terraform/issues/518.
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+
+	"github.com/pulumi/pulumi-terraform/sdk/v2/go/state"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+        conf := config.New(ctx, "")
+        token := conf.RequireSecret("tfeToken")
+        organization := conf.Require("organization")
+        workspace := conf.Require("workspaceName")
+
+        state, err := state.NewRemoteStateReference(ctx, "remote-backend-state", &state.RemoteBackendStateArgs{
+            Organization: pulumi.String(organization),
+            Token:        token.(pulumi.StringOutput),
+            Workspaces: state.WorkspaceStateArgs{
+                Name: pulumi.String(workspace),
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        // Same as above ...
+
+        return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-// Terraform RemoteStateReference is not yet supported in .NET.
-//
-// See https://github.com/pulumi/pulumi-terraform/issues/516.
+using Pulumi;
+using Pulumi.Terraform.State;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var tfeToken = config.RequireSecret("tfeToken");
+        var organization = config.Require("organization");
+        var workspace = config.Require("workspaceName");
+        var remoteState = new RemoteStateReference("localstate", new RemoteBackendRemoteStateReferenceArgs()
+        {
+            Token = tfeToken,
+            Organization = organization,
+            Workspaces = new RemoteBackendWorkspaceConfig()
+            {
+                Name = workspace,
+            }
+        });
+
+        // Same as above...
+    }
+}
 ```
 
 {{% /choosable %}}
