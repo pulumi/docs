@@ -14,6 +14,23 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/issues">terraform-providers/terraform-provider-signalfx repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_signalfx.azure"></span><dl class="py class">
+<dt id="pulumi_signalfx.azure.AwaitableGetServicesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.azure.</code><code class="sig-name descname">AwaitableGetServicesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.azure.AwaitableGetServicesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_signalfx.azure.GetServicesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.azure.</code><code class="sig-name descname">GetServicesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.azure.GetServicesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServices.</p>
+<dl class="py attribute">
+<dt id="pulumi_signalfx.azure.GetServicesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.azure.GetServicesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_signalfx.azure.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.azure.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscriptions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.azure.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx Azure integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Monitoring Microsoft Azure</a>.</p>
@@ -43,9 +60,8 @@ anything, please consult the source <a class="reference external" href="https://
 </pre></div>
 </div>
 <blockquote>
-<div><p><strong>NOTE</strong> You can use the data source “.getAzureServices” to specify all services.</p>
+<div><p><strong>NOTE</strong> You can use the data source “azure.getServices” to specify all services.</p>
 </div></blockquote>
-<p>Fields that expect an Azure service will work with one of: “microsoft.sql/servers/elasticpools”, “microsoft.storage/storageaccounts”, “microsoft.storage/storageaccountsservices/tableservices”, “microsoft.storage/storageaccountsservices/blobservices”, “microsoft.storage/storageaccounts/queueservices”, “microsoft.storage/storageaccounts/fileservices”, “microsoft.compute/virtualmachinescalesets”, “microsoft.compute/virtualmachinescalesets/virtualmachines”, “microsoft.compute/virtualmachines”, “microsoft.devices”, “microsoft.devices/iothubs”, “microsoft.devices/elasticpools”, “microsoft.devices/elasticpools/iothubtenants”, “microsoft.eventHub/namespaces”, “microsoft.batch/batchaccounts”, “microsoft.sql/servers/databases”, “microsoft.cache/redis”, “microsoft.logic/workflows”, “microsoft.web”, “microsoft.web/sites”, “microsoft.web/serverfarms”, “microsoft.web/slots”, “microsoft.web/hostingenvironments/multirolepools”, “microsoft.web/hostingenvironments/workerpools”, “microsoft.analysisservices/servers”, “microsoft.apimanagement/service”, “microsoft.automation/automationaccounts”, “microsoft.classiccompute/virtualmachines”, “microsoft.cognitiveservices/accounts”, “microsoft.customerinsights/hubs”, “microsoft.datafactory”, “microsoft.datafactory/datafactories”, “microsoft.datafactory/factories”, “microsoft.datalakeanalytics/accounts”, “microsoft.datalakestore/accounts”, “microsoft.dbformysql/servers”, “microsoft.dbforpostgresql/servers”, “microsoft.documentdb/databaseaccounts”, “microsoft.keyvault/vaults”, “microsoft.locationbasedservices/accounts”, “microsoft.network/loadbalancers”, “microsoft.network/publicipaddresses”, “microsoft.network/applicationgateways”, “microsoft.network/virtualnetworkgateways”, “microsoft.network/expressroutecircuits”, “microsoft.network/trafficmanagerprofiles”, “microsoft.notificationhubs/namespaces/notificationhubs”, “microsoft.powerbidedicated/capacities”, “microsoft.relay/namespaces”, “microsoft.search/searchservices”, “microsoft.servicebus/namespaces”, “microsoft.sql/servers”, “microsoft.streamanalytics/streamingjobs”, “microsoft.network/dnszones”, “microsoft.hdinsight/clusters”, “microsoft.containerinstance/containergroups”, “microsoft.containerservice/managedclusters”, “microsoft.kusto/clusters”, “microsoft.machinelearningservices/workspaces”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -58,7 +74,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p></li>
 <li><p><strong>subscriptions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Azure subscriptions that SignalFx should monitor.</p></li>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
@@ -104,7 +120,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_signalfx.azure.Integration.services">
 <code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.azure.Integration.services" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.</p>
+<dd><p>List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -138,7 +154,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
+</p></li>
 <li><p><strong>subscriptions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Azure subscriptions that SignalFx should monitor.</p></li>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
@@ -183,6 +200,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_signalfx.azure.get_services">
+<code class="sig-prename descclassname">pulumi_signalfx.azure.</code><code class="sig-name descname">get_services</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.azure.get_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get a list of Azure service names.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">azure_services</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">get_services</span><span class="p">()</span>
+<span class="c1"># Leaves out most of the integration bits, see the docs</span>
+<span class="c1"># for azure.Integration for more</span>
+<span class="n">azure_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;azureMyteam&quot;</span><span class="p">,</span> <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">azure_services</span><span class="o">.</span><span class="n">services</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>The <strong>services</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 </div>

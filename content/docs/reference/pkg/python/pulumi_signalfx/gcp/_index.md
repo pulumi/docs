@@ -48,7 +48,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -88,7 +88,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_signalfx.gcp.Integration.services">
 <code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.services" title="Permalink to this definition">¶</a></dt>
-<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p>
+<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -106,7 +106,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
+</p></li>
 </ul>
 </dd>
 </dl>
