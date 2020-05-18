@@ -43,6 +43,7 @@ The [Pulumi Console](https://app.pulumi.com) web application automatically manag
             <li><a href="{{< relref "/docs/intro/console/collaboration/teams" >}}">Teams</a></li>
             <li><a href="{{< relref "/docs/intro/console/collaboration/stack-permissions" >}}">Stack Permissions</a></li>
             <li><a href="{{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}}">Project and Stack Management</a></li>
+            <li><a href="{{< relref "/docs/intro/console/collaboration/auditing" >}}">Audit Logs</a></li>
         </ul>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">

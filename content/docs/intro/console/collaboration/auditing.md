@@ -1,11 +1,6 @@
 ---
 title: Audit Logs
-meta_desc: "This page is a guide on how to audit your organization's infrastructure as code activity"
-menu:
-  userguides:
-    parent: self_hosted_console_service
-    identifier: auditing
-    weight: 2
+meta_desc: "This is a guide on how to audit your organization's infrastructure as code activity"
 ---
 
 <div class="note note-info" role="alert">
