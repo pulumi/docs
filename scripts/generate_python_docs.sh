@@ -10,6 +10,7 @@ PACKAGES=(
   "pulumi"
   "pulumi_aiven"
   "pulumi_alicloud"
+  "pulumi_auth0"
   "pulumi_aws"
   "pulumi_azure"
   "pulumi_azuread"
