@@ -137,6 +137,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_github.AwaitableGetOrganizationTeamSyncGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">AwaitableGetOrganizationTeamSyncGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.AwaitableGetOrganizationTeamSyncGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_github.AwaitableGetReleaseResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">AwaitableGetReleaseResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">asserts_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draft</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">html_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prerelease</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">published_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retrieve_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tarball_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_commitish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upload_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zipball_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.AwaitableGetReleaseResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -641,6 +646,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.GetMembershipResult.username">
 <code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetMembershipResult.username" title="Permalink to this definition">¶</a></dt>
 <dd><p>The username.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_github.GetOrganizationTeamSyncGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">GetOrganizationTeamSyncGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.GetOrganizationTeamSyncGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganizationTeamSyncGroups.</p>
+<dl class="py attribute">
+<dt id="pulumi_github.GetOrganizationTeamSyncGroupsResult.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetOrganizationTeamSyncGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Array of GitHub Identity Provider Groups.  Each <code class="docutils literal notranslate"><span class="pre">group</span></code> block consists of the fields documented below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.GetOrganizationTeamSyncGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetOrganizationTeamSyncGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2028,7 +2051,7 @@ collaborator will be removed from the repository.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>permission</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The permission of the outside collaborator for the repository.
-Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p></li>
+Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">triage</span></code> or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitHub repository</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to add to the repository as a collaborator.</p></li>
 </ul>
@@ -2044,7 +2067,7 @@ Must be one of <code class="docutils literal notranslate"><span class="pre">pull
 <dt id="pulumi_github.RepositoryCollaborator.permission">
 <code class="sig-name descname">permission</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.RepositoryCollaborator.permission" title="Permalink to this definition">¶</a></dt>
 <dd><p>The permission of the outside collaborator for the repository.
-Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p>
+Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">triage</span></code> or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2072,7 +2095,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>invitation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the invitation to be used in <code class="docutils literal notranslate"><span class="pre">.UserInvitationAccepter</span></code></p></li>
 <li><p><strong>permission</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The permission of the outside collaborator for the repository.
-Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p></li>
+Must be one of <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">triage</span></code> or <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitHub repository</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to add to the repository as a collaborator.</p></li>
 </ul>
@@ -2960,6 +2983,128 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_github.TeamSyncGroupMapping">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">TeamSyncGroupMapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_slug</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to create and manage Identity Provider (IdP) group connections within your GitHub teams.
+You must have team synchronization enabled for organizations owned by enterprise accounts.</p>
+<p>To learn more about team synchronization between IdPs and Github, please refer to:
+<a class="reference external" href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github">https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example_groups</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_organization_team_sync_groups</span><span class="p">()</span>
+<span class="n">example_group_mapping</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">TeamSyncGroupMapping</span><span class="p">(</span><span class="s2">&quot;exampleGroupMapping&quot;</span><span class="p">,</span>
+    <span class="n">team_slug</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">dynamic</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;forEach&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">example_groups</span><span class="o">.</span><span class="n">groups</span> <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="s2">&quot;groupName&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;some_team_group&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;groupId&quot;</span><span class="p">:</span> <span class="n">group</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">][</span><span class="s2">&quot;group_id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;groupName&quot;</span><span class="p">:</span> <span class="n">group</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">][</span><span class="s2">&quot;group_name&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;groupDescription&quot;</span><span class="p">:</span> <span class="n">group</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">][</span><span class="s2">&quot;group_description&quot;</span><span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
+</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Array of GitHub Identity Provider Groups (or empty []).  Each <code class="docutils literal notranslate"><span class="pre">group</span></code> block consists of the fields documented below.
+__*</p></li>
+<li><p><strong>team_slug</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Slug of the team</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">groupDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IdP group.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_github.TeamSyncGroupMapping.groups">
+<code class="sig-name descname">groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Array of GitHub Identity Provider Groups (or empty []).  Each <code class="docutils literal notranslate"><span class="pre">group</span></code> block consists of the fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">groupDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the IdP group.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.TeamSyncGroupMapping.team_slug">
+<code class="sig-name descname">team_slug</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping.team_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slug of the team</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.TeamSyncGroupMapping.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_slug</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TeamSyncGroupMapping resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
+</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Array of GitHub Identity Provider Groups (or empty []).  Each <code class="docutils literal notranslate"><span class="pre">group</span></code> block consists of the fields documented below.
+__*</p></li>
+<li><p><strong>team_slug</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Slug of the team</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">groupDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the IdP group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IdP group.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.TeamSyncGroupMapping.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.TeamSyncGroupMapping.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.TeamSyncGroupMapping.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_github.UserGpgKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">UserGpgKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">armored_public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.UserGpgKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a GitHub user’s GPG key resource.</p>
@@ -3244,6 +3389,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_actions_public_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_actions_public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a GitHub Actions public key. This data source is required to be used with other GitHub secrets interactions.
 Note that the provider <code class="docutils literal notranslate"><span class="pre">token</span></code> must have admin rights to a repository to retrieve it’s action public key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_actions_public_key</span><span class="p">(</span><span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example_repo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>repository</strong> (<em>str</em>) – Name of the repository to get public key from.</p>
@@ -3297,7 +3448,8 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dl class="py function">
 <dt id="pulumi_github.get_ip_ranges">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<dd><p>Use this data source to retrieve information about GitHub’s IP addresses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_ip_ranges</span><span class="p">()</span>
@@ -3308,7 +3460,11 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dl class="py function">
 <dt id="pulumi_github.get_membership">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_membership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_membership" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<dd><p>Use this data source to find out if a user is a member of your organization, as well
+as what role they have within it.
+If the user’s membership in the organization is pending their acceptance of an invite,
+the role they would have once they accept will be returned.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
 
 <span class="n">membership_for_some_user</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_membership</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
@@ -3319,6 +3475,18 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username to lookup in the organization.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_github.get_organization_team_sync_groups">
+<code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_organization_team_sync_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_organization_team_sync_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve the identity provider (IdP) groups for an organization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_organization_team_sync_groups</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
