@@ -34,3 +34,7 @@ by being the stack creator.
 ## Project and Stack Management
 
 Learn about the benefits of using the Pulumi Console to [manage your projects and stacks]({{< relref "project-and-stack-management" >}}).
+
+## Audit Logs
+
+[Audit Logs]({{< relref "auditing" >}}) enable you to go back in time and figure out who, when, and why something about your organization, project, or stack changed.
