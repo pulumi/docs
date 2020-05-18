@@ -223,6 +223,122 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">ApplicationSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_apdex_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_real_user_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_user_apdex_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> Applications are not created by this resource, but are created by
+a reporting agent.</p>
+</div></blockquote>
+<p>Use this resource to manage configuration for an application that already
+exists in New Relic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">ApplicationSettings</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">app_apdex_threshold</span><span class="o">=</span><span class="s2">&quot;0.7&quot;</span><span class="p">,</span>
+    <span class="n">enable_real_user_monitoring</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">end_user_apdex_threshold</span><span class="o">=</span><span class="s2">&quot;0.8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>NOTE:</strong> Applications that have reported data in the last twelve hours
+cannot be deleted.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_apdex_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The appex threshold for the New Relic application.</p></li>
+<li><p><strong>enable_real_user_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable real user monitoring for the New Relic application.</p></li>
+<li><p><strong>end_user_apdex_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The user’s apdex threshold for the New Relic application.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application in New Relic APM.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.app_apdex_threshold">
+<code class="sig-name descname">app_apdex_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.app_apdex_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>The appex threshold for the New Relic application.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.enable_real_user_monitoring">
+<code class="sig-name descname">enable_real_user_monitoring</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.enable_real_user_monitoring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable real user monitoring for the New Relic application.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.end_user_apdex_threshold">
+<code class="sig-name descname">end_user_apdex_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.end_user_apdex_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user’s apdex threshold for the New Relic application.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the application in New Relic APM.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_apdex_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_real_user_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_user_apdex_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApplicationSettings resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_apdex_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The appex threshold for the New Relic application.</p></li>
+<li><p><strong>enable_real_user_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable real user monitoring for the New Relic application.</p></li>
+<li><p><strong>end_user_apdex_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The user’s apdex threshold for the New Relic application.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application in New Relic APM.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.ApplicationSettings.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.ApplicationSettings.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_newrelic.plugins.AwaitableGetPluginComponentResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AwaitableGetPluginComponentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">health_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AwaitableGetPluginComponentResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
