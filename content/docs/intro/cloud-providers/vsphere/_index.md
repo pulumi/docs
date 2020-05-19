@@ -57,10 +57,11 @@ dc = vsphere.Datacenter("my-dc",
 
 ```go
 import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
     vsphere "github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
 )
 dc, _ := vsphere.NewDatacenter(ctx, "test", &vsphere.DatacenterArgs{
-  Name: "Production-DataCenter"
+  Name: pulumi.String("Production-DataCenter")
 })
 ```
 

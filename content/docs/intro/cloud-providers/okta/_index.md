@@ -68,14 +68,15 @@ last_name="user",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
 )
 
 user, _ := user.User(ctx, "example-user", &user.UserArgs{
-    FirstName: "random",
-    LastName: "user",
-    Email: "test-user@mydomain.com",
-    Login: "test-user@mydomain.com"
+    FirstName: pulumi.String("random"),
+    LastName:  pulumi.String("user"),
+    Email:     pulumi.String("test-user@mydomain.com"),
+    Login:     pulumi.String("test-user@mydomain.com"),
 })
 ```
 

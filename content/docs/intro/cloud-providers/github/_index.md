@@ -63,6 +63,7 @@ repo = github.Repository("demo-repo",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   github "github.com/pulumi/pulumi-github/sdk/go/github"
 )
 

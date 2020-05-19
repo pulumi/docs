@@ -63,11 +63,14 @@ instance = compute.Instance("test",
 {{% choosable language go %}}
 
 ```go
-import "github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+  import "github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+)
 
 instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
-  FlavorName: "s1-2",
-  ImageName: "Ubuntu 16.04",
+  FlavorName: pulumi.String("s1-2"),
+  ImageName:  pulumi.String("Ubuntu 16.04"),
 })
 ```
 

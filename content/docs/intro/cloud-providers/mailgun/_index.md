@@ -13,7 +13,7 @@ menu:
 The Mailgun provider for Pulumi can be used to provision any of the cloud resources available in [Mailgun](https://www.mailgun.com/).
 The Mailgun provider must be configured with credentials to deploy and update resources in Mailgun.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/mailgun" >}}) for complete details of the available Mailgun provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/mailgun" >}}) for complete details of the available Mailgun provider APIs.
 
 ## Setup
 
@@ -77,16 +77,17 @@ route = mailgun.Route("test-route",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   mailgun "github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
 )
 
 route, _ := mailgun.NewRoute(ctx, "test-route", &mailgun.RouteArgs{
-  Priority: 0,
-  Description: "Inbound route",
-  Expression: "match_recipient('.*@example.com')",
+  Priority:    pulumi.Int(0),
+  Description: pulumi.String("Inbound route"),
+  Expression:  pulumi.String("match_recipient('.*@example.com')"),
   Actions: [
-    "forward('http://example.com/api/v1/foos/')",
-    "stop()"
+    pulumi.String("forward('http://example.com/api/v1/foos/')"),
+    pulumi.String("stop()"),
 ]})
 ```
 

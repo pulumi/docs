@@ -87,20 +87,21 @@ service = fastly.Servicev1("my-service",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   fastly "github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
 )
 
 service, _ := fastly.NewServicev1(ctx, "test", &fastly.Servicev1Args{
   Backends: [{
-    Address: "127.0.0.1",
-    Name: "localhost",
-    Port: 80,
+    Address: pulumi.String("127.0.0.1"),
+    Name:    pulumi.String("localhost"),
+    Port:    pulumi.Int(80),
   }],
   Domains: [{
-    Comment: "demo",
-    Name: "demo.pulumi.com"
+    Comment: pulumi.String("demo"),
+    Name:    pulumi.String("demo.pulumi.com"),
   }]
-  ForceDestroy: true,
+  ForceDestroy: pulumi.Bool(true),
 })
 ```
 

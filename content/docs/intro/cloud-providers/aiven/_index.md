@@ -13,7 +13,7 @@ menu:
 The Aiven provider for Pulumi can be used to provision any of the cloud resources available in [Aiven](https://aiven.io/).
 The Aiven provider must be configured with credentials to deploy and update resources in Aiven.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/aiven" >}}) for complete details of the available Aiven provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/aiven" >}}) for complete details of the available Aiven provider APIs.
 
 ## Setup
 
@@ -72,15 +72,16 @@ service = aiven.Service("my-service",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   aiven "github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
 )
 
 service, _ := aiven.NewService(ctx, "test", &aiven.ServiceArgs{
-  Project: "my-project",
-  CloudName: "google-europe-west1",
-  Plan: "startup-4",
-  ServiceName: "my-service",
-  ServiceType: "grafana",
+  Project:     pulumi.String("my-project"),
+  CloudName:   pulumi.String("google-europe-west1"),
+  Plan:        pulumi.String("startup-4"),
+  ServiceName: pulumi.String("my-service"),
+  ServiceType: pulumi.String("grafana"),
 })
 ```
 
