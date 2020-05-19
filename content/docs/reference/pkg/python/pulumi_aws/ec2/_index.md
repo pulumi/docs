@@ -7136,7 +7136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NatGateway</span><span class="p">(</span><span class="s2">&quot;gw&quot;</span><span class="p">,</span>
     <span class="n">allocation_id</span><span class="o">=</span><span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;nat&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

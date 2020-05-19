@@ -137,7 +137,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,6 +371,14 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>Dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List&lt;Topic<wbr>Rule<wbr>Dynamodbv2Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
@@ -382,6 +390,22 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span>Firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List&lt;Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">List&lt;Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -511,6 +535,14 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>Dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
@@ -522,6 +554,22 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span>Firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -651,6 +699,14 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Topic<wbr>Rule<wbr>Dynamodbv2[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
@@ -662,6 +718,22 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span>firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Topic<wbr>Rule<wbr>Iot<wbr>Analytic[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">Topic<wbr>Rule<wbr>Iot<wbr>Event[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -791,6 +863,14 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
@@ -802,6 +882,22 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span>firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Dict[Topic<wbr>Rule<wbr>Firehose]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot_<wbr>analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot_<wbr>events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -988,7 +1084,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1146,6 +1242,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List&lt;Topic<wbr>Rule<wbr>Dynamodbv2Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
@@ -1166,6 +1270,22 @@ The following state arguments are supported:
         <span>Firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List&lt;Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">List&lt;Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1295,6 +1415,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
@@ -1315,6 +1443,22 @@ The following state arguments are supported:
         <span>Firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1444,6 +1588,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Topic<wbr>Rule<wbr>Dynamodbv2[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
@@ -1464,6 +1616,22 @@ The following state arguments are supported:
         <span>firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot<wbr>Analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Topic<wbr>Rule<wbr>Iot<wbr>Analytic[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">Topic<wbr>Rule<wbr>Iot<wbr>Event[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1593,6 +1761,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>dynamodbv2s</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>elasticsearch</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
@@ -1613,6 +1789,22 @@ The following state arguments are supported:
         <span>firehose</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulefirehose">Dict[Topic<wbr>Rule<wbr>Firehose]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot_<wbr>analytics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iot_<wbr>events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2223,6 +2415,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Operation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Payload<wbr>Field</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2307,6 +2508,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2399,6 +2609,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>operation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>payload<wbr>Field</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2487,6 +2706,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>operation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>payload<wbr>Field</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2519,6 +2747,206 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruledynamodbv2">Topic<wbr>Rule<wbr>Dynamodbv2</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleDynamodbv2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleDynamodbv2">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleDynamodbv2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleDynamodbv2.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Put<wbr>Item</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Put<wbr>Item</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>put<wbr>Item</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>put<wbr>Item</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Dict[Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleDynamodbv2PutItem">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleDynamodbv2PutItem">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleDynamodbv2PutItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleDynamodbv2PutItem.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>table_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd>
 
 </dl>
@@ -2908,6 +3336,278 @@ The following state arguments are supported:
 
 
 
+<h4 id="topicruleiotanalytic">Topic<wbr>Rule<wbr>Iot<wbr>Analytic</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleIotAnalytic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleIotAnalytic">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotAnalyticArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotAnalyticOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleIotAnalyticArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleIotAnalytic.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Channel<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Channel<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>channel<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>channel<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleiotevent">Topic<wbr>Rule<wbr>Iot<wbr>Event</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleIotEvent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleIotEvent">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotEventArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotEventOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleIotEventArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleIotEvent.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Input<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Input<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>input<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>input<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleKinesis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleKinesis">output</a> API doc for this type.
@@ -3180,6 +3880,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3203,6 +3912,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
 {{% /md %}}</dd>
 
 </dl>
@@ -3230,6 +3948,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>qos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3253,6 +3980,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>qos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
 {{% /md %}}</dd>
 
 </dl>

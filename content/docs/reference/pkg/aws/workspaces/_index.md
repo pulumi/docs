@@ -13,6 +13,7 @@ Explore the resources and functions of the workspaces module in the AWS package.
 <ul class="api">
     <li><a href="directory" title="Directory"><span class="symbol resource"></span>Directory</a></li>
     <li><a href="ipgroup" title="IpGroup"><span class="symbol resource"></span>IpGroup</a></li>
+    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,7 +30,7 @@ Explore the resources and functions of the workspaces module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

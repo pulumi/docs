@@ -911,7 +911,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.appsync.Resolver">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Resolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Resolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">caching_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Resolver.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -946,6 +946,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="c1"># UNIT type resolver (default)</span>
 <span class="n">test_resolver</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">Resolver</span><span class="p">(</span><span class="s2">&quot;testResolver&quot;</span><span class="p">,</span>
     <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">caching_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;cachingKeys&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;$$context.identity.sub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;$$context.arguments.id&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="p">},</span>
     <span class="n">data_source</span><span class="o">=</span><span class="n">test_data_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">field</span><span class="o">=</span><span class="s2">&quot;singlePost&quot;</span><span class="p">,</span>
     <span class="n">request_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
@@ -989,16 +996,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API ID for the GraphQL API.</p></li>
+<li><p><strong>caching_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The CachingConfig.</p></li>
 <li><p><strong>data_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DataSource name.</p></li>
 <li><p><strong>field</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field name from the schema defined in the GraphQL API.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.</p></li>
-<li><p><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p></li>
+<li><p><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig.</p></li>
 <li><p><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.</p></li>
 <li><p><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type name from the schema defined in the GraphQL API.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>caching_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cachingKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of caching key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The TTL in seconds.</p></li>
+</ul>
 <p>The <strong>pipeline_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Function ID.</p></li>
@@ -1013,6 +1026,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver.arn">
 <code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.appsync.Resolver.caching_config">
+<code class="sig-name descname">caching_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.caching_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CachingConfig.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cachingKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of caching key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The TTL in seconds.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1036,7 +1059,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.appsync.Resolver.pipeline_config">
 <code class="sig-name descname">pipeline_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.pipeline_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p>
+<dd><p>The PipelineConfig.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of Function ID.</p></li>
 </ul>
@@ -1062,7 +1085,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.appsync.Resolver.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">caching_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Resolver resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1073,16 +1096,22 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API ID for the GraphQL API.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN</p></li>
+<li><p><strong>caching_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The CachingConfig.</p></li>
 <li><p><strong>data_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DataSource name.</p></li>
 <li><p><strong>field</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field name from the schema defined in the GraphQL API.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.</p></li>
-<li><p><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p></li>
+<li><p><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig.</p></li>
 <li><p><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.</p></li>
 <li><p><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type name from the schema defined in the GraphQL API.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>caching_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cachingKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of caching key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The TTL in seconds.</p></li>
+</ul>
 <p>The <strong>pipeline_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Function ID.</p></li>

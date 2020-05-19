@@ -34,7 +34,7 @@ import pulumi_aws as aws
 
 gw = aws.ec2.NatGateway("gw",
     allocation_id=aws_eip["nat"]["id"],
-    subnet_id=aws_subnet["public"]["id"])
+    subnet_id=aws_subnet["example"]["id"])
 ```
 {{% /example %}}
 
@@ -45,7 +45,7 @@ import * as aws from "@pulumi/aws";
 
 const gw = new aws.ec2.NatGateway("gw", {
     allocationId: aws_eip_nat.id,
-    subnetId: aws_subnet_public.id,
+    subnetId: aws_subnet_example.id,
 });
 ```
 {{% /example %}}
