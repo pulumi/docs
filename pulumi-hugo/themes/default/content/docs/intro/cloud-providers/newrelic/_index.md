@@ -57,7 +57,7 @@ import (
   newrelic "github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic"
 )
 
-policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy"
+policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy", &newrelic.AlertPolicyArgs{})
 ```
 
 {{% /choosable %}}

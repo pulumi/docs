@@ -63,12 +63,13 @@ project = gitlab.Project("my-project",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   gitlab "github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
 )
 
 project, _ := gitlab.NewProject(ctx, "test", &gitlab.ProjectArgs{
-  Description: "example project created by Pulumi",
-  VisibilityLevel: "public",
+  Description:     pulumi.String("example project created by Pulumi"),
+  VisibilityLevel: pulumi.String("public"),
 })
 ```
 

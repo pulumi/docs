@@ -13,7 +13,7 @@ menu:
 The Datadog provider for Pulumi can be used to provision any of the cloud resources available in [Datadog](https://datadoghq.com/).
 The Datadog provider must be configured with credentials to deploy and update resources in Datadog.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/datadog" >}}) for complete details of the available Datadog provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/datadog" >}}) for complete details of the available Datadog provider APIs.
 
 ## Setup
 
@@ -66,13 +66,14 @@ user = datadog.User("my-policy",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   datadog "github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
 )
 
 user, _ := datadog.NewUser(ctx, "my-user", &datadog.UserArgs{
- Email: "new@example.com",
- Handle: "new@example.com",
- Name: "New User",
+ Email:  pulumi.String("new@example.com"),
+ Handle: pulumi.String("new@example.com"),
+ Name:   pulumi.String("New User"),
 }
 ```
 

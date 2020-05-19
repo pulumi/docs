@@ -60,11 +60,12 @@ group = signalfx.DashboardGroup("my-group",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   signalfx "github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx"
 )
 
 group, _ := signalfx.NewDashboardGroup(ctx, "my-group", &signalfx.DashboardGroupArgs{
-  Description: "my demo dashboard group"
+  Description: pulumi.String("my demo dashboard group")
 }
 ```
 
