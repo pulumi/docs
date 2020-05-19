@@ -13,7 +13,7 @@ menu:
 The Auth0 provider for Pulumi can be used to provision any of the cloud resources available in [Auth0](https://auth0.com/).
 The Auth0 provider must be configured with credentials to deploy and update resources in Auth0.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/auth0" >}}) for complete details of the available Auth0 provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/auth0" >}}) for complete details of the available Auth0 provider APIs.
 
 ## Setup
 

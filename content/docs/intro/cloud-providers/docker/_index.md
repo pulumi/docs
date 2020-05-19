@@ -12,7 +12,7 @@ menu:
 
 The Docker provider for Pulumi can be used to provision any of the resources available in [Docker](https://www.docker.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/docker" >}}) for complete details of the available Docker provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/docker" >}}) for complete details of the available Docker provider APIs.
 
 ## Setup
 
