@@ -195,8 +195,8 @@ This allows us to simplify boilerplate and design strongly-typed APIs for our Ku
 
 ```go
 _, err := NewServiceDeployment(ctx, "redis-leader", &ServiceDeploymentArgs{
-Image: pulumi.String("k8s.gcr.io/redis:e2e"),
-Ports: pulumi.IntArray{pulumi.Int(6379)},
+	Image: pulumi.String("k8s.gcr.io/redis:e2e"),
+	Ports: pulumi.IntArray{pulumi.Int(6379)},
 })
 ```
 
