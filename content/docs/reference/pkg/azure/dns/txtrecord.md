@@ -38,7 +38,7 @@ example_txt_record = azure.dns.TxtRecord("exampleTxtRecord",
     zone_name=example_zone.name,
     resource_group_name=example_resource_group.name,
     ttl=300,
-    record=[
+    records=[
         {
             "value": "google-site-authenticator",
         },
@@ -63,7 +63,7 @@ const exampleTxtRecord = new azure.dns.TxtRecord("exampleTxtRecord", {
     zoneName: exampleZone.name,
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
-    record: [
+    records: [
         {
             value: "google-site-authenticator",
         },

@@ -38,7 +38,7 @@ example_caa_record = azure.dns.CaaRecord("exampleCaaRecord",
     zone_name=example_zone.name,
     resource_group_name=example_resource_group.name,
     ttl=300,
-    record=[
+    records=[
         {
             "flags": 0,
             "tag": "issue",
@@ -77,7 +77,7 @@ const exampleCaaRecord = new azure.dns.CaaRecord("exampleCaaRecord", {
     zoneName: exampleZone.name,
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
-    record: [
+    records: [
         {
             flags: 0,
             tag: "issue",

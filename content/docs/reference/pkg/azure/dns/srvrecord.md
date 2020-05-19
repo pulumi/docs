@@ -38,7 +38,7 @@ example_srv_record = azure.dns.SrvRecord("exampleSrvRecord",
     zone_name=example_zone.name,
     resource_group_name=example_resource_group.name,
     ttl=300,
-    record=[{
+    records=[{
         "priority": 1,
         "weight": 5,
         "port": 8080,
@@ -61,7 +61,7 @@ const exampleSrvRecord = new azure.dns.SrvRecord("exampleSrvRecord", {
     zoneName: exampleZone.name,
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
-    record: [{
+    records: [{
         priority: 1,
         weight: 5,
         port: 8080,

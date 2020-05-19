@@ -38,7 +38,7 @@ test_srv_record = azure.privatedns.SRVRecord("testSRVRecord",
     resource_group_name=azurerm_resource_group["test"]["name"],
     zone_name=test_zone.name,
     ttl=300,
-    record=[
+    records=[
         {
             "priority": 1,
             "weight": 5,
@@ -69,7 +69,7 @@ const testSRVRecord = new azure.privatedns.SRVRecord("testSRVRecord", {
     resourceGroupName: azurerm_resource_group.test.name,
     zoneName: testZone.name,
     ttl: 300,
-    record: [
+    records: [
         {
             priority: 1,
             weight: 5,

@@ -38,7 +38,7 @@ example_mx_record = azure.dns.MxRecord("exampleMxRecord",
     zone_name=example_zone.name,
     resource_group_name=example_resource_group.name,
     ttl=300,
-    record=[
+    records=[
         {
             "preference": 10,
             "exchange": "mail1.contoso.com",
@@ -65,7 +65,7 @@ const exampleMxRecord = new azure.dns.MxRecord("exampleMxRecord", {
     zoneName: exampleZone.name,
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
-    record: [
+    records: [
         {
             preference: 10,
             exchange: "mail1.contoso.com",

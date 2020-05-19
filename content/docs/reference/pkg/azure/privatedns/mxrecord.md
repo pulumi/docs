@@ -38,7 +38,7 @@ example_mx_record = azure.privatedns.MxRecord("exampleMxRecord",
     resource_group_name=example_resource_group.name,
     zone_name=example_zone.name,
     ttl=300,
-    record=[
+    records=[
         {
             "preference": 10,
             "exchange": "mx1.contoso.com",
@@ -65,7 +65,7 @@ const exampleMxRecord = new azure.privatedns.MxRecord("exampleMxRecord", {
     resourceGroupName: exampleResourceGroup.name,
     zoneName: exampleZone.name,
     ttl: 300,
-    record: [
+    records: [
         {
             preference: 10,
             exchange: "mx1.contoso.com",
