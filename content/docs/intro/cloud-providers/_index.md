@@ -33,6 +33,7 @@ aliases: ["/docs/reference/clouds/"]
 ## Infrastructure Providers
 
 * [Aiven]({{< relref "./aiven" >}})
+* [Auth0]({{< relref "./auth0" >}})
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
 * [Kafka]({{< relref "./kafka" >}})
