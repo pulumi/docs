@@ -69,14 +69,15 @@ user = auth0.User("my-demo-user",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   auth0 "github.com/pulumi/pulumi-auth0/sdk/go/auth0"
 )
 
 user, _ := auth.NewUser(ctx, "my-demo-user", &auth0.UserArgs{
-  Username: "joebloggs",
-  Password: "Password1234!",
-  Email: "joebloggs@mycompany.com",
-  ConnectionName: "Username-Password-Authentication",
+  Username:       pulumi.String("joebloggs"),
+  Password:       pulumi.String("Password1234!"),
+  Email:          pulumi.String("joebloggs@mycompany.com"),
+  ConnectionName: pulumi.String("Username-Password-Authentication"),
 })
 ```
 

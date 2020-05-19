@@ -77,16 +77,17 @@ route = mailgun.Route("test-route",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   mailgun "github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
 )
 
 route, _ := mailgun.NewRoute(ctx, "test-route", &mailgun.RouteArgs{
-  Priority: 0,
-  Description: "Inbound route",
-  Expression: "match_recipient('.*@example.com')",
+  Priority:    pulumi.Int(0),
+  Description: pulumi.String("Inbound route"),
+  Expression:  pulumi.String("match_recipient('.*@example.com')"),
   Actions: [
-    "forward('http://example.com/api/v1/foos/')",
-    "stop()"
+    pulumi.String("forward('http://example.com/api/v1/foos/')"),
+    pulumi.String("stop()"),
 ]})
 ```
 

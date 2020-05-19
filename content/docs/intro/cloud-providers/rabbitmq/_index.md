@@ -60,11 +60,12 @@ user = rabbitmq.User("user",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
 )
 
 user, _ := rabbitmq.NewUser(ctx, "user", &rabbitmq.UserArgs{
-  Password: "MyPassword1234!"
+  Password: pulumi.String("MyPassword1234!")
 })
 ```
 

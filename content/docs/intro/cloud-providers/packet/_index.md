@@ -61,11 +61,12 @@ project = packet.Project("my-project",
 
 ```go
 import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
     packet "github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
 )
 
 project, _ := packet.NewProject(ctx, "test", &packet.ProjectArgs{
-  Name: "DevelopmentEnvironment"
+  Name: pulumi.String("DevelopmentEnvironment")
 })
 ```
 

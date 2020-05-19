@@ -72,15 +72,16 @@ service = aiven.Service("my-service",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   aiven "github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
 )
 
 service, _ := aiven.NewService(ctx, "test", &aiven.ServiceArgs{
-  Project: "my-project",
-  CloudName: "google-europe-west1",
-  Plan: "startup-4",
-  ServiceName: "my-service",
-  ServiceType: "grafana",
+  Project:     pulumi.String("my-project"),
+  CloudName:   pulumi.String("google-europe-west1"),
+  Plan:        pulumi.String("startup-4"),
+  ServiceName: pulumi.String("my-service"),
+  ServiceType: pulumi.String("grafana"),
 })
 ```
 

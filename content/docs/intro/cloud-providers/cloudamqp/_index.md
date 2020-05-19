@@ -61,12 +61,13 @@ instance = cloudamqp.Instance("demo-instance",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   cloudamqp "github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp"
 )
 
 instance, _ := cloudamqp.NewInstance(ctx, "demo-instance", &cloudamqp.InstanceArgs{
-	Plan: "lemur",
-	Region: "amazon-web-services::us-west-2"
+	Plan:   pulumi.String("lemur"),
+	Region: pulumi.String("amazon-web-services::us-west-2"),
 })
 ```
 
