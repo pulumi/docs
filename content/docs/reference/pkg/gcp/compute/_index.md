@@ -63,6 +63,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="regiondiskresourcepolicyattachment" title="RegionDiskResourcePolicyAttachment"><span class="symbol resource"></span>RegionDiskResourcePolicyAttachment</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
+    <li><a href="regionperinstanceconfig" title="RegionPerInstanceConfig"><span class="symbol resource"></span>RegionPerInstanceConfig</a></li>
     <li><a href="regionsslcertificate" title="RegionSslCertificate"><span class="symbol resource"></span>RegionSslCertificate</a></li>
     <li><a href="regiontargethttpproxy" title="RegionTargetHttpProxy"><span class="symbol resource"></span>RegionTargetHttpProxy</a></li>
     <li><a href="regiontargethttpsproxy" title="RegionTargetHttpsProxy"><span class="symbol resource"></span>RegionTargetHttpsProxy</a></li>
@@ -133,7 +134,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 

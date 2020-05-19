@@ -25,7 +25,7 @@ import * as gcp from "@pulumi/gcp";
 const foobar = new gcp.compute.Router("foobar", {network: google_compute_network.foobar.name});
 const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
     interconnect: "my-interconnect-id",
-    router: foobar.selfLink,
+    router: foobar.id,
 });
 ```
 ```python
@@ -35,7 +35,7 @@ import pulumi_gcp as gcp
 foobar = gcp.compute.Router("foobar", network=google_compute_network["foobar"]["name"])
 on_prem = gcp.compute.InterconnectAttachment("onPrem",
     interconnect="my-interconnect-id",
-    router=foobar.self_link)
+    router=foobar.id)
 ```
 
 

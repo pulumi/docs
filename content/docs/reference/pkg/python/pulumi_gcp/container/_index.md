@@ -36,16 +36,83 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_gcp.container.Cluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addons_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticator_groups_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_binary_authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_intranode_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_kubernetes_alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_legacy_abac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_shielded_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_allocation_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_auth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_authorized_networks_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_usage_export_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vertical_pod_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_identity_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Cluster resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] addons_config: The configuration for addons supported by GKE.</p>
+<dd><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
+<a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
+and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters">the API reference</a>.</p>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> All arguments and attributes, including basic auth username and
+passwords as well as certificate outputs will be stored in the raw state as
+plaintext. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">remove_default_node_pool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_certificate_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+<span class="n">primary_preemptible_nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;primaryPreemptibleNodes&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clientCertificateConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
+Structure is documented below.</p></li>
 <li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p></li>
@@ -116,8 +183,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p></li>
 <li><p><strong>monitoring_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitoring service that the cluster
@@ -138,8 +204,8 @@ feature. Structure is documented below.</p></li>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p></li>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
@@ -156,7 +222,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
 <li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
@@ -189,8 +255,8 @@ Structure is documented below.</p></li>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
@@ -238,6 +304,13 @@ Structure is documented below.</p>
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
 To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
@@ -270,7 +343,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -482,8 +555,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
@@ -654,8 +727,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
@@ -701,6 +774,13 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication type between services in Istio. Available options include <code class="docutils literal notranslate"><span class="pre">AUTH_MUTUAL_TLS</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Whether we should enable the network policy addon
@@ -751,7 +831,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -1012,8 +1092,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </dd></dl>
@@ -1064,8 +1143,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 <dd><p>Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
@@ -1201,8 +1280,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
@@ -1315,7 +1394,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p>
 </dd></dl>
 
@@ -1440,7 +1519,7 @@ subnetwork in which the cluster’s instances are launched.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block">
 <code class="sig-name descname">tpu_ipv4_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<dd><p>The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </dd></dl>
@@ -1561,8 +1640,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </p></li>
@@ -1585,8 +1663,8 @@ feature. Structure is documented below.</p>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p></li>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
@@ -1603,7 +1681,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
 <li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
@@ -1634,7 +1712,7 @@ notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.
 </p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
 subnetwork in which the cluster’s instances are launched.</p></li>
-<li><p><strong>tpu_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<li><p><strong>tpu_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </p></li>
@@ -1650,8 +1728,8 @@ Structure is documented below.</p>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
@@ -1699,6 +1777,13 @@ Structure is documented below.</p>
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
 To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
@@ -1731,7 +1816,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -1943,8 +2028,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
@@ -2229,16 +2314,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.container.NodePool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upgrade_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NodePool resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] autoscaling: Configuration required by cluster autoscaler to adjust</p>
-<blockquote>
-<div><p>the size of the node pool to the current cluster usage. Structure is documented below.</p>
-</div></blockquote>
+<dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
+the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
+and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools">the API reference</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">remove_default_node_pool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">primary_preemptible_nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;primaryPreemptibleNodes&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">node_locations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">],</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_certificate_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;guest_accelerator&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;nvidia-tesla-k80&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+<span class="n">np</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;np&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">timeouts</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="s2">&quot;30m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;update&quot;</span><span class="p">:</span> <span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
+the size of the node pool to the current cluster usage. Structure is documented below.</p></li>
 <li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">location</span></code> provided for zonal clusters.</p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing

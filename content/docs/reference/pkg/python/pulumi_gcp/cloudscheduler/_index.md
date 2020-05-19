@@ -40,6 +40,9 @@ does not have an App Engine app, you must create one.</p>
         <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
         <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/ping&quot;</span><span class="p">,</span>
     <span class="p">},</span>
+    <span class="n">retry_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;retryCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
     <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/8 * * * *&quot;</span><span class="p">,</span>
     <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
 </pre></div>
@@ -59,6 +62,12 @@ does not have an App Engine app, you must create one.</p>
     <span class="p">},</span>
     <span class="n">attempt_deadline</span><span class="o">=</span><span class="s2">&quot;320s&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test app engine job&quot;</span><span class="p">,</span>
+    <span class="n">retry_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxDoublings&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;maxRetryDuration&quot;</span><span class="p">:</span> <span class="s2">&quot;10s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minBackoffDuration&quot;</span><span class="p">:</span> <span class="s2">&quot;1s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;retryCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">},</span>
     <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;*/4 * * * *&quot;</span><span class="p">,</span>
     <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;Europe/London&quot;</span><span class="p">)</span>
 </pre></div>

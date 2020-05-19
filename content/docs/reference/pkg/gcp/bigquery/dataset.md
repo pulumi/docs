@@ -81,7 +81,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const keyRing = new gcp.kms.KeyRing("keyRing", {location: "us"});
-const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.selfLink});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
 const dataset = new gcp.bigquery.Dataset("dataset", {
     datasetId: "example_dataset",
     friendlyName: "test",
@@ -89,7 +89,7 @@ const dataset = new gcp.bigquery.Dataset("dataset", {
     location: "US",
     defaultTableExpirationMs: 3600000,
     default_encryption_configuration: {
-        kmsKeyName: cryptoKey.selfLink,
+        kmsKeyName: cryptoKey.id,
     },
 });
 ```
@@ -98,7 +98,7 @@ import pulumi
 import pulumi_gcp as gcp
 
 key_ring = gcp.kms.KeyRing("keyRing", location="us")
-crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.self_link)
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
 dataset = gcp.bigquery.Dataset("dataset",
     dataset_id="example_dataset",
     friendly_name="test",
@@ -106,7 +106,7 @@ dataset = gcp.bigquery.Dataset("dataset",
     location="US",
     default_table_expiration_ms=3600000,
     default_encryption_configuration={
-        "kmsKeyName": crypto_key.self_link,
+        "kmsKeyName": crypto_key.id,
     })
 ```
 

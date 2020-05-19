@@ -17,6 +17,9 @@ Allows creation and management of an App Engine application.
    successfully deleted; this is a limitation of the provider, and will go away in the future.
    This provider is not able to delete App Engine applications.
 
+> **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 
 
 {{% examples %}}
@@ -1577,7 +1580,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1585,7 +1589,9 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
+The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1601,7 +1607,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1616,7 +1623,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1624,7 +1632,9 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
+The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1640,7 +1650,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1655,7 +1666,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1663,7 +1675,9 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
+The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1679,7 +1693,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1694,7 +1709,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1702,7 +1718,9 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
+The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,7 +1736,8 @@ and liveness checks.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

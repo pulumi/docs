@@ -259,16 +259,105 @@ that would grant the service account privileges.</p>
 <dl class="py class">
 <dt id="pulumi_gcp.service_account.IAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">IAMBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service account are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service account are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can interact with&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Allow SA service account use the default GCE account</span>
+<span class="n">gce_default_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;gce-default-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">email</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;serviceAccount:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -385,16 +474,106 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.service_account.IAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">IAMMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service account are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service account are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can interact with&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Allow SA service account use the default GCE account</span>
+<span class="n">gce_default_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;gce-default-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">email</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;serviceAccount:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -511,16 +690,107 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.service_account.IAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">IAMPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service account are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service account are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can interact with&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMPolicy</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that only Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMBinding</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Allow SA service account use the default GCE account</span>
+<span class="n">gce_default_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;gce-default-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">email</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;serviceAccount:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>With IAM Conditions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;my-service-account&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;A service account that Jane can use&quot;</span><span class="p">)</span>
+<span class="n">admin_account_iam</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;admin-account-iam&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiring at midnight of 2019-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;request.time &lt; timestamp(&quot;</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;expires_after_2019_12_31&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountUser&quot;</span><span class="p">,</span>
+    <span class="n">service_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="py attribute">

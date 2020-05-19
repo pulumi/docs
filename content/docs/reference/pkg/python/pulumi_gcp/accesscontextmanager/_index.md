@@ -30,6 +30,9 @@ along with a list of requirements necessary for the label to be applied.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
+<span class="n">access_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">accesscontextmanager</span><span class="o">.</span><span class="n">AccessPolicy</span><span class="p">(</span><span class="s2">&quot;access-policy&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="s2">&quot;organizations/123456789&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;my policy&quot;</span><span class="p">)</span>
 <span class="n">access_level</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">accesscontextmanager</span><span class="o">.</span><span class="n">AccessLevel</span><span class="p">(</span><span class="s2">&quot;access-level&quot;</span><span class="p">,</span>
     <span class="n">basic</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -46,11 +49,8 @@ along with a list of requirements necessary for the label to be applied.</p>
             <span class="p">],</span>
         <span class="p">}],</span>
     <span class="p">},</span>
-    <span class="n">parent</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;accessPolicies/</span><span class="si">{</span><span class="n">google_access_context_manager_access_policy</span><span class="p">[</span><span class="s1">&#39;test-access&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="n">access_policy</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;accessPolicies/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;chromeos_no_lock&quot;</span><span class="p">)</span>
-<span class="n">access_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">accesscontextmanager</span><span class="o">.</span><span class="n">AccessPolicy</span><span class="p">(</span><span class="s2">&quot;access-policy&quot;</span><span class="p">,</span>
-    <span class="n">parent</span><span class="o">=</span><span class="s2">&quot;organizations/123456789&quot;</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;my policy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

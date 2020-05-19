@@ -2028,10 +2028,10 @@ for service accounts.</p>
 </ul>
 <blockquote>
 <div><p><strong>Warning:</strong> All arguments including the <code class="docutils literal notranslate"><span class="pre">secret</span></code> value will be stored in the raw
-state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
+state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.
 On import, the <code class="docutils literal notranslate"><span class="pre">secret</span></code> value will not be retrieved.</p>
 <p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">secret</span></code> will be stored in the raw
-state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>

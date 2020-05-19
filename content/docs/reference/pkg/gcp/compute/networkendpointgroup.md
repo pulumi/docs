@@ -39,11 +39,11 @@ const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubn
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.0.0.0/16",
     region: "us-central1",
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
 });
 const neg = new gcp.compute.NetworkEndpointGroup("neg", {
-    network: defaultNetwork.selfLink,
-    subnetwork: defaultSubnetwork.selfLink,
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
     defaultPort: "90",
     zone: "us-central1-a",
 });
@@ -56,10 +56,10 @@ default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.0.0.0/16",
     region="us-central1",
-    network=default_network.self_link)
+    network=default_network.id)
 neg = gcp.compute.NetworkEndpointGroup("neg",
-    network=default_network.self_link,
-    subnetwork=default_subnetwork.self_link,
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
     default_port="90",
     zone="us-central1-a")
 ```

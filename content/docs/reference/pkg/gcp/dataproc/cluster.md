@@ -4328,10 +4328,13 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
@@ -4386,10 +4389,13 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
@@ -4444,10 +4450,13 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
@@ -4502,10 +4511,13 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>

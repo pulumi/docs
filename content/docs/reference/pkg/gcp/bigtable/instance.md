@@ -70,10 +70,7 @@ development_instance = gcp.bigtable.Instance("development-instance",
         "storageType": "HDD",
         "zone": "us-central1-b",
     }],
-    instance_type="DEVELOPMENT",
-    lifecycle={
-        "preventDestroy": True,
-    })
+    instance_type="DEVELOPMENT")
 ```
 
 
@@ -87,7 +84,7 @@ development_instance = gcp.bigtable.Instance("development-instance",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clusters=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clusters=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -270,6 +267,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -319,6 +326,16 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,6 +393,16 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -425,6 +452,16 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster]</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deletion_<wbr>protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,7 +591,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>clusters=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>clusters=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -679,6 +716,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -728,6 +775,16 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,6 +842,16 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -834,6 +901,16 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster]</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deletion_<wbr>protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
+in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

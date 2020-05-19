@@ -21,12 +21,15 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const instance = new gcp.bigtable.Instance("instance", {cluster: [{
-    clusterId: "bt-instance",
-    zone: "us-central1-b",
-    numNodes: 3,
-    storageType: "HDD",
-}]});
+const instance = new gcp.bigtable.Instance("instance", {
+    cluster: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
 const ap = new gcp.bigquery.AppProfile("ap", {
     instance: instance.name,
     appProfileId: "bt-profile",
@@ -38,12 +41,14 @@ const ap = new gcp.bigquery.AppProfile("ap", {
 import pulumi
 import pulumi_gcp as gcp
 
-instance = gcp.bigtable.Instance("instance", cluster=[{
-    "clusterId": "bt-instance",
-    "zone": "us-central1-b",
-    "numNodes": 3,
-    "storageType": "HDD",
-}])
+instance = gcp.bigtable.Instance("instance",
+    cluster=[{
+        "clusterId": "bt-instance",
+        "zone": "us-central1-b",
+        "numNodes": 3,
+        "storageType": "HDD",
+    }],
+    deletion_protection="true")
 ap = gcp.bigquery.AppProfile("ap",
     instance=instance.name,
     app_profile_id="bt-profile",
@@ -57,12 +62,15 @@ ap = gcp.bigquery.AppProfile("ap",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const instance = new gcp.bigtable.Instance("instance", {cluster: [{
-    clusterId: "bt-instance",
-    zone: "us-central1-b",
-    numNodes: 3,
-    storageType: "HDD",
-}]});
+const instance = new gcp.bigtable.Instance("instance", {
+    cluster: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
 const ap = new gcp.bigquery.AppProfile("ap", {
     instance: instance.name,
     appProfileId: "bt-profile",
@@ -77,12 +85,14 @@ const ap = new gcp.bigquery.AppProfile("ap", {
 import pulumi
 import pulumi_gcp as gcp
 
-instance = gcp.bigtable.Instance("instance", cluster=[{
-    "clusterId": "bt-instance",
-    "zone": "us-central1-b",
-    "numNodes": 3,
-    "storageType": "HDD",
-}])
+instance = gcp.bigtable.Instance("instance",
+    cluster=[{
+        "clusterId": "bt-instance",
+        "zone": "us-central1-b",
+        "numNodes": 3,
+        "storageType": "HDD",
+    }],
+    deletion_protection="true")
 ap = gcp.bigquery.AppProfile("ap",
     instance=instance.name,
     app_profile_id="bt-profile",

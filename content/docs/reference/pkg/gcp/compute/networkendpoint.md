@@ -38,7 +38,7 @@ const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubn
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.0.0.1/16",
     region: "us-central1",
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
 });
 const endpoint-instance = new gcp.compute.Instance("endpoint-instance", {
     machineType: "n1-standard-1",
@@ -48,7 +48,7 @@ const endpoint-instance = new gcp.compute.Instance("endpoint-instance", {
         },
     },
     network_interface: [{
-        subnetwork: defaultSubnetwork.selfLink,
+        subnetwork: defaultSubnetwork.id,
         access_config: [{}],
     }],
 });
@@ -59,8 +59,8 @@ const default-endpoint = new gcp.compute.NetworkEndpoint("default-endpoint", {
     ipAddress: endpoint-instance.networkInterfaces.apply(networkInterfaces => networkInterfaces[0].networkIp),
 });
 const group = new gcp.compute.NetworkEndpointGroup("group", {
-    network: defaultNetwork.selfLink,
-    subnetwork: defaultSubnetwork.selfLink,
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
     defaultPort: "90",
     zone: "us-central1-a",
 });
@@ -75,7 +75,7 @@ default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.0.0.1/16",
     region="us-central1",
-    network=default_network.self_link)
+    network=default_network.id)
 endpoint_instance = gcp.compute.Instance("endpoint-instance",
     machine_type="n1-standard-1",
     boot_disk={
@@ -84,7 +84,7 @@ endpoint_instance = gcp.compute.Instance("endpoint-instance",
         },
     },
     network_interface=[{
-        "subnetwork": default_subnetwork.self_link,
+        "subnetwork": default_subnetwork.id,
         "access_config": [{}],
     }])
 default_endpoint = gcp.compute.NetworkEndpoint("default-endpoint",
@@ -93,8 +93,8 @@ default_endpoint = gcp.compute.NetworkEndpoint("default-endpoint",
     port=google_compute_network_endpoint_group["neg"]["default_port"],
     ip_address=endpoint_instance.network_interfaces[0]["networkIp"])
 group = gcp.compute.NetworkEndpointGroup("group",
-    network=default_network.self_link,
-    subnetwork=default_subnetwork.self_link,
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
     default_port="90",
     zone="us-central1-a")
 ```

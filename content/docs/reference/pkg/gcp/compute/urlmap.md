@@ -34,13 +34,13 @@ const login = new gcp.compute.BackendService("login", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
 });
 const home = new gcp.compute.BackendService("home", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
 });
 const staticBucket = new gcp.storage.Bucket("staticBucket", {location: "US"});
 const staticBackendBucket = new gcp.compute.BackendBucket("staticBackendBucket", {
@@ -49,7 +49,7 @@ const staticBackendBucket = new gcp.compute.BackendBucket("staticBackendBucket",
 });
 const urlmap = new gcp.compute.URLMap("urlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [
         {
             hosts: ["mysite.com"],
@@ -63,29 +63,29 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
     path_matcher: [
         {
             name: "mysite",
-            defaultService: home.selfLink,
+            defaultService: home.id,
             path_rule: [
                 {
                     paths: ["/home"],
-                    service: home.selfLink,
+                    service: home.id,
                 },
                 {
                     paths: ["/login"],
-                    service: login.selfLink,
+                    service: login.id,
                 },
                 {
                     paths: ["/static"],
-                    service: staticBackendBucket.selfLink,
+                    service: staticBackendBucket.id,
                 },
             ],
         },
         {
             name: "otherpaths",
-            defaultService: home.selfLink,
+            defaultService: home.id,
         },
     ],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -103,19 +103,19 @@ login = gcp.compute.BackendService("login",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link])
+    health_checks=[default.id])
 home = gcp.compute.BackendService("home",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link])
+    health_checks=[default.id])
 static_bucket = gcp.storage.Bucket("staticBucket", location="US")
 static_backend_bucket = gcp.compute.BackendBucket("staticBackendBucket",
     bucket_name=static_bucket.name,
     enable_cdn=True)
 urlmap = gcp.compute.URLMap("urlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[
         {
             "hosts": ["mysite.com"],
@@ -129,29 +129,29 @@ urlmap = gcp.compute.URLMap("urlmap",
     path_matcher=[
         {
             "name": "mysite",
-            "defaultService": home.self_link,
+            "defaultService": home.id,
             "path_rule": [
                 {
                     "paths": ["/home"],
-                    "service": home.self_link,
+                    "service": home.id,
                 },
                 {
                     "paths": ["/login"],
-                    "service": login.self_link,
+                    "service": login.id,
                 },
                 {
                     "paths": ["/static"],
-                    "service": static_backend_bucket.self_link,
+                    "service": static_backend_bucket.id,
                 },
             ],
         },
         {
             "name": "otherpaths",
-            "defaultService": home.self_link,
+            "defaultService": home.id,
         },
     ],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -170,19 +170,19 @@ const home = new gcp.compute.BackendService("home", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
 });
 const urlmap = new gcp.compute.URLMap("urlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         route_rules: [{
             priority: 1,
             header_action: {
@@ -229,7 +229,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -246,18 +246,18 @@ home = gcp.compute.BackendService("home",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED")
 urlmap = gcp.compute.URLMap("urlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "route_rules": [{
             "priority": 1,
             "header_action": {
@@ -304,7 +304,7 @@ urlmap = gcp.compute.URLMap("urlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -323,19 +323,19 @@ const home = new gcp.compute.BackendService("home", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
 });
 const urlmap = new gcp.compute.URLMap("urlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         route_rules: [{
             priority: 1,
             match_rules: [{
@@ -353,7 +353,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -370,18 +370,18 @@ home = gcp.compute.BackendService("home",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED")
 urlmap = gcp.compute.URLMap("urlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "route_rules": [{
             "priority": 1,
             "match_rules": [{
@@ -399,7 +399,7 @@ urlmap = gcp.compute.URLMap("urlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -418,19 +418,19 @@ const home = new gcp.compute.BackendService("home", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
 });
 const urlmap = new gcp.compute.URLMap("urlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         path_rule: [{
             paths: ["/home"],
             route_action: {
@@ -458,7 +458,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
                     },
                 },
                 request_mirror_policy: {
-                    backendService: home.selfLink,
+                    backendService: home.id,
                 },
                 retry_policy: {
                     numRetries: 4,
@@ -479,7 +479,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
                     pathPrefixRewrite: "A replacement path",
                 },
                 weighted_backend_services: [{
-                    backendService: home.selfLink,
+                    backendService: home.id,
                     weight: 400,
                     header_action: {
                         requestHeadersToRemoves: ["RemoveMe"],
@@ -500,7 +500,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -517,18 +517,18 @@ home = gcp.compute.BackendService("home",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED")
 urlmap = gcp.compute.URLMap("urlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "path_rule": [{
             "paths": ["/home"],
             "route_action": {
@@ -556,7 +556,7 @@ urlmap = gcp.compute.URLMap("urlmap",
                     },
                 },
                 "request_mirror_policy": {
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                 },
                 "retry_policy": {
                     "numRetries": 4,
@@ -577,7 +577,7 @@ urlmap = gcp.compute.URLMap("urlmap",
                     "pathPrefixRewrite": "A replacement path",
                 },
                 "weighted_backend_services": [{
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                     "weight": 400,
                     "header_action": {
                         "requestHeadersToRemoves": ["RemoveMe"],
@@ -598,7 +598,7 @@ urlmap = gcp.compute.URLMap("urlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -617,19 +617,19 @@ const home = new gcp.compute.BackendService("home", {
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
 });
 const urlmap = new gcp.compute.URLMap("urlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         path_rule: [{
             paths: ["/home"],
             route_action: {
@@ -644,7 +644,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
                     disabled: false,
                 },
                 weighted_backend_services: [{
-                    backendService: home.selfLink,
+                    backendService: home.id,
                     weight: 400,
                     header_action: {
                         requestHeadersToRemoves: ["RemoveMe"],
@@ -665,7 +665,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -682,18 +682,18 @@ home = gcp.compute.BackendService("home",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_SELF_MANAGED")
 urlmap = gcp.compute.URLMap("urlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "path_rule": [{
             "paths": ["/home"],
             "route_action": {
@@ -708,7 +708,7 @@ urlmap = gcp.compute.URLMap("urlmap",
                     "disabled": False,
                 },
                 "weighted_backend_services": [{
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                     "weight": 400,
                     "header_action": {
                         "requestHeadersToRemoves": ["RemoveMe"],
@@ -729,7 +729,7 @@ urlmap = gcp.compute.URLMap("urlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])

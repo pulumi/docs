@@ -42,7 +42,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
     zone: "us-central1-a",
     description: "example gcp.compute.NodeGroup for the Google Provider",
     size: 1,
-    nodeTemplate: soletenant-tmpl.selfLink,
+    nodeTemplate: soletenant-tmpl.id,
 });
 ```
 ```python
@@ -57,7 +57,7 @@ nodes = gcp.compute.NodeGroup("nodes",
     zone="us-central1-a",
     description="example gcp.compute.NodeGroup for the Google Provider",
     size=1,
-    node_template=soletenant_tmpl.self_link)
+    node_template=soletenant_tmpl.id)
 ```
 ## Example Usage - Node Group Autoscaling Policy
 
@@ -77,7 +77,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
     zone: "us-central1-a",
     description: "example gcp.compute.NodeGroup for the Google Provider",
     size: 1,
-    nodeTemplate: soletenant-tmpl.selfLink,
+    nodeTemplate: soletenant-tmpl.id,
     autoscaling_policy: {
         mode: "ON",
         minNodes: 1,
@@ -97,7 +97,7 @@ nodes = gcp.compute.NodeGroup("nodes",
     zone="us-central1-a",
     description="example gcp.compute.NodeGroup for the Google Provider",
     size=1,
-    node_template=soletenant_tmpl.self_link,
+    node_template=soletenant_tmpl.id,
     autoscaling_policy={
         "mode": "ON",
         "minNodes": 1,

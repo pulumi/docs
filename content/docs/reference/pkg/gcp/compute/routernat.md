@@ -28,13 +28,13 @@ import * as gcp from "@pulumi/gcp";
 
 const net = new gcp.compute.Network("net", {});
 const subnet = new gcp.compute.Subnetwork("subnet", {
-    network: net.selfLink,
+    network: net.id,
     ipCidrRange: "10.0.0.0/16",
     region: "us-central1",
 });
 const router = new gcp.compute.Router("router", {
     region: subnet.region,
-    network: net.selfLink,
+    network: net.id,
     bgp: {
         asn: 64514,
     },
@@ -56,12 +56,12 @@ import pulumi_gcp as gcp
 
 net = gcp.compute.Network("net")
 subnet = gcp.compute.Subnetwork("subnet",
-    network=net.self_link,
+    network=net.id,
     ip_cidr_range="10.0.0.0/16",
     region="us-central1")
 router = gcp.compute.Router("router",
     region=subnet.region,
-    network=net.self_link,
+    network=net.id,
     bgp={
         "asn": 64514,
     })
@@ -84,13 +84,13 @@ import * as gcp from "@pulumi/gcp";
 
 const net = new gcp.compute.Network("net", {});
 const subnet = new gcp.compute.Subnetwork("subnet", {
-    network: net.selfLink,
+    network: net.id,
     ipCidrRange: "10.0.0.0/16",
     region: "us-central1",
 });
 const router = new gcp.compute.Router("router", {
     region: subnet.region,
-    network: net.selfLink,
+    network: net.id,
 });
 const address: gcp.compute.Address[];
 for (const range = {value: 0}; range.value < 2; range.value++) {
@@ -100,10 +100,10 @@ const natManual = new gcp.compute.RouterNat("natManual", {
     router: router.name,
     region: router.region,
     natIpAllocateOption: "MANUAL_ONLY",
-    natIps: address.map(__item => __item.selfLink),
+    natIps: address.map(__item => __item.id),
     sourceSubnetworkIpRangesToNat: "LIST_OF_SUBNETWORKS",
     subnetwork: [{
-        name: google_compute_subnetwork["default"].self_link,
+        name: google_compute_subnetwork["default"].id,
         sourceIpRangesToNats: ["ALL_IP_RANGES"],
     }],
 });
@@ -114,12 +114,12 @@ import pulumi_gcp as gcp
 
 net = gcp.compute.Network("net")
 subnet = gcp.compute.Subnetwork("subnet",
-    network=net.self_link,
+    network=net.id,
     ip_cidr_range="10.0.0.0/16",
     region="us-central1")
 router = gcp.compute.Router("router",
     region=subnet.region,
-    network=net.self_link)
+    network=net.id)
 address = []
 for range in [{"value": i} for i in range(0, 2)]:
     address.append(gcp.compute.Address(f"address-{range['value']}", region=subnet.region))
@@ -127,10 +127,10 @@ nat_manual = gcp.compute.RouterNat("natManual",
     router=router.name,
     region=router.region,
     nat_ip_allocate_option="MANUAL_ONLY",
-    nat_ips=[__item.self_link for __item in address],
+    nat_ips=[__item.id for __item in address],
     source_subnetwork_ip_ranges_to_nat="LIST_OF_SUBNETWORKS",
     subnetwork=[{
-        "name": google_compute_subnetwork["default"]["self_link"],
+        "name": google_compute_subnetwork["default"]["id"],
         "sourceIpRangesToNats": ["ALL_IP_RANGES"],
     }])
 ```

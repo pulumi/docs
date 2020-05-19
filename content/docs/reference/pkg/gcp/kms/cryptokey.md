@@ -37,7 +37,7 @@ import * as gcp from "@pulumi/gcp";
 
 const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
 const example-key = new gcp.kms.CryptoKey("example-key", {
-    keyRing: keyring.selfLink,
+    keyRing: keyring.id,
     rotationPeriod: "100000s",
 });
 ```
@@ -47,7 +47,7 @@ import pulumi_gcp as gcp
 
 keyring = gcp.kms.KeyRing("keyring", location="global")
 example_key = gcp.kms.CryptoKey("example-key",
-    key_ring=keyring.self_link,
+    key_ring=keyring.id,
     rotation_period="100000s")
 ```
 ## Example Usage - Kms Crypto Key Asymmetric Sign
@@ -59,7 +59,7 @@ import * as gcp from "@pulumi/gcp";
 
 const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
 const example-asymmetric-sign-key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
-    keyRing: keyring.selfLink,
+    keyRing: keyring.id,
     purpose: "ASYMMETRIC_SIGN",
     version_template: {
         algorithm: "EC_SIGN_P384_SHA384",
@@ -72,7 +72,7 @@ import pulumi_gcp as gcp
 
 keyring = gcp.kms.KeyRing("keyring", location="global")
 example_asymmetric_sign_key = gcp.kms.CryptoKey("example-asymmetric-sign-key",
-    key_ring=keyring.self_link,
+    key_ring=keyring.id,
     purpose="ASYMMETRIC_SIGN",
     version_template={
         "algorithm": "EC_SIGN_P384_SHA384",

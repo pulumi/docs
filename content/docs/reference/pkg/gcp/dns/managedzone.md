@@ -66,10 +66,10 @@ const private-zone = new gcp.dns.ManagedZone("private-zone", {
     private_visibility_config: {
         networks: [
             {
-                networkUrl: network-1.id,
+                networkUrl: network-1.selfLink,
             },
             {
-                networkUrl: network-2.id,
+                networkUrl: network-2.selfLink,
             },
         ],
     },
@@ -91,10 +91,10 @@ private_zone = gcp.dns.ManagedZone("private-zone",
     private_visibility_config={
         "networks": [
             {
-                "networkUrl": network_1.id,
+                "networkUrl": network_1.self_link,
             },
             {
-                "networkUrl": network_2.id,
+                "networkUrl": network_2.self_link,
             },
         ],
     })
@@ -118,10 +118,10 @@ const private-zone = new gcp.dns.ManagedZone("private-zone", {
     private_visibility_config: {
         networks: [
             {
-                networkUrl: network-1.id,
+                networkUrl: network-1.selfLink,
             },
             {
-                networkUrl: network-2.id,
+                networkUrl: network-2.selfLink,
             },
         ],
     },
@@ -153,10 +153,10 @@ private_zone = gcp.dns.ManagedZone("private-zone",
     private_visibility_config={
         "networks": [
             {
-                "networkUrl": network_1.id,
+                "networkUrl": network_1.self_link,
             },
             {
-                "networkUrl": network_2.id,
+                "networkUrl": network_2.self_link,
             },
         ],
     },
@@ -186,12 +186,12 @@ const peering-zone = new gcp.dns.ManagedZone("peering-zone", {
     visibility: "private",
     private_visibility_config: {
         networks: [{
-            networkUrl: network-source.id,
+            networkUrl: network-source.selfLink,
         }],
     },
     peering_config: {
         target_network: {
-            networkUrl: network-target.id,
+            networkUrl: network-target.selfLink,
         },
     },
 });
@@ -208,12 +208,12 @@ peering_zone = gcp.dns.ManagedZone("peering-zone",
     visibility="private",
     private_visibility_config={
         "networks": [{
-            "networkUrl": network_source.id,
+            "networkUrl": network_source.self_link,
         }],
     },
     peering_config={
         "target_network": {
-            "networkUrl": network_target.id,
+            "networkUrl": network_target.self_link,
         },
     })
 ```

@@ -52,7 +52,7 @@ const custom-test = new gcp.compute.Network("custom-test", {autoCreateSubnetwork
 const network-with-private-secondary-ip-ranges = new gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges", {
     ipCidrRange: "10.2.0.0/16",
     region: "us-central1",
-    network: custom-test.selfLink,
+    network: custom-test.id,
     secondary_ip_range: [{
         rangeName: "tf-test-secondary-range-update1",
         ipCidrRange: "192.168.10.0/24",
@@ -67,7 +67,7 @@ custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
 network_with_private_secondary_ip_ranges = gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges",
     ip_cidr_range="10.2.0.0/16",
     region="us-central1",
-    network=custom_test.self_link,
+    network=custom_test.id,
     secondary_ip_range=[{
         "rangeName": "tf-test-secondary-range-update1",
         "ipCidrRange": "192.168.10.0/24",
@@ -84,7 +84,7 @@ const custom-test = new gcp.compute.Network("custom-test", {autoCreateSubnetwork
 const subnet-with-logging = new gcp.compute.Subnetwork("subnet-with-logging", {
     ipCidrRange: "10.2.0.0/16",
     region: "us-central1",
-    network: custom-test.selfLink,
+    network: custom-test.id,
     log_config: {
         aggregationInterval: "INTERVAL_10_MIN",
         flowSampling: 0.5,
@@ -100,7 +100,7 @@ custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
 subnet_with_logging = gcp.compute.Subnetwork("subnet-with-logging",
     ip_cidr_range="10.2.0.0/16",
     region="us-central1",
-    network=custom_test.self_link,
+    network=custom_test.id,
     log_config={
         "aggregationInterval": "INTERVAL_10_MIN",
         "flowSampling": 0.5,
@@ -120,7 +120,7 @@ const network-for-l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
     region: "us-central1",
     purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
     role: "ACTIVE",
-    network: custom-test.selfLink,
+    network: custom-test.id,
 });
 ```
 ```python
@@ -133,7 +133,7 @@ network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
     region="us-central1",
     purpose="INTERNAL_HTTPS_LOAD_BALANCER",
     role="ACTIVE",
-    network=custom_test.self_link)
+    network=custom_test.id)
 ```
 
 
