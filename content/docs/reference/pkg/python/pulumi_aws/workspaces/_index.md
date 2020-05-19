@@ -390,6 +390,184 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="pulumi_aws.workspaces.Workspace">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">Workspace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_volume_encryption_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_volume_encryption_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_encryption_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a workspace in <a class="reference external" href="https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html">AWS Workspaces</a> Service</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> During deletion of an <code class="docutils literal notranslate"><span class="pre">workspaces.Workspace</span></code> resource, the service role <code class="docutils literal notranslate"><span class="pre">workspaces_DefaultRole</span></code> must be attached to the
+policy <code class="docutils literal notranslate"><span class="pre">arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess</span></code>, or it will leak the ENI that the Workspaces service creates for the Workspace.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the bundle for the WorkSpace.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the directory for the WorkSpace.</p></li>
+<li><p><strong>root_volume_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the data stored on the root volume is encrypted.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The tags for the WorkSpace.</p></li>
+<li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.</p></li>
+<li><p><strong>user_volume_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the data stored on the user volume is encrypted.</p></li>
+<li><p><strong>volume_encryption_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.</p></li>
+<li><p><strong>workspace_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The WorkSpace properties.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>workspace_properties</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">computeTypeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The compute type. For more information, see <a class="reference external" href="http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles">Amazon WorkSpaces Bundles</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">PERFORMANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">POWER</span></code>, <code class="docutils literal notranslate"><span class="pre">GRAPHICS</span></code>, <code class="docutils literal notranslate"><span class="pre">POWERPRO</span></code> and <code class="docutils literal notranslate"><span class="pre">GRAPHICSPRO</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the root volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the root volume. The running mode. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace Running Mode</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">AUTO_STOP</span></code> and <code class="docutils literal notranslate"><span class="pre">ALWAYS_ON</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningModeAutoStopTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the user storage.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.bundle_id">
+<code class="sig-name descname">bundle_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.bundle_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the bundle for the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.computer_name">
+<code class="sig-name descname">computer_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.computer_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the WorkSpace, as seen by the operating system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.directory_id">
+<code class="sig-name descname">directory_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.directory_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the directory for the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.ip_address">
+<code class="sig-name descname">ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP address of the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.root_volume_encryption_enabled">
+<code class="sig-name descname">root_volume_encryption_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.root_volume_encryption_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the data stored on the root volume is encrypted.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operational state of the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tags for the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.user_name">
+<code class="sig-name descname">user_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.user_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.user_volume_encryption_enabled">
+<code class="sig-name descname">user_volume_encryption_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.user_volume_encryption_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the data stored on the user volume is encrypted.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.volume_encryption_key">
+<code class="sig-name descname">volume_encryption_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.volume_encryption_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Workspace.workspace_properties">
+<code class="sig-name descname">workspace_properties</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.workspace_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>The WorkSpace properties.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">computeTypeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The compute type. For more information, see <a class="reference external" href="http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles">Amazon WorkSpaces Bundles</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">PERFORMANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">POWER</span></code>, <code class="docutils literal notranslate"><span class="pre">GRAPHICS</span></code>, <code class="docutils literal notranslate"><span class="pre">POWERPRO</span></code> and <code class="docutils literal notranslate"><span class="pre">GRAPHICSPRO</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the root volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The size of the root volume. The running mode. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace Running Mode</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">AUTO_STOP</span></code> and <code class="docutils literal notranslate"><span class="pre">ALWAYS_ON</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningModeAutoStopTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the user storage.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.workspaces.Workspace.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">computer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_volume_encryption_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_volume_encryption_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_encryption_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Workspace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the bundle for the WorkSpace.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the WorkSpace, as seen by the operating system.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the directory for the WorkSpace.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the WorkSpace.</p></li>
+<li><p><strong>root_volume_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the data stored on the root volume is encrypted.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operational state of the WorkSpace.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The tags for the WorkSpace.</p></li>
+<li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.</p></li>
+<li><p><strong>user_volume_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the data stored on the user volume is encrypted.</p></li>
+<li><p><strong>volume_encryption_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.</p></li>
+<li><p><strong>workspace_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The WorkSpace properties.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>workspace_properties</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">computeTypeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The compute type. For more information, see <a class="reference external" href="http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles">Amazon WorkSpaces Bundles</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">PERFORMANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">POWER</span></code>, <code class="docutils literal notranslate"><span class="pre">GRAPHICS</span></code>, <code class="docutils literal notranslate"><span class="pre">POWERPRO</span></code> and <code class="docutils literal notranslate"><span class="pre">GRAPHICSPRO</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the root volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the root volume. The running mode. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace Running Mode</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">AUTO_STOP</span></code> and <code class="docutils literal notranslate"><span class="pre">ALWAYS_ON</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runningModeAutoStopTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userVolumeSizeGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the user storage.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.workspaces.Workspace.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.workspaces.Workspace.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Workspace.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt id="pulumi_aws.workspaces.get_bundle">
 <code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">get_bundle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>

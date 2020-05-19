@@ -62,6 +62,13 @@ test_data_source = aws.appsync.DataSource("testDataSource",
 # UNIT type resolver (default)
 test_resolver = aws.appsync.Resolver("testResolver",
     api_id=test_graph_ql_api.id,
+    caching_config={
+        "cachingKeys": [
+            "$$context.identity.sub",
+            "$$context.arguments.id",
+        ],
+        "ttl": 60,
+    },
     data_source=test_data_source.name,
     field="singlePost",
     request_template="""{
@@ -136,6 +143,13 @@ const testDataSource = new aws.appsync.DataSource("test", {
 // UNIT type resolver (default)
 const testResolver = new aws.appsync.Resolver("test", {
     apiId: testGraphQLApi.id,
+    cachingConfig: {
+        cachingKeys: [
+            "$context.identity.sub",
+            "$context.arguments.id",
+        ],
+        ttl: 60,
+    },
     dataSource: testDataSource.name,
     field: "singlePost",
     requestTemplate: `{
@@ -186,7 +200,7 @@ const mutationPipelineTest = new aws.appsync.Resolver("Mutation_pipelineTest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#Resolver">Resolver</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>data_source=None<span class="p">, </span>field=None<span class="p">, </span>kind=None<span class="p">, </span>pipeline_config=None<span class="p">, </span>request_template=None<span class="p">, </span>response_template=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#Resolver">Resolver</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>caching_config=None<span class="p">, </span>data_source=None<span class="p">, </span>field=None<span class="p">, </span>kind=None<span class="p">, </span>pipeline_config=None<span class="p">, </span>request_template=None<span class="p">, </span>response_template=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -405,6 +419,15 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -427,7 +450,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
 </dl>
@@ -484,6 +507,15 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -506,7 +538,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
 </dl>
@@ -563,6 +595,15 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -585,7 +626,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
 </dl>
@@ -642,6 +683,15 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>caching_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Dict[Resolver<wbr>Caching<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>data_<wbr>source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -664,7 +714,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Dict[Resolver<wbr>Pipeline<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
 </dl>
@@ -793,7 +843,7 @@ Get an existing Resolver resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>arn=None<span class="p">, </span>data_source=None<span class="p">, </span>field=None<span class="p">, </span>kind=None<span class="p">, </span>pipeline_config=None<span class="p">, </span>request_template=None<span class="p">, </span>response_template=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>arn=None<span class="p">, </span>caching_config=None<span class="p">, </span>data_source=None<span class="p">, </span>field=None<span class="p">, </span>kind=None<span class="p">, </span>pipeline_config=None<span class="p">, </span>request_template=None<span class="p">, </span>response_template=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -927,6 +977,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -958,7 +1017,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,6 +1074,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1046,7 +1114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1103,6 +1171,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>caching<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>data<wbr>Source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1134,7 +1211,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1191,6 +1268,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>caching_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Dict[Resolver<wbr>Caching<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The CachingConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>data_<wbr>source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1222,7 +1308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverpipelineconfig">Dict[Resolver<wbr>Pipeline<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The PipelineConfig. A `pipeline_config` block is documented below.
+    <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1265,6 +1351,124 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverCachingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverCachingConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#ResolverCachingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#ResolverCachingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.ResolverCachingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.ResolverCachingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Caching<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of caching key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The TTL in seconds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Caching<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of caching key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The TTL in seconds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>caching<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of caching key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The TTL in seconds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>caching<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of caching key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The TTL in seconds.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</h4>

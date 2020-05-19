@@ -3840,7 +3840,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
 
 </dl>
@@ -3856,7 +3856,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
 
 </dl>
@@ -3872,7 +3872,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
 
 </dl>
@@ -3888,7 +3888,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
 
 </dl>
@@ -3922,7 +3922,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
+    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3931,7 +3931,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
 
 </dl>
@@ -3947,7 +3947,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
+    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3956,7 +3956,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
 
 </dl>
@@ -3972,7 +3972,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
+    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3981,7 +3981,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
 
 </dl>
@@ -3997,7 +3997,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
+    <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4006,7 +4006,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days an object is noncurrent object versions expire.
+    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
 
 </dl>
