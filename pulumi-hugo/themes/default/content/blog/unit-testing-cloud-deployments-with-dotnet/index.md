@@ -2,7 +2,7 @@
 title: "Unit Testing Cloud Deployments with .NET"
 date: 2020-05-18
 meta_desc: "Developing infrastructure programs in C# and F# with unit tests, TDD, and mocks"
-#meta_image: spara-magic.png
+meta_image: dotnet-testing.png
 authors:
     - mikhail-shilkov
 tags:
