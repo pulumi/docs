@@ -36,7 +36,7 @@ const default-endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
 });
 const default = new gcp.compute.Network("default", {autoCreateSubnetworks: false});
 const group = new gcp.compute.GlobalNetworkEndpointGroup("group", {
-    network: default.selfLink,
+    network: default.id,
     defaultPort: "90",
 });
 ```
@@ -51,7 +51,7 @@ default_endpoint = gcp.compute.GlobalNetworkEndpoint("default-endpoint",
     ip_address=google_compute_instance["endpoint-instance"]["network_interface"][0]["network_ip"])
 default = gcp.compute.Network("default", auto_create_subnetworks=False)
 group = gcp.compute.GlobalNetworkEndpointGroup("group",
-    network=default.self_link,
+    network=default.id,
     default_port="90")
 ```
 

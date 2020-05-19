@@ -48,16 +48,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
-const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.selfLink});
-const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.selfLink});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
+const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
 ```
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 key_ring = gcp.kms.KeyRing("keyRing", location="global")
-crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.self_link)
-example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.self_link)
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
+example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
 ```
 ## Example Usage - Pubsub Topic Geo Restricted
 

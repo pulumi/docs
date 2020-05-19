@@ -265,12 +265,9 @@ The FolderSink resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -338,12 +335,9 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -411,12 +405,9 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -484,12 +475,9 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -803,12 +791,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -886,12 +871,9 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -969,12 +951,9 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -1052,12 +1031,9 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
+"storage.googleapis.com/[GCS_BUCKET]"
+"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 

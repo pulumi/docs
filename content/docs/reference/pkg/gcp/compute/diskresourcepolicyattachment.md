@@ -13,11 +13,12 @@ meta_desc: "Explore the DiskResourcePolicyAttachment resource of the compute mod
 Adds existing resource policies to a disk. You can only add one policy
 which will be applied to this disk for scheduling snapshot creation.
 
-> **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`).
+> **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`). For regional disks, please refer to the `gcp.compute.RegionDiskResourcePolicyAttachment` resource.
 
 
+## Example Usage 
 
-## Example Usage - Disk Resource Policy Attachment Basic
+### Disk Resource Policy Attachment Basic
 
 
 ```typescript

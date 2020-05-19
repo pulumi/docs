@@ -47,7 +47,7 @@ const target-vm = new gcp.compute.Instance("target-vm", {
         network: "default",
     }],
 });
-const default = new gcp.compute.TargetInstance("default", {instance: target-vm.selfLink});
+const default = new gcp.compute.TargetInstance("default", {instance: target-vm.id});
 ```
 ```python
 import pulumi
@@ -66,7 +66,7 @@ target_vm = gcp.compute.Instance("target-vm",
     network_interface=[{
         "network": "default",
     }])
-default = gcp.compute.TargetInstance("default", instance=target_vm.self_link)
+default = gcp.compute.TargetInstance("default", instance=target_vm.id)
 ```
 
 

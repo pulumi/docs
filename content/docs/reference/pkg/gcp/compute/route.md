@@ -77,7 +77,7 @@ const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubn
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.0.1.0/24",
     region: "us-central1",
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
 });
 const hc = new gcp.compute.HealthCheck("hc", {
     checkIntervalSec: 1,
@@ -88,12 +88,12 @@ const hc = new gcp.compute.HealthCheck("hc", {
 });
 const backend = new gcp.compute.RegionBackendService("backend", {
     region: "us-central1",
-    healthChecks: [hc.selfLink],
+    healthChecks: [hc.id],
 });
 const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
     region: "us-central1",
     loadBalancingScheme: "INTERNAL",
-    backendService: backend.selfLink,
+    backendService: backend.id,
     allPorts: true,
     network: defaultNetwork.name,
     subnetwork: defaultSubnetwork.name,
@@ -101,7 +101,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
 const route-ilb = new gcp.compute.Route("route-ilb", {
     destRange: "0.0.0.0/0",
     network: defaultNetwork.name,
-    nextHopIlb: defaultForwardingRule.selfLink,
+    nextHopIlb: defaultForwardingRule.id,
     priority: 2000,
 });
 ```
@@ -113,7 +113,7 @@ default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.0.1.0/24",
     region="us-central1",
-    network=default_network.self_link)
+    network=default_network.id)
 hc = gcp.compute.HealthCheck("hc",
     check_interval_sec=1,
     timeout_sec=1,
@@ -122,18 +122,18 @@ hc = gcp.compute.HealthCheck("hc",
     })
 backend = gcp.compute.RegionBackendService("backend",
     region="us-central1",
-    health_checks=[hc.self_link])
+    health_checks=[hc.id])
 default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     region="us-central1",
     load_balancing_scheme="INTERNAL",
-    backend_service=backend.self_link,
+    backend_service=backend.id,
     all_ports=True,
     network=default_network.name,
     subnetwork=default_subnetwork.name)
 route_ilb = gcp.compute.Route("route-ilb",
     dest_range="0.0.0.0/0",
     network=default_network.name,
-    next_hop_ilb=default_forwarding_rule.self_link,
+    next_hop_ilb=default_forwarding_rule.id,
     priority=2000)
 ```
 

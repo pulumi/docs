@@ -32,8 +32,8 @@ import * as gcp from "@pulumi/gcp";
 const networkPrimary = new gcp.compute.Network("networkPrimary", {autoCreateSubnetworks: "false"});
 const networkSecondary = new gcp.compute.Network("networkSecondary", {autoCreateSubnetworks: "false"});
 const peeringPrimary = new gcp.compute.NetworkPeering("peeringPrimary", {
-    network: networkPrimary.selfLink,
-    peerNetwork: networkSecondary.selfLink,
+    network: networkPrimary.id,
+    peerNetwork: networkSecondary.id,
     importCustomRoutes: true,
     exportCustomRoutes: true,
 });
@@ -44,8 +44,8 @@ const peeringPrimaryRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peering
     exportCustomRoutes: true,
 });
 const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
-    network: networkSecondary.selfLink,
-    peerNetwork: networkPrimary.selfLink,
+    network: networkSecondary.id,
+    peerNetwork: networkPrimary.id,
 });
 ```
 ```python
@@ -55,8 +55,8 @@ import pulumi_gcp as gcp
 network_primary = gcp.compute.Network("networkPrimary", auto_create_subnetworks="false")
 network_secondary = gcp.compute.Network("networkSecondary", auto_create_subnetworks="false")
 peering_primary = gcp.compute.NetworkPeering("peeringPrimary",
-    network=network_primary.self_link,
-    peer_network=network_secondary.self_link,
+    network=network_primary.id,
+    peer_network=network_secondary.id,
     import_custom_routes=True,
     export_custom_routes=True)
 peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes",
@@ -65,8 +65,8 @@ peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryR
     import_custom_routes=True,
     export_custom_routes=True)
 peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
-    network=network_secondary.self_link,
-    peer_network=network_primary.self_link)
+    network=network_secondary.id,
+    peer_network=network_primary.id)
 ```
 
 

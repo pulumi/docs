@@ -39,23 +39,60 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_gcp.tpu.Node">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.tpu.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accelerator_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tensorflow_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.tpu.Node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Node resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] accelerator_type: The type of hardware accelerators associated with this node.
-:param pulumi.Input[str] cidr_block: The CIDR block that the TPU node will use when selecting an IP</p>
-<blockquote>
-<div><p>address. This CIDR block must be a /29 block; the Compute Engine
+<dd><p>A Cloud TPU instance.</p>
+<p>To get more information about Node, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/tpu/docs/reference/rest/">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/tpu/docs/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+<span class="n">tpu</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;tpu&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_type</span><span class="o">=</span><span class="s2">&quot;v3-8&quot;</span><span class="p">,</span>
+    <span class="n">tensorflow_version</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/29&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+<span class="n">tpu</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;tpu&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_type</span><span class="o">=</span><span class="s2">&quot;v3-8&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.3.0.0/29&quot;</span><span class="p">,</span>
+    <span class="n">tensorflow_version</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Google Provider test TPU&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">scheduling_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accelerator_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of hardware accelerators associated with this node.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
 networks API forbids a smaller block, and using a larger block would
 be wasteful (a node can only consume one IP address).
 Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user’s provided network, or the provided network
-is peered with another network that is using that CIDR block.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+is peered with another network that is using that CIDR block.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user-supplied description of the TPU. Maximum of 512 characters.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The immutable name of the TPU.</p></li>

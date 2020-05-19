@@ -339,6 +339,243 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.diagflow.EntityType">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.diagflow.</code><code class="sig-name descname">EntityType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_fuzzy_extraction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an entity type. Entity types serve as a tool for extracting parameter values from natural language queries.</p>
+<p>To get more information about EntityType, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.entityTypes">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic_agent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">diagflow</span><span class="o">.</span><span class="n">Agent</span><span class="p">(</span><span class="s2">&quot;basicAgent&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>
+    <span class="n">default_language_code</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
+<span class="n">basic_entity_type</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">diagflow</span><span class="o">.</span><span class="n">EntityType</span><span class="p">(</span><span class="s2">&quot;basicEntityType&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;KIND_MAP&quot;</span><span class="p">,</span>
+    <span class="n">entities</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;synonyms&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;synonym1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;synonym2&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;synonyms&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;synonym3&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;synonym4&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this entity type to be displayed on the console.</p></li>
+<li><p><strong>enable_fuzzy_extraction</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables fuzzy entity extraction during classification.</p></li>
+<li><p><strong>entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of entity entries associated with the entity type.  Structure is documented below.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the kind of entity type.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">KIND_MAP</span><span class="p">:</span> <span class="n">Map</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">allow</span> <span class="n">mapping</span> <span class="n">of</span> <span class="n">a</span> <span class="n">group</span> <span class="n">of</span> <span class="n">synonyms</span> <span class="n">to</span> <span class="n">a</span> <span class="n">reference</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">KIND_LIST</span><span class="p">:</span> <span class="n">List</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">contain</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">entries</span> <span class="n">that</span> <span class="n">do</span> <span class="ow">not</span> <span class="nb">map</span> <span class="n">to</span> <span class="n">reference</span> <span class="n">values</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="nb">list</span> <span class="n">entity</span>
+<span class="n">types</span> <span class="n">can</span> <span class="n">contain</span> <span class="n">references</span> <span class="n">to</span> <span class="n">other</span> <span class="n">entity</span> <span class="n">types</span> <span class="p">(</span><span class="k">with</span> <span class="ow">or</span> <span class="n">without</span> <span class="n">aliases</span><span class="p">)</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">KIND_REGEXP</span><span class="p">:</span> <span class="n">Regexp</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="ow">in</span> <span class="n">entries</span> <span class="n">values</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd>
+</dl>
+<p>The <strong>entities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">synonyms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+could be green onions.
+For KIND_LIST entity types:</p>
+<ul>
+<li><p>This collection must contain exactly one synonym equal to value.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+could be scallions.
+For KIND_MAP entity types:</p>
+<ul>
+<li><p>A reference value to be used in place of synonyms.
+For KIND_LIST entity types:</p></li>
+<li><p>A string that can contain references to other entity types (with or without aliases).</p></li>
+</ul>
+</li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.display_name">
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of this entity type to be displayed on the console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.enable_fuzzy_extraction">
+<code class="sig-name descname">enable_fuzzy_extraction</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.enable_fuzzy_extraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables fuzzy entity extraction during classification.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.entities">
+<code class="sig-name descname">entities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection of entity entries associated with the entity type.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">synonyms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+could be green onions.
+For KIND_LIST entity types:</p>
+<ul>
+<li><p>This collection must contain exactly one synonym equal to value.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+could be scallions.
+For KIND_MAP entity types:</p>
+<ul>
+<li><p>A reference value to be used in place of synonyms.
+For KIND_LIST entity types:</p></li>
+<li><p>A string that can contain references to other entity types (with or without aliases).</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.kind">
+<code class="sig-name descname">kind</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates the kind of entity type.</p>
+<ul class="simple">
+<li><p>KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.</p></li>
+<li><p>KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+types can contain references to other entity types (with or without aliases).</p></li>
+<li><p>KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique identifier of the entity type. Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/entityTypes/<span class="raw-html-m2r"><Entity type ID></span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.diagflow.EntityType.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.diagflow.EntityType.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_fuzzy_extraction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EntityType resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this entity type to be displayed on the console.</p></li>
+<li><p><strong>enable_fuzzy_extraction</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables fuzzy entity extraction during classification.</p></li>
+<li><p><strong>entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of entity entries associated with the entity type.  Structure is documented below.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the kind of entity type.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">KIND_MAP</span><span class="p">:</span> <span class="n">Map</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">allow</span> <span class="n">mapping</span> <span class="n">of</span> <span class="n">a</span> <span class="n">group</span> <span class="n">of</span> <span class="n">synonyms</span> <span class="n">to</span> <span class="n">a</span> <span class="n">reference</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">KIND_LIST</span><span class="p">:</span> <span class="n">List</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">contain</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">entries</span> <span class="n">that</span> <span class="n">do</span> <span class="ow">not</span> <span class="nb">map</span> <span class="n">to</span> <span class="n">reference</span> <span class="n">values</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="nb">list</span> <span class="n">entity</span>
+<span class="n">types</span> <span class="n">can</span> <span class="n">contain</span> <span class="n">references</span> <span class="n">to</span> <span class="n">other</span> <span class="n">entity</span> <span class="n">types</span> <span class="p">(</span><span class="k">with</span> <span class="ow">or</span> <span class="n">without</span> <span class="n">aliases</span><span class="p">)</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">KIND_REGEXP</span><span class="p">:</span> <span class="n">Regexp</span> <span class="n">entity</span> <span class="n">types</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="ow">in</span> <span class="n">entries</span> <span class="n">values</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the entity type. Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/entityTypes/<span class="raw-html-m2r"><Entity type ID></span>.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>entities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">synonyms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+could be green onions.
+For KIND_LIST entity types:</p>
+<ul>
+<li><p>This collection must contain exactly one synonym equal to value.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+could be scallions.
+For KIND_MAP entity types:</p>
+<ul>
+<li><p>A reference value to be used in place of synonyms.
+For KIND_LIST entity types:</p></li>
+<li><p>A string that can contain references to other entity types (with or without aliases).</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.diagflow.EntityType.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.diagflow.EntityType.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.EntityType.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.diagflow.Intent">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.diagflow.</code><code class="sig-name descname">Intent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_response_platforms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_context_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_fallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ml_disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_followup_intent_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_contexts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.Intent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action

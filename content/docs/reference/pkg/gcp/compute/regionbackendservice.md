@@ -36,7 +36,7 @@ const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
 });
 const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
     region: "us-central1",
-    healthChecks: [defaultHealthCheck.selfLink],
+    healthChecks: [defaultHealthCheck.id],
     connectionDrainingTimeoutSec: 10,
     sessionAffinity: "CLIENT_IP",
 });
@@ -53,7 +53,7 @@ default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
     })
 default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
     region="us-central1",
-    health_checks=[default_health_check.self_link],
+    health_checks=[default_health_check.id],
     connection_draining_timeout_sec=10,
     session_affinity="CLIENT_IP")
 ```
@@ -64,17 +64,15 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const healthCheck = new gcp.compute.HealthCheck("health_check", {
-    httpHealthCheck: {
-        port: 80,
-    },
-});
-const defaultRegionBackendService = new gcp.compute.RegionBackendService("default", {
-    healthChecks: healthCheck.selfLink,
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.RegionBackendService("default", {
+    region: "us-central1",
+    healthChecks: [healthCheck.id],
+    protocol: "HTTP",
     loadBalancingScheme: "INTERNAL_MANAGED",
     localityLbPolicy: "ROUND_ROBIN",
-    protocol: "HTTP",
-    region: "us-central1",
 });
 ```
 ```python
@@ -85,11 +83,11 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.RegionBackendService("default",
-    health_checks=health_check.self_link,
-    load_balancing_scheme="INTERNAL_MANAGED",
-    locality_lb_policy="ROUND_ROBIN",
+    region="us-central1",
+    health_checks=[health_check.id],
     protocol="HTTP",
-    region="us-central1")
+    load_balancing_scheme="INTERNAL_MANAGED",
+    locality_lb_policy="ROUND_ROBIN")
 ```
 ## Example Usage - Region Backend Service Ilb Ring Hash
 
@@ -98,33 +96,31 @@ default = gcp.compute.RegionBackendService("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const healthCheck = new gcp.compute.HealthCheck("health_check", {
-    httpHealthCheck: {
-        port: 80,
-    },
-});
-const defaultRegionBackendService = new gcp.compute.RegionBackendService("default", {
-    circuitBreakers: {
-        maxConnections: 10,
-    },
-    consistentHash: {
-        httpCookie: {
-            name: "mycookie",
-            ttl: {
-                nanos: 1111,
-                seconds: 11,
-            },
-        },
-    },
-    healthChecks: healthCheck.selfLink,
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.RegionBackendService("default", {
+    region: "us-central1",
+    healthChecks: [healthCheck.id],
     loadBalancingScheme: "INTERNAL_MANAGED",
     localityLbPolicy: "RING_HASH",
-    outlierDetection: {
+    sessionAffinity: "HTTP_COOKIE",
+    protocol: "HTTP",
+    circuit_breakers: {
+        maxConnections: 10,
+    },
+    consistent_hash: {
+        http_cookie: {
+            ttl: {
+                seconds: 11,
+                nanos: 1111,
+            },
+            name: "mycookie",
+        },
+    },
+    outlier_detection: {
         consecutiveErrors: 2,
     },
-    protocol: "HTTP",
-    region: "us-central1",
-    sessionAffinity: "HTTP_COOKIE",
 });
 ```
 ```python
@@ -135,27 +131,27 @@ health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
     "port": 80,
 })
 default = gcp.compute.RegionBackendService("default",
+    region="us-central1",
+    health_checks=[health_check.id],
+    load_balancing_scheme="INTERNAL_MANAGED",
+    locality_lb_policy="RING_HASH",
+    session_affinity="HTTP_COOKIE",
+    protocol="HTTP",
     circuit_breakers={
         "maxConnections": 10,
     },
     consistent_hash={
-        "httpCookie": {
-            "name": "mycookie",
+        "http_cookie": {
             "ttl": {
-                "nanos": 1111,
                 "seconds": 11,
+                "nanos": 1111,
             },
+            "name": "mycookie",
         },
     },
-    health_checks=health_check.self_link,
-    load_balancing_scheme="INTERNAL_MANAGED",
-    locality_lb_policy="RING_HASH",
     outlier_detection={
         "consecutiveErrors": 2,
-    },
-    protocol="HTTP",
-    region="us-central1",
-    session_affinity="HTTP_COOKIE")
+    })
 ```
 ## Example Usage - Region Backend Service Balancing Mode
 
@@ -175,13 +171,13 @@ const defaultNetwork = new gcp.compute.Network("defaultNetwork", {
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.1.2.0/24",
     region: "us-central1",
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
 });
 const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
     machineType: "n1-standard-1",
     network_interface: [{
-        network: defaultNetwork.selfLink,
-        subnetwork: defaultSubnetwork.selfLink,
+        network: defaultNetwork.id,
+        subnetwork: defaultSubnetwork.id,
     }],
     disk: [{
         sourceImage: debianImage.then(debianImage => debianImage.selfLink),
@@ -218,7 +214,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     region: "us-central1",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [defaultRegionHealthCheck.selfLink],
+    healthChecks: [defaultRegionHealthCheck.id],
 });
 ```
 ```python
@@ -233,12 +229,12 @@ default_network = gcp.compute.Network("defaultNetwork",
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.1.2.0/24",
     region="us-central1",
-    network=default_network.self_link)
+    network=default_network.id)
 instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
     machine_type="n1-standard-1",
     network_interface=[{
-        "network": default_network.self_link,
-        "subnetwork": default_subnetwork.self_link,
+        "network": default_network.id,
+        "subnetwork": default_subnetwork.id,
     }],
     disk=[{
         "sourceImage": debian_image.self_link,
@@ -272,7 +268,7 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
     region="us-central1",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default_region_health_check.self_link])
+    health_checks=[default_region_health_check.id])
 ```
 
 
@@ -286,7 +282,7 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionBackendService">RegionBackendService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionBackendService">RegionBackendService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,6 +625,21 @@ to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structu
 
     <dt class="property-optional"
             title="Optional">
+        <span>Port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -852,6 +863,21 @@ This field can only be specified when the load balancing scheme is set to INTERN
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1083,6 +1109,21 @@ to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structu
 
     <dt class="property-optional"
             title="Optional">
+        <span>port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1306,6 +1347,21 @@ This field can only be specified when the load balancing scheme is set to INTERN
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1557,7 +1613,7 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>fingerprint=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>fingerprint=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1860,6 +1916,21 @@ to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structu
 
     <dt class="property-optional"
             title="Optional">
+        <span>Port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2110,6 +2181,21 @@ This field can only be specified when the load balancing scheme is set to INTERN
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2368,6 +2454,21 @@ to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structu
 
     <dt class="property-optional"
             title="Optional">
+        <span>port<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2618,6 +2719,21 @@ This field can only be specified when the load balancing scheme is set to INTERN
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of "http" if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

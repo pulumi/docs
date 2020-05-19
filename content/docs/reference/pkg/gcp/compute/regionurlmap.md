@@ -33,38 +33,38 @@ const login = new gcp.compute.RegionBackendService("login", {
     region: "us-central1",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
 });
 const home = new gcp.compute.RegionBackendService("home", {
     region: "us-central1",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
 });
 const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     region: "us-central1",
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         path_rule: [
             {
                 paths: ["/home"],
-                service: home.selfLink,
+                service: home.id,
             },
             {
                 paths: ["/login"],
-                service: login.selfLink,
+                service: login.id,
             },
         ],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -86,36 +86,36 @@ login = gcp.compute.RegionBackendService("login",
     region="us-central1",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link])
+    health_checks=[default.id])
 home = gcp.compute.RegionBackendService("home",
     region="us-central1",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link])
+    health_checks=[default.id])
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     region="us-central1",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "path_rule": [
             {
                 "paths": ["/home"],
-                "service": home.self_link,
+                "service": home.id,
             },
             {
                 "paths": ["/login"],
-                "service": login.self_link,
+                "service": login.id,
             },
         ],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -133,19 +133,19 @@ const default = new gcp.compute.RegionHealthCheck("default", {http_health_check:
 const home = new gcp.compute.RegionBackendService("home", {
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_MANAGED",
 });
 const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         path_rule: [{
             paths: ["/home"],
             route_action: {
@@ -172,7 +172,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
                     },
                 },
                 request_mirror_policy: {
-                    backendService: home.selfLink,
+                    backendService: home.id,
                 },
                 retry_policy: {
                     numRetries: 4,
@@ -193,7 +193,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
                     pathPrefixRewrite: "A replacement path",
                 },
                 weighted_backend_services: [{
-                    backendService: home.selfLink,
+                    backendService: home.id,
                     weight: 400,
                     header_action: {
                         requestHeadersToRemoves: ["RemoveMe"],
@@ -214,7 +214,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -230,18 +230,18 @@ default = gcp.compute.RegionHealthCheck("default", http_health_check={
 home = gcp.compute.RegionBackendService("home",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_MANAGED")
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "path_rule": [{
             "paths": ["/home"],
             "route_action": {
@@ -268,7 +268,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
                     },
                 },
                 "request_mirror_policy": {
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                 },
                 "retry_policy": {
                     "numRetries": 4,
@@ -289,7 +289,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
                     "pathPrefixRewrite": "A replacement path",
                 },
                 "weighted_backend_services": [{
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                     "weight": 400,
                     "header_action": {
                         "requestHeadersToRemoves": ["RemoveMe"],
@@ -310,7 +310,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -328,19 +328,19 @@ const default = new gcp.compute.RegionHealthCheck("default", {http_health_check:
 const home = new gcp.compute.RegionBackendService("home", {
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_MANAGED",
 });
 const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         path_rule: [{
             paths: ["/home"],
             route_action: {
@@ -363,7 +363,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
                     pathPrefixRewrite: "A replacement path",
                 },
                 weighted_backend_services: [{
-                    backendService: home.selfLink,
+                    backendService: home.id,
                     weight: 400,
                     header_action: {
                         response_headers_to_add: [{
@@ -377,7 +377,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -393,18 +393,18 @@ default = gcp.compute.RegionHealthCheck("default", http_health_check={
 home = gcp.compute.RegionBackendService("home",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_MANAGED")
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "path_rule": [{
             "paths": ["/home"],
             "route_action": {
@@ -427,7 +427,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
                     "pathPrefixRewrite": "A replacement path",
                 },
                 "weighted_backend_services": [{
-                    "backendService": home.self_link,
+                    "backendService": home.id,
                     "weight": 400,
                     "header_action": {
                         "response_headers_to_add": [{
@@ -441,7 +441,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -459,19 +459,19 @@ const default = new gcp.compute.RegionHealthCheck("default", {http_health_check:
 const home = new gcp.compute.RegionBackendService("home", {
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_MANAGED",
 });
 const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         route_rules: [{
             priority: 1,
             header_action: {
@@ -518,7 +518,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -534,18 +534,18 @@ default = gcp.compute.RegionHealthCheck("default", http_health_check={
 home = gcp.compute.RegionBackendService("home",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_MANAGED")
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "route_rules": [{
             "priority": 1,
             "header_action": {
@@ -592,7 +592,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])
@@ -610,22 +610,22 @@ const default = new gcp.compute.RegionHealthCheck("default", {http_health_check:
 const home = new gcp.compute.RegionBackendService("home", {
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
     loadBalancingScheme: "INTERNAL_MANAGED",
 });
 const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     description: "a description",
-    defaultService: home.selfLink,
+    defaultService: home.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: home.selfLink,
+        defaultService: home.id,
         route_rules: [{
             priority: 1,
-            service: home.selfLink,
+            service: home.id,
             header_action: {
                 requestHeadersToRemoves: ["RemoveMe2"],
             },
@@ -644,7 +644,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         }],
     }],
     test: [{
-        service: home.selfLink,
+        service: home.id,
         host: "hi.com",
         path: "/home",
     }],
@@ -660,21 +660,21 @@ default = gcp.compute.RegionHealthCheck("default", http_health_check={
 home = gcp.compute.RegionBackendService("home",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default.self_link],
+    health_checks=[default.id],
     load_balancing_scheme="INTERNAL_MANAGED")
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     description="a description",
-    default_service=home.self_link,
+    default_service=home.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": home.self_link,
+        "defaultService": home.id,
         "route_rules": [{
             "priority": 1,
-            "service": home.self_link,
+            "service": home.id,
             "header_action": {
                 "requestHeadersToRemoves": ["RemoveMe2"],
             },
@@ -693,7 +693,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
         }],
     }],
     test=[{
-        "service": home.self_link,
+        "service": home.id,
         "host": "hi.com",
         "path": "/home",
     }])

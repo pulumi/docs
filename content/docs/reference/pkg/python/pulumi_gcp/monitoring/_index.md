@@ -1984,10 +1984,6 @@ This provides the channel type and all of the required labels that must be passe
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">sensitive_labels.auth_token</span></code>, <code class="docutils literal notranslate"><span class="pre">sensitive_labels.password</span></code>, and <code class="docutils literal notranslate"><span class="pre">sensitive_labels.service_key</span></code> will be stored in the raw
-state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
@@ -2219,19 +2215,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.monitoring.Slo">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Slo resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] basic_sli: Basic Service-Level Indicator (SLI) on a well-known service type.</p>
-<blockquote>
-<div><p>Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p>
-</div></blockquote>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_based_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Service-Level Objective (SLO) describes the level of desired good
+service. It consists of a service-level indicator (SLI), a performance
+goal, and a period over which the objective is to be evaluated against
+that goal. The SLO can use SLIs defined in a number of different manners.
+Typical SLOs might include “99% of requests in each rolling week have
+latency below 200 milliseconds” or “99.5% of requests in each calendar
+month return successfully.”</p>
+<p>To get more information about Slo, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services.serviceLevelObjectives">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/service-monitoring">Service Monitoring</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_app_engine_service</span><span class="p">(</span><span class="n">module_id</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="n">appeng_slo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Slo</span><span class="p">(</span><span class="s2">&quot;appengSlo&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">service_id</span><span class="p">,</span>
+    <span class="n">slo_id</span><span class="o">=</span><span class="s2">&quot;ae-slo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test SLO for App Engine&quot;</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+    <span class="n">calendar_period</span><span class="o">=</span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+    <span class="n">basic_sli</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;latency&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="s2">&quot;1s&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current
 <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
@@ -2239,6 +2268,13 @@ performance with respect to a single aspect of service quality.  Structure is do
 to be met. 0 &lt; goal &lt;= 0.999</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>request_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”.
 Must be between 1 to 30 days, inclusive.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
@@ -2274,13 +2310,74 @@ this SLI applies to all API versions. For service types
 that don’t support breaking down by version, setting this
 field will result in an error.</p></li>
 </ul>
+<p>The <strong>request_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+</ul>
+</li>
+</ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.Slo.basic_sli">
 <code class="sig-name descname">basic_sli</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.basic_sli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p>
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters for a latency threshold SLI.  Structure is documented below.</p>
 <ul>
@@ -2345,6 +2442,76 @@ If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.Slo.request_based_sli">
+<code class="sig-name descname">request_based_sli</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.request_based_sli" title="Permalink to this definition">¶</a></dt>
+<dd><p>A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.Slo.rolling_period_days">
 <code class="sig-name descname">rolling_period_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.rolling_period_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>A rolling time period, semantically “in the past X days”.
@@ -2365,7 +2532,7 @@ Must be between 1 to 30 days, inclusive.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.monitoring.Slo.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_based_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Slo resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2377,7 +2544,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p></li>
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current
 <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
@@ -2387,6 +2556,13 @@ to be met. 0 &lt; goal &lt;= 0.999</p></li>
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>request_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”.
 Must be between 1 to 30 days, inclusive.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
@@ -2421,6 +2597,65 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don’t support breaking down by version, setting this
 field will result in an error.</p></li>
+</ul>
+<p>The <strong>request_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">distribution_cut</span></code> or <code class="docutils literal notranslate"><span class="pre">good_total_ratio</span></code> can be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of <code class="docutils literal notranslate"><span class="pre">good_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">bad_service_filter</span></code>,<code class="docutils literal notranslate"><span class="pre">total_service_filter</span></code>
+must be set (good + bad = total is assumed).</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -2477,7 +2712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <blockquote>
 <div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">http_check.auth_info.password</span></code> will be stored in the raw
-state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>

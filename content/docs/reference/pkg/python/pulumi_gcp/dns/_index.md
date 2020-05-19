@@ -232,8 +232,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
 to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
-<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.</p></li>
+<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.</p></li>
 </ul>
@@ -436,8 +435,7 @@ to networks listed under <code class="docutils literal notranslate"><span class=
 <dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.service_directory_config">
 <code class="sig-name descname">service_directory_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.service_directory_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.</p>
+<dd><p>The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The namespace associated with the zone.  Structure is documented below.</p>
 <ul>
@@ -488,8 +486,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
 to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
-<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.</p></li>
+<li><p><strong>service_directory_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.</p></li>
 </ul>
@@ -637,10 +634,10 @@ Private Cloud resources.</p>
     <span class="p">},</span>
     <span class="n">networks</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">])</span>
 </pre></div>

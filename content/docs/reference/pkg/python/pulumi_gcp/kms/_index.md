@@ -65,7 +65,7 @@ to the resource to prevent accidental destruction.</p>
 
 <span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
 <span class="n">example_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;example-key&quot;</span><span class="p">,</span>
-    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;100000s&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -74,7 +74,7 @@ to the resource to prevent accidental destruction.</p>
 
 <span class="n">keyring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyring&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">)</span>
 <span class="n">example_asymmetric_sign_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;example-asymmetric-sign-key&quot;</span><span class="p">,</span>
-    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">key_ring</span><span class="o">=</span><span class="n">keyring</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;ASYMMETRIC_SIGN&quot;</span><span class="p">,</span>
     <span class="n">version_template</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;EC_SIGN_P384_SHA384&quot;</span><span class="p">,</span>
@@ -1866,7 +1866,7 @@ data outside of resource definitions.</p>
 </ul>
 <blockquote>
 <div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">plaintext</span></code> and <code class="docutils literal notranslate"><span class="pre">additional_authenticated_data</span></code> will be stored in the raw
-state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>

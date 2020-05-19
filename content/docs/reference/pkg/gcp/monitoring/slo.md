@@ -78,7 +78,7 @@ appeng_slo = gcp.monitoring.Slo("appengSlo",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#Slo">Slo</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#Slo">Slo</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,18 +252,6 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Basic<wbr>Sli</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
-Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Goal</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
@@ -279,6 +267,20 @@ to be met. 0 < goal <= 0.999
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,6 +310,21 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,18 +355,6 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>Basic<wbr>Sli</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
-    </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
-Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Goal</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
@@ -365,6 +370,20 @@ to be met. 0 < goal <= 0.999
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -398,6 +417,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Rolling<wbr>Period<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -424,18 +458,6 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>basic<wbr>Sli</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
-    </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
-Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>goal</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
@@ -451,6 +473,20 @@ to be met. 0 < goal <= 0.999
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,6 +520,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>rolling<wbr>Period<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -510,18 +561,6 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>basic_<wbr>sli</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
-    </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
-Performance will be computed on the basis of pre-defined metrics.
-SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>goal</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -537,6 +576,20 @@ to be met. 0 < goal <= 0.999
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic_<wbr>sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
+    </dt>
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -566,6 +619,21 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request_<wbr>based_<wbr>sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -717,7 +785,7 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -840,7 +908,9 @@ The following state arguments are supported:
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -894,6 +964,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Rolling<wbr>Period<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
@@ -936,7 +1021,9 @@ Must be between 1 to 30 days, inclusive.
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,6 +1077,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Rolling<wbr>Period<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1032,7 +1134,9 @@ Must be between 1 to 30 days, inclusive.
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,6 +1190,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>request<wbr>Based<wbr>Sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>rolling<wbr>Period<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -1128,7 +1247,9 @@ Must be between 1 to 30 days, inclusive.
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
-performance with respect to a single aspect of service quality.  Structure is documented below.
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,6 +1299,21 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request_<wbr>based_<wbr>sli</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
+    </dt>
+    <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,6 +1690,666 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSli">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSli">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSli.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Distribution<wbr>Cut</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Good<wbr>Total<wbr>Ratio</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Distribution<wbr>Cut</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Good<wbr>Total<wbr>Ratio</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>distribution<wbr>Cut</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>good<wbr>Total<wbr>Ratio</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>distribution<wbr>Cut</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut]</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>good<wbr>Total<wbr>Ratio</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio]</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.
+Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliDistributionCut">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliDistributionCut">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliDistributionCut.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Distribution<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Distribution<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>distribution<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>distribution<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliDistributionCutRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliDistributionCutRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliDistributionCutRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliGoodTotalRatio">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliGoodTotalRatio">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliGoodTotalRatioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloRequestBasedSliGoodTotalRatioOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliGoodTotalRatioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliGoodTotalRatio.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bad<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Good<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Total<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bad<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Good<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Total<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bad<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>good<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>total<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bad<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>good<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>total<wbr>Service<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service.
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
+must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
 </dl>

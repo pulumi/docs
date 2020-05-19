@@ -54,7 +54,7 @@ const snapdisk = new gcp.compute.Snapshot("snapdisk", {
     zone: "us-central1-a",
 });
 const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
-    snapshot: snapdisk.selfLink,
+    snapshot: snapdisk.id,
     type: "pd-ssd",
     region: "us-central1",
     physicalBlockSizeBytes: 4096,
@@ -77,7 +77,7 @@ snapdisk = gcp.compute.Snapshot("snapdisk",
     source_disk=disk.name,
     zone="us-central1-a")
 regiondisk = gcp.compute.RegionDisk("regiondisk",
-    snapshot=snapdisk.self_link,
+    snapshot=snapdisk.id,
     type="pd-ssd",
     region="us-central1",
     physical_block_size_bytes=4096,

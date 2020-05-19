@@ -76,27 +76,27 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
     portName: "http",
     protocol: "HTTP",
     timeoutSec: 10,
-    healthChecks: [defaultHttpHealthCheck.selfLink],
+    healthChecks: [defaultHttpHealthCheck.id],
 });
 const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
     description: "a description",
-    defaultService: defaultBackendService.selfLink,
+    defaultService: defaultBackendService.id,
     host_rule: [{
         hosts: ["mysite.com"],
         pathMatcher: "allpaths",
     }],
     path_matcher: [{
         name: "allpaths",
-        defaultService: defaultBackendService.selfLink,
+        defaultService: defaultBackendService.id,
         path_rule: [{
             paths: ["/*"],
-            service: defaultBackendService.selfLink,
+            service: defaultBackendService.id,
         }],
     }],
 });
 const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
-    urlMap: defaultURLMap.selfLink,
-    sslCertificates: [defaultSSLCertificate.selfLink],
+    urlMap: defaultURLMap.id,
+    sslCertificates: [defaultSSLCertificate.id],
 });
 ```
 ```python
@@ -120,25 +120,25 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
     port_name="http",
     protocol="HTTP",
     timeout_sec=10,
-    health_checks=[default_http_health_check.self_link])
+    health_checks=[default_http_health_check.id])
 default_url_map = gcp.compute.URLMap("defaultURLMap",
     description="a description",
-    default_service=default_backend_service.self_link,
+    default_service=default_backend_service.id,
     host_rule=[{
         "hosts": ["mysite.com"],
         "pathMatcher": "allpaths",
     }],
     path_matcher=[{
         "name": "allpaths",
-        "defaultService": default_backend_service.self_link,
+        "defaultService": default_backend_service.id,
         "path_rule": [{
             "paths": ["/*"],
-            "service": default_backend_service.self_link,
+            "service": default_backend_service.id,
         }],
     }])
 default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
-    url_map=default_url_map.self_link,
-    ssl_certificates=[default_ssl_certificate.self_link])
+    url_map=default_url_map.id,
+    ssl_certificates=[default_ssl_certificate.id])
 ```
 
 

@@ -38,9 +38,9 @@ const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
 const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
     protocol: "TCP",
     timeoutSec: 10,
-    healthChecks: [defaultHealthCheck.selfLink],
+    healthChecks: [defaultHealthCheck.id],
 });
-const defaultTargetTCPProxy = new gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", {backendService: defaultBackendService.selfLink});
+const defaultTargetTCPProxy = new gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", {backendService: defaultBackendService.id});
 ```
 ```python
 import pulumi
@@ -55,8 +55,8 @@ default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
 default_backend_service = gcp.compute.BackendService("defaultBackendService",
     protocol="TCP",
     timeout_sec=10,
-    health_checks=[default_health_check.self_link])
-default_target_tcp_proxy = gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", backend_service=default_backend_service.self_link)
+    health_checks=[default_health_check.id])
+default_target_tcp_proxy = gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", backend_service=default_backend_service.id)
 ```
 
 

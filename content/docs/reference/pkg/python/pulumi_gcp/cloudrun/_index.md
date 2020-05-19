@@ -868,7 +868,7 @@ and Route, reflecting their statuses and conditions as its own.</p>
         <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;annotations&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;autoscaling.knative.dev/maxScale&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;run.googleapis.com/client-name&quot;</span><span class="p">:</span> <span class="s2">&quot;cloud-console&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;run.googleapis.com/client-name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;run.googleapis.com/cloudsql-instances&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;my-project-name:us-central1:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
             <span class="p">},</span>
         <span class="p">},</span>
@@ -878,29 +878,6 @@ and Route, reflecting their statuses and conditions as its own.</p>
             <span class="p">}],</span>
         <span class="p">},</span>
     <span class="p">})</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
-
-<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudrun</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">template</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;containers&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;gcr.io/cloudrun/hello&quot;</span><span class="p">,</span>
-            <span class="p">}],</span>
-        <span class="p">},</span>
-    <span class="p">})</span>
-<span class="n">noauth_iam_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/run.invoker&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;allUsers&quot;</span><span class="p">],</span>
-<span class="p">}])</span>
-<span class="n">noauth_iam_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudrun</span><span class="o">.</span><span class="n">IamPolicy</span><span class="p">(</span><span class="s2">&quot;noauthIamPolicy&quot;</span><span class="p">,</span>
-    <span class="n">location</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">project</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
-    <span class="n">service</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">policy_data</span><span class="o">=</span><span class="n">noauth_iam_policy</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -930,6 +907,33 @@ and Route, reflecting their statuses and conditions as its own.</p>
         <span class="s2">&quot;latestRevision&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;percent&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
     <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudrun</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;cloudrun-srv-green&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;containers&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;gcr.io/cloudrun/hello&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">traffics</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;percent&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="s2">&quot;revisionName&quot;</span><span class="p">:</span> <span class="s2">&quot;cloudrun-srv-green&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;percent&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+            <span class="s2">&quot;revisionName&quot;</span><span class="p">:</span> <span class="s2">&quot;cloudrun-srv-blue&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

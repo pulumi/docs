@@ -514,6 +514,14 @@ Structure defined below.</p>
 all instances in the cluster.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The config settings for port access on the cluster.
+Structure defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableHttpPortAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gceClusterConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.</p>
 <ul>
@@ -675,10 +683,13 @@ Accepted values are:</p>
 <ul>
 <li><p>ANACONDA</p></li>
 <li><p>DRUID</p></li>
+<li><p>HBASE</p></li>
 <li><p>HIVE_WEBHCAT</p></li>
 <li><p>JUPYTER</p></li>
 <li><p>KERBEROS</p></li>
 <li><p>PRESTO</p></li>
+<li><p>RANGER</p></li>
+<li><p>SOLR</p></li>
 <li><p>ZEPPELIN</p></li>
 <li><p>ZOOKEEPER</p></li>
 </ul>
@@ -751,6 +762,14 @@ Structure defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The config settings for port access on the cluster.
+Structure defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableHttpPortAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gceClusterConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Common config settings for resources of Google Compute Engine cluster
@@ -914,10 +933,13 @@ Accepted values are:</p>
 <ul>
 <li><p>ANACONDA</p></li>
 <li><p>DRUID</p></li>
+<li><p>HBASE</p></li>
 <li><p>HIVE_WEBHCAT</p></li>
 <li><p>JUPYTER</p></li>
 <li><p>KERBEROS</p></li>
 <li><p>PRESTO</p></li>
+<li><p>RANGER</p></li>
+<li><p>SOLR</p></li>
 <li><p>ZEPPELIN</p></li>
 <li><p>ZOOKEEPER</p></li>
 </ul>
@@ -1042,6 +1064,14 @@ Structure defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The config settings for port access on the cluster.
+Structure defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableHttpPortAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gceClusterConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Common config settings for resources of Google Compute Engine cluster
@@ -1205,10 +1235,13 @@ Accepted values are:</p>
 <ul>
 <li><p>ANACONDA</p></li>
 <li><p>DRUID</p></li>
+<li><p>HBASE</p></li>
 <li><p>HIVE_WEBHCAT</p></li>
 <li><p>JUPYTER</p></li>
 <li><p>KERBEROS</p></li>
 <li><p>PRESTO</p></li>
+<li><p>RANGER</p></li>
+<li><p>SOLR</p></li>
 <li><p>ZEPPELIN</p></li>
 <li><p>ZOOKEEPER</p></li>
 </ul>

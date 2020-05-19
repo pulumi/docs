@@ -20,12 +20,14 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
-<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
-<span class="p">}])</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
 <span class="n">ap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">AppProfile</span><span class="p">(</span><span class="s2">&quot;ap&quot;</span><span class="p">,</span>
     <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_profile_id</span><span class="o">=</span><span class="s2">&quot;bt-profile&quot;</span><span class="p">,</span>
@@ -36,12 +38,14 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
-<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
-<span class="p">}])</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
 <span class="n">ap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">AppProfile</span><span class="p">(</span><span class="s2">&quot;ap&quot;</span><span class="p">,</span>
     <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_profile_id</span><span class="o">=</span><span class="s2">&quot;bt-profile&quot;</span><span class="p">,</span>
@@ -213,23 +217,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.bigquery.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Connection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Connection resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] cloud_sql: Cloud SQL properties.  Structure is documented below.
-:param pulumi.Input[str] connection_id: Optional connection id that should be assigned to the created connection.
-:param pulumi.Input[str] description: A descriptive description for the connection
-:param pulumi.Input[str] friendly_name: A descriptive name for the connection
-:param pulumi.Input[str] location: The geographic location where the connection should reside.</p>
-<blockquote>
-<div><p>Cloud SQL instance must be in the same location as the connection
-with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
-Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.</p>
-</div></blockquote>
+<dd><p>A connection allows BigQuery connections to external data sources..</p>
+<p>To get more information about Connection, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/bigqueryconnection/rest/v1beta1/projects.locations.connections/create">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/cloud-sql-federated-queries">Cloud SQL federated queries</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
+    <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceId&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;my-connection&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
+    <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceId&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_sql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud SQL properties.  Structure is documented below.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional connection id that should be assigned to the created connection.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive description for the connection</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the connection</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the connection should reside.
+Cloud SQL instance must be in the same location as the connection
+with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>cloud_sql</strong> object supports the following:</p>
@@ -648,7 +703,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
 <span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us&quot;</span><span class="p">)</span>
-<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span> <span class="n">key_ring</span><span class="o">=</span><span class="n">key_ring</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span> <span class="n">key_ring</span><span class="o">=</span><span class="n">key_ring</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
     <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset&quot;</span><span class="p">,</span>
     <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
@@ -656,7 +711,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
     <span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="mi">3600000</span><span class="p">,</span>
     <span class="n">default_encryption_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;kmsKeyName&quot;</span><span class="p">:</span> <span class="n">crypto_key</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;kmsKeyName&quot;</span><span class="p">:</span> <span class="n">crypto_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -697,7 +752,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
@@ -734,7 +789,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An email address of a user to grant access to. For example:
@@ -901,7 +956,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
@@ -1355,7 +1410,7 @@ Once a BigQuery job is created, it cannot be changed or deleted.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
 <li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
-<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id13"><span class="problematic" id="id14">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id14"><span class="problematic" id="id15">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this job. You can use these to organize and group your jobs.</p></li>
@@ -1881,7 +1936,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
 <li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
-<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id17"><span class="problematic" id="id18">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id18"><span class="problematic" id="id19">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
 <li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the job.</p></li>
