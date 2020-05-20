@@ -1,6 +1,6 @@
 ---
-title: "Module devspace"
-title_tag: "Module devspace | Package @pulumi/azure | Node.js SDK"
+title: "Module devspace hosting"
+title_tag: "Module devspace hosting | Package @pulumi/azure | Node.js SDK"
 linktitle: "devspace"
 meta_desc: "Explore members of the devspace module in the @pulumi/azure package."
 git_sha: "48b234f3296d7323c5fb4526da895c547115b220"
@@ -16,7 +16,7 @@ git_sha: "48b234f3296d7323c5fb4526da895c547115b220"
 > please consult the source [`terraform-providers/terraform-provider-azurerm` repo](https://github.com/terraform-providers/terraform-provider-azurerm/issues).
 
 
-
+What follows is a collection of resources for devspace hosting with Pulumi.
 
 
 <h3>Resources</h3>
