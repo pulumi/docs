@@ -3,6 +3,9 @@
 title: "GitOps with Pulumi and GitLab"
 meta_desc: "Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline."
 
+url: /webinars/gitops-with-gitlab-and-pulumi-2020-05-20/on-demand
+block_external_search_index: true
+
 # A featured webinar will display first in the list.
 featured: false
 
@@ -16,11 +19,11 @@ pulumi_tv: false
 preview_image: "/images/superpowers/gitlab-demo.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -44,6 +47,7 @@ hero:
 main:
     # Webinar title.
     title: "GitOps with Pulumi and GitLab"
+    youtube_url: "https://www.youtube.com/embed/xI9uWFiEzAM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-05-20T12:00:00-07:00
     # Duration of the webinar.
@@ -68,9 +72,4 @@ main:
         - Create a simple infrastructure stack for a static website.
         - Policy enforcement blocking unencrypted S3 buckets.
         - Setting up ‘PR to deploy’ via GitLab CI.
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id: "87cc0632-52f1-444a-b41c-6775470f4ece"
 ---
