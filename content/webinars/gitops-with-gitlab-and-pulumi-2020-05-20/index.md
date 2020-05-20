@@ -4,7 +4,7 @@ title: "GitOps with Pulumi and GitLab"
 meta_desc: "Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: "/images/superpowers/gitlab-demo.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
