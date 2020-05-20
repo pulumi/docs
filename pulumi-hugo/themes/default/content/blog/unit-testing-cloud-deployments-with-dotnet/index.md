@@ -1,6 +1,6 @@
 ---
 title: "Unit Testing Cloud Deployments with .NET"
-date: 2020-05-18
+date: 2020-05-21
 meta_desc: "Developing infrastructure programs in C# and F# with unit tests, TDD, and mocks"
 meta_image: dotnet-testing.png
 authors:
@@ -26,13 +26,13 @@ Whenever a new resource is instantiated in code, the program makes a remote call
 
 The remote calls may be slow, unreliable, and non-deterministic, which makes testing of these interactions hard.
 
-Our [testing guide]({{< relref "/docs/guides/testing" >}}) outlines several testing styles, but today I want to focus on unit testing.
+Our [testing guide]({{< relref "/docs/guides/testing" >}}) outlines several testing methods, but today I want to focus on unit testing.
 
 The Pulumi SDK provides a hook to replace all the remote calls with mocks. Mocks run in the same process and can respond immediately with hard-coded or calculated on-the-fly data.
 
 ![Pulumi with Mocks](./mocks.png)
 
-We can write fully deterministic and blazingly fast automated tests as all remote calls and uncertainty are eliminated. There is no cloud to respond to resource creation, so it's a developer's responsibility to adequately "fake" the cloud behavior with mocks.
+We can write fully deterministic and blazingly fast automated tests as all remote calls and uncertainty are eliminated. There is no cloud to respond to resource creation, so it's a developer's responsibility to mimic the cloud behavior with mocks adequately.
 
 This blog post walks you through an example of unit testing and mocking with the .NET SDK.
 
@@ -326,7 +326,7 @@ let getValue(output: Output<'a>): 'a =
 
 {{% /choosable %}}
 
-To learn more about outputs, read [this article](/docs/intro/concepts/programming-model/#stack-outputs).
+To learn more about outputs, read [this article]({{< relref "/docs/intro/concepts/programming-model#stack-outputs" >}}).
 
 ## First Test
 
@@ -531,7 +531,7 @@ member this.StorageAccountBelongsToResourceGroup() =
 
 {{% /choosable %}}
 
-Of course, the test fails. I go ahead and try to fix it with what I think is the minimal change to make the test pass: I add a new resource to the stack and point it to the resource group.
+Of course, the test fails. I try to fix it with what I think is the minimal change to make the test pass by adding a new resource to the stack and pointing it to the resource group.
 
 {{< chooser language "csharp,fsharp" />}}
 
@@ -601,11 +601,11 @@ X StorageAccountBelongsToResourceGroup [84ms]
    Expected resourceGroupName to be "www-prod-rg", but found <null>.
 ```
 
-What's going on, why is it `null`?
+What's going on, and why is it `null`?
 
 I defined the account name like this: `ResourceGroupName = resourceGroup.Name`. However, if we look closely, the `resourceGroup` resource doesn't have an input property `Name` defined. `www-prod-rg` is a logical name for Pulumi deployment, not the physical name of the resource.
 
-Under normal circumstances, the Pulumi engine would use the logical name to produce the physical name of the resource group automatically (see [resource names](https://www.pulumi.com/docs/intro/concepts/programming-model/#names) for details). However, my mocks don't do that.
+Under normal circumstances, the Pulumi engine would use the logical name to produce the physical name of the resource group automatically (see [resource names]({{< relref "/docs/intro/concepts/programming-model#names" >}}) for details). However, my mocks don't do that.
 
 That's a good reason to change the `Mocks` implementation. I add the following lines to the `NewResourceAsync` method.
 
@@ -646,7 +646,7 @@ Total tests: 3
 
 The next step is to upload some files to the static website. Well, instead, to write an automated test that validates the upload with mocks.
 
-I create a `wwwroot` folder with two HTML files in it and configure to copy that folder to the output on the build. Here is my change in the project file.
+I create a `wwwroot` folder with two HTML files in it and copy the folder to the build's output. Here is my change in the project file.
 
 ```xml
 <ItemGroup>
@@ -745,7 +745,7 @@ System.InvalidOperationException: Unsupported value when converting to protobuf:
 ...
 ```
 
-Once again, our mocks fail to represent the behavior of the engine accurately. The engine knows about the `FileAsset` class that points to a file on the disk and how to convert it to an uploaded blob. Also, the engine doesn't copy this property to outputs. I need to adjust the mocks again.
+Once again, our mocks fail to represent the behavior of the engine accurately. The Pulumi engine knows about the `FileAsset` class pointing to a file on the disk and how to convert it to an uploaded blob. But, the engine doesn't copy this property to outputs. I need to adjust the mocks again.
 
 I'm not particularly interested in testing the binary contents of the files now, so I'll change the `Mocks` class to ignore the `source` property and not to include it into the output dictionary.
 
