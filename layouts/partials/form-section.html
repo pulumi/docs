@@ -29,7 +29,7 @@
                     <h3 class="text-center">{{ .form.headline }}</h3>
                     <div class="mx-auto flex justify-center">
                         <div class="hs-form hs-form-fg-dark font-normal">
-                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .form.hubspot_form_id "classNames" .form.class_names) }}
+                            <pulumi-hubspot-form form-id="{{ .form.hubspot_form_id }}" css-class="{{ .form.class_names }}"></pulumi-hubspot-form>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
         <h3 class="text-center">{{ .form.headline }}</h3>
         <div class="mx-auto flex justify-center">
             <div class="hs-form hs-form-fg-dark font-normal">
-                {{ partial "hubspot-form.html" (dict "hubspotFormID" .form.hubspot_form_id "classNames" .form.class_names) }}
+                <pulumi-hubspot-form form-id="{{ .form.hubspot_form_id }}" css-class="{{ .form.class_names }}"></pulumi-hubspot-form>
             </div>
         </div>
     </div>
