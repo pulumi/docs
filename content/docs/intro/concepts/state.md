@@ -286,19 +286,19 @@ endpoint:
 
 ```sh
 # switch to the stack we want to export
-$ pulumi stack select my-app-production 
+$ pulumi stack select my-app-production
 # export the stack's checkpoint to a local file
-$ pulumi stack export --show-secrets --file my-app-production.checkpoint.json 
+$ pulumi stack export --show-secrets --file my-app-production.checkpoint.json
 $ pulumi logout
 $ pulumi login
 # create a new stack with the same name on pulumi.com
-$ pulumi stack init my-app-production 
+$ pulumi stack init my-app-production
 # import the new existing checkpoint into pulumi.com
-$ pulumi stack import --file my-app-production.checkpoint.json 
+$ pulumi stack import --file my-app-production.checkpoint.json
 ```
 
 > **Note:**: After migration, your stack's state will be managed by the the Pulumi Service
-backend, but the stack will continue using the same secrets provider.  You can seperately 
+backend, but the stack will continue using the same secrets provider.  You can seperately
 [change the secrets provider]({{< relref "docs/intro/concepts/config#changing-the-secrets-provider-for-a-stack" >}})
 for your stack if needed.
 
