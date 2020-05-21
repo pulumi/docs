@@ -29,11 +29,9 @@
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
-                        {{ if ne $preRecorded true }}
-                            <time class="webinar-datetime uppercase text-orange text-sm font-bold">
-                                <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
-                            </time>
-                        {{ end }}
+                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
+                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
+                        </time>
                         <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}

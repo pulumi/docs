@@ -69,9 +69,4 @@ main:
         - Create a simple infrastructure stack for a static website.
         - Policy enforcement blocking unencrypted S3 buckets.
         - Setting up ‘PR to deploy’ via GitLab CI.
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id: "87cc0632-52f1-444a-b41c-6775470f4ece"
 ---
