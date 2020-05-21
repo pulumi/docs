@@ -4,10 +4,10 @@ title: "GitOps with Pulumi and GitLab"
 meta_desc: "Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -44,12 +44,13 @@ hero:
 main:
     # Webinar title.
     title: "GitOps with Pulumi and GitLab"
+    youtube_url: "https://www.youtube.com/embed/xI9uWFiEzAM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-05-20T12:00:00-07:00
     # Duration of the webinar.
     duration: "45 minutes"
     # Datetime of the webinar.
-    datetime: "WED, MAY 20, 2020 AT 12:00PM PDT"
+    datetime: "ON DEMAND"
     # Description of the webinar.
     description: |
         Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline. Learn how Pulumi’s modern infrastructure as code platform helps your team deliver features faster by helping you to define resources on any cloud using your favorite languages.  Praneet Loke from Pulumi and William Chia from GitLab will show you how to super-charge your team’s velocity with GitOps.
@@ -68,13 +69,4 @@ main:
         - Create a simple infrastructure stack for a static website.
         - Policy enforcement blocking unencrypted S3 buckets.
         - Setting up ‘PR to deploy’ via GitLab CI.
-
-# The right hand side form section.
-form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: "1017103637425347085"
-
-    # HubSpot form id.
-    hubspot_form_id: "ebc6064d-756c-4d04-ac63-31ad16780ab5"
 ---
