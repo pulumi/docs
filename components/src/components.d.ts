@@ -40,6 +40,11 @@ export namespace Components {
     'cssClass': string;
     'formId': string;
     'goToWebinarKey': string;
+    'hasSubmittedForm': boolean;
+    'hiddenFormButtonClass': string;
+    'hiddenFormButtonText': string;
+    'hiddenFormButtonURL': string;
+    'hideIfSubmitted': boolean;
   }
   interface PulumiRoot {}
   interface PulumiTopButton {}
@@ -121,6 +126,11 @@ declare namespace LocalJSX {
     'cssClass'?: string;
     'formId'?: string;
     'goToWebinarKey'?: string;
+    'hasSubmittedForm'?: boolean;
+    'hiddenFormButtonClass'?: string;
+    'hiddenFormButtonText'?: string;
+    'hiddenFormButtonURL'?: string;
+    'hideIfSubmitted'?: boolean;
   }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;

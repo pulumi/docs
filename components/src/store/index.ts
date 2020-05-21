@@ -5,9 +5,10 @@ import thunk from "redux-thunk";
 
 import { AppState } from "./state";
 import { preferences } from "./reducers/preferences";
+import { form } from "./reducers/form";
 
 export const rootReducer = combineReducers({
-    preferences
+    preferences, form
 });
 
 // The Redux store. See https://redux.js.org/ for general information about Redux and

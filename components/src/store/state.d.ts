@@ -9,6 +9,11 @@ export interface PreferencesState {
     cloud: CloudKey,
 }
 
+export interface FormState {
+    submittedFormIds: string[];
+}
+
 export interface AppState {
-    preferences: PreferencesState
+    preferences: PreferencesState;
+    form: FormState;
 }
