@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -44,6 +44,7 @@ hero:
 main:
     # Webinar title.
     title: "GitOps with Pulumi and GitLab"
+    youtube_url: "https://www.youtube.com/embed/xI9uWFiEzAM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-05-20T12:00:00-07:00
     # Duration of the webinar.
