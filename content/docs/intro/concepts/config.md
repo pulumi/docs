@@ -474,17 +474,17 @@ You will use the values above to replace those in use in your existing stack.
 First, your config.  
 
 1. You will need to remove all encypted secrets from your current config using `pulumi config rm` or by removing them by hand from the `.yaml` file (you saved them to `config.json` above).  
-2. Then copy the lines above (`encyptionsalt` or `secretsprovider`+`encryptedkey`) from the `temp` stack into your primary stack (replacing the existing corresponding lines). 
+2. Then copy the lines above (`encryptionsalt` or `secretsprovider`+`encryptedkey`) from the `temp` stack into your primary stack (replacing the existing corresponding lines). 
 3. Save that, and then run `pulumi config set --secret <key> <value>` for each of the secret config values you removed, using the values from `config.json`.  
 
 Next, your state.  
 
 1. Open `stack.json` and find the `secrets_providers` section.  
 2. Based on the output of your `Pulumi.temp.yaml` pick from these options:
-    * For `encyrptionsalt` set `"type": "passphrase",` and replace the contents of the `state` with `"salt": "<value>"`.
+    * For `encryptionsalt` set `"type": "passphrase",` and replace the contents of the `state` with `"salt": "<value>"`.
     * For `secretsprovider`+`encryptedkey` set `"type": "cloud"` and replace the contents of the `state` with `"url": "<value>"` and `"encryptedkey": "<value>"` respectively.
     * For Pulumi Service secrets-provider, set `"type": "service"` and replace the contents of the `state` with `"url"`, `"owner"`, `"project"` and `"stack"` as appropriate for your existing stack.
 
 Save your `stack.json` with those changes, then run `pulumi stack import < stack.json` to import it into your Pulumi stack. 
 
-You should now be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets and state files are now encyrpted using the new secrets provider.  You can remove the `stack.json` and `config.json` files to ensure the plain text of the secrets is no longer available, as well as remove the temporarary stack (`pulumi stack rm temp`).
+You should now be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets and state files are now encrypted using the new secrets provider.  You can remove the `stack.json` and `config.json` files to ensure the plain text of the secrets is no longer available, as well as remove the temporary stack (`pulumi stack rm temp`).
