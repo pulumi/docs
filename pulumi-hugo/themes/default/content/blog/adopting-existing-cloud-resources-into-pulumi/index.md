@@ -7,6 +7,17 @@ authors: ["luke-hoban"]
 tags: ["Infrastructure"]
 ---
 
+{{% notes %}}
+Migrate from Terraform to modern languages with tf2pulumi.  Supports Terraform 0.12 and generates TypeScript and Python.
+{{% /notes %}}
+
+<div class="header-hero-actions mt-8 mb-4 text-center">
+    <a class="btn btn-lg mr-2" href="{{< relref "/docs/guides/adopting/from_terraform" >}}">
+        Learn More
+    </a>
+</div>
+<br>
+
 Most cloud infrastructure projects involve working with existing cloud resources &mdash; either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
 Whether you are adopting resources that were deployed manually using your cloud provider's console or CLI &mdash; or migrating existing infrastructure from tools like Terraform or CloudFormation &mdash; Pulumi makes it easy to adopt and manage your existing resources.
