@@ -437,7 +437,12 @@ $ pulumi stack init my-stack \
 
 > Note: These steps can also be used to change the passphrase that is used for an existing stack.
 
-There are two places where secrets are stored in an encrypted form: (1) the configuration stored in the stack file (`Pulumi.<stackname>.yaml`) and (2) the state stored in your state backend.  To change the secrets provider for a stack, both of these will need to be manually updated.
+There are two places where secrets are stored in an encrypted form: (1) the configuration stored in the stack file (`Pulumi.<stackname>.yaml`) and (2) the state stored in your state backend.  To change the secrets provider for a stack, both of these will need to be manually updated.  Here are the high-level steps needed to change the secrets provider for a stack with details below:
+
+1. Export stack and config with secrets in plaintext
+1. Initialize a temporary new stack with the new encryption provider configuration
+1. Modify your existing stack's state file with the configuration values of the new encryption provider
+1. Re-import your state file with the updated encryption provider configuration
 
 First, you will need to get copies of the two assets above with plaintext copies of your secret values from your current stack.  This is a sensitive operation, and you should be careful to do this in a safe environment and be sure to remove these files when you are done.
 
@@ -469,7 +474,7 @@ encryptedkey: AQICAHhivZtfYgNwNJDVWDd++88uo2qgy5MJqqzsPfTFv7uzDgF+1kaw9/wSKgGh5Q
 
 And if you chose the Pulumi Service secrets provider, there will be no stack file.
 
-You will use the values above to replace those in use in your existing stack.  
+You will use the values above to replace those in use in your existing stack.  Switch back to the existing stack with `pulumi stack select ...`, then update your config and state as outlined below.
 
 First, your config.  
 
