@@ -275,33 +275,32 @@ to be managed separately when you opt into the local or remote state backend.
 ### Going back to the Pulumi Service backend
 
 If you are currently using a self-managed backend, but would now prefer to
-simplify things, just run `pulumi login`again, and you’ll be back to
+simplify things, just run `pulumi logout` and then `pulumi login`, and you’ll be back to
 using `app.pulumi.com`.
 
-> **Note:** Existing stacks on a self-managed backend have to be migrated. It's
-> easiest to just plan on recreating them.
->
-> In addition, if you have any encrypted configuration in your stack, you'll
-> need to rerun
-`pulumi config set --secret <key> <value>` because `pulumi.com` uses
-a different key to encrypt your secrets than the local endpoint.
-
-If you'd like to migrate your stacks from the filesystem to the Pulumi Service
+If you'd like to migrate your stacks from a self-managed backend to the Pulumi Service
 backend, you can follow the steps below. Suppose the stack "my-app-production"
-has been managed with a local checkpoint file, and you want to migrate it to
-the Pulumi Service. Run the following commands if you are logged in to the local
+has been managed with a self-managed backend, and you want to migrate it to
+the Pulumi Service. Run the following commands if you are already logged in to the local
 endpoint:
 
 ```sh
-$ pulumi stack select my-app-production # switch to the stack we want to export
-$ pulumi stack export --file my-app-production.checkpoint.json # export the stack's checkpoint to a local file
+# switch to the stack we want to export
+$ pulumi stack select my-app-production
+# export the stack's checkpoint to a local file
+$ pulumi stack export --show-secrets --file my-app-production.checkpoint.json
+$ pulumi logout
 $ pulumi login
-$ pulumi stack init my-app-production # create a new stack with the same name on pulumi.com
-$ pulumi stack import --file my-app-production.checkpoint.json # import the new existing checkpoint into pulumi.com
+# create a new stack with the same name on pulumi.com
+$ pulumi stack init my-app-production
+# import the new existing checkpoint into pulumi.com
+$ pulumi stack import --file my-app-production.checkpoint.json
 ```
 
-To migrate from a remote backend, you will have to download the checkpoint
-files stored in the `.pulumi` directory of your cloud storage URL.
+> **Note:**: After migration, your stack's state will be managed by the the Pulumi Service
+backend, but the stack will continue using the same secrets provider.  You can seperately
+[change the secrets provider]({{< relref "docs/intro/concepts/config#changing-the-secrets-provider-for-a-stack" >}})
+for your stack if needed.
 
 ### Secrets Encryption
 
