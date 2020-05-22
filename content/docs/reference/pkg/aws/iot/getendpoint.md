@@ -55,7 +55,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -71,7 +73,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -87,7 +91,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint<wbr>Type</span>
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -103,7 +109,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint_<wbr>type</span>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -132,7 +140,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Address</span>
+        <span id="endpointaddress_csharp">
+<a href="#endpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -146,7 +156,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -155,7 +167,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -170,7 +184,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Address</span>
+        <span id="endpointaddress_go">
+<a href="#endpointaddress_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -184,7 +200,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -193,7 +211,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -208,7 +228,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Address</span>
+        <span id="endpointaddress_nodejs">
+<a href="#endpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -222,7 +244,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -231,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Type</span>
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -246,7 +272,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>address</span>
+        <span id="endpoint_address_python">
+<a href="#endpoint_address_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -260,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -269,7 +299,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>type</span>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

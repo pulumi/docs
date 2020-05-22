@@ -422,7 +422,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Certificate<wbr>Arn</span>
+        <span id="certificatearn_csharp">
+<a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +433,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation<wbr>Record<wbr>Fqdns</span>
+        <span id="validationrecordfqdns_csharp">
+<a href="#validationrecordfqdns_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -447,7 +451,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Certificate<wbr>Arn</span>
+        <span id="certificatearn_go">
+<a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +462,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation<wbr>Record<wbr>Fqdns</span>
+        <span id="validationrecordfqdns_go">
+<a href="#validationrecordfqdns_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -472,7 +480,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>certificate<wbr>Arn</span>
+        <span id="certificatearn_nodejs">
+<a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -481,7 +491,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation<wbr>Record<wbr>Fqdns</span>
+        <span id="validationrecordfqdns_nodejs">
+<a href="#validationrecordfqdns_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -497,7 +509,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>certificate_<wbr>arn</span>
+        <span id="certificate_arn_python">
+<a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +520,9 @@ The CertificateValidation resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation_<wbr>record_<wbr>fqdns</span>
+        <span id="validation_record_fqdns_python">
+<a href="#validation_record_fqdns_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>record_<wbr>fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -533,7 +549,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +566,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -563,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -719,7 +743,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Arn</span>
+        <span id="state_certificatearn_csharp">
+<a href="#state_certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -728,7 +754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation<wbr>Record<wbr>Fqdns</span>
+        <span id="state_validationrecordfqdns_csharp">
+<a href="#state_validationrecordfqdns_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -744,7 +772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Arn</span>
+        <span id="state_certificatearn_go">
+<a href="#state_certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation<wbr>Record<wbr>Fqdns</span>
+        <span id="state_validationrecordfqdns_go">
+<a href="#state_validationrecordfqdns_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -769,7 +801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate<wbr>Arn</span>
+        <span id="state_certificatearn_nodejs">
+<a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -778,7 +812,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation<wbr>Record<wbr>Fqdns</span>
+        <span id="state_validationrecordfqdns_nodejs">
+<a href="#state_validationrecordfqdns_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Record<wbr>Fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -794,7 +830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate_<wbr>arn</span>
+        <span id="state_certificate_arn_python">
+<a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -803,7 +841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation_<wbr>record_<wbr>fqdns</span>
+        <span id="state_validation_record_fqdns_python">
+<a href="#state_validation_record_fqdns_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>record_<wbr>fqdns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

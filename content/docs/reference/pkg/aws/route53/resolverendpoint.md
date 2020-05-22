@@ -266,7 +266,9 @@ The ResolverEndpoint resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +279,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Addresses</span>
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
@@ -287,7 +291,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -296,7 +302,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +313,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -321,7 +331,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +344,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Addresses</span>
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
     </dt>
@@ -342,7 +356,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -351,7 +367,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +378,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -376,7 +396,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -387,7 +409,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Addresses</span>
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></span>
     </dt>
@@ -397,7 +421,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -406,7 +432,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +443,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -431,7 +461,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -442,7 +474,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>addresses</span>
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></span>
     </dt>
@@ -452,7 +486,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -461,7 +497,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -470,7 +508,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -497,7 +537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -506,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>Vpc<wbr>Id</span>
+        <span id="hostvpcid_csharp">
+<a href="#hostvpcid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -515,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -539,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>Vpc<wbr>Id</span>
+        <span id="hostvpcid_go">
+<a href="#hostvpcid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -548,7 +598,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -563,7 +615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +626,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>host<wbr>Vpc<wbr>Id</span>
+        <span id="hostvpcid_nodejs">
+<a href="#hostvpcid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -581,7 +637,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +654,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -605,7 +665,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>host_<wbr>vpc_<wbr>id</span>
+        <span id="host_vpc_id_python">
+<a href="#host_vpc_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +676,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -755,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_csharp">
+<a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -775,7 +843,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Vpc<wbr>Id</span>
+        <span id="state_hostvpcid_csharp">
+<a href="#state_hostvpcid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -784,7 +854,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_csharp">
+<a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
@@ -794,7 +866,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +877,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -812,7 +888,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -828,7 +906,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -837,7 +917,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_go">
+<a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -848,7 +930,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Vpc<wbr>Id</span>
+        <span id="state_hostvpcid_go">
+<a href="#state_hostvpcid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -857,7 +941,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_go">
+<a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
     </dt>
@@ -867,7 +953,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -876,7 +964,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -885,7 +975,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -901,7 +993,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -910,7 +1004,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_nodejs">
+<a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -921,7 +1017,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Vpc<wbr>Id</span>
+        <span id="state_hostvpcid_nodejs">
+<a href="#state_hostvpcid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1028,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_nodejs">
+<a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></span>
     </dt>
@@ -940,7 +1040,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -949,7 +1051,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -958,7 +1062,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -974,7 +1080,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -983,7 +1091,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_python">
+<a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -994,7 +1104,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>vpc_<wbr>id</span>
+        <span id="state_host_vpc_id_python">
+<a href="#state_host_vpc_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1003,7 +1115,9 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>addresses</span>
+        <span id="state_ip_addresses_python">
+<a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></span>
     </dt>
@@ -1013,7 +1127,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1138,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1031,7 +1149,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1073,7 +1193,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1082,7 +1204,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1091,7 +1215,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Id</span>
+        <span id="ipid_csharp">
+<a href="#ipid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1106,7 +1232,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1115,7 +1243,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1124,7 +1254,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Id</span>
+        <span id="ipid_go">
+<a href="#ipid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1139,7 +1271,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1148,7 +1282,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1157,7 +1293,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Id</span>
+        <span id="ipid_nodejs">
+<a href="#ipid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1172,7 +1310,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1181,7 +1321,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1190,7 +1332,9 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Id</span>
+        <span id="ipid_python">
+<a href="#ipid_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

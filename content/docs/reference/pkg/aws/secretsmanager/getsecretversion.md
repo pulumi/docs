@@ -121,7 +121,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_csharp">
+<a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -130,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -139,7 +143,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Stage</span>
+        <span id="versionstage_csharp">
+<a href="#versionstage_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -155,7 +161,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_go">
+<a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -164,7 +172,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -173,7 +183,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Stage</span>
+        <span id="versionstage_go">
+<a href="#versionstage_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -189,7 +201,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Id</span>
+        <span id="secretid_nodejs">
+<a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -198,7 +212,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Id</span>
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -207,7 +223,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Stage</span>
+        <span id="versionstage_nodejs">
+<a href="#versionstage_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -223,7 +241,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>id</span>
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -232,7 +252,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>id</span>
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -241,7 +263,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>stage</span>
+        <span id="version_stage_python">
+<a href="#version_stage_python" style="color: inherit; text-decoration: inherit;">version_<wbr>stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -270,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +305,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +316,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Binary</span>
+        <span id="secretbinary_csharp">
+<a href="#secretbinary_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Binary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +327,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_csharp">
+<a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +337,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>String</span>
+        <span id="secretstring_csharp">
+<a href="#secretstring_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +359,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stages</span>
+        <span id="versionstages_csharp">
+<a href="#versionstages_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Stages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -331,7 +369,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stage</span>
+        <span id="versionstage_csharp">
+<a href="#versionstage_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +386,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +397,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -364,7 +408,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Binary</span>
+        <span id="secretbinary_go">
+<a href="#secretbinary_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Binary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +419,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_go">
+<a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +429,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>String</span>
+        <span id="secretstring_go">
+<a href="#secretstring_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +440,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +451,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stages</span>
+        <span id="versionstages_go">
+<a href="#versionstages_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Stages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -407,7 +461,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stage</span>
+        <span id="versionstage_go">
+<a href="#versionstage_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +478,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -431,7 +489,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +500,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret<wbr>Binary</span>
+        <span id="secretbinary_nodejs">
+<a href="#secretbinary_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Binary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -449,7 +511,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret<wbr>Id</span>
+        <span id="secretid_nodejs">
+<a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +521,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret<wbr>String</span>
+        <span id="secretstring_nodejs">
+<a href="#secretstring_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +532,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Id</span>
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +543,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Stages</span>
+        <span id="versionstages_nodejs">
+<a href="#versionstages_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Stages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -483,7 +553,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Stage</span>
+        <span id="versionstage_nodejs">
+<a href="#versionstage_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -507,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret_<wbr>binary</span>
+        <span id="secret_binary_python">
+<a href="#secret_binary_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>binary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -525,7 +603,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret_<wbr>id</span>
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -533,7 +613,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret_<wbr>string</span>
+        <span id="secret_string_python">
+<a href="#secret_string_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +624,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>id</span>
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -551,7 +635,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>stages</span>
+        <span id="version_stages_python">
+<a href="#version_stages_python" style="color: inherit; text-decoration: inherit;">version_<wbr>stages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -559,7 +645,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>stage</span>
+        <span id="version_stage_python">
+<a href="#version_stage_python" style="color: inherit; text-decoration: inherit;">version_<wbr>stage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -273,7 +273,9 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Detail<wbr>Type</span>
+        <span id="detailtype_csharp">
+<a href="#detailtype_csharp" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +284,9 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type<wbr>Ids</span>
+        <span id="eventtypeids_csharp">
+<a href="#eventtypeids_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -292,7 +296,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +307,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +318,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +329,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -328,7 +340,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Targets</span>
+        <span id="targets_csharp">
+<a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -344,7 +358,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Detail<wbr>Type</span>
+        <span id="detailtype_go">
+<a href="#detailtype_go" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -353,7 +369,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type<wbr>Ids</span>
+        <span id="eventtypeids_go">
+<a href="#eventtypeids_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -363,7 +381,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +392,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +403,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +414,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -399,7 +425,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Targets</span>
+        <span id="targets_go">
+<a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
     </dt>
@@ -415,7 +443,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>detail<wbr>Type</span>
+        <span id="detailtype_nodejs">
+<a href="#detailtype_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -424,7 +454,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Type<wbr>Ids</span>
+        <span id="eventtypeids_nodejs">
+<a href="#eventtypeids_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -434,7 +466,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -443,7 +477,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +488,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -461,7 +499,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -470,7 +510,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>targets</span>
+        <span id="targets_nodejs">
+<a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]</a></span>
     </dt>
@@ -486,7 +528,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>detail_<wbr>type</span>
+        <span id="detail_type_python">
+<a href="#detail_type_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +539,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>event_<wbr>type_<wbr>ids</span>
+        <span id="event_type_ids_python">
+<a href="#event_type_ids_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -505,7 +551,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +562,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -523,7 +573,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -532,7 +584,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -541,7 +595,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>targets</span>
+        <span id="targets_python">
+<a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">List[Notification<wbr>Rule<wbr>Target]</a></span>
     </dt>
@@ -568,7 +624,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -577,7 +635,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -592,7 +652,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -601,7 +663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -616,7 +680,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +691,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +708,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +719,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -799,7 +873,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detail<wbr>Type</span>
+        <span id="state_detailtype_csharp">
+<a href="#state_detailtype_csharp" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -808,7 +884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Type<wbr>Ids</span>
+        <span id="state_eventtypeids_csharp">
+<a href="#state_eventtypeids_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -818,7 +896,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +907,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource</span>
+        <span id="state_resource_csharp">
+<a href="#state_resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -836,7 +918,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -845,7 +929,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -854,7 +940,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Targets</span>
+        <span id="state_targets_csharp">
+<a href="#state_targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -870,7 +958,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +969,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detail<wbr>Type</span>
+        <span id="state_detailtype_go">
+<a href="#state_detailtype_go" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +980,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Type<wbr>Ids</span>
+        <span id="state_eventtypeids_go">
+<a href="#state_eventtypeids_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -898,7 +992,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -907,7 +1003,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource</span>
+        <span id="state_resource_go">
+<a href="#state_resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -916,7 +1014,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +1025,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -934,7 +1036,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Targets</span>
+        <span id="state_targets_go">
+<a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
     </dt>
@@ -950,7 +1054,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -959,7 +1065,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>detail<wbr>Type</span>
+        <span id="state_detailtype_nodejs">
+<a href="#state_detailtype_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1076,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Type<wbr>Ids</span>
+        <span id="state_eventtypeids_nodejs">
+<a href="#state_eventtypeids_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -978,7 +1088,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -987,7 +1099,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource</span>
+        <span id="state_resource_nodejs">
+<a href="#state_resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -996,7 +1110,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1005,7 +1121,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1014,7 +1132,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>targets</span>
+        <span id="state_targets_nodejs">
+<a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]</a></span>
     </dt>
@@ -1030,7 +1150,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1039,7 +1161,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>detail_<wbr>type</span>
+        <span id="state_detail_type_python">
+<a href="#state_detail_type_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1048,7 +1172,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>type_<wbr>ids</span>
+        <span id="state_event_type_ids_python">
+<a href="#state_event_type_ids_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1058,7 +1184,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1067,7 +1195,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource</span>
+        <span id="state_resource_python">
+<a href="#state_resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1076,7 +1206,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1085,7 +1217,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1094,7 +1228,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>targets</span>
+        <span id="state_targets_python">
+<a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletarget">List[Notification<wbr>Rule<wbr>Target]</a></span>
     </dt>
@@ -1136,7 +1272,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1145,7 +1283,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1154,7 +1294,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1170,7 +1312,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1179,7 +1323,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1188,7 +1334,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1204,7 +1352,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1213,7 +1363,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1222,7 +1374,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1238,7 +1392,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1403,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1256,7 +1414,9 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

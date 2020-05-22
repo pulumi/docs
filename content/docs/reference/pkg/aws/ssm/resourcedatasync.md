@@ -307,7 +307,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>S3Destination</span>
+        <span id="s3destination_csharp">
+<a href="#s3destination_csharp" style="color: inherit; text-decoration: inherit;">S3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
@@ -316,7 +318,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +336,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>S3Destination</span>
+        <span id="s3destination_go">
+<a href="#s3destination_go" style="color: inherit; text-decoration: inherit;">S3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
     </dt>
@@ -341,7 +347,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +365,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>s3Destination</span>
+        <span id="s3destination_nodejs">
+<a href="#s3destination_nodejs" style="color: inherit; text-decoration: inherit;">s3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
     </dt>
@@ -366,7 +376,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -382,7 +394,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>s3_<wbr>destination</span>
+        <span id="s3_destination_python">
+<a href="#s3_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Dict[Resource<wbr>Data<wbr>Sync<wbr>S3Destination]</a></span>
     </dt>
@@ -391,7 +405,9 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -418,7 +434,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +451,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +468,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -604,7 +628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -613,7 +639,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Destination</span>
+        <span id="state_s3destination_csharp">
+<a href="#state_s3destination_csharp" style="color: inherit; text-decoration: inherit;">S3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
@@ -629,7 +657,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -638,7 +668,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Destination</span>
+        <span id="state_s3destination_go">
+<a href="#state_s3destination_go" style="color: inherit; text-decoration: inherit;">S3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
     </dt>
@@ -654,7 +686,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -663,7 +697,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Destination</span>
+        <span id="state_s3destination_nodejs">
+<a href="#state_s3destination_nodejs" style="color: inherit; text-decoration: inherit;">s3Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
     </dt>
@@ -679,7 +715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +726,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>destination</span>
+        <span id="state_s3_destination_python">
+<a href="#state_s3_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcedatasyncs3destination">Dict[Resource<wbr>Data<wbr>Sync<wbr>S3Destination]</a></span>
     </dt>
@@ -730,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -757,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -766,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sync<wbr>Format</span>
+        <span id="syncformat_csharp">
+<a href="#syncformat_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -782,7 +832,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sync<wbr>Format</span>
+        <span id="syncformat_go">
+<a href="#syncformat_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -834,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Name</span>
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -852,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -870,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sync<wbr>Format</span>
+        <span id="syncformat_nodejs">
+<a href="#syncformat_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -886,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>bucket_<wbr>name</span>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -895,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -904,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -922,7 +1000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sync<wbr>Format</span>
+        <span id="syncformat_python">
+<a href="#syncformat_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

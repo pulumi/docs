@@ -238,7 +238,9 @@ The BgpPeer resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_csharp">
+<a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +249,9 @@ The BgpPeer resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Asn</span>
+        <span id="bgpasn_csharp">
+<a href="#bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -256,7 +260,9 @@ The BgpPeer resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Interface<wbr>Id</span>
+        <span id="virtualinterfaceid_csharp">
+<a href="#virtualinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +271,9 @@ The BgpPeer resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="amazonaddress_csharp">
+<a href="#amazonaddress_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +283,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_csharp">
+<a href="#bgpauthkey_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +294,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="customeraddress_csharp">
+<a href="#customeraddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +313,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_go">
+<a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -310,7 +324,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Asn</span>
+        <span id="bgpasn_go">
+<a href="#bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -319,7 +335,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Interface<wbr>Id</span>
+        <span id="virtualinterfaceid_go">
+<a href="#virtualinterfaceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -328,7 +346,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="amazonaddress_go">
+<a href="#amazonaddress_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +358,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_go">
+<a href="#bgpauthkey_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +369,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="customeraddress_go">
+<a href="#customeraddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -364,7 +388,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Family</span>
+        <span id="addressfamily_nodejs">
+<a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -373,7 +399,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>bgp<wbr>Asn</span>
+        <span id="bgpasn_nodejs">
+<a href="#bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -382,7 +410,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Interface<wbr>Id</span>
+        <span id="virtualinterfaceid_nodejs">
+<a href="#virtualinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +421,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon<wbr>Address</span>
+        <span id="amazonaddress_nodejs">
+<a href="#amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -401,7 +433,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_nodejs">
+<a href="#bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -410,7 +444,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Address</span>
+        <span id="customeraddress_nodejs">
+<a href="#customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +463,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>family</span>
+        <span id="address_family_python">
+<a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +474,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>bgp_<wbr>asn</span>
+        <span id="bgp_asn_python">
+<a href="#bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -445,7 +485,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>interface_<wbr>id</span>
+        <span id="virtual_interface_id_python">
+<a href="#virtual_interface_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -454,7 +496,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon_<wbr>address</span>
+        <span id="amazon_address_python">
+<a href="#amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -464,7 +508,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span id="bgp_auth_key_python">
+<a href="#bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -473,7 +519,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer_<wbr>address</span>
+        <span id="customer_address_python">
+<a href="#customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -501,7 +549,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Aws<wbr>Device</span>
+        <span id="awsdevice_csharp">
+<a href="#awsdevice_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -510,7 +560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Peer<wbr>Id</span>
+        <span id="bgppeerid_csharp">
+<a href="#bgppeerid_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -519,7 +571,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Status</span>
+        <span id="bgpstatus_csharp">
+<a href="#bgpstatus_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -528,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -543,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Aws<wbr>Device</span>
+        <span id="awsdevice_go">
+<a href="#awsdevice_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +610,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Peer<wbr>Id</span>
+        <span id="bgppeerid_go">
+<a href="#bgppeerid_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -561,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Status</span>
+        <span id="bgpstatus_go">
+<a href="#bgpstatus_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -570,7 +632,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +649,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>aws<wbr>Device</span>
+        <span id="awsdevice_nodejs">
+<a href="#awsdevice_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +660,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bgp<wbr>Peer<wbr>Id</span>
+        <span id="bgppeerid_nodejs">
+<a href="#bgppeerid_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -603,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bgp<wbr>Status</span>
+        <span id="bgpstatus_nodejs">
+<a href="#bgpstatus_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -612,7 +682,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -627,7 +699,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>aws_<wbr>device</span>
+        <span id="aws_device_python">
+<a href="#aws_device_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +710,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bgp_<wbr>peer_<wbr>id</span>
+        <span id="bgp_peer_id_python">
+<a href="#bgp_peer_id_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +721,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bgp_<wbr>status</span>
+        <span id="bgp_status_python">
+<a href="#bgp_status_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -654,7 +732,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -795,7 +875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_csharp">
+<a href="#state_addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -804,7 +886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="state_amazonaddress_csharp">
+<a href="#state_amazonaddress_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -814,7 +898,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Device</span>
+        <span id="state_awsdevice_csharp">
+<a href="#state_awsdevice_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -823,7 +909,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Asn</span>
+        <span id="state_bgpasn_csharp">
+<a href="#state_bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -832,7 +920,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_csharp">
+<a href="#state_bgpauthkey_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -841,7 +931,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Peer<wbr>Id</span>
+        <span id="state_bgppeerid_csharp">
+<a href="#state_bgppeerid_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +942,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Status</span>
+        <span id="state_bgpstatus_csharp">
+<a href="#state_bgpstatus_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -859,7 +953,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="state_customeraddress_csharp">
+<a href="#state_customeraddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -869,7 +965,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Interface<wbr>Id</span>
+        <span id="state_virtualinterfaceid_csharp">
+<a href="#state_virtualinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -885,7 +983,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_go">
+<a href="#state_addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -894,7 +994,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="state_amazonaddress_go">
+<a href="#state_amazonaddress_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1006,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Device</span>
+        <span id="state_awsdevice_go">
+<a href="#state_awsdevice_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +1017,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Asn</span>
+        <span id="state_bgpasn_go">
+<a href="#state_bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -922,7 +1028,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_go">
+<a href="#state_bgpauthkey_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1039,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Peer<wbr>Id</span>
+        <span id="state_bgppeerid_go">
+<a href="#state_bgppeerid_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -940,7 +1050,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Status</span>
+        <span id="state_bgpstatus_go">
+<a href="#state_bgpstatus_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -949,7 +1061,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="state_customeraddress_go">
+<a href="#state_customeraddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1073,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Interface<wbr>Id</span>
+        <span id="state_virtualinterfaceid_go">
+<a href="#state_virtualinterfaceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -975,7 +1091,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Family</span>
+        <span id="state_addressfamily_nodejs">
+<a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -984,7 +1102,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon<wbr>Address</span>
+        <span id="state_amazonaddress_nodejs">
+<a href="#state_amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -994,7 +1114,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Device</span>
+        <span id="state_awsdevice_nodejs">
+<a href="#state_awsdevice_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1003,7 +1125,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Asn</span>
+        <span id="state_bgpasn_nodejs">
+<a href="#state_bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1012,7 +1136,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_nodejs">
+<a href="#state_bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1021,7 +1147,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Peer<wbr>Id</span>
+        <span id="state_bgppeerid_nodejs">
+<a href="#state_bgppeerid_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1030,7 +1158,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Status</span>
+        <span id="state_bgpstatus_nodejs">
+<a href="#state_bgpstatus_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1039,7 +1169,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Address</span>
+        <span id="state_customeraddress_nodejs">
+<a href="#state_customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1049,7 +1181,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Interface<wbr>Id</span>
+        <span id="state_virtualinterfaceid_nodejs">
+<a href="#state_virtualinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1065,7 +1199,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>family</span>
+        <span id="state_address_family_python">
+<a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1074,7 +1210,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon_<wbr>address</span>
+        <span id="state_amazon_address_python">
+<a href="#state_amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1084,7 +1222,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>device</span>
+        <span id="state_aws_device_python">
+<a href="#state_aws_device_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1093,7 +1233,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>asn</span>
+        <span id="state_bgp_asn_python">
+<a href="#state_bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1102,7 +1244,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span id="state_bgp_auth_key_python">
+<a href="#state_bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1111,7 +1255,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>peer_<wbr>id</span>
+        <span id="state_bgp_peer_id_python">
+<a href="#state_bgp_peer_id_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1120,7 +1266,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>status</span>
+        <span id="state_bgp_status_python">
+<a href="#state_bgp_status_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1129,7 +1277,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer_<wbr>address</span>
+        <span id="state_customer_address_python">
+<a href="#state_customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1139,7 +1289,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>interface_<wbr>id</span>
+        <span id="state_virtual_interface_id_python">
+<a href="#state_virtual_interface_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

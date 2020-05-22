@@ -196,7 +196,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Spec</span>
+        <span id="spec_csharp">
+<a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec<wbr>Args</a></span>
     </dt>
@@ -204,7 +206,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
@@ -219,7 +223,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Spec</span>
+        <span id="spec_go">
+<a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
     </dt>
@@ -227,7 +233,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
@@ -242,7 +250,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>spec</span>
+        <span id="spec_nodejs">
+<a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
     </dt>
@@ -250,7 +260,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
@@ -265,7 +277,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>spec</span>
+        <span id="spec_python">
+<a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionspec">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Spec]</a></span>
     </dt>
@@ -273,7 +287,9 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
     </dt>
@@ -299,7 +315,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +325,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
@@ -322,7 +342,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +352,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
@@ -345,7 +369,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -353,7 +379,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
@@ -368,7 +396,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -376,7 +406,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Status]</a></span>
     </dt>
@@ -415,7 +447,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>JSONPath</span>
+        <span id="jsonpath_csharp">
+<a href="#jsonpath_csharp" style="color: inherit; text-decoration: inherit;">JSONPath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -423,7 +457,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -439,7 +477,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -447,7 +487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -455,7 +497,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -470,7 +514,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>JSONPath</span>
+        <span id="jsonpath_go">
+<a href="#jsonpath_go" style="color: inherit; text-decoration: inherit;">JSONPath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -478,7 +524,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -486,7 +534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -494,7 +544,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +564,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -525,7 +581,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>JSONPath</span>
+        <span id="jsonpath_nodejs">
+<a href="#jsonpath_nodejs" style="color: inherit; text-decoration: inherit;">JSONPath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -533,7 +591,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -541,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -549,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -580,7 +648,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>json_<wbr>path</span>
+        <span id="json_path_python">
+<a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +658,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -596,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -604,7 +678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +688,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -620,7 +698,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -650,7 +730,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Strategy</span>
+        <span id="strategy_csharp">
+<a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -659,7 +741,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conversion<wbr>Review<wbr>Versions</span>
+        <span id="conversionreviewversions_csharp">
+<a href="#conversionreviewversions_csharp" style="color: inherit; text-decoration: inherit;">Conversion<wbr>Review<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -667,7 +751,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Client<wbr>Config</span>
+        <span id="webhookclientconfig_csharp">
+<a href="#webhookclientconfig_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Client<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -682,7 +768,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Strategy</span>
+        <span id="strategy_go">
+<a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -691,7 +779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conversion<wbr>Review<wbr>Versions</span>
+        <span id="conversionreviewversions_go">
+<a href="#conversionreviewversions_go" style="color: inherit; text-decoration: inherit;">Conversion<wbr>Review<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -699,7 +789,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Client<wbr>Config</span>
+        <span id="webhookclientconfig_go">
+<a href="#webhookclientconfig_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Client<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
@@ -714,7 +806,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>strategy</span>
+        <span id="strategy_nodejs">
+<a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -723,7 +817,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conversion<wbr>Review<wbr>Versions</span>
+        <span id="conversionreviewversions_nodejs">
+<a href="#conversionreviewversions_nodejs" style="color: inherit; text-decoration: inherit;">conversion<wbr>Review<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -731,7 +827,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook<wbr>Client<wbr>Config</span>
+        <span id="webhookclientconfig_nodejs">
+<a href="#webhookclientconfig_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Client<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
@@ -746,7 +844,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>strategy</span>
+        <span id="strategy_python">
+<a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -755,7 +855,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conversion_<wbr>review_<wbr>versions</span>
+        <span id="conversion_review_versions_python">
+<a href="#conversion_review_versions_python" style="color: inherit; text-decoration: inherit;">conversion_<wbr>review_<wbr>versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -763,7 +865,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook_<wbr>client_<wbr>config</span>
+        <span id="webhook_client_config_python">
+<a href="#webhook_client_config_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>client_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookclientconfig">Dict[Webhook<wbr>Client<wbr>Config]</a></span>
     </dt>
@@ -793,7 +897,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Transition<wbr>Time</span>
+        <span id="lasttransitiontime_csharp">
+<a href="#lasttransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +927,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message</span>
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -825,7 +937,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reason</span>
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -840,7 +954,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -848,7 +964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +974,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Transition<wbr>Time</span>
+        <span id="lasttransitiontime_go">
+<a href="#lasttransitiontime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -864,7 +984,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message</span>
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -872,7 +994,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reason</span>
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +1011,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -895,7 +1021,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -903,7 +1031,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Transition<wbr>Time</span>
+        <span id="lasttransitiontime_nodejs">
+<a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -911,7 +1041,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>message</span>
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -919,7 +1051,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>reason</span>
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -934,7 +1068,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -942,7 +1078,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -950,7 +1088,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>transition_<wbr>time</span>
+        <span id="last_transition_time_python">
+<a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -958,7 +1098,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>message</span>
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -966,7 +1108,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>reason</span>
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -996,7 +1140,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Plural</span>
+        <span id="plural_csharp">
+<a href="#plural_csharp" style="color: inherit; text-decoration: inherit;">Plural</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1004,7 +1150,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Categories</span>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1012,7 +1160,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>List<wbr>Kind</span>
+        <span id="listkind_csharp">
+<a href="#listkind_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1020,7 +1170,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Short<wbr>Names</span>
+        <span id="shortnames_csharp">
+<a href="#shortnames_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1028,7 +1180,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Singular</span>
+        <span id="singular_csharp">
+<a href="#singular_csharp" style="color: inherit; text-decoration: inherit;">Singular</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1197,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Plural</span>
+        <span id="plural_go">
+<a href="#plural_go" style="color: inherit; text-decoration: inherit;">Plural</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1051,7 +1207,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Categories</span>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1059,7 +1217,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>List<wbr>Kind</span>
+        <span id="listkind_go">
+<a href="#listkind_go" style="color: inherit; text-decoration: inherit;">List<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1067,7 +1227,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Short<wbr>Names</span>
+        <span id="shortnames_go">
+<a href="#shortnames_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1075,7 +1237,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Singular</span>
+        <span id="singular_go">
+<a href="#singular_go" style="color: inherit; text-decoration: inherit;">Singular</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1090,7 +1254,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>plural</span>
+        <span id="plural_nodejs">
+<a href="#plural_nodejs" style="color: inherit; text-decoration: inherit;">plural</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1264,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>categories</span>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1106,7 +1274,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>list<wbr>Kind</span>
+        <span id="listkind_nodejs">
+<a href="#listkind_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1114,7 +1284,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>short<wbr>Names</span>
+        <span id="shortnames_nodejs">
+<a href="#shortnames_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1122,7 +1294,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>singular</span>
+        <span id="singular_nodejs">
+<a href="#singular_nodejs" style="color: inherit; text-decoration: inherit;">singular</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1137,7 +1311,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>plural</span>
+        <span id="plural_python">
+<a href="#plural_python" style="color: inherit; text-decoration: inherit;">plural</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1145,7 +1321,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>categories</span>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1153,7 +1331,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>list_<wbr>kind</span>
+        <span id="list_kind_python">
+<a href="#list_kind_python" style="color: inherit; text-decoration: inherit;">list_<wbr>kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1161,7 +1341,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>short_<wbr>names</span>
+        <span id="short_names_python">
+<a href="#short_names_python" style="color: inherit; text-decoration: inherit;">short_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1169,7 +1351,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>singular</span>
+        <span id="singular_python">
+<a href="#singular_python" style="color: inherit; text-decoration: inherit;">singular</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1199,7 +1383,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Group</span>
+        <span id="group_csharp">
+<a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1207,7 +1393,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
@@ -1215,7 +1403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1223,7 +1413,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_csharp">
+<a href="#additionalprintercolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
@@ -1231,7 +1423,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conversion</span>
+        <span id="conversion_csharp">
+<a href="#conversion_csharp" style="color: inherit; text-decoration: inherit;">Conversion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
     </dt>
@@ -1239,7 +1433,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserve<wbr>Unknown<wbr>Fields</span>
+        <span id="preserveunknownfields_csharp">
+<a href="#preserveunknownfields_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unknown<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1247,7 +1443,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subresources</span>
+        <span id="subresources_csharp">
+<a href="#subresources_csharp" style="color: inherit; text-decoration: inherit;">Subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
     </dt>
@@ -1255,7 +1453,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation</span>
+        <span id="validation_csharp">
+<a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
     </dt>
@@ -1263,7 +1463,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1271,7 +1473,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionversion">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
@@ -1286,7 +1490,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Group</span>
+        <span id="group_go">
+<a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1294,7 +1500,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
@@ -1302,7 +1510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1310,7 +1520,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_go">
+<a href="#additionalprintercolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">[]Custom<wbr>Resource<wbr>Column<wbr>Definition</a></span>
     </dt>
@@ -1318,7 +1530,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conversion</span>
+        <span id="conversion_go">
+<a href="#conversion_go" style="color: inherit; text-decoration: inherit;">Conversion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
@@ -1326,7 +1540,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserve<wbr>Unknown<wbr>Fields</span>
+        <span id="preserveunknownfields_go">
+<a href="#preserveunknownfields_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unknown<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1334,7 +1550,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subresources</span>
+        <span id="subresources_go">
+<a href="#subresources_go" style="color: inherit; text-decoration: inherit;">Subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
@@ -1342,7 +1560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Validation</span>
+        <span id="validation_go">
+<a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
@@ -1350,7 +1570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1358,7 +1580,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionversion">[]Custom<wbr>Resource<wbr>Definition<wbr>Version</a></span>
     </dt>
@@ -1373,7 +1597,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>group</span>
+        <span id="group_nodejs">
+<a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1381,7 +1607,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
@@ -1389,7 +1617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1397,7 +1627,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_nodejs">
+<a href="#additionalprintercolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition[]</a></span>
     </dt>
@@ -1405,7 +1637,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conversion</span>
+        <span id="conversion_nodejs">
+<a href="#conversion_nodejs" style="color: inherit; text-decoration: inherit;">conversion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
@@ -1413,7 +1647,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserve<wbr>Unknown<wbr>Fields</span>
+        <span id="preserveunknownfields_nodejs">
+<a href="#preserveunknownfields_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unknown<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1421,7 +1657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>subresources</span>
+        <span id="subresources_nodejs">
+<a href="#subresources_nodejs" style="color: inherit; text-decoration: inherit;">subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
@@ -1429,7 +1667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation</span>
+        <span id="validation_nodejs">
+<a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
@@ -1437,7 +1677,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1445,7 +1687,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version[]</a></span>
     </dt>
@@ -1460,7 +1704,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>group</span>
+        <span id="group_python">
+<a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1468,7 +1714,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Names]</a></span>
     </dt>
@@ -1476,7 +1724,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1484,7 +1734,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>printer_<wbr>columns</span>
+        <span id="additional_printer_columns_python">
+<a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
     </dt>
@@ -1492,7 +1744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conversion</span>
+        <span id="conversion_python">
+<a href="#conversion_python" style="color: inherit; text-decoration: inherit;">conversion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourceconversion">Dict[Custom<wbr>Resource<wbr>Conversion]</a></span>
     </dt>
@@ -1500,7 +1754,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserve_<wbr>unknown_<wbr>fields</span>
+        <span id="preserve_unknown_fields_python">
+<a href="#preserve_unknown_fields_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unknown_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1508,7 +1764,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>subresources</span>
+        <span id="subresources_python">
+<a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Dict[Custom<wbr>Resource<wbr>Subresources]</a></span>
     </dt>
@@ -1516,7 +1774,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>validation</span>
+        <span id="validation_python">
+<a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Dict[Custom<wbr>Resource<wbr>Validation]</a></span>
     </dt>
@@ -1524,7 +1784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1532,7 +1794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionversion">List[Custom<wbr>Resource<wbr>Definition<wbr>Version]</a></span>
     </dt>
@@ -1562,7 +1826,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Accepted<wbr>Names</span>
+        <span id="acceptednames_csharp">
+<a href="#acceptednames_csharp" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
@@ -1570,7 +1836,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Stored<wbr>Versions</span>
+        <span id="storedversions_csharp">
+<a href="#storedversions_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1578,7 +1846,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conditions</span>
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitioncondition">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
@@ -1593,7 +1863,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Accepted<wbr>Names</span>
+        <span id="acceptednames_go">
+<a href="#acceptednames_go" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
@@ -1601,7 +1873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Stored<wbr>Versions</span>
+        <span id="storedversions_go">
+<a href="#storedversions_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1609,7 +1883,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conditions</span>
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitioncondition">[]Custom<wbr>Resource<wbr>Definition<wbr>Condition</a></span>
     </dt>
@@ -1624,7 +1900,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>accepted<wbr>Names</span>
+        <span id="acceptednames_nodejs">
+<a href="#acceptednames_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
@@ -1632,7 +1910,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>stored<wbr>Versions</span>
+        <span id="storedversions_nodejs">
+<a href="#storedversions_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1640,7 +1920,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conditions</span>
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition[]</a></span>
     </dt>
@@ -1655,7 +1937,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>accepted_<wbr>names</span>
+        <span id="accepted_names_python">
+<a href="#accepted_names_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Names]</a></span>
     </dt>
@@ -1663,7 +1947,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>stored_<wbr>versions</span>
+        <span id="stored_versions_python">
+<a href="#stored_versions_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1671,7 +1957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>conditions</span>
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitioncondition">List[Custom<wbr>Resource<wbr>Definition<wbr>Condition]</a></span>
     </dt>
@@ -1701,7 +1989,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1709,7 +1999,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Served</span>
+        <span id="served_csharp">
+<a href="#served_csharp" style="color: inherit; text-decoration: inherit;">Served</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1717,7 +2009,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Storage</span>
+        <span id="storage_csharp">
+<a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1725,7 +2019,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_csharp">
+<a href="#additionalprintercolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
@@ -1733,7 +2029,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema</span>
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
     </dt>
@@ -1741,7 +2039,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subresources</span>
+        <span id="subresources_csharp">
+<a href="#subresources_csharp" style="color: inherit; text-decoration: inherit;">Subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
     </dt>
@@ -1756,7 +2056,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1764,7 +2066,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Served</span>
+        <span id="served_go">
+<a href="#served_go" style="color: inherit; text-decoration: inherit;">Served</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1772,7 +2076,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Storage</span>
+        <span id="storage_go">
+<a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1780,7 +2086,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_go">
+<a href="#additionalprintercolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">[]Custom<wbr>Resource<wbr>Column<wbr>Definition</a></span>
     </dt>
@@ -1788,7 +2096,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema</span>
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
@@ -1796,7 +2106,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subresources</span>
+        <span id="subresources_go">
+<a href="#subresources_go" style="color: inherit; text-decoration: inherit;">Subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
@@ -1811,7 +2123,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1819,7 +2133,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>served</span>
+        <span id="served_nodejs">
+<a href="#served_nodejs" style="color: inherit; text-decoration: inherit;">served</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1827,7 +2143,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>storage</span>
+        <span id="storage_nodejs">
+<a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1835,7 +2153,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Printer<wbr>Columns</span>
+        <span id="additionalprintercolumns_nodejs">
+<a href="#additionalprintercolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Printer<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition[]</a></span>
     </dt>
@@ -1843,7 +2163,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema</span>
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
@@ -1851,7 +2173,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>subresources</span>
+        <span id="subresources_nodejs">
+<a href="#subresources_nodejs" style="color: inherit; text-decoration: inherit;">subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
@@ -1866,7 +2190,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1874,7 +2200,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>served</span>
+        <span id="served_python">
+<a href="#served_python" style="color: inherit; text-decoration: inherit;">served</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1882,7 +2210,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>storage</span>
+        <span id="storage_python">
+<a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1890,7 +2220,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>printer_<wbr>columns</span>
+        <span id="additional_printer_columns_python">
+<a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
     </dt>
@@ -1898,7 +2230,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema</span>
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcevalidation">Dict[Custom<wbr>Resource<wbr>Validation]</a></span>
     </dt>
@@ -1906,7 +2240,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>subresources</span>
+        <span id="subresources_python">
+<a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresources">Dict[Custom<wbr>Resource<wbr>Subresources]</a></span>
     </dt>
@@ -1936,7 +2272,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Spec<wbr>Replicas<wbr>Path</span>
+        <span id="specreplicaspath_csharp">
+<a href="#specreplicaspath_csharp" style="color: inherit; text-decoration: inherit;">Spec<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1944,7 +2282,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Status<wbr>Replicas<wbr>Path</span>
+        <span id="statusreplicaspath_csharp">
+<a href="#statusreplicaspath_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1952,7 +2292,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Selector<wbr>Path</span>
+        <span id="labelselectorpath_csharp">
+<a href="#labelselectorpath_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1967,7 +2309,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Spec<wbr>Replicas<wbr>Path</span>
+        <span id="specreplicaspath_go">
+<a href="#specreplicaspath_go" style="color: inherit; text-decoration: inherit;">Spec<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1975,7 +2319,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Status<wbr>Replicas<wbr>Path</span>
+        <span id="statusreplicaspath_go">
+<a href="#statusreplicaspath_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1983,7 +2329,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Selector<wbr>Path</span>
+        <span id="labelselectorpath_go">
+<a href="#labelselectorpath_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1998,7 +2346,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>spec<wbr>Replicas<wbr>Path</span>
+        <span id="specreplicaspath_nodejs">
+<a href="#specreplicaspath_nodejs" style="color: inherit; text-decoration: inherit;">spec<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2006,7 +2356,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>status<wbr>Replicas<wbr>Path</span>
+        <span id="statusreplicaspath_nodejs">
+<a href="#statusreplicaspath_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Replicas<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2014,7 +2366,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Selector<wbr>Path</span>
+        <span id="labelselectorpath_nodejs">
+<a href="#labelselectorpath_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2029,7 +2383,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>spec_<wbr>replicas_<wbr>path</span>
+        <span id="spec_replicas_path_python">
+<a href="#spec_replicas_path_python" style="color: inherit; text-decoration: inherit;">spec_<wbr>replicas_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2037,7 +2393,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>status_<wbr>replicas_<wbr>path</span>
+        <span id="status_replicas_path_python">
+<a href="#status_replicas_path_python" style="color: inherit; text-decoration: inherit;">status_<wbr>replicas_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2045,7 +2403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>label_<wbr>selector_<wbr>path</span>
+        <span id="label_selector_path_python">
+<a href="#label_selector_path_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2075,7 +2435,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale</span>
+        <span id="scale_csharp">
+<a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
     </dt>
@@ -2083,7 +2445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
@@ -2098,7 +2462,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale</span>
+        <span id="scale_go">
+<a href="#scale_go" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
@@ -2106,7 +2472,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
@@ -2121,7 +2489,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale</span>
+        <span id="scale_nodejs">
+<a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
@@ -2129,7 +2499,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
@@ -2144,7 +2516,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale</span>
+        <span id="scale_python">
+<a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcesubresourcescale">Dict[Custom<wbr>Resource<wbr>Subresource<wbr>Scale]</a></span>
     </dt>
@@ -2152,7 +2526,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
@@ -2182,7 +2558,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Open<wbr>APIV3Schema</span>
+        <span id="openapiv3schema_csharp">
+<a href="#openapiv3schema_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>APIV3Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
@@ -2197,7 +2575,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Open<wbr>APIV3Schema</span>
+        <span id="openapiv3schema_go">
+<a href="#openapiv3schema_go" style="color: inherit; text-decoration: inherit;">Open<wbr>APIV3Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2212,7 +2592,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>open<wbr>APIV3Schema</span>
+        <span id="openapiv3schema_nodejs">
+<a href="#openapiv3schema_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>APIV3Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2227,7 +2609,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>open_<wbr>apiv3_<wbr>schema</span>
+        <span id="open_apiv3_schema_python">
+<a href="#open_apiv3_schema_python" style="color: inherit; text-decoration: inherit;">open_<wbr>apiv3_<wbr>schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">Dict[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -2257,7 +2641,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2265,7 +2651,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2280,7 +2668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2288,7 +2678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2303,7 +2695,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2311,7 +2705,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2326,7 +2722,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2334,7 +2732,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2364,7 +2764,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Items</span>
+        <span id="additionalitems_csharp">
+<a href="#additionalitems_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
     </dt>
@@ -2372,7 +2774,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
     </dt>
@@ -2380,7 +2784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Of</span>
+        <span id="allof_csharp">
+<a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
@@ -2388,7 +2794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Any<wbr>Of</span>
+        <span id="anyof_csharp">
+<a href="#anyof_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
@@ -2396,7 +2804,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default</span>
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
@@ -2404,7 +2814,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Definitions</span>
+        <span id="definitions_csharp">
+<a href="#definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
@@ -2412,7 +2824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dependencies</span>
+        <span id="dependencies_csharp">
+<a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;string&gt;&gt;&gt;</span>
     </dt>
@@ -2420,7 +2834,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2428,7 +2844,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enum</span>
+        <span id="enum_csharp">
+<a href="#enum_csharp" style="color: inherit; text-decoration: inherit;">Enum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
@@ -2436,7 +2854,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Example</span>
+        <span id="example_csharp">
+<a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
@@ -2444,7 +2864,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive<wbr>Maximum</span>
+        <span id="exclusivemaximum_csharp">
+<a href="#exclusivemaximum_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2452,7 +2874,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive<wbr>Minimum</span>
+        <span id="exclusiveminimum_csharp">
+<a href="#exclusiveminimum_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2460,7 +2884,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Docs</span>
+        <span id="externaldocs_csharp">
+<a href="#externaldocs_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Docs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
     </dt>
@@ -2468,7 +2894,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2478,7 +2906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2486,7 +2916,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;object&gt;&gt;</span>
     </dt>
@@ -2494,7 +2926,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Items</span>
+        <span id="maxitems_csharp">
+<a href="#maxitems_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2502,7 +2936,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Length</span>
+        <span id="maxlength_csharp">
+<a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2510,7 +2946,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Properties</span>
+        <span id="maxproperties_csharp">
+<a href="#maxproperties_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2518,7 +2956,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum</span>
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2526,7 +2966,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Items</span>
+        <span id="minitems_csharp">
+<a href="#minitems_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2534,7 +2976,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Length</span>
+        <span id="minlength_csharp">
+<a href="#minlength_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2542,7 +2986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Properties</span>
+        <span id="minproperties_csharp">
+<a href="#minproperties_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2550,7 +2996,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum</span>
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2558,7 +3006,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiple<wbr>Of</span>
+        <span id="multipleof_csharp">
+<a href="#multipleof_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2566,7 +3016,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not</span>
+        <span id="not_csharp">
+<a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
@@ -2574,7 +3026,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nullable</span>
+        <span id="nullable_csharp">
+<a href="#nullable_csharp" style="color: inherit; text-decoration: inherit;">Nullable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2582,7 +3036,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>One<wbr>Of</span>
+        <span id="oneof_csharp">
+<a href="#oneof_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
@@ -2590,7 +3046,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pattern</span>
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2598,7 +3056,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pattern<wbr>Properties</span>
+        <span id="patternproperties_csharp">
+<a href="#patternproperties_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
@@ -2606,7 +3066,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
@@ -2614,7 +3076,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ref</span>
+        <span id="ref_csharp">
+<a href="#ref_csharp" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2622,7 +3086,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required</span>
+        <span id="required_csharp">
+<a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2630,7 +3096,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema</span>
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2638,7 +3106,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Title</span>
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2646,7 +3116,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2654,7 +3126,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Items</span>
+        <span id="uniqueitems_csharp">
+<a href="#uniqueitems_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2662,7 +3136,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
+        <span id="x_kubernetes_embedded_resource_csharp">
+<a href="#x_kubernetes_embedded_resource_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2670,7 +3146,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
+        <span id="x_kubernetes_int_or_string_csharp">
+<a href="#x_kubernetes_int_or_string_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2687,7 +3165,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
+        <span id="x_kubernetes_list_map_keys_csharp">
+<a href="#x_kubernetes_list_map_keys_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2699,7 +3179,9 @@ The properties specified must either be required or have a default value, to ens
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>list_<wbr>type</span>
+        <span id="x_kubernetes_list_type_csharp">
+<a href="#x_kubernetes_list_type_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>list_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2720,7 +3202,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>map_<wbr>type</span>
+        <span id="x_kubernetes_map_type_csharp">
+<a href="#x_kubernetes_map_type_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>map_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2735,7 +3219,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
+        <span id="x_kubernetes_preserve_unknown_fields_csharp">
+<a href="#x_kubernetes_preserve_unknown_fields_csharp" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2750,7 +3236,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>$Ref</span>
+        <span id="$ref_go">
+<a href="#$ref_go" style="color: inherit; text-decoration: inherit;">$Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2758,7 +3246,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>$Schema</span>
+        <span id="$schema_go">
+<a href="#$schema_go" style="color: inherit; text-decoration: inherit;">$Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2766,7 +3256,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Items</span>
+        <span id="additionalitems_go">
+<a href="#additionalitems_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -2774,7 +3266,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -2782,7 +3276,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Of</span>
+        <span id="allof_go">
+<a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">[]JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2790,7 +3286,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Any<wbr>Of</span>
+        <span id="anyof_go">
+<a href="#anyof_go" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">[]JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2798,7 +3296,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default</span>
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
@@ -2806,7 +3306,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Definitions</span>
+        <span id="definitions_go">
+<a href="#definitions_go" style="color: inherit; text-decoration: inherit;">Definitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
@@ -2814,7 +3316,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dependencies</span>
+        <span id="dependencies_go">
+<a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2822,7 +3326,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2830,7 +3336,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enum</span>
+        <span id="enum_go">
+<a href="#enum_go" style="color: inherit; text-decoration: inherit;">Enum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
@@ -2838,7 +3346,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Example</span>
+        <span id="example_go">
+<a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
@@ -2846,7 +3356,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive<wbr>Maximum</span>
+        <span id="exclusivemaximum_go">
+<a href="#exclusivemaximum_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2854,7 +3366,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive<wbr>Minimum</span>
+        <span id="exclusiveminimum_go">
+<a href="#exclusiveminimum_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2862,7 +3376,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Docs</span>
+        <span id="externaldocs_go">
+<a href="#externaldocs_go" style="color: inherit; text-decoration: inherit;">External<wbr>Docs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
@@ -2870,7 +3386,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2880,7 +3398,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2888,7 +3408,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -2896,7 +3418,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Items</span>
+        <span id="maxitems_go">
+<a href="#maxitems_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2904,7 +3428,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Length</span>
+        <span id="maxlength_go">
+<a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2912,7 +3438,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Properties</span>
+        <span id="maxproperties_go">
+<a href="#maxproperties_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2920,7 +3448,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum</span>
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2928,7 +3458,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Items</span>
+        <span id="minitems_go">
+<a href="#minitems_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2936,7 +3468,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Length</span>
+        <span id="minlength_go">
+<a href="#minlength_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2944,7 +3478,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Properties</span>
+        <span id="minproperties_go">
+<a href="#minproperties_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2952,7 +3488,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum</span>
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2960,7 +3498,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiple<wbr>Of</span>
+        <span id="multipleof_go">
+<a href="#multipleof_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2968,7 +3508,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not</span>
+        <span id="not_go">
+<a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2976,7 +3518,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nullable</span>
+        <span id="nullable_go">
+<a href="#nullable_go" style="color: inherit; text-decoration: inherit;">Nullable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2984,7 +3528,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>One<wbr>Of</span>
+        <span id="oneof_go">
+<a href="#oneof_go" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">[]JSONSchema<wbr>Props</a></span>
     </dt>
@@ -2992,7 +3538,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pattern</span>
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3000,7 +3548,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pattern<wbr>Properties</span>
+        <span id="patternproperties_go">
+<a href="#patternproperties_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
@@ -3008,7 +3558,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
@@ -3016,7 +3568,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required</span>
+        <span id="required_go">
+<a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3024,7 +3578,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Title</span>
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3032,7 +3588,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3040,7 +3598,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Items</span>
+        <span id="uniqueitems_go">
+<a href="#uniqueitems_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3048,7 +3608,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
+        <span id="x_kubernetes_embedded_resource_go">
+<a href="#x_kubernetes_embedded_resource_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3056,7 +3618,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
+        <span id="x_kubernetes_int_or_string_go">
+<a href="#x_kubernetes_int_or_string_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3073,7 +3637,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
+        <span id="x_kubernetes_list_map_keys_go">
+<a href="#x_kubernetes_list_map_keys_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3085,7 +3651,9 @@ The properties specified must either be required or have a default value, to ens
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>list_<wbr>type</span>
+        <span id="x_kubernetes_list_type_go">
+<a href="#x_kubernetes_list_type_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>list_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3106,7 +3674,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>map_<wbr>type</span>
+        <span id="x_kubernetes_map_type_go">
+<a href="#x_kubernetes_map_type_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>map_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3121,7 +3691,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
+        <span id="x_kubernetes_preserve_unknown_fields_go">
+<a href="#x_kubernetes_preserve_unknown_fields_go" style="color: inherit; text-decoration: inherit;">X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3136,7 +3708,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>$ref</span>
+        <span id="$ref_nodejs">
+<a href="#$ref_nodejs" style="color: inherit; text-decoration: inherit;">$ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3144,7 +3718,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>$schema</span>
+        <span id="$schema_nodejs">
+<a href="#$schema_nodejs" style="color: inherit; text-decoration: inherit;">$schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3152,7 +3728,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Items</span>
+        <span id="additionalitems_nodejs">
+<a href="#additionalitems_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">JSONSchema<wbr>Props | boolean</span>
     </dt>
@@ -3160,7 +3738,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">JSONSchema<wbr>Props | boolean</span>
     </dt>
@@ -3168,7 +3748,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Of</span>
+        <span id="allof_nodejs">
+<a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
@@ -3176,7 +3758,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>any<wbr>Of</span>
+        <span id="anyof_nodejs">
+<a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
@@ -3184,7 +3768,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>default</span>
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
@@ -3192,7 +3778,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>definitions</span>
+        <span id="definitions_nodejs">
+<a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
@@ -3200,7 +3788,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>dependencies</span>
+        <span id="dependencies_nodejs">
+<a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: JSONSchema<wbr>Props | string[]}</span>
     </dt>
@@ -3208,7 +3798,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3216,7 +3808,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>enum</span>
+        <span id="enum_nodejs">
+<a href="#enum_nodejs" style="color: inherit; text-decoration: inherit;">enum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
@@ -3224,7 +3818,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>example</span>
+        <span id="example_nodejs">
+<a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
@@ -3232,7 +3828,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive<wbr>Maximum</span>
+        <span id="exclusivemaximum_nodejs">
+<a href="#exclusivemaximum_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3240,7 +3838,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive<wbr>Minimum</span>
+        <span id="exclusiveminimum_nodejs">
+<a href="#exclusiveminimum_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3248,7 +3848,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Docs</span>
+        <span id="externaldocs_nodejs">
+<a href="#externaldocs_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Docs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
@@ -3256,7 +3858,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3266,7 +3870,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3274,7 +3880,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">JSONSchema<wbr>Props | any[]</span>
     </dt>
@@ -3282,7 +3890,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Items</span>
+        <span id="maxitems_nodejs">
+<a href="#maxitems_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3290,7 +3900,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Length</span>
+        <span id="maxlength_nodejs">
+<a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3298,7 +3910,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Properties</span>
+        <span id="maxproperties_nodejs">
+<a href="#maxproperties_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3306,7 +3920,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum</span>
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -3314,7 +3930,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Items</span>
+        <span id="minitems_nodejs">
+<a href="#minitems_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3322,7 +3940,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Length</span>
+        <span id="minlength_nodejs">
+<a href="#minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3330,7 +3950,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Properties</span>
+        <span id="minproperties_nodejs">
+<a href="#minproperties_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3338,7 +3960,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -3346,7 +3970,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiple<wbr>Of</span>
+        <span id="multipleof_nodejs">
+<a href="#multipleof_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -3354,7 +3980,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>not</span>
+        <span id="not_nodejs">
+<a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
@@ -3362,7 +3990,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>nullable</span>
+        <span id="nullable_nodejs">
+<a href="#nullable_nodejs" style="color: inherit; text-decoration: inherit;">nullable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3370,7 +4000,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>one<wbr>Of</span>
+        <span id="oneof_nodejs">
+<a href="#oneof_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
@@ -3378,7 +4010,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pattern</span>
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3386,7 +4020,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pattern<wbr>Properties</span>
+        <span id="patternproperties_nodejs">
+<a href="#patternproperties_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
@@ -3394,7 +4030,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
@@ -3402,7 +4040,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>required</span>
+        <span id="required_nodejs">
+<a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3410,7 +4050,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>title</span>
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3418,7 +4060,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3426,7 +4070,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Items</span>
+        <span id="uniqueitems_nodejs">
+<a href="#uniqueitems_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3434,7 +4080,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
+        <span id="x_kubernetes_embedded_resource_nodejs">
+<a href="#x_kubernetes_embedded_resource_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3442,7 +4090,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
+        <span id="x_kubernetes_int_or_string_nodejs">
+<a href="#x_kubernetes_int_or_string_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3459,7 +4109,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
+        <span id="x_kubernetes_list_map_keys_nodejs">
+<a href="#x_kubernetes_list_map_keys_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3471,7 +4123,9 @@ The properties specified must either be required or have a default value, to ens
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>list_<wbr>type</span>
+        <span id="x_kubernetes_list_type_nodejs">
+<a href="#x_kubernetes_list_type_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>list_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3492,7 +4146,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>map_<wbr>type</span>
+        <span id="x_kubernetes_map_type_nodejs">
+<a href="#x_kubernetes_map_type_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>map_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3507,7 +4163,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
+        <span id="x_kubernetes_preserve_unknown_fields_nodejs">
+<a href="#x_kubernetes_preserve_unknown_fields_nodejs" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3522,7 +4180,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>_<wbr>ref</span>
+        <span id="_ref_python">
+<a href="#_ref_python" style="color: inherit; text-decoration: inherit;">_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3530,7 +4190,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>_<wbr>schema</span>
+        <span id="_schema_python">
+<a href="#_schema_python" style="color: inherit; text-decoration: inherit;">_<wbr>schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3538,7 +4200,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>items</span>
+        <span id="additional_items_python">
+<a href="#additional_items_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
     </dt>
@@ -3546,7 +4210,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>properties</span>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
     </dt>
@@ -3554,7 +4220,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>of</span>
+        <span id="all_of_python">
+<a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3562,7 +4230,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>any_<wbr>of</span>
+        <span id="any_of_python">
+<a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3570,7 +4240,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>default</span>
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
@@ -3578,7 +4250,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>definitions</span>
+        <span id="definitions_python">
+<a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
@@ -3586,7 +4260,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>dependencies</span>
+        <span id="dependencies_python">
+<a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[JSONSchema<wbr>Props] | List[str]</span>
     </dt>
@@ -3594,7 +4270,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3602,7 +4280,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>enum</span>
+        <span id="enum_python">
+<a href="#enum_python" style="color: inherit; text-decoration: inherit;">enum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
@@ -3610,7 +4290,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>example</span>
+        <span id="example_python">
+<a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
@@ -3618,7 +4300,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive_<wbr>maximum</span>
+        <span id="exclusive_maximum_python">
+<a href="#exclusive_maximum_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3626,7 +4310,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive_<wbr>minimum</span>
+        <span id="exclusive_minimum_python">
+<a href="#exclusive_minimum_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3634,7 +4320,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>docs</span>
+        <span id="external_docs_python">
+<a href="#external_docs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>docs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externaldocumentation">Dict[External<wbr>Documentation]</a></span>
     </dt>
@@ -3642,7 +4330,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3652,7 +4342,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3660,7 +4352,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[JSONSchema<wbr>Props] | List[Any]</span>
     </dt>
@@ -3668,7 +4362,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>items</span>
+        <span id="max_items_python">
+<a href="#max_items_python" style="color: inherit; text-decoration: inherit;">max_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3676,7 +4372,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>length</span>
+        <span id="max_length_python">
+<a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3684,7 +4382,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>properties</span>
+        <span id="max_properties_python">
+<a href="#max_properties_python" style="color: inherit; text-decoration: inherit;">max_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3692,7 +4392,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum</span>
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3700,7 +4402,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>items</span>
+        <span id="min_items_python">
+<a href="#min_items_python" style="color: inherit; text-decoration: inherit;">min_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3708,7 +4412,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>length</span>
+        <span id="min_length_python">
+<a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3716,7 +4422,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>properties</span>
+        <span id="min_properties_python">
+<a href="#min_properties_python" style="color: inherit; text-decoration: inherit;">min_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3724,7 +4432,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3732,7 +4442,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiple_<wbr>of</span>
+        <span id="multiple_of_python">
+<a href="#multiple_of_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3740,7 +4452,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>not_</span>
+        <span id="not__python">
+<a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">Dict[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3748,7 +4462,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>nullable</span>
+        <span id="nullable_python">
+<a href="#nullable_python" style="color: inherit; text-decoration: inherit;">nullable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3756,7 +4472,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>one_<wbr>of</span>
+        <span id="one_of_python">
+<a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3764,7 +4482,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pattern</span>
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3772,7 +4492,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pattern_<wbr>properties</span>
+        <span id="pattern_properties_python">
+<a href="#pattern_properties_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
@@ -3780,7 +4502,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
@@ -3788,7 +4512,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>required</span>
+        <span id="required_python">
+<a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3796,7 +4522,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>title</span>
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3804,7 +4532,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3812,7 +4542,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique_<wbr>items</span>
+        <span id="unique_items_python">
+<a href="#unique_items_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3820,7 +4552,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
+        <span id="x_kubernetes_embedded_resource_python">
+<a href="#x_kubernetes_embedded_resource_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3828,7 +4562,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
+        <span id="x_kubernetes_int_or_string_python">
+<a href="#x_kubernetes_int_or_string_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3845,7 +4581,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
+        <span id="x_kubernetes_list_map_keys_python">
+<a href="#x_kubernetes_list_map_keys_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3857,7 +4595,9 @@ The properties specified must either be required or have a default value, to ens
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>list_<wbr>type</span>
+        <span id="x_kubernetes_list_type_python">
+<a href="#x_kubernetes_list_type_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>list_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3878,7 +4618,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>map_<wbr>type</span>
+        <span id="x_kubernetes_map_type_python">
+<a href="#x_kubernetes_map_type_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>map_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3893,7 +4635,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
+        <span id="x_kubernetes_preserve_unknown_fields_python">
+<a href="#x_kubernetes_preserve_unknown_fields_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3923,7 +4667,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>Type</span>
+        <span id="fieldstype_csharp">
+<a href="#fieldstype_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3931,7 +4677,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>V1</span>
+        <span id="fieldsv1_csharp">
+<a href="#fieldsv1_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
@@ -3939,7 +4687,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Manager</span>
+        <span id="manager_csharp">
+<a href="#manager_csharp" style="color: inherit; text-decoration: inherit;">Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3947,7 +4697,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operation</span>
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3955,7 +4707,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time</span>
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3970,7 +4724,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>Type</span>
+        <span id="fieldstype_go">
+<a href="#fieldstype_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3978,7 +4734,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>V1</span>
+        <span id="fieldsv1_go">
+<a href="#fieldsv1_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
@@ -3986,7 +4744,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Manager</span>
+        <span id="manager_go">
+<a href="#manager_go" style="color: inherit; text-decoration: inherit;">Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3994,7 +4754,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operation</span>
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4002,7 +4764,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time</span>
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4017,7 +4781,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span id="fieldstype_nodejs">
+<a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4025,7 +4791,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span id="fieldsv1_nodejs">
+<a href="#fieldsv1_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
@@ -4033,7 +4801,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>manager</span>
+        <span id="manager_nodejs">
+<a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4041,7 +4811,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>operation</span>
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4049,7 +4821,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>time</span>
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4064,7 +4838,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields_<wbr>type</span>
+        <span id="fields_type_python">
+<a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4072,7 +4848,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields_<wbr>v1</span>
+        <span id="fields_v1_python">
+<a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
@@ -4080,7 +4858,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>manager</span>
+        <span id="manager_python">
+<a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4088,7 +4868,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>operation</span>
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4096,7 +4878,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>time</span>
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4126,7 +4910,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4134,7 +4920,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4142,7 +4930,9 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_csharp">
+<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4152,7 +4942,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_csharp">
+<a href="#deletiongraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4160,7 +4952,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_csharp">
+<a href="#deletiontimestamp_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4170,7 +4964,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finalizers</span>
+        <span id="finalizers_csharp">
+<a href="#finalizers_csharp" style="color: inherit; text-decoration: inherit;">Finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4178,7 +4974,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Name</span>
+        <span id="generatename_csharp">
+<a href="#generatename_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4190,7 +4988,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generation</span>
+        <span id="generation_csharp">
+<a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4198,7 +4998,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4206,7 +5008,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Fields</span>
+        <span id="managedfields_csharp">
+<a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
@@ -4214,7 +5018,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4222,7 +5028,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4232,7 +5040,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>References</span>
+        <span id="ownerreferences_csharp">
+<a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
@@ -4240,7 +5050,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_csharp">
+<a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4250,7 +5062,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4260,7 +5074,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid</span>
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4277,7 +5093,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4285,7 +5103,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4293,7 +5113,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_go">
+<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4303,7 +5125,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_go">
+<a href="#deletiongraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4311,7 +5135,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_go">
+<a href="#deletiontimestamp_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4321,7 +5147,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finalizers</span>
+        <span id="finalizers_go">
+<a href="#finalizers_go" style="color: inherit; text-decoration: inherit;">Finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4329,7 +5157,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Name</span>
+        <span id="generatename_go">
+<a href="#generatename_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4341,7 +5171,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generation</span>
+        <span id="generation_go">
+<a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4349,7 +5181,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4357,7 +5191,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Fields</span>
+        <span id="managedfields_go">
+<a href="#managedfields_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry</a></span>
     </dt>
@@ -4365,7 +5201,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4373,7 +5211,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4383,7 +5223,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>References</span>
+        <span id="ownerreferences_go">
+<a href="#ownerreferences_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference</a></span>
     </dt>
@@ -4391,7 +5233,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_go">
+<a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4401,7 +5245,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4411,7 +5257,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid</span>
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4428,7 +5276,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4436,7 +5286,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4444,7 +5296,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_nodejs">
+<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4454,7 +5308,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_nodejs">
+<a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4462,7 +5318,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_nodejs">
+<a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4472,7 +5330,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>finalizers</span>
+        <span id="finalizers_nodejs">
+<a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4480,7 +5340,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span id="generatename_nodejs">
+<a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4492,7 +5354,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>generation</span>
+        <span id="generation_nodejs">
+<a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4500,7 +5364,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4508,7 +5374,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span id="managedfields_nodejs">
+<a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
@@ -4516,7 +5384,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4524,7 +5394,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4534,7 +5406,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span id="ownerreferences_nodejs">
+<a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
@@ -4542,7 +5416,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span id="resourceversion_nodejs">
+<a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4552,7 +5428,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4562,7 +5440,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid</span>
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4579,7 +5459,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4587,7 +5469,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4595,7 +5479,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>timestamp</span>
+        <span id="creation_timestamp_python">
+<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4605,7 +5491,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
+        <span id="deletion_grace_period_seconds_python">
+<a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4613,7 +5501,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>timestamp</span>
+        <span id="deletion_timestamp_python">
+<a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4623,7 +5513,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>finalizers</span>
+        <span id="finalizers_python">
+<a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4631,7 +5523,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate_<wbr>name</span>
+        <span id="generate_name_python">
+<a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4643,7 +5537,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>generation</span>
+        <span id="generation_python">
+<a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4651,7 +5547,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4659,7 +5557,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>fields</span>
+        <span id="managed_fields_python">
+<a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -4667,7 +5567,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4675,7 +5577,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4685,7 +5589,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner_<wbr>references</span>
+        <span id="owner_references_python">
+<a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -4693,7 +5599,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>version</span>
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4703,7 +5611,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4713,7 +5623,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid</span>
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4745,7 +5657,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4753,7 +5667,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Uid</span>
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4761,7 +5677,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_csharp">
+<a href="#blockownerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4769,7 +5687,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Controller</span>
+        <span id="controller_csharp">
+<a href="#controller_csharp" style="color: inherit; text-decoration: inherit;">Controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4784,7 +5704,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4792,7 +5714,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Uid</span>
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4800,7 +5724,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_go">
+<a href="#blockownerdeletion_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4808,7 +5734,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Controller</span>
+        <span id="controller_go">
+<a href="#controller_go" style="color: inherit; text-decoration: inherit;">Controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4823,7 +5751,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4831,7 +5761,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>uid</span>
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4839,7 +5771,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_nodejs">
+<a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4847,7 +5781,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller</span>
+        <span id="controller_nodejs">
+<a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4862,7 +5798,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4870,7 +5808,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>uid</span>
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4878,7 +5818,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>owner_<wbr>deletion</span>
+        <span id="block_owner_deletion_python">
+<a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4886,7 +5828,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller</span>
+        <span id="controller_python">
+<a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4916,7 +5860,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4924,7 +5870,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4932,7 +5880,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4940,7 +5890,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4955,7 +5907,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4963,7 +5917,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4971,7 +5927,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4979,7 +5937,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4994,7 +5954,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5002,7 +5964,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5010,7 +5974,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5018,7 +5984,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5033,7 +6001,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5041,7 +6011,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5049,7 +6021,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5057,7 +6031,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5087,7 +6063,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Bundle</span>
+        <span id="cabundle_csharp">
+<a href="#cabundle_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5095,7 +6073,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -5105,7 +6085,9 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5130,7 +6112,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Bundle</span>
+        <span id="cabundle_go">
+<a href="#cabundle_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5138,7 +6122,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
@@ -5148,7 +6134,9 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5173,7 +6161,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Bundle</span>
+        <span id="cabundle_nodejs">
+<a href="#cabundle_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5181,7 +6171,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
@@ -5191,7 +6183,9 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5216,7 +6210,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca_<wbr>bundle</span>
+        <span id="ca_bundle_python">
+<a href="#ca_bundle_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5224,7 +6220,9 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicereference">Dict[Service<wbr>Reference]</a></span>
     </dt>
@@ -5234,7 +6232,9 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

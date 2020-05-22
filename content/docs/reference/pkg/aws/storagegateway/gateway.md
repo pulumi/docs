@@ -354,7 +354,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Name</span>
+        <span id="gatewayname_csharp">
+<a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +365,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Timezone</span>
+        <span id="gatewaytimezone_csharp">
+<a href="#gatewaytimezone_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +376,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Activation<wbr>Key</span>
+        <span id="activationkey_csharp">
+<a href="#activationkey_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -381,7 +387,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="cloudwatchloggrouparn_csharp">
+<a href="#cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +398,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip<wbr>Address</span>
+        <span id="gatewayipaddress_csharp">
+<a href="#gatewayipaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +409,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Type</span>
+        <span id="gatewaytype_csharp">
+<a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -408,7 +420,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="gatewayvpcendpoint_csharp">
+<a href="#gatewayvpcendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +431,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Medium<wbr>Changer<wbr>Type</span>
+        <span id="mediumchangertype_csharp">
+<a href="#mediumchangertype_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +441,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="smbactivedirectorysettings_csharp">
+<a href="#smbactivedirectorysettings_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -434,7 +452,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Guest<wbr>Password</span>
+        <span id="smbguestpassword_csharp">
+<a href="#smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +463,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -452,7 +474,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tape<wbr>Drive<wbr>Type</span>
+        <span id="tapedrivetype_csharp">
+<a href="#tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -468,7 +492,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Name</span>
+        <span id="gatewayname_go">
+<a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +503,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Timezone</span>
+        <span id="gatewaytimezone_go">
+<a href="#gatewaytimezone_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -486,7 +514,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Activation<wbr>Key</span>
+        <span id="activationkey_go">
+<a href="#activationkey_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +525,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="cloudwatchloggrouparn_go">
+<a href="#cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -504,7 +536,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip<wbr>Address</span>
+        <span id="gatewayipaddress_go">
+<a href="#gatewayipaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -513,7 +547,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Type</span>
+        <span id="gatewaytype_go">
+<a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +558,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="gatewayvpcendpoint_go">
+<a href="#gatewayvpcendpoint_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -531,7 +569,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Medium<wbr>Changer<wbr>Type</span>
+        <span id="mediumchangertype_go">
+<a href="#mediumchangertype_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -539,7 +579,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="smbactivedirectorysettings_go">
+<a href="#smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
@@ -548,7 +590,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Guest<wbr>Password</span>
+        <span id="smbguestpassword_go">
+<a href="#smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -557,7 +601,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -566,7 +612,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tape<wbr>Drive<wbr>Type</span>
+        <span id="tapedrivetype_go">
+<a href="#tapedrivetype_go" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -582,7 +630,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>gateway<wbr>Name</span>
+        <span id="gatewayname_nodejs">
+<a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +641,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>gateway<wbr>Timezone</span>
+        <span id="gatewaytimezone_nodejs">
+<a href="#gatewaytimezone_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +652,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>activation<wbr>Key</span>
+        <span id="activationkey_nodejs">
+<a href="#activationkey_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +663,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="cloudwatchloggrouparn_nodejs">
+<a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +674,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Ip<wbr>Address</span>
+        <span id="gatewayipaddress_nodejs">
+<a href="#gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -627,7 +685,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Type</span>
+        <span id="gatewaytype_nodejs">
+<a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +696,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="gatewayvpcendpoint_nodejs">
+<a href="#gatewayvpcendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -645,7 +707,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>medium<wbr>Changer<wbr>Type</span>
+        <span id="mediumchangertype_nodejs">
+<a href="#mediumchangertype_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +717,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="smbactivedirectorysettings_nodejs">
+<a href="#smbactivedirectorysettings_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
@@ -662,7 +728,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb<wbr>Guest<wbr>Password</span>
+        <span id="smbguestpassword_nodejs">
+<a href="#smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +739,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -680,7 +750,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tape<wbr>Drive<wbr>Type</span>
+        <span id="tapedrivetype_nodejs">
+<a href="#tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -696,7 +768,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>gateway_<wbr>name</span>
+        <span id="gateway_name_python">
+<a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +779,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>gateway_<wbr>timezone</span>
+        <span id="gateway_timezone_python">
+<a href="#gateway_timezone_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -714,7 +790,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>activation_<wbr>key</span>
+        <span id="activation_key_python">
+<a href="#activation_key_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +801,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>log_<wbr>group_<wbr>arn</span>
+        <span id="cloudwatch_log_group_arn_python">
+<a href="#cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -732,7 +812,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>ip_<wbr>address</span>
+        <span id="gateway_ip_address_python">
+<a href="#gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -741,7 +823,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>type</span>
+        <span id="gateway_type_python">
+<a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +834,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>vpc_<wbr>endpoint</span>
+        <span id="gateway_vpc_endpoint_python">
+<a href="#gateway_vpc_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>vpc_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +845,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>medium_<wbr>changer_<wbr>type</span>
+        <span id="medium_changer_type_python">
+<a href="#medium_changer_type_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>changer_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -767,7 +855,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb_<wbr>active_<wbr>directory_<wbr>settings</span>
+        <span id="smb_active_directory_settings_python">
+<a href="#smb_active_directory_settings_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>active_<wbr>directory_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Dict[Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings]</a></span>
     </dt>
@@ -776,7 +866,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb_<wbr>guest_<wbr>password</span>
+        <span id="smb_guest_password_python">
+<a href="#smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +877,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -794,7 +888,9 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tape_<wbr>drive_<wbr>type</span>
+        <span id="tape_drive_type_python">
+<a href="#tape_drive_type_python" style="color: inherit; text-decoration: inherit;">tape_<wbr>drive_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -821,7 +917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -830,7 +928,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Gateway<wbr>Id</span>
+        <span id="gatewayid_csharp">
+<a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -839,7 +939,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -854,7 +956,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -863,7 +967,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Gateway<wbr>Id</span>
+        <span id="gatewayid_go">
+<a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -872,7 +978,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +995,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -896,7 +1006,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>gateway<wbr>Id</span>
+        <span id="gatewayid_nodejs">
+<a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -905,7 +1017,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -920,7 +1034,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -929,7 +1045,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>gateway_<wbr>id</span>
+        <span id="gateway_id_python">
+<a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -938,7 +1056,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1079,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Activation<wbr>Key</span>
+        <span id="state_activationkey_csharp">
+<a href="#state_activationkey_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1088,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1097,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="state_cloudwatchloggrouparn_csharp">
+<a href="#state_cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1106,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Id</span>
+        <span id="state_gatewayid_csharp">
+<a href="#state_gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1115,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip<wbr>Address</span>
+        <span id="state_gatewayipaddress_csharp">
+<a href="#state_gatewayipaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1124,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Name</span>
+        <span id="state_gatewayname_csharp">
+<a href="#state_gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1133,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Timezone</span>
+        <span id="state_gatewaytimezone_csharp">
+<a href="#state_gatewaytimezone_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1142,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Type</span>
+        <span id="state_gatewaytype_csharp">
+<a href="#state_gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1151,7 +1287,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="state_gatewayvpcendpoint_csharp">
+<a href="#state_gatewayvpcendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1160,7 +1298,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Medium<wbr>Changer<wbr>Type</span>
+        <span id="state_mediumchangertype_csharp">
+<a href="#state_mediumchangertype_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1168,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="state_smbactivedirectorysettings_csharp">
+<a href="#state_smbactivedirectorysettings_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -1177,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Guest<wbr>Password</span>
+        <span id="state_smbguestpassword_csharp">
+<a href="#state_smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1186,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1195,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tape<wbr>Drive<wbr>Type</span>
+        <span id="state_tapedrivetype_csharp">
+<a href="#state_tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1211,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Activation<wbr>Key</span>
+        <span id="state_activationkey_go">
+<a href="#state_activationkey_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1220,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1229,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="state_cloudwatchloggrouparn_go">
+<a href="#state_cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1238,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Id</span>
+        <span id="state_gatewayid_go">
+<a href="#state_gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1247,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip<wbr>Address</span>
+        <span id="state_gatewayipaddress_go">
+<a href="#state_gatewayipaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1256,7 +1414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Name</span>
+        <span id="state_gatewayname_go">
+<a href="#state_gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1265,7 +1425,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Timezone</span>
+        <span id="state_gatewaytimezone_go">
+<a href="#state_gatewaytimezone_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1274,7 +1436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Type</span>
+        <span id="state_gatewaytype_go">
+<a href="#state_gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1283,7 +1447,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="state_gatewayvpcendpoint_go">
+<a href="#state_gatewayvpcendpoint_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1292,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Medium<wbr>Changer<wbr>Type</span>
+        <span id="state_mediumchangertype_go">
+<a href="#state_mediumchangertype_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1300,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="state_smbactivedirectorysettings_go">
+<a href="#state_smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
@@ -1309,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smb<wbr>Guest<wbr>Password</span>
+        <span id="state_smbguestpassword_go">
+<a href="#state_smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1318,7 +1490,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1327,7 +1501,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tape<wbr>Drive<wbr>Type</span>
+        <span id="state_tapedrivetype_go">
+<a href="#state_tapedrivetype_go" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1343,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>activation<wbr>Key</span>
+        <span id="state_activationkey_nodejs">
+<a href="#state_activationkey_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1352,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1361,7 +1541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
+        <span id="state_cloudwatchloggrouparn_nodejs">
+<a href="#state_cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1370,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Id</span>
+        <span id="state_gatewayid_nodejs">
+<a href="#state_gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1379,7 +1563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Ip<wbr>Address</span>
+        <span id="state_gatewayipaddress_nodejs">
+<a href="#state_gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1388,7 +1574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Name</span>
+        <span id="state_gatewayname_nodejs">
+<a href="#state_gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1397,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Timezone</span>
+        <span id="state_gatewaytimezone_nodejs">
+<a href="#state_gatewaytimezone_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1406,7 +1596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Type</span>
+        <span id="state_gatewaytype_nodejs">
+<a href="#state_gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1415,7 +1607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span id="state_gatewayvpcendpoint_nodejs">
+<a href="#state_gatewayvpcendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Vpc<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1424,7 +1618,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>medium<wbr>Changer<wbr>Type</span>
+        <span id="state_mediumchangertype_nodejs">
+<a href="#state_mediumchangertype_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Changer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1432,7 +1628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb<wbr>Active<wbr>Directory<wbr>Settings</span>
+        <span id="state_smbactivedirectorysettings_nodejs">
+<a href="#state_smbactivedirectorysettings_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Active<wbr>Directory<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
@@ -1441,7 +1639,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb<wbr>Guest<wbr>Password</span>
+        <span id="state_smbguestpassword_nodejs">
+<a href="#state_smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1450,7 +1650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1459,7 +1661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tape<wbr>Drive<wbr>Type</span>
+        <span id="state_tapedrivetype_nodejs">
+<a href="#state_tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1475,7 +1679,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>activation_<wbr>key</span>
+        <span id="state_activation_key_python">
+<a href="#state_activation_key_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1484,7 +1690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1493,7 +1701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>log_<wbr>group_<wbr>arn</span>
+        <span id="state_cloudwatch_log_group_arn_python">
+<a href="#state_cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1502,7 +1712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>id</span>
+        <span id="state_gateway_id_python">
+<a href="#state_gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1511,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>ip_<wbr>address</span>
+        <span id="state_gateway_ip_address_python">
+<a href="#state_gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1520,7 +1734,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>name</span>
+        <span id="state_gateway_name_python">
+<a href="#state_gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1529,7 +1745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>timezone</span>
+        <span id="state_gateway_timezone_python">
+<a href="#state_gateway_timezone_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1538,7 +1756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>type</span>
+        <span id="state_gateway_type_python">
+<a href="#state_gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1547,7 +1767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>vpc_<wbr>endpoint</span>
+        <span id="state_gateway_vpc_endpoint_python">
+<a href="#state_gateway_vpc_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>vpc_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1556,7 +1778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>medium_<wbr>changer_<wbr>type</span>
+        <span id="state_medium_changer_type_python">
+<a href="#state_medium_changer_type_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>changer_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1564,7 +1788,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb_<wbr>active_<wbr>directory_<wbr>settings</span>
+        <span id="state_smb_active_directory_settings_python">
+<a href="#state_smb_active_directory_settings_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>active_<wbr>directory_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Dict[Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings]</a></span>
     </dt>
@@ -1573,7 +1799,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>smb_<wbr>guest_<wbr>password</span>
+        <span id="state_smb_guest_password_python">
+<a href="#state_smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1582,7 +1810,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1591,7 +1821,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tape_<wbr>drive_<wbr>type</span>
+        <span id="state_tape_drive_type_python">
+<a href="#state_tape_drive_type_python" style="color: inherit; text-decoration: inherit;">tape_<wbr>drive_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1633,7 +1865,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1642,7 +1876,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1651,7 +1887,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1667,7 +1905,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1676,7 +1916,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1685,7 +1927,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1701,7 +1945,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1710,7 +1956,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1719,7 +1967,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1735,7 +1985,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>domain_<wbr>name</span>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1744,7 +1996,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1753,7 +2007,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

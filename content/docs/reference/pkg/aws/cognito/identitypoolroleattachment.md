@@ -360,7 +360,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Pool<wbr>Id</span>
+        <span id="identitypoolid_csharp">
+<a href="#identitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +371,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -378,7 +382,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Mappings</span>
+        <span id="rolemappings_csharp">
+<a href="#rolemappings_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -394,7 +400,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Pool<wbr>Id</span>
+        <span id="identitypoolid_go">
+<a href="#identitypoolid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +411,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -412,7 +422,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Mappings</span>
+        <span id="rolemappings_go">
+<a href="#rolemappings_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
     </dt>
@@ -428,7 +440,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>identity<wbr>Pool<wbr>Id</span>
+        <span id="identitypoolid_nodejs">
+<a href="#identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +451,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -446,7 +462,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Mappings</span>
+        <span id="rolemappings_nodejs">
+<a href="#rolemappings_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
     </dt>
@@ -462,7 +480,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>identity_<wbr>pool_<wbr>id</span>
+        <span id="identity_pool_id_python">
+<a href="#identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +491,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -480,7 +502,9 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>mappings</span>
+        <span id="role_mappings_python">
+<a href="#role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></span>
     </dt>
@@ -507,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -522,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -537,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -552,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -693,7 +725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Pool<wbr>Id</span>
+        <span id="state_identitypoolid_csharp">
+<a href="#state_identitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -702,7 +736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Mappings</span>
+        <span id="state_rolemappings_csharp">
+<a href="#state_rolemappings_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -711,7 +747,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_csharp">
+<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -727,7 +765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Pool<wbr>Id</span>
+        <span id="state_identitypoolid_go">
+<a href="#state_identitypoolid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -736,7 +776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Mappings</span>
+        <span id="state_rolemappings_go">
+<a href="#state_rolemappings_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
     </dt>
@@ -745,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_go">
+<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -761,7 +805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity<wbr>Pool<wbr>Id</span>
+        <span id="state_identitypoolid_nodejs">
+<a href="#state_identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -770,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Mappings</span>
+        <span id="state_rolemappings_nodejs">
+<a href="#state_rolemappings_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
     </dt>
@@ -779,7 +827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_nodejs">
+<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -795,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity_<wbr>pool_<wbr>id</span>
+        <span id="state_identity_pool_id_python">
+<a href="#state_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -804,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>mappings</span>
+        <span id="state_role_mappings_python">
+<a href="#state_role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></span>
     </dt>
@@ -813,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_python">
+<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -855,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Provider</span>
+        <span id="identityprovider_csharp">
+<a href="#identityprovider_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -864,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +933,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
+        <span id="ambiguousroleresolution_csharp">
+<a href="#ambiguousroleresolution_csharp" style="color: inherit; text-decoration: inherit;">Ambiguous<wbr>Role<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -882,7 +944,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mapping<wbr>Rules</span>
+        <span id="mappingrules_csharp">
+<a href="#mappingrules_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -898,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Provider</span>
+        <span id="identityprovider_go">
+<a href="#identityprovider_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -907,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -916,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
+        <span id="ambiguousroleresolution_go">
+<a href="#ambiguousroleresolution_go" style="color: inherit; text-decoration: inherit;">Ambiguous<wbr>Role<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mapping<wbr>Rules</span>
+        <span id="mappingrules_go">
+<a href="#mappingrules_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule</a></span>
     </dt>
@@ -941,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>identity<wbr>Provider</span>
+        <span id="identityprovider_nodejs">
+<a href="#identityprovider_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -950,7 +1024,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -959,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ambiguous<wbr>Role<wbr>Resolution</span>
+        <span id="ambiguousroleresolution_nodejs">
+<a href="#ambiguousroleresolution_nodejs" style="color: inherit; text-decoration: inherit;">ambiguous<wbr>Role<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mapping<wbr>Rules</span>
+        <span id="mappingrules_nodejs">
+<a href="#mappingrules_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule[]</a></span>
     </dt>
@@ -984,7 +1064,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>identity_<wbr>provider</span>
+        <span id="identity_provider_python">
+<a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -993,7 +1075,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1002,7 +1086,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ambiguous<wbr>Role<wbr>Resolution</span>
+        <span id="ambiguousroleresolution_python">
+<a href="#ambiguousroleresolution_python" style="color: inherit; text-decoration: inherit;">ambiguous<wbr>Role<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1011,7 +1097,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mapping<wbr>Rules</span>
+        <span id="mappingrules_python">
+<a href="#mappingrules_python" style="color: inherit; text-decoration: inherit;">mapping<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule]</a></span>
     </dt>
@@ -1045,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Claim</span>
+        <span id="claim_csharp">
+<a href="#claim_csharp" style="color: inherit; text-decoration: inherit;">Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1054,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Match<wbr>Type</span>
+        <span id="matchtype_csharp">
+<a href="#matchtype_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1063,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1072,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1088,7 +1184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Claim</span>
+        <span id="claim_go">
+<a href="#claim_go" style="color: inherit; text-decoration: inherit;">Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1097,7 +1195,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Match<wbr>Type</span>
+        <span id="matchtype_go">
+<a href="#matchtype_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1106,7 +1206,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1115,7 +1217,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1131,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>claim</span>
+        <span id="claim_nodejs">
+<a href="#claim_nodejs" style="color: inherit; text-decoration: inherit;">claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1140,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>match<wbr>Type</span>
+        <span id="matchtype_nodejs">
+<a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1149,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>claim</span>
+        <span id="claim_python">
+<a href="#claim_python" style="color: inherit; text-decoration: inherit;">claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1183,7 +1297,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>match<wbr>Type</span>
+        <span id="matchtype_python">
+<a href="#matchtype_python" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1192,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1201,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

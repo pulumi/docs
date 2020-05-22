@@ -378,7 +378,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Json</span>
+        <span id="overridejson_csharp">
+<a href="#overridejson_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +392,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +403,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Json</span>
+        <span id="sourcejson_csharp">
+<a href="#sourcejson_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -411,7 +417,9 @@ json.  Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statements</span>
+        <span id="statements_csharp">
+<a href="#statements_csharp" style="color: inherit; text-decoration: inherit;">Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;</a></span>
     </dt>
@@ -421,7 +429,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -437,7 +447,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Json</span>
+        <span id="overridejson_go">
+<a href="#overridejson_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -449,7 +461,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +472,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Json</span>
+        <span id="sourcejson_go">
+<a href="#sourcejson_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +486,9 @@ json.  Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statements</span>
+        <span id="statements_go">
+<a href="#statements_go" style="color: inherit; text-decoration: inherit;">Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></span>
     </dt>
@@ -480,7 +498,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +516,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>override<wbr>Json</span>
+        <span id="overridejson_nodejs">
+<a href="#overridejson_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +530,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Id</span>
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -517,7 +541,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Json</span>
+        <span id="sourcejson_nodejs">
+<a href="#sourcejson_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +555,9 @@ json.  Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>statements</span>
+        <span id="statements_nodejs">
+<a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]</a></span>
     </dt>
@@ -539,7 +567,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -555,7 +585,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>override_<wbr>json</span>
+        <span id="override_json_python">
+<a href="#override_json_python" style="color: inherit; text-decoration: inherit;">override_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -567,7 +599,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>id</span>
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -576,7 +610,9 @@ Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>json</span>
+        <span id="source_json_python">
+<a href="#source_json_python" style="color: inherit; text-decoration: inherit;">source_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +624,9 @@ json.  Statements without an `sid` cannot be overwritten.
 
     <dt class="property-optional"
             title="Optional">
-        <span>statements</span>
+        <span id="statements_python">
+<a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
     </dt>
@@ -598,7 +636,9 @@ configuring one *statement* to be included in the policy document.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -627,7 +667,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -636,7 +678,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Json</span>
+        <span id="json_csharp">
+<a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -645,7 +689,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Override<wbr>Json</span>
+        <span id="overridejson_csharp">
+<a href="#overridejson_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -653,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +709,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Json</span>
+        <span id="sourcejson_csharp">
+<a href="#sourcejson_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -669,7 +719,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Statements</span>
+        <span id="statements_csharp">
+<a href="#statements_csharp" style="color: inherit; text-decoration: inherit;">Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement&gt;</a></span>
     </dt>
@@ -677,7 +729,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +746,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +757,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Json</span>
+        <span id="json_go">
+<a href="#json_go" style="color: inherit; text-decoration: inherit;">Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -710,7 +768,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Override<wbr>Json</span>
+        <span id="overridejson_go">
+<a href="#overridejson_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -718,7 +778,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -726,7 +788,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Json</span>
+        <span id="sourcejson_go">
+<a href="#sourcejson_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -734,7 +798,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Statements</span>
+        <span id="statements_go">
+<a href="#statements_go" style="color: inherit; text-decoration: inherit;">Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></span>
     </dt>
@@ -742,7 +808,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +825,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -766,7 +836,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>json</span>
+        <span id="json_nodejs">
+<a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -775,7 +847,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>override<wbr>Json</span>
+        <span id="overridejson_nodejs">
+<a href="#overridejson_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -783,7 +857,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>policy<wbr>Id</span>
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -791,7 +867,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>source<wbr>Json</span>
+        <span id="sourcejson_nodejs">
+<a href="#sourcejson_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -799,7 +877,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>statements</span>
+        <span id="statements_nodejs">
+<a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]</a></span>
     </dt>
@@ -807,7 +887,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -822,7 +904,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -831,7 +915,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>json</span>
+        <span id="json_python">
+<a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -840,7 +926,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>override_<wbr>json</span>
+        <span id="override_json_python">
+<a href="#override_json_python" style="color: inherit; text-decoration: inherit;">override_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -848,7 +936,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>policy_<wbr>id</span>
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -856,7 +946,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>source_<wbr>json</span>
+        <span id="source_json_python">
+<a href="#source_json_python" style="color: inherit; text-decoration: inherit;">source_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -864,7 +956,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>statements</span>
+        <span id="statements_python">
+<a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
     </dt>
@@ -872,7 +966,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -911,7 +1007,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Actions</span>
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -921,7 +1019,9 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conditions</span>
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
@@ -932,7 +1032,9 @@ whether this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect</span>
+        <span id="effect_csharp">
+<a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -942,7 +1044,9 @@ statement allows or denies the given actions. The default is "Allow".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Actions</span>
+        <span id="notactions_csharp">
+<a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -953,7 +1057,9 @@ listed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Principals</span>
+        <span id="notprincipals_csharp">
+<a href="#notprincipals_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
@@ -963,7 +1069,9 @@ the statement does *not* apply to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Resources</span>
+        <span id="notresources_csharp">
+<a href="#notresources_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -974,7 +1082,9 @@ does *not* apply to. Used to apply a policy statement to all resources
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principals</span>
+        <span id="principals_csharp">
+<a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
@@ -984,7 +1094,9 @@ specifying a resource (or resource pattern) to which this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -994,7 +1106,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sid</span>
+        <span id="sid_csharp">
+<a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1010,7 +1124,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Actions</span>
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1020,7 +1136,9 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Conditions</span>
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementcondition">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</a></span>
     </dt>
@@ -1031,7 +1149,9 @@ whether this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect</span>
+        <span id="effect_go">
+<a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1041,7 +1161,9 @@ statement allows or denies the given actions. The default is "Allow".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Actions</span>
+        <span id="notactions_go">
+<a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1052,7 +1174,9 @@ listed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Principals</span>
+        <span id="notprincipals_go">
+<a href="#notprincipals_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></span>
     </dt>
@@ -1062,7 +1186,9 @@ the statement does *not* apply to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Not<wbr>Resources</span>
+        <span id="notresources_go">
+<a href="#notresources_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1073,7 +1199,9 @@ does *not* apply to. Used to apply a policy statement to all resources
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principals</span>
+        <span id="principals_go">
+<a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></span>
     </dt>
@@ -1083,7 +1211,9 @@ specifying a resource (or resource pattern) to which this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1093,7 +1223,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sid</span>
+        <span id="sid_go">
+<a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1109,7 +1241,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>actions</span>
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1119,7 +1253,9 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 
     <dt class="property-optional"
             title="Optional">
-        <span>conditions</span>
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementcondition">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition[]</a></span>
     </dt>
@@ -1130,7 +1266,9 @@ whether this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect</span>
+        <span id="effect_nodejs">
+<a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1140,7 +1278,9 @@ statement allows or denies the given actions. The default is "Allow".
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Actions</span>
+        <span id="notactions_nodejs">
+<a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1151,7 +1291,9 @@ listed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Principals</span>
+        <span id="notprincipals_nodejs">
+<a href="#notprincipals_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]</a></span>
     </dt>
@@ -1161,7 +1303,9 @@ the statement does *not* apply to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Resources</span>
+        <span id="notresources_nodejs">
+<a href="#notresources_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1172,7 +1316,9 @@ does *not* apply to. Used to apply a policy statement to all resources
 
     <dt class="property-optional"
             title="Optional">
-        <span>principals</span>
+        <span id="principals_nodejs">
+<a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]</a></span>
     </dt>
@@ -1182,7 +1328,9 @@ specifying a resource (or resource pattern) to which this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1192,7 +1340,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sid</span>
+        <span id="sid_nodejs">
+<a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1208,7 +1358,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>actions</span>
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1218,7 +1370,9 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 
     <dt class="property-optional"
             title="Optional">
-        <span>conditions</span>
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementcondition">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition]</a></span>
     </dt>
@@ -1229,7 +1383,9 @@ whether this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect</span>
+        <span id="effect_python">
+<a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1239,7 +1395,9 @@ statement allows or denies the given actions. The default is "Allow".
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Actions</span>
+        <span id="notactions_python">
+<a href="#notactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1250,7 +1408,9 @@ listed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Principals</span>
+        <span id="notprincipals_python">
+<a href="#notprincipals_python" style="color: inherit; text-decoration: inherit;">not<wbr>Principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal]</a></span>
     </dt>
@@ -1260,7 +1420,9 @@ the statement does *not* apply to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>not<wbr>Resources</span>
+        <span id="notresources_python">
+<a href="#notresources_python" style="color: inherit; text-decoration: inherit;">not<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1271,7 +1433,9 @@ does *not* apply to. Used to apply a policy statement to all resources
 
     <dt class="property-optional"
             title="Optional">
-        <span>principals</span>
+        <span id="principals_python">
+<a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal]</a></span>
     </dt>
@@ -1281,7 +1445,9 @@ specifying a resource (or resource pattern) to which this statement applies.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1291,7 +1457,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sid</span>
+        <span id="sid_python">
+<a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1325,7 +1493,9 @@ to. This is required by AWS if used for an IAM policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Test</span>
+        <span id="test_csharp">
+<a href="#test_csharp" style="color: inherit; text-decoration: inherit;">Test</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1336,7 +1506,9 @@ to evaluate.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1347,7 +1519,9 @@ values are provided, the condition matches if at least one of them applies.
 
     <dt class="property-required"
             title="Required">
-        <span>Variable</span>
+        <span id="variable_csharp">
+<a href="#variable_csharp" style="color: inherit; text-decoration: inherit;">Variable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1367,7 +1541,9 @@ the service name.
 
     <dt class="property-required"
             title="Required">
-        <span>Test</span>
+        <span id="test_go">
+<a href="#test_go" style="color: inherit; text-decoration: inherit;">Test</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1378,7 +1554,9 @@ to evaluate.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1389,7 +1567,9 @@ values are provided, the condition matches if at least one of them applies.
 
     <dt class="property-required"
             title="Required">
-        <span>Variable</span>
+        <span id="variable_go">
+<a href="#variable_go" style="color: inherit; text-decoration: inherit;">Variable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1409,7 +1589,9 @@ the service name.
 
     <dt class="property-required"
             title="Required">
-        <span>test</span>
+        <span id="test_nodejs">
+<a href="#test_nodejs" style="color: inherit; text-decoration: inherit;">test</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1420,7 +1602,9 @@ to evaluate.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1431,7 +1615,9 @@ values are provided, the condition matches if at least one of them applies.
 
     <dt class="property-required"
             title="Required">
-        <span>variable</span>
+        <span id="variable_nodejs">
+<a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1451,7 +1637,9 @@ the service name.
 
     <dt class="property-required"
             title="Required">
-        <span>test</span>
+        <span id="test_python">
+<a href="#test_python" style="color: inherit; text-decoration: inherit;">test</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1462,7 +1650,9 @@ to evaluate.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1473,7 +1663,9 @@ values are provided, the condition matches if at least one of them applies.
 
     <dt class="property-required"
             title="Required">
-        <span>variable</span>
+        <span id="variable_python">
+<a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1511,7 +1703,9 @@ the service name.
 
     <dt class="property-required"
             title="Required">
-        <span>Identifiers</span>
+        <span id="identifiers_csharp">
+<a href="#identifiers_csharp" style="color: inherit; text-decoration: inherit;">Identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1521,7 +1715,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1537,7 +1733,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Identifiers</span>
+        <span id="identifiers_go">
+<a href="#identifiers_go" style="color: inherit; text-decoration: inherit;">Identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1547,7 +1745,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1563,7 +1763,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>identifiers</span>
+        <span id="identifiers_nodejs">
+<a href="#identifiers_nodejs" style="color: inherit; text-decoration: inherit;">identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1573,7 +1775,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1589,7 +1793,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>identifiers</span>
+        <span id="identifiers_python">
+<a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1599,7 +1805,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1633,7 +1841,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Identifiers</span>
+        <span id="identifiers_csharp">
+<a href="#identifiers_csharp" style="color: inherit; text-decoration: inherit;">Identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1643,7 +1853,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1659,7 +1871,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Identifiers</span>
+        <span id="identifiers_go">
+<a href="#identifiers_go" style="color: inherit; text-decoration: inherit;">Identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1669,7 +1883,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1685,7 +1901,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>identifiers</span>
+        <span id="identifiers_nodejs">
+<a href="#identifiers_nodejs" style="color: inherit; text-decoration: inherit;">identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1695,7 +1913,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1711,7 +1931,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>identifiers</span>
+        <span id="identifiers_python">
+<a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1721,7 +1943,9 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

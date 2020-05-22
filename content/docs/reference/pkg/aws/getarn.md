@@ -88,7 +88,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -104,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -120,7 +124,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -136,7 +142,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -165,7 +173,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Account</span>
+        <span id="account_csharp">
+<a href="#account_csharp" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -174,7 +184,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -182,7 +194,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -191,7 +205,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Partition</span>
+        <span id="partition_csharp">
+<a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -200,7 +216,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -210,7 +228,9 @@ Note that the ARNs for some resources do not require a region, so this component
 
     <dt class="property-"
             title="">
-        <span>Resource</span>
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -220,7 +240,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Service</span>
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +258,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Account</span>
+        <span id="account_go">
+<a href="#account_go" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -245,7 +269,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -253,7 +279,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -262,7 +290,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Partition</span>
+        <span id="partition_go">
+<a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -271,7 +301,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -281,7 +313,9 @@ Note that the ARNs for some resources do not require a region, so this component
 
     <dt class="property-"
             title="">
-        <span>Resource</span>
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -291,7 +325,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>Service</span>
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +343,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>account</span>
+        <span id="account_nodejs">
+<a href="#account_nodejs" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -316,7 +354,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -324,7 +364,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -333,7 +375,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>partition</span>
+        <span id="partition_nodejs">
+<a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +386,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +398,9 @@ Note that the ARNs for some resources do not require a region, so this component
 
     <dt class="property-"
             title="">
-        <span>resource</span>
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -362,7 +410,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>service</span>
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -378,7 +428,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>account</span>
+        <span id="account_python">
+<a href="#account_python" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -387,7 +439,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -395,7 +449,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -404,7 +460,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>partition</span>
+        <span id="partition_python">
+<a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -413,7 +471,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -423,7 +483,9 @@ Note that the ARNs for some resources do not require a region, so this component
 
     <dt class="property-"
             title="">
-        <span>resource</span>
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -433,7 +495,9 @@ It often includes an indicator of the type of resource—for example, an IAM use
 
     <dt class="property-"
             title="">
-        <span>service</span>
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

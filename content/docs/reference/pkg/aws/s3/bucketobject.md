@@ -390,7 +390,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -399,7 +401,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_csharp">
+<a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -408,7 +412,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Control</span>
+        <span id="cachecontrol_csharp">
+<a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +423,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -426,7 +434,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Base64</span>
+        <span id="contentbase64_csharp">
+<a href="#contentbase64_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +445,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="contentdisposition_csharp">
+<a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +456,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="contentencoding_csharp">
+<a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -453,7 +467,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Language</span>
+        <span id="contentlanguage_csharp">
+<a href="#contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -462,7 +478,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -471,7 +489,9 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -481,7 +501,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_csharp">
+<a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -491,7 +513,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -500,7 +524,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -512,7 +538,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -521,7 +549,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="objectlocklegalholdstatus_csharp">
+<a href="#objectlocklegalholdstatus_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,7 +560,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Mode</span>
+        <span id="objectlockmode_csharp">
+<a href="#objectlockmode_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +571,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="objectlockretainuntildate_csharp">
+<a href="#objectlockretainuntildate_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +582,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_csharp">
+<a href="#serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -557,7 +593,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -566,7 +604,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Class</span>
+        <span id="storageclass_csharp">
+<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -576,7 +616,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -585,7 +627,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Website<wbr>Redirect</span>
+        <span id="websiteredirect_csharp">
+<a href="#websiteredirect_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +645,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -610,7 +656,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_go">
+<a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -619,7 +667,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Control</span>
+        <span id="cachecontrol_go">
+<a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +678,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +689,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Base64</span>
+        <span id="contentbase64_go">
+<a href="#contentbase64_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -646,7 +700,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="contentdisposition_go">
+<a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -655,7 +711,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="contentencoding_go">
+<a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -664,7 +722,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Language</span>
+        <span id="contentlanguage_go">
+<a href="#contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -673,7 +733,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +744,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -692,7 +756,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_go">
+<a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -702,7 +768,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -711,7 +779,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -723,7 +793,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -732,7 +804,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="objectlocklegalholdstatus_go">
+<a href="#objectlocklegalholdstatus_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +815,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Mode</span>
+        <span id="objectlockmode_go">
+<a href="#objectlockmode_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -750,7 +826,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="objectlockretainuntildate_go">
+<a href="#objectlockretainuntildate_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -759,7 +837,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_go">
+<a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -768,7 +848,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Asset">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -777,7 +859,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Class</span>
+        <span id="storageclass_go">
+<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -787,7 +871,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -796,7 +882,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Website<wbr>Redirect</span>
+        <span id="websiteredirect_go">
+<a href="#websiteredirect_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -812,7 +900,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Bucket</span>
     </dt>
@@ -821,7 +911,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_nodejs">
+<a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -830,7 +922,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Control</span>
+        <span id="cachecontrol_nodejs">
+<a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -839,7 +933,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -848,7 +944,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Base64</span>
+        <span id="contentbase64_nodejs">
+<a href="#contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -857,7 +955,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Disposition</span>
+        <span id="contentdisposition_nodejs">
+<a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +966,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Encoding</span>
+        <span id="contentencoding_nodejs">
+<a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -875,7 +977,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Language</span>
+        <span id="contentlanguage_nodejs">
+<a href="#contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -884,7 +988,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -893,7 +999,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -903,7 +1011,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="forcedestroy_nodejs">
+<a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -913,7 +1023,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -922,7 +1034,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -934,7 +1048,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -943,7 +1059,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="objectlocklegalholdstatus_nodejs">
+<a href="#objectlocklegalholdstatus_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -952,7 +1070,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Mode</span>
+        <span id="objectlockmode_nodejs">
+<a href="#objectlockmode_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -961,7 +1081,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="objectlockretainuntildate_nodejs">
+<a href="#objectlockretainuntildate_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -970,7 +1092,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_nodejs">
+<a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -979,7 +1103,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Asset">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</a></span>
     </dt>
@@ -988,7 +1114,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Class</span>
+        <span id="storageclass_nodejs">
+<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -998,7 +1126,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1007,7 +1137,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>website<wbr>Redirect</span>
+        <span id="websiteredirect_nodejs">
+<a href="#websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1023,7 +1155,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -1032,7 +1166,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_python">
+<a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1041,7 +1177,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache_<wbr>control</span>
+        <span id="cache_control_python">
+<a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1050,7 +1188,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1059,7 +1199,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>base64</span>
+        <span id="content_base64_python">
+<a href="#content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1068,7 +1210,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>disposition</span>
+        <span id="content_disposition_python">
+<a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1077,7 +1221,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>encoding</span>
+        <span id="content_encoding_python">
+<a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1086,7 +1232,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>language</span>
+        <span id="content_language_python">
+<a href="#content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1095,7 +1243,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1104,7 +1254,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1114,7 +1266,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="force_destroy_python">
+<a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1124,7 +1278,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1133,7 +1289,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1145,7 +1303,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1154,7 +1314,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</span>
+        <span id="object_lock_legal_hold_status_python">
+<a href="#object_lock_legal_hold_status_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1163,7 +1325,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>mode</span>
+        <span id="object_lock_mode_python">
+<a href="#object_lock_mode_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1172,7 +1336,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</span>
+        <span id="object_lock_retain_until_date_python">
+<a href="#object_lock_retain_until_date_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1181,7 +1347,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="server_side_encryption_python">
+<a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1190,7 +1358,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</a></span>
     </dt>
@@ -1199,7 +1369,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>class</span>
+        <span id="storage_class_python">
+<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1209,7 +1381,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1218,7 +1392,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>website_<wbr>redirect</span>
+        <span id="website_redirect_python">
+<a href="#website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1245,7 +1421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1253,7 +1431,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1270,7 +1450,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1278,7 +1460,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1295,7 +1479,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1303,7 +1489,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Id</span>
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1320,7 +1508,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1328,7 +1518,9 @@ is enabled.
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>id</span>
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1471,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_csharp">
+<a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1480,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="state_bucket_csharp">
+<a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1489,7 +1685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Control</span>
+        <span id="state_cachecontrol_csharp">
+<a href="#state_cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1498,7 +1696,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_csharp">
+<a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1507,7 +1707,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Base64</span>
+        <span id="state_contentbase64_csharp">
+<a href="#state_contentbase64_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1516,7 +1718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="state_contentdisposition_csharp">
+<a href="#state_contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1525,7 +1729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="state_contentencoding_csharp">
+<a href="#state_contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1534,7 +1740,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Language</span>
+        <span id="state_contentlanguage_csharp">
+<a href="#state_contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1543,7 +1751,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_csharp">
+<a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1552,7 +1762,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1562,7 +1774,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_csharp">
+<a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1572,7 +1786,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_csharp">
+<a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1581,7 +1797,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_csharp">
+<a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1593,7 +1811,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1602,7 +1822,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="state_objectlocklegalholdstatus_csharp">
+<a href="#state_objectlocklegalholdstatus_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1611,7 +1833,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Mode</span>
+        <span id="state_objectlockmode_csharp">
+<a href="#state_objectlockmode_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1620,7 +1844,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="state_objectlockretainuntildate_csharp">
+<a href="#state_objectlockretainuntildate_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1629,7 +1855,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_csharp">
+<a href="#state_serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1638,7 +1866,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_csharp">
+<a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -1647,7 +1877,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Class</span>
+        <span id="state_storageclass_csharp">
+<a href="#state_storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1657,7 +1889,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1666,7 +1900,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="state_versionid_csharp">
+<a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1676,7 +1912,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Website<wbr>Redirect</span>
+        <span id="state_websiteredirect_csharp">
+<a href="#state_websiteredirect_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1692,7 +1930,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_go">
+<a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1701,7 +1941,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="state_bucket_go">
+<a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -1710,7 +1952,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Control</span>
+        <span id="state_cachecontrol_go">
+<a href="#state_cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1719,7 +1963,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_go">
+<a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1728,7 +1974,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Base64</span>
+        <span id="state_contentbase64_go">
+<a href="#state_contentbase64_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1737,7 +1985,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="state_contentdisposition_go">
+<a href="#state_contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1746,7 +1996,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="state_contentencoding_go">
+<a href="#state_contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1755,7 +2007,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Language</span>
+        <span id="state_contentlanguage_go">
+<a href="#state_contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1764,7 +2018,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_go">
+<a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1773,7 +2029,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1783,7 +2041,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_go">
+<a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1793,7 +2053,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_go">
+<a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1802,7 +2064,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_go">
+<a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1814,7 +2078,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1823,7 +2089,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="state_objectlocklegalholdstatus_go">
+<a href="#state_objectlocklegalholdstatus_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1832,7 +2100,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Mode</span>
+        <span id="state_objectlockmode_go">
+<a href="#state_objectlockmode_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1841,7 +2111,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="state_objectlockretainuntildate_go">
+<a href="#state_objectlockretainuntildate_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1850,7 +2122,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_go">
+<a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1859,7 +2133,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_go">
+<a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Asset">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -1868,7 +2144,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Class</span>
+        <span id="state_storageclass_go">
+<a href="#state_storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1878,7 +2156,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1887,7 +2167,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="state_versionid_go">
+<a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1897,7 +2179,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Website<wbr>Redirect</span>
+        <span id="state_websiteredirect_go">
+<a href="#state_websiteredirect_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1913,7 +2197,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_nodejs">
+<a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1922,7 +2208,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="state_bucket_nodejs">
+<a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Bucket</span>
     </dt>
@@ -1931,7 +2219,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Control</span>
+        <span id="state_cachecontrol_nodejs">
+<a href="#state_cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1940,7 +2230,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_nodejs">
+<a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1949,7 +2241,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Base64</span>
+        <span id="state_contentbase64_nodejs">
+<a href="#state_contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1958,7 +2252,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Disposition</span>
+        <span id="state_contentdisposition_nodejs">
+<a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1967,7 +2263,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Encoding</span>
+        <span id="state_contentencoding_nodejs">
+<a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1976,7 +2274,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Language</span>
+        <span id="state_contentlanguage_nodejs">
+<a href="#state_contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1985,7 +2285,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="state_contenttype_nodejs">
+<a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1994,7 +2296,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2004,7 +2308,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="state_forcedestroy_nodejs">
+<a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2014,7 +2320,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_nodejs">
+<a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2023,7 +2331,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_nodejs">
+<a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2035,7 +2345,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2044,7 +2356,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
+        <span id="state_objectlocklegalholdstatus_nodejs">
+<a href="#state_objectlocklegalholdstatus_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2053,7 +2367,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Mode</span>
+        <span id="state_objectlockmode_nodejs">
+<a href="#state_objectlockmode_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2062,7 +2378,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
+        <span id="state_objectlockretainuntildate_nodejs">
+<a href="#state_objectlockretainuntildate_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2071,7 +2389,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_nodejs">
+<a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2080,7 +2400,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_nodejs">
+<a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Asset">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</a></span>
     </dt>
@@ -2089,7 +2411,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Class</span>
+        <span id="state_storageclass_nodejs">
+<a href="#state_storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2099,7 +2423,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2108,7 +2434,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Id</span>
+        <span id="state_versionid_nodejs">
+<a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2118,7 +2446,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>website<wbr>Redirect</span>
+        <span id="state_websiteredirect_nodejs">
+<a href="#state_websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2134,7 +2464,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_python">
+<a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2143,7 +2475,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="state_bucket_python">
+<a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -2152,7 +2486,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache_<wbr>control</span>
+        <span id="state_cache_control_python">
+<a href="#state_cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2161,7 +2497,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_python">
+<a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2170,7 +2508,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>base64</span>
+        <span id="state_content_base64_python">
+<a href="#state_content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2179,7 +2519,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>disposition</span>
+        <span id="state_content_disposition_python">
+<a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2188,7 +2530,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>encoding</span>
+        <span id="state_content_encoding_python">
+<a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2197,7 +2541,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>language</span>
+        <span id="state_content_language_python">
+<a href="#state_content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2206,7 +2552,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="state_content_type_python">
+<a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2215,7 +2563,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2225,7 +2575,9 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="state_force_destroy_python">
+<a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2235,7 +2587,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_python">
+<a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2244,7 +2598,9 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="state_kms_key_id_python">
+<a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2256,7 +2612,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2265,7 +2623,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</span>
+        <span id="state_object_lock_legal_hold_status_python">
+<a href="#state_object_lock_legal_hold_status_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2274,7 +2634,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>mode</span>
+        <span id="state_object_lock_mode_python">
+<a href="#state_object_lock_mode_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2283,7 +2645,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</span>
+        <span id="state_object_lock_retain_until_date_python">
+<a href="#state_object_lock_retain_until_date_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2292,7 +2656,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="state_server_side_encryption_python">
+<a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2301,7 +2667,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_python">
+<a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</a></span>
     </dt>
@@ -2310,7 +2678,9 @@ use the exported `arn` attribute:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>class</span>
+        <span id="state_storage_class_python">
+<a href="#state_storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2320,7 +2690,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2329,7 +2701,9 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>id</span>
+        <span id="state_version_id_python">
+<a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2339,7 +2713,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>website_<wbr>redirect</span>
+        <span id="state_website_redirect_python">
+<a href="#state_website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

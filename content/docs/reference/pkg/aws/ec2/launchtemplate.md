@@ -200,7 +200,9 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Device<wbr>Mappings</span>
+        <span id="blockdevicemappings_csharp">
+<a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -210,7 +212,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="capacityreservationspecification_csharp">
+<a href="#capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
@@ -219,7 +223,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Options</span>
+        <span id="cpuoptions_csharp">
+<a href="#cpuoptions_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -228,7 +234,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="creditspecification_csharp">
+<a href="#creditspecification_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
@@ -238,7 +246,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +257,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Api<wbr>Termination</span>
+        <span id="disableapitermination_csharp">
+<a href="#disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -257,7 +269,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_csharp">
+<a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +280,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="elasticgpuspecifications_csharp">
+<a href="#elasticgpuspecifications_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -276,7 +292,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="elasticinferenceaccelerator_csharp">
+<a href="#elasticinferenceaccelerator_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
@@ -285,7 +303,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hibernation<wbr>Options</span>
+        <span id="hibernationoptions_csharp">
+<a href="#hibernationoptions_csharp" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -294,7 +314,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_csharp">
+<a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -304,7 +326,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +337,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="instanceinitiatedshutdownbehavior_csharp">
+<a href="#instanceinitiatedshutdownbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +349,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Market<wbr>Options</span>
+        <span id="instancemarketoptions_csharp">
+<a href="#instancemarketoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -333,7 +361,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +372,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kernel<wbr>Id</span>
+        <span id="kernelid_csharp">
+<a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +383,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +394,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Specifications</span>
+        <span id="licensespecifications_csharp">
+<a href="#licensespecifications_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -369,7 +405,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata<wbr>Options</span>
+        <span id="metadataoptions_csharp">
+<a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -378,7 +416,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_csharp">
+<a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
@@ -387,7 +427,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -396,7 +438,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="nameprefix_csharp">
+<a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -405,7 +449,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -415,7 +461,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
@@ -424,7 +472,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram<wbr>Disk<wbr>Id</span>
+        <span id="ramdiskid_csharp">
+<a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +483,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_csharp">
+<a href="#securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -443,7 +495,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag<wbr>Specifications</span>
+        <span id="tagspecifications_csharp">
+<a href="#tagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -452,7 +506,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -461,7 +517,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -470,7 +528,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_csharp">
+<a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -486,7 +546,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Device<wbr>Mappings</span>
+        <span id="blockdevicemappings_go">
+<a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">[]Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></span>
     </dt>
@@ -496,7 +558,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="capacityreservationspecification_go">
+<a href="#capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
@@ -505,7 +569,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Options</span>
+        <span id="cpuoptions_go">
+<a href="#cpuoptions_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
@@ -514,7 +580,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="creditspecification_go">
+<a href="#creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
@@ -524,7 +592,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +603,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Api<wbr>Termination</span>
+        <span id="disableapitermination_go">
+<a href="#disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -543,7 +615,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_go">
+<a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +626,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="elasticgpuspecifications_go">
+<a href="#elasticgpuspecifications_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">[]Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</a></span>
     </dt>
@@ -562,7 +638,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="elasticinferenceaccelerator_go">
+<a href="#elasticinferenceaccelerator_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
@@ -571,7 +649,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hibernation<wbr>Options</span>
+        <span id="hibernationoptions_go">
+<a href="#hibernationoptions_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
@@ -580,7 +660,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_go">
+<a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
@@ -590,7 +672,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -599,7 +683,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="instanceinitiatedshutdownbehavior_go">
+<a href="#instanceinitiatedshutdownbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -609,7 +695,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Market<wbr>Options</span>
+        <span id="instancemarketoptions_go">
+<a href="#instancemarketoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
@@ -619,7 +707,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +718,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kernel<wbr>Id</span>
+        <span id="kernelid_go">
+<a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +729,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -646,7 +740,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Specifications</span>
+        <span id="licensespecifications_go">
+<a href="#licensespecifications_go" style="color: inherit; text-decoration: inherit;">License<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">[]Launch<wbr>Template<wbr>License<wbr>Specification</a></span>
     </dt>
@@ -655,7 +751,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata<wbr>Options</span>
+        <span id="metadataoptions_go">
+<a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
@@ -664,7 +762,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_go">
+<a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
@@ -673,7 +773,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +784,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="nameprefix_go">
+<a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -691,7 +795,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">[]Launch<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -701,7 +807,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
@@ -710,7 +818,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram<wbr>Disk<wbr>Id</span>
+        <span id="ramdiskid_go">
+<a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -719,7 +829,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_go">
+<a href="#securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -729,7 +841,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag<wbr>Specifications</span>
+        <span id="tagspecifications_go">
+<a href="#tagspecifications_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">[]Launch<wbr>Template<wbr>Tag<wbr>Specification</a></span>
     </dt>
@@ -738,7 +852,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -747,7 +863,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -756,7 +874,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_go">
+<a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -772,7 +892,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Device<wbr>Mappings</span>
+        <span id="blockdevicemappings_nodejs">
+<a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
@@ -782,7 +904,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="capacityreservationspecification_nodejs">
+<a href="#capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
@@ -791,7 +915,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Options</span>
+        <span id="cpuoptions_nodejs">
+<a href="#cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
@@ -800,7 +926,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit<wbr>Specification</span>
+        <span id="creditspecification_nodejs">
+<a href="#creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
@@ -810,7 +938,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -819,7 +949,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Api<wbr>Termination</span>
+        <span id="disableapitermination_nodejs">
+<a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -829,7 +961,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_nodejs">
+<a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -838,7 +972,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="elasticgpuspecifications_nodejs">
+<a href="#elasticgpuspecifications_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
     </dt>
@@ -848,7 +984,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="elasticinferenceaccelerator_nodejs">
+<a href="#elasticinferenceaccelerator_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
@@ -857,7 +995,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hibernation<wbr>Options</span>
+        <span id="hibernationoptions_nodejs">
+<a href="#hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
@@ -866,7 +1006,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_nodejs">
+<a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
@@ -876,7 +1018,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Id</span>
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -885,7 +1029,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="instanceinitiatedshutdownbehavior_nodejs">
+<a href="#instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -895,7 +1041,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Market<wbr>Options</span>
+        <span id="instancemarketoptions_nodejs">
+<a href="#instancemarketoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
@@ -905,7 +1053,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -914,7 +1064,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kernel<wbr>Id</span>
+        <span id="kernelid_nodejs">
+<a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -923,7 +1075,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Name</span>
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -932,7 +1086,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Specifications</span>
+        <span id="licensespecifications_nodejs">
+<a href="#licensespecifications_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
     </dt>
@@ -941,7 +1097,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata<wbr>Options</span>
+        <span id="metadataoptions_nodejs">
+<a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
@@ -950,7 +1108,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_nodejs">
+<a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
@@ -959,7 +1119,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1130,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Prefix</span>
+        <span id="nameprefix_nodejs">
+<a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -977,7 +1141,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Interfaces</span>
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -987,7 +1153,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
@@ -996,7 +1164,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram<wbr>Disk<wbr>Id</span>
+        <span id="ramdiskid_nodejs">
+<a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1005,7 +1175,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_nodejs">
+<a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1015,7 +1187,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag<wbr>Specifications</span>
+        <span id="tagspecifications_nodejs">
+<a href="#tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
     </dt>
@@ -1024,7 +1198,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1033,7 +1209,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1042,7 +1220,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_nodejs">
+<a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1058,7 +1238,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>device_<wbr>mappings</span>
+        <span id="block_device_mappings_python">
+<a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
     </dt>
@@ -1068,7 +1250,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity_<wbr>reservation_<wbr>specification</span>
+        <span id="capacity_reservation_specification_python">
+<a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></span>
     </dt>
@@ -1077,7 +1261,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>options</span>
+        <span id="cpu_options_python">
+<a href="#cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></span>
     </dt>
@@ -1086,7 +1272,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit_<wbr>specification</span>
+        <span id="credit_specification_python">
+<a href="#credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></span>
     </dt>
@@ -1096,7 +1284,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1105,7 +1295,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>api_<wbr>termination</span>
+        <span id="disable_api_termination_python">
+<a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1115,7 +1307,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs_<wbr>optimized</span>
+        <span id="ebs_optimized_python">
+<a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1124,7 +1318,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>gpu_<wbr>specifications</span>
+        <span id="elastic_gpu_specifications_python">
+<a href="#elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></span>
     </dt>
@@ -1134,7 +1330,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>inference_<wbr>accelerator</span>
+        <span id="elastic_inference_accelerator_python">
+<a href="#elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
@@ -1143,7 +1341,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hibernation_<wbr>options</span>
+        <span id="hibernation_options_python">
+<a href="#hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
     </dt>
@@ -1152,7 +1352,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
     </dt>
@@ -1162,7 +1364,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>id</span>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1171,7 +1375,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
+        <span id="instance_initiated_shutdown_behavior_python">
+<a href="#instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1181,7 +1387,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>market_<wbr>options</span>
+        <span id="instance_market_options_python">
+<a href="#instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></span>
     </dt>
@@ -1191,7 +1399,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1200,7 +1410,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kernel_<wbr>id</span>
+        <span id="kernel_id_python">
+<a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1209,7 +1421,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>name</span>
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1218,7 +1432,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>specifications</span>
+        <span id="license_specifications_python">
+<a href="#license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></span>
     </dt>
@@ -1227,7 +1443,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata_<wbr>options</span>
+        <span id="metadata_options_python">
+<a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Dict[Launch<wbr>Template<wbr>Metadata<wbr>Options]</a></span>
     </dt>
@@ -1236,7 +1454,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_python">
+<a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></span>
     </dt>
@@ -1245,7 +1465,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1254,7 +1476,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>prefix</span>
+        <span id="name_prefix_python">
+<a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1263,7 +1487,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>interfaces</span>
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></span>
     </dt>
@@ -1273,7 +1499,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></span>
     </dt>
@@ -1282,7 +1510,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram_<wbr>disk_<wbr>id</span>
+        <span id="ram_disk_id_python">
+<a href="#ram_disk_id_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>disk_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1291,7 +1521,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>names</span>
+        <span id="security_group_names_python">
+<a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1301,7 +1533,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag_<wbr>specifications</span>
+        <span id="tag_specifications_python">
+<a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
     </dt>
@@ -1310,7 +1544,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1319,7 +1555,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1328,7 +1566,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="vpc_security_group_ids_python">
+<a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1355,7 +1595,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1364,7 +1606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Version</span>
+        <span id="defaultversion_csharp">
+<a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1373,7 +1617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1381,7 +1627,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Version</span>
+        <span id="latestversion_csharp">
+<a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1397,7 +1645,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1406,7 +1656,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Version</span>
+        <span id="defaultversion_go">
+<a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1415,7 +1667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1423,7 +1677,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Version</span>
+        <span id="latestversion_go">
+<a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1439,7 +1695,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1448,7 +1706,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Version</span>
+        <span id="defaultversion_nodejs">
+<a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1457,7 +1717,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1465,7 +1727,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest<wbr>Version</span>
+        <span id="latestversion_nodejs">
+<a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1481,7 +1745,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1756,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>version</span>
+        <span id="default_version_python">
+<a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1499,7 +1767,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1507,7 +1777,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest_<wbr>version</span>
+        <span id="latest_version_python">
+<a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1649,7 +1921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1658,7 +1932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Device<wbr>Mappings</span>
+        <span id="state_blockdevicemappings_csharp">
+<a href="#state_blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -1668,7 +1944,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="state_capacityreservationspecification_csharp">
+<a href="#state_capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
@@ -1677,7 +1955,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Options</span>
+        <span id="state_cpuoptions_csharp">
+<a href="#state_cpuoptions_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1686,7 +1966,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="state_creditspecification_csharp">
+<a href="#state_creditspecification_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
@@ -1696,7 +1978,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Version</span>
+        <span id="state_defaultversion_csharp">
+<a href="#state_defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1705,7 +1989,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1714,7 +2000,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Api<wbr>Termination</span>
+        <span id="state_disableapitermination_csharp">
+<a href="#state_disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1724,7 +2012,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="state_ebsoptimized_csharp">
+<a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1733,7 +2023,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="state_elasticgpuspecifications_csharp">
+<a href="#state_elasticgpuspecifications_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -1743,7 +2035,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="state_elasticinferenceaccelerator_csharp">
+<a href="#state_elasticinferenceaccelerator_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
@@ -1752,7 +2046,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hibernation<wbr>Options</span>
+        <span id="state_hibernationoptions_csharp">
+<a href="#state_hibernationoptions_csharp" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1761,7 +2057,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_csharp">
+<a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -1771,7 +2069,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_csharp">
+<a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1780,7 +2080,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="state_instanceinitiatedshutdownbehavior_csharp">
+<a href="#state_instanceinitiatedshutdownbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1790,7 +2092,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Market<wbr>Options</span>
+        <span id="state_instancemarketoptions_csharp">
+<a href="#state_instancemarketoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1800,7 +2104,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="state_instancetype_csharp">
+<a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1809,7 +2115,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kernel<wbr>Id</span>
+        <span id="state_kernelid_csharp">
+<a href="#state_kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1818,7 +2126,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="state_keyname_csharp">
+<a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1827,7 +2137,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest<wbr>Version</span>
+        <span id="state_latestversion_csharp">
+<a href="#state_latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1836,7 +2148,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Specifications</span>
+        <span id="state_licensespecifications_csharp">
+<a href="#state_licensespecifications_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -1845,7 +2159,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata<wbr>Options</span>
+        <span id="state_metadataoptions_csharp">
+<a href="#state_metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1854,7 +2170,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="state_monitoring_csharp">
+<a href="#state_monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
@@ -1863,7 +2181,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1872,7 +2192,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="state_nameprefix_csharp">
+<a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1881,7 +2203,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_csharp">
+<a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -1891,7 +2215,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="state_placement_csharp">
+<a href="#state_placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
@@ -1900,7 +2226,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram<wbr>Disk<wbr>Id</span>
+        <span id="state_ramdiskid_csharp">
+<a href="#state_ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1909,7 +2237,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_csharp">
+<a href="#state_securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1919,7 +2249,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag<wbr>Specifications</span>
+        <span id="state_tagspecifications_csharp">
+<a href="#state_tagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -1928,7 +2260,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1937,7 +2271,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_csharp">
+<a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1946,7 +2282,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_csharp">
+<a href="#state_vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1962,7 +2300,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1971,7 +2311,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Device<wbr>Mappings</span>
+        <span id="state_blockdevicemappings_go">
+<a href="#state_blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">[]Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></span>
     </dt>
@@ -1981,7 +2323,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="state_capacityreservationspecification_go">
+<a href="#state_capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
@@ -1990,7 +2334,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Options</span>
+        <span id="state_cpuoptions_go">
+<a href="#state_cpuoptions_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
@@ -1999,7 +2345,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="state_creditspecification_go">
+<a href="#state_creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
@@ -2009,7 +2357,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Version</span>
+        <span id="state_defaultversion_go">
+<a href="#state_defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2018,7 +2368,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2027,7 +2379,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Api<wbr>Termination</span>
+        <span id="state_disableapitermination_go">
+<a href="#state_disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2037,7 +2391,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="state_ebsoptimized_go">
+<a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2046,7 +2402,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="state_elasticgpuspecifications_go">
+<a href="#state_elasticgpuspecifications_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">[]Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</a></span>
     </dt>
@@ -2056,7 +2414,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="state_elasticinferenceaccelerator_go">
+<a href="#state_elasticinferenceaccelerator_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
@@ -2065,7 +2425,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hibernation<wbr>Options</span>
+        <span id="state_hibernationoptions_go">
+<a href="#state_hibernationoptions_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
@@ -2074,7 +2436,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_go">
+<a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
@@ -2084,7 +2448,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_go">
+<a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2093,7 +2459,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="state_instanceinitiatedshutdownbehavior_go">
+<a href="#state_instanceinitiatedshutdownbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2103,7 +2471,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Market<wbr>Options</span>
+        <span id="state_instancemarketoptions_go">
+<a href="#state_instancemarketoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
@@ -2113,7 +2483,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="state_instancetype_go">
+<a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2122,7 +2494,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kernel<wbr>Id</span>
+        <span id="state_kernelid_go">
+<a href="#state_kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2131,7 +2505,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="state_keyname_go">
+<a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2140,7 +2516,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest<wbr>Version</span>
+        <span id="state_latestversion_go">
+<a href="#state_latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2149,7 +2527,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Specifications</span>
+        <span id="state_licensespecifications_go">
+<a href="#state_licensespecifications_go" style="color: inherit; text-decoration: inherit;">License<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">[]Launch<wbr>Template<wbr>License<wbr>Specification</a></span>
     </dt>
@@ -2158,7 +2538,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata<wbr>Options</span>
+        <span id="state_metadataoptions_go">
+<a href="#state_metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
@@ -2167,7 +2549,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="state_monitoring_go">
+<a href="#state_monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
@@ -2176,7 +2560,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2185,7 +2571,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="state_nameprefix_go">
+<a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2194,7 +2582,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_go">
+<a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">[]Launch<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -2204,7 +2594,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="state_placement_go">
+<a href="#state_placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
@@ -2213,7 +2605,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram<wbr>Disk<wbr>Id</span>
+        <span id="state_ramdiskid_go">
+<a href="#state_ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2222,7 +2616,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_go">
+<a href="#state_securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2232,7 +2628,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag<wbr>Specifications</span>
+        <span id="state_tagspecifications_go">
+<a href="#state_tagspecifications_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">[]Launch<wbr>Template<wbr>Tag<wbr>Specification</a></span>
     </dt>
@@ -2241,7 +2639,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2250,7 +2650,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_go">
+<a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2259,7 +2661,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_go">
+<a href="#state_vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2275,7 +2679,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2284,7 +2690,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Device<wbr>Mappings</span>
+        <span id="state_blockdevicemappings_nodejs">
+<a href="#state_blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
@@ -2294,7 +2702,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Specification</span>
+        <span id="state_capacityreservationspecification_nodejs">
+<a href="#state_capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
@@ -2303,7 +2713,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Options</span>
+        <span id="state_cpuoptions_nodejs">
+<a href="#state_cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
@@ -2312,7 +2724,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit<wbr>Specification</span>
+        <span id="state_creditspecification_nodejs">
+<a href="#state_creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
@@ -2322,7 +2736,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Version</span>
+        <span id="state_defaultversion_nodejs">
+<a href="#state_defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2331,7 +2747,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2340,7 +2758,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Api<wbr>Termination</span>
+        <span id="state_disableapitermination_nodejs">
+<a href="#state_disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2350,7 +2770,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs<wbr>Optimized</span>
+        <span id="state_ebsoptimized_nodejs">
+<a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2359,7 +2781,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Gpu<wbr>Specifications</span>
+        <span id="state_elasticgpuspecifications_nodejs">
+<a href="#state_elasticgpuspecifications_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Gpu<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
     </dt>
@@ -2369,7 +2793,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Inference<wbr>Accelerator</span>
+        <span id="state_elasticinferenceaccelerator_nodejs">
+<a href="#state_elasticinferenceaccelerator_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Inference<wbr>Accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
@@ -2378,7 +2804,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hibernation<wbr>Options</span>
+        <span id="state_hibernationoptions_nodejs">
+<a href="#state_hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
@@ -2387,7 +2815,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_nodejs">
+<a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
@@ -2397,7 +2827,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Id</span>
+        <span id="state_imageid_nodejs">
+<a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2406,7 +2838,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
+        <span id="state_instanceinitiatedshutdownbehavior_nodejs">
+<a href="#state_instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2416,7 +2850,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Market<wbr>Options</span>
+        <span id="state_instancemarketoptions_nodejs">
+<a href="#state_instancemarketoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Market<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
@@ -2426,7 +2862,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="state_instancetype_nodejs">
+<a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2435,7 +2873,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kernel<wbr>Id</span>
+        <span id="state_kernelid_nodejs">
+<a href="#state_kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2444,7 +2884,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Name</span>
+        <span id="state_keyname_nodejs">
+<a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2453,7 +2895,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest<wbr>Version</span>
+        <span id="state_latestversion_nodejs">
+<a href="#state_latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2462,7 +2906,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Specifications</span>
+        <span id="state_licensespecifications_nodejs">
+<a href="#state_licensespecifications_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
     </dt>
@@ -2471,7 +2917,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata<wbr>Options</span>
+        <span id="state_metadataoptions_nodejs">
+<a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
@@ -2480,7 +2928,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="state_monitoring_nodejs">
+<a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
@@ -2489,7 +2939,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2498,7 +2950,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Prefix</span>
+        <span id="state_nameprefix_nodejs">
+<a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2507,7 +2961,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_nodejs">
+<a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -2517,7 +2973,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="state_placement_nodejs">
+<a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
@@ -2526,7 +2984,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram<wbr>Disk<wbr>Id</span>
+        <span id="state_ramdiskid_nodejs">
+<a href="#state_ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2535,7 +2995,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_nodejs">
+<a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2545,7 +3007,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag<wbr>Specifications</span>
+        <span id="state_tagspecifications_nodejs">
+<a href="#state_tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
     </dt>
@@ -2554,7 +3018,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2563,7 +3029,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="state_userdata_nodejs">
+<a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2572,7 +3040,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_nodejs">
+<a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2588,7 +3058,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2597,7 +3069,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>device_<wbr>mappings</span>
+        <span id="state_block_device_mappings_python">
+<a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
     </dt>
@@ -2607,7 +3081,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity_<wbr>reservation_<wbr>specification</span>
+        <span id="state_capacity_reservation_specification_python">
+<a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></span>
     </dt>
@@ -2616,7 +3092,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>options</span>
+        <span id="state_cpu_options_python">
+<a href="#state_cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></span>
     </dt>
@@ -2625,7 +3103,9 @@ See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit_<wbr>specification</span>
+        <span id="state_credit_specification_python">
+<a href="#state_credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></span>
     </dt>
@@ -2635,7 +3115,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>version</span>
+        <span id="state_default_version_python">
+<a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2644,7 +3126,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2653,7 +3137,9 @@ Specification below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>api_<wbr>termination</span>
+        <span id="state_disable_api_termination_python">
+<a href="#state_disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2663,7 +3149,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs_<wbr>optimized</span>
+        <span id="state_ebs_optimized_python">
+<a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2672,7 +3160,9 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>gpu_<wbr>specifications</span>
+        <span id="state_elastic_gpu_specifications_python">
+<a href="#state_elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></span>
     </dt>
@@ -2682,7 +3172,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>inference_<wbr>accelerator</span>
+        <span id="state_elastic_inference_accelerator_python">
+<a href="#state_elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
@@ -2691,7 +3183,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hibernation_<wbr>options</span>
+        <span id="state_hibernation_options_python">
+<a href="#state_hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
     </dt>
@@ -2700,7 +3194,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span id="state_iam_instance_profile_python">
+<a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
     </dt>
@@ -2710,7 +3206,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>id</span>
+        <span id="state_image_id_python">
+<a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2719,7 +3217,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
+        <span id="state_instance_initiated_shutdown_behavior_python">
+<a href="#state_instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2729,7 +3229,9 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>market_<wbr>options</span>
+        <span id="state_instance_market_options_python">
+<a href="#state_instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></span>
     </dt>
@@ -2739,7 +3241,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="state_instance_type_python">
+<a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2748,7 +3252,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kernel_<wbr>id</span>
+        <span id="state_kernel_id_python">
+<a href="#state_kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2757,7 +3263,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>name</span>
+        <span id="state_key_name_python">
+<a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2766,7 +3274,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest_<wbr>version</span>
+        <span id="state_latest_version_python">
+<a href="#state_latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2775,7 +3285,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>specifications</span>
+        <span id="state_license_specifications_python">
+<a href="#state_license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></span>
     </dt>
@@ -2784,7 +3296,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata_<wbr>options</span>
+        <span id="state_metadata_options_python">
+<a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemetadataoptions">Dict[Launch<wbr>Template<wbr>Metadata<wbr>Options]</a></span>
     </dt>
@@ -2793,7 +3307,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="state_monitoring_python">
+<a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></span>
     </dt>
@@ -2802,7 +3318,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2811,7 +3329,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>prefix</span>
+        <span id="state_name_prefix_python">
+<a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2820,7 +3340,9 @@ below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>interfaces</span>
+        <span id="state_network_interfaces_python">
+<a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></span>
     </dt>
@@ -2830,7 +3352,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="state_placement_python">
+<a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></span>
     </dt>
@@ -2839,7 +3363,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram_<wbr>disk_<wbr>id</span>
+        <span id="state_ram_disk_id_python">
+<a href="#state_ram_disk_id_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>disk_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2848,7 +3374,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>names</span>
+        <span id="state_security_group_names_python">
+<a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2858,7 +3386,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag_<wbr>specifications</span>
+        <span id="state_tag_specifications_python">
+<a href="#state_tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
     </dt>
@@ -2867,7 +3397,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2876,7 +3408,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="state_user_data_python">
+<a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2885,7 +3419,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="state_vpc_security_group_ids_python">
+<a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2927,7 +3463,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2936,7 +3474,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs</span>
+        <span id="ebs_csharp">
+<a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
     </dt>
@@ -2945,7 +3485,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Device</span>
+        <span id="nodevice_csharp">
+<a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2954,7 +3496,9 @@ Interfaces below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Name</span>
+        <span id="virtualname_csharp">
+<a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2972,7 +3516,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2981,7 +3527,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs</span>
+        <span id="ebs_go">
+<a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
@@ -2990,7 +3538,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Device</span>
+        <span id="nodevice_go">
+<a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2999,7 +3549,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Name</span>
+        <span id="virtualname_go">
+<a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3017,7 +3569,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Name</span>
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3026,7 +3580,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs</span>
+        <span id="ebs_nodejs">
+<a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
@@ -3035,7 +3591,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Device</span>
+        <span id="nodevice_nodejs">
+<a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3044,7 +3602,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Name</span>
+        <span id="virtualname_nodejs">
+<a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3062,7 +3622,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>name</span>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3071,7 +3633,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs</span>
+        <span id="ebs_python">
+<a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Dict[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs]</a></span>
     </dt>
@@ -3080,7 +3644,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Device</span>
+        <span id="nodevice_python">
+<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3089,7 +3655,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Name</span>
+        <span id="virtualname_python">
+<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3125,7 +3693,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3134,7 +3704,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3144,7 +3716,9 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3155,7 +3729,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3165,7 +3741,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3174,7 +3752,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3183,7 +3763,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3199,7 +3781,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3208,7 +3792,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3218,7 +3804,9 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3229,7 +3817,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3239,7 +3829,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3248,7 +3840,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3257,7 +3851,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3273,7 +3869,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3282,7 +3880,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3292,7 +3892,9 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3303,7 +3905,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3313,7 +3917,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3322,7 +3928,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Size</span>
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3331,7 +3939,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3347,7 +3957,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_python">
+<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3356,7 +3968,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3366,7 +3980,9 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3377,7 +3993,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3387,7 +4005,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3396,7 +4016,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_python">
+<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3405,7 +4027,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3439,7 +4063,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Preference</span>
+        <span id="capacityreservationpreference_csharp">
+<a href="#capacityreservationpreference_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3448,7 +4074,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Target</span>
+        <span id="capacityreservationtarget_csharp">
+<a href="#capacityreservationtarget_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
     </dt>
@@ -3464,7 +4092,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Preference</span>
+        <span id="capacityreservationpreference_go">
+<a href="#capacityreservationpreference_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3473,7 +4103,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Target</span>
+        <span id="capacityreservationtarget_go">
+<a href="#capacityreservationtarget_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
@@ -3489,7 +4121,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Preference</span>
+        <span id="capacityreservationpreference_nodejs">
+<a href="#capacityreservationpreference_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3498,7 +4132,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Target</span>
+        <span id="capacityreservationtarget_nodejs">
+<a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
@@ -3514,7 +4150,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Preference</span>
+        <span id="capacityreservationpreference_python">
+<a href="#capacityreservationpreference_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3523,7 +4161,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Target</span>
+        <span id="capacityreservationtarget_python">
+<a href="#capacityreservationtarget_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target]</a></span>
     </dt>
@@ -3557,7 +4197,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Id</span>
+        <span id="capacityreservationid_csharp">
+<a href="#capacityreservationid_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3573,7 +4215,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity<wbr>Reservation<wbr>Id</span>
+        <span id="capacityreservationid_go">
+<a href="#capacityreservationid_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3589,7 +4233,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Id</span>
+        <span id="capacityreservationid_nodejs">
+<a href="#capacityreservationid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3605,7 +4251,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity<wbr>Reservation<wbr>Id</span>
+        <span id="capacityreservationid_python">
+<a href="#capacityreservationid_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3639,7 +4287,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Core<wbr>Count</span>
+        <span id="corecount_csharp">
+<a href="#corecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3648,7 +4298,9 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threads<wbr>Per<wbr>Core</span>
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3665,7 +4317,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Core<wbr>Count</span>
+        <span id="corecount_go">
+<a href="#corecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3674,7 +4328,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threads<wbr>Per<wbr>Core</span>
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3691,7 +4347,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>core<wbr>Count</span>
+        <span id="corecount_nodejs">
+<a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3700,7 +4358,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>threads<wbr>Per<wbr>Core</span>
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3717,7 +4377,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>core<wbr>Count</span>
+        <span id="corecount_python">
+<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3726,7 +4388,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>threads<wbr>Per<wbr>Core</span>
+        <span id="threadspercore_python">
+<a href="#threadspercore_python" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3761,7 +4425,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Credits</span>
+        <span id="cpucredits_csharp">
+<a href="#cpucredits_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3777,7 +4443,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Credits</span>
+        <span id="cpucredits_go">
+<a href="#cpucredits_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3793,7 +4461,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Credits</span>
+        <span id="cpucredits_nodejs">
+<a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3809,7 +4479,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Credits</span>
+        <span id="cpucredits_python">
+<a href="#cpucredits_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3843,7 +4515,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3859,7 +4533,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3875,7 +4551,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3891,7 +4569,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3925,7 +4605,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3941,7 +4623,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3957,7 +4641,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3973,7 +4659,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4007,7 +4695,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Configured</span>
+        <span id="configured_csharp">
+<a href="#configured_csharp" style="color: inherit; text-decoration: inherit;">Configured</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4023,7 +4713,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>Configured</span>
+        <span id="configured_go">
+<a href="#configured_go" style="color: inherit; text-decoration: inherit;">Configured</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4039,7 +4731,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>configured</span>
+        <span id="configured_nodejs">
+<a href="#configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4055,7 +4749,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>configured</span>
+        <span id="configured_python">
+<a href="#configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4089,7 +4785,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4098,7 +4796,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4114,7 +4814,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4123,7 +4825,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4139,7 +4843,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4148,7 +4854,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4164,7 +4872,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4173,7 +4883,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4207,7 +4919,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Market<wbr>Type</span>
+        <span id="markettype_csharp">
+<a href="#markettype_csharp" style="color: inherit; text-decoration: inherit;">Market<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4216,7 +4930,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Options</span>
+        <span id="spotoptions_csharp">
+<a href="#spotoptions_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -4232,7 +4948,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Market<wbr>Type</span>
+        <span id="markettype_go">
+<a href="#markettype_go" style="color: inherit; text-decoration: inherit;">Market<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4241,7 +4959,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Options</span>
+        <span id="spotoptions_go">
+<a href="#spotoptions_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
     </dt>
@@ -4257,7 +4977,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>market<wbr>Type</span>
+        <span id="markettype_nodejs">
+<a href="#markettype_nodejs" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4266,7 +4988,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Options</span>
+        <span id="spotoptions_nodejs">
+<a href="#spotoptions_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
     </dt>
@@ -4282,7 +5006,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>market<wbr>Type</span>
+        <span id="markettype_python">
+<a href="#markettype_python" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4291,7 +5017,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>options</span>
+        <span id="spot_options_python">
+<a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options]</a></span>
     </dt>
@@ -4325,7 +5053,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Duration<wbr>Minutes</span>
+        <span id="blockdurationminutes_csharp">
+<a href="#blockdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4334,7 +5064,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="instanceinterruptionbehavior_csharp">
+<a href="#instanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4344,7 +5076,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Price</span>
+        <span id="maxprice_csharp">
+<a href="#maxprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4353,7 +5087,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Type</span>
+        <span id="spotinstancetype_csharp">
+<a href="#spotinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4362,7 +5098,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_csharp">
+<a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4378,7 +5116,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Duration<wbr>Minutes</span>
+        <span id="blockdurationminutes_go">
+<a href="#blockdurationminutes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4387,7 +5127,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="instanceinterruptionbehavior_go">
+<a href="#instanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4397,7 +5139,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Price</span>
+        <span id="maxprice_go">
+<a href="#maxprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4406,7 +5150,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Type</span>
+        <span id="spotinstancetype_go">
+<a href="#spotinstancetype_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4415,7 +5161,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_go">
+<a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4431,7 +5179,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Duration<wbr>Minutes</span>
+        <span id="blockdurationminutes_nodejs">
+<a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4440,7 +5190,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="instanceinterruptionbehavior_nodejs">
+<a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4450,7 +5202,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Price</span>
+        <span id="maxprice_nodejs">
+<a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4459,7 +5213,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Type</span>
+        <span id="spotinstancetype_nodejs">
+<a href="#spotinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4468,7 +5224,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="validuntil_nodejs">
+<a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4484,7 +5242,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>duration_<wbr>minutes</span>
+        <span id="block_duration_minutes_python">
+<a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4493,7 +5253,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="instanceinterruptionbehavior_python">
+<a href="#instanceinterruptionbehavior_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4503,7 +5265,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Price</span>
+        <span id="maxprice_python">
+<a href="#maxprice_python" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4512,7 +5276,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Type</span>
+        <span id="spotinstancetype_python">
+<a href="#spotinstancetype_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4521,7 +5287,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="valid_until_python">
+<a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4555,7 +5323,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>License<wbr>Configuration<wbr>Arn</span>
+        <span id="licenseconfigurationarn_csharp">
+<a href="#licenseconfigurationarn_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Configuration<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4571,7 +5341,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>License<wbr>Configuration<wbr>Arn</span>
+        <span id="licenseconfigurationarn_go">
+<a href="#licenseconfigurationarn_go" style="color: inherit; text-decoration: inherit;">License<wbr>Configuration<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4587,7 +5359,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>license<wbr>Configuration<wbr>Arn</span>
+        <span id="licenseconfigurationarn_nodejs">
+<a href="#licenseconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Configuration<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4603,7 +5377,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-required"
             title="Required">
-        <span>license_<wbr>configuration_<wbr>arn</span>
+        <span id="license_configuration_arn_python">
+<a href="#license_configuration_arn_python" style="color: inherit; text-decoration: inherit;">license_<wbr>configuration_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4637,7 +5413,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Endpoint</span>
+        <span id="httpendpoint_csharp">
+<a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4646,7 +5424,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4655,7 +5435,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Tokens</span>
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4671,7 +5453,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Endpoint</span>
+        <span id="httpendpoint_go">
+<a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4680,7 +5464,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4689,7 +5475,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Tokens</span>
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4705,7 +5493,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Endpoint</span>
+        <span id="httpendpoint_nodejs">
+<a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4714,7 +5504,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4723,7 +5515,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Tokens</span>
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4739,7 +5533,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Endpoint</span>
+        <span id="httpendpoint_python">
+<a href="#httpendpoint_python" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4748,7 +5544,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
+        <span id="httpputresponsehoplimit_python">
+<a href="#httpputresponsehoplimit_python" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4757,7 +5555,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Tokens</span>
+        <span id="httptokens_python">
+<a href="#httptokens_python" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4791,7 +5591,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4807,7 +5609,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4823,7 +5627,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4839,7 +5645,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4873,7 +5681,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_csharp">
+<a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4882,7 +5692,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4891,7 +5703,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4900,7 +5714,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Index</span>
+        <span id="deviceindex_csharp">
+<a href="#deviceindex_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4909,7 +5725,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address<wbr>Count</span>
+        <span id="ipv4addresscount_csharp">
+<a href="#ipv4addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4918,7 +5736,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Addresses</span>
+        <span id="ipv4addresses_csharp">
+<a href="#ipv4addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4927,7 +5747,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Count</span>
+        <span id="ipv6addresscount_csharp">
+<a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4936,7 +5758,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Addresses</span>
+        <span id="ipv6addresses_csharp">
+<a href="#ipv6addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4945,7 +5769,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_csharp">
+<a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4954,7 +5780,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4963,7 +5791,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Groups</span>
+        <span id="securitygroups_csharp">
+<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4972,7 +5802,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4988,7 +5820,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_go">
+<a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4997,7 +5831,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5006,7 +5842,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5015,7 +5853,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Index</span>
+        <span id="deviceindex_go">
+<a href="#deviceindex_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5024,7 +5864,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address<wbr>Count</span>
+        <span id="ipv4addresscount_go">
+<a href="#ipv4addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5033,7 +5875,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Addresses</span>
+        <span id="ipv4addresses_go">
+<a href="#ipv4addresses_go" style="color: inherit; text-decoration: inherit;">Ipv4Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5042,7 +5886,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Count</span>
+        <span id="ipv6addresscount_go">
+<a href="#ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5051,7 +5897,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Addresses</span>
+        <span id="ipv6addresses_go">
+<a href="#ipv6addresses_go" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5060,7 +5908,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_go">
+<a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5069,7 +5919,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5078,7 +5930,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Groups</span>
+        <span id="securitygroups_go">
+<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5087,7 +5941,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5103,7 +5959,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_nodejs">
+<a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5112,7 +5970,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5121,7 +5981,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5130,7 +5992,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Index</span>
+        <span id="deviceindex_nodejs">
+<a href="#deviceindex_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5139,7 +6003,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address<wbr>Count</span>
+        <span id="ipv4addresscount_nodejs">
+<a href="#ipv4addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5148,7 +6014,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Addresses</span>
+        <span id="ipv4addresses_nodejs">
+<a href="#ipv4addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5157,7 +6025,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Address<wbr>Count</span>
+        <span id="ipv6addresscount_nodejs">
+<a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5166,7 +6036,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Addresses</span>
+        <span id="ipv6addresses_nodejs">
+<a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5175,7 +6047,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_nodejs">
+<a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5184,7 +6058,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5193,7 +6069,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Groups</span>
+        <span id="securitygroups_nodejs">
+<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5202,7 +6080,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5218,7 +6098,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span id="associate_public_ip_address_python">
+<a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5227,7 +6109,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_python">
+<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5236,7 +6120,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5245,7 +6131,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>index</span>
+        <span id="device_index_python">
+<a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5254,7 +6142,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address<wbr>Count</span>
+        <span id="ipv4addresscount_python">
+<a href="#ipv4addresscount_python" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5263,7 +6153,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Addresses</span>
+        <span id="ipv4addresses_python">
+<a href="#ipv4addresses_python" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5272,7 +6164,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>address_<wbr>count</span>
+        <span id="ipv6_address_count_python">
+<a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5281,7 +6175,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>addresses</span>
+        <span id="ipv6_addresses_python">
+<a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5290,7 +6186,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>interface_<wbr>id</span>
+        <span id="network_interface_id_python">
+<a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5299,7 +6197,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip_<wbr>address</span>
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5308,7 +6208,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>groups</span>
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5317,7 +6219,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5351,7 +6255,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Affinity</span>
+        <span id="affinity_csharp">
+<a href="#affinity_csharp" style="color: inherit; text-decoration: inherit;">Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5360,7 +6266,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5369,7 +6277,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5378,7 +6288,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_csharp">
+<a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5387,7 +6299,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Number</span>
+        <span id="partitionnumber_csharp">
+<a href="#partitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5396,7 +6310,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spread<wbr>Domain</span>
+        <span id="spreaddomain_csharp">
+<a href="#spreaddomain_csharp" style="color: inherit; text-decoration: inherit;">Spread<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5405,7 +6321,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenancy</span>
+        <span id="tenancy_csharp">
+<a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5421,7 +6339,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Affinity</span>
+        <span id="affinity_go">
+<a href="#affinity_go" style="color: inherit; text-decoration: inherit;">Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5430,7 +6350,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5439,7 +6361,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5448,7 +6372,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_go">
+<a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5457,7 +6383,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Number</span>
+        <span id="partitionnumber_go">
+<a href="#partitionnumber_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5466,7 +6394,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spread<wbr>Domain</span>
+        <span id="spreaddomain_go">
+<a href="#spreaddomain_go" style="color: inherit; text-decoration: inherit;">Spread<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5475,7 +6405,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenancy</span>
+        <span id="tenancy_go">
+<a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5491,7 +6423,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>affinity</span>
+        <span id="affinity_nodejs">
+<a href="#affinity_nodejs" style="color: inherit; text-decoration: inherit;">affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5500,7 +6434,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5509,7 +6445,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Name</span>
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5518,7 +6456,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Id</span>
+        <span id="hostid_nodejs">
+<a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5527,7 +6467,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Number</span>
+        <span id="partitionnumber_nodejs">
+<a href="#partitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5536,7 +6478,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spread<wbr>Domain</span>
+        <span id="spreaddomain_nodejs">
+<a href="#spreaddomain_nodejs" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5545,7 +6489,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenancy</span>
+        <span id="tenancy_nodejs">
+<a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5561,7 +6507,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>affinity</span>
+        <span id="affinity_python">
+<a href="#affinity_python" style="color: inherit; text-decoration: inherit;">affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5570,7 +6518,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5579,7 +6529,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>name</span>
+        <span id="group_name_python">
+<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5588,7 +6540,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>id</span>
+        <span id="host_id_python">
+<a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5597,7 +6551,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Number</span>
+        <span id="partitionnumber_python">
+<a href="#partitionnumber_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5606,7 +6562,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spread<wbr>Domain</span>
+        <span id="spreaddomain_python">
+<a href="#spreaddomain_python" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5615,7 +6573,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenancy</span>
+        <span id="tenancy_python">
+<a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5649,7 +6609,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Type</span>
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5658,7 +6620,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -5674,7 +6638,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Type</span>
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5683,7 +6649,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -5699,7 +6667,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Type</span>
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5708,7 +6678,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -5724,7 +6696,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>type</span>
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5733,7 +6707,9 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
