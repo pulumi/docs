@@ -55,7 +55,7 @@ export class Root {
         // both are present because the anchor will not work otherwise.
         const anchorTag = window.location.hash;
         if (anchorTag) {
-            const language = anchorTag.split("~")
+            const language = anchorTag.split("_")
                 .slice(-1)
                 .find(lang => ["typescript", "javascript", "csharp", "go", "python"].includes(lang));
             if (language) {
