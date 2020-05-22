@@ -175,7 +175,7 @@
             }
         },
         "kubernetes:helm/v2:Chart": {
-            "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`\n is not specified, `ConfigFile` assumes the argument `name` is the filename.",
+            "description": "Chart is a component representing a collection of resources described by an arbitrary Helm Chart.\n\nThe Chart can be fetched from any source that is accessible to the `helm` command line. Values in the `values.yml` file can be overridden using `ChartOpts.values` (equivalent to `--set` or having multiple `values.yml` files). Objects can be transformed arbitrarily by supplying callbacks to `ChartOpts.transformations`.\n\n`Chart` does not use Tiller. The Chart specified is copied and expanded locally; the semantics are equivalent to running `helm template` and then using Pulumi to manage the resulting YAML manifests. Any values that would be retrieved in-cluster are assigned fake values, and none of Tiller's server-side validity testing is executed.",
             "type": "object",
             "properties": {
                 "resources": {
@@ -232,7 +232,7 @@
             }
         },
         "kubernetes:helm/v3:Chart": {
-            "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`\n is not specified, `ConfigFile` assumes the argument `name` is the filename.",
+            "description": "Chart is a component representing a collection of resources described by an arbitrary Helm Chart.\n\nThe Chart can be fetched from any source that is accessible to the `helm` command line. Values in the `values.yml` file can be overridden using `ChartOpts.values` (equivalent to `--set` or having multiple `values.yml` files). Objects can be transformed arbitrarily by supplying callbacks to `ChartOpts.transformations`.\n\n`Chart` does not use Tiller. The Chart specified is copied and expanded locally; the semantics are equivalent to running `helm template` and then using Pulumi to manage the resulting YAML manifests. Any values that would be retrieved in-cluster are assigned fake values, and none of Tiller's server-side validity testing is executed.",
             "type": "object",
             "properties": {
                 "resources": {
