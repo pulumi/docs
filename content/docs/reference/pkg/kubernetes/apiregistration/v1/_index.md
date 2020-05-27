@@ -22,7 +22,7 @@ Explore the resources and functions of the apiregistration/v1 module in the Kube
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.2.1</dd>
 </dl>
 
 
