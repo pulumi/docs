@@ -34,7 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">load_balancer</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.AppCookieStickinessPolicy has been deprecated in favour of aws.elb.AppCookieStickinessPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -159,7 +158,6 @@ conflict and will overwrite attachments.</p>
     <span class="n">instance</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -365,7 +363,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </pre></div>
 </div>
 <p>This example shows how to add a <a class="reference external" href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html">Predefined Security Policy for ELBs</a></p>
-<p>Deprecated: aws.elasticloadbalancing.ListenerPolicy has been deprecated in favour of aws.elb.ListenerPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -518,7 +515,6 @@ certificate that was signed by an ECDSA key, note that ELB only supports the
 P256 and P384 curves.  Using a certificate signed by a key using a different
 curve could produce the error <code class="docutils literal notranslate"><span class="pre">ERR_SSL_VERSION_OR_CIPHER_MISMATCH</span></code> in your
 browser.</p>
-<p>Deprecated: aws.elasticloadbalancing.LoadBalancer has been deprecated in favour of aws.elb.LoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -887,7 +883,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">policy_names</span><span class="o">=</span><span class="p">[</span><span class="n">wu_tang_root_ca_backend_auth_policy</span><span class="o">.</span><span class="n">policy_name</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -995,7 +990,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">load_balancer</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favour of aws.elb.LoadBalancerCookieStickinessPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1169,7 +1163,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">policy_names</span><span class="o">=</span><span class="p">[</span><span class="n">wu_tang_ssl</span><span class="o">.</span><span class="n">policy_name</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1329,7 +1322,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">load_balancer</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favour of aws.elb.SslNegotiationPolicy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1467,7 +1459,6 @@ in a given region for the purpose of using in an AWS Route53 Alias.</p>
     <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.getHostedZoneId has been deprecated in favour of aws.elb.getHostedZoneId</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS ELB HostedZoneId is desired.
@@ -1495,7 +1486,6 @@ with it, etc.</p>
 <span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">get_load_balancer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">lb_name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.getLoadBalancer has been deprecated in favour of aws.elb.getLoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The unique name of the load balancer.</p>
@@ -1548,7 +1538,6 @@ in a given region for the purpose of whitelisting in S3 bucket policy.</p>
     <span class="p">}])</span>
 </pre></div>
 </div>
-<p>Deprecated: aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS ELB account ID is desired.
