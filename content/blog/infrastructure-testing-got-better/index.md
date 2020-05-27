@@ -1,6 +1,6 @@
 ---
 title: "At Scale Infrastructure Testing With Pulumi"
-date: 2020-05-13
+date: 2020-05-28
 draft: true
 meta_desc: "Pulumi accelerates infrastructure testing 60x with mocking and unit tests."
 meta_image: dustin-farris.png
@@ -116,6 +116,83 @@ describe("attachment", () => {
 ```
 
 The key part is that we never actually talk to the cloud provider. Instead, we are able to mock the output values that we’d typically expect to have from using the provider such as the ARN. In the above example, you can see we simply mock out the ARN by returning “${name}-arn” instead of whatever the cloud provider would actually assign. There are many powerful ways to use this mocking to ensure that certain output properties are set or to mock the return of certain lookup calls to the cloud provider.
+
+## Testing with Policies
+
+In addition to resource testing with mocks, we can test the entire stack with policies. This example ensures that the EKs cluster uses version 1.13 deployed on a custom VPC.
+
+infrastructure:
+
+```ts
+import * as awsx from "@pulumi/awsx";
+import * as eks from "@pulumi/eks";
+
+// Create a custom VPC.
+const vpc = new awsx.ec2.Vpc("my-vpc");
+
+// Create a basic EKS cluster.
+const cluster = new eks.Cluster("my-cluster", {
+    desiredCapacity: 2,
+    minSize: 1,
+    maxSize: 2,
+    storageClasses: "gp2",
+    deployDashboard: false,
+    version: "1.13",
+    vpcId: vpc.id,
+    subnetIds: vpc.publicSubnetIds,
+});
+```
+
+policy test:
+
+```ts
+const stackPolicy: policy.StackValidationPolicy = {
+    name: "eks-test",
+    description: "EKS integration tests.",
+    enforcementLevel: "mandatory",
+    validateStack: async (args, reportViolation) => {
+        const clusterResources = args.resources.filter(r => r.isType(aws.eks.Cluster));
+        if (clusterResources.length !== 1) {
+            reportViolation(`Expected one EKS Cluster but found ${clusterResources.length}`);
+            return;
+        }
+
+        const cluster = clusterResources[0].asType(aws.eks.Cluster)!;
+        if (cluster.version !== "1.13") {
+            reportViolation(`Expected EKS Cluster '${cluster.name}' version to be '1.13' but found '${cluster.version}'`);
+        }
+
+        const vpcId = cluster.vpcConfig.vpcId;
+        if (!vpcId) {
+            // 'isDryRun==true' means the test are running in preview.
+            // If so, the VPC might not exist yet even though it's defined in the program.
+            // We shouldn't fail the test then to avoid false negatives.
+            if (!pulumi.runtime.isDryRun()) {
+                reportViolation(`EKS Cluster '${cluster.name}' has unknown VPC`);
+            }
+            return;
+        }
+
+        const ec2 = new aws.sdk.EC2({region: aws.config.region});
+        const response = await ec2.describeVpcs().promise();
+        const defaultVpc = response.Vpcs?.find(vpc => vpc.IsDefault);
+        if (!defaultVpc) {
+            reportViolation("Default VPC not found");
+            return;
+        }
+
+        if (defaultVpc.VpcId === vpcId) {
+            reportViolation(`EKS Cluster '${cluster.name}' should not use the default VPC`);
+        }
+    },
+}
+
+const tests = new policy.PolicyPack("tests-pack", {
+    policies: [stackPolicy],
+});
+```
+
+Policy tests run on the entire stack are integration tests. We have two policies. The first policy is to check the EKS version which is done without deploying because the version is an input value. Next, we check to see if the tests are running in preview. The test returns a violation if the VPC has not been deployed because it does not have an output for the policy to validate .
 
 ## Next Steps
 
