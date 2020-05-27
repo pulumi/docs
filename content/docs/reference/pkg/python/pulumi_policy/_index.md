@@ -16,7 +16,7 @@ notitle: true
 
 <dl class="py class">
 <dt id="pulumi_policy.Policy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.PolicyConfigSchema<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy function that returns true if a resource definition violates some policy (e.g., “no
 public S3 buckets”), and a set of metadata useful for generating helpful messages when the policy
 is violated.</p>
@@ -28,6 +28,7 @@ is violated.</p>
 default encryptionenabled.”</p></li>
 <li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.EnforcementLevel" title="pulumi_policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
 e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.PolicyConfigSchema" title="pulumi_policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
 </ul>
 </dd>
 </dl>
@@ -49,6 +50,38 @@ enabled.”</p>
 <code class="sig-name descname">enforcement_level</code><em class="property">: Optional[EnforcementLevel]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.Policy.enforcement_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates what to do on policy violation, e.g., block deployment but allow override with
 proper permissions.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.Policy.config_schema">
+<code class="sig-name descname">config_schema</code><em class="property">: Optional[PolicyConfigSchema]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.Policy.config_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>This policy’s configuration schema.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.PolicyConfigSchema">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">PolicyConfigSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">properties</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">required</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.PolicyConfigSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the configuration schema for a policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Dict</strong><strong>[</strong><strong>str</strong><strong>, </strong><strong>Any</strong><strong>]</strong><strong>] </strong><strong>properties</strong> (<em>Dict</em><em>[</em><em>str</em><em>,</em>) – The policy’s configuration properties.</p></li>
+<li><p><strong>required</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The configuration properties that are required.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_policy.PolicyConfigSchema.properties">
+<code class="sig-name descname">properties</code><em class="property">: Dict[str, Dict[str, Any]]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.PolicyConfigSchema.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy’s configuration properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.PolicyConfigSchema.required">
+<code class="sig-name descname">required</code><em class="property">: Optional[List[str]]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.PolicyConfigSchema.required" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration properties that are required.</p>
 </dd></dl>
 
 </dd></dl>
@@ -79,17 +112,20 @@ proper permissions.</p>
 
 <dl class="py class">
 <dt id="pulumi_policy.PolicyPack">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">PolicyPack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Policy<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.PolicyPack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">PolicyPack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Policy<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>EnforcementLevel<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.PolicyPack" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy pack contains one or more policies to enforce.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the policy pack.</p></li>
-<li><p><strong>policies</strong> (<em>List</em><em>[</em><a class="reference internal" href="../pulumi_alicloud/ram/#pulumi_alicloud.ram.Policy" title="pulumi_alicloud.ram.Policy"><em>Policy</em></a><em>]</em>) – The policies associated with a policy pack.</p></li>
+<li><p><strong>policies</strong> (<em>List</em><em>[</em><a class="reference internal" href="#pulumi_policy.Policy" title="pulumi_policy.Policy"><em>Policy</em></a><em>]</em>) – The policies associated with a policy pack.</p></li>
 <li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.EnforcementLevel" title="pulumi_policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy
 violation, e.g., block deployment but allow override with
 proper permissions. This is the default used for all policies in the policy pack.
 Individual policies can override.</p></li>
+<li><p><strong>Union</strong><strong>[</strong><strong>'EnforcementLevel'</strong><strong>, </strong><strong>Dict</strong><strong>[</strong><strong>str</strong><strong>, </strong><strong>Any</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>initial_config</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>,</em>) – Initial
+configuration for the policy pack. Allows specifying configuration programmatically from reusable
+policy libraries.</p></li>
 </ul>
 </dd>
 </dl>
@@ -230,8 +266,14 @@ its replacement is created when replacement is necessary.</p>
 
 <dl class="py class">
 <dt id="pulumi_policy.ResourceValidationArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">ResourceValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">urn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">pulumi_policy.policy.PolicyResourceOptions</span></em>, <em class="sig-param"><span class="n">provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>PolicyProviderResource<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.ResourceValidationArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">ResourceValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">urn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">pulumi_policy.policy.PolicyResourceOptions</span></em>, <em class="sig-param"><span class="n">provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>PolicyProviderResource<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.ResourceValidationArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceValidationArgs is the argument bag passed to a resource validation.</p>
+<dl class="py method">
+<dt id="pulumi_policy.ResourceValidationArgs.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.ResourceValidationArgs.get_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns configuration for the policy.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_policy.ResourceValidationArgs.resource_type">
 <code class="sig-name descname">resource_type</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.ResourceValidationArgs.resource_type" title="Permalink to this definition">¶</a></dt>
@@ -272,7 +314,7 @@ its replacement is created when replacement is necessary.</p>
 
 <dl class="py class">
 <dt id="pulumi_policy.ResourceValidationPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">ResourceValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[Callable[[pulumi_policy.policy.ResourceValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]], List[Callable[[pulumi_policy.policy.ResourceValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]]], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.ResourceValidationPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">ResourceValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[Callable[[pulumi_policy.policy.ResourceValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]], List[Callable[[pulumi_policy.policy.ResourceValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]]], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.PolicyConfigSchema<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.ResourceValidationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceValidationPolicy is a policy that validates a resource definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -285,6 +327,7 @@ that validates if a resource definition violates a policy (e.g. “S3 buckets ca
 A single callback function can be specified, or multiple functions, which are called in order.</p></li>
 <li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.EnforcementLevel" title="pulumi_policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
 e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.PolicyConfigSchema" title="pulumi_policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
 </ul>
 </dd>
 </dl>
@@ -292,8 +335,14 @@ e.g., block deployment but allow override with proper permissions.</p></li>
 
 <dl class="py class">
 <dt id="pulumi_policy.StackValidationArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">StackValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">List<span class="p">[</span>pulumi_policy.policy.PolicyResource<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.StackValidationArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">StackValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">List<span class="p">[</span>pulumi_policy.policy.PolicyResource<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.StackValidationArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>StackValidationArgs is the argument bag passed to a stack validation.</p>
+<dl class="py method">
+<dt id="pulumi_policy.StackValidationArgs.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.StackValidationArgs.get_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns configuration for the policy.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_policy.StackValidationArgs.resources">
 <code class="sig-name descname">resources</code><em class="property">: List[PolicyResource]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_policy.StackValidationArgs.resources" title="Permalink to this definition">¶</a></dt>
@@ -304,7 +353,7 @@ e.g., block deployment but allow override with proper permissions.</p></li>
 
 <dl class="py class">
 <dt id="pulumi_policy.StackValidationPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">StackValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Optional[Callable[[pulumi_policy.policy.StackValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.StackValidationPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.</code><code class="sig-name descname">StackValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Optional[Callable[[pulumi_policy.policy.StackValidationArgs, Callable[[str, Optional[str]], None]], Optional[Awaitable]]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.EnforcementLevel<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_policy.policy.PolicyConfigSchema<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.StackValidationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>StackValidationPolicy is a policy that validates a stack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -315,6 +364,7 @@ default encryptionenabled.”</p></li>
 <li><p><strong>validate</strong> (<em>Optional</em><em>[</em><em>StackValidation</em><em>]</em>) – A callback function that validates if a stack violates a policy.</p></li>
 <li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.EnforcementLevel" title="pulumi_policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
 e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.PolicyConfigSchema" title="pulumi_policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
 </ul>
 </dd>
 </dl>
