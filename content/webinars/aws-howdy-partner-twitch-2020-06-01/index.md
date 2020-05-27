@@ -3,6 +3,8 @@
 title: "AWS - Howdy Partner on Twitch"
 meta_desc: "Pulumi VP of Engineering Lee Zen shares the ins and outs of how Pulumi supports your application and infrastructure needs."
 
+block_external_search_index: true
+
 # A featured webinar will display first in the list.
 featured: false
 
