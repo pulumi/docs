@@ -55,7 +55,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -63,7 +65,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -78,7 +82,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -86,7 +92,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
@@ -101,7 +109,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -109,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
@@ -124,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -132,7 +146,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Dict[Get<wbr>Waf<wbr>Packages<wbr>Filter]</a></span>
     </dt>
@@ -160,7 +176,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -169,7 +187,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Packages</span>
+        <span id="packages_csharp">
+<a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">List&lt;Get<wbr>Waf<wbr>Packages<wbr>Package&gt;</a></span>
     </dt>
@@ -177,7 +197,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -185,7 +207,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
@@ -200,7 +224,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -209,7 +235,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Packages</span>
+        <span id="packages_go">
+<a href="#packages_go" style="color: inherit; text-decoration: inherit;">Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">[]Get<wbr>Waf<wbr>Packages<wbr>Package</a></span>
     </dt>
@@ -217,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -225,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
@@ -240,7 +272,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -249,7 +283,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>packages</span>
+        <span id="packages_nodejs">
+<a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">Get<wbr>Waf<wbr>Packages<wbr>Package[]</a></span>
     </dt>
@@ -257,7 +293,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -265,7 +303,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
@@ -280,7 +320,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -289,7 +331,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>packages</span>
+        <span id="packages_python">
+<a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">List[Get<wbr>Waf<wbr>Packages<wbr>Package]</a></span>
     </dt>
@@ -297,7 +341,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -305,7 +351,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Dict[Get<wbr>Waf<wbr>Packages<wbr>Filter]</a></span>
     </dt>
@@ -344,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action<wbr>Mode</span>
+        <span id="actionmode_csharp">
+<a href="#actionmode_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +402,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detection<wbr>Mode</span>
+        <span id="detectionmode_csharp">
+<a href="#detectionmode_csharp" style="color: inherit; text-decoration: inherit;">Detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +412,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +422,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sensitivity</span>
+        <span id="sensitivity_csharp">
+<a href="#sensitivity_csharp" style="color: inherit; text-decoration: inherit;">Sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -383,7 +439,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action<wbr>Mode</span>
+        <span id="actionmode_go">
+<a href="#actionmode_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +449,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detection<wbr>Mode</span>
+        <span id="detectionmode_go">
+<a href="#detectionmode_go" style="color: inherit; text-decoration: inherit;">Detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +459,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +469,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sensitivity</span>
+        <span id="sensitivity_go">
+<a href="#sensitivity_go" style="color: inherit; text-decoration: inherit;">Sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +486,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Mode</span>
+        <span id="actionmode_nodejs">
+<a href="#actionmode_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +496,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>detection<wbr>Mode</span>
+        <span id="detectionmode_nodejs">
+<a href="#detectionmode_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -438,7 +506,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -446,7 +516,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sensitivity</span>
+        <span id="sensitivity_nodejs">
+<a href="#sensitivity_nodejs" style="color: inherit; text-decoration: inherit;">sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -461,7 +533,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>action_<wbr>mode</span>
+        <span id="action_mode_python">
+<a href="#action_mode_python" style="color: inherit; text-decoration: inherit;">action_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -469,7 +543,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>detection<wbr>Mode</span>
+        <span id="detectionmode_python">
+<a href="#detectionmode_python" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +553,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +563,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sensitivity</span>
+        <span id="sensitivity_python">
+<a href="#sensitivity_python" style="color: inherit; text-decoration: inherit;">sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +598,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action<wbr>Mode</span>
+        <span id="actionmode_csharp">
+<a href="#actionmode_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -526,7 +608,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -534,7 +618,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detection<wbr>Mode</span>
+        <span id="detectionmode_csharp">
+<a href="#detectionmode_csharp" style="color: inherit; text-decoration: inherit;">Detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -542,7 +628,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +638,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -558,7 +648,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sensitivity</span>
+        <span id="sensitivity_csharp">
+<a href="#sensitivity_csharp" style="color: inherit; text-decoration: inherit;">Sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -573,7 +665,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action<wbr>Mode</span>
+        <span id="actionmode_go">
+<a href="#actionmode_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -581,7 +675,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -589,7 +685,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detection<wbr>Mode</span>
+        <span id="detectionmode_go">
+<a href="#detectionmode_go" style="color: inherit; text-decoration: inherit;">Detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -597,7 +695,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -605,7 +705,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -613,7 +715,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sensitivity</span>
+        <span id="sensitivity_go">
+<a href="#sensitivity_go" style="color: inherit; text-decoration: inherit;">Sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +732,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Mode</span>
+        <span id="actionmode_nodejs">
+<a href="#actionmode_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +742,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -644,7 +752,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>detection<wbr>Mode</span>
+        <span id="detectionmode_nodejs">
+<a href="#detectionmode_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -652,7 +762,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -660,7 +772,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -668,7 +782,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sensitivity</span>
+        <span id="sensitivity_nodejs">
+<a href="#sensitivity_nodejs" style="color: inherit; text-decoration: inherit;">sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +799,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>action_<wbr>mode</span>
+        <span id="action_mode_python">
+<a href="#action_mode_python" style="color: inherit; text-decoration: inherit;">action_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +809,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +819,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>detection<wbr>Mode</span>
+        <span id="detectionmode_python">
+<a href="#detectionmode_python" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -707,7 +829,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +839,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +849,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sensitivity</span>
+        <span id="sensitivity_python">
+<a href="#sensitivity_python" style="color: inherit; text-decoration: inherit;">sensitivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

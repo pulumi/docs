@@ -250,7 +250,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Dns</span>
+        <span id="dns_csharp">
+<a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns<wbr>Args</a></span>
     </dt>
@@ -259,7 +261,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +272,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +283,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Argo<wbr>Smart<wbr>Routing</span>
+        <span id="argosmartrouting_csharp">
+<a href="#argosmartrouting_csharp" style="color: inherit; text-decoration: inherit;">Argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -286,7 +294,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="edgeipconnectivity_csharp">
+<a href="#edgeipconnectivity_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +305,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ips</span>
+        <span id="edgeips_csharp">
+<a href="#edgeips_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -304,7 +316,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Firewall</span>
+        <span id="ipfirewall_csharp">
+<a href="#ipfirewall_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -313,7 +327,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Directs</span>
+        <span id="origindirects_csharp">
+<a href="#origindirects_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -322,7 +338,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Dns</span>
+        <span id="origindns_csharp">
+<a href="#origindns_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns<wbr>Args</a></span>
     </dt>
@@ -331,7 +349,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Port</span>
+        <span id="originport_csharp">
+<a href="#originport_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -340,7 +360,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Protocol</span>
+        <span id="proxyprotocol_csharp">
+<a href="#proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +371,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +382,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Type</span>
+        <span id="traffictype_csharp">
+<a href="#traffictype_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +400,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Dns</span>
+        <span id="dns_go">
+<a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns</a></span>
     </dt>
@@ -383,7 +411,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +422,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +433,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Argo<wbr>Smart<wbr>Routing</span>
+        <span id="argosmartrouting_go">
+<a href="#argosmartrouting_go" style="color: inherit; text-decoration: inherit;">Argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -410,7 +444,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="edgeipconnectivity_go">
+<a href="#edgeipconnectivity_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -419,7 +455,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ips</span>
+        <span id="edgeips_go">
+<a href="#edgeips_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -428,7 +466,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Firewall</span>
+        <span id="ipfirewall_go">
+<a href="#ipfirewall_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -437,7 +477,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Directs</span>
+        <span id="origindirects_go">
+<a href="#origindirects_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -446,7 +488,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Dns</span>
+        <span id="origindns_go">
+<a href="#origindns_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns</a></span>
     </dt>
@@ -455,7 +499,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Port</span>
+        <span id="originport_go">
+<a href="#originport_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -464,7 +510,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Protocol</span>
+        <span id="proxyprotocol_go">
+<a href="#proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +521,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +532,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Type</span>
+        <span id="traffictype_go">
+<a href="#traffictype_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -498,7 +550,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>dns</span>
+        <span id="dns_nodejs">
+<a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns</a></span>
     </dt>
@@ -507,7 +561,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -516,7 +572,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -525,7 +583,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>argo<wbr>Smart<wbr>Routing</span>
+        <span id="argosmartrouting_nodejs">
+<a href="#argosmartrouting_nodejs" style="color: inherit; text-decoration: inherit;">argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -534,7 +594,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="edgeipconnectivity_nodejs">
+<a href="#edgeipconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +605,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge<wbr>Ips</span>
+        <span id="edgeips_nodejs">
+<a href="#edgeips_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -552,7 +616,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Firewall</span>
+        <span id="ipfirewall_nodejs">
+<a href="#ipfirewall_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -561,7 +627,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Directs</span>
+        <span id="origindirects_nodejs">
+<a href="#origindirects_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -570,7 +638,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Dns</span>
+        <span id="origindns_nodejs">
+<a href="#origindns_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns</a></span>
     </dt>
@@ -579,7 +649,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Port</span>
+        <span id="originport_nodejs">
+<a href="#originport_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -588,7 +660,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy<wbr>Protocol</span>
+        <span id="proxyprotocol_nodejs">
+<a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -597,7 +671,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -606,7 +682,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic<wbr>Type</span>
+        <span id="traffictype_nodejs">
+<a href="#traffictype_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -622,7 +700,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>dns</span>
+        <span id="dns_python">
+<a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Dict[Spectrum<wbr>Application<wbr>Dns]</a></span>
     </dt>
@@ -631,7 +711,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +722,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +733,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>argo_<wbr>smart_<wbr>routing</span>
+        <span id="argo_smart_routing_python">
+<a href="#argo_smart_routing_python" style="color: inherit; text-decoration: inherit;">argo_<wbr>smart_<wbr>routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -658,7 +744,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge_<wbr>ip_<wbr>connectivity</span>
+        <span id="edge_ip_connectivity_python">
+<a href="#edge_ip_connectivity_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>ip_<wbr>connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +755,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge_<wbr>ips</span>
+        <span id="edge_ips_python">
+<a href="#edge_ips_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -676,7 +766,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>firewall</span>
+        <span id="ip_firewall_python">
+<a href="#ip_firewall_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -685,7 +777,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>directs</span>
+        <span id="origin_directs_python">
+<a href="#origin_directs_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -694,7 +788,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>dns</span>
+        <span id="origin_dns_python">
+<a href="#origin_dns_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Dict[Spectrum<wbr>Application<wbr>Origin<wbr>Dns]</a></span>
     </dt>
@@ -703,7 +799,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>port</span>
+        <span id="origin_port_python">
+<a href="#origin_port_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -712,7 +810,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy_<wbr>protocol</span>
+        <span id="proxy_protocol_python">
+<a href="#proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -721,7 +821,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +832,9 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic_<wbr>type</span>
+        <span id="traffic_type_python">
+<a href="#traffic_type_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +861,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -772,7 +878,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -787,7 +895,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -802,7 +912,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -943,7 +1055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Argo<wbr>Smart<wbr>Routing</span>
+        <span id="state_argosmartrouting_csharp">
+<a href="#state_argosmartrouting_csharp" style="color: inherit; text-decoration: inherit;">Argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -952,7 +1066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns</span>
+        <span id="state_dns_csharp">
+<a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns<wbr>Args</a></span>
     </dt>
@@ -961,7 +1077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="state_edgeipconnectivity_csharp">
+<a href="#state_edgeipconnectivity_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -970,7 +1088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ips</span>
+        <span id="state_edgeips_csharp">
+<a href="#state_edgeips_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -979,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Firewall</span>
+        <span id="state_ipfirewall_csharp">
+<a href="#state_ipfirewall_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -988,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Directs</span>
+        <span id="state_origindirects_csharp">
+<a href="#state_origindirects_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -997,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Dns</span>
+        <span id="state_origindns_csharp">
+<a href="#state_origindns_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns<wbr>Args</a></span>
     </dt>
@@ -1006,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Port</span>
+        <span id="state_originport_csharp">
+<a href="#state_originport_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1015,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1024,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Protocol</span>
+        <span id="state_proxyprotocol_csharp">
+<a href="#state_proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="state_tls_csharp">
+<a href="#state_tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1042,7 +1176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Type</span>
+        <span id="state_traffictype_csharp">
+<a href="#state_traffictype_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1051,7 +1187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1067,7 +1205,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Argo<wbr>Smart<wbr>Routing</span>
+        <span id="state_argosmartrouting_go">
+<a href="#state_argosmartrouting_go" style="color: inherit; text-decoration: inherit;">Argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1076,7 +1216,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns</span>
+        <span id="state_dns_go">
+<a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns</a></span>
     </dt>
@@ -1085,7 +1227,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="state_edgeipconnectivity_go">
+<a href="#state_edgeipconnectivity_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1094,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Ips</span>
+        <span id="state_edgeips_go">
+<a href="#state_edgeips_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1103,7 +1249,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Firewall</span>
+        <span id="state_ipfirewall_go">
+<a href="#state_ipfirewall_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1112,7 +1260,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Directs</span>
+        <span id="state_origindirects_go">
+<a href="#state_origindirects_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1121,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Dns</span>
+        <span id="state_origindns_go">
+<a href="#state_origindns_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns</a></span>
     </dt>
@@ -1130,7 +1282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Port</span>
+        <span id="state_originport_go">
+<a href="#state_originport_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1139,7 +1293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1148,7 +1304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Protocol</span>
+        <span id="state_proxyprotocol_go">
+<a href="#state_proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1157,7 +1315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="state_tls_go">
+<a href="#state_tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1166,7 +1326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Type</span>
+        <span id="state_traffictype_go">
+<a href="#state_traffictype_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1175,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1191,7 +1355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>argo<wbr>Smart<wbr>Routing</span>
+        <span id="state_argosmartrouting_nodejs">
+<a href="#state_argosmartrouting_nodejs" style="color: inherit; text-decoration: inherit;">argo<wbr>Smart<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1200,7 +1366,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns</span>
+        <span id="state_dns_nodejs">
+<a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns</a></span>
     </dt>
@@ -1209,7 +1377,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge<wbr>Ip<wbr>Connectivity</span>
+        <span id="state_edgeipconnectivity_nodejs">
+<a href="#state_edgeipconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Ip<wbr>Connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1218,7 +1388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge<wbr>Ips</span>
+        <span id="state_edgeips_nodejs">
+<a href="#state_edgeips_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1227,7 +1399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Firewall</span>
+        <span id="state_ipfirewall_nodejs">
+<a href="#state_ipfirewall_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1236,7 +1410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Directs</span>
+        <span id="state_origindirects_nodejs">
+<a href="#state_origindirects_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1245,7 +1421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Dns</span>
+        <span id="state_origindns_nodejs">
+<a href="#state_origindns_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns</a></span>
     </dt>
@@ -1254,7 +1432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Port</span>
+        <span id="state_originport_nodejs">
+<a href="#state_originport_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1263,7 +1443,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1272,7 +1454,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy<wbr>Protocol</span>
+        <span id="state_proxyprotocol_nodejs">
+<a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1281,7 +1465,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="state_tls_nodejs">
+<a href="#state_tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1290,7 +1476,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic<wbr>Type</span>
+        <span id="state_traffictype_nodejs">
+<a href="#state_traffictype_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1299,7 +1487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1315,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>argo_<wbr>smart_<wbr>routing</span>
+        <span id="state_argo_smart_routing_python">
+<a href="#state_argo_smart_routing_python" style="color: inherit; text-decoration: inherit;">argo_<wbr>smart_<wbr>routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1324,7 +1516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns</span>
+        <span id="state_dns_python">
+<a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationdns">Dict[Spectrum<wbr>Application<wbr>Dns]</a></span>
     </dt>
@@ -1333,7 +1527,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge_<wbr>ip_<wbr>connectivity</span>
+        <span id="state_edge_ip_connectivity_python">
+<a href="#state_edge_ip_connectivity_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>ip_<wbr>connectivity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1342,7 +1538,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edge_<wbr>ips</span>
+        <span id="state_edge_ips_python">
+<a href="#state_edge_ips_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1351,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>firewall</span>
+        <span id="state_ip_firewall_python">
+<a href="#state_ip_firewall_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>firewall</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1360,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>directs</span>
+        <span id="state_origin_directs_python">
+<a href="#state_origin_directs_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>directs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1369,7 +1571,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>dns</span>
+        <span id="state_origin_dns_python">
+<a href="#state_origin_dns_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>dns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spectrumapplicationorigindns">Dict[Spectrum<wbr>Application<wbr>Origin<wbr>Dns]</a></span>
     </dt>
@@ -1378,7 +1582,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>port</span>
+        <span id="state_origin_port_python">
+<a href="#state_origin_port_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1387,7 +1593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1396,7 +1604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy_<wbr>protocol</span>
+        <span id="state_proxy_protocol_python">
+<a href="#state_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1405,7 +1615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="state_tls_python">
+<a href="#state_tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1414,7 +1626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic_<wbr>type</span>
+        <span id="state_traffic_type_python">
+<a href="#state_traffic_type_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1423,7 +1637,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1465,7 +1681,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1474,7 +1692,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1490,7 +1710,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1499,7 +1721,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1515,7 +1739,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1524,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1540,7 +1768,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1549,7 +1779,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1583,7 +1815,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1599,7 +1833,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1615,7 +1851,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1631,7 +1869,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -22,13 +22,16 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="accessservicetoken" title="AccessServiceToken"><span class="symbol resource"></span>AccessServiceToken</a></li>
     <li><a href="accountmember" title="AccountMember"><span class="symbol resource"></span>AccountMember</a></li>
     <li><a href="argo" title="Argo"><span class="symbol resource"></span>Argo</a></li>
+    <li><a href="byoipprefix" title="ByoIpPrefix"><span class="symbol resource"></span>ByoIpPrefix</a></li>
     <li><a href="custompages" title="CustomPages"><span class="symbol resource"></span>CustomPages</a></li>
     <li><a href="customssl" title="CustomSsl"><span class="symbol resource"></span>CustomSsl</a></li>
     <li><a href="filter" title="Filter"><span class="symbol resource"></span>Filter</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="healthcheck" title="Healthcheck"><span class="symbol resource"></span>Healthcheck</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
     <li><a href="loadbalancermonitor" title="LoadBalancerMonitor"><span class="symbol resource"></span>LoadBalancerMonitor</a></li>
     <li><a href="loadbalancerpool" title="LoadBalancerPool"><span class="symbol resource"></span>LoadBalancerPool</a></li>
+    <li><a href="logpullretention" title="LogpullRetention"><span class="symbol resource"></span>LogpullRetention</a></li>
     <li><a href="logpushjob" title="LogpushJob"><span class="symbol resource"></span>LogpushJob</a></li>
     <li><a href="origincacertificate" title="OriginCaCertificate"><span class="symbol resource"></span>OriginCaCertificate</a></li>
     <li><a href="pagerule" title="PageRule"><span class="symbol resource"></span>PageRule</a></li>
@@ -66,7 +69,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 
