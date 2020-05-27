@@ -4,10 +4,10 @@ title: "Sharing & Reusing Infrastructure with Artifactory"
 meta_desc: "Dan Hernandez and Melissa McKay will show you how to define resources such as VPCs, Kubernetes clusters, and policies using multiple languages."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -71,10 +71,6 @@ main:
 
 # The right hand side form section.
 form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: "8583759041739571982"
-
     # HubSpot form id.
-    hubspot_form_id: "83adb9dc-98aa-4c66-82a8-1b4c49f22a97"
+    hubspot_form_id: "3dbc6286-201d-43cc-9602-d1150465e9e2"
 ---
