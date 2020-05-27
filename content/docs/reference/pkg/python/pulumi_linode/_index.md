@@ -413,6 +413,209 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_linode.Firewall">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Firewall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Linode Firewall.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">my_instance</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;myInstance&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;my_instance&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">root_pass</span><span class="o">=</span><span class="s2">&quot;bogusPassword$&quot;</span><span class="p">,</span>
+    <span class="n">swap_size</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+<span class="n">my_firewall</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;myFirewall&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;my_firewall&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">],</span>
+    <span class="n">inbound</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">outbound</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">linodes</span><span class="o">=</span><span class="p">[</span><span class="n">my_instance</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Firewall’s rules are not enforced (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>inbounds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A firewall rule that specifies what inbound network traffic is allowed.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This Firewall’s unique label.</p></li>
+<li><p><strong>linodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IDs of Linodes this Firewall should govern it’s network traffic for.</p></li>
+<li><p><strong>outbounds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A firewall rule that specifies what outbound network traffic is allowed.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>inbounds</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+<p>The <strong>outbounds</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.devices">
+<code class="sig-name descname">devices</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>The devices associated with this firewall.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">entityId</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the underlying entity this device references (i.e. the Linode’s ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the Firewall Device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This Firewall’s unique label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Firewall Device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.disabled">
+<code class="sig-name descname">disabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Firewall’s rules are not enforced (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.inbounds">
+<code class="sig-name descname">inbounds</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.inbounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>A firewall rule that specifies what inbound network traffic is allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.label">
+<code class="sig-name descname">label</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>This Firewall’s unique label.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.linodes">
+<code class="sig-name descname">linodes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.linodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of IDs of Linodes this Firewall should govern it’s network traffic for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.outbounds">
+<code class="sig-name descname">outbounds</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.outbounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>A firewall rule that specifies what outbound network traffic is allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the Firewall.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_linode.Firewall.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Firewall.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Firewall.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Firewall.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Firewall resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The devices associated with this firewall.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Firewall’s rules are not enforced (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>inbounds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A firewall rule that specifies what inbound network traffic is allowed.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This Firewall’s unique label.</p></li>
+<li><p><strong>linodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IDs of Linodes this Firewall should govern it’s network traffic for.</p></li>
+<li><p><strong>outbounds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A firewall rule that specifies what outbound network traffic is allowed.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the Firewall.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">entityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the underlying entity this device references (i.e. the Linode’s ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the Firewall Device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This Firewall’s unique label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Firewall Device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>inbounds</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+<p>The <strong>outbounds</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP addresses, CIDR blocks, or <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (to whitelist all) this rule applies to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ports and/or port ranges (i.e. “443” or “80-90”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol this rule controls.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Firewall.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Firewall.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Firewall.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Firewall.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_linode.GetAccountResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address1</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">balance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">phone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zip</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccount.</p>
@@ -2984,7 +3187,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_linode.get_region">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_region" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> provides details about a specific Linode region.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> provides details about a specific Linode region. See all regions <a class="reference external" href="https://api.linode.com/v4/regions">here</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
 

@@ -123,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -132,7 +134,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_csharp">
+<a href="#userdefinedfields_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">List&lt;Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
@@ -147,7 +151,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -156,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_go">
+<a href="#userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">[]Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</a></span>
     </dt>
@@ -171,7 +179,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -180,7 +190,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_nodejs">
+<a href="#userdefinedfields_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
     </dt>
@@ -195,7 +207,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -204,7 +218,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>defined_<wbr>fields</span>
+        <span id="user_defined_fields_python">
+<a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
     </dt>
@@ -232,7 +248,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Created</span>
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -240,7 +258,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deployments<wbr>Active</span>
+        <span id="deploymentsactive_csharp">
+<a href="#deploymentsactive_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -248,7 +268,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deployments<wbr>Total</span>
+        <span id="deploymentstotal_csharp">
+<a href="#deploymentstotal_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -256,7 +278,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -272,7 +298,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Images</span>
+        <span id="images_csharp">
+<a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -280,7 +308,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -288,7 +318,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Label</span>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +328,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rev<wbr>Note</span>
+        <span id="revnote_csharp">
+<a href="#revnote_csharp" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +338,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Script</span>
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Updated</span>
+        <span id="updated_csharp">
+<a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +358,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_csharp">
+<a href="#userdefinedfields_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">List&lt;Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field&gt;</a></span>
     </dt>
@@ -328,7 +368,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Gravatar<wbr>Id</span>
+        <span id="usergravatarid_csharp">
+<a href="#usergravatarid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +378,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +395,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Created</span>
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -359,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deployments<wbr>Active</span>
+        <span id="deploymentsactive_go">
+<a href="#deploymentsactive_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -367,7 +415,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deployments<wbr>Total</span>
+        <span id="deploymentstotal_go">
+<a href="#deploymentstotal_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -375,7 +425,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +435,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -391,7 +445,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Images</span>
+        <span id="images_go">
+<a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -399,7 +455,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -407,7 +465,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Label</span>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +475,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rev<wbr>Note</span>
+        <span id="revnote_go">
+<a href="#revnote_go" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +485,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Script</span>
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -431,7 +495,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Updated</span>
+        <span id="updated_go">
+<a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +505,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_go">
+<a href="#userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">[]Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</a></span>
     </dt>
@@ -447,7 +515,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Gravatar<wbr>Id</span>
+        <span id="usergravatarid_go">
+<a href="#usergravatarid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +525,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +542,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>created</span>
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -478,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deployments<wbr>Active</span>
+        <span id="deploymentsactive_nodejs">
+<a href="#deploymentsactive_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -486,7 +562,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deployments<wbr>Total</span>
+        <span id="deploymentstotal_nodejs">
+<a href="#deploymentstotal_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Total</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -494,7 +572,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +582,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -510,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>images</span>
+        <span id="images_nodejs">
+<a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -518,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is<wbr>Public</span>
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -526,7 +612,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>label</span>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +622,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rev<wbr>Note</span>
+        <span id="revnote_nodejs">
+<a href="#revnote_nodejs" style="color: inherit; text-decoration: inherit;">rev<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +632,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>script</span>
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +642,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>updated</span>
+        <span id="updated_nodejs">
+<a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +652,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Defined<wbr>Fields</span>
+        <span id="userdefinedfields_nodejs">
+<a href="#userdefinedfields_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
     </dt>
@@ -566,7 +662,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Gravatar<wbr>Id</span>
+        <span id="usergravatarid_nodejs">
+<a href="#usergravatarid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Gravatar<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -574,7 +672,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +689,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>created</span>
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -597,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deployments_<wbr>active</span>
+        <span id="deployments_active_python">
+<a href="#deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -605,7 +709,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deployments_<wbr>total</span>
+        <span id="deployments_total_python">
+<a href="#deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -613,7 +719,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +729,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -629,7 +739,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>images</span>
+        <span id="images_python">
+<a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -637,7 +749,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is_<wbr>public</span>
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -645,7 +759,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>label</span>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +769,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rev_<wbr>note</span>
+        <span id="rev_note_python">
+<a href="#rev_note_python" style="color: inherit; text-decoration: inherit;">rev_<wbr>note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -661,7 +779,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>script</span>
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +789,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>updated</span>
+        <span id="updated_python">
+<a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +799,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>defined_<wbr>fields</span>
+        <span id="user_defined_fields_python">
+<a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
     </dt>
@@ -685,7 +809,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>gravatar_<wbr>id</span>
+        <span id="user_gravatar_id_python">
+<a href="#user_gravatar_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>gravatar_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -693,7 +819,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -732,7 +860,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -740,7 +870,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Example</span>
+        <span id="example_csharp">
+<a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +880,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -756,7 +890,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Many<wbr>Of</span>
+        <span id="manyof_csharp">
+<a href="#manyof_csharp" style="color: inherit; text-decoration: inherit;">Many<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +900,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -772,7 +910,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>One<wbr>Of</span>
+        <span id="oneof_csharp">
+<a href="#oneof_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -787,7 +927,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -795,7 +937,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Example</span>
+        <span id="example_go">
+<a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -803,7 +947,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -811,7 +957,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Many<wbr>Of</span>
+        <span id="manyof_go">
+<a href="#manyof_go" style="color: inherit; text-decoration: inherit;">Many<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -819,7 +967,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +977,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>One<wbr>Of</span>
+        <span id="oneof_go">
+<a href="#oneof_go" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +994,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -850,7 +1004,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>example</span>
+        <span id="example_nodejs">
+<a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -858,7 +1014,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +1024,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>many<wbr>Of</span>
+        <span id="manyof_nodejs">
+<a href="#manyof_nodejs" style="color: inherit; text-decoration: inherit;">many<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -874,7 +1034,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -882,7 +1044,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>one<wbr>Of</span>
+        <span id="oneof_nodejs">
+<a href="#oneof_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -897,7 +1061,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +1071,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>example</span>
+        <span id="example_python">
+<a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +1081,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -921,7 +1091,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>many<wbr>Of</span>
+        <span id="manyof_python">
+<a href="#manyof_python" style="color: inherit; text-decoration: inherit;">many<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -929,7 +1101,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -937,7 +1111,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>one<wbr>Of</span>
+        <span id="oneof_python">
+<a href="#oneof_python" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
