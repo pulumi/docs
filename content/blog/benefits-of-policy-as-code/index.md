@@ -21,13 +21,19 @@ A sizeable monthly cloud bill due to unused resources left running or using over
 
 But what about unused or abandoned resources? We can use a cloud provider’s resources to implement a watchdog function with a policy that cleans up unused resources. In this [article]({{< relref "/blog/controlling-aws-costs-with-lambda-and-pulumi" >}}), we show how to use a serverless function to find unused resources daily and shut them down. We implemented this system at Pulumi and [reduced our operating costs by 64%]({{< relref "/blog/controlling-aws-costs-with-lambda-and-pulumi#in-conclusion" >}}).
 
+We can use cloud provider native tools and practices in combination with policy to control costs. Using AWS as an example, [Joe Duffy](https://twitter.com/funcofjoe) wrote an article on using tags for cost tracking, automation, and organization. If you are not familiar with tags, they are a simple key/value pair applied to a resource. Tags let you manage, search, and filter resources.
+
+The [article]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}}) showed how you could use your favorite programming language to tag a resource to enable cost tracking by project, stack, and cost center. Joe then demonstrated how to use policy as code to [enforce tagging of resources]({{< relref "/automatically-enforcing-aws-resource-tagging-policies#defining-our-tags-enforcer-policy" >}}) when they are created.  The article also shows how to [automatically tag resources]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies#automatically-applying-tags" >}}) and enables resources to pass the tagging policy.
+
 ## Compliance
 
 Policy as Code is a way to enforce infrastructure policies that prevent inadvertent access to resources such as databases and storage or to enforce cost policies.
 
-We can use cloud provider native tools and practices in combination with policy to control costs. Using AWS as an example, [Joe Duffy](https://twitter.com/funcofjoe) wrote an article on using tags for cost tracking, automation, and organization. If you are not familiar with tags, they are a simple key/value pair applied to a resource. Tags let you manage, search, and filter resources.
+Controlling access to resources is basic infrastructure security. Leaving services open to the internet is less of a problem in production, but what about development environments? Developers often have much leeway to deploy resources when build a new application; similarly, testing environments maybe less secure than production. Furthermore, development instances may remain inadvertently available long after they have been used for development.
 
-The [article]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}}) showed how you could use your favorite programming language to tag a resource to enable cost tracking by project, stack, and cost center. Joe then demonstrated how to use policy as code to [enforce tagging of resources]({{< relref "/automatically-enforcing-aws-resource-tagging-policies#defining-our-tags-enforcer-policy" >}}) when they are created.  The article also shows how to [automatically tag resources]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies#automatically-applying-tags" >}}) and enables resources to pass the tagging policy.
+Controlling ingress and egress to and from resources and not exposing them on the Internet is a best practice. Policies that run at the level of the organization can mitigate the likelihood of unauthorized access to resources or even data breaches. Regardless of the type of environment, whether its dev, test, production, Policy as Code can enforce best practice across the organization.
+
+Another area of concern is securing your software supply chain. Although your infrastructure runs on a cloud provider, it is not exempt form vulnerabilities as shown by [CVE-2020-8835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8835) which allows container escape to get root privileges on the host node. On GCP, nodes running on Ubuntu running Kubernetes 1.16 and 1.17 were affected. You can write a policy that checks the version of GKE and prevents those version from being deployed.
 
 ## Validate Before or During Deployment
 
