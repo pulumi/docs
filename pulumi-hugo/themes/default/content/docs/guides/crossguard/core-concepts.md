@@ -231,7 +231,7 @@ The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples
 
 A Policy Pack can contain one or more policies to enforce. Packs provide a way to group together similar policies. For example, you may decide to have one pack with AWS policies and another with Kubernetes-specific policies. That being said, there are no restrictions on which policies you combine within a pack, and you should pack them however makes sense for your organization.
 
-As part of CrossGuard, organization administrators can author and publish Policy Packs to the Pulumi Console. Publishing Policy Packs to the Pulumi Console is currently supported for the Node.js Policy SDK (TypeScript/JavaScript). Python support is [coming soon](https://github.com/pulumi/pulumi-policy/issues/211).
+As part of CrossGuard, organization administrators can author and publish Policy Packs to the Pulumi Console.
 
 ## Policy Group
 
