@@ -28,7 +28,7 @@ import * as gcp from "@pulumi/gcp";
 const reservation = new gcp.bigquery.Reservation("reservation", {
     location: "asia-northeast1",
     slotCapacity: 0,
-    ignoreIdleSlots: true,
+    ignoreIdleSlots: false,
 });
 ```
 ```python
@@ -38,7 +38,7 @@ import pulumi_gcp as gcp
 reservation = gcp.bigquery.Reservation("reservation",
     location="asia-northeast1",
     slot_capacity=0,
-    ignore_idle_slots=True)
+    ignore_idle_slots=False)
 ```
 
 
@@ -226,7 +226,9 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Slot<wbr>Capacity</span>
+        <span id="slotcapacity_csharp">
+<a href="#slotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -236,7 +238,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Idle<wbr>Slots</span>
+        <span id="ignoreidleslots_csharp">
+<a href="#ignoreidleslots_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -247,7 +251,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +263,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +274,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +293,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Slot<wbr>Capacity</span>
+        <span id="slotcapacity_go">
+<a href="#slotcapacity_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -293,7 +305,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Idle<wbr>Slots</span>
+        <span id="ignoreidleslots_go">
+<a href="#ignoreidleslots_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -304,7 +318,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +330,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +341,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +360,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>slot<wbr>Capacity</span>
+        <span id="slotcapacity_nodejs">
+<a href="#slotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -350,7 +372,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Idle<wbr>Slots</span>
+        <span id="ignoreidleslots_nodejs">
+<a href="#ignoreidleslots_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -361,7 +385,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -371,7 +397,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +408,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -397,7 +427,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>slot_<wbr>capacity</span>
+        <span id="slot_capacity_python">
+<a href="#slot_capacity_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -407,7 +439,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore_<wbr>idle_<wbr>slots</span>
+        <span id="ignore_idle_slots_python">
+<a href="#ignore_idle_slots_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>idle_<wbr>slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -418,7 +452,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -428,7 +464,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -437,7 +475,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -465,7 +505,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -480,7 +522,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +539,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -510,7 +556,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -651,7 +699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Idle<wbr>Slots</span>
+        <span id="state_ignoreidleslots_csharp">
+<a href="#state_ignoreidleslots_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -662,7 +712,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -672,7 +724,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -681,7 +735,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -691,7 +747,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slot<wbr>Capacity</span>
+        <span id="state_slotcapacity_csharp">
+<a href="#state_slotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -708,7 +766,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Idle<wbr>Slots</span>
+        <span id="state_ignoreidleslots_go">
+<a href="#state_ignoreidleslots_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -719,7 +779,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +791,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -738,7 +802,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +814,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slot<wbr>Capacity</span>
+        <span id="state_slotcapacity_go">
+<a href="#state_slotcapacity_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -765,7 +833,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Idle<wbr>Slots</span>
+        <span id="state_ignoreidleslots_nodejs">
+<a href="#state_ignoreidleslots_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Idle<wbr>Slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -776,7 +846,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -786,7 +858,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -795,7 +869,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -805,7 +881,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slot<wbr>Capacity</span>
+        <span id="state_slotcapacity_nodejs">
+<a href="#state_slotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -822,7 +900,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore_<wbr>idle_<wbr>slots</span>
+        <span id="state_ignore_idle_slots_python">
+<a href="#state_ignore_idle_slots_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>idle_<wbr>slots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -833,7 +913,9 @@ capacity specified above at most.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -843,7 +925,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -852,7 +936,9 @@ Examples: US, EU, asia-northeast1. The default value is US.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -862,7 +948,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slot_<wbr>capacity</span>
+        <span id="state_slot_capacity_python">
+<a href="#state_slot_capacity_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

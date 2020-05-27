@@ -1796,7 +1796,7 @@ Currently supporting Zip and File Containers.</p>
             <span class="s2">&quot;targetCpuUtilization&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
             <span class="s2">&quot;targetThroughputUtilization&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
             <span class="s2">&quot;minInstances&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;maxInstances&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;max_instances&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1816,7 +1816,7 @@ Currently supporting Zip and File Containers.</p>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">basic_scaling</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;maxInstances&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;max_instances&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">noop_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

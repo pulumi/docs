@@ -972,7 +972,7 @@ an optional histogram of the values as specified by the bucket options.</p>
         <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;EXTRACT(jsonPayload.id)&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">metric_descriptor</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;My metric&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;My metric&quot;</span><span class="p">,</span>
         <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;amount of matter&quot;</span><span class="p">,</span>

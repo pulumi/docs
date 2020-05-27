@@ -267,7 +267,9 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +278,9 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +289,9 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
+        <span id="nodeaffinitylabels_csharp">
+<a href="#nodeaffinitylabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -295,7 +301,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="nodetype_csharp">
+<a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +313,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
+        <span id="nodetypeflexibility_csharp">
+<a href="#nodetypeflexibility_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
@@ -317,7 +327,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,7 +339,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -337,7 +351,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Binding</span>
+        <span id="serverbinding_csharp">
+<a href="#serverbinding_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
@@ -354,7 +370,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -363,7 +381,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +392,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
+        <span id="nodeaffinitylabels_go">
+<a href="#nodeaffinitylabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -382,7 +404,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="nodetype_go">
+<a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +416,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
+        <span id="nodetypeflexibility_go">
+<a href="#nodetypeflexibility_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
@@ -404,7 +430,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +442,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +454,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Binding</span>
+        <span id="serverbinding_go">
+<a href="#serverbinding_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
@@ -441,7 +473,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +484,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +495,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Affinity<wbr>Labels</span>
+        <span id="nodeaffinitylabels_nodejs">
+<a href="#nodeaffinitylabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -469,7 +507,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Type</span>
+        <span id="nodetype_nodejs">
+<a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -479,7 +519,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Type<wbr>Flexibility</span>
+        <span id="nodetypeflexibility_nodejs">
+<a href="#nodetypeflexibility_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
@@ -491,7 +533,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +545,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -511,7 +557,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Binding</span>
+        <span id="serverbinding_nodejs">
+<a href="#serverbinding_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
@@ -528,7 +576,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -537,7 +587,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -546,7 +598,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>affinity_<wbr>labels</span>
+        <span id="node_affinity_labels_python">
+<a href="#node_affinity_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity_<wbr>labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -556,7 +610,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>type</span>
+        <span id="node_type_python">
+<a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +622,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>type_<wbr>flexibility</span>
+        <span id="node_type_flexibility_python">
+<a href="#node_type_flexibility_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
     </dt>
@@ -578,7 +636,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +648,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -598,7 +660,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>binding</span>
+        <span id="server_binding_python">
+<a href="#server_binding_python" style="color: inherit; text-decoration: inherit;">server_<wbr>binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
@@ -626,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_csharp">
+<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -635,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -643,7 +711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -659,7 +729,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_go">
+<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -668,7 +740,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -676,7 +750,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -692,7 +768,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_nodejs">
+<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -709,7 +789,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -725,7 +807,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>timestamp</span>
+        <span id="creation_timestamp_python">
+<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +818,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -742,7 +828,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -884,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_csharp">
+<a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -893,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -902,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -911,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
+        <span id="state_nodeaffinitylabels_csharp">
+<a href="#state_nodeaffinitylabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -921,7 +1017,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="state_nodetype_csharp">
+<a href="#state_nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -931,7 +1029,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
+        <span id="state_nodetypeflexibility_csharp">
+<a href="#state_nodetypeflexibility_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
@@ -943,7 +1043,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -953,7 +1055,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1067,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -972,7 +1078,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Binding</span>
+        <span id="state_serverbinding_csharp">
+<a href="#state_serverbinding_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
@@ -989,7 +1097,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_go">
+<a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -998,7 +1108,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1007,7 +1119,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1016,7 +1130,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
+        <span id="state_nodeaffinitylabels_go">
+<a href="#state_nodeaffinitylabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1026,7 +1142,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="state_nodetype_go">
+<a href="#state_nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1154,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
+        <span id="state_nodetypeflexibility_go">
+<a href="#state_nodetypeflexibility_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
@@ -1048,7 +1168,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1058,7 +1180,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1068,7 +1192,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1203,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Binding</span>
+        <span id="state_serverbinding_go">
+<a href="#state_serverbinding_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
@@ -1094,7 +1222,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_nodejs">
+<a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1103,7 +1233,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1112,7 +1244,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1121,7 +1255,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Affinity<wbr>Labels</span>
+        <span id="state_nodeaffinitylabels_nodejs">
+<a href="#state_nodeaffinitylabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinity<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1131,7 +1267,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Type</span>
+        <span id="state_nodetype_nodejs">
+<a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1141,7 +1279,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Type<wbr>Flexibility</span>
+        <span id="state_nodetypeflexibility_nodejs">
+<a href="#state_nodetypeflexibility_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type<wbr>Flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
@@ -1153,7 +1293,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1163,7 +1305,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1173,7 +1317,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1182,7 +1328,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Binding</span>
+        <span id="state_serverbinding_nodejs">
+<a href="#state_serverbinding_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
@@ -1199,7 +1347,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>timestamp</span>
+        <span id="state_creation_timestamp_python">
+<a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1208,7 +1358,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1217,7 +1369,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1226,7 +1380,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>affinity_<wbr>labels</span>
+        <span id="state_node_affinity_labels_python">
+<a href="#state_node_affinity_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity_<wbr>labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1236,7 +1392,9 @@ instance scheduling.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>type</span>
+        <span id="state_node_type_python">
+<a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1246,7 +1404,9 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>type_<wbr>flexibility</span>
+        <span id="state_node_type_flexibility_python">
+<a href="#state_node_type_flexibility_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>flexibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
     </dt>
@@ -1258,7 +1418,9 @@ be specified.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1268,7 +1430,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1278,7 +1442,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1287,7 +1453,9 @@ If it is not provided, the provider region is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>binding</span>
+        <span id="state_server_binding_python">
+<a href="#state_server_binding_python" style="color: inherit; text-decoration: inherit;">server_<wbr>binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
@@ -1330,7 +1498,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpus</span>
+        <span id="cpus_csharp">
+<a href="#cpus_csharp" style="color: inherit; text-decoration: inherit;">Cpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1339,7 +1509,9 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ssd</span>
+        <span id="localssd_csharp">
+<a href="#localssd_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1349,7 +1521,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1365,7 +1539,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpus</span>
+        <span id="cpus_go">
+<a href="#cpus_go" style="color: inherit; text-decoration: inherit;">Cpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1374,7 +1550,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ssd</span>
+        <span id="localssd_go">
+<a href="#localssd_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1384,7 +1562,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1400,7 +1580,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpus</span>
+        <span id="cpus_nodejs">
+<a href="#cpus_nodejs" style="color: inherit; text-decoration: inherit;">cpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1409,7 +1591,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Ssd</span>
+        <span id="localssd_nodejs">
+<a href="#localssd_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1419,7 +1603,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1435,7 +1621,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpus</span>
+        <span id="cpus_python">
+<a href="#cpus_python" style="color: inherit; text-decoration: inherit;">cpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1444,7 +1632,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Ssd</span>
+        <span id="localssd_python">
+<a href="#localssd_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1454,7 +1644,9 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1488,7 +1680,9 @@ Use local SSD
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1514,7 +1708,9 @@ nodes will experience outages while maintenance is applied.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1540,7 +1736,9 @@ nodes will experience outages while maintenance is applied.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1566,7 +1764,9 @@ nodes will experience outages while maintenance is applied.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

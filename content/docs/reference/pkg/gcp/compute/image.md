@@ -279,7 +279,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +291,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -298,7 +302,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +317,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Os<wbr>Features</span>
+        <span id="guestosfeatures_csharp">
+<a href="#guestosfeatures_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
@@ -321,7 +329,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -330,7 +340,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="licenses_csharp">
+<a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -339,7 +351,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +368,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +380,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Disk</span>
+        <span id="rawdisk_csharp">
+<a href="#rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
@@ -373,7 +391,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="sourcedisk_csharp">
+<a href="#sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -391,7 +411,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +423,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -410,7 +434,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +449,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Os<wbr>Features</span>
+        <span id="guestosfeatures_go">
+<a href="#guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
@@ -433,7 +461,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -442,7 +472,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="licenses_go">
+<a href="#licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -451,7 +483,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +500,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +512,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Disk</span>
+        <span id="rawdisk_go">
+<a href="#rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
@@ -485,7 +523,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="sourcedisk_go">
+<a href="#sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +543,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +555,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -522,7 +566,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -535,7 +581,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest<wbr>Os<wbr>Features</span>
+        <span id="guestosfeatures_nodejs">
+<a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
@@ -545,7 +593,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -554,7 +604,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="licenses_nodejs">
+<a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -563,7 +615,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +632,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +644,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw<wbr>Disk</span>
+        <span id="rawdisk_nodejs">
+<a href="#rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
@@ -597,7 +655,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk</span>
+        <span id="sourcedisk_nodejs">
+<a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +675,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +687,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -634,7 +698,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +713,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest_<wbr>os_<wbr>features</span>
+        <span id="guest_os_features_python">
+<a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
     </dt>
@@ -657,7 +725,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -666,7 +736,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="licenses_python">
+<a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -675,7 +747,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -690,7 +764,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -700,7 +776,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw_<wbr>disk</span>
+        <span id="raw_disk_python">
+<a href="#raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
     </dt>
@@ -709,7 +787,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk</span>
+        <span id="source_disk_python">
+<a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +818,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Archive<wbr>Size<wbr>Bytes</span>
+        <span id="archivesizebytes_csharp">
+<a href="#archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -747,7 +829,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_csharp">
+<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -756,7 +840,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +850,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_csharp">
+<a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +861,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -789,7 +879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Archive<wbr>Size<wbr>Bytes</span>
+        <span id="archivesizebytes_go">
+<a href="#archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -798,7 +890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_go">
+<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -807,7 +901,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -815,7 +911,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_go">
+<a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -824,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -840,7 +940,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>archive<wbr>Size<wbr>Bytes</span>
+        <span id="archivesizebytes_nodejs">
+<a href="#archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -849,7 +951,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_nodejs">
+<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -858,7 +962,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +972,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_nodejs">
+<a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -875,7 +983,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -891,7 +1001,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>archive_<wbr>size_<wbr>bytes</span>
+        <span id="archive_size_bytes_python">
+<a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -900,7 +1012,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>timestamp</span>
+        <span id="creation_timestamp_python">
+<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1023,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1033,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>label_<wbr>fingerprint</span>
+        <span id="label_fingerprint_python">
+<a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1044,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1068,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Size<wbr>Bytes</span>
+        <span id="state_archivesizebytes_csharp">
+<a href="#state_archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1077,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_csharp">
+<a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1096,7 +1222,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_csharp">
+<a href="#state_disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1105,7 +1233,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="state_family_csharp">
+<a href="#state_family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1248,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Os<wbr>Features</span>
+        <span id="state_guestosfeatures_csharp">
+<a href="#state_guestosfeatures_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
@@ -1128,7 +1260,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_csharp">
+<a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1137,7 +1271,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1146,7 +1282,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="state_licenses_csharp">
+<a href="#state_licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1155,7 +1293,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1170,7 +1310,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1180,7 +1322,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Disk</span>
+        <span id="state_rawdisk_csharp">
+<a href="#state_rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
@@ -1189,7 +1333,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1198,7 +1344,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="state_sourcedisk_csharp">
+<a href="#state_sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1216,7 +1364,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Size<wbr>Bytes</span>
+        <span id="state_archivesizebytes_go">
+<a href="#state_archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1225,7 +1375,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_go">
+<a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1234,7 +1386,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1244,7 +1398,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_go">
+<a href="#state_disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1253,7 +1409,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="state_family_go">
+<a href="#state_family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1266,7 +1424,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Os<wbr>Features</span>
+        <span id="state_guestosfeatures_go">
+<a href="#state_guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
@@ -1276,7 +1436,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_go">
+<a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1285,7 +1447,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1294,7 +1458,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="state_licenses_go">
+<a href="#state_licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1303,7 +1469,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1318,7 +1486,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1328,7 +1498,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Disk</span>
+        <span id="state_rawdisk_go">
+<a href="#state_rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
@@ -1337,7 +1509,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1346,7 +1520,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="state_sourcedisk_go">
+<a href="#state_sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1364,7 +1540,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Size<wbr>Bytes</span>
+        <span id="state_archivesizebytes_nodejs">
+<a href="#state_archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1373,7 +1551,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_nodejs">
+<a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1382,7 +1562,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1392,7 +1574,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_nodejs">
+<a href="#state_disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1401,7 +1585,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="state_family_nodejs">
+<a href="#state_family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1414,7 +1600,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest<wbr>Os<wbr>Features</span>
+        <span id="state_guestosfeatures_nodejs">
+<a href="#state_guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
@@ -1424,7 +1612,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_nodejs">
+<a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1433,7 +1623,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1442,7 +1634,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="state_licenses_nodejs">
+<a href="#state_licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1451,7 +1645,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1466,7 +1662,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1476,7 +1674,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw<wbr>Disk</span>
+        <span id="state_rawdisk_nodejs">
+<a href="#state_rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
@@ -1485,7 +1685,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1494,7 +1696,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk</span>
+        <span id="state_sourcedisk_nodejs">
+<a href="#state_sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1512,7 +1716,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive_<wbr>size_<wbr>bytes</span>
+        <span id="state_archive_size_bytes_python">
+<a href="#state_archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1521,7 +1727,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>timestamp</span>
+        <span id="state_creation_timestamp_python">
+<a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1530,7 +1738,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1540,7 +1750,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="state_disk_size_gb_python">
+<a href="#state_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1549,7 +1761,9 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="state_family_python">
+<a href="#state_family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1562,7 +1776,9 @@ RFC1035.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest_<wbr>os_<wbr>features</span>
+        <span id="state_guest_os_features_python">
+<a href="#state_guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
     </dt>
@@ -1572,7 +1788,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label_<wbr>fingerprint</span>
+        <span id="state_label_fingerprint_python">
+<a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1581,7 +1799,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1590,7 +1810,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="state_licenses_python">
+<a href="#state_licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1599,7 +1821,9 @@ Applicable only for bootable images.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1614,7 +1838,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1624,7 +1850,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw_<wbr>disk</span>
+        <span id="state_raw_disk_python">
+<a href="#state_raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
     </dt>
@@ -1633,7 +1861,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1642,7 +1872,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk</span>
+        <span id="state_source_disk_python">
+<a href="#state_source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1686,7 +1918,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1702,7 +1936,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1718,7 +1954,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1734,7 +1972,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1768,7 +2008,9 @@ rawDisk.source property but not both to create an image.
 
     <dt class="property-required"
             title="Required">
-        <span>Source</span>
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1779,7 +2021,9 @@ but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Type</span>
+        <span id="containertype_csharp">
+<a href="#containertype_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1791,7 +2035,9 @@ image is created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha1</span>
+        <span id="sha1_csharp">
+<a href="#sha1_csharp" style="color: inherit; text-decoration: inherit;">Sha1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1808,7 +2054,9 @@ This is provided by the client when the disk image is created.
 
     <dt class="property-required"
             title="Required">
-        <span>Source</span>
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1819,7 +2067,9 @@ but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Type</span>
+        <span id="containertype_go">
+<a href="#containertype_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1831,7 +2081,9 @@ image is created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha1</span>
+        <span id="sha1_go">
+<a href="#sha1_go" style="color: inherit; text-decoration: inherit;">Sha1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1848,7 +2100,9 @@ This is provided by the client when the disk image is created.
 
     <dt class="property-required"
             title="Required">
-        <span>source</span>
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1859,7 +2113,9 @@ but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Type</span>
+        <span id="containertype_nodejs">
+<a href="#containertype_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1871,7 +2127,9 @@ image is created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha1</span>
+        <span id="sha1_nodejs">
+<a href="#sha1_nodejs" style="color: inherit; text-decoration: inherit;">sha1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1888,7 +2146,9 @@ This is provided by the client when the disk image is created.
 
     <dt class="property-required"
             title="Required">
-        <span>source</span>
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1899,7 +2159,9 @@ but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Type</span>
+        <span id="containertype_python">
+<a href="#containertype_python" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1911,7 +2173,9 @@ image is created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha1</span>
+        <span id="sha1_python">
+<a href="#sha1_python" style="color: inherit; text-decoration: inherit;">sha1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

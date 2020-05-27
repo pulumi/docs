@@ -286,7 +286,9 @@ The GameServerDeploymentRollout resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="defaultgameserverconfig_csharp">
+<a href="#defaultgameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +299,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-required"
             title="Required">
-        <span>Deployment<wbr>Id</span>
+        <span id="deploymentid_csharp">
+<a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +310,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="gameserverconfigoverrides_csharp">
+<a href="#gameserverconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
@@ -318,7 +324,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +343,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="defaultgameserverconfig_go">
+<a href="#defaultgameserverconfig_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -346,7 +356,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-required"
             title="Required">
-        <span>Deployment<wbr>Id</span>
+        <span id="deploymentid_go">
+<a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +367,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="gameserverconfigoverrides_go">
+<a href="#gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</a></span>
     </dt>
@@ -367,7 +381,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +400,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="defaultgameserverconfig_nodejs">
+<a href="#defaultgameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -395,7 +413,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-required"
             title="Required">
-        <span>deployment<wbr>Id</span>
+        <span id="deploymentid_nodejs">
+<a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +424,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="gameserverconfigoverrides_nodejs">
+<a href="#gameserverconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override[]</a></span>
     </dt>
@@ -416,7 +438,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +457,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>game_<wbr>server_<wbr>config</span>
+        <span id="default_game_server_config_python">
+<a href="#default_game_server_config_python" style="color: inherit; text-decoration: inherit;">default_<wbr>game_<wbr>server_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -444,7 +470,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-required"
             title="Required">
-        <span>deployment_<wbr>id</span>
+        <span id="deployment_id_python">
+<a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -453,7 +481,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>game_<wbr>server_<wbr>config_<wbr>overrides</span>
+        <span id="game_server_config_overrides_python">
+<a href="#game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
     </dt>
@@ -465,7 +495,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -501,7 +535,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -518,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -526,7 +564,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -551,7 +593,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -576,7 +622,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -719,7 +767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="state_defaultgameserverconfig_csharp">
+<a href="#state_defaultgameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -730,7 +780,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Id</span>
+        <span id="state_deploymentid_csharp">
+<a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +791,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="state_gameserverconfigoverrides_csharp">
+<a href="#state_gameserverconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
@@ -751,7 +805,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -761,7 +817,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +836,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="state_defaultgameserverconfig_go">
+<a href="#state_defaultgameserverconfig_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -789,7 +849,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Id</span>
+        <span id="state_deploymentid_go">
+<a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +860,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="state_gameserverconfigoverrides_go">
+<a href="#state_gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</a></span>
     </dt>
@@ -810,7 +874,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -820,7 +886,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -837,7 +905,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Game<wbr>Server<wbr>Config</span>
+        <span id="state_defaultgameserverconfig_nodejs">
+<a href="#state_defaultgameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Game<wbr>Server<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -848,7 +918,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment<wbr>Id</span>
+        <span id="state_deploymentid_nodejs">
+<a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -857,7 +929,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>game<wbr>Server<wbr>Config<wbr>Overrides</span>
+        <span id="state_gameserverconfigoverrides_nodejs">
+<a href="#state_gameserverconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override[]</a></span>
     </dt>
@@ -869,7 +943,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -879,7 +955,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -896,7 +974,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>game_<wbr>server_<wbr>config</span>
+        <span id="state_default_game_server_config_python">
+<a href="#state_default_game_server_config_python" style="color: inherit; text-decoration: inherit;">default_<wbr>game_<wbr>server_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -907,7 +987,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment_<wbr>id</span>
+        <span id="state_deployment_id_python">
+<a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +998,9 @@ applied by default to all realms and clusters. For example,
 
     <dt class="property-optional"
             title="Optional">
-        <span>game_<wbr>server_<wbr>config_<wbr>overrides</span>
+        <span id="state_game_server_config_overrides_python">
+<a href="#state_game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
     </dt>
@@ -928,7 +1012,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -938,7 +1024,9 @@ processed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -981,7 +1069,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Version</span>
+        <span id="configversion_csharp">
+<a href="#configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -990,7 +1080,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realms<wbr>Selector</span>
+        <span id="realmsselector_csharp">
+<a href="#realmsselector_csharp" style="color: inherit; text-decoration: inherit;">Realms<wbr>Selector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
     </dt>
@@ -1006,7 +1098,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Version</span>
+        <span id="configversion_go">
+<a href="#configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1015,7 +1109,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realms<wbr>Selector</span>
+        <span id="realmsselector_go">
+<a href="#realmsselector_go" style="color: inherit; text-decoration: inherit;">Realms<wbr>Selector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
@@ -1031,7 +1127,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Version</span>
+        <span id="configversion_nodejs">
+<a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1040,7 +1138,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realms<wbr>Selector</span>
+        <span id="realmsselector_nodejs">
+<a href="#realmsselector_nodejs" style="color: inherit; text-decoration: inherit;">realms<wbr>Selector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
@@ -1056,7 +1156,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Version</span>
+        <span id="configversion_python">
+<a href="#configversion_python" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1065,7 +1167,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realms<wbr>Selector</span>
+        <span id="realmsselector_python">
+<a href="#realmsselector_python" style="color: inherit; text-decoration: inherit;">realms<wbr>Selector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Dict[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector]</a></span>
     </dt>
@@ -1099,7 +1203,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realms</span>
+        <span id="realms_csharp">
+<a href="#realms_csharp" style="color: inherit; text-decoration: inherit;">Realms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1115,7 +1221,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realms</span>
+        <span id="realms_go">
+<a href="#realms_go" style="color: inherit; text-decoration: inherit;">Realms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1131,7 +1239,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realms</span>
+        <span id="realms_nodejs">
+<a href="#realms_nodejs" style="color: inherit; text-decoration: inherit;">realms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1147,7 +1257,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realms</span>
+        <span id="realms_python">
+<a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

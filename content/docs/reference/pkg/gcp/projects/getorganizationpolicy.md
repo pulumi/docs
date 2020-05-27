@@ -96,7 +96,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Constraint</span>
+        <span id="constraint_csharp">
+<a href="#constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -105,7 +107,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -121,7 +125,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Constraint</span>
+        <span id="constraint_go">
+<a href="#constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -130,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -146,7 +154,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>constraint</span>
+        <span id="constraint_nodejs">
+<a href="#constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -155,7 +165,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -171,7 +183,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>constraint</span>
+        <span id="constraint_python">
+<a href="#constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -180,7 +194,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -209,7 +225,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Boolean<wbr>Policies</span>
+        <span id="booleanpolicies_csharp">
+<a href="#booleanpolicies_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">List&lt;Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy&gt;</a></span>
     </dt>
@@ -217,7 +235,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Constraint</span>
+        <span id="constraint_csharp">
+<a href="#constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -225,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -233,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -242,7 +266,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>List<wbr>Policies</span>
+        <span id="listpolicies_csharp">
+<a href="#listpolicies_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicy">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy&gt;</a></span>
     </dt>
@@ -250,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +286,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Restore<wbr>Policies</span>
+        <span id="restorepolicies_csharp">
+<a href="#restorepolicies_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">List&lt;Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy&gt;</a></span>
     </dt>
@@ -266,7 +296,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Update<wbr>Time</span>
+        <span id="updatetime_csharp">
+<a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +306,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -289,7 +323,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Boolean<wbr>Policies</span>
+        <span id="booleanpolicies_go">
+<a href="#booleanpolicies_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">[]Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
@@ -297,7 +333,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Constraint</span>
+        <span id="constraint_go">
+<a href="#constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -305,7 +343,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -313,7 +353,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -322,7 +364,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>List<wbr>Policies</span>
+        <span id="listpolicies_go">
+<a href="#listpolicies_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicy">[]Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
@@ -330,7 +374,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +384,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Restore<wbr>Policies</span>
+        <span id="restorepolicies_go">
+<a href="#restorepolicies_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">[]Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
@@ -346,7 +394,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Update<wbr>Time</span>
+        <span id="updatetime_go">
+<a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +404,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -369,7 +421,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>boolean<wbr>Policies</span>
+        <span id="booleanpolicies_nodejs">
+<a href="#booleanpolicies_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy[]</a></span>
     </dt>
@@ -377,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>constraint</span>
+        <span id="constraint_nodejs">
+<a href="#constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -385,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -393,7 +451,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +462,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>list<wbr>Policies</span>
+        <span id="listpolicies_nodejs">
+<a href="#listpolicies_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicy">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy[]</a></span>
     </dt>
@@ -410,7 +472,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +482,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>restore<wbr>Policies</span>
+        <span id="restorepolicies_nodejs">
+<a href="#restorepolicies_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy[]</a></span>
     </dt>
@@ -426,7 +492,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>update<wbr>Time</span>
+        <span id="updatetime_nodejs">
+<a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -434,7 +502,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -449,7 +519,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>boolean_<wbr>policies</span>
+        <span id="boolean_policies_python">
+<a href="#boolean_policies_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">List[Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy]</a></span>
     </dt>
@@ -457,7 +529,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>constraint</span>
+        <span id="constraint_python">
+<a href="#constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -465,7 +539,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -473,7 +549,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -482,7 +560,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>list_<wbr>policies</span>
+        <span id="list_policies_python">
+<a href="#list_policies_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicy">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy]</a></span>
     </dt>
@@ -490,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -498,7 +580,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>restore_<wbr>policies</span>
+        <span id="restore_policies_python">
+<a href="#restore_policies_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">List[Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy]</a></span>
     </dt>
@@ -506,7 +590,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>update_<wbr>time</span>
+        <span id="update_time_python">
+<a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +600,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -553,7 +641,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Enforced</span>
+        <span id="enforced_csharp">
+<a href="#enforced_csharp" style="color: inherit; text-decoration: inherit;">Enforced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -568,7 +658,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Enforced</span>
+        <span id="enforced_go">
+<a href="#enforced_go" style="color: inherit; text-decoration: inherit;">Enforced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -583,7 +675,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>enforced</span>
+        <span id="enforced_nodejs">
+<a href="#enforced_nodejs" style="color: inherit; text-decoration: inherit;">enforced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -598,7 +692,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>enforced</span>
+        <span id="enforced_python">
+<a href="#enforced_python" style="color: inherit; text-decoration: inherit;">enforced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -631,7 +727,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allows</span>
+        <span id="allows_csharp">
+<a href="#allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
@@ -639,7 +737,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Denies</span>
+        <span id="denies_csharp">
+<a href="#denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
@@ -647,7 +747,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Inherit<wbr>From<wbr>Parent</span>
+        <span id="inheritfromparent_csharp">
+<a href="#inheritfromparent_csharp" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -655,7 +757,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Suggested<wbr>Value</span>
+        <span id="suggestedvalue_csharp">
+<a href="#suggestedvalue_csharp" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -670,7 +774,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allows</span>
+        <span id="allows_go">
+<a href="#allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">[]Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
@@ -678,7 +784,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Denies</span>
+        <span id="denies_go">
+<a href="#denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">[]Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
@@ -686,7 +794,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Inherit<wbr>From<wbr>Parent</span>
+        <span id="inheritfromparent_go">
+<a href="#inheritfromparent_go" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -694,7 +804,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Suggested<wbr>Value</span>
+        <span id="suggestedvalue_go">
+<a href="#suggestedvalue_go" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -709,7 +821,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allows</span>
+        <span id="allows_nodejs">
+<a href="#allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow[]</a></span>
     </dt>
@@ -717,7 +831,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>denies</span>
+        <span id="denies_nodejs">
+<a href="#denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny[]</a></span>
     </dt>
@@ -725,7 +841,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>inherit<wbr>From<wbr>Parent</span>
+        <span id="inheritfromparent_nodejs">
+<a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -733,7 +851,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>suggested<wbr>Value</span>
+        <span id="suggestedvalue_nodejs">
+<a href="#suggestedvalue_nodejs" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +868,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allows</span>
+        <span id="allows_python">
+<a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow]</a></span>
     </dt>
@@ -756,7 +878,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>denies</span>
+        <span id="denies_python">
+<a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny]</a></span>
     </dt>
@@ -764,7 +888,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>inherit<wbr>From<wbr>Parent</span>
+        <span id="inheritfromparent_python">
+<a href="#inheritfromparent_python" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -772,7 +898,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>suggested<wbr>Value</span>
+        <span id="suggestedvalue_python">
+<a href="#suggestedvalue_python" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +933,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>All</span>
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -813,7 +943,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -828,7 +960,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>All</span>
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -836,7 +970,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -851,7 +987,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>all</span>
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -859,7 +997,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -874,7 +1014,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>all</span>
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -882,7 +1024,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -915,7 +1059,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>All</span>
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -923,7 +1069,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -938,7 +1086,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>All</span>
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -946,7 +1096,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -961,7 +1113,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>all</span>
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -969,7 +1123,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -984,7 +1140,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>all</span>
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -992,7 +1150,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1025,7 +1185,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1040,7 +1202,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1055,7 +1219,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1070,7 +1236,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

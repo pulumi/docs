@@ -266,7 +266,9 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +277,9 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Kind</span>
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +292,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="enablefuzzyextraction_csharp">
+<a href="#enablefuzzyextraction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -297,7 +303,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entities</span>
+        <span id="entities_csharp">
+<a href="#entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">List&lt;Entity<wbr>Type<wbr>Entity<wbr>Args&gt;</a></span>
     </dt>
@@ -306,7 +314,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +333,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +344,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Kind</span>
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +359,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="enablefuzzyextraction_go">
+<a href="#enablefuzzyextraction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -354,7 +370,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entities</span>
+        <span id="entities_go">
+<a href="#entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity</a></span>
     </dt>
@@ -363,7 +381,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +400,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -389,7 +411,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>kind</span>
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +426,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="enablefuzzyextraction_nodejs">
+<a href="#enablefuzzyextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -411,7 +437,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>entities</span>
+        <span id="entities_nodejs">
+<a href="#entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">Entity<wbr>Type<wbr>Entity[]</a></span>
     </dt>
@@ -420,7 +448,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +467,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -446,7 +478,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>kind</span>
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +493,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>fuzzy_<wbr>extraction</span>
+        <span id="enable_fuzzy_extraction_python">
+<a href="#enable_fuzzy_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fuzzy_<wbr>extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -468,7 +504,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>entities</span>
+        <span id="entities_python">
+<a href="#entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">List[Entity<wbr>Type<wbr>Entity]</a></span>
     </dt>
@@ -477,7 +515,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +545,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -513,7 +555,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -529,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -537,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -577,7 +629,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -585,7 +639,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -727,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_csharp">
+<a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -736,7 +794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="state_enablefuzzyextraction_csharp">
+<a href="#state_enablefuzzyextraction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -745,7 +805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entities</span>
+        <span id="state_entities_csharp">
+<a href="#state_entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">List&lt;Entity<wbr>Type<wbr>Entity<wbr>Args&gt;</a></span>
     </dt>
@@ -754,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="state_kind_csharp">
+<a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +831,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +842,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +861,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_go">
+<a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -802,7 +872,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="state_enablefuzzyextraction_go">
+<a href="#state_enablefuzzyextraction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -811,7 +883,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entities</span>
+        <span id="state_entities_go">
+<a href="#state_entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity</a></span>
     </dt>
@@ -820,7 +894,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="state_kind_go">
+<a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -833,7 +909,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +920,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -859,7 +939,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="state_displayname_nodejs">
+<a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -868,7 +950,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Fuzzy<wbr>Extraction</span>
+        <span id="state_enablefuzzyextraction_nodejs">
+<a href="#state_enablefuzzyextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fuzzy<wbr>Extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -877,7 +961,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entities</span>
+        <span id="state_entities_nodejs">
+<a href="#state_entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">Entity<wbr>Type<wbr>Entity[]</a></span>
     </dt>
@@ -886,7 +972,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="state_kind_nodejs">
+<a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -899,7 +987,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +998,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -925,7 +1017,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="state_display_name_python">
+<a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -934,7 +1028,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>fuzzy_<wbr>extraction</span>
+        <span id="state_enable_fuzzy_extraction_python">
+<a href="#state_enable_fuzzy_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fuzzy_<wbr>extraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -943,7 +1039,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entities</span>
+        <span id="state_entities_python">
+<a href="#state_entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypeentity">List[Entity<wbr>Type<wbr>Entity]</a></span>
     </dt>
@@ -952,7 +1050,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="state_kind_python">
+<a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -965,7 +1065,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -974,7 +1076,9 @@ types can contain references to other entity types (with or without aliases).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1017,7 +1121,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Synonyms</span>
+        <span id="synonyms_csharp">
+<a href="#synonyms_csharp" style="color: inherit; text-decoration: inherit;">Synonyms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1029,7 +1135,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1050,7 +1158,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>Synonyms</span>
+        <span id="synonyms_go">
+<a href="#synonyms_go" style="color: inherit; text-decoration: inherit;">Synonyms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1062,7 +1172,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1083,7 +1195,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>synonyms</span>
+        <span id="synonyms_nodejs">
+<a href="#synonyms_nodejs" style="color: inherit; text-decoration: inherit;">synonyms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1095,7 +1209,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1116,7 +1232,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>synonyms</span>
+        <span id="synonyms_python">
+<a href="#synonyms_python" style="color: inherit; text-decoration: inherit;">synonyms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1128,7 +1246,9 @@ For KIND_LIST entity types:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

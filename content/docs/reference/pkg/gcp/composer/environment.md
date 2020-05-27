@@ -96,13 +96,13 @@ composer_worker = gcp.projects.IAMMember("composer-worker",
 test_environment = gcp.composer.Environment("testEnvironment",
     region="us-central1",
     config={
-        "nodeCount": 4,
+        "node_count": 4,
         "node_config": {
             "zone": "us-central1-a",
-            "machineType": "n1-standard-1",
+            "machine_type": "n1-standard-1",
             "network": test_network.id,
             "subnetwork": test_subnetwork.id,
-            "serviceAccount": test_account.name,
+            "service_account": test_account.name,
         },
     })
 ```
@@ -163,7 +163,7 @@ test = gcp.composer.Environment("test",
             "airflowConfigOverrides": {
                 "core-loadExample": "True",
             },
-            "envVariables": {
+            "env_variables": {
                 "FOO": "bar",
             },
             "pypiPackages": {
@@ -387,7 +387,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -396,7 +398,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -413,7 +417,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +428,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -432,7 +440,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -448,7 +458,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
@@ -457,7 +469,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -474,7 +488,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +499,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +511,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -509,7 +529,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
@@ -518,7 +540,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -535,7 +559,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +570,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +582,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +600,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
     </dt>
@@ -579,7 +611,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -596,7 +630,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -605,7 +641,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +653,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +682,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -657,7 +699,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -672,7 +716,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -687,7 +733,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -828,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="state_config_csharp">
+<a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -837,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -854,7 +906,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -863,7 +917,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +929,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +947,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="state_config_go">
+<a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
@@ -898,7 +958,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -915,7 +977,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +988,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1000,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1018,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="state_config_nodejs">
+<a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
@@ -959,7 +1029,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -976,7 +1048,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -985,7 +1059,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -995,7 +1071,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1011,7 +1089,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="state_config_python">
+<a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
     </dt>
@@ -1020,7 +1100,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1037,7 +1119,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1046,7 +1130,9 @@ Both keys and values must be <= 128 bytes in size.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1056,7 +1142,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1098,7 +1186,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Airflow<wbr>Uri</span>
+        <span id="airflowuri_csharp">
+<a href="#airflowuri_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1106,7 +1196,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dag<wbr>Gcs<wbr>Prefix</span>
+        <span id="daggcsprefix_csharp">
+<a href="#daggcsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dag<wbr>Gcs<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1114,7 +1206,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gke<wbr>Cluster</span>
+        <span id="gkecluster_csharp">
+<a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1122,7 +1216,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Config</span>
+        <span id="nodeconfig_csharp">
+<a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1131,7 +1227,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_csharp">
+<a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1141,7 +1239,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Environment<wbr>Config</span>
+        <span id="privateenvironmentconfig_csharp">
+<a href="#privateenvironmentconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1150,11 +1250,24 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Software<wbr>Config</span>
+        <span id="softwareconfig_csharp">
+<a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webservernetworkaccesscontrol_csharp">
+<a href="#webservernetworkaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1166,7 +1279,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Airflow<wbr>Uri</span>
+        <span id="airflowuri_go">
+<a href="#airflowuri_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1174,7 +1289,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dag<wbr>Gcs<wbr>Prefix</span>
+        <span id="daggcsprefix_go">
+<a href="#daggcsprefix_go" style="color: inherit; text-decoration: inherit;">Dag<wbr>Gcs<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1182,7 +1299,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gke<wbr>Cluster</span>
+        <span id="gkecluster_go">
+<a href="#gkecluster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1309,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Config</span>
+        <span id="nodeconfig_go">
+<a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
@@ -1199,7 +1320,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_go">
+<a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1209,7 +1332,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Environment<wbr>Config</span>
+        <span id="privateenvironmentconfig_go">
+<a href="#privateenvironmentconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
@@ -1218,11 +1343,24 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Software<wbr>Config</span>
+        <span id="softwareconfig_go">
+<a href="#softwareconfig_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webservernetworkaccesscontrol_go">
+<a href="#webservernetworkaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1234,7 +1372,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>airflow<wbr>Uri</span>
+        <span id="airflowuri_nodejs">
+<a href="#airflowuri_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1242,7 +1382,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dag<wbr>Gcs<wbr>Prefix</span>
+        <span id="daggcsprefix_nodejs">
+<a href="#daggcsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Gcs<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1250,7 +1392,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gke<wbr>Cluster</span>
+        <span id="gkecluster_nodejs">
+<a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1258,7 +1402,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Config</span>
+        <span id="nodeconfig_nodejs">
+<a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
@@ -1267,7 +1413,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Count</span>
+        <span id="nodecount_nodejs">
+<a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1277,7 +1425,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Environment<wbr>Config</span>
+        <span id="privateenvironmentconfig_nodejs">
+<a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
@@ -1286,11 +1436,24 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>software<wbr>Config</span>
+        <span id="softwareconfig_nodejs">
+<a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webservernetworkaccesscontrol_nodejs">
+<a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1302,7 +1465,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>airflow<wbr>Uri</span>
+        <span id="airflowuri_python">
+<a href="#airflowuri_python" style="color: inherit; text-decoration: inherit;">airflow<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1310,7 +1475,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dag<wbr>Gcs<wbr>Prefix</span>
+        <span id="daggcsprefix_python">
+<a href="#daggcsprefix_python" style="color: inherit; text-decoration: inherit;">dag<wbr>Gcs<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1318,7 +1485,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gke<wbr>Cluster</span>
+        <span id="gkecluster_python">
+<a href="#gkecluster_python" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1326,7 +1495,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>config</span>
+        <span id="node_config_python">
+<a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Dict[Environment<wbr>Config<wbr>Node<wbr>Config]</a></span>
     </dt>
@@ -1335,7 +1506,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>count</span>
+        <span id="node_count_python">
+<a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1345,7 +1518,9 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Environment<wbr>Config</span>
+        <span id="privateenvironmentconfig_python">
+<a href="#privateenvironmentconfig_python" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Dict[Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config]</a></span>
     </dt>
@@ -1354,11 +1529,24 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>software<wbr>Config</span>
+        <span id="softwareconfig_python">
+<a href="#softwareconfig_python" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Dict[Environment<wbr>Config<wbr>Software<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webservernetworkaccesscontrol_python">
+<a href="#webservernetworkaccesscontrol_python" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Dict[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control]</a></span>
+    </dt>
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1388,7 +1576,9 @@ will be used to run this environment.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1400,7 +1590,9 @@ and region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1410,7 +1602,9 @@ If unspecified, defaults to 100GB. Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Allocation<wbr>Policy</span>
+        <span id="ipallocationpolicy_csharp">
+<a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1421,7 +1615,9 @@ Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1433,7 +1629,9 @@ region/zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1444,7 +1642,9 @@ communications, specified as a self-link, relative resource name
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oauth<wbr>Scopes</span>
+        <span id="oauthscopes_csharp">
+<a href="#oauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1455,7 +1655,9 @@ VMs. Cannot be updated. If empty, defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1468,7 +1670,9 @@ for any GCP resources created under the Cloud Composer Environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetwork</span>
+        <span id="subnetwork_csharp">
+<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1480,7 +1684,9 @@ network must also be provided and the subnetwork must belong to the enclosing en
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1499,7 +1705,9 @@ Cannot be updated.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1511,7 +1719,9 @@ and region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1521,7 +1731,9 @@ If unspecified, defaults to 100GB. Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Allocation<wbr>Policy</span>
+        <span id="ipallocationpolicy_go">
+<a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
@@ -1532,7 +1744,9 @@ Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1544,7 +1758,9 @@ region/zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1555,7 +1771,9 @@ communications, specified as a self-link, relative resource name
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oauth<wbr>Scopes</span>
+        <span id="oauthscopes_go">
+<a href="#oauthscopes_go" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1566,7 +1784,9 @@ VMs. Cannot be updated. If empty, defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1579,7 +1799,9 @@ for any GCP resources created under the Cloud Composer Environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetwork</span>
+        <span id="subnetwork_go">
+<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1591,7 +1813,9 @@ network must also be provided and the subnetwork must belong to the enclosing en
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1610,7 +1834,9 @@ Cannot be updated.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1622,7 +1848,9 @@ and region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1632,7 +1860,9 @@ If unspecified, defaults to 100GB. Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Allocation<wbr>Policy</span>
+        <span id="ipallocationpolicy_nodejs">
+<a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
@@ -1643,7 +1873,9 @@ Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine<wbr>Type</span>
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1655,7 +1887,9 @@ region/zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1666,7 +1900,9 @@ communications, specified as a self-link, relative resource name
 
     <dt class="property-optional"
             title="Optional">
-        <span>oauth<wbr>Scopes</span>
+        <span id="oauthscopes_nodejs">
+<a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1677,7 +1913,9 @@ VMs. Cannot be updated. If empty, defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account</span>
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1690,7 +1928,9 @@ for any GCP resources created under the Cloud Composer Environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetwork</span>
+        <span id="subnetwork_nodejs">
+<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1702,7 +1942,9 @@ network must also be provided and the subnetwork must belong to the enclosing en
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1721,7 +1963,9 @@ Cannot be updated.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1733,7 +1977,9 @@ and region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1743,7 +1989,9 @@ If unspecified, defaults to 100GB. Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>allocation_<wbr>policy</span>
+        <span id="ip_allocation_policy_python">
+<a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Dict[Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
     </dt>
@@ -1754,7 +2002,9 @@ Cannot be updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine_<wbr>type</span>
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1766,7 +2016,9 @@ region/zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1777,7 +2029,9 @@ communications, specified as a self-link, relative resource name
 
     <dt class="property-optional"
             title="Optional">
-        <span>oauth<wbr>Scopes</span>
+        <span id="oauthscopes_python">
+<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1788,7 +2042,9 @@ VMs. Cannot be updated. If empty, defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>account</span>
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1801,7 +2057,9 @@ for any GCP resources created under the Cloud Composer Environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetwork</span>
+        <span id="subnetwork_python">
+<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1813,7 +2071,9 @@ network must also be provided and the subnetwork must belong to the enclosing en
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1850,7 +2110,9 @@ Cannot be updated.
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>Ip<wbr>Aliases</span>
+        <span id="useipaliases_csharp">
+<a href="#useipaliases_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1860,7 +2122,9 @@ Defaults to true if the `ip_allocation_block` is present in config.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="clusteripv4cidrblock_csharp">
+<a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1874,7 +2138,9 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="clustersecondaryrangename_csharp">
+<a href="#clustersecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1885,7 +2151,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="servicesipv4cidrblock_csharp">
+<a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1899,7 +2167,9 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="servicessecondaryrangename_csharp">
+<a href="#servicessecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1917,7 +2187,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>Ip<wbr>Aliases</span>
+        <span id="useipaliases_go">
+<a href="#useipaliases_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1927,7 +2199,9 @@ Defaults to true if the `ip_allocation_block` is present in config.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="clusteripv4cidrblock_go">
+<a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1941,7 +2215,9 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="clustersecondaryrangename_go">
+<a href="#clustersecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1952,7 +2228,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="servicesipv4cidrblock_go">
+<a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1966,7 +2244,9 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="servicessecondaryrangename_go">
+<a href="#servicessecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1984,7 +2264,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>Ip<wbr>Aliases</span>
+        <span id="useipaliases_nodejs">
+<a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1994,7 +2276,9 @@ Defaults to true if the `ip_allocation_block` is present in config.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="clusteripv4cidrblock_nodejs">
+<a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2008,7 +2292,9 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="clustersecondaryrangename_nodejs">
+<a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2019,7 +2305,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="servicesipv4cidrblock_nodejs">
+<a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2033,7 +2321,9 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="servicessecondaryrangename_nodejs">
+<a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2051,7 +2341,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>Ip<wbr>Aliases</span>
+        <span id="useipaliases_python">
+<a href="#useipaliases_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2061,7 +2353,9 @@ Defaults to true if the `ip_allocation_block` is present in config.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="clusteripv4cidrblock_python">
+<a href="#clusteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2075,7 +2369,9 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="clustersecondaryrangename_python">
+<a href="#clustersecondaryrangename_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2086,7 +2382,9 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="servicesipv4cidrblock_python">
+<a href="#servicesipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2100,7 +2398,9 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Secondary<wbr>Range<wbr>Name</span>
+        <span id="servicessecondaryrangename_python">
+<a href="#servicessecondaryrangename_python" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2136,7 +2436,20 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Private<wbr>Endpoint</span>
+        <span id="cloudsqlipv4cidrblock_csharp">
+<a href="#cloudsqlipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_csharp">
+<a href="#enableprivateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2146,7 +2459,9 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="masteripv4cidrblock_csharp">
+<a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2155,6 +2470,17 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webserveripv4cidrblock_csharp">
+<a href="#webserveripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2166,7 +2492,20 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Private<wbr>Endpoint</span>
+        <span id="cloudsqlipv4cidrblock_go">
+<a href="#cloudsqlipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_go">
+<a href="#enableprivateendpoint_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2176,7 +2515,9 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="masteripv4cidrblock_go">
+<a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2185,6 +2526,17 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webserveripv4cidrblock_go">
+<a href="#webserveripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2196,7 +2548,20 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Private<wbr>Endpoint</span>
+        <span id="cloudsqlipv4cidrblock_nodejs">
+<a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_nodejs">
+<a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2206,7 +2571,9 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="masteripv4cidrblock_nodejs">
+<a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2215,6 +2582,17 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webserveripv4cidrblock_nodejs">
+<a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2226,7 +2604,20 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Private<wbr>Endpoint</span>
+        <span id="cloudsqlipv4cidrblock_python">
+<a href="#cloudsqlipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_python">
+<a href="#enableprivateendpoint_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2236,7 +2627,9 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Ipv4Cidr<wbr>Block</span>
+        <span id="masteripv4cidrblock_python">
+<a href="#masteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2245,6 +2638,17 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webserveripv4cidrblock_python">
+<a href="#webserveripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2274,7 +2678,9 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Airflow<wbr>Config<wbr>Overrides</span>
+        <span id="airflowconfigoverrides_csharp">
+<a href="#airflowconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2285,7 +2691,9 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Env<wbr>Variables</span>
+        <span id="envvariables_csharp">
+<a href="#envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2312,7 +2720,9 @@ SQL_USER
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Version</span>
+        <span id="imageversion_csharp">
+<a href="#imageversion_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2328,7 +2738,9 @@ for allowed release names.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pypi<wbr>Packages</span>
+        <span id="pypipackages_csharp">
+<a href="#pypipackages_csharp" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2340,7 +2752,9 @@ pinning it to a version specifier, use the empty string as the value.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Python<wbr>Version</span>
+        <span id="pythonversion_csharp">
+<a href="#pythonversion_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2358,7 +2772,9 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
     <dt class="property-optional"
             title="Optional">
-        <span>Airflow<wbr>Config<wbr>Overrides</span>
+        <span id="airflowconfigoverrides_go">
+<a href="#airflowconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2369,7 +2785,9 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Env<wbr>Variables</span>
+        <span id="envvariables_go">
+<a href="#envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2396,7 +2814,9 @@ SQL_USER
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Version</span>
+        <span id="imageversion_go">
+<a href="#imageversion_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2412,7 +2832,9 @@ for allowed release names.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pypi<wbr>Packages</span>
+        <span id="pypipackages_go">
+<a href="#pypipackages_go" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2424,7 +2846,9 @@ pinning it to a version specifier, use the empty string as the value.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Python<wbr>Version</span>
+        <span id="pythonversion_go">
+<a href="#pythonversion_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2442,7 +2866,9 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
     <dt class="property-optional"
             title="Optional">
-        <span>airflow<wbr>Config<wbr>Overrides</span>
+        <span id="airflowconfigoverrides_nodejs">
+<a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2453,7 +2879,9 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 
     <dt class="property-optional"
             title="Optional">
-        <span>env<wbr>Variables</span>
+        <span id="envvariables_nodejs">
+<a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2480,7 +2908,9 @@ SQL_USER
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Version</span>
+        <span id="imageversion_nodejs">
+<a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2496,7 +2926,9 @@ for allowed release names.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pypi<wbr>Packages</span>
+        <span id="pypipackages_nodejs">
+<a href="#pypipackages_nodejs" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2508,7 +2940,9 @@ pinning it to a version specifier, use the empty string as the value.
 
     <dt class="property-optional"
             title="Optional">
-        <span>python<wbr>Version</span>
+        <span id="pythonversion_nodejs">
+<a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2526,7 +2960,9 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
     <dt class="property-optional"
             title="Optional">
-        <span>airflow<wbr>Config<wbr>Overrides</span>
+        <span id="airflowconfigoverrides_python">
+<a href="#airflowconfigoverrides_python" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2537,7 +2973,9 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 
     <dt class="property-optional"
             title="Optional">
-        <span>env_<wbr>variables</span>
+        <span id="env_variables_python">
+<a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2564,7 +3002,9 @@ SQL_USER
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Version</span>
+        <span id="imageversion_python">
+<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2580,7 +3020,9 @@ for allowed release names.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pypi<wbr>Packages</span>
+        <span id="pypipackages_python">
+<a href="#pypipackages_python" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2592,13 +3034,255 @@ pinning it to a version specifier, use the empty string as the value.
 
     <dt class="property-optional"
             title="Optional">
-        <span>python<wbr>Version</span>
+        <span id="pythonversion_python">
+<a href="#pythonversion_python" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfigWebServerNetworkAccessControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerNetworkAccessControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerNetworkAccessControlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigWebServerNetworkAccessControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigWebServerNetworkAccessControl.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedipranges_csharp">
+<a href="#allowedipranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List&lt;Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}-
+A collection of allowed IP ranges with descriptions. Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedipranges_go">
+<a href="#allowedipranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">[]Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}-
+A collection of allowed IP ranges with descriptions. Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedipranges_nodejs">
+<a href="#allowedipranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range[]</a></span>
+    </dt>
+    <dd>{{% md %}}-
+A collection of allowed IP ranges with descriptions. Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedipranges_python">
+<a href="#allowedipranges_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}-
+A collection of allowed IP ranges with descriptions. Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="environmentconfigwebservernetworkaccesscontrolallowediprange">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
+IP range prefixes should be properly truncated. For example,
+`1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this ip range.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
+IP range prefixes should be properly truncated. For example,
+`1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this ip range.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
+IP range prefixes should be properly truncated. For example,
+`1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this ip range.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
+IP range prefixes should be properly truncated. For example,
+`1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this ip range.
 {{% /md %}}</dd>
 
 </dl>

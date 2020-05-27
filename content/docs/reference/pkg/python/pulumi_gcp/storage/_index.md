@@ -2718,14 +2718,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;deleteObjectsUniqueInSink&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;aws_s3_data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;aws_s3_bucket&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;bucket_name&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;aws_s3_bucket&quot;</span><span class="p">],</span>
             <span class="s2">&quot;aws_access_key&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;accessKeyId&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;aws_access_key&quot;</span><span class="p">],</span>
                 <span class="s2">&quot;secretAccessKey&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;aws_secret_key&quot;</span><span class="p">],</span>
             <span class="p">},</span>
         <span class="p">},</span>
         <span class="s2">&quot;gcs_data_sink&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="n">s3_backup_bucket_bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;bucket_name&quot;</span><span class="p">:</span> <span class="n">s3_backup_bucket_bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="n">schedule</span><span class="o">=</span><span class="p">{</span>

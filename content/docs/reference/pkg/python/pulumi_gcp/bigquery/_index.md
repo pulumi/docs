@@ -22,9 +22,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
     <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
         <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
@@ -40,9 +40,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
     <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
         <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
@@ -50,7 +50,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_profile_id</span><span class="o">=</span><span class="s2">&quot;bt-profile&quot;</span><span class="p">,</span>
     <span class="n">single_cluster_routing</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
         <span class="s2">&quot;allowTransactionalWrites&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">ignore_warnings</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -241,7 +241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
     <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instanceId&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
         <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
     <span class="p">})</span>
@@ -263,7 +263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
     <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instanceId&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
         <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
     <span class="p">})</span>
@@ -690,7 +690,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">access</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;userByEmail&quot;</span><span class="p">:</span> <span class="n">bqowner</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+            <span class="s2">&quot;user_by_email&quot;</span><span class="p">:</span> <span class="n">bqowner</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;READER&quot;</span><span class="p">,</span>
@@ -711,7 +711,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
     <span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="mi">3600000</span><span class="p">,</span>
     <span class="n">default_encryption_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;kmsKeyName&quot;</span><span class="p">:</span> <span class="n">crypto_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;kms_key_name&quot;</span><span class="p">:</span> <span class="n">crypto_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -1067,9 +1067,9 @@ dataset resource must either have no defined <code class="docutils literal notra
 <span class="n">access</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetAccess</span><span class="p">(</span><span class="s2">&quot;access&quot;</span><span class="p">,</span>
     <span class="n">dataset_id</span><span class="o">=</span><span class="n">private</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
     <span class="n">view</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
-        <span class="s2">&quot;datasetId&quot;</span><span class="p">:</span> <span class="n">public_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
-        <span class="s2">&quot;tableId&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+        <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+        <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">public_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+        <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -1314,9 +1314,41 @@ Once a BigQuery job is created, it cannot be changed or deleted.</p>
     <span class="n">query</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&quot;</span><span class="p">,</span>
         <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
-            <span class="s2">&quot;datasetId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
-            <span class="s2">&quot;tableId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;allowLargeResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;flattenResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;script_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;keyResultStatement&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;job_query_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;job_query_table&quot;</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">job_id</span><span class="o">=</span><span class="s2">&quot;job_query&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;example-label&quot;</span><span class="p">:</span> <span class="s2">&quot;example-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">query</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;default_dataset&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;allowLargeResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;flattenResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
@@ -1345,9 +1377,9 @@ Once a BigQuery job is created, it cannot be changed or deleted.</p>
     <span class="n">load</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;sourceUris&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv&quot;</span><span class="p">],</span>
         <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
-            <span class="s2">&quot;datasetId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
-            <span class="s2">&quot;tableId&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;skipLeadingRows&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;schemaUpdateOptions&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1394,9 +1426,9 @@ Once a BigQuery job is created, it cannot be changed or deleted.</p>
     <span class="n">extract</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;destinationUris&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dest</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">/extract&quot;</span><span class="p">)],</span>
         <span class="s2">&quot;source_table&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
-            <span class="s2">&quot;datasetId&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
-            <span class="s2">&quot;tableId&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;destinationFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;NEWLINE_DELIMITED_JSON&quot;</span><span class="p">,</span>
         <span class="s2">&quot;compression&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
@@ -1438,14 +1470,16 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -1477,7 +1511,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -1504,7 +1539,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -1596,7 +1632,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -1660,14 +1697,16 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -1704,7 +1743,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -1760,7 +1800,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -1870,7 +1911,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -1966,14 +2008,16 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -2005,7 +2049,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -2032,7 +2077,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -2124,7 +2170,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -2228,7 +2275,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">reservation</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Reservation</span><span class="p">(</span><span class="s2">&quot;reservation&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;asia-northeast1&quot;</span><span class="p">,</span>
     <span class="n">slot_capacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">ignore_idle_slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ignore_idle_slots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

@@ -266,7 +266,9 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +281,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -288,7 +292,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Storage<wbr>Policy</span>
+        <span id="messagestoragepolicy_csharp">
+<a href="#messagestoragepolicy_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -299,7 +305,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +316,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +335,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +350,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -347,7 +361,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Storage<wbr>Policy</span>
+        <span id="messagestoragepolicy_go">
+<a href="#messagestoragepolicy_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
@@ -358,7 +374,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -367,7 +385,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +404,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -397,7 +419,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -406,7 +430,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>message<wbr>Storage<wbr>Policy</span>
+        <span id="messagestoragepolicy_nodejs">
+<a href="#messagestoragepolicy_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
@@ -417,7 +443,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +454,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -443,7 +473,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>name</span>
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -456,7 +488,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -465,7 +499,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>message_<wbr>storage_<wbr>policy</span>
+        <span id="message_storage_policy_python">
+<a href="#message_storage_policy_python" style="color: inherit; text-decoration: inherit;">message_<wbr>storage_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
     </dt>
@@ -476,7 +512,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +523,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -513,7 +553,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -528,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +604,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +747,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="state_kmskeyname_csharp">
+<a href="#state_kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -712,7 +762,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -721,7 +773,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Storage<wbr>Policy</span>
+        <span id="state_messagestoragepolicy_csharp">
+<a href="#state_messagestoragepolicy_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -732,7 +786,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +797,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -758,7 +816,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="state_kmskeyname_go">
+<a href="#state_kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -771,7 +831,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -780,7 +842,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Storage<wbr>Policy</span>
+        <span id="state_messagestoragepolicy_go">
+<a href="#state_messagestoragepolicy_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
@@ -791,7 +855,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +866,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -817,7 +885,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Name</span>
+        <span id="state_kmskeyname_nodejs">
+<a href="#state_kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -830,7 +900,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -839,7 +911,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>message<wbr>Storage<wbr>Policy</span>
+        <span id="state_messagestoragepolicy_nodejs">
+<a href="#state_messagestoragepolicy_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Storage<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
@@ -850,7 +924,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +935,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -876,7 +954,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>name</span>
+        <span id="state_kms_key_name_python">
+<a href="#state_kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -889,7 +969,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -898,7 +980,9 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 
     <dt class="property-optional"
             title="Optional">
-        <span>message_<wbr>storage_<wbr>policy</span>
+        <span id="state_message_storage_policy_python">
+<a href="#state_message_storage_policy_python" style="color: inherit; text-decoration: inherit;">message_<wbr>storage_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
     </dt>
@@ -909,7 +993,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -918,7 +1004,9 @@ constraints are in effect.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -961,7 +1049,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Persistence<wbr>Regions</span>
+        <span id="allowedpersistenceregions_csharp">
+<a href="#allowedpersistenceregions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Persistence<wbr>Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -982,7 +1072,9 @@ and is not a valid configuration.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Persistence<wbr>Regions</span>
+        <span id="allowedpersistenceregions_go">
+<a href="#allowedpersistenceregions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Persistence<wbr>Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1003,7 +1095,9 @@ and is not a valid configuration.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Persistence<wbr>Regions</span>
+        <span id="allowedpersistenceregions_nodejs">
+<a href="#allowedpersistenceregions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Persistence<wbr>Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1024,7 +1118,9 @@ and is not a valid configuration.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Persistence<wbr>Regions</span>
+        <span id="allowedpersistenceregions_python">
+<a href="#allowedpersistenceregions_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Persistence<wbr>Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

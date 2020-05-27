@@ -273,7 +273,9 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_csharp">
+<a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +284,9 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Cidr<wbr>Block</span>
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +302,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>Tensorflow<wbr>Version</span>
+        <span id="tensorflowversion_csharp">
+<a href="#tensorflowversion_csharp" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +313,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +324,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +335,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -334,7 +346,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +357,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +371,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +383,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling<wbr>Config</span>
+        <span id="schedulingconfig_csharp">
+<a href="#schedulingconfig_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -381,7 +401,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_go">
+<a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +412,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Cidr<wbr>Block</span>
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +430,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>Tensorflow<wbr>Version</span>
+        <span id="tensorflowversion_go">
+<a href="#tensorflowversion_go" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +441,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +452,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -433,7 +463,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -442,7 +474,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +485,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +499,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +511,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling<wbr>Config</span>
+        <span id="schedulingconfig_go">
+<a href="#schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
@@ -489,7 +529,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Type</span>
+        <span id="acceleratortype_nodejs">
+<a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +540,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>cidr<wbr>Block</span>
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -514,7 +558,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>tensorflow<wbr>Version</span>
+        <span id="tensorflowversion_nodejs">
+<a href="#tensorflowversion_nodejs" style="color: inherit; text-decoration: inherit;">tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +569,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +580,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -541,7 +591,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -550,7 +602,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -559,7 +613,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +627,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -581,7 +639,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling<wbr>Config</span>
+        <span id="schedulingconfig_nodejs">
+<a href="#schedulingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
@@ -597,7 +657,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator_<wbr>type</span>
+        <span id="accelerator_type_python">
+<a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +668,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>cidr_<wbr>block</span>
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -622,7 +686,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>tensorflow_<wbr>version</span>
+        <span id="tensorflow_version_python">
+<a href="#tensorflow_version_python" style="color: inherit; text-decoration: inherit;">tensorflow_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +697,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +708,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +719,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -658,7 +730,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +741,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +755,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +767,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling_<wbr>config</span>
+        <span id="scheduling_config_python">
+<a href="#scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
     </dt>
@@ -716,7 +796,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -724,7 +806,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Endpoints</span>
+        <span id="networkendpoints_csharp">
+<a href="#networkendpoints_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List&lt;Node<wbr>Network<wbr>Endpoint&gt;</a></span>
     </dt>
@@ -734,7 +818,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -751,7 +837,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -759,7 +847,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Endpoints</span>
+        <span id="networkendpoints_go">
+<a href="#networkendpoints_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">[]Node<wbr>Network<wbr>Endpoint</a></span>
     </dt>
@@ -769,7 +859,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -786,7 +878,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -794,7 +888,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Endpoints</span>
+        <span id="networkendpoints_nodejs">
+<a href="#networkendpoints_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint[]</a></span>
     </dt>
@@ -804,7 +900,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Account</span>
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +919,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -829,7 +929,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>endpoints</span>
+        <span id="network_endpoints_python">
+<a href="#network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint]</a></span>
     </dt>
@@ -839,7 +941,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>account</span>
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -982,7 +1086,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerator<wbr>Type</span>
+        <span id="state_acceleratortype_csharp">
+<a href="#state_acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -991,7 +1097,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="state_cidrblock_csharp">
+<a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1115,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1016,7 +1126,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1025,7 +1137,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1034,7 +1148,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1046,7 +1162,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Endpoints</span>
+        <span id="state_networkendpoints_csharp">
+<a href="#state_networkendpoints_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List&lt;Node<wbr>Network<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
@@ -1056,7 +1174,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1066,7 +1186,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling<wbr>Config</span>
+        <span id="state_schedulingconfig_csharp">
+<a href="#state_schedulingconfig_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1075,7 +1197,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="state_serviceaccount_csharp">
+<a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1085,7 +1209,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tensorflow<wbr>Version</span>
+        <span id="state_tensorflowversion_csharp">
+<a href="#state_tensorflowversion_csharp" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1094,7 +1220,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_csharp">
+<a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1110,7 +1238,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerator<wbr>Type</span>
+        <span id="state_acceleratortype_go">
+<a href="#state_acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1119,7 +1249,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="state_cidrblock_go">
+<a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1135,7 +1267,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1144,7 +1278,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1153,7 +1289,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1162,7 +1300,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1174,7 +1314,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Endpoints</span>
+        <span id="state_networkendpoints_go">
+<a href="#state_networkendpoints_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">[]Node<wbr>Network<wbr>Endpoint</a></span>
     </dt>
@@ -1184,7 +1326,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1194,7 +1338,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling<wbr>Config</span>
+        <span id="state_schedulingconfig_go">
+<a href="#state_schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
@@ -1203,7 +1349,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="state_serviceaccount_go">
+<a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1213,7 +1361,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tensorflow<wbr>Version</span>
+        <span id="state_tensorflowversion_go">
+<a href="#state_tensorflowversion_go" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1372,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_go">
+<a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1238,7 +1390,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerator<wbr>Type</span>
+        <span id="state_acceleratortype_nodejs">
+<a href="#state_acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1247,7 +1401,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr<wbr>Block</span>
+        <span id="state_cidrblock_nodejs">
+<a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1263,7 +1419,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1272,7 +1430,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1281,7 +1441,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1290,7 +1452,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1302,7 +1466,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Endpoints</span>
+        <span id="state_networkendpoints_nodejs">
+<a href="#state_networkendpoints_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint[]</a></span>
     </dt>
@@ -1312,7 +1478,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1322,7 +1490,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling<wbr>Config</span>
+        <span id="state_schedulingconfig_nodejs">
+<a href="#state_schedulingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
@@ -1331,7 +1501,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account</span>
+        <span id="state_serviceaccount_nodejs">
+<a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1341,7 +1513,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>tensorflow<wbr>Version</span>
+        <span id="state_tensorflowversion_nodejs">
+<a href="#state_tensorflowversion_nodejs" style="color: inherit; text-decoration: inherit;">tensorflow<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1350,7 +1524,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_nodejs">
+<a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1366,7 +1542,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerator_<wbr>type</span>
+        <span id="state_accelerator_type_python">
+<a href="#state_accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1375,7 +1553,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr_<wbr>block</span>
+        <span id="state_cidr_block_python">
+<a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1391,7 +1571,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1400,7 +1582,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1409,7 +1593,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1418,7 +1604,9 @@ is peered with another network that is using that CIDR block.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1430,7 +1618,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>endpoints</span>
+        <span id="state_network_endpoints_python">
+<a href="#state_network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint]</a></span>
     </dt>
@@ -1440,7 +1630,9 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1450,7 +1642,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling_<wbr>config</span>
+        <span id="state_scheduling_config_python">
+<a href="#state_scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
     </dt>
@@ -1459,7 +1653,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>account</span>
+        <span id="state_service_account_python">
+<a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1469,7 +1665,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>tensorflow_<wbr>version</span>
+        <span id="state_tensorflow_version_python">
+<a href="#state_tensorflow_version_python" style="color: inherit; text-decoration: inherit;">tensorflow_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1478,7 +1676,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_python">
+<a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1520,7 +1720,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1528,7 +1730,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1543,7 +1747,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1551,7 +1757,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1566,7 +1774,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1574,7 +1784,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1589,7 +1801,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1597,7 +1811,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1630,7 +1846,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-required"
             title="Required">
-        <span>Preemptible</span>
+        <span id="preemptible_csharp">
+<a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1646,7 +1864,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-required"
             title="Required">
-        <span>Preemptible</span>
+        <span id="preemptible_go">
+<a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1662,7 +1882,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-required"
             title="Required">
-        <span>preemptible</span>
+        <span id="preemptible_nodejs">
+<a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1678,7 +1900,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-required"
             title="Required">
-        <span>preemptible</span>
+        <span id="preemptible_python">
+<a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

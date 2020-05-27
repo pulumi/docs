@@ -12,6 +12,7 @@ Explore the resources and functions of the iam module in the GCP package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
+    <li><a href="gettestablepermissions" title="GetTestablePermissions"><span class="symbol function"></span>GetTestablePermissions</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,7 +24,7 @@ Explore the resources and functions of the iam module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

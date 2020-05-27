@@ -262,7 +262,9 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Disk</span>
+        <span id="sourcedisk_csharp">
+<a href="#sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +273,9 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +284,9 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -289,7 +295,9 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +312,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +324,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="snapshotencryptionkey_csharp">
+<a href="#snapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -324,7 +336,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="sourcediskencryptionkey_csharp">
+<a href="#sourcediskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -335,7 +349,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +367,9 @@ key.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Disk</span>
+        <span id="sourcedisk_go">
+<a href="#sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +378,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -369,7 +389,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -378,7 +400,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +417,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +429,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="snapshotencryptionkey_go">
+<a href="#snapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -413,7 +441,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="sourcediskencryptionkey_go">
+<a href="#sourcediskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -424,7 +454,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +472,9 @@ key.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Disk</span>
+        <span id="sourcedisk_nodejs">
+<a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -449,7 +483,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -458,7 +494,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -467,7 +505,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +522,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +534,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="snapshotencryptionkey_nodejs">
+<a href="#snapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -502,7 +546,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="sourcediskencryptionkey_nodejs">
+<a href="#sourcediskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -513,7 +559,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +577,9 @@ key.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>disk</span>
+        <span id="source_disk_python">
+<a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +588,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -547,7 +599,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -556,7 +610,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -571,7 +627,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +639,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>encryption_<wbr>key</span>
+        <span id="snapshot_encryption_key_python">
+<a href="#snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
     </dt>
@@ -591,7 +651,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk_<wbr>encryption_<wbr>key</span>
+        <span id="source_disk_encryption_key_python">
+<a href="#source_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
     </dt>
@@ -602,7 +664,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -629,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_csharp">
+<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -638,7 +704,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -647,7 +715,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -655,7 +725,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_csharp">
+<a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -664,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Licenses</span>
+        <span id="licenses_csharp">
+<a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -675,7 +749,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +760,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -693,7 +771,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Disk<wbr>Link</span>
+        <span id="sourcedisklink_csharp">
+<a href="#sourcedisklink_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -701,7 +781,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Storage<wbr>Bytes</span>
+        <span id="storagebytes_csharp">
+<a href="#storagebytes_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -718,7 +800,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_go">
+<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -727,7 +811,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -736,7 +822,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -744,7 +832,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_go">
+<a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +843,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>Licenses</span>
+        <span id="licenses_go">
+<a href="#licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -764,7 +856,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +867,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -782,7 +878,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Disk<wbr>Link</span>
+        <span id="sourcedisklink_go">
+<a href="#sourcedisklink_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -790,7 +888,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>Storage<wbr>Bytes</span>
+        <span id="storagebytes_go">
+<a href="#storagebytes_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -807,7 +907,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_nodejs">
+<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -816,7 +918,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -825,7 +929,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -833,7 +939,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>label<wbr>Fingerprint</span>
+        <span id="labelfingerprint_nodejs">
+<a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -842,7 +950,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>licenses</span>
+        <span id="licenses_nodejs">
+<a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -853,7 +963,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -862,7 +974,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>snapshot<wbr>Id</span>
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -871,7 +985,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>source<wbr>Disk<wbr>Link</span>
+        <span id="sourcedisklink_nodejs">
+<a href="#sourcedisklink_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -879,7 +995,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>storage<wbr>Bytes</span>
+        <span id="storagebytes_nodejs">
+<a href="#storagebytes_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -896,7 +1014,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>timestamp</span>
+        <span id="creation_timestamp_python">
+<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +1025,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -914,7 +1036,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -922,7 +1046,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>label_<wbr>fingerprint</span>
+        <span id="label_fingerprint_python">
+<a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1057,9 @@ snapshot creation/deletion.
 
     <dt class="property-"
             title="">
-        <span>licenses</span>
+        <span id="licenses_python">
+<a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -942,7 +1070,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1081,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>snapshot_<wbr>id</span>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -960,7 +1092,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>source_<wbr>disk_<wbr>link</span>
+        <span id="source_disk_link_python">
+<a href="#source_disk_link_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -968,7 +1102,9 @@ encryption key.
 
     <dt class="property-"
             title="">
-        <span>storage_<wbr>bytes</span>
+        <span id="storage_bytes_python">
+<a href="#storage_bytes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1111,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_csharp">
+<a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1120,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1129,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_csharp">
+<a href="#state_disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1138,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_csharp">
+<a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1147,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1156,7 +1302,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="state_licenses_csharp">
+<a href="#state_licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1167,7 +1315,9 @@ encryption key.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1182,7 +1332,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1192,7 +1344,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1201,7 +1355,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="state_snapshotencryptionkey_csharp">
+<a href="#state_snapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -1211,7 +1367,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="state_snapshotid_csharp">
+<a href="#state_snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1220,7 +1378,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="state_sourcedisk_csharp">
+<a href="#state_sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1229,7 +1389,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="state_sourcediskencryptionkey_csharp">
+<a href="#state_sourcediskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -1240,7 +1402,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Link</span>
+        <span id="state_sourcedisklink_csharp">
+<a href="#state_sourcedisklink_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1248,7 +1412,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Bytes</span>
+        <span id="state_storagebytes_csharp">
+<a href="#state_storagebytes_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1258,7 +1424,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_csharp">
+<a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1274,7 +1442,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_go">
+<a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1283,7 +1453,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1292,7 +1464,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_go">
+<a href="#state_disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1301,7 +1475,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_go">
+<a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1310,7 +1486,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1319,7 +1497,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Licenses</span>
+        <span id="state_licenses_go">
+<a href="#state_licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1330,7 +1510,9 @@ encryption key.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1345,7 +1527,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1355,7 +1539,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1364,7 +1550,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="state_snapshotencryptionkey_go">
+<a href="#state_snapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -1374,7 +1562,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="state_snapshotid_go">
+<a href="#state_snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1383,7 +1573,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk</span>
+        <span id="state_sourcedisk_go">
+<a href="#state_sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1392,7 +1584,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="state_sourcediskencryptionkey_go">
+<a href="#state_sourcediskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -1403,7 +1597,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Disk<wbr>Link</span>
+        <span id="state_sourcedisklink_go">
+<a href="#state_sourcedisklink_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1411,7 +1607,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Bytes</span>
+        <span id="state_storagebytes_go">
+<a href="#state_storagebytes_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1421,7 +1619,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_go">
+<a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1437,7 +1637,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span id="state_creationtimestamp_nodejs">
+<a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1446,7 +1648,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1455,7 +1659,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="state_disksizegb_nodejs">
+<a href="#state_disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1464,7 +1670,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Fingerprint</span>
+        <span id="state_labelfingerprint_nodejs">
+<a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1473,7 +1681,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1482,7 +1692,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="state_licenses_nodejs">
+<a href="#state_licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1493,7 +1705,9 @@ encryption key.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1508,7 +1722,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1518,7 +1734,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1527,7 +1745,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Encryption<wbr>Key</span>
+        <span id="state_snapshotencryptionkey_nodejs">
+<a href="#state_snapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -1537,7 +1757,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="state_snapshotid_nodejs">
+<a href="#state_snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1546,7 +1768,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk</span>
+        <span id="state_sourcedisk_nodejs">
+<a href="#state_sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1555,7 +1779,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk<wbr>Encryption<wbr>Key</span>
+        <span id="state_sourcediskencryptionkey_nodejs">
+<a href="#state_sourcediskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
@@ -1566,7 +1792,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Disk<wbr>Link</span>
+        <span id="state_sourcedisklink_nodejs">
+<a href="#state_sourcedisklink_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1574,7 +1802,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Bytes</span>
+        <span id="state_storagebytes_nodejs">
+<a href="#state_storagebytes_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1584,7 +1814,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_nodejs">
+<a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1600,7 +1832,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>timestamp</span>
+        <span id="state_creation_timestamp_python">
+<a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1609,7 +1843,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1618,7 +1854,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="state_disk_size_gb_python">
+<a href="#state_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1627,7 +1865,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label_<wbr>fingerprint</span>
+        <span id="state_label_fingerprint_python">
+<a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1636,7 +1876,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1645,7 +1887,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>licenses</span>
+        <span id="state_licenses_python">
+<a href="#state_licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1656,7 +1900,9 @@ encryption key.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1671,7 +1917,9 @@ character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1681,7 +1929,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1690,7 +1940,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>encryption_<wbr>key</span>
+        <span id="state_snapshot_encryption_key_python">
+<a href="#state_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
     </dt>
@@ -1700,7 +1952,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="state_snapshot_id_python">
+<a href="#state_snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1709,7 +1963,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk</span>
+        <span id="state_source_disk_python">
+<a href="#state_source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1718,7 +1974,9 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk_<wbr>encryption_<wbr>key</span>
+        <span id="state_source_disk_encryption_key_python">
+<a href="#state_source_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
     </dt>
@@ -1729,7 +1987,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>disk_<wbr>link</span>
+        <span id="state_source_disk_link_python">
+<a href="#state_source_disk_link_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1737,7 +1997,9 @@ key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>bytes</span>
+        <span id="state_storage_bytes_python">
+<a href="#state_storage_bytes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1747,7 +2009,9 @@ snapshot creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_python">
+<a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1789,7 +2053,9 @@ snapshot creation/deletion.
 
     <dt class="property-required"
             title="Required">
-        <span>Raw<wbr>Key</span>
+        <span id="rawkey_csharp">
+<a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1799,7 +2065,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha256</span>
+        <span id="sha256_csharp">
+<a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1817,7 +2085,9 @@ encryption key that protects this resource.
 
     <dt class="property-required"
             title="Required">
-        <span>Raw<wbr>Key</span>
+        <span id="rawkey_go">
+<a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1827,7 +2097,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha256</span>
+        <span id="sha256_go">
+<a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1845,7 +2117,9 @@ encryption key that protects this resource.
 
     <dt class="property-required"
             title="Required">
-        <span>raw<wbr>Key</span>
+        <span id="rawkey_nodejs">
+<a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1855,7 +2129,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha256</span>
+        <span id="sha256_nodejs">
+<a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1873,7 +2149,9 @@ encryption key that protects this resource.
 
     <dt class="property-required"
             title="Required">
-        <span>raw<wbr>Key</span>
+        <span id="rawkey_python">
+<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1883,7 +2161,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha256</span>
+        <span id="sha256_python">
+<a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1919,7 +2199,9 @@ encryption key that protects this resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Key</span>
+        <span id="rawkey_csharp">
+<a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1936,7 +2218,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>Raw<wbr>Key</span>
+        <span id="rawkey_go">
+<a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1953,7 +2237,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw<wbr>Key</span>
+        <span id="rawkey_nodejs">
+<a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1970,7 +2256,9 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span>raw<wbr>Key</span>
+        <span id="rawkey_python">
+<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

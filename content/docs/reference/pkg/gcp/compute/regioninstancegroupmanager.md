@@ -65,7 +65,7 @@ autohealing = gcp.compute.HealthCheck("autohealing",
     healthy_threshold=2,
     unhealthy_threshold=10,
     http_health_check={
-        "requestPath": "/healthz",
+        "request_path": "/healthz",
         "port": "8080",
     })
 appserver = gcp.compute.RegionInstanceGroupManager("appserver",
@@ -319,7 +319,9 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Base<wbr>Instance<wbr>Name</span>
+        <span id="baseinstancename_csharp">
+<a href="#baseinstancename_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +335,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +346,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>Versions</span>
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
@@ -353,7 +359,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Healing<wbr>Policies</span>
+        <span id="autohealingpolicies_csharp">
+<a href="#autohealingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
@@ -363,7 +371,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -373,7 +383,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Policy<wbr>Zones</span>
+        <span id="distributionpolicyzones_csharp">
+<a href="#distributionpolicyzones_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -383,7 +395,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -392,7 +406,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Named<wbr>Ports</span>
+        <span id="namedports_csharp">
+<a href="#namedports_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
@@ -402,7 +418,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +430,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stateful<wbr>Disks</span>
+        <span id="statefuldisks_csharp">
+<a href="#statefuldisks_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -421,7 +441,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Pools</span>
+        <span id="targetpools_csharp">
+<a href="#targetpools_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -432,7 +454,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="targetsize_csharp">
+<a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -441,7 +465,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Policy</span>
+        <span id="updatepolicy_csharp">
+<a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -450,7 +476,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Instances</span>
+        <span id="waitforinstances_csharp">
+<a href="#waitforinstances_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -468,7 +496,9 @@ continue trying until it times out.
 
     <dt class="property-required"
             title="Required">
-        <span>Base<wbr>Instance<wbr>Name</span>
+        <span id="baseinstancename_go">
+<a href="#baseinstancename_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +512,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -491,7 +523,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>Versions</span>
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version</a></span>
     </dt>
@@ -502,7 +536,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Healing<wbr>Policies</span>
+        <span id="autohealingpolicies_go">
+<a href="#autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
     </dt>
@@ -512,7 +548,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +560,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Policy<wbr>Zones</span>
+        <span id="distributionpolicyzones_go">
+<a href="#distributionpolicyzones_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -532,7 +572,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +583,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Named<wbr>Ports</span>
+        <span id="namedports_go">
+<a href="#namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</a></span>
     </dt>
@@ -551,7 +595,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -561,7 +607,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stateful<wbr>Disks</span>
+        <span id="statefuldisks_go">
+<a href="#statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
@@ -570,7 +618,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Pools</span>
+        <span id="targetpools_go">
+<a href="#targetpools_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -581,7 +631,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="targetsize_go">
+<a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -590,7 +642,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Policy</span>
+        <span id="updatepolicy_go">
+<a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
@@ -599,7 +653,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Instances</span>
+        <span id="waitforinstances_go">
+<a href="#waitforinstances_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -617,7 +673,9 @@ continue trying until it times out.
 
     <dt class="property-required"
             title="Required">
-        <span>base<wbr>Instance<wbr>Name</span>
+        <span id="baseinstancename_nodejs">
+<a href="#baseinstancename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +689,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +700,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>versions</span>
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version[]</a></span>
     </dt>
@@ -651,7 +713,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Healing<wbr>Policies</span>
+        <span id="autohealingpolicies_nodejs">
+<a href="#autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
     </dt>
@@ -661,7 +725,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +737,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution<wbr>Policy<wbr>Zones</span>
+        <span id="distributionpolicyzones_nodejs">
+<a href="#distributionpolicyzones_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -681,7 +749,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -690,7 +760,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>named<wbr>Ports</span>
+        <span id="namedports_nodejs">
+<a href="#namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port[]</a></span>
     </dt>
@@ -700,7 +772,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -710,7 +784,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stateful<wbr>Disks</span>
+        <span id="statefuldisks_nodejs">
+<a href="#statefuldisks_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
@@ -719,7 +795,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Pools</span>
+        <span id="targetpools_nodejs">
+<a href="#targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -730,7 +808,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Size</span>
+        <span id="targetsize_nodejs">
+<a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -739,7 +819,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Policy</span>
+        <span id="updatepolicy_nodejs">
+<a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
@@ -748,7 +830,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Instances</span>
+        <span id="waitforinstances_nodejs">
+<a href="#waitforinstances_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -766,7 +850,9 @@ continue trying until it times out.
 
     <dt class="property-required"
             title="Required">
-        <span>base_<wbr>instance_<wbr>name</span>
+        <span id="base_instance_name_python">
+<a href="#base_instance_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -780,7 +866,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -789,7 +877,9 @@ name.
 
     <dt class="property-required"
             title="Required">
-        <span>versions</span>
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version]</a></span>
     </dt>
@@ -800,7 +890,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>healing_<wbr>policies</span>
+        <span id="auto_healing_policies_python">
+<a href="#auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies]</a></span>
     </dt>
@@ -810,7 +902,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -820,7 +914,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution_<wbr>policy_<wbr>zones</span>
+        <span id="distribution_policy_zones_python">
+<a href="#distribution_policy_zones_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy_<wbr>zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -830,7 +926,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -839,7 +937,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>named_<wbr>ports</span>
+        <span id="named_ports_python">
+<a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port]</a></span>
     </dt>
@@ -849,7 +949,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +961,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stateful_<wbr>disks</span>
+        <span id="stateful_disks_python">
+<a href="#stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
     </dt>
@@ -868,7 +972,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>pools</span>
+        <span id="target_pools_python">
+<a href="#target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -879,7 +985,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>size</span>
+        <span id="target_size_python">
+<a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -888,7 +996,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>update_<wbr>policy</span>
+        <span id="update_policy_python">
+<a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
     </dt>
@@ -897,7 +1007,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>instances</span>
+        <span id="wait_for_instances_python">
+<a href="#wait_for_instances_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -926,7 +1038,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fingerprint</span>
+        <span id="fingerprint_csharp">
+<a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1049,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -943,7 +1059,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Group</span>
+        <span id="instancegroup_csharp">
+<a href="#instancegroup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1070,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -968,7 +1088,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fingerprint</span>
+        <span id="fingerprint_go">
+<a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -977,7 +1099,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -985,7 +1109,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Group</span>
+        <span id="instancegroup_go">
+<a href="#instancegroup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -994,7 +1120,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1010,7 +1138,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fingerprint</span>
+        <span id="fingerprint_nodejs">
+<a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1019,7 +1149,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1027,7 +1159,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Group</span>
+        <span id="instancegroup_nodejs">
+<a href="#instancegroup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1036,7 +1170,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1052,7 +1188,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fingerprint</span>
+        <span id="fingerprint_python">
+<a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1061,7 +1199,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1209,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>group</span>
+        <span id="instance_group_python">
+<a href="#instance_group_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1078,7 +1220,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1220,7 +1364,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Healing<wbr>Policies</span>
+        <span id="state_autohealingpolicies_csharp">
+<a href="#state_autohealingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
@@ -1230,7 +1376,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Base<wbr>Instance<wbr>Name</span>
+        <span id="state_baseinstancename_csharp">
+<a href="#state_baseinstancename_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1244,7 +1392,9 @@ name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1254,7 +1404,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Policy<wbr>Zones</span>
+        <span id="state_distributionpolicyzones_csharp">
+<a href="#state_distributionpolicyzones_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1264,7 +1416,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fingerprint</span>
+        <span id="state_fingerprint_csharp">
+<a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1273,7 +1427,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Group</span>
+        <span id="state_instancegroup_csharp">
+<a href="#state_instancegroup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1282,7 +1438,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1291,7 +1449,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Named<wbr>Ports</span>
+        <span id="state_namedports_csharp">
+<a href="#state_namedports_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
@@ -1301,7 +1461,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1311,7 +1473,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1320,7 +1484,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1329,7 +1495,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stateful<wbr>Disks</span>
+        <span id="state_statefuldisks_csharp">
+<a href="#state_statefuldisks_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -1338,7 +1506,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Pools</span>
+        <span id="state_targetpools_csharp">
+<a href="#state_targetpools_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1349,7 +1519,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="state_targetsize_csharp">
+<a href="#state_targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1358,7 +1530,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Policy</span>
+        <span id="state_updatepolicy_csharp">
+<a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1367,7 +1541,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="state_versions_csharp">
+<a href="#state_versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
@@ -1378,7 +1554,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Instances</span>
+        <span id="state_waitforinstances_csharp">
+<a href="#state_waitforinstances_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1396,7 +1574,9 @@ continue trying until it times out.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Healing<wbr>Policies</span>
+        <span id="state_autohealingpolicies_go">
+<a href="#state_autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
     </dt>
@@ -1406,7 +1586,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Base<wbr>Instance<wbr>Name</span>
+        <span id="state_baseinstancename_go">
+<a href="#state_baseinstancename_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1420,7 +1602,9 @@ name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1430,7 +1614,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Policy<wbr>Zones</span>
+        <span id="state_distributionpolicyzones_go">
+<a href="#state_distributionpolicyzones_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1440,7 +1626,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fingerprint</span>
+        <span id="state_fingerprint_go">
+<a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1449,7 +1637,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Group</span>
+        <span id="state_instancegroup_go">
+<a href="#state_instancegroup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1458,7 +1648,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1467,7 +1659,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>Named<wbr>Ports</span>
+        <span id="state_namedports_go">
+<a href="#state_namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</a></span>
     </dt>
@@ -1477,7 +1671,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1487,7 +1683,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1496,7 +1694,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1505,7 +1705,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stateful<wbr>Disks</span>
+        <span id="state_statefuldisks_go">
+<a href="#state_statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
@@ -1514,7 +1716,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Pools</span>
+        <span id="state_targetpools_go">
+<a href="#state_targetpools_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1525,7 +1729,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="state_targetsize_go">
+<a href="#state_targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1534,7 +1740,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Policy</span>
+        <span id="state_updatepolicy_go">
+<a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
@@ -1543,7 +1751,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="state_versions_go">
+<a href="#state_versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version</a></span>
     </dt>
@@ -1554,7 +1764,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Instances</span>
+        <span id="state_waitforinstances_go">
+<a href="#state_waitforinstances_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1572,7 +1784,9 @@ continue trying until it times out.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Healing<wbr>Policies</span>
+        <span id="state_autohealingpolicies_nodejs">
+<a href="#state_autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
     </dt>
@@ -1582,7 +1796,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>base<wbr>Instance<wbr>Name</span>
+        <span id="state_baseinstancename_nodejs">
+<a href="#state_baseinstancename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1596,7 +1812,9 @@ name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1606,7 +1824,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution<wbr>Policy<wbr>Zones</span>
+        <span id="state_distributionpolicyzones_nodejs">
+<a href="#state_distributionpolicyzones_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1616,7 +1836,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>fingerprint</span>
+        <span id="state_fingerprint_nodejs">
+<a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1625,7 +1847,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Group</span>
+        <span id="state_instancegroup_nodejs">
+<a href="#state_instancegroup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1634,7 +1858,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1643,7 +1869,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>named<wbr>Ports</span>
+        <span id="state_namedports_nodejs">
+<a href="#state_namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port[]</a></span>
     </dt>
@@ -1653,7 +1881,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1663,7 +1893,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1672,7 +1904,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1681,7 +1915,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stateful<wbr>Disks</span>
+        <span id="state_statefuldisks_nodejs">
+<a href="#state_statefuldisks_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
@@ -1690,7 +1926,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Pools</span>
+        <span id="state_targetpools_nodejs">
+<a href="#state_targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1701,7 +1939,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Size</span>
+        <span id="state_targetsize_nodejs">
+<a href="#state_targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1710,7 +1950,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Policy</span>
+        <span id="state_updatepolicy_nodejs">
+<a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
@@ -1719,7 +1961,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="state_versions_nodejs">
+<a href="#state_versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version[]</a></span>
     </dt>
@@ -1730,7 +1974,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Instances</span>
+        <span id="state_waitforinstances_nodejs">
+<a href="#state_waitforinstances_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1748,7 +1994,9 @@ continue trying until it times out.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>healing_<wbr>policies</span>
+        <span id="state_auto_healing_policies_python">
+<a href="#state_auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies]</a></span>
     </dt>
@@ -1758,7 +2006,9 @@ group. You can specify only one value. Structure is documented below. For more i
 
     <dt class="property-optional"
             title="Optional">
-        <span>base_<wbr>instance_<wbr>name</span>
+        <span id="state_base_instance_name_python">
+<a href="#state_base_instance_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1772,7 +2022,9 @@ name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1782,7 +2034,9 @@ group manager.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution_<wbr>policy_<wbr>zones</span>
+        <span id="state_distribution_policy_zones_python">
+<a href="#state_distribution_policy_zones_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy_<wbr>zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1792,7 +2046,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>fingerprint</span>
+        <span id="state_fingerprint_python">
+<a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1801,7 +2057,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>group</span>
+        <span id="state_instance_group_python">
+<a href="#state_instance_group_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1810,7 +2068,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1819,7 +2079,9 @@ group. You can specify one or more values. For more information, see the [offici
 
     <dt class="property-optional"
             title="Optional">
-        <span>named_<wbr>ports</span>
+        <span id="state_named_ports_python">
+<a href="#state_named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port]</a></span>
     </dt>
@@ -1829,7 +2091,9 @@ for details on configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1839,7 +2103,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1848,7 +2114,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1857,7 +2125,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stateful_<wbr>disks</span>
+        <span id="state_stateful_disks_python">
+<a href="#state_stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
     </dt>
@@ -1866,7 +2136,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>pools</span>
+        <span id="state_target_pools_python">
+<a href="#state_target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1877,7 +2149,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>size</span>
+        <span id="state_target_size_python">
+<a href="#state_target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1886,7 +2160,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>update_<wbr>policy</span>
+        <span id="state_update_policy_python">
+<a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
     </dt>
@@ -1895,7 +2171,9 @@ not affect existing instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="state_versions_python">
+<a href="#state_versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version]</a></span>
     </dt>
@@ -1906,7 +2184,9 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>instances</span>
+        <span id="state_wait_for_instances_python">
+<a href="#state_wait_for_instances_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1950,7 +2230,9 @@ continue trying until it times out.
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check</span>
+        <span id="healthcheck_csharp">
+<a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1959,7 +2241,9 @@ continue trying until it times out.
 
     <dt class="property-required"
             title="Required">
-        <span>Initial<wbr>Delay<wbr>Sec</span>
+        <span id="initialdelaysec_csharp">
+<a href="#initialdelaysec_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1976,7 +2260,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check</span>
+        <span id="healthcheck_go">
+<a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1985,7 +2271,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Initial<wbr>Delay<wbr>Sec</span>
+        <span id="initialdelaysec_go">
+<a href="#initialdelaysec_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2002,7 +2290,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Check</span>
+        <span id="healthcheck_nodejs">
+<a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2011,7 +2301,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>initial<wbr>Delay<wbr>Sec</span>
+        <span id="initialdelaysec_nodejs">
+<a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2028,7 +2320,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Check</span>
+        <span id="healthcheck_python">
+<a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2037,7 +2331,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>initial<wbr>Delay<wbr>Sec</span>
+        <span id="initialdelaysec_python">
+<a href="#initialdelaysec_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2072,7 +2368,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2081,7 +2379,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2098,7 +2398,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2107,7 +2409,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2124,7 +2428,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2133,7 +2439,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2150,7 +2458,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2159,7 +2469,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2194,7 +2506,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2203,7 +2517,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Rule</span>
+        <span id="deleterule_csharp">
+<a href="#deleterule_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2219,7 +2535,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2228,7 +2546,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Rule</span>
+        <span id="deleterule_go">
+<a href="#deleterule_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2244,7 +2564,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Name</span>
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2253,7 +2575,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Rule</span>
+        <span id="deleterule_nodejs">
+<a href="#deleterule_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2269,7 +2593,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>name</span>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2278,7 +2604,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Rule</span>
+        <span id="deleterule_python">
+<a href="#deleterule_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2312,7 +2640,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Minimal<wbr>Action</span>
+        <span id="minimalaction_csharp">
+<a href="#minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2321,7 +2651,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2330,7 +2662,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Redistribution<wbr>Type</span>
+        <span id="instanceredistributiontype_csharp">
+<a href="#instanceredistributiontype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Redistribution<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2339,7 +2673,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Surge<wbr>Fixed</span>
+        <span id="maxsurgefixed_csharp">
+<a href="#maxsurgefixed_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2348,7 +2684,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Surge<wbr>Percent</span>
+        <span id="maxsurgepercent_csharp">
+<a href="#maxsurgepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2357,7 +2695,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Unavailable<wbr>Fixed</span>
+        <span id="maxunavailablefixed_csharp">
+<a href="#maxunavailablefixed_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2366,7 +2706,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Unavailable<wbr>Percent</span>
+        <span id="maxunavailablepercent_csharp">
+<a href="#maxunavailablepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2375,7 +2717,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ready<wbr>Sec</span>
+        <span id="minreadysec_csharp">
+<a href="#minreadysec_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ready<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2392,7 +2736,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Minimal<wbr>Action</span>
+        <span id="minimalaction_go">
+<a href="#minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2401,7 +2747,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2410,7 +2758,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Redistribution<wbr>Type</span>
+        <span id="instanceredistributiontype_go">
+<a href="#instanceredistributiontype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Redistribution<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2419,7 +2769,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Surge<wbr>Fixed</span>
+        <span id="maxsurgefixed_go">
+<a href="#maxsurgefixed_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2428,7 +2780,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Surge<wbr>Percent</span>
+        <span id="maxsurgepercent_go">
+<a href="#maxsurgepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2437,7 +2791,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Unavailable<wbr>Fixed</span>
+        <span id="maxunavailablefixed_go">
+<a href="#maxunavailablefixed_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2446,7 +2802,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Unavailable<wbr>Percent</span>
+        <span id="maxunavailablepercent_go">
+<a href="#maxunavailablepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2455,7 +2813,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ready<wbr>Sec</span>
+        <span id="minreadysec_go">
+<a href="#minreadysec_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ready<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2472,7 +2832,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>minimal<wbr>Action</span>
+        <span id="minimalaction_nodejs">
+<a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2481,7 +2843,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2490,7 +2854,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Redistribution<wbr>Type</span>
+        <span id="instanceredistributiontype_nodejs">
+<a href="#instanceredistributiontype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2499,7 +2865,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Surge<wbr>Fixed</span>
+        <span id="maxsurgefixed_nodejs">
+<a href="#maxsurgefixed_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2508,7 +2876,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Surge<wbr>Percent</span>
+        <span id="maxsurgepercent_nodejs">
+<a href="#maxsurgepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2517,7 +2887,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Unavailable<wbr>Fixed</span>
+        <span id="maxunavailablefixed_nodejs">
+<a href="#maxunavailablefixed_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2526,7 +2898,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Unavailable<wbr>Percent</span>
+        <span id="maxunavailablepercent_nodejs">
+<a href="#maxunavailablepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2535,7 +2909,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ready<wbr>Sec</span>
+        <span id="minreadysec_nodejs">
+<a href="#minreadysec_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2552,7 +2928,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>minimal_<wbr>action</span>
+        <span id="minimal_action_python">
+<a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2561,7 +2939,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2570,7 +2950,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Redistribution<wbr>Type</span>
+        <span id="instanceredistributiontype_python">
+<a href="#instanceredistributiontype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2579,7 +2961,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Surge<wbr>Fixed</span>
+        <span id="maxsurgefixed_python">
+<a href="#maxsurgefixed_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2588,7 +2972,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Surge<wbr>Percent</span>
+        <span id="maxsurgepercent_python">
+<a href="#maxsurgepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2597,7 +2983,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Unavailable<wbr>Fixed</span>
+        <span id="maxunavailablefixed_python">
+<a href="#maxunavailablefixed_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2606,7 +2994,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Unavailable<wbr>Percent</span>
+        <span id="maxunavailablepercent_python">
+<a href="#maxunavailablepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2615,7 +3005,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ready<wbr>Sec</span>
+        <span id="minreadysec_python">
+<a href="#minreadysec_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2650,7 +3042,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Template</span>
+        <span id="instancetemplate_csharp">
+<a href="#instancetemplate_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2659,7 +3053,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2668,7 +3064,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="targetsize_csharp">
+<a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
     </dt>
@@ -2684,7 +3082,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Template</span>
+        <span id="instancetemplate_go">
+<a href="#instancetemplate_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2693,7 +3093,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2702,7 +3104,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Size</span>
+        <span id="targetsize_go">
+<a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
@@ -2718,7 +3122,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Template</span>
+        <span id="instancetemplate_nodejs">
+<a href="#instancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2727,7 +3133,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2736,7 +3144,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Size</span>
+        <span id="targetsize_nodejs">
+<a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
@@ -2752,7 +3162,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Template</span>
+        <span id="instancetemplate_python">
+<a href="#instancetemplate_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2761,7 +3173,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2770,7 +3184,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>size</span>
+        <span id="target_size_python">
+<a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size]</a></span>
     </dt>
@@ -2804,7 +3220,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed</span>
+        <span id="fixed_csharp">
+<a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2813,7 +3231,9 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent</span>
+        <span id="percent_csharp">
+<a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2831,7 +3251,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed</span>
+        <span id="fixed_go">
+<a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2840,7 +3262,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent</span>
+        <span id="percent_go">
+<a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2858,7 +3282,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed</span>
+        <span id="fixed_nodejs">
+<a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2867,7 +3293,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent</span>
+        <span id="percent_nodejs">
+<a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2885,7 +3313,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed</span>
+        <span id="fixed_python">
+<a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2894,7 +3324,9 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent</span>
+        <span id="percent_python">
+<a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

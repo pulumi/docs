@@ -307,7 +307,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Admission<wbr>Rule</span>
+        <span id="defaultadmissionrule_csharp">
+<a href="#defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -317,7 +319,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="admissionwhitelistpatterns_csharp">
+<a href="#admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
@@ -328,7 +332,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Admission<wbr>Rules</span>
+        <span id="clusteradmissionrules_csharp">
+<a href="#clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -341,7 +347,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +358,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="globalpolicyevaluationmode_csharp">
+<a href="#globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +371,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -378,7 +390,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Admission<wbr>Rule</span>
+        <span id="defaultadmissionrule_go">
+<a href="#defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -388,7 +402,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="admissionwhitelistpatterns_go">
+<a href="#admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
@@ -399,7 +415,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Admission<wbr>Rules</span>
+        <span id="clusteradmissionrules_go">
+<a href="#clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -412,7 +430,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +441,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="globalpolicyevaluationmode_go">
+<a href="#globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +454,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -449,7 +473,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Admission<wbr>Rule</span>
+        <span id="defaultadmissionrule_nodejs">
+<a href="#defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -459,7 +485,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="admissionwhitelistpatterns_nodejs">
+<a href="#admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
@@ -470,7 +498,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Admission<wbr>Rules</span>
+        <span id="clusteradmissionrules_nodejs">
+<a href="#clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
@@ -483,7 +513,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +524,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="globalpolicyevaluationmode_nodejs">
+<a href="#globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +537,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +556,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>admission_<wbr>rule</span>
+        <span id="default_admission_rule_python">
+<a href="#default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
     </dt>
@@ -530,7 +568,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admission_<wbr>whitelist_<wbr>patterns</span>
+        <span id="admission_whitelist_patterns_python">
+<a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
     </dt>
@@ -541,7 +581,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>admission_<wbr>rules</span>
+        <span id="cluster_admission_rules_python">
+<a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
     </dt>
@@ -554,7 +596,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -563,7 +607,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>global_<wbr>policy_<wbr>evaluation_<wbr>mode</span>
+        <span id="global_policy_evaluation_mode_python">
+<a href="#global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -574,7 +620,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -602,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -617,7 +667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -632,7 +684,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -647,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="state_admissionwhitelistpatterns_csharp">
+<a href="#state_admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
@@ -799,7 +857,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Admission<wbr>Rules</span>
+        <span id="state_clusteradmissionrules_csharp">
+<a href="#state_clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -812,7 +872,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Admission<wbr>Rule</span>
+        <span id="state_defaultadmissionrule_csharp">
+<a href="#state_defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -822,7 +884,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -831,7 +895,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="state_globalpolicyevaluationmode_csharp">
+<a href="#state_globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +908,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -859,7 +927,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="state_admissionwhitelistpatterns_go">
+<a href="#state_admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
@@ -870,7 +940,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Admission<wbr>Rules</span>
+        <span id="state_clusteradmissionrules_go">
+<a href="#state_clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -883,7 +955,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Admission<wbr>Rule</span>
+        <span id="state_defaultadmissionrule_go">
+<a href="#state_defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -893,7 +967,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -902,7 +978,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="state_globalpolicyevaluationmode_go">
+<a href="#state_globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +991,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -930,7 +1010,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admission<wbr>Whitelist<wbr>Patterns</span>
+        <span id="state_admissionwhitelistpatterns_nodejs">
+<a href="#state_admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
@@ -941,7 +1023,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Admission<wbr>Rules</span>
+        <span id="state_clusteradmissionrules_nodejs">
+<a href="#state_clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
@@ -954,7 +1038,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Admission<wbr>Rule</span>
+        <span id="state_defaultadmissionrule_nodejs">
+<a href="#state_defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -964,7 +1050,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -973,7 +1061,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>global<wbr>Policy<wbr>Evaluation<wbr>Mode</span>
+        <span id="state_globalpolicyevaluationmode_nodejs">
+<a href="#state_globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -984,7 +1074,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1001,7 +1093,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admission_<wbr>whitelist_<wbr>patterns</span>
+        <span id="state_admission_whitelist_patterns_python">
+<a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
     </dt>
@@ -1012,7 +1106,9 @@ requests will always be permitted regardless of your admission rules.  Structure
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>admission_<wbr>rules</span>
+        <span id="state_cluster_admission_rules_python">
+<a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
     </dt>
@@ -1025,7 +1121,9 @@ admission rule per cluster spec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>admission_<wbr>rule</span>
+        <span id="state_default_admission_rule_python">
+<a href="#state_default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
     </dt>
@@ -1035,7 +1133,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1044,7 +1144,9 @@ rule.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>global_<wbr>policy_<wbr>evaluation_<wbr>mode</span>
+        <span id="state_global_policy_evaluation_mode_python">
+<a href="#state_global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1055,7 +1157,9 @@ policy will be subject to the project admission policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1098,7 +1202,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Name<wbr>Pattern</span>
+        <span id="namepattern_csharp">
+<a href="#namepattern_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1117,7 +1223,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>Name<wbr>Pattern</span>
+        <span id="namepattern_go">
+<a href="#namepattern_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1244,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>name<wbr>Pattern</span>
+        <span id="namepattern_nodejs">
+<a href="#namepattern_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1155,7 +1265,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>name<wbr>Pattern</span>
+        <span id="namepattern_python">
+<a href="#namepattern_python" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1192,7 +1304,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster</span>
+        <span id="cluster_csharp">
+<a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1201,7 +1315,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>Enforcement<wbr>Mode</span>
+        <span id="enforcementmode_csharp">
+<a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1210,7 +1326,9 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluation<wbr>Mode</span>
+        <span id="evaluationmode_csharp">
+<a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1219,7 +1337,9 @@ part.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_csharp">
+<a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1242,7 +1362,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster</span>
+        <span id="cluster_go">
+<a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1251,7 +1373,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Enforcement<wbr>Mode</span>
+        <span id="enforcementmode_go">
+<a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1260,7 +1384,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluation<wbr>Mode</span>
+        <span id="evaluationmode_go">
+<a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1269,7 +1395,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_go">
+<a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1292,7 +1420,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>cluster</span>
+        <span id="cluster_nodejs">
+<a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1301,7 +1431,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>enforcement<wbr>Mode</span>
+        <span id="enforcementmode_nodejs">
+<a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1442,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluation<wbr>Mode</span>
+        <span id="evaluationmode_nodejs">
+<a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1319,7 +1453,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_nodejs">
+<a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1342,7 +1478,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>cluster</span>
+        <span id="cluster_python">
+<a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1351,7 +1489,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>enforcement<wbr>Mode</span>
+        <span id="enforcementmode_python">
+<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1360,7 +1500,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluation<wbr>Mode</span>
+        <span id="evaluationmode_python">
+<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1369,7 +1511,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_python">
+<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1410,7 +1554,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Enforcement<wbr>Mode</span>
+        <span id="enforcementmode_csharp">
+<a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1419,7 +1565,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluation<wbr>Mode</span>
+        <span id="evaluationmode_csharp">
+<a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1428,7 +1576,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_csharp">
+<a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1451,7 +1601,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Enforcement<wbr>Mode</span>
+        <span id="enforcementmode_go">
+<a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1460,7 +1612,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluation<wbr>Mode</span>
+        <span id="evaluationmode_go">
+<a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1469,7 +1623,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_go">
+<a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1492,7 +1648,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>enforcement<wbr>Mode</span>
+        <span id="enforcementmode_nodejs">
+<a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1501,7 +1659,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluation<wbr>Mode</span>
+        <span id="evaluationmode_nodejs">
+<a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1510,7 +1670,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_nodejs">
+<a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1533,7 +1695,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>enforcement<wbr>Mode</span>
+        <span id="enforcementmode_python">
+<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1542,7 +1706,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluation<wbr>Mode</span>
+        <span id="evaluationmode_python">
+<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1551,7 +1717,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Attestations<wbr>Bies</span>
+        <span id="requireattestationsbies_python">
+<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

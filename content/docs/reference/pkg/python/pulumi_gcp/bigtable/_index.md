@@ -23,9 +23,9 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
     <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span>
@@ -193,8 +193,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">production_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;production-instance&quot;</span><span class="p">,</span>
     <span class="n">clusters</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
         <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -208,7 +208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">development_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;development-instance&quot;</span><span class="p">,</span>
     <span class="n">clusters</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
         <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
         <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -832,9 +832,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-instance-cluster&quot;</span><span class="p">,</span>
     <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span>

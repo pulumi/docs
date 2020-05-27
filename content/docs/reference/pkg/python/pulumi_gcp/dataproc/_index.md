@@ -24,7 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">policy_id</span><span class="o">=</span><span class="s2">&quot;dataproc-policy&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
     <span class="n">worker_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;maxInstances&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;max_instances&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">basic_algorithm</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;yarn_config&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -425,14 +425,14 @@ whole cluster!</p>
         <span class="p">},</span>
         <span class="s2">&quot;initializationAction&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;script&quot;</span><span class="p">:</span> <span class="s2">&quot;gs://dataproc-initialization-actions/stackdriver/stackdriver.sh&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;timeoutSec&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+            <span class="s2">&quot;timeout_sec&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
         <span class="p">}],</span>
         <span class="s2">&quot;masterConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;diskConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;bootDiskSizeGb&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
                 <span class="s2">&quot;bootDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
             <span class="p">},</span>
-            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
             <span class="s2">&quot;numInstances&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;preemptibleWorkerConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -445,13 +445,13 @@ whole cluster!</p>
             <span class="p">},</span>
         <span class="p">},</span>
         <span class="s2">&quot;stagingBucket&quot;</span><span class="p">:</span> <span class="s2">&quot;dataproc-staging-bucket&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;workerConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;worker_config&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;diskConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;bootDiskSizeGb&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
                 <span class="s2">&quot;numLocalSsds&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="p">},</span>
-            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;minCpuPlatform&quot;</span><span class="p">:</span> <span class="s2">&quot;Intel Skylake&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;min_cpu_platform&quot;</span><span class="p">:</span> <span class="s2">&quot;Intel Skylake&quot;</span><span class="p">,</span>
             <span class="s2">&quot;numInstances&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
@@ -472,7 +472,7 @@ whole cluster!</p>
         <span class="s2">&quot;masterConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;accelerators&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;acceleratorCount&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;acceleratorType&quot;</span><span class="p">:</span> <span class="s2">&quot;nvidia-tesla-k80&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;accelerator_type&quot;</span><span class="p">:</span> <span class="s2">&quot;nvidia-tesla-k80&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
     <span class="p">},</span>
