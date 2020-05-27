@@ -231,7 +231,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deprecated</span>
+        <span id="deprecated_csharp">
+<a href="#deprecated_csharp" style="color: inherit; text-decoration: inherit;">Deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -240,7 +242,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -249,7 +253,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -265,7 +271,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deprecated</span>
+        <span id="deprecated_go">
+<a href="#deprecated_go" style="color: inherit; text-decoration: inherit;">Deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -274,7 +282,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -283,7 +293,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
@@ -299,7 +311,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>deprecated</span>
+        <span id="deprecated_nodejs">
+<a href="#deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -308,7 +322,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -317,7 +333,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
@@ -333,7 +351,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>deprecated</span>
+        <span id="deprecated_python">
+<a href="#deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -342,7 +362,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -351,7 +373,9 @@ The ThingType resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></span>
     </dt>
@@ -378,7 +402,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -387,7 +413,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -402,7 +430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +441,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +458,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -435,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +486,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +497,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -600,7 +640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -609,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deprecated</span>
+        <span id="state_deprecated_csharp">
+<a href="#state_deprecated_csharp" style="color: inherit; text-decoration: inherit;">Deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -618,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -627,7 +673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="state_properties_csharp">
+<a href="#state_properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -643,7 +691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -652,7 +702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deprecated</span>
+        <span id="state_deprecated_go">
+<a href="#state_deprecated_go" style="color: inherit; text-decoration: inherit;">Deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -661,7 +713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -670,7 +724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="state_properties_go">
+<a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
@@ -686,7 +742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -695,7 +753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deprecated</span>
+        <span id="state_deprecated_nodejs">
+<a href="#state_deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -704,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -713,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="state_properties_nodejs">
+<a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
@@ -729,7 +793,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deprecated</span>
+        <span id="state_deprecated_python">
+<a href="#state_deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -747,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -756,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="state_properties_python">
+<a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></span>
     </dt>
@@ -798,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -807,7 +881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searchable<wbr>Attributes</span>
+        <span id="searchableattributes_csharp">
+<a href="#searchableattributes_csharp" style="color: inherit; text-decoration: inherit;">Searchable<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -823,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -832,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searchable<wbr>Attributes</span>
+        <span id="searchableattributes_go">
+<a href="#searchableattributes_go" style="color: inherit; text-decoration: inherit;">Searchable<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -848,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -857,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>searchable<wbr>Attributes</span>
+        <span id="searchableattributes_nodejs">
+<a href="#searchableattributes_nodejs" style="color: inherit; text-decoration: inherit;">searchable<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -873,7 +957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -882,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>searchable<wbr>Attributes</span>
+        <span id="searchableattributes_python">
+<a href="#searchableattributes_python" style="color: inherit; text-decoration: inherit;">searchable<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

@@ -275,7 +275,9 @@ The ProxyProtocolPolicy resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Ports</span>
+        <span id="instanceports_csharp">
+<a href="#instanceports_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -285,7 +287,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer</span>
+        <span id="loadbalancer_csharp">
+<a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +306,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Ports</span>
+        <span id="instanceports_go">
+<a href="#instanceports_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -312,7 +318,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer</span>
+        <span id="loadbalancer_go">
+<a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +337,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Ports</span>
+        <span id="instanceports_nodejs">
+<a href="#instanceports_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -339,7 +349,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancer</span>
+        <span id="loadbalancer_nodejs">
+<a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +368,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>ports</span>
+        <span id="instance_ports_python">
+<a href="#instance_ports_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -366,7 +380,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-required"
             title="Required">
-        <span>load_<wbr>balancer</span>
+        <span id="load_balancer_python">
+<a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +410,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +427,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +444,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -439,7 +461,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Ports</span>
+        <span id="state_instanceports_csharp">
+<a href="#state_instanceports_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -590,7 +616,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer</span>
+        <span id="state_loadbalancer_csharp">
+<a href="#state_loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -607,7 +635,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Ports</span>
+        <span id="state_instanceports_go">
+<a href="#state_instanceports_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -617,7 +647,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer</span>
+        <span id="state_loadbalancer_go">
+<a href="#state_loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -634,7 +666,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Ports</span>
+        <span id="state_instanceports_nodejs">
+<a href="#state_instanceports_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -644,7 +678,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer</span>
+        <span id="state_loadbalancer_nodejs">
+<a href="#state_loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -661,7 +697,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>ports</span>
+        <span id="state_instance_ports_python">
+<a href="#state_instance_ports_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -671,7 +709,9 @@ should be applied. This can be specified if the protocol is SSL or TCP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer</span>
+        <span id="state_load_balancer_python">
+<a href="#state_load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

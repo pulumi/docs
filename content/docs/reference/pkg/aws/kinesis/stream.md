@@ -253,7 +253,9 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Shard<wbr>Count</span>
+        <span id="shardcount_csharp">
+<a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -263,7 +265,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +276,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Type</span>
+        <span id="encryptiontype_csharp">
+<a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +287,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="enforceconsumerdeletion_csharp">
+<a href="#enforceconsumerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +298,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +309,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +320,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="retentionperiod_csharp">
+<a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -317,7 +331,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Level<wbr>Metrics</span>
+        <span id="shardlevelmetrics_csharp">
+<a href="#shardlevelmetrics_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -326,7 +342,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -342,7 +360,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-required"
             title="Required">
-        <span>Shard<wbr>Count</span>
+        <span id="shardcount_go">
+<a href="#shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -352,7 +372,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -361,7 +383,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Type</span>
+        <span id="encryptiontype_go">
+<a href="#encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +394,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="enforceconsumerdeletion_go">
+<a href="#enforceconsumerdeletion_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -379,7 +405,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +416,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -397,7 +427,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="retentionperiod_go">
+<a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -406,7 +438,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Level<wbr>Metrics</span>
+        <span id="shardlevelmetrics_go">
+<a href="#shardlevelmetrics_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -415,7 +449,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -431,7 +467,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-required"
             title="Required">
-        <span>shard<wbr>Count</span>
+        <span id="shardcount_nodejs">
+<a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -441,7 +479,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +490,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Type</span>
+        <span id="encryptiontype_nodejs">
+<a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +501,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="enforceconsumerdeletion_nodejs">
+<a href="#enforceconsumerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -468,7 +512,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +523,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +534,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Period</span>
+        <span id="retentionperiod_nodejs">
+<a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -495,7 +545,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard<wbr>Level<wbr>Metrics</span>
+        <span id="shardlevelmetrics_nodejs">
+<a href="#shardlevelmetrics_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -504,7 +556,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -520,7 +574,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-required"
             title="Required">
-        <span>shard_<wbr>count</span>
+        <span id="shard_count_python">
+<a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -530,7 +586,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -539,7 +597,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption_<wbr>type</span>
+        <span id="encryption_type_python">
+<a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -548,7 +608,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>consumer_<wbr>deletion</span>
+        <span id="enforce_consumer_deletion_python">
+<a href="#enforce_consumer_deletion_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>consumer_<wbr>deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -557,7 +619,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +630,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -575,7 +641,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>period</span>
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -584,7 +652,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard_<wbr>level_<wbr>metrics</span>
+        <span id="shard_level_metrics_python">
+<a href="#shard_level_metrics_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>level_<wbr>metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -593,7 +663,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -620,7 +692,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -635,7 +709,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -650,7 +726,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -665,7 +743,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -806,7 +886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -815,7 +897,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Type</span>
+        <span id="state_encryptiontype_csharp">
+<a href="#state_encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="state_enforceconsumerdeletion_csharp">
+<a href="#state_enforceconsumerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -833,7 +919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_csharp">
+<a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -851,7 +941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="state_retentionperiod_csharp">
+<a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -860,7 +952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Count</span>
+        <span id="state_shardcount_csharp">
+<a href="#state_shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -870,7 +964,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Level<wbr>Metrics</span>
+        <span id="state_shardlevelmetrics_csharp">
+<a href="#state_shardlevelmetrics_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -879,7 +975,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -895,7 +993,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1004,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Type</span>
+        <span id="state_encryptiontype_go">
+<a href="#state_encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +1015,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="state_enforceconsumerdeletion_go">
+<a href="#state_enforceconsumerdeletion_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -922,7 +1026,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_go">
+<a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1037,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -940,7 +1048,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="state_retentionperiod_go">
+<a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -949,7 +1059,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Count</span>
+        <span id="state_shardcount_go">
+<a href="#state_shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -959,7 +1071,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Level<wbr>Metrics</span>
+        <span id="state_shardlevelmetrics_go">
+<a href="#state_shardlevelmetrics_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -968,7 +1082,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -984,7 +1100,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1111,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Type</span>
+        <span id="state_encryptiontype_nodejs">
+<a href="#state_encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1002,7 +1122,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Consumer<wbr>Deletion</span>
+        <span id="state_enforceconsumerdeletion_nodejs">
+<a href="#state_enforceconsumerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Consumer<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1011,7 +1133,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_nodejs">
+<a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1020,7 +1144,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1029,7 +1155,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Period</span>
+        <span id="state_retentionperiod_nodejs">
+<a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1038,7 +1166,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard<wbr>Count</span>
+        <span id="state_shardcount_nodejs">
+<a href="#state_shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1048,7 +1178,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard<wbr>Level<wbr>Metrics</span>
+        <span id="state_shardlevelmetrics_nodejs">
+<a href="#state_shardlevelmetrics_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Level<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1057,7 +1189,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1073,7 +1207,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1082,7 +1218,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption_<wbr>type</span>
+        <span id="state_encryption_type_python">
+<a href="#state_encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1229,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>consumer_<wbr>deletion</span>
+        <span id="state_enforce_consumer_deletion_python">
+<a href="#state_enforce_consumer_deletion_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>consumer_<wbr>deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1100,7 +1240,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="state_kms_key_id_python">
+<a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1109,7 +1251,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1118,7 +1262,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>period</span>
+        <span id="state_retention_period_python">
+<a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1127,7 +1273,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard_<wbr>count</span>
+        <span id="state_shard_count_python">
+<a href="#state_shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1137,7 +1285,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard_<wbr>level_<wbr>metrics</span>
+        <span id="state_shard_level_metrics_python">
+<a href="#state_shard_level_metrics_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>level_<wbr>metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1146,7 +1296,9 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>

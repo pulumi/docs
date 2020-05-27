@@ -14,8 +14,6 @@ Provides a load balancer SSL negotiation policy, which allows an ELB to control 
 
 
 
-Deprecated: aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favour of aws.elb.SslNegotiationPolicy
-
 {{% examples %}}
 ## Example Usage
 
@@ -132,7 +130,7 @@ const foo = new aws.elb.SslNegotiationPolicy("foo", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favour of aws.elb.SslNegotiationPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favor of aws.elb.SslNegotiationPolicy{{% /md %}}</p>
 
 
 ## Create a SslNegotiationPolicy Resource {#create}
@@ -318,7 +316,9 @@ The SslNegotiationPolicy resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Lb<wbr>Port</span>
+        <span id="lbport_csharp">
+<a href="#lbport_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -329,7 +329,9 @@ balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer</span>
+        <span id="loadbalancer_csharp">
+<a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +341,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -348,7 +352,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +370,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Lb<wbr>Port</span>
+        <span id="lbport_go">
+<a href="#lbport_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -375,7 +383,9 @@ balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer</span>
+        <span id="loadbalancer_go">
+<a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +395,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
     </dt>
@@ -394,7 +406,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +424,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>lb<wbr>Port</span>
+        <span id="lbport_nodejs">
+<a href="#lbport_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -421,7 +437,9 @@ balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancer</span>
+        <span id="loadbalancer_nodejs">
+<a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -431,7 +449,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
@@ -440,7 +460,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -456,7 +478,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>lb_<wbr>port</span>
+        <span id="lb_port_python">
+<a href="#lb_port_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -467,7 +491,9 @@ balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>load_<wbr>balancer</span>
+        <span id="load_balancer_python">
+<a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +503,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute]</a></span>
     </dt>
@@ -486,7 +514,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -513,7 +543,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -528,7 +560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +577,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +594,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +737,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="state_attributes_csharp">
+<a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -708,7 +748,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Port</span>
+        <span id="state_lbport_csharp">
+<a href="#state_lbport_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -719,7 +761,9 @@ balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer</span>
+        <span id="state_loadbalancer_csharp">
+<a href="#state_loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -729,7 +773,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -745,7 +791,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="state_attributes_go">
+<a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
     </dt>
@@ -754,7 +802,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Port</span>
+        <span id="state_lbport_go">
+<a href="#state_lbport_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -765,7 +815,9 @@ balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer</span>
+        <span id="state_loadbalancer_go">
+<a href="#state_loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -775,7 +827,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +845,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="state_attributes_nodejs">
+<a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
@@ -800,7 +856,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb<wbr>Port</span>
+        <span id="state_lbport_nodejs">
+<a href="#state_lbport_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -811,7 +869,9 @@ balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer</span>
+        <span id="state_loadbalancer_nodejs">
+<a href="#state_loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +881,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +899,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="state_attributes_python">
+<a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute]</a></span>
     </dt>
@@ -846,7 +910,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb_<wbr>port</span>
+        <span id="state_lb_port_python">
+<a href="#state_lb_port_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -857,7 +923,9 @@ balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer</span>
+        <span id="state_load_balancer_python">
+<a href="#state_load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -867,7 +935,9 @@ should be attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +979,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -918,7 +990,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -934,7 +1008,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1019,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1037,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1048,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -984,7 +1066,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -993,7 +1077,9 @@ should be attached.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

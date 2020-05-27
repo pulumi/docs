@@ -102,7 +102,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Suffix</span>
+        <span id="dnssuffix_csharp">
+<a href="#dnssuffix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +112,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +123,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Partition</span>
+        <span id="partition_csharp">
+<a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -134,7 +140,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Suffix</span>
+        <span id="dnssuffix_go">
+<a href="#dnssuffix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -142,7 +150,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -151,7 +161,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Partition</span>
+        <span id="partition_go">
+<a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -166,7 +178,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Suffix</span>
+        <span id="dnssuffix_nodejs">
+<a href="#dnssuffix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -174,7 +188,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -183,7 +199,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>partition</span>
+        <span id="partition_nodejs">
+<a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -198,7 +216,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>suffix</span>
+        <span id="dns_suffix_python">
+<a href="#dns_suffix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -206,7 +226,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -215,7 +237,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>partition</span>
+        <span id="partition_python">
+<a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

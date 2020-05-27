@@ -93,7 +93,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">List&lt;Get<wbr>Local<wbr>Gateway<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -102,7 +104,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -111,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -121,7 +127,9 @@ Can be either `"pending"` or `"available"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -138,7 +146,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">[]Get<wbr>Local<wbr>Gateway<wbr>Filter</a></span>
     </dt>
@@ -147,7 +157,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -156,7 +168,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -166,7 +180,9 @@ Can be either `"pending"` or `"available"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -183,7 +199,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">Get<wbr>Local<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
@@ -192,7 +210,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -201,7 +221,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -211,7 +233,9 @@ Can be either `"pending"` or `"available"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -228,7 +252,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">List[Get<wbr>Local<wbr>Gateway<wbr>Filter]</a></span>
     </dt>
@@ -237,7 +263,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -246,7 +274,9 @@ a pair on the desired Local Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -256,7 +286,9 @@ Can be either `"pending"` or `"available"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -286,7 +318,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +328,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Outpost<wbr>Arn</span>
+        <span id="outpostarn_csharp">
+<a href="#outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +339,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +350,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +361,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -329,7 +371,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">List&lt;Get<wbr>Local<wbr>Gateway<wbr>Filter&gt;</a></span>
     </dt>
@@ -344,7 +388,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +398,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Outpost<wbr>Arn</span>
+        <span id="outpostarn_go">
+<a href="#outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -361,7 +409,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +420,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -387,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">[]Get<wbr>Local<wbr>Gateway<wbr>Filter</a></span>
     </dt>
@@ -402,7 +458,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -410,7 +468,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>outpost<wbr>Arn</span>
+        <span id="outpostarn_nodejs">
+<a href="#outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -419,7 +479,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owner<wbr>Id</span>
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -428,7 +490,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +501,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -445,7 +511,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">Get<wbr>Local<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
@@ -460,7 +528,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -468,7 +538,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>outpost_<wbr>arn</span>
+        <span id="outpost_arn_python">
+<a href="#outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +549,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owner_<wbr>id</span>
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -486,7 +560,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +571,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -503,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlocalgatewayfilter">List[Get<wbr>Local<wbr>Gateway<wbr>Filter]</a></span>
     </dt>
@@ -542,7 +622,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -552,7 +634,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -569,7 +653,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -579,7 +665,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -596,7 +684,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -606,7 +696,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -623,7 +715,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -633,7 +727,9 @@ A Local Gateway will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

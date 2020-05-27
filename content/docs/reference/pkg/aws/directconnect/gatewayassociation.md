@@ -350,7 +350,9 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span id="dxgatewayid_csharp">
+<a href="#dxgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +361,9 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Prefixes</span>
+        <span id="allowedprefixes_csharp">
+<a href="#allowedprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -368,7 +372,9 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Id</span>
+        <span id="associatedgatewayid_csharp">
+<a href="#associatedgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -378,7 +384,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="associatedgatewayowneraccountid_csharp">
+<a href="#associatedgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -388,7 +396,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proposal<wbr>Id</span>
+        <span id="proposalid_csharp">
+<a href="#proposalid_csharp" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -398,7 +408,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_csharp">
+<a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -415,7 +427,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-required"
             title="Required">
-        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span id="dxgatewayid_go">
+<a href="#dxgatewayid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +438,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Prefixes</span>
+        <span id="allowedprefixes_go">
+<a href="#allowedprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -433,7 +449,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Id</span>
+        <span id="associatedgatewayid_go">
+<a href="#associatedgatewayid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +461,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="associatedgatewayowneraccountid_go">
+<a href="#associatedgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +473,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proposal<wbr>Id</span>
+        <span id="proposalid_go">
+<a href="#proposalid_go" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +485,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_go">
+<a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -480,7 +504,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-required"
             title="Required">
-        <span>dx<wbr>Gateway<wbr>Id</span>
+        <span id="dxgatewayid_nodejs">
+<a href="#dxgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -489,7 +515,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Prefixes</span>
+        <span id="allowedprefixes_nodejs">
+<a href="#allowedprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -498,7 +526,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated<wbr>Gateway<wbr>Id</span>
+        <span id="associatedgatewayid_nodejs">
+<a href="#associatedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +538,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="associatedgatewayowneraccountid_nodejs">
+<a href="#associatedgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +550,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proposal<wbr>Id</span>
+        <span id="proposalid_nodejs">
+<a href="#proposalid_nodejs" style="color: inherit; text-decoration: inherit;">proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +562,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_nodejs">
+<a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +581,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-required"
             title="Required">
-        <span>dx_<wbr>gateway_<wbr>id</span>
+        <span id="dx_gateway_id_python">
+<a href="#dx_gateway_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +592,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>prefixes</span>
+        <span id="allowed_prefixes_python">
+<a href="#allowed_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -563,7 +603,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated_<wbr>gateway_<wbr>id</span>
+        <span id="associated_gateway_id_python">
+<a href="#associated_gateway_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -573,7 +615,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</span>
+        <span id="associated_gateway_owner_account_id_python">
+<a href="#associated_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -583,7 +627,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proposal_<wbr>id</span>
+        <span id="proposal_id_python">
+<a href="#proposal_id_python" style="color: inherit; text-decoration: inherit;">proposal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +639,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span id="vpn_gateway_id_python">
+<a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +669,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Associated<wbr>Gateway<wbr>Type</span>
+        <span id="associatedgatewaytype_csharp">
+<a href="#associatedgatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -630,7 +680,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="dxgatewayassociationid_csharp">
+<a href="#dxgatewayassociationid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -639,7 +691,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="dxgatewayowneraccountid_csharp">
+<a href="#dxgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -648,7 +702,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -663,7 +719,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Associated<wbr>Gateway<wbr>Type</span>
+        <span id="associatedgatewaytype_go">
+<a href="#associatedgatewaytype_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -672,7 +730,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="dxgatewayassociationid_go">
+<a href="#dxgatewayassociationid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -681,7 +741,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="dxgatewayowneraccountid_go">
+<a href="#dxgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -690,7 +752,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +769,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>associated<wbr>Gateway<wbr>Type</span>
+        <span id="associatedgatewaytype_nodejs">
+<a href="#associatedgatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -714,7 +780,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="dxgatewayassociationid_nodejs">
+<a href="#dxgatewayassociationid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -723,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="dxgatewayowneraccountid_nodejs">
+<a href="#dxgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -732,7 +802,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -747,7 +819,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>associated_<wbr>gateway_<wbr>type</span>
+        <span id="associated_gateway_type_python">
+<a href="#associated_gateway_type_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -756,7 +830,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dx_<wbr>gateway_<wbr>association_<wbr>id</span>
+        <span id="dx_gateway_association_id_python">
+<a href="#dx_gateway_association_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>association_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -765,7 +841,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</span>
+        <span id="dx_gateway_owner_account_id_python">
+<a href="#dx_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -774,7 +852,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -915,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Prefixes</span>
+        <span id="state_allowedprefixes_csharp">
+<a href="#state_allowedprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -924,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Id</span>
+        <span id="state_associatedgatewayid_csharp">
+<a href="#state_associatedgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -934,7 +1018,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_associatedgatewayowneraccountid_csharp">
+<a href="#state_associatedgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +1030,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Type</span>
+        <span id="state_associatedgatewaytype_csharp">
+<a href="#state_associatedgatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -953,7 +1041,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="state_dxgatewayassociationid_csharp">
+<a href="#state_dxgatewayassociationid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -962,7 +1052,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span id="state_dxgatewayid_csharp">
+<a href="#state_dxgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -971,7 +1063,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_dxgatewayowneraccountid_csharp">
+<a href="#state_dxgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1074,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proposal<wbr>Id</span>
+        <span id="state_proposalid_csharp">
+<a href="#state_proposalid_csharp" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -990,7 +1086,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_csharp">
+<a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1105,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Prefixes</span>
+        <span id="state_allowedprefixes_go">
+<a href="#state_allowedprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1016,7 +1116,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Id</span>
+        <span id="state_associatedgatewayid_go">
+<a href="#state_associatedgatewayid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1026,7 +1128,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_associatedgatewayowneraccountid_go">
+<a href="#state_associatedgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1140,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associated<wbr>Gateway<wbr>Type</span>
+        <span id="state_associatedgatewaytype_go">
+<a href="#state_associatedgatewaytype_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1045,7 +1151,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="state_dxgatewayassociationid_go">
+<a href="#state_dxgatewayassociationid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1162,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span id="state_dxgatewayid_go">
+<a href="#state_dxgatewayid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1173,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_dxgatewayowneraccountid_go">
+<a href="#state_dxgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1072,7 +1184,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proposal<wbr>Id</span>
+        <span id="state_proposalid_go">
+<a href="#state_proposalid_go" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1082,7 +1196,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_go">
+<a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1215,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Prefixes</span>
+        <span id="state_allowedprefixes_nodejs">
+<a href="#state_allowedprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1108,7 +1226,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated<wbr>Gateway<wbr>Id</span>
+        <span id="state_associatedgatewayid_nodejs">
+<a href="#state_associatedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1118,7 +1238,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_associatedgatewayowneraccountid_nodejs">
+<a href="#state_associatedgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1128,7 +1250,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated<wbr>Gateway<wbr>Type</span>
+        <span id="state_associatedgatewaytype_nodejs">
+<a href="#state_associatedgatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1137,7 +1261,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx<wbr>Gateway<wbr>Association<wbr>Id</span>
+        <span id="state_dxgatewayassociationid_nodejs">
+<a href="#state_dxgatewayassociationid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Association<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1146,7 +1272,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx<wbr>Gateway<wbr>Id</span>
+        <span id="state_dxgatewayid_nodejs">
+<a href="#state_dxgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1155,7 +1283,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_dxgatewayowneraccountid_nodejs">
+<a href="#state_dxgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1164,7 +1294,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proposal<wbr>Id</span>
+        <span id="state_proposalid_nodejs">
+<a href="#state_proposalid_nodejs" style="color: inherit; text-decoration: inherit;">proposal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1306,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_nodejs">
+<a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1191,7 +1325,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>prefixes</span>
+        <span id="state_allowed_prefixes_python">
+<a href="#state_allowed_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1200,7 +1336,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated_<wbr>gateway_<wbr>id</span>
+        <span id="state_associated_gateway_id_python">
+<a href="#state_associated_gateway_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1210,7 +1348,9 @@ Used for single account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</span>
+        <span id="state_associated_gateway_owner_account_id_python">
+<a href="#state_associated_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1220,7 +1360,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associated_<wbr>gateway_<wbr>type</span>
+        <span id="state_associated_gateway_type_python">
+<a href="#state_associated_gateway_type_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1229,7 +1371,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx_<wbr>gateway_<wbr>association_<wbr>id</span>
+        <span id="state_dx_gateway_association_id_python">
+<a href="#state_dx_gateway_association_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>association_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1238,7 +1382,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx_<wbr>gateway_<wbr>id</span>
+        <span id="state_dx_gateway_id_python">
+<a href="#state_dx_gateway_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1393,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</span>
+        <span id="state_dx_gateway_owner_account_id_python">
+<a href="#state_dx_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1256,7 +1404,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proposal_<wbr>id</span>
+        <span id="state_proposal_id_python">
+<a href="#state_proposal_id_python" style="color: inherit; text-decoration: inherit;">proposal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1266,7 +1416,9 @@ Used for cross-account Direct Connect gateway associations.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span id="state_vpn_gateway_id_python">
+<a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -274,7 +274,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Domain</span>
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +285,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Mail<wbr>From<wbr>Domain</span>
+        <span id="mailfromdomain_csharp">
+<a href="#mailfromdomain_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +296,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="behavioronmxfailure_csharp">
+<a href="#behavioronmxfailure_csharp" style="color: inherit; text-decoration: inherit;">Behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +314,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +325,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Mail<wbr>From<wbr>Domain</span>
+        <span id="mailfromdomain_go">
+<a href="#mailfromdomain_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -326,7 +336,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="behavioronmxfailure_go">
+<a href="#behavioronmxfailure_go" style="color: inherit; text-decoration: inherit;">Behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +354,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +365,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>mail<wbr>From<wbr>Domain</span>
+        <span id="mailfromdomain_nodejs">
+<a href="#mailfromdomain_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -360,7 +376,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="behavioronmxfailure_nodejs">
+<a href="#behavioronmxfailure_nodejs" style="color: inherit; text-decoration: inherit;">behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -376,7 +394,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -385,7 +405,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>mail_<wbr>from_<wbr>domain</span>
+        <span id="mail_from_domain_python">
+<a href="#mail_from_domain_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>from_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +416,9 @@ The MailFrom resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>behavior_<wbr>on_<wbr>mx_<wbr>failure</span>
+        <span id="behavior_on_mx_failure_python">
+<a href="#behavior_on_mx_failure_python" style="color: inherit; text-decoration: inherit;">behavior_<wbr>on_<wbr>mx_<wbr>failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +462,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +479,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -607,7 +639,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="state_behavioronmxfailure_csharp">
+<a href="#state_behavioronmxfailure_csharp" style="color: inherit; text-decoration: inherit;">Behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -625,7 +661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>From<wbr>Domain</span>
+        <span id="state_mailfromdomain_csharp">
+<a href="#state_mailfromdomain_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -641,7 +679,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="state_behavioronmxfailure_go">
+<a href="#state_behavioronmxfailure_go" style="color: inherit; text-decoration: inherit;">Behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -650,7 +690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -659,7 +701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>From<wbr>Domain</span>
+        <span id="state_mailfromdomain_go">
+<a href="#state_mailfromdomain_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -675,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>behavior<wbr>On<wbr>Mx<wbr>Failure</span>
+        <span id="state_behavioronmxfailure_nodejs">
+<a href="#state_behavioronmxfailure_nodejs" style="color: inherit; text-decoration: inherit;">behavior<wbr>On<wbr>Mx<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -684,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -693,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail<wbr>From<wbr>Domain</span>
+        <span id="state_mailfromdomain_nodejs">
+<a href="#state_mailfromdomain_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>From<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -709,7 +759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>behavior_<wbr>on_<wbr>mx_<wbr>failure</span>
+        <span id="state_behavior_on_mx_failure_python">
+<a href="#state_behavior_on_mx_failure_python" style="color: inherit; text-decoration: inherit;">behavior_<wbr>on_<wbr>mx_<wbr>failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -718,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -727,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail_<wbr>from_<wbr>domain</span>
+        <span id="state_mail_from_domain_python">
+<a href="#state_mail_from_domain_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>from_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -358,7 +358,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Capacity</span>
+        <span id="maxcapacity_csharp">
+<a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -367,7 +369,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_csharp">
+<a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -376,7 +380,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -385,7 +391,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Scalable<wbr>Dimension</span>
+        <span id="scalabledimension_csharp">
+<a href="#scalabledimension_csharp" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +402,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Namespace</span>
+        <span id="servicenamespace_csharp">
+<a href="#servicenamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -403,7 +413,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -419,7 +431,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Capacity</span>
+        <span id="maxcapacity_go">
+<a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -428,7 +442,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_go">
+<a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -437,7 +453,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -446,7 +464,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Scalable<wbr>Dimension</span>
+        <span id="scalabledimension_go">
+<a href="#scalabledimension_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +475,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Namespace</span>
+        <span id="servicenamespace_go">
+<a href="#servicenamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -464,7 +486,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -480,7 +504,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Capacity</span>
+        <span id="maxcapacity_nodejs">
+<a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -489,7 +515,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>min<wbr>Capacity</span>
+        <span id="mincapacity_nodejs">
+<a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -498,7 +526,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Id</span>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -507,7 +537,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>scalable<wbr>Dimension</span>
+        <span id="scalabledimension_nodejs">
+<a href="#scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -516,7 +548,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Namespace</span>
+        <span id="servicenamespace_nodejs">
+<a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -525,7 +559,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -541,7 +577,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>capacity</span>
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -550,7 +588,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>min_<wbr>capacity</span>
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -559,7 +599,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>id</span>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -568,7 +610,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>scalable_<wbr>dimension</span>
+        <span id="scalable_dimension_python">
+<a href="#scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -577,7 +621,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>namespace</span>
+        <span id="service_namespace_python">
+<a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +632,9 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -613,7 +661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -643,7 +695,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -658,7 +712,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Capacity</span>
+        <span id="state_maxcapacity_csharp">
+<a href="#state_maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -808,7 +866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="state_mincapacity_csharp">
+<a href="#state_mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -817,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_csharp">
+<a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -826,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_csharp">
+<a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scalable<wbr>Dimension</span>
+        <span id="state_scalabledimension_csharp">
+<a href="#state_scalabledimension_csharp" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -844,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Namespace</span>
+        <span id="state_servicenamespace_csharp">
+<a href="#state_servicenamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Capacity</span>
+        <span id="state_maxcapacity_go">
+<a href="#state_maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -869,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="state_mincapacity_go">
+<a href="#state_mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -878,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_go">
+<a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_go">
+<a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scalable<wbr>Dimension</span>
+        <span id="state_scalabledimension_go">
+<a href="#state_scalabledimension_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Namespace</span>
+        <span id="state_servicenamespace_go">
+<a href="#state_servicenamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -921,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Capacity</span>
+        <span id="state_maxcapacity_nodejs">
+<a href="#state_maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -930,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Capacity</span>
+        <span id="state_mincapacity_nodejs">
+<a href="#state_mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -939,7 +1023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Id</span>
+        <span id="state_resourceid_nodejs">
+<a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -948,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arn</span>
+        <span id="state_rolearn_nodejs">
+<a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scalable<wbr>Dimension</span>
+        <span id="state_scalabledimension_nodejs">
+<a href="#state_scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -966,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Namespace</span>
+        <span id="state_servicenamespace_nodejs">
+<a href="#state_servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -982,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>capacity</span>
+        <span id="state_max_capacity_python">
+<a href="#state_max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -991,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>capacity</span>
+        <span id="state_min_capacity_python">
+<a href="#state_min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1000,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>id</span>
+        <span id="state_resource_id_python">
+<a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1009,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arn</span>
+        <span id="state_role_arn_python">
+<a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1018,7 +1118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scalable_<wbr>dimension</span>
+        <span id="state_scalable_dimension_python">
+<a href="#state_scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1027,7 +1129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>namespace</span>
+        <span id="state_service_namespace_python">
+<a href="#state_service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

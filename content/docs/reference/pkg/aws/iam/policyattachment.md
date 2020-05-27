@@ -311,7 +311,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_csharp">
+<a href="#policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -320,7 +322,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_csharp">
+<a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -329,7 +333,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +344,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -347,7 +355,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_csharp">
+<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -363,7 +373,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_go">
+<a href="#policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -372,7 +384,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_go">
+<a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -381,7 +395,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +406,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -399,7 +417,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_go">
+<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -415,7 +435,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Arn</span>
+        <span id="policyarn_nodejs">
+<a href="#policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -424,7 +446,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_nodejs">
+<a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Group[]</span>
     </dt>
@@ -433,7 +457,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +468,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
@@ -451,7 +479,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_nodejs">
+<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | User[]</span>
     </dt>
@@ -467,7 +497,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policy_<wbr>arn</span>
+        <span id="policy_arn_python">
+<a href="#policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -476,7 +508,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_python">
+<a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Group>]</span>
     </dt>
@@ -485,7 +519,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -494,7 +530,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Role>]</span>
     </dt>
@@ -503,7 +541,9 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_python">
+<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[User>]</span>
     </dt>
@@ -530,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -545,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -560,7 +604,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -575,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_csharp">
+<a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -725,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -734,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_csharp">
+<a href="#state_policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -743,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_csharp">
+<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -752,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="state_users_csharp">
+<a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -768,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_go">
+<a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -777,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -786,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_go">
+<a href="#state_policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -795,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_go">
+<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -804,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="state_users_go">
+<a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
@@ -820,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_nodejs">
+<a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Group[]</span>
     </dt>
@@ -829,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -838,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Arn</span>
+        <span id="state_policyarn_nodejs">
+<a href="#state_policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -847,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_nodejs">
+<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
@@ -856,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="state_users_nodejs">
+<a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | User[]</span>
     </dt>
@@ -872,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_python">
+<a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Group>]</span>
     </dt>
@@ -881,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -890,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>arn</span>
+        <span id="state_policy_arn_python">
+<a href="#state_policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -899,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_python">
+<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Role>]</span>
     </dt>
@@ -908,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="state_users_python">
+<a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[User>]</span>
     </dt>

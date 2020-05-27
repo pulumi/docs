@@ -282,7 +282,9 @@ The ResolverRule resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +293,9 @@ The ResolverRule resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Rule<wbr>Type</span>
+        <span id="ruletype_csharp">
+<a href="#ruletype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -300,7 +304,9 @@ The ResolverRule resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +315,9 @@ The ResolverRule resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="resolverendpointid_csharp">
+<a href="#resolverendpointid_csharp" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +327,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -328,7 +338,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Ips</span>
+        <span id="targetips_csharp">
+<a href="#targetips_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">List&lt;Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -345,7 +357,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +368,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>Rule<wbr>Type</span>
+        <span id="ruletype_go">
+<a href="#ruletype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -363,7 +379,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +390,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="resolverendpointid_go">
+<a href="#resolverendpointid_go" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +402,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -391,7 +413,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Ips</span>
+        <span id="targetips_go">
+<a href="#targetips_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></span>
     </dt>
@@ -408,7 +432,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -417,7 +443,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>rule<wbr>Type</span>
+        <span id="ruletype_nodejs">
+<a href="#ruletype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +454,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -435,7 +465,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="resolverendpointid_nodejs">
+<a href="#resolverendpointid_nodejs" style="color: inherit; text-decoration: inherit;">resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -445,7 +477,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -454,7 +488,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Ips</span>
+        <span id="targetips_nodejs">
+<a href="#targetips_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip[]</a></span>
     </dt>
@@ -471,7 +507,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>domain_<wbr>name</span>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -480,7 +518,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>rule_<wbr>type</span>
+        <span id="rule_type_python">
+<a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -489,7 +529,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -498,7 +540,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resolver_<wbr>endpoint_<wbr>id</span>
+        <span id="resolver_endpoint_id_python">
+<a href="#resolver_endpoint_id_python" style="color: inherit; text-decoration: inherit;">resolver_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -508,7 +552,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -517,7 +563,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>ips</span>
+        <span id="target_ips_python">
+<a href="#target_ips_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">List[Resolver<wbr>Rule<wbr>Target<wbr>Ip]</a></span>
     </dt>
@@ -545,7 +593,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -554,7 +604,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -562,7 +614,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -571,7 +625,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Status</span>
+        <span id="sharestatus_csharp">
+<a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -588,7 +644,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -597,7 +655,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -605,7 +665,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -614,7 +676,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Status</span>
+        <span id="sharestatus_go">
+<a href="#sharestatus_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -631,7 +695,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +706,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -648,7 +716,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>owner<wbr>Id</span>
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -657,7 +727,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>share<wbr>Status</span>
+        <span id="sharestatus_nodejs">
+<a href="#sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -674,7 +746,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -683,7 +757,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +767,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>owner_<wbr>id</span>
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -700,7 +778,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
-        <span>share_<wbr>status</span>
+        <span id="share_status_python">
+<a href="#share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -843,7 +923,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -852,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_csharp">
+<a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -861,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -870,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Id</span>
+        <span id="state_ownerid_csharp">
+<a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -879,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="state_resolverendpointid_csharp">
+<a href="#state_resolverendpointid_csharp" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +979,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rule<wbr>Type</span>
+        <span id="state_ruletype_csharp">
+<a href="#state_ruletype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -898,7 +990,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Status</span>
+        <span id="state_sharestatus_csharp">
+<a href="#state_sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -908,7 +1002,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -917,7 +1013,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Ips</span>
+        <span id="state_targetips_csharp">
+<a href="#state_targetips_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">List&lt;Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -934,7 +1032,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1043,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_go">
+<a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -952,7 +1054,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -961,7 +1065,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Id</span>
+        <span id="state_ownerid_go">
+<a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -970,7 +1076,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="state_resolverendpointid_go">
+<a href="#state_resolverendpointid_go" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -980,7 +1088,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rule<wbr>Type</span>
+        <span id="state_ruletype_go">
+<a href="#state_ruletype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -989,7 +1099,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Status</span>
+        <span id="state_sharestatus_go">
+<a href="#state_sharestatus_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -999,7 +1111,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1008,7 +1122,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Ips</span>
+        <span id="state_targetips_go">
+<a href="#state_targetips_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></span>
     </dt>
@@ -1025,7 +1141,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1034,7 +1152,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Name</span>
+        <span id="state_domainname_nodejs">
+<a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1043,7 +1163,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1052,7 +1174,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>Id</span>
+        <span id="state_ownerid_nodejs">
+<a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1061,7 +1185,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resolver<wbr>Endpoint<wbr>Id</span>
+        <span id="state_resolverendpointid_nodejs">
+<a href="#state_resolverendpointid_nodejs" style="color: inherit; text-decoration: inherit;">resolver<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1071,7 +1197,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rule<wbr>Type</span>
+        <span id="state_ruletype_nodejs">
+<a href="#state_ruletype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1080,7 +1208,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Status</span>
+        <span id="state_sharestatus_nodejs">
+<a href="#state_sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1090,7 +1220,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1099,7 +1231,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Ips</span>
+        <span id="state_targetips_nodejs">
+<a href="#state_targetips_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip[]</a></span>
     </dt>
@@ -1116,7 +1250,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1125,7 +1261,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>name</span>
+        <span id="state_domain_name_python">
+<a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1134,7 +1272,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1143,7 +1283,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner_<wbr>id</span>
+        <span id="state_owner_id_python">
+<a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1152,7 +1294,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resolver_<wbr>endpoint_<wbr>id</span>
+        <span id="state_resolver_endpoint_id_python">
+<a href="#state_resolver_endpoint_id_python" style="color: inherit; text-decoration: inherit;">resolver_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1162,7 +1306,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rule_<wbr>type</span>
+        <span id="state_rule_type_python">
+<a href="#state_rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1171,7 +1317,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>status</span>
+        <span id="state_share_status_python">
+<a href="#state_share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1181,7 +1329,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1190,7 +1340,9 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>ips</span>
+        <span id="state_target_ips_python">
+<a href="#state_target_ips_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resolverruletargetip">List[Resolver<wbr>Rule<wbr>Target<wbr>Ip]</a></span>
     </dt>
@@ -1233,7 +1385,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1242,7 +1396,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1258,7 +1414,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1267,7 +1425,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1283,7 +1443,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1292,7 +1454,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1308,7 +1472,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1483,9 @@ This argument should only be specified for `FORWARD` type rules.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

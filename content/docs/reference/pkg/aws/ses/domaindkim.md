@@ -257,7 +257,9 @@ The DomainDkim resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Domain</span>
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +275,9 @@ The DomainDkim resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -289,7 +293,9 @@ The DomainDkim resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -305,7 +311,9 @@ The DomainDkim resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -332,7 +340,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dkim<wbr>Tokens</span>
+        <span id="dkimtokens_csharp">
+<a href="#dkimtokens_csharp" style="color: inherit; text-decoration: inherit;">Dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -346,7 +356,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +373,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>Dkim<wbr>Tokens</span>
+        <span id="dkimtokens_go">
+<a href="#dkimtokens_go" style="color: inherit; text-decoration: inherit;">Dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -375,7 +389,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +406,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>dkim<wbr>Tokens</span>
+        <span id="dkimtokens_nodejs">
+<a href="#dkimtokens_nodejs" style="color: inherit; text-decoration: inherit;">dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -404,7 +422,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -419,7 +439,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>dkim_<wbr>tokens</span>
+        <span id="dkim_tokens_python">
+<a href="#dkim_tokens_python" style="color: inherit; text-decoration: inherit;">dkim_<wbr>tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -433,7 +455,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -574,7 +598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dkim<wbr>Tokens</span>
+        <span id="state_dkimtokens_csharp">
+<a href="#state_dkimtokens_csharp" style="color: inherit; text-decoration: inherit;">Dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -588,7 +614,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -604,7 +632,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dkim<wbr>Tokens</span>
+        <span id="state_dkimtokens_go">
+<a href="#state_dkimtokens_go" style="color: inherit; text-decoration: inherit;">Dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -618,7 +648,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -634,7 +666,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>dkim<wbr>Tokens</span>
+        <span id="state_dkimtokens_nodejs">
+<a href="#state_dkimtokens_nodejs" style="color: inherit; text-decoration: inherit;">dkim<wbr>Tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -648,7 +682,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +700,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>dkim_<wbr>tokens</span>
+        <span id="state_dkim_tokens_python">
+<a href="#state_dkim_tokens_python" style="color: inherit; text-decoration: inherit;">dkim_<wbr>tokens</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -678,7 +716,9 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

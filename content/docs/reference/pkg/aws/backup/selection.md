@@ -353,7 +353,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_csharp">
+<a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +364,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Plan<wbr>Id</span>
+        <span id="planid_csharp">
+<a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -371,7 +375,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +386,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -389,7 +397,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Selection<wbr>Tags</span>
+        <span id="selectiontags_csharp">
+<a href="#selectiontags_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -405,7 +415,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_go">
+<a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +426,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Plan<wbr>Id</span>
+        <span id="planid_go">
+<a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +437,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +448,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -441,7 +459,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Selection<wbr>Tags</span>
+        <span id="selectiontags_go">
+<a href="#selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
     </dt>
@@ -457,7 +477,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_nodejs">
+<a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +488,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>plan<wbr>Id</span>
+        <span id="planid_nodejs">
+<a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +499,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -484,7 +510,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -493,7 +521,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>selection<wbr>Tags</span>
+        <span id="selectiontags_nodejs">
+<a href="#selectiontags_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]</a></span>
     </dt>
@@ -509,7 +539,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>iam_<wbr>role_<wbr>arn</span>
+        <span id="iam_role_arn_python">
+<a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +550,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>plan_<wbr>id</span>
+        <span id="plan_id_python">
+<a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -527,7 +561,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -536,7 +572,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -545,7 +583,9 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>selection_<wbr>tags</span>
+        <span id="selection_tags_python">
+<a href="#selection_tags_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></span>
     </dt>
@@ -572,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -587,7 +629,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -602,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -617,7 +663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_csharp">
+<a href="#state_iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan<wbr>Id</span>
+        <span id="state_planid_csharp">
+<a href="#state_planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="state_resources_csharp">
+<a href="#state_resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -794,7 +850,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Selection<wbr>Tags</span>
+        <span id="state_selectiontags_csharp">
+<a href="#state_selectiontags_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -810,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_go">
+<a href="#state_iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -819,7 +879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -828,7 +890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan<wbr>Id</span>
+        <span id="state_planid_go">
+<a href="#state_planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -837,7 +901,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="state_resources_go">
+<a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -846,7 +912,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Selection<wbr>Tags</span>
+        <span id="state_selectiontags_go">
+<a href="#state_selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
     </dt>
@@ -862,7 +930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_nodejs">
+<a href="#state_iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -871,7 +941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -880,7 +952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan<wbr>Id</span>
+        <span id="state_planid_nodejs">
+<a href="#state_planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -889,7 +963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="state_resources_nodejs">
+<a href="#state_resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -898,7 +974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>selection<wbr>Tags</span>
+        <span id="state_selectiontags_nodejs">
+<a href="#state_selectiontags_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]</a></span>
     </dt>
@@ -914,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>role_<wbr>arn</span>
+        <span id="state_iam_role_arn_python">
+<a href="#state_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -923,7 +1003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -932,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan_<wbr>id</span>
+        <span id="state_plan_id_python">
+<a href="#state_plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -941,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="state_resources_python">
+<a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -950,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>selection_<wbr>tags</span>
+        <span id="state_selection_tags_python">
+<a href="#state_selection_tags_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></span>
     </dt>
@@ -992,7 +1080,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1001,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1010,7 +1102,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1026,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1035,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1044,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1160,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1069,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1078,7 +1182,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1094,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1103,7 +1211,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1112,7 +1222,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

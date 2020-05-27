@@ -643,7 +643,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Destination</span>
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -652,7 +654,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +665,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Id</span>
+        <span id="destinationid_csharp">
+<a href="#destinationid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -669,7 +675,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch<wbr>Configuration</span>
+        <span id="elasticsearchconfiguration_csharp">
+<a href="#elasticsearchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -678,7 +686,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>S3Configuration</span>
+        <span id="extendeds3configuration_csharp">
+<a href="#extendeds3configuration_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
@@ -687,7 +697,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="kinesissourceconfiguration_csharp">
+<a href="#kinesissourceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -696,7 +708,9 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -706,7 +720,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redshift<wbr>Configuration</span>
+        <span id="redshiftconfiguration_csharp">
+<a href="#redshiftconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -717,7 +733,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Configuration</span>
+        <span id="s3configuration_csharp">
+<a href="#s3configuration_csharp" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
@@ -727,7 +745,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_csharp">
+<a href="#serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
@@ -737,7 +757,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Splunk<wbr>Configuration</span>
+        <span id="splunkconfiguration_csharp">
+<a href="#splunkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -745,7 +767,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -754,7 +778,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -770,7 +796,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Destination</span>
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -779,7 +807,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -788,7 +818,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Id</span>
+        <span id="destinationid_go">
+<a href="#destinationid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -796,7 +828,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch<wbr>Configuration</span>
+        <span id="elasticsearchconfiguration_go">
+<a href="#elasticsearchconfiguration_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
@@ -805,7 +839,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>S3Configuration</span>
+        <span id="extendeds3configuration_go">
+<a href="#extendeds3configuration_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
@@ -814,7 +850,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="kinesissourceconfiguration_go">
+<a href="#kinesissourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
@@ -823,7 +861,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -833,7 +873,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redshift<wbr>Configuration</span>
+        <span id="redshiftconfiguration_go">
+<a href="#redshiftconfiguration_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
@@ -844,7 +886,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Configuration</span>
+        <span id="s3configuration_go">
+<a href="#s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
@@ -854,7 +898,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_go">
+<a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -864,7 +910,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Splunk<wbr>Configuration</span>
+        <span id="splunkconfiguration_go">
+<a href="#splunkconfiguration_go" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
@@ -872,7 +920,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -881,7 +931,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +949,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>destination</span>
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -906,7 +960,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -915,7 +971,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Id</span>
+        <span id="destinationid_nodejs">
+<a href="#destinationid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -923,7 +981,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch<wbr>Configuration</span>
+        <span id="elasticsearchconfiguration_nodejs">
+<a href="#elasticsearchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
@@ -932,7 +992,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>S3Configuration</span>
+        <span id="extendeds3configuration_nodejs">
+<a href="#extendeds3configuration_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
@@ -941,7 +1003,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="kinesissourceconfiguration_nodejs">
+<a href="#kinesissourceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
@@ -950,7 +1014,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -960,7 +1026,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redshift<wbr>Configuration</span>
+        <span id="redshiftconfiguration_nodejs">
+<a href="#redshiftconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
@@ -971,7 +1039,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Configuration</span>
+        <span id="s3configuration_nodejs">
+<a href="#s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
@@ -981,7 +1051,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_nodejs">
+<a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -991,7 +1063,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>splunk<wbr>Configuration</span>
+        <span id="splunkconfiguration_nodejs">
+<a href="#splunkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
@@ -999,7 +1073,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1008,7 +1084,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Id</span>
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1024,7 +1102,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>destination</span>
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1113,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1042,7 +1124,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>id</span>
+        <span id="destination_id_python">
+<a href="#destination_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1050,7 +1134,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch_<wbr>configuration</span>
+        <span id="elasticsearch_configuration_python">
+<a href="#elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration]</a></span>
     </dt>
@@ -1059,7 +1145,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>s3_<wbr>configuration</span>
+        <span id="extended_s3_configuration_python">
+<a href="#extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration]</a></span>
     </dt>
@@ -1068,7 +1156,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis_<wbr>source_<wbr>configuration</span>
+        <span id="kinesis_source_configuration_python">
+<a href="#kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration]</a></span>
     </dt>
@@ -1077,7 +1167,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1087,7 +1179,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redshift_<wbr>configuration</span>
+        <span id="redshift_configuration_python">
+<a href="#redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration]</a></span>
     </dt>
@@ -1098,7 +1192,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>configuration</span>
+        <span id="s3_configuration_python">
+<a href="#s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration]</a></span>
     </dt>
@@ -1108,7 +1204,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="server_side_encryption_python">
+<a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
     </dt>
@@ -1118,7 +1216,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>splunk_<wbr>configuration</span>
+        <span id="splunk_configuration_python">
+<a href="#splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration]</a></span>
     </dt>
@@ -1126,7 +1226,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1135,7 +1237,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>id</span>
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1162,7 +1266,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1177,7 +1283,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1192,7 +1300,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1207,7 +1317,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1460,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1357,7 +1471,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination</span>
+        <span id="state_destination_csharp">
+<a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1366,7 +1482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Id</span>
+        <span id="state_destinationid_csharp">
+<a href="#state_destinationid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1374,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch<wbr>Configuration</span>
+        <span id="state_elasticsearchconfiguration_csharp">
+<a href="#state_elasticsearchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1383,7 +1503,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>S3Configuration</span>
+        <span id="state_extendeds3configuration_csharp">
+<a href="#state_extendeds3configuration_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
@@ -1392,7 +1514,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="state_kinesissourceconfiguration_csharp">
+<a href="#state_kinesissourceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1401,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1411,7 +1537,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redshift<wbr>Configuration</span>
+        <span id="state_redshiftconfiguration_csharp">
+<a href="#state_redshiftconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1422,7 +1550,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Configuration</span>
+        <span id="state_s3configuration_csharp">
+<a href="#state_s3configuration_csharp" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
@@ -1432,7 +1562,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_csharp">
+<a href="#state_serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
@@ -1442,7 +1574,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Splunk<wbr>Configuration</span>
+        <span id="state_splunkconfiguration_csharp">
+<a href="#state_splunkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1450,7 +1584,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1459,7 +1595,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="state_versionid_csharp">
+<a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1475,7 +1613,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1484,7 +1624,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination</span>
+        <span id="state_destination_go">
+<a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1493,7 +1635,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Id</span>
+        <span id="state_destinationid_go">
+<a href="#state_destinationid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1501,7 +1645,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch<wbr>Configuration</span>
+        <span id="state_elasticsearchconfiguration_go">
+<a href="#state_elasticsearchconfiguration_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
@@ -1510,7 +1656,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>S3Configuration</span>
+        <span id="state_extendeds3configuration_go">
+<a href="#state_extendeds3configuration_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
@@ -1519,7 +1667,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="state_kinesissourceconfiguration_go">
+<a href="#state_kinesissourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
@@ -1528,7 +1678,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1538,7 +1690,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redshift<wbr>Configuration</span>
+        <span id="state_redshiftconfiguration_go">
+<a href="#state_redshiftconfiguration_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
@@ -1549,7 +1703,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Configuration</span>
+        <span id="state_s3configuration_go">
+<a href="#state_s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
@@ -1559,7 +1715,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_go">
+<a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -1569,7 +1727,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Splunk<wbr>Configuration</span>
+        <span id="state_splunkconfiguration_go">
+<a href="#state_splunkconfiguration_go" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
@@ -1577,7 +1737,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1586,7 +1748,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="state_versionid_go">
+<a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1602,7 +1766,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1611,7 +1777,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination</span>
+        <span id="state_destination_nodejs">
+<a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1620,7 +1788,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Id</span>
+        <span id="state_destinationid_nodejs">
+<a href="#state_destinationid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1628,7 +1798,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch<wbr>Configuration</span>
+        <span id="state_elasticsearchconfiguration_nodejs">
+<a href="#state_elasticsearchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
@@ -1637,7 +1809,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>S3Configuration</span>
+        <span id="state_extendeds3configuration_nodejs">
+<a href="#state_extendeds3configuration_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>S3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
@@ -1646,7 +1820,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis<wbr>Source<wbr>Configuration</span>
+        <span id="state_kinesissourceconfiguration_nodejs">
+<a href="#state_kinesissourceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Source<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
@@ -1655,7 +1831,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1665,7 +1843,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redshift<wbr>Configuration</span>
+        <span id="state_redshiftconfiguration_nodejs">
+<a href="#state_redshiftconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
@@ -1676,7 +1856,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Configuration</span>
+        <span id="state_s3configuration_nodejs">
+<a href="#state_s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
@@ -1686,7 +1868,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_nodejs">
+<a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -1696,7 +1880,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>splunk<wbr>Configuration</span>
+        <span id="state_splunkconfiguration_nodejs">
+<a href="#state_splunkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
@@ -1704,7 +1890,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1713,7 +1901,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Id</span>
+        <span id="state_versionid_nodejs">
+<a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1729,7 +1919,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1738,7 +1930,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination</span>
+        <span id="state_destination_python">
+<a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1747,7 +1941,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>id</span>
+        <span id="state_destination_id_python">
+<a href="#state_destination_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1755,7 +1951,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch_<wbr>configuration</span>
+        <span id="state_elasticsearch_configuration_python">
+<a href="#state_elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration]</a></span>
     </dt>
@@ -1764,7 +1962,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>s3_<wbr>configuration</span>
+        <span id="state_extended_s3_configuration_python">
+<a href="#state_extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration]</a></span>
     </dt>
@@ -1773,7 +1973,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis_<wbr>source_<wbr>configuration</span>
+        <span id="state_kinesis_source_configuration_python">
+<a href="#state_kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration]</a></span>
     </dt>
@@ -1782,7 +1984,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1792,7 +1996,9 @@ AWS account and region the Stream is created in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redshift_<wbr>configuration</span>
+        <span id="state_redshift_configuration_python">
+<a href="#state_redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration]</a></span>
     </dt>
@@ -1803,7 +2009,9 @@ Using `redshift_configuration` requires the user to also specify a
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>configuration</span>
+        <span id="state_s3_configuration_python">
+<a href="#state_s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration]</a></span>
     </dt>
@@ -1813,7 +2021,9 @@ is redshift). More details are given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="state_server_side_encryption_python">
+<a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
     </dt>
@@ -1823,7 +2033,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>splunk_<wbr>configuration</span>
+        <span id="state_splunk_configuration_python">
+<a href="#state_splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration]</a></span>
     </dt>
@@ -1831,7 +2043,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1840,7 +2054,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>id</span>
+        <span id="state_version_id_python">
+<a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1882,7 +2098,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Arn</span>
+        <span id="domainarn_csharp">
+<a href="#domainarn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1891,7 +2109,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Index<wbr>Name</span>
+        <span id="indexname_csharp">
+<a href="#indexname_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1900,7 +2120,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1909,7 +2131,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffering<wbr>Interval</span>
+        <span id="bufferinginterval_csharp">
+<a href="#bufferinginterval_csharp" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1918,7 +2142,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffering<wbr>Size</span>
+        <span id="bufferingsize_csharp">
+<a href="#bufferingsize_csharp" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1927,7 +2153,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1936,7 +2164,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Rotation<wbr>Period</span>
+        <span id="indexrotationperiod_csharp">
+<a href="#indexrotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1945,7 +2175,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_csharp">
+<a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1954,7 +2186,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_csharp">
+<a href="#retryduration_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1963,7 +2197,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_csharp">
+<a href="#s3backupmode_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1972,7 +2208,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type<wbr>Name</span>
+        <span id="typename_csharp">
+<a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1988,7 +2226,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Arn</span>
+        <span id="domainarn_go">
+<a href="#domainarn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1997,7 +2237,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Index<wbr>Name</span>
+        <span id="indexname_go">
+<a href="#indexname_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2006,7 +2248,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2015,7 +2259,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffering<wbr>Interval</span>
+        <span id="bufferinginterval_go">
+<a href="#bufferinginterval_go" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2024,7 +2270,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffering<wbr>Size</span>
+        <span id="bufferingsize_go">
+<a href="#bufferingsize_go" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2033,7 +2281,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -2042,7 +2292,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Rotation<wbr>Period</span>
+        <span id="indexrotationperiod_go">
+<a href="#indexrotationperiod_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2051,7 +2303,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_go">
+<a href="#processingconfiguration_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -2060,7 +2314,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_go">
+<a href="#retryduration_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2069,7 +2325,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_go">
+<a href="#s3backupmode_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2078,7 +2336,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type<wbr>Name</span>
+        <span id="typename_go">
+<a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2094,7 +2354,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Arn</span>
+        <span id="domainarn_nodejs">
+<a href="#domainarn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2103,7 +2365,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>index<wbr>Name</span>
+        <span id="indexname_nodejs">
+<a href="#indexname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2112,7 +2376,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2121,7 +2387,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffering<wbr>Interval</span>
+        <span id="bufferinginterval_nodejs">
+<a href="#bufferinginterval_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2130,7 +2398,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffering<wbr>Size</span>
+        <span id="bufferingsize_nodejs">
+<a href="#bufferingsize_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2139,7 +2409,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -2148,7 +2420,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Rotation<wbr>Period</span>
+        <span id="indexrotationperiod_nodejs">
+<a href="#indexrotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2157,7 +2431,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_nodejs">
+<a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -2166,7 +2442,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_nodejs">
+<a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2175,7 +2453,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_nodejs">
+<a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2184,7 +2464,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>type<wbr>Name</span>
+        <span id="typename_nodejs">
+<a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2200,7 +2482,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Arn</span>
+        <span id="domainarn_python">
+<a href="#domainarn_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2209,7 +2493,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>index<wbr>Name</span>
+        <span id="indexname_python">
+<a href="#indexname_python" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2218,7 +2504,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2227,7 +2515,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffering<wbr>Interval</span>
+        <span id="bufferinginterval_python">
+<a href="#bufferinginterval_python" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2236,7 +2526,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffering<wbr>Size</span>
+        <span id="bufferingsize_python">
+<a href="#bufferingsize_python" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2245,7 +2537,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -2254,7 +2548,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Rotation<wbr>Period</span>
+        <span id="indexrotationperiod_python">
+<a href="#indexrotationperiod_python" style="color: inherit; text-decoration: inherit;">index<wbr>Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2263,7 +2559,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_python">
+<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
     </dt>
@@ -2272,7 +2570,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_python">
+<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2281,7 +2581,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_python">
+<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2290,7 +2592,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>type<wbr>Name</span>
+        <span id="typename_python">
+<a href="#typename_python" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2324,7 +2628,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2333,7 +2639,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2342,7 +2650,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2358,7 +2668,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2367,7 +2679,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2376,7 +2690,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2392,7 +2708,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2401,7 +2719,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2410,7 +2730,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2426,7 +2748,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2435,7 +2759,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2444,7 +2770,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2478,7 +2806,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2487,7 +2817,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_csharp">
+<a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
@@ -2503,7 +2835,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2512,7 +2846,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_go">
+<a href="#processors_go" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></span>
     </dt>
@@ -2528,7 +2864,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2537,7 +2875,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_nodejs">
+<a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
@@ -2553,7 +2893,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2562,7 +2904,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_python">
+<a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
@@ -2596,7 +2940,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2605,7 +2951,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
@@ -2621,7 +2969,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2630,7 +2980,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></span>
     </dt>
@@ -2646,7 +2998,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2655,7 +3009,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
@@ -2671,7 +3027,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2680,7 +3038,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
@@ -2714,7 +3074,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2723,7 +3085,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2739,7 +3103,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2748,7 +3114,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2764,7 +3132,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2773,7 +3143,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2789,7 +3161,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_python">
+<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2798,7 +3172,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_python">
+<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2832,7 +3208,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_csharp">
+<a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2841,7 +3219,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2850,7 +3230,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_csharp">
+<a href="#bufferinterval_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2859,7 +3241,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_csharp">
+<a href="#buffersize_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2869,7 +3253,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -2878,7 +3264,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_csharp">
+<a href="#compressionformat_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2887,7 +3275,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span id="dataformatconversionconfiguration_csharp">
+<a href="#dataformatconversionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -2896,7 +3286,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error<wbr>Output<wbr>Prefix</span>
+        <span id="erroroutputprefix_csharp">
+<a href="#erroroutputprefix_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Output<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2905,7 +3297,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2915,7 +3309,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2924,7 +3320,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_csharp">
+<a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -2933,7 +3331,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_csharp">
+<a href="#s3backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -2942,7 +3342,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_csharp">
+<a href="#s3backupmode_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2958,7 +3360,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_go">
+<a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2967,7 +3371,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2976,7 +3382,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_go">
+<a href="#bufferinterval_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2985,7 +3393,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_go">
+<a href="#buffersize_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2995,7 +3405,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -3004,7 +3416,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_go">
+<a href="#compressionformat_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3013,7 +3427,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span id="dataformatconversionconfiguration_go">
+<a href="#dataformatconversionconfiguration_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
     </dt>
@@ -3022,7 +3438,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error<wbr>Output<wbr>Prefix</span>
+        <span id="erroroutputprefix_go">
+<a href="#erroroutputprefix_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Output<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3031,7 +3449,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3041,7 +3461,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3050,7 +3472,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_go">
+<a href="#processingconfiguration_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -3059,7 +3483,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_go">
+<a href="#s3backupconfiguration_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
@@ -3068,7 +3494,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_go">
+<a href="#s3backupmode_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3084,7 +3512,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_nodejs">
+<a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3093,7 +3523,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3102,7 +3534,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_nodejs">
+<a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3111,7 +3545,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_nodejs">
+<a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3121,7 +3557,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -3130,7 +3568,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_nodejs">
+<a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3139,7 +3579,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span id="dataformatconversionconfiguration_nodejs">
+<a href="#dataformatconversionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
     </dt>
@@ -3148,7 +3590,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>error<wbr>Output<wbr>Prefix</span>
+        <span id="erroroutputprefix_nodejs">
+<a href="#erroroutputprefix_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Output<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3157,7 +3601,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3167,7 +3613,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3176,7 +3624,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_nodejs">
+<a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -3185,7 +3635,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_nodejs">
+<a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
@@ -3194,7 +3646,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_nodejs">
+<a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3210,7 +3664,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_python">
+<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3219,7 +3675,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3228,7 +3686,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_python">
+<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3237,7 +3697,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_python">
+<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3247,7 +3709,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -3256,7 +3720,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_python">
+<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3265,7 +3731,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span id="dataformatconversionconfiguration_python">
+<a href="#dataformatconversionconfiguration_python" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration]</a></span>
     </dt>
@@ -3274,7 +3742,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>error<wbr>Output<wbr>Prefix</span>
+        <span id="erroroutputprefix_python">
+<a href="#erroroutputprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Output<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3283,7 +3753,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3293,7 +3765,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3302,7 +3776,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_python">
+<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration]</a></span>
     </dt>
@@ -3311,7 +3787,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_python">
+<a href="#s3backupconfiguration_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration]</a></span>
     </dt>
@@ -3320,7 +3798,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_python">
+<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3354,7 +3834,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3363,7 +3845,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3372,7 +3856,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3388,7 +3874,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3397,7 +3885,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3406,7 +3896,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3422,7 +3914,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3431,7 +3925,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3440,7 +3936,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3456,7 +3954,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3465,7 +3965,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3474,7 +3976,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3508,7 +4012,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Input<wbr>Format<wbr>Configuration</span>
+        <span id="inputformatconfiguration_csharp">
+<a href="#inputformatconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -3517,7 +4023,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Format<wbr>Configuration</span>
+        <span id="outputformatconfiguration_csharp">
+<a href="#outputformatconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -3526,7 +4034,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Schema<wbr>Configuration</span>
+        <span id="schemaconfiguration_csharp">
+<a href="#schemaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -3535,7 +4045,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3551,7 +4063,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Input<wbr>Format<wbr>Configuration</span>
+        <span id="inputformatconfiguration_go">
+<a href="#inputformatconfiguration_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
     </dt>
@@ -3560,7 +4074,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Format<wbr>Configuration</span>
+        <span id="outputformatconfiguration_go">
+<a href="#outputformatconfiguration_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
     </dt>
@@ -3569,7 +4085,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Schema<wbr>Configuration</span>
+        <span id="schemaconfiguration_go">
+<a href="#schemaconfiguration_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
     </dt>
@@ -3578,7 +4096,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3594,7 +4114,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>input<wbr>Format<wbr>Configuration</span>
+        <span id="inputformatconfiguration_nodejs">
+<a href="#inputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
     </dt>
@@ -3603,7 +4125,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Format<wbr>Configuration</span>
+        <span id="outputformatconfiguration_nodejs">
+<a href="#outputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
     </dt>
@@ -3612,7 +4136,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>schema<wbr>Configuration</span>
+        <span id="schemaconfiguration_nodejs">
+<a href="#schemaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
     </dt>
@@ -3621,7 +4147,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3637,7 +4165,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>input<wbr>Format<wbr>Configuration</span>
+        <span id="inputformatconfiguration_python">
+<a href="#inputformatconfiguration_python" style="color: inherit; text-decoration: inherit;">input<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration]</a></span>
     </dt>
@@ -3646,7 +4176,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Format<wbr>Configuration</span>
+        <span id="outputformatconfiguration_python">
+<a href="#outputformatconfiguration_python" style="color: inherit; text-decoration: inherit;">output<wbr>Format<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration]</a></span>
     </dt>
@@ -3655,7 +4187,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>schema<wbr>Configuration</span>
+        <span id="schemaconfiguration_python">
+<a href="#schemaconfiguration_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration]</a></span>
     </dt>
@@ -3664,7 +4198,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3698,7 +4234,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Deserializer</span>
+        <span id="deserializer_csharp">
+<a href="#deserializer_csharp" style="color: inherit; text-decoration: inherit;">Deserializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
     </dt>
@@ -3714,7 +4252,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Deserializer</span>
+        <span id="deserializer_go">
+<a href="#deserializer_go" style="color: inherit; text-decoration: inherit;">Deserializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
     </dt>
@@ -3730,7 +4270,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>deserializer</span>
+        <span id="deserializer_nodejs">
+<a href="#deserializer_nodejs" style="color: inherit; text-decoration: inherit;">deserializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
     </dt>
@@ -3746,7 +4288,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>deserializer</span>
+        <span id="deserializer_python">
+<a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer]</a></span>
     </dt>
@@ -3780,7 +4324,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Json<wbr>Ser<wbr>De</span>
+        <span id="hivejsonserde_csharp">
+<a href="#hivejsonserde_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Json<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
@@ -3789,7 +4335,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Open<wbr>XJson<wbr>Ser<wbr>De</span>
+        <span id="openxjsonserde_csharp">
+<a href="#openxjsonserde_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>XJson<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
@@ -3805,7 +4353,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Json<wbr>Ser<wbr>De</span>
+        <span id="hivejsonserde_go">
+<a href="#hivejsonserde_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Json<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -3814,7 +4364,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Open<wbr>XJson<wbr>Ser<wbr>De</span>
+        <span id="openxjsonserde_go">
+<a href="#openxjsonserde_go" style="color: inherit; text-decoration: inherit;">Open<wbr>XJson<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -3830,7 +4382,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive<wbr>Json<wbr>Ser<wbr>De</span>
+        <span id="hivejsonserde_nodejs">
+<a href="#hivejsonserde_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Json<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -3839,7 +4393,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>open<wbr>XJson<wbr>Ser<wbr>De</span>
+        <span id="openxjsonserde_nodejs">
+<a href="#openxjsonserde_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>XJson<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -3855,7 +4411,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive<wbr>Json<wbr>Ser<wbr>De</span>
+        <span id="hivejsonserde_python">
+<a href="#hivejsonserde_python" style="color: inherit; text-decoration: inherit;">hive<wbr>Json<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De]</a></span>
     </dt>
@@ -3864,7 +4422,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>open<wbr>XJson<wbr>Ser<wbr>De</span>
+        <span id="openxjsonserde_python">
+<a href="#openxjsonserde_python" style="color: inherit; text-decoration: inherit;">open<wbr>XJson<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De]</a></span>
     </dt>
@@ -3898,7 +4458,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timestamp<wbr>Formats</span>
+        <span id="timestampformats_csharp">
+<a href="#timestampformats_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Formats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3914,7 +4476,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timestamp<wbr>Formats</span>
+        <span id="timestampformats_go">
+<a href="#timestampformats_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Formats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3930,7 +4494,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timestamp<wbr>Formats</span>
+        <span id="timestampformats_nodejs">
+<a href="#timestampformats_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Formats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3946,7 +4512,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timestamp<wbr>Formats</span>
+        <span id="timestampformats_python">
+<a href="#timestampformats_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Formats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3980,7 +4548,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Case<wbr>Insensitive</span>
+        <span id="caseinsensitive_csharp">
+<a href="#caseinsensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Insensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3989,7 +4559,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
+        <span id="columntojsonkeymappings_csharp">
+<a href="#columntojsonkeymappings_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3998,7 +4570,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
+        <span id="convertdotsinjsonkeystounderscores_csharp">
+<a href="#convertdotsinjsonkeystounderscores_csharp" style="color: inherit; text-decoration: inherit;">Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4014,7 +4588,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Case<wbr>Insensitive</span>
+        <span id="caseinsensitive_go">
+<a href="#caseinsensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Insensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4023,7 +4599,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
+        <span id="columntojsonkeymappings_go">
+<a href="#columntojsonkeymappings_go" style="color: inherit; text-decoration: inherit;">Column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4032,7 +4610,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
+        <span id="convertdotsinjsonkeystounderscores_go">
+<a href="#convertdotsinjsonkeystounderscores_go" style="color: inherit; text-decoration: inherit;">Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4048,7 +4628,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>case<wbr>Insensitive</span>
+        <span id="caseinsensitive_nodejs">
+<a href="#caseinsensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Insensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4057,7 +4639,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
+        <span id="columntojsonkeymappings_nodejs">
+<a href="#columntojsonkeymappings_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4066,7 +4650,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
+        <span id="convertdotsinjsonkeystounderscores_nodejs">
+<a href="#convertdotsinjsonkeystounderscores_nodejs" style="color: inherit; text-decoration: inherit;">convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4082,7 +4668,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>case<wbr>Insensitive</span>
+        <span id="caseinsensitive_python">
+<a href="#caseinsensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Insensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4091,7 +4679,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
+        <span id="columntojsonkeymappings_python">
+<a href="#columntojsonkeymappings_python" style="color: inherit; text-decoration: inherit;">column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4100,7 +4690,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
+        <span id="convertdotsinjsonkeystounderscores_python">
+<a href="#convertdotsinjsonkeystounderscores_python" style="color: inherit; text-decoration: inherit;">convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4134,7 +4726,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Serializer</span>
+        <span id="serializer_csharp">
+<a href="#serializer_csharp" style="color: inherit; text-decoration: inherit;">Serializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
     </dt>
@@ -4150,7 +4744,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Serializer</span>
+        <span id="serializer_go">
+<a href="#serializer_go" style="color: inherit; text-decoration: inherit;">Serializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
     </dt>
@@ -4166,7 +4762,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>serializer</span>
+        <span id="serializer_nodejs">
+<a href="#serializer_nodejs" style="color: inherit; text-decoration: inherit;">serializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
     </dt>
@@ -4182,7 +4780,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>serializer</span>
+        <span id="serializer_python">
+<a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer]</a></span>
     </dt>
@@ -4216,7 +4816,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Orc<wbr>Ser<wbr>De</span>
+        <span id="orcserde_csharp">
+<a href="#orcserde_csharp" style="color: inherit; text-decoration: inherit;">Orc<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
@@ -4225,7 +4827,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parquet<wbr>Ser<wbr>De</span>
+        <span id="parquetserde_csharp">
+<a href="#parquetserde_csharp" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
@@ -4241,7 +4845,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Orc<wbr>Ser<wbr>De</span>
+        <span id="orcserde_go">
+<a href="#orcserde_go" style="color: inherit; text-decoration: inherit;">Orc<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -4250,7 +4856,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parquet<wbr>Ser<wbr>De</span>
+        <span id="parquetserde_go">
+<a href="#parquetserde_go" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -4266,7 +4874,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>orc<wbr>Ser<wbr>De</span>
+        <span id="orcserde_nodejs">
+<a href="#orcserde_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -4275,7 +4885,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parquet<wbr>Ser<wbr>De</span>
+        <span id="parquetserde_nodejs">
+<a href="#parquetserde_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
@@ -4291,7 +4903,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>orc<wbr>Ser<wbr>De</span>
+        <span id="orcserde_python">
+<a href="#orcserde_python" style="color: inherit; text-decoration: inherit;">orc<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De]</a></span>
     </dt>
@@ -4300,7 +4914,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parquet<wbr>Ser<wbr>De</span>
+        <span id="parquetserde_python">
+<a href="#parquetserde_python" style="color: inherit; text-decoration: inherit;">parquet<wbr>Ser<wbr>De</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De]</a></span>
     </dt>
@@ -4334,7 +4950,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_csharp">
+<a href="#blocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4343,7 +4961,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bloom<wbr>Filter<wbr>Columns</span>
+        <span id="bloomfiltercolumns_csharp">
+<a href="#bloomfiltercolumns_csharp" style="color: inherit; text-decoration: inherit;">Bloom<wbr>Filter<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4352,7 +4972,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
+        <span id="bloomfilterfalsepositiveprobability_csharp">
+<a href="#bloomfilterfalsepositiveprobability_csharp" style="color: inherit; text-decoration: inherit;">Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -4361,7 +4983,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression</span>
+        <span id="compression_csharp">
+<a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4370,7 +4994,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dictionary<wbr>Key<wbr>Threshold</span>
+        <span id="dictionarykeythreshold_csharp">
+<a href="#dictionarykeythreshold_csharp" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Key<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -4379,7 +5005,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Padding</span>
+        <span id="enablepadding_csharp">
+<a href="#enablepadding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Padding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4388,7 +5016,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format<wbr>Version</span>
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4397,7 +5027,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Padding<wbr>Tolerance</span>
+        <span id="paddingtolerance_csharp">
+<a href="#paddingtolerance_csharp" style="color: inherit; text-decoration: inherit;">Padding<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -4406,7 +5038,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Row<wbr>Index<wbr>Stride</span>
+        <span id="rowindexstride_csharp">
+<a href="#rowindexstride_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Index<wbr>Stride</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4415,7 +5049,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stripe<wbr>Size<wbr>Bytes</span>
+        <span id="stripesizebytes_csharp">
+<a href="#stripesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Stripe<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4431,7 +5067,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_go">
+<a href="#blocksizebytes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4440,7 +5078,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bloom<wbr>Filter<wbr>Columns</span>
+        <span id="bloomfiltercolumns_go">
+<a href="#bloomfiltercolumns_go" style="color: inherit; text-decoration: inherit;">Bloom<wbr>Filter<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4449,7 +5089,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
+        <span id="bloomfilterfalsepositiveprobability_go">
+<a href="#bloomfilterfalsepositiveprobability_go" style="color: inherit; text-decoration: inherit;">Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -4458,7 +5100,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression</span>
+        <span id="compression_go">
+<a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4467,7 +5111,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dictionary<wbr>Key<wbr>Threshold</span>
+        <span id="dictionarykeythreshold_go">
+<a href="#dictionarykeythreshold_go" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Key<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -4476,7 +5122,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Padding</span>
+        <span id="enablepadding_go">
+<a href="#enablepadding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Padding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4485,7 +5133,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format<wbr>Version</span>
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4494,7 +5144,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Padding<wbr>Tolerance</span>
+        <span id="paddingtolerance_go">
+<a href="#paddingtolerance_go" style="color: inherit; text-decoration: inherit;">Padding<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -4503,7 +5155,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Row<wbr>Index<wbr>Stride</span>
+        <span id="rowindexstride_go">
+<a href="#rowindexstride_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Index<wbr>Stride</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4512,7 +5166,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stripe<wbr>Size<wbr>Bytes</span>
+        <span id="stripesizebytes_go">
+<a href="#stripesizebytes_go" style="color: inherit; text-decoration: inherit;">Stripe<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4528,7 +5184,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_nodejs">
+<a href="#blocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4537,7 +5195,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bloom<wbr>Filter<wbr>Columns</span>
+        <span id="bloomfiltercolumns_nodejs">
+<a href="#bloomfiltercolumns_nodejs" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4546,7 +5206,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
+        <span id="bloomfilterfalsepositiveprobability_nodejs">
+<a href="#bloomfilterfalsepositiveprobability_nodejs" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -4555,7 +5217,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression</span>
+        <span id="compression_nodejs">
+<a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4564,7 +5228,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dictionary<wbr>Key<wbr>Threshold</span>
+        <span id="dictionarykeythreshold_nodejs">
+<a href="#dictionarykeythreshold_nodejs" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Key<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -4573,7 +5239,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Padding</span>
+        <span id="enablepadding_nodejs">
+<a href="#enablepadding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Padding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4582,7 +5250,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>format<wbr>Version</span>
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4591,7 +5261,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>padding<wbr>Tolerance</span>
+        <span id="paddingtolerance_nodejs">
+<a href="#paddingtolerance_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -4600,7 +5272,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>row<wbr>Index<wbr>Stride</span>
+        <span id="rowindexstride_nodejs">
+<a href="#rowindexstride_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Index<wbr>Stride</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4609,7 +5283,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stripe<wbr>Size<wbr>Bytes</span>
+        <span id="stripesizebytes_nodejs">
+<a href="#stripesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">stripe<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4625,7 +5301,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_python">
+<a href="#blocksizebytes_python" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4634,7 +5312,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bloom<wbr>Filter<wbr>Columns</span>
+        <span id="bloomfiltercolumns_python">
+<a href="#bloomfiltercolumns_python" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4643,7 +5323,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
+        <span id="bloomfilterfalsepositiveprobability_python">
+<a href="#bloomfilterfalsepositiveprobability_python" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4652,7 +5334,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression</span>
+        <span id="compression_python">
+<a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4661,7 +5345,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dictionary<wbr>Key<wbr>Threshold</span>
+        <span id="dictionarykeythreshold_python">
+<a href="#dictionarykeythreshold_python" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Key<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4670,7 +5356,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Padding</span>
+        <span id="enablepadding_python">
+<a href="#enablepadding_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Padding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4679,7 +5367,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>format<wbr>Version</span>
+        <span id="formatversion_python">
+<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4688,7 +5378,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>padding<wbr>Tolerance</span>
+        <span id="paddingtolerance_python">
+<a href="#paddingtolerance_python" style="color: inherit; text-decoration: inherit;">padding<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4697,7 +5389,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>row<wbr>Index<wbr>Stride</span>
+        <span id="rowindexstride_python">
+<a href="#rowindexstride_python" style="color: inherit; text-decoration: inherit;">row<wbr>Index<wbr>Stride</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4706,7 +5400,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>stripe<wbr>Size<wbr>Bytes</span>
+        <span id="stripesizebytes_python">
+<a href="#stripesizebytes_python" style="color: inherit; text-decoration: inherit;">stripe<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4740,7 +5436,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_csharp">
+<a href="#blocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4749,7 +5447,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression</span>
+        <span id="compression_csharp">
+<a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4758,7 +5458,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dictionary<wbr>Compression</span>
+        <span id="enabledictionarycompression_csharp">
+<a href="#enabledictionarycompression_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dictionary<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4767,7 +5469,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Padding<wbr>Bytes</span>
+        <span id="maxpaddingbytes_csharp">
+<a href="#maxpaddingbytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Padding<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4776,7 +5480,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Page<wbr>Size<wbr>Bytes</span>
+        <span id="pagesizebytes_csharp">
+<a href="#pagesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4785,7 +5491,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Writer<wbr>Version</span>
+        <span id="writerversion_csharp">
+<a href="#writerversion_csharp" style="color: inherit; text-decoration: inherit;">Writer<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4801,7 +5509,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_go">
+<a href="#blocksizebytes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4810,7 +5520,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression</span>
+        <span id="compression_go">
+<a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4819,7 +5531,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dictionary<wbr>Compression</span>
+        <span id="enabledictionarycompression_go">
+<a href="#enabledictionarycompression_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dictionary<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4828,7 +5542,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Padding<wbr>Bytes</span>
+        <span id="maxpaddingbytes_go">
+<a href="#maxpaddingbytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Padding<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4837,7 +5553,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Page<wbr>Size<wbr>Bytes</span>
+        <span id="pagesizebytes_go">
+<a href="#pagesizebytes_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4846,7 +5564,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Writer<wbr>Version</span>
+        <span id="writerversion_go">
+<a href="#writerversion_go" style="color: inherit; text-decoration: inherit;">Writer<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4862,7 +5582,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_nodejs">
+<a href="#blocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4871,7 +5593,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression</span>
+        <span id="compression_nodejs">
+<a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4880,7 +5604,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Dictionary<wbr>Compression</span>
+        <span id="enabledictionarycompression_nodejs">
+<a href="#enabledictionarycompression_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dictionary<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4889,7 +5615,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Padding<wbr>Bytes</span>
+        <span id="maxpaddingbytes_nodejs">
+<a href="#maxpaddingbytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Padding<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4898,7 +5626,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>page<wbr>Size<wbr>Bytes</span>
+        <span id="pagesizebytes_nodejs">
+<a href="#pagesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4907,7 +5637,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>writer<wbr>Version</span>
+        <span id="writerversion_nodejs">
+<a href="#writerversion_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4923,7 +5655,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Size<wbr>Bytes</span>
+        <span id="blocksizebytes_python">
+<a href="#blocksizebytes_python" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4932,7 +5666,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression</span>
+        <span id="compression_python">
+<a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4941,7 +5677,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Dictionary<wbr>Compression</span>
+        <span id="enabledictionarycompression_python">
+<a href="#enabledictionarycompression_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Dictionary<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4950,7 +5688,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Padding<wbr>Bytes</span>
+        <span id="maxpaddingbytes_python">
+<a href="#maxpaddingbytes_python" style="color: inherit; text-decoration: inherit;">max<wbr>Padding<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4959,7 +5699,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>page<wbr>Size<wbr>Bytes</span>
+        <span id="pagesizebytes_python">
+<a href="#pagesizebytes_python" style="color: inherit; text-decoration: inherit;">page<wbr>Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4968,7 +5710,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>writer<wbr>Version</span>
+        <span id="writerversion_python">
+<a href="#writerversion_python" style="color: inherit; text-decoration: inherit;">writer<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5002,7 +5746,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5011,7 +5757,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5020,7 +5768,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Name</span>
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5029,7 +5779,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Id</span>
+        <span id="catalogid_csharp">
+<a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5038,7 +5790,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5047,7 +5801,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5063,7 +5819,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5072,7 +5830,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5081,7 +5841,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Name</span>
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5090,7 +5852,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Id</span>
+        <span id="catalogid_go">
+<a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5099,7 +5863,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5108,7 +5874,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Id</span>
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5124,7 +5892,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Name</span>
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5133,7 +5903,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5142,7 +5914,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>table<wbr>Name</span>
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5151,7 +5925,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog<wbr>Id</span>
+        <span id="catalogid_nodejs">
+<a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5160,7 +5936,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5169,7 +5947,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Id</span>
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5185,7 +5965,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>database_<wbr>name</span>
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5194,7 +5976,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5203,7 +5987,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>table_<wbr>name</span>
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5212,7 +5998,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog_<wbr>id</span>
+        <span id="catalog_id_python">
+<a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5221,7 +6009,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5230,7 +6020,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>id</span>
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5264,7 +6056,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5273,7 +6067,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_csharp">
+<a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
@@ -5289,7 +6085,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5298,7 +6096,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_go">
+<a href="#processors_go" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></span>
     </dt>
@@ -5314,7 +6114,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5323,7 +6125,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_nodejs">
+<a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
@@ -5339,7 +6143,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5348,7 +6154,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_python">
+<a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
@@ -5382,7 +6190,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5391,7 +6201,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
@@ -5407,7 +6219,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5416,7 +6230,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></span>
     </dt>
@@ -5432,7 +6248,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5441,7 +6259,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
@@ -5457,7 +6277,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5466,7 +6288,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
@@ -5500,7 +6324,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5509,7 +6335,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5525,7 +6353,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5534,7 +6364,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5550,7 +6382,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5559,7 +6393,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5575,7 +6411,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_python">
+<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5584,7 +6422,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_python">
+<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5618,7 +6458,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_csharp">
+<a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5627,7 +6469,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5636,7 +6480,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_csharp">
+<a href="#bufferinterval_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5645,7 +6491,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_csharp">
+<a href="#buffersize_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5655,7 +6503,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -5664,7 +6514,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_csharp">
+<a href="#compressionformat_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5673,7 +6525,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5683,7 +6537,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5699,7 +6555,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_go">
+<a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5708,7 +6566,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5717,7 +6577,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_go">
+<a href="#bufferinterval_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5726,7 +6588,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_go">
+<a href="#buffersize_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5736,7 +6600,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -5745,7 +6611,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_go">
+<a href="#compressionformat_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5754,7 +6622,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5764,7 +6634,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5780,7 +6652,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_nodejs">
+<a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5789,7 +6663,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5798,7 +6674,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_nodejs">
+<a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5807,7 +6685,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_nodejs">
+<a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5817,7 +6697,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -5826,7 +6708,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_nodejs">
+<a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5835,7 +6719,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5845,7 +6731,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5861,7 +6749,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_python">
+<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5870,7 +6760,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5879,7 +6771,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_python">
+<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5888,7 +6782,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_python">
+<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5898,7 +6794,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -5907,7 +6805,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_python">
+<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5916,7 +6816,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5926,7 +6828,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5960,7 +6864,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5969,7 +6875,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5978,7 +6886,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5994,7 +6904,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -6003,7 +6915,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6012,7 +6926,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6028,7 +6944,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6037,7 +6955,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6046,7 +6966,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6062,7 +6984,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6071,7 +6995,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6080,7 +7006,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6114,7 +7042,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Kinesis<wbr>Stream<wbr>Arn</span>
+        <span id="kinesisstreamarn_csharp">
+<a href="#kinesisstreamarn_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6123,7 +7053,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6139,7 +7071,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Kinesis<wbr>Stream<wbr>Arn</span>
+        <span id="kinesisstreamarn_go">
+<a href="#kinesisstreamarn_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6148,7 +7082,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6164,7 +7100,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>kinesis<wbr>Stream<wbr>Arn</span>
+        <span id="kinesisstreamarn_nodejs">
+<a href="#kinesisstreamarn_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6173,7 +7111,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6189,7 +7129,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>kinesis<wbr>Stream<wbr>Arn</span>
+        <span id="kinesisstreamarn_python">
+<a href="#kinesisstreamarn_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6198,7 +7140,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6232,7 +7176,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Jdbcurl</span>
+        <span id="clusterjdbcurl_csharp">
+<a href="#clusterjdbcurl_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Jdbcurl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6241,7 +7187,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Table<wbr>Name</span>
+        <span id="datatablename_csharp">
+<a href="#datatablename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6250,7 +7198,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6259,7 +7209,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6268,7 +7220,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6277,7 +7231,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -6286,7 +7242,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Options</span>
+        <span id="copyoptions_csharp">
+<a href="#copyoptions_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6295,7 +7253,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Table<wbr>Columns</span>
+        <span id="datatablecolumns_csharp">
+<a href="#datatablecolumns_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Table<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6304,7 +7264,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_csharp">
+<a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -6313,7 +7275,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_csharp">
+<a href="#retryduration_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6322,7 +7286,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_csharp">
+<a href="#s3backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -6331,7 +7297,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_csharp">
+<a href="#s3backupmode_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6347,7 +7315,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Jdbcurl</span>
+        <span id="clusterjdbcurl_go">
+<a href="#clusterjdbcurl_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Jdbcurl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6356,7 +7326,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Table<wbr>Name</span>
+        <span id="datatablename_go">
+<a href="#datatablename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6365,7 +7337,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6374,7 +7348,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6383,7 +7359,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6392,7 +7370,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -6401,7 +7381,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Options</span>
+        <span id="copyoptions_go">
+<a href="#copyoptions_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6410,7 +7392,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Table<wbr>Columns</span>
+        <span id="datatablecolumns_go">
+<a href="#datatablecolumns_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Table<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6419,7 +7403,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_go">
+<a href="#processingconfiguration_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -6428,7 +7414,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_go">
+<a href="#retryduration_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6437,7 +7425,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_go">
+<a href="#s3backupconfiguration_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
@@ -6446,7 +7436,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_go">
+<a href="#s3backupmode_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6462,7 +7454,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Jdbcurl</span>
+        <span id="clusterjdbcurl_nodejs">
+<a href="#clusterjdbcurl_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Jdbcurl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6471,7 +7465,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Table<wbr>Name</span>
+        <span id="datatablename_nodejs">
+<a href="#datatablename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6480,7 +7476,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6489,7 +7487,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6498,7 +7498,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6507,7 +7509,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -6516,7 +7520,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>Options</span>
+        <span id="copyoptions_nodejs">
+<a href="#copyoptions_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6525,7 +7531,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Table<wbr>Columns</span>
+        <span id="datatablecolumns_nodejs">
+<a href="#datatablecolumns_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6534,7 +7542,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_nodejs">
+<a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -6543,7 +7553,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_nodejs">
+<a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6552,7 +7564,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_nodejs">
+<a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
@@ -6561,7 +7575,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_nodejs">
+<a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6577,7 +7593,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Jdbcurl</span>
+        <span id="clusterjdbcurl_python">
+<a href="#clusterjdbcurl_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Jdbcurl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6586,7 +7604,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Table<wbr>Name</span>
+        <span id="datatablename_python">
+<a href="#datatablename_python" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6595,7 +7615,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6604,7 +7626,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6613,7 +7637,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6622,7 +7648,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -6631,7 +7659,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>Options</span>
+        <span id="copyoptions_python">
+<a href="#copyoptions_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6640,7 +7670,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Table<wbr>Columns</span>
+        <span id="datatablecolumns_python">
+<a href="#datatablecolumns_python" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6649,7 +7681,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_python">
+<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
     </dt>
@@ -6658,7 +7692,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_python">
+<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6667,7 +7703,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Configuration</span>
+        <span id="s3backupconfiguration_python">
+<a href="#s3backupconfiguration_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration]</a></span>
     </dt>
@@ -6676,7 +7714,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_python">
+<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6710,7 +7750,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -6719,7 +7761,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6728,7 +7772,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6744,7 +7790,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -6753,7 +7801,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6762,7 +7812,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6778,7 +7830,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6787,7 +7841,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6796,7 +7852,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6812,7 +7870,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6821,7 +7881,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6830,7 +7892,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6864,7 +7928,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -6873,7 +7939,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_csharp">
+<a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
@@ -6889,7 +7957,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -6898,7 +7968,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_go">
+<a href="#processors_go" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></span>
     </dt>
@@ -6914,7 +7986,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6923,7 +7997,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_nodejs">
+<a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
@@ -6939,7 +8015,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6948,7 +8026,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_python">
+<a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
@@ -6982,7 +8062,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6991,7 +8073,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
@@ -7007,7 +8091,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7016,7 +8102,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></span>
     </dt>
@@ -7032,7 +8120,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7041,7 +8131,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
@@ -7057,7 +8149,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7066,7 +8160,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
@@ -7100,7 +8196,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7109,7 +8207,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7125,7 +8225,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7134,7 +8236,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7150,7 +8254,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7159,7 +8265,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7175,7 +8283,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_python">
+<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7184,7 +8294,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_python">
+<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7218,7 +8330,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_csharp">
+<a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7227,7 +8341,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7236,7 +8352,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_csharp">
+<a href="#bufferinterval_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7245,7 +8363,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_csharp">
+<a href="#buffersize_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7255,7 +8375,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -7264,7 +8386,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_csharp">
+<a href="#compressionformat_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7273,7 +8397,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7283,7 +8409,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7299,7 +8427,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_go">
+<a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7308,7 +8438,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7317,7 +8449,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_go">
+<a href="#bufferinterval_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7326,7 +8460,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_go">
+<a href="#buffersize_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7336,7 +8472,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -7345,7 +8483,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_go">
+<a href="#compressionformat_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7354,7 +8494,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7364,7 +8506,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7380,7 +8524,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_nodejs">
+<a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7389,7 +8535,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7398,7 +8546,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_nodejs">
+<a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7407,7 +8557,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_nodejs">
+<a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7417,7 +8569,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -7426,7 +8580,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_nodejs">
+<a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7435,7 +8591,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7445,7 +8603,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7461,7 +8621,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_python">
+<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7470,7 +8632,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7479,7 +8643,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_python">
+<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7488,7 +8654,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_python">
+<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7498,7 +8666,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -7507,7 +8677,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_python">
+<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7516,7 +8688,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7526,7 +8700,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7560,7 +8736,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -7569,7 +8747,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7578,7 +8758,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7594,7 +8776,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -7603,7 +8787,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7612,7 +8798,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7628,7 +8816,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -7637,7 +8827,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7646,7 +8838,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7662,7 +8856,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7671,7 +8867,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7680,7 +8878,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7714,7 +8914,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_csharp">
+<a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7723,7 +8925,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7732,7 +8936,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_csharp">
+<a href="#bufferinterval_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7741,7 +8947,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_csharp">
+<a href="#buffersize_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7751,7 +8959,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -7760,7 +8970,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_csharp">
+<a href="#compressionformat_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7769,7 +8981,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7779,7 +8993,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7795,7 +9011,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Arn</span>
+        <span id="bucketarn_go">
+<a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7804,7 +9022,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7813,7 +9033,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Interval</span>
+        <span id="bufferinterval_go">
+<a href="#bufferinterval_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7822,7 +9044,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffer<wbr>Size</span>
+        <span id="buffersize_go">
+<a href="#buffersize_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7832,7 +9056,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -7841,7 +9067,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compression<wbr>Format</span>
+        <span id="compressionformat_go">
+<a href="#compressionformat_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7850,7 +9078,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7860,7 +9090,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7876,7 +9108,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_nodejs">
+<a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7885,7 +9119,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7894,7 +9130,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_nodejs">
+<a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7903,7 +9141,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_nodejs">
+<a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7913,7 +9153,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -7922,7 +9164,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_nodejs">
+<a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7931,7 +9175,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7941,7 +9187,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7957,7 +9205,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Arn</span>
+        <span id="bucketarn_python">
+<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7966,7 +9216,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7975,7 +9227,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Interval</span>
+        <span id="bufferinterval_python">
+<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7984,7 +9238,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffer<wbr>Size</span>
+        <span id="buffersize_python">
+<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7994,7 +9250,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -8003,7 +9261,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>compression<wbr>Format</span>
+        <span id="compressionformat_python">
+<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8012,7 +9272,9 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8022,7 +9284,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8056,7 +9320,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -8065,7 +9331,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8074,7 +9342,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8090,7 +9360,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -8099,7 +9371,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8108,7 +9382,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8124,7 +9400,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -8133,7 +9411,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8142,7 +9422,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8158,7 +9440,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -8167,7 +9451,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8176,7 +9462,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8210,7 +9498,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -8226,7 +9516,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -8242,7 +9534,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -8258,7 +9552,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -8292,7 +9588,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hec<wbr>Endpoint</span>
+        <span id="hecendpoint_csharp">
+<a href="#hecendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hec<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8301,7 +9599,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hec<wbr>Token</span>
+        <span id="hectoken_csharp">
+<a href="#hectoken_csharp" style="color: inherit; text-decoration: inherit;">Hec<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8310,7 +9610,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -8319,7 +9621,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span id="hecacknowledgmenttimeout_csharp">
+<a href="#hecacknowledgmenttimeout_csharp" style="color: inherit; text-decoration: inherit;">Hec<wbr>Acknowledgment<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -8328,7 +9632,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hec<wbr>Endpoint<wbr>Type</span>
+        <span id="hecendpointtype_csharp">
+<a href="#hecendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Hec<wbr>Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8337,7 +9643,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_csharp">
+<a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -8346,7 +9654,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_csharp">
+<a href="#retryduration_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -8355,7 +9665,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_csharp">
+<a href="#s3backupmode_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8371,7 +9683,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hec<wbr>Endpoint</span>
+        <span id="hecendpoint_go">
+<a href="#hecendpoint_go" style="color: inherit; text-decoration: inherit;">Hec<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8380,7 +9694,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hec<wbr>Token</span>
+        <span id="hectoken_go">
+<a href="#hectoken_go" style="color: inherit; text-decoration: inherit;">Hec<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8389,7 +9705,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -8398,7 +9716,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span id="hecacknowledgmenttimeout_go">
+<a href="#hecacknowledgmenttimeout_go" style="color: inherit; text-decoration: inherit;">Hec<wbr>Acknowledgment<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -8407,7 +9727,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hec<wbr>Endpoint<wbr>Type</span>
+        <span id="hecendpointtype_go">
+<a href="#hecendpointtype_go" style="color: inherit; text-decoration: inherit;">Hec<wbr>Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8416,7 +9738,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processing<wbr>Configuration</span>
+        <span id="processingconfiguration_go">
+<a href="#processingconfiguration_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -8425,7 +9749,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Duration</span>
+        <span id="retryduration_go">
+<a href="#retryduration_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -8434,7 +9760,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Backup<wbr>Mode</span>
+        <span id="s3backupmode_go">
+<a href="#s3backupmode_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8450,7 +9778,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>hec<wbr>Endpoint</span>
+        <span id="hecendpoint_nodejs">
+<a href="#hecendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8459,7 +9789,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>hec<wbr>Token</span>
+        <span id="hectoken_nodejs">
+<a href="#hectoken_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8468,7 +9800,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
@@ -8477,7 +9811,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span id="hecacknowledgmenttimeout_nodejs">
+<a href="#hecacknowledgmenttimeout_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Acknowledgment<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -8486,7 +9822,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hec<wbr>Endpoint<wbr>Type</span>
+        <span id="hecendpointtype_nodejs">
+<a href="#hecendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8495,7 +9833,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_nodejs">
+<a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
@@ -8504,7 +9844,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_nodejs">
+<a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -8513,7 +9855,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_nodejs">
+<a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8529,7 +9873,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>hec<wbr>Endpoint</span>
+        <span id="hecendpoint_python">
+<a href="#hecendpoint_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8538,7 +9884,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>hec<wbr>Token</span>
+        <span id="hectoken_python">
+<a href="#hectoken_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8547,7 +9895,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
     </dt>
@@ -8556,7 +9906,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span id="hecacknowledgmenttimeout_python">
+<a href="#hecacknowledgmenttimeout_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Acknowledgment<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -8565,7 +9917,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hec<wbr>Endpoint<wbr>Type</span>
+        <span id="hecendpointtype_python">
+<a href="#hecendpointtype_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8574,7 +9928,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processing<wbr>Configuration</span>
+        <span id="processingconfiguration_python">
+<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
     </dt>
@@ -8583,7 +9939,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Duration</span>
+        <span id="retryduration_python">
+<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -8592,7 +9950,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Backup<wbr>Mode</span>
+        <span id="s3backupmode_python">
+<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8626,7 +9986,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -8635,7 +9997,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8644,7 +10008,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8660,7 +10026,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -8669,7 +10037,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8678,7 +10048,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8694,7 +10066,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -8703,7 +10077,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Group<wbr>Name</span>
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8712,7 +10088,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8728,7 +10106,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -8737,7 +10117,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Stream<wbr>Name</span>
+        <span id="logstreamname_python">
+<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8746,7 +10128,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8780,7 +10164,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -8789,7 +10175,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_csharp">
+<a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
@@ -8805,7 +10193,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -8814,7 +10204,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Processors</span>
+        <span id="processors_go">
+<a href="#processors_go" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></span>
     </dt>
@@ -8830,7 +10222,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -8839,7 +10233,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_nodejs">
+<a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
@@ -8855,7 +10251,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -8864,7 +10262,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>processors</span>
+        <span id="processors_python">
+<a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
@@ -8898,7 +10298,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -8907,7 +10309,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
@@ -8923,7 +10327,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -8932,7 +10338,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></span>
     </dt>
@@ -8948,7 +10356,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -8957,7 +10367,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
@@ -8973,7 +10385,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -8982,7 +10396,9 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
@@ -9016,7 +10432,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -9025,7 +10443,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -9041,7 +10461,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Name</span>
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -9050,7 +10472,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Parameter<wbr>Value</span>
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -9066,7 +10490,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -9075,7 +10501,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -9091,7 +10519,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Name</span>
+        <span id="parametername_python">
+<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -9100,7 +10530,9 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span>parameter<wbr>Value</span>
+        <span id="parametervalue_python">
+<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -31,7 +31,7 @@ Explore the resources and functions of the batch module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

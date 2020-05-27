@@ -90,7 +90,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -99,7 +101,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -115,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -124,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -140,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -149,7 +159,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -165,7 +177,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -174,7 +188,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -203,7 +219,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -212,7 +230,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bootstrap<wbr>Brokers</span>
+        <span id="bootstrapbrokers_csharp">
+<a href="#bootstrapbrokers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -221,7 +241,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bootstrap<wbr>Brokers<wbr>Tls</span>
+        <span id="bootstrapbrokerstls_csharp">
+<a href="#bootstrapbrokerstls_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -230,7 +252,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +262,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +273,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Kafka<wbr>Version</span>
+        <span id="kafkaversion_csharp">
+<a href="#kafkaversion_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -256,7 +284,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Number<wbr>Of<wbr>Broker<wbr>Nodes</span>
+        <span id="numberofbrokernodes_csharp">
+<a href="#numberofbrokernodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -265,7 +295,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -274,7 +306,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zookeeper<wbr>Connect<wbr>String</span>
+        <span id="zookeeperconnectstring_csharp">
+<a href="#zookeeperconnectstring_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +324,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -299,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bootstrap<wbr>Brokers</span>
+        <span id="bootstrapbrokers_go">
+<a href="#bootstrapbrokers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -308,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bootstrap<wbr>Brokers<wbr>Tls</span>
+        <span id="bootstrapbrokerstls_go">
+<a href="#bootstrapbrokerstls_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +367,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +378,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Kafka<wbr>Version</span>
+        <span id="kafkaversion_go">
+<a href="#kafkaversion_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +389,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Number<wbr>Of<wbr>Broker<wbr>Nodes</span>
+        <span id="numberofbrokernodes_go">
+<a href="#numberofbrokernodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -352,7 +400,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -361,7 +411,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zookeeper<wbr>Connect<wbr>String</span>
+        <span id="zookeeperconnectstring_go">
+<a href="#zookeeperconnectstring_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +429,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -386,7 +440,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bootstrap<wbr>Brokers</span>
+        <span id="bootstrapbrokers_nodejs">
+<a href="#bootstrapbrokers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -395,7 +451,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bootstrap<wbr>Brokers<wbr>Tls</span>
+        <span id="bootstrapbrokerstls_nodejs">
+<a href="#bootstrapbrokerstls_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +462,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -412,7 +472,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -421,7 +483,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>kafka<wbr>Version</span>
+        <span id="kafkaversion_nodejs">
+<a href="#kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +494,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>number<wbr>Of<wbr>Broker<wbr>Nodes</span>
+        <span id="numberofbrokernodes_nodejs">
+<a href="#numberofbrokernodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Broker<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -439,7 +505,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -448,7 +516,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zookeeper<wbr>Connect<wbr>String</span>
+        <span id="zookeeperconnectstring_nodejs">
+<a href="#zookeeperconnectstring_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -464,7 +534,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -473,7 +545,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bootstrap_<wbr>brokers</span>
+        <span id="bootstrap_brokers_python">
+<a href="#bootstrap_brokers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -482,7 +556,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bootstrap_<wbr>brokers_<wbr>tls</span>
+        <span id="bootstrap_brokers_tls_python">
+<a href="#bootstrap_brokers_tls_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -491,7 +567,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +577,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -508,7 +588,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>kafka_<wbr>version</span>
+        <span id="kafka_version_python">
+<a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -517,7 +599,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>number_<wbr>of_<wbr>broker_<wbr>nodes</span>
+        <span id="number_of_broker_nodes_python">
+<a href="#number_of_broker_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>broker_<wbr>nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -526,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -535,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zookeeper_<wbr>connect_<wbr>string</span>
+        <span id="zookeeper_connect_string_python">
+<a href="#zookeeper_connect_string_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

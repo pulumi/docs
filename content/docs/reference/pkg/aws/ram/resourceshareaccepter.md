@@ -260,7 +260,9 @@ The ResourceShareAccepter resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Arn</span>
+        <span id="sharearn_csharp">
+<a href="#sharearn_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +278,9 @@ The ResourceShareAccepter resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Arn</span>
+        <span id="sharearn_go">
+<a href="#sharearn_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +296,9 @@ The ResourceShareAccepter resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>share<wbr>Arn</span>
+        <span id="sharearn_nodejs">
+<a href="#sharearn_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -308,7 +314,9 @@ The ResourceShareAccepter resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>share_<wbr>arn</span>
+        <span id="share_arn_python">
+<a href="#share_arn_python" style="color: inherit; text-decoration: inherit;">share_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -335,7 +343,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +353,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Invitation<wbr>Arn</span>
+        <span id="invitationarn_csharp">
+<a href="#invitationarn_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +364,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Receiver<wbr>Account<wbr>Id</span>
+        <span id="receiveraccountid_csharp">
+<a href="#receiveraccountid_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +375,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resources</span>
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -370,7 +386,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sender<wbr>Account<wbr>Id</span>
+        <span id="senderaccountid_csharp">
+<a href="#senderaccountid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -379,7 +397,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Id</span>
+        <span id="shareid_csharp">
+<a href="#shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -388,7 +408,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Name</span>
+        <span id="sharename_csharp">
+<a href="#sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -397,7 +419,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -413,7 +437,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +447,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Invitation<wbr>Arn</span>
+        <span id="invitationarn_go">
+<a href="#invitationarn_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +458,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Receiver<wbr>Account<wbr>Id</span>
+        <span id="receiveraccountid_go">
+<a href="#receiveraccountid_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resources</span>
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -448,7 +480,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sender<wbr>Account<wbr>Id</span>
+        <span id="senderaccountid_go">
+<a href="#senderaccountid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Id</span>
+        <span id="shareid_go">
+<a href="#shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +502,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Name</span>
+        <span id="sharename_go">
+<a href="#sharename_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -475,7 +513,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -491,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -499,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>invitation<wbr>Arn</span>
+        <span id="invitationarn_nodejs">
+<a href="#invitationarn_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +552,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>receiver<wbr>Account<wbr>Id</span>
+        <span id="receiveraccountid_nodejs">
+<a href="#receiveraccountid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -517,7 +563,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resources</span>
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -526,7 +574,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sender<wbr>Account<wbr>Id</span>
+        <span id="senderaccountid_nodejs">
+<a href="#senderaccountid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -535,7 +585,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>share<wbr>Id</span>
+        <span id="shareid_nodejs">
+<a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +596,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>share<wbr>Name</span>
+        <span id="sharename_nodejs">
+<a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +607,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -569,7 +625,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -577,7 +635,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>invitation_<wbr>arn</span>
+        <span id="invitation_arn_python">
+<a href="#invitation_arn_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>receiver_<wbr>account_<wbr>id</span>
+        <span id="receiver_account_id_python">
+<a href="#receiver_account_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -595,7 +657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resources</span>
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -604,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sender_<wbr>account_<wbr>id</span>
+        <span id="sender_account_id_python">
+<a href="#sender_account_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -613,7 +679,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>share_<wbr>id</span>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -622,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>share_<wbr>name</span>
+        <span id="share_name_python">
+<a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -773,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invitation<wbr>Arn</span>
+        <span id="state_invitationarn_csharp">
+<a href="#state_invitationarn_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -782,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Receiver<wbr>Account<wbr>Id</span>
+        <span id="state_receiveraccountid_csharp">
+<a href="#state_receiveraccountid_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -791,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="state_resources_csharp">
+<a href="#state_resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -800,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sender<wbr>Account<wbr>Id</span>
+        <span id="state_senderaccountid_csharp">
+<a href="#state_senderaccountid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Arn</span>
+        <span id="state_sharearn_csharp">
+<a href="#state_sharearn_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +900,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Id</span>
+        <span id="state_shareid_csharp">
+<a href="#state_shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Name</span>
+        <span id="state_sharename_csharp">
+<a href="#state_sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -836,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -852,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invitation<wbr>Arn</span>
+        <span id="state_invitationarn_go">
+<a href="#state_invitationarn_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -861,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Receiver<wbr>Account<wbr>Id</span>
+        <span id="state_receiveraccountid_go">
+<a href="#state_receiveraccountid_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -870,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resources</span>
+        <span id="state_resources_go">
+<a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -879,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sender<wbr>Account<wbr>Id</span>
+        <span id="state_senderaccountid_go">
+<a href="#state_senderaccountid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Arn</span>
+        <span id="state_sharearn_go">
+<a href="#state_sharearn_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Id</span>
+        <span id="state_shareid_go">
+<a href="#state_shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -906,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Name</span>
+        <span id="state_sharename_go">
+<a href="#state_sharename_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -915,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>invitation<wbr>Arn</span>
+        <span id="state_invitationarn_nodejs">
+<a href="#state_invitationarn_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -940,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>receiver<wbr>Account<wbr>Id</span>
+        <span id="state_receiveraccountid_nodejs">
+<a href="#state_receiveraccountid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -949,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="state_resources_nodejs">
+<a href="#state_resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -958,7 +1068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sender<wbr>Account<wbr>Id</span>
+        <span id="state_senderaccountid_nodejs">
+<a href="#state_senderaccountid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -967,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Arn</span>
+        <span id="state_sharearn_nodejs">
+<a href="#state_sharearn_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -976,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Id</span>
+        <span id="state_shareid_nodejs">
+<a href="#state_shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -985,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Name</span>
+        <span id="state_sharename_nodejs">
+<a href="#state_sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -994,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1010,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>invitation_<wbr>arn</span>
+        <span id="state_invitation_arn_python">
+<a href="#state_invitation_arn_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1019,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>receiver_<wbr>account_<wbr>id</span>
+        <span id="state_receiver_account_id_python">
+<a href="#state_receiver_account_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1028,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resources</span>
+        <span id="state_resources_python">
+<a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1037,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sender_<wbr>account_<wbr>id</span>
+        <span id="state_sender_account_id_python">
+<a href="#state_sender_account_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1046,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>arn</span>
+        <span id="state_share_arn_python">
+<a href="#state_share_arn_python" style="color: inherit; text-decoration: inherit;">share_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1055,7 +1185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>id</span>
+        <span id="state_share_id_python">
+<a href="#state_share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1064,7 +1196,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>name</span>
+        <span id="state_share_name_python">
+<a href="#state_share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1073,7 +1207,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -244,7 +244,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>Principal<wbr>Arn</span>
+        <span id="principalarn_csharp">
+<a href="#principalarn_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +255,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="vpcendpointserviceid_csharp">
+<a href="#vpcendpointserviceid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +273,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>Principal<wbr>Arn</span>
+        <span id="principalarn_go">
+<a href="#principalarn_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -278,7 +284,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="vpcendpointserviceid_go">
+<a href="#vpcendpointserviceid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -294,7 +302,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>principal<wbr>Arn</span>
+        <span id="principalarn_nodejs">
+<a href="#principalarn_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -303,7 +313,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="vpcendpointserviceid_nodejs">
+<a href="#vpcendpointserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -319,7 +331,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>principal_<wbr>arn</span>
+        <span id="principal_arn_python">
+<a href="#principal_arn_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -328,7 +342,9 @@ The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{
 
     <dt class="property-required"
             title="Required">
-        <span>vpc_<wbr>endpoint_<wbr>service_<wbr>id</span>
+        <span id="vpc_endpoint_service_id_python">
+<a href="#vpc_endpoint_service_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -355,7 +371,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +388,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +405,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +422,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +565,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Arn</span>
+        <span id="state_principalarn_csharp">
+<a href="#state_principalarn_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="state_vpcendpointserviceid_csharp">
+<a href="#state_vpcendpointserviceid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -566,7 +594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Arn</span>
+        <span id="state_principalarn_go">
+<a href="#state_principalarn_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="state_vpcendpointserviceid_go">
+<a href="#state_vpcendpointserviceid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -591,7 +623,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal<wbr>Arn</span>
+        <span id="state_principalarn_nodejs">
+<a href="#state_principalarn_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +634,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Endpoint<wbr>Service<wbr>Id</span>
+        <span id="state_vpcendpointserviceid_nodejs">
+<a href="#state_vpcendpointserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -616,7 +652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal_<wbr>arn</span>
+        <span id="state_principal_arn_python">
+<a href="#state_principal_arn_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>endpoint_<wbr>service_<wbr>id</span>
+        <span id="state_vpc_endpoint_service_id_python">
+<a href="#state_vpc_endpoint_service_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

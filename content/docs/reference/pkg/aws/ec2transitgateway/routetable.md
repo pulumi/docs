@@ -233,7 +233,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
+        <span id="transitgatewayid_csharp">
+<a href="#transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -242,7 +244,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -258,7 +262,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
+        <span id="transitgatewayid_go">
+<a href="#transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -267,7 +273,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -283,7 +291,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>transit<wbr>Gateway<wbr>Id</span>
+        <span id="transitgatewayid_nodejs">
+<a href="#transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -292,7 +302,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -308,7 +320,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>transit_<wbr>gateway_<wbr>id</span>
+        <span id="transit_gateway_id_python">
+<a href="#transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -317,7 +331,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -344,7 +360,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="defaultassociationroutetable_csharp">
+<a href="#defaultassociationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -353,7 +371,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="defaultpropagationroutetable_csharp">
+<a href="#defaultpropagationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -362,7 +382,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="defaultassociationroutetable_go">
+<a href="#defaultassociationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -386,7 +410,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="defaultpropagationroutetable_go">
+<a href="#defaultpropagationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -395,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +438,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="defaultassociationroutetable_nodejs">
+<a href="#defaultassociationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -419,7 +449,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="defaultpropagationroutetable_nodejs">
+<a href="#defaultpropagationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -428,7 +460,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -443,7 +477,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>association_<wbr>route_<wbr>table</span>
+        <span id="default_association_route_table_python">
+<a href="#default_association_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>association_<wbr>route_<wbr>table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -452,7 +488,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>propagation_<wbr>route_<wbr>table</span>
+        <span id="default_propagation_route_table_python">
+<a href="#default_propagation_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>propagation_<wbr>route_<wbr>table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -461,7 +499,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -602,7 +642,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="state_defaultassociationroutetable_csharp">
+<a href="#state_defaultassociationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -611,7 +653,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="state_defaultpropagationroutetable_csharp">
+<a href="#state_defaultpropagationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -620,7 +664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -629,7 +675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
+        <span id="state_transitgatewayid_csharp">
+<a href="#state_transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -645,7 +693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="state_defaultassociationroutetable_go">
+<a href="#state_defaultassociationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -654,7 +704,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="state_defaultpropagationroutetable_go">
+<a href="#state_defaultpropagationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -663,7 +715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -672,7 +726,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
+        <span id="state_transitgatewayid_go">
+<a href="#state_transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -688,7 +744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Association<wbr>Route<wbr>Table</span>
+        <span id="state_defaultassociationroutetable_nodejs">
+<a href="#state_defaultassociationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Association<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -697,7 +755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Propagation<wbr>Route<wbr>Table</span>
+        <span id="state_defaultpropagationroutetable_nodejs">
+<a href="#state_defaultpropagationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Propagation<wbr>Route<wbr>Table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -706,7 +766,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -715,7 +777,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>transit<wbr>Gateway<wbr>Id</span>
+        <span id="state_transitgatewayid_nodejs">
+<a href="#state_transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -731,7 +795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>association_<wbr>route_<wbr>table</span>
+        <span id="state_default_association_route_table_python">
+<a href="#state_default_association_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>association_<wbr>route_<wbr>table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -740,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>propagation_<wbr>route_<wbr>table</span>
+        <span id="state_default_propagation_route_table_python">
+<a href="#state_default_propagation_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>propagation_<wbr>route_<wbr>table</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -749,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -758,7 +828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>transit_<wbr>gateway_<wbr>id</span>
+        <span id="state_transit_gateway_id_python">
+<a href="#state_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

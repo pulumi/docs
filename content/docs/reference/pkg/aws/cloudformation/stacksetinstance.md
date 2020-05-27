@@ -318,7 +318,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Stack<wbr>Set<wbr>Name</span>
+        <span id="stacksetname_csharp">
+<a href="#stacksetname_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,7 +329,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +340,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Overrides</span>
+        <span id="parameteroverrides_csharp">
+<a href="#parameteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -345,7 +351,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +362,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>Stack</span>
+        <span id="retainstack_csharp">
+<a href="#retainstack_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -370,7 +380,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Stack<wbr>Set<wbr>Name</span>
+        <span id="stacksetname_go">
+<a href="#stacksetname_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +391,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +402,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Overrides</span>
+        <span id="parameteroverrides_go">
+<a href="#parameteroverrides_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -397,7 +413,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +424,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>Stack</span>
+        <span id="retainstack_go">
+<a href="#retainstack_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -422,7 +442,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>stack<wbr>Set<wbr>Name</span>
+        <span id="stacksetname_nodejs">
+<a href="#stacksetname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -431,7 +453,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Id</span>
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +464,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Overrides</span>
+        <span id="parameteroverrides_nodejs">
+<a href="#parameteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -449,7 +475,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -458,7 +486,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain<wbr>Stack</span>
+        <span id="retainstack_nodejs">
+<a href="#retainstack_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -474,7 +504,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>stack_<wbr>set_<wbr>name</span>
+        <span id="stack_set_name_python">
+<a href="#stack_set_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>set_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -483,7 +515,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>id</span>
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -492,7 +526,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>overrides</span>
+        <span id="parameter_overrides_python">
+<a href="#parameter_overrides_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -501,7 +537,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +548,9 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain_<wbr>stack</span>
+        <span id="retain_stack_python">
+<a href="#retain_stack_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -537,7 +577,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -545,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Stack<wbr>Id</span>
+        <span id="stackid_csharp">
+<a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -561,7 +605,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Stack<wbr>Id</span>
+        <span id="stackid_go">
+<a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +633,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +643,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>stack<wbr>Id</span>
+        <span id="stackid_nodejs">
+<a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>stack_<wbr>id</span>
+        <span id="stack_id_python">
+<a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -768,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Overrides</span>
+        <span id="state_parameteroverrides_csharp">
+<a href="#state_parameteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -777,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -786,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>Stack</span>
+        <span id="state_retainstack_csharp">
+<a href="#state_retainstack_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -795,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stack<wbr>Id</span>
+        <span id="state_stackid_csharp">
+<a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -804,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stack<wbr>Set<wbr>Name</span>
+        <span id="state_stacksetname_csharp">
+<a href="#state_stacksetname_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -820,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -829,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Overrides</span>
+        <span id="state_parameteroverrides_go">
+<a href="#state_parameteroverrides_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -838,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -847,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>Stack</span>
+        <span id="state_retainstack_go">
+<a href="#state_retainstack_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -856,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stack<wbr>Id</span>
+        <span id="state_stackid_go">
+<a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stack<wbr>Set<wbr>Name</span>
+        <span id="state_stacksetname_go">
+<a href="#state_stacksetname_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Id</span>
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Overrides</span>
+        <span id="state_parameteroverrides_nodejs">
+<a href="#state_parameteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -899,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain<wbr>Stack</span>
+        <span id="state_retainstack_nodejs">
+<a href="#state_retainstack_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -917,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stack<wbr>Id</span>
+        <span id="state_stackid_nodejs">
+<a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -926,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stack<wbr>Set<wbr>Name</span>
+        <span id="state_stacksetname_nodejs">
+<a href="#state_stacksetname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -942,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>id</span>
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>overrides</span>
+        <span id="state_parameter_overrides_python">
+<a href="#state_parameter_overrides_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -960,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -969,7 +1067,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain_<wbr>stack</span>
+        <span id="state_retain_stack_python">
+<a href="#state_retain_stack_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>stack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -978,7 +1078,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stack_<wbr>id</span>
+        <span id="state_stack_id_python">
+<a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -987,7 +1089,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stack_<wbr>set_<wbr>name</span>
+        <span id="state_stack_set_name_python">
+<a href="#state_stack_set_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>set_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

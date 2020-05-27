@@ -264,7 +264,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span id="destinationcidrblock_csharp">
+<a href="#destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +275,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Connection<wbr>Id</span>
+        <span id="vpnconnectionid_csharp">
+<a href="#vpnconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +293,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span id="destinationcidrblock_go">
+<a href="#destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -298,7 +304,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Connection<wbr>Id</span>
+        <span id="vpnconnectionid_go">
+<a href="#vpnconnectionid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +322,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>destination<wbr>Cidr<wbr>Block</span>
+        <span id="destinationcidrblock_nodejs">
+<a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -323,7 +333,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>vpn<wbr>Connection<wbr>Id</span>
+        <span id="vpnconnectionid_nodejs">
+<a href="#vpnconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -339,7 +351,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>destination_<wbr>cidr_<wbr>block</span>
+        <span id="destination_cidr_block_python">
+<a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -348,7 +362,9 @@ The VpnConnectionRoute resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>vpn_<wbr>connection_<wbr>id</span>
+        <span id="vpn_connection_id_python">
+<a href="#vpn_connection_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -375,7 +391,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +408,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +425,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +442,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -561,7 +585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span id="state_destinationcidrblock_csharp">
+<a href="#state_destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -570,7 +596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Connection<wbr>Id</span>
+        <span id="state_vpnconnectionid_csharp">
+<a href="#state_vpnconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -586,7 +614,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span id="state_destinationcidrblock_go">
+<a href="#state_destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +625,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Connection<wbr>Id</span>
+        <span id="state_vpnconnectionid_go">
+<a href="#state_vpnconnectionid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +643,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Cidr<wbr>Block</span>
+        <span id="state_destinationcidrblock_nodejs">
+<a href="#state_destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +654,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn<wbr>Connection<wbr>Id</span>
+        <span id="state_vpnconnectionid_nodejs">
+<a href="#state_vpnconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>cidr_<wbr>block</span>
+        <span id="state_destination_cidr_block_python">
+<a href="#state_destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +683,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn_<wbr>connection_<wbr>id</span>
+        <span id="state_vpn_connection_id_python">
+<a href="#state_vpn_connection_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

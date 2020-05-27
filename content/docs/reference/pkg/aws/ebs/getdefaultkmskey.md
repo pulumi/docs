@@ -101,7 +101,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +112,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Arn</span>
+        <span id="keyarn_csharp">
+<a href="#keyarn_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -126,7 +130,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -135,7 +141,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Arn</span>
+        <span id="keyarn_go">
+<a href="#keyarn_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -151,7 +159,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -160,7 +170,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Arn</span>
+        <span id="keyarn_nodejs">
+<a href="#keyarn_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -176,7 +188,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -185,7 +199,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>arn</span>
+        <span id="key_arn_python">
+<a href="#key_arn_python" style="color: inherit; text-decoration: inherit;">key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

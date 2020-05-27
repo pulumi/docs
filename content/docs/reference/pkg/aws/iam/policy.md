@@ -263,7 +263,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Document</span>
+        <span id="policydocument_csharp">
+<a href="#policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -272,7 +274,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +285,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +296,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="nameprefix_csharp">
+<a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +307,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +326,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-required"
             title="Required">
-        <span>Policy</span>
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -325,7 +337,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +348,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +359,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="nameprefix_go">
+<a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +370,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -369,7 +389,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
@@ -378,7 +400,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -387,7 +411,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -396,7 +422,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Prefix</span>
+        <span id="nameprefix_nodejs">
+<a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +433,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -422,7 +452,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -431,7 +463,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -440,7 +474,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +485,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>prefix</span>
+        <span id="name_prefix_python">
+<a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -458,7 +496,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -486,7 +526,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -495,7 +537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -510,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -534,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +593,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +610,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -567,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -708,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -717,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -726,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -735,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="state_nameprefix_csharp">
+<a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -744,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -754,7 +820,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Document</span>
+        <span id="state_policydocument_csharp">
+<a href="#state_policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -770,7 +838,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -779,7 +849,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -788,7 +860,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -797,7 +871,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Prefix</span>
+        <span id="state_nameprefix_go">
+<a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -806,7 +882,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -816,7 +894,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy</span>
+        <span id="state_policy_go">
+<a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -832,7 +912,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -841,7 +923,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -850,7 +934,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +945,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Prefix</span>
+        <span id="state_nameprefix_nodejs">
+<a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -868,7 +956,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -878,7 +968,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_nodejs">
+<a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
@@ -894,7 +986,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -903,7 +997,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -912,7 +1008,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -921,7 +1019,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>prefix</span>
+        <span id="state_name_prefix_python">
+<a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -930,7 +1030,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1042,9 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_python">
+<a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>

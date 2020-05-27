@@ -96,7 +96,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Owners</span>
+        <span id="owners_csharp">
+<a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -105,7 +107,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Executable<wbr>Users</span>
+        <span id="executableusers_csharp">
+<a href="#executableusers_csharp" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -115,7 +119,9 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">List&lt;Get<wbr>Ami<wbr>Ids<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -126,7 +132,9 @@ are several valid keys, for a full reference, check out
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -139,7 +147,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Ascending</span>
+        <span id="sortascending_csharp">
+<a href="#sortascending_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -155,7 +165,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-required"
             title="Required">
-        <span>Owners</span>
+        <span id="owners_go">
+<a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -164,7 +176,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Executable<wbr>Users</span>
+        <span id="executableusers_go">
+<a href="#executableusers_go" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -174,7 +188,9 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">[]Get<wbr>Ami<wbr>Ids<wbr>Filter</a></span>
     </dt>
@@ -185,7 +201,9 @@ are several valid keys, for a full reference, check out
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -198,7 +216,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Ascending</span>
+        <span id="sortascending_go">
+<a href="#sortascending_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -214,7 +234,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-required"
             title="Required">
-        <span>owners</span>
+        <span id="owners_nodejs">
+<a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -223,7 +245,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>executable<wbr>Users</span>
+        <span id="executableusers_nodejs">
+<a href="#executableusers_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -233,7 +257,9 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">Get<wbr>Ami<wbr>Ids<wbr>Filter[]</a></span>
     </dt>
@@ -244,7 +270,9 @@ are several valid keys, for a full reference, check out
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -257,7 +285,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort<wbr>Ascending</span>
+        <span id="sortascending_nodejs">
+<a href="#sortascending_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -273,7 +303,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-required"
             title="Required">
-        <span>owners</span>
+        <span id="owners_python">
+<a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -282,7 +314,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>executable_<wbr>users</span>
+        <span id="executable_users_python">
+<a href="#executable_users_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -292,7 +326,9 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></span>
     </dt>
@@ -303,7 +339,9 @@ are several valid keys, for a full reference, check out
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -316,7 +354,9 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort_<wbr>ascending</span>
+        <span id="sort_ascending_python">
+<a href="#sort_ascending_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -345,7 +385,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -362,7 +406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owners</span>
+        <span id="owners_csharp">
+<a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -370,7 +416,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Executable<wbr>Users</span>
+        <span id="executableusers_csharp">
+<a href="#executableusers_csharp" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -378,7 +426,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">List&lt;Get<wbr>Ami<wbr>Ids<wbr>Filter&gt;</a></span>
     </dt>
@@ -386,7 +436,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +446,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Ascending</span>
+        <span id="sortascending_csharp">
+<a href="#sortascending_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -409,7 +463,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +474,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -426,7 +484,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owners</span>
+        <span id="owners_go">
+<a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -434,7 +494,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Executable<wbr>Users</span>
+        <span id="executableusers_go">
+<a href="#executableusers_go" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -442,7 +504,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">[]Get<wbr>Ami<wbr>Ids<wbr>Filter</a></span>
     </dt>
@@ -450,7 +514,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +524,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Ascending</span>
+        <span id="sortascending_go">
+<a href="#sortascending_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -473,7 +541,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -490,7 +562,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owners</span>
+        <span id="owners_nodejs">
+<a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -498,7 +572,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>executable<wbr>Users</span>
+        <span id="executableusers_nodejs">
+<a href="#executableusers_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -506,7 +582,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">Get<wbr>Ami<wbr>Ids<wbr>Filter[]</a></span>
     </dt>
@@ -514,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sort<wbr>Ascending</span>
+        <span id="sortascending_nodejs">
+<a href="#sortascending_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -537,7 +619,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -546,7 +630,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -554,7 +640,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owners</span>
+        <span id="owners_python">
+<a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -562,7 +650,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>executable_<wbr>users</span>
+        <span id="executable_users_python">
+<a href="#executable_users_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -570,7 +660,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></span>
     </dt>
@@ -578,7 +670,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +680,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sort_<wbr>ascending</span>
+        <span id="sort_ascending_python">
+<a href="#sort_ascending_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>ascending</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -625,7 +721,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -633,7 +731,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -648,7 +748,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -656,7 +758,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -671,7 +775,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -679,7 +785,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -694,7 +802,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -702,7 +812,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

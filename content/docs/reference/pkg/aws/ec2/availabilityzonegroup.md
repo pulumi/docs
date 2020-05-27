@@ -238,7 +238,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +249,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Opt<wbr>In<wbr>Status</span>
+        <span id="optinstatus_csharp">
+<a href="#optinstatus_csharp" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +267,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +278,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Opt<wbr>In<wbr>Status</span>
+        <span id="optinstatus_go">
+<a href="#optinstatus_go" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +296,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Name</span>
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -297,7 +307,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>opt<wbr>In<wbr>Status</span>
+        <span id="optinstatus_nodejs">
+<a href="#optinstatus_nodejs" style="color: inherit; text-decoration: inherit;">opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -313,7 +325,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group_<wbr>name</span>
+        <span id="group_name_python">
+<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -322,7 +336,9 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>opt_<wbr>in_<wbr>status</span>
+        <span id="opt_in_status_python">
+<a href="#opt_in_status_python" style="color: inherit; text-decoration: inherit;">opt_<wbr>in_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -349,7 +365,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +382,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -394,7 +416,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -535,7 +559,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="state_groupname_csharp">
+<a href="#state_groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -544,7 +570,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opt<wbr>In<wbr>Status</span>
+        <span id="state_optinstatus_csharp">
+<a href="#state_optinstatus_csharp" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="state_groupname_go">
+<a href="#state_groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opt<wbr>In<wbr>Status</span>
+        <span id="state_optinstatus_go">
+<a href="#state_optinstatus_go" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +617,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Name</span>
+        <span id="state_groupname_nodejs">
+<a href="#state_groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opt<wbr>In<wbr>Status</span>
+        <span id="state_optinstatus_nodejs">
+<a href="#state_optinstatus_nodejs" style="color: inherit; text-decoration: inherit;">opt<wbr>In<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -610,7 +646,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>name</span>
+        <span id="state_group_name_python">
+<a href="#state_group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +657,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opt_<wbr>in_<wbr>status</span>
+        <span id="state_opt_in_status_python">
+<a href="#state_opt_in_status_python" style="color: inherit; text-decoration: inherit;">opt_<wbr>in_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

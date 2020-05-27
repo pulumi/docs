@@ -267,7 +267,9 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol<wbr>Type</span>
+        <span id="protocoltype_csharp">
+<a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +278,9 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="apikeyselectionexpression_csharp">
+<a href="#apikeyselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +291,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Configuration</span>
+        <span id="corsconfiguration_csharp">
+<a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -296,7 +302,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credentials<wbr>Arn</span>
+        <span id="credentialsarn_csharp">
+<a href="#credentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +313,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +324,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +335,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Key</span>
+        <span id="routekey_csharp">
+<a href="#routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +346,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Selection<wbr>Expression</span>
+        <span id="routeselectionexpression_csharp">
+<a href="#routeselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +358,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -351,7 +369,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target</span>
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +382,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -378,7 +400,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol<wbr>Type</span>
+        <span id="protocoltype_go">
+<a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +411,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="apikeyselectionexpression_go">
+<a href="#apikeyselectionexpression_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +424,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Configuration</span>
+        <span id="corsconfiguration_go">
+<a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
     </dt>
@@ -407,7 +435,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credentials<wbr>Arn</span>
+        <span id="credentialsarn_go">
+<a href="#credentialsarn_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -416,7 +446,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +457,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +468,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Key</span>
+        <span id="routekey_go">
+<a href="#routekey_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +479,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Selection<wbr>Expression</span>
+        <span id="routeselectionexpression_go">
+<a href="#routeselectionexpression_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +491,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -462,7 +502,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target</span>
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +515,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -489,7 +533,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-required"
             title="Required">
-        <span>protocol<wbr>Type</span>
+        <span id="protocoltype_nodejs">
+<a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +544,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="apikeyselectionexpression_nodejs">
+<a href="#apikeyselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +557,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Configuration</span>
+        <span id="corsconfiguration_nodejs">
+<a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
     </dt>
@@ -518,7 +568,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credentials<wbr>Arn</span>
+        <span id="credentialsarn_nodejs">
+<a href="#credentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +579,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -536,7 +590,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +601,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>route<wbr>Key</span>
+        <span id="routekey_nodejs">
+<a href="#routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +612,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>route<wbr>Selection<wbr>Expression</span>
+        <span id="routeselectionexpression_nodejs">
+<a href="#routeselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -564,7 +624,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -573,7 +635,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target</span>
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +648,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +666,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-required"
             title="Required">
-        <span>protocol_<wbr>type</span>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +677,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>key_<wbr>selection_<wbr>expression</span>
+        <span id="api_key_selection_expression_python">
+<a href="#api_key_selection_expression_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>selection_<wbr>expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -620,7 +690,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors_<wbr>configuration</span>
+        <span id="cors_configuration_python">
+<a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Dict[Api<wbr>Cors<wbr>Configuration]</a></span>
     </dt>
@@ -629,7 +701,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credentials_<wbr>arn</span>
+        <span id="credentials_arn_python">
+<a href="#credentials_arn_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +712,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +723,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -656,7 +734,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>route_<wbr>key</span>
+        <span id="route_key_python">
+<a href="#route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -665,7 +745,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>route_<wbr>selection_<wbr>expression</span>
+        <span id="route_selection_expression_python">
+<a href="#route_selection_expression_python" style="color: inherit; text-decoration: inherit;">route_<wbr>selection_<wbr>expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +757,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -684,7 +768,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target</span>
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -695,7 +781,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -722,7 +810,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Endpoint</span>
+        <span id="apiendpoint_csharp">
+<a href="#apiendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -731,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -740,7 +832,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Execution<wbr>Arn</span>
+        <span id="executionarn_csharp">
+<a href="#executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -751,7 +845,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -766,7 +862,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Endpoint</span>
+        <span id="apiendpoint_go">
+<a href="#apiendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -775,7 +873,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -784,7 +884,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>Execution<wbr>Arn</span>
+        <span id="executionarn_go">
+<a href="#executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -795,7 +897,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -810,7 +914,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Endpoint</span>
+        <span id="apiendpoint_nodejs">
+<a href="#apiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -819,7 +925,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +936,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>execution<wbr>Arn</span>
+        <span id="executionarn_nodejs">
+<a href="#executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -839,7 +949,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -854,7 +966,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>api_<wbr>endpoint</span>
+        <span id="api_endpoint_python">
+<a href="#api_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -863,7 +977,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -872,7 +988,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>execution_<wbr>arn</span>
+        <span id="execution_arn_python">
+<a href="#execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +1001,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1024,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Endpoint</span>
+        <span id="state_apiendpoint_csharp">
+<a href="#state_apiendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="state_apikeyselectionexpression_csharp">
+<a href="#state_apikeyselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1044,7 +1168,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1053,7 +1179,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Configuration</span>
+        <span id="state_corsconfiguration_csharp">
+<a href="#state_corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1062,7 +1190,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credentials<wbr>Arn</span>
+        <span id="state_credentialsarn_csharp">
+<a href="#state_credentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1071,7 +1201,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1080,7 +1212,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Execution<wbr>Arn</span>
+        <span id="state_executionarn_csharp">
+<a href="#state_executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1091,7 +1225,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1100,7 +1236,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Type</span>
+        <span id="state_protocoltype_csharp">
+<a href="#state_protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1109,7 +1247,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Key</span>
+        <span id="state_routekey_csharp">
+<a href="#state_routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1258,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Selection<wbr>Expression</span>
+        <span id="state_routeselectionexpression_csharp">
+<a href="#state_routeselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1128,7 +1270,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1137,7 +1281,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target</span>
+        <span id="state_target_csharp">
+<a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1148,7 +1294,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_csharp">
+<a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1164,7 +1312,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Endpoint</span>
+        <span id="state_apiendpoint_go">
+<a href="#state_apiendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1173,7 +1323,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="state_apikeyselectionexpression_go">
+<a href="#state_apikeyselectionexpression_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1184,7 +1336,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1193,7 +1347,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Configuration</span>
+        <span id="state_corsconfiguration_go">
+<a href="#state_corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
     </dt>
@@ -1202,7 +1358,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credentials<wbr>Arn</span>
+        <span id="state_credentialsarn_go">
+<a href="#state_credentialsarn_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1211,7 +1369,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1220,7 +1380,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Execution<wbr>Arn</span>
+        <span id="state_executionarn_go">
+<a href="#state_executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1231,7 +1393,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1240,7 +1404,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Type</span>
+        <span id="state_protocoltype_go">
+<a href="#state_protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1249,7 +1415,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Key</span>
+        <span id="state_routekey_go">
+<a href="#state_routekey_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1258,7 +1426,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Route<wbr>Selection<wbr>Expression</span>
+        <span id="state_routeselectionexpression_go">
+<a href="#state_routeselectionexpression_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1268,7 +1438,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1277,7 +1449,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target</span>
+        <span id="state_target_go">
+<a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1288,7 +1462,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_go">
+<a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1304,7 +1480,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Endpoint</span>
+        <span id="state_apiendpoint_nodejs">
+<a href="#state_apiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1313,7 +1491,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Key<wbr>Selection<wbr>Expression</span>
+        <span id="state_apikeyselectionexpression_nodejs">
+<a href="#state_apikeyselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1324,7 +1504,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1333,7 +1515,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Configuration</span>
+        <span id="state_corsconfiguration_nodejs">
+<a href="#state_corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
     </dt>
@@ -1342,7 +1526,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credentials<wbr>Arn</span>
+        <span id="state_credentialsarn_nodejs">
+<a href="#state_credentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1351,7 +1537,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1360,7 +1548,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>execution<wbr>Arn</span>
+        <span id="state_executionarn_nodejs">
+<a href="#state_executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1371,7 +1561,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1380,7 +1572,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol<wbr>Type</span>
+        <span id="state_protocoltype_nodejs">
+<a href="#state_protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1389,7 +1583,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>route<wbr>Key</span>
+        <span id="state_routekey_nodejs">
+<a href="#state_routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1398,7 +1594,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>route<wbr>Selection<wbr>Expression</span>
+        <span id="state_routeselectionexpression_nodejs">
+<a href="#state_routeselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Selection<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1408,7 +1606,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1417,7 +1617,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target</span>
+        <span id="state_target_nodejs">
+<a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1428,7 +1630,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_nodejs">
+<a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1444,7 +1648,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>endpoint</span>
+        <span id="state_api_endpoint_python">
+<a href="#state_api_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1453,7 +1659,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>key_<wbr>selection_<wbr>expression</span>
+        <span id="state_api_key_selection_expression_python">
+<a href="#state_api_key_selection_expression_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>selection_<wbr>expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1464,7 +1672,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1473,7 +1683,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors_<wbr>configuration</span>
+        <span id="state_cors_configuration_python">
+<a href="#state_cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicorsconfiguration">Dict[Api<wbr>Cors<wbr>Configuration]</a></span>
     </dt>
@@ -1482,7 +1694,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credentials_<wbr>arn</span>
+        <span id="state_credentials_arn_python">
+<a href="#state_credentials_arn_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1491,7 +1705,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1500,7 +1716,9 @@ Applicable for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>execution_<wbr>arn</span>
+        <span id="state_execution_arn_python">
+<a href="#state_execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1511,7 +1729,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1520,7 +1740,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol_<wbr>type</span>
+        <span id="state_protocol_type_python">
+<a href="#state_protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1529,7 +1751,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>route_<wbr>key</span>
+        <span id="state_route_key_python">
+<a href="#state_route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1538,7 +1762,9 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
     <dt class="property-optional"
             title="Optional">
-        <span>route_<wbr>selection_<wbr>expression</span>
+        <span id="state_route_selection_expression_python">
+<a href="#state_route_selection_expression_python" style="color: inherit; text-decoration: inherit;">route_<wbr>selection_<wbr>expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1548,7 +1774,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1557,7 +1785,9 @@ Defaults to `$request.method $request.path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target</span>
+        <span id="state_target_python">
+<a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1568,7 +1798,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_python">
+<a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1610,7 +1842,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Credentials</span>
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1619,7 +1853,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Headers</span>
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1628,7 +1864,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Methods</span>
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1637,7 +1875,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Origins</span>
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1646,7 +1886,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expose<wbr>Headers</span>
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1655,7 +1897,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1671,7 +1915,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Credentials</span>
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1680,7 +1926,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Headers</span>
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1689,7 +1937,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Methods</span>
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1698,7 +1948,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Origins</span>
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1707,7 +1959,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expose<wbr>Headers</span>
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1716,7 +1970,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1732,7 +1988,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Credentials</span>
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1741,7 +1999,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Headers</span>
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1750,7 +2010,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Methods</span>
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1759,7 +2021,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Origins</span>
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1768,7 +2032,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>expose<wbr>Headers</span>
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1777,7 +2043,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age</span>
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1793,7 +2061,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Credentials</span>
+        <span id="allowcredentials_python">
+<a href="#allowcredentials_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1802,7 +2072,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Headers</span>
+        <span id="allowheaders_python">
+<a href="#allowheaders_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1811,7 +2083,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Methods</span>
+        <span id="allowmethods_python">
+<a href="#allowmethods_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1820,7 +2094,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Origins</span>
+        <span id="alloworigins_python">
+<a href="#alloworigins_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1829,7 +2105,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>expose<wbr>Headers</span>
+        <span id="exposeheaders_python">
+<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1838,7 +2116,9 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age</span>
+        <span id="maxage_python">
+<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

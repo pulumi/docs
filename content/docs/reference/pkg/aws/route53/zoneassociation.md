@@ -279,7 +279,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +290,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +301,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Region</span>
+        <span id="vpcregion_csharp">
+<a href="#vpcregion_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +319,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -322,7 +330,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +341,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Region</span>
+        <span id="vpcregion_go">
+<a href="#vpcregion_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +359,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>vpc<wbr>Id</span>
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +370,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -365,7 +381,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Region</span>
+        <span id="vpcregion_nodejs">
+<a href="#vpcregion_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +399,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>vpc_<wbr>id</span>
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -390,7 +410,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -399,7 +421,9 @@ The ZoneAssociation resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>region</span>
+        <span id="vpc_region_python">
+<a href="#vpc_region_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -426,7 +450,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -441,7 +467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Id</span>
+        <span id="state_vpcid_csharp">
+<a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -621,7 +655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Region</span>
+        <span id="state_vpcregion_csharp">
+<a href="#state_vpcregion_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -630,7 +666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -646,7 +684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Id</span>
+        <span id="state_vpcid_go">
+<a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -655,7 +695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Region</span>
+        <span id="state_vpcregion_go">
+<a href="#state_vpcregion_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -664,7 +706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -680,7 +724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Id</span>
+        <span id="state_vpcid_nodejs">
+<a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -689,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Region</span>
+        <span id="state_vpcregion_nodejs">
+<a href="#state_vpcregion_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -714,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>id</span>
+        <span id="state_vpc_id_python">
+<a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>region</span>
+        <span id="state_vpc_region_python">
+<a href="#state_vpc_region_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -732,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -235,7 +235,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable</span>
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -244,7 +246,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="findingpublishingfrequency_csharp">
+<a href="#findingpublishingfrequency_csharp" style="color: inherit; text-decoration: inherit;">Finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +264,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable</span>
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -269,7 +275,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="findingpublishingfrequency_go">
+<a href="#findingpublishingfrequency_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -285,7 +293,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable</span>
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -294,7 +304,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="findingpublishingfrequency_nodejs">
+<a href="#findingpublishingfrequency_nodejs" style="color: inherit; text-decoration: inherit;">finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -310,7 +322,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable</span>
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -319,7 +333,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>finding_<wbr>publishing_<wbr>frequency</span>
+        <span id="finding_publishing_frequency_python">
+<a href="#finding_publishing_frequency_python" style="color: inherit; text-decoration: inherit;">finding_<wbr>publishing_<wbr>frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -346,7 +362,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +373,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +390,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +401,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +418,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>account<wbr>Id</span>
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +429,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +446,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>account_<wbr>id</span>
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -427,7 +457,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -568,7 +600,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -577,7 +611,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable</span>
+        <span id="state_enable_csharp">
+<a href="#state_enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -586,7 +622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="state_findingpublishingfrequency_csharp">
+<a href="#state_findingpublishingfrequency_csharp" style="color: inherit; text-decoration: inherit;">Finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -602,7 +640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable</span>
+        <span id="state_enable_go">
+<a href="#state_enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -620,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="state_findingpublishingfrequency_go">
+<a href="#state_findingpublishingfrequency_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -636,7 +680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Id</span>
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -645,7 +691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable</span>
+        <span id="state_enable_nodejs">
+<a href="#state_enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -654,7 +702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>finding<wbr>Publishing<wbr>Frequency</span>
+        <span id="state_findingpublishingfrequency_nodejs">
+<a href="#state_findingpublishingfrequency_nodejs" style="color: inherit; text-decoration: inherit;">finding<wbr>Publishing<wbr>Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -670,7 +720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>id</span>
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +731,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable</span>
+        <span id="state_enable_python">
+<a href="#state_enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -688,7 +742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>finding_<wbr>publishing_<wbr>frequency</span>
+        <span id="state_finding_publishing_frequency_python">
+<a href="#state_finding_publishing_frequency_python" style="color: inherit; text-decoration: inherit;">finding_<wbr>publishing_<wbr>frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -242,7 +242,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_csharp">
+<a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +253,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Asn</span>
+        <span id="bgpasn_csharp">
+<a href="#bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -260,7 +264,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>Id</span>
+        <span id="connectionid_csharp">
+<a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +275,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Owner<wbr>Account<wbr>Id</span>
+        <span id="owneraccountid_csharp">
+<a href="#owneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +286,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan</span>
+        <span id="vlan_csharp">
+<a href="#vlan_csharp" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -287,7 +297,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="amazonaddress_csharp">
+<a href="#amazonaddress_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +308,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_csharp">
+<a href="#bgpauthkey_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +319,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="customeraddress_csharp">
+<a href="#customeraddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +330,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -323,7 +341,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +359,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_go">
+<a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +370,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Asn</span>
+        <span id="bgpasn_go">
+<a href="#bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -357,7 +381,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>Id</span>
+        <span id="connectionid_go">
+<a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +392,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Owner<wbr>Account<wbr>Id</span>
+        <span id="owneraccountid_go">
+<a href="#owneraccountid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +403,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan</span>
+        <span id="vlan_go">
+<a href="#vlan_go" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -384,7 +414,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="amazonaddress_go">
+<a href="#amazonaddress_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +425,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_go">
+<a href="#bgpauthkey_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +436,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="customeraddress_go">
+<a href="#customeraddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +447,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -420,7 +458,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -436,7 +476,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Family</span>
+        <span id="addressfamily_nodejs">
+<a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -445,7 +487,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>bgp<wbr>Asn</span>
+        <span id="bgpasn_nodejs">
+<a href="#bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -454,7 +498,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>connection<wbr>Id</span>
+        <span id="connectionid_nodejs">
+<a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +509,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>owner<wbr>Account<wbr>Id</span>
+        <span id="owneraccountid_nodejs">
+<a href="#owneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -472,7 +520,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>vlan</span>
+        <span id="vlan_nodejs">
+<a href="#vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -481,7 +531,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon<wbr>Address</span>
+        <span id="amazonaddress_nodejs">
+<a href="#amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -490,7 +542,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span id="bgpauthkey_nodejs">
+<a href="#bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -499,7 +553,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Address</span>
+        <span id="customeraddress_nodejs">
+<a href="#customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +564,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -517,7 +575,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -533,7 +593,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>family</span>
+        <span id="address_family_python">
+<a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +604,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>bgp_<wbr>asn</span>
+        <span id="bgp_asn_python">
+<a href="#bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -551,7 +615,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>connection_<wbr>id</span>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +626,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>owner_<wbr>account_<wbr>id</span>
+        <span id="owner_account_id_python">
+<a href="#owner_account_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +637,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>vlan</span>
+        <span id="vlan_python">
+<a href="#vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -578,7 +648,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon_<wbr>address</span>
+        <span id="amazon_address_python">
+<a href="#amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -587,7 +659,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span id="bgp_auth_key_python">
+<a href="#bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -596,7 +670,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer_<wbr>address</span>
+        <span id="customer_address_python">
+<a href="#customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -605,7 +681,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -614,7 +692,9 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -641,7 +721,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span id="amazonsideasn_csharp">
+<a href="#amazonsideasn_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -649,7 +731,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -658,7 +742,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Aws<wbr>Device</span>
+        <span id="awsdevice_csharp">
+<a href="#awsdevice_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -667,7 +753,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -675,7 +763,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="jumboframecapable_csharp">
+<a href="#jumboframecapable_csharp" style="color: inherit; text-decoration: inherit;">Jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -691,7 +781,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span id="amazonsideasn_go">
+<a href="#amazonsideasn_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -699,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -708,7 +802,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Aws<wbr>Device</span>
+        <span id="awsdevice_go">
+<a href="#awsdevice_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -717,7 +813,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -725,7 +823,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="jumboframecapable_go">
+<a href="#jumboframecapable_go" style="color: inherit; text-decoration: inherit;">Jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -741,7 +841,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>amazon<wbr>Side<wbr>Asn</span>
+        <span id="amazonsideasn_nodejs">
+<a href="#amazonsideasn_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -749,7 +851,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -758,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>aws<wbr>Device</span>
+        <span id="awsdevice_nodejs">
+<a href="#awsdevice_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -767,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -775,7 +883,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="jumboframecapable_nodejs">
+<a href="#jumboframecapable_nodejs" style="color: inherit; text-decoration: inherit;">jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -791,7 +901,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>amazon_<wbr>side_<wbr>asn</span>
+        <span id="amazon_side_asn_python">
+<a href="#amazon_side_asn_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>side_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +911,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -808,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>aws_<wbr>device</span>
+        <span id="aws_device_python">
+<a href="#aws_device_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -817,7 +933,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -825,7 +943,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>jumbo_<wbr>frame_<wbr>capable</span>
+        <span id="jumbo_frame_capable_python">
+<a href="#jumbo_frame_capable_python" style="color: inherit; text-decoration: inherit;">jumbo_<wbr>frame_<wbr>capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -967,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_csharp">
+<a href="#state_addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -976,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="state_amazonaddress_csharp">
+<a href="#state_amazonaddress_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -985,7 +1109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span id="state_amazonsideasn_csharp">
+<a href="#state_amazonsideasn_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Device</span>
+        <span id="state_awsdevice_csharp">
+<a href="#state_awsdevice_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1011,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Asn</span>
+        <span id="state_bgpasn_csharp">
+<a href="#state_bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1020,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_csharp">
+<a href="#state_bgpauthkey_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1029,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Id</span>
+        <span id="state_connectionid_csharp">
+<a href="#state_connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1038,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="state_customeraddress_csharp">
+<a href="#state_customeraddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1047,7 +1185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="state_jumboframecapable_csharp">
+<a href="#state_jumboframecapable_csharp" style="color: inherit; text-decoration: inherit;">Jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1056,7 +1196,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_csharp">
+<a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1065,7 +1207,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1074,7 +1218,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_owneraccountid_csharp">
+<a href="#state_owneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1083,7 +1229,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan</span>
+        <span id="state_vlan_csharp">
+<a href="#state_vlan_csharp" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1099,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_go">
+<a href="#state_addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1108,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Address</span>
+        <span id="state_amazonaddress_go">
+<a href="#state_amazonaddress_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1117,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span id="state_amazonsideasn_go">
+<a href="#state_amazonsideasn_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1125,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1134,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Device</span>
+        <span id="state_awsdevice_go">
+<a href="#state_awsdevice_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1143,7 +1301,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Asn</span>
+        <span id="state_bgpasn_go">
+<a href="#state_bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1152,7 +1312,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_go">
+<a href="#state_bgpauthkey_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1161,7 +1323,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Id</span>
+        <span id="state_connectionid_go">
+<a href="#state_connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1170,7 +1334,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Address</span>
+        <span id="state_customeraddress_go">
+<a href="#state_customeraddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1179,7 +1345,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="state_jumboframecapable_go">
+<a href="#state_jumboframecapable_go" style="color: inherit; text-decoration: inherit;">Jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1188,7 +1356,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_go">
+<a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1197,7 +1367,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1206,7 +1378,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Account<wbr>Id</span>
+        <span id="state_owneraccountid_go">
+<a href="#state_owneraccountid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1215,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan</span>
+        <span id="state_vlan_go">
+<a href="#state_vlan_go" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1231,7 +1407,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Family</span>
+        <span id="state_addressfamily_nodejs">
+<a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1240,7 +1418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon<wbr>Address</span>
+        <span id="state_amazonaddress_nodejs">
+<a href="#state_amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1429,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon<wbr>Side<wbr>Asn</span>
+        <span id="state_amazonsideasn_nodejs">
+<a href="#state_amazonsideasn_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Side<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1257,7 +1439,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1266,7 +1450,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Device</span>
+        <span id="state_awsdevice_nodejs">
+<a href="#state_awsdevice_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1275,7 +1461,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Asn</span>
+        <span id="state_bgpasn_nodejs">
+<a href="#state_bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1284,7 +1472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span id="state_bgpauthkey_nodejs">
+<a href="#state_bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1293,7 +1483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Id</span>
+        <span id="state_connectionid_nodejs">
+<a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1302,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Address</span>
+        <span id="state_customeraddress_nodejs">
+<a href="#state_customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1311,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>jumbo<wbr>Frame<wbr>Capable</span>
+        <span id="state_jumboframecapable_nodejs">
+<a href="#state_jumboframecapable_nodejs" style="color: inherit; text-decoration: inherit;">jumbo<wbr>Frame<wbr>Capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1320,7 +1516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_nodejs">
+<a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1329,7 +1527,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1338,7 +1538,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>Account<wbr>Id</span>
+        <span id="state_owneraccountid_nodejs">
+<a href="#state_owneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1347,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan</span>
+        <span id="state_vlan_nodejs">
+<a href="#state_vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1363,7 +1567,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>family</span>
+        <span id="state_address_family_python">
+<a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1372,7 +1578,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon_<wbr>address</span>
+        <span id="state_amazon_address_python">
+<a href="#state_amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1381,7 +1589,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>amazon_<wbr>side_<wbr>asn</span>
+        <span id="state_amazon_side_asn_python">
+<a href="#state_amazon_side_asn_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>side_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1389,7 +1599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1398,7 +1610,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>device</span>
+        <span id="state_aws_device_python">
+<a href="#state_aws_device_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1407,7 +1621,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>asn</span>
+        <span id="state_bgp_asn_python">
+<a href="#state_bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1416,7 +1632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span id="state_bgp_auth_key_python">
+<a href="#state_bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1425,7 +1643,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>id</span>
+        <span id="state_connection_id_python">
+<a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1434,7 +1654,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer_<wbr>address</span>
+        <span id="state_customer_address_python">
+<a href="#state_customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1443,7 +1665,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>jumbo_<wbr>frame_<wbr>capable</span>
+        <span id="state_jumbo_frame_capable_python">
+<a href="#state_jumbo_frame_capable_python" style="color: inherit; text-decoration: inherit;">jumbo_<wbr>frame_<wbr>capable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1452,7 +1676,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_python">
+<a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1461,7 +1687,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1470,7 +1698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner_<wbr>account_<wbr>id</span>
+        <span id="state_owner_account_id_python">
+<a href="#state_owner_account_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1479,7 +1709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan</span>
+        <span id="state_vlan_python">
+<a href="#state_vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

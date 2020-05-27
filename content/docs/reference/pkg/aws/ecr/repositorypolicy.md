@@ -293,7 +293,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policy</span>
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -302,7 +304,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -318,7 +322,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policy</span>
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -327,7 +333,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +351,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
@@ -352,7 +362,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -368,7 +380,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -377,7 +391,9 @@ The RepositoryPolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -404,7 +420,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Registry<wbr>Id</span>
+        <span id="registryid_csharp">
+<a href="#registryid_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -428,7 +448,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -436,7 +458,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Registry<wbr>Id</span>
+        <span id="registryid_go">
+<a href="#registryid_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +486,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>registry<wbr>Id</span>
+        <span id="registryid_nodejs">
+<a href="#registryid_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +504,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -484,7 +514,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>registry_<wbr>id</span>
+        <span id="registry_id_python">
+<a href="#registry_id_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +658,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy</span>
+        <span id="state_policy_csharp">
+<a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -635,7 +669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registry<wbr>Id</span>
+        <span id="state_registryid_csharp">
+<a href="#state_registryid_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -644,7 +680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_csharp">
+<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -660,7 +698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy</span>
+        <span id="state_policy_go">
+<a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -669,7 +709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registry<wbr>Id</span>
+        <span id="state_registryid_go">
+<a href="#state_registryid_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -678,7 +720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_go">
+<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -694,7 +738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_nodejs">
+<a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
@@ -703,7 +749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>registry<wbr>Id</span>
+        <span id="state_registryid_nodejs">
+<a href="#state_registryid_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -712,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_nodejs">
+<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -728,7 +778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_python">
+<a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -737,7 +789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>registry_<wbr>id</span>
+        <span id="state_registry_id_python">
+<a href="#state_registry_id_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -746,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_python">
+<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
