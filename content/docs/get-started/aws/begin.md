@@ -9,7 +9,15 @@ menu:
     parent: aws
     identifier: aws-begin
 
-aliases: ["/docs/quickstart/aws/begin/"]
+aliases: [
+  "/docs/quickstart/aws/begin/",
+  "/docs/quickstart/aws/install-pulumi/",
+  "/docs/quickstart/aws/install-language-runtime/",
+  "/docs/quickstart/aws/configure/",
+  "/docs/get-started/aws/install-pulumi/",
+  "/docs/get-started/aws/install-language-runtime/",
+  "/docs/get-started/aws/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.

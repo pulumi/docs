@@ -9,7 +9,15 @@ menu:
     parent: kubernetes
     identifier: kubernetes-begin
 
-aliases: ["/docs/quickstart/kubernetes/begin/"]
+aliases: [
+  "/docs/quickstart/kubernetes/begin/",
+  "/docs/quickstart/kubernetes/install-pulumi/",
+  "/docs/quickstart/kubernetes/install-language-runtime/",
+  "/docs/quickstart/kubernetes/configure/",
+  "/docs/get-started/kubernetes/install-pulumi/",
+  "/docs/get-started/kubernetes/install-language-runtime/",
+  "/docs/get-started/kubernetes/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.

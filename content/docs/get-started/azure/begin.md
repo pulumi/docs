@@ -9,7 +9,15 @@ menu:
     parent: azure
     identifier: azure-begin
 
-aliases: ["/docs/quickstart/azure/begin/"]
+aliases: [
+  "/docs/quickstart/azure/begin/",
+  "/docs/quickstart/azure/install-pulumi/",
+  "/docs/quickstart/azure/install-language-runtime/",
+  "/docs/quickstart/azure/configure/",
+  "/docs/get-started/azure/install-pulumi/",
+  "/docs/get-started/azure/install-language-runtime/",
+  "/docs/get-started/azure/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
