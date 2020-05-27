@@ -102,4 +102,4 @@ The following packages are available in packager managers:
 * Go: [`github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty`](https://github.com/pulumi/pulumi-pagerduty)
 * .NET: [`Pulumi.Pagerduty`](https://www.nuget.org/packages/Pulumi.Pagerduty)
 
-The Pagerduty provider is open source and available in the [pulumi/pulumi-pagerduty](https://github.com/pulumi/pulumi-pagerduty) repo.
+The PagerDuty provider is open source and available in the [pulumi/pulumi-pagerduty](https://github.com/pulumi/pulumi-pagerduty) repo.
