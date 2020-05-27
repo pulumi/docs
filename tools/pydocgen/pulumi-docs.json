@@ -188,6 +188,12 @@
       "terraform_provider_name": "packet"
     },
     {
+      "name": "Pulumi Pagerduty",
+      "package_name": "pulumi_pagerduty",
+      "pulumi_provider_name": "pagerduty",
+      "terraform_provider_name": "pagerduty"
+    },
+    {
       "name": "Pulumi PostgreSQL",
       "package_name": "pulumi_postgresql",
       "pulumi_provider_name": "postgresql",
