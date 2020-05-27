@@ -226,7 +226,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Connections</span>
+        <span id="allowconnections_csharp">
+<a href="#allowconnections_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -237,7 +239,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="connectionlimit_csharp">
+<a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -247,7 +251,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="encoding_csharp">
+<a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -256,7 +262,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="istemplate_csharp">
+<a href="#istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -267,7 +275,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Collate</span>
+        <span id="lccollate_csharp">
+<a href="#lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +286,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Ctype</span>
+        <span id="lcctype_csharp">
+<a href="#lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +297,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +309,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +324,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tablespace<wbr>Name</span>
+        <span id="tablespacename_csharp">
+<a href="#tablespacename_csharp" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +338,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="template_csharp">
+<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +356,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Connections</span>
+        <span id="allowconnections_go">
+<a href="#allowconnections_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -347,7 +369,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="connectionlimit_go">
+<a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -357,7 +381,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="encoding_go">
+<a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +392,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="istemplate_go">
+<a href="#istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -377,7 +405,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Collate</span>
+        <span id="lccollate_go">
+<a href="#lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -386,7 +416,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Ctype</span>
+        <span id="lcctype_go">
+<a href="#lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -395,7 +427,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +439,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +454,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tablespace<wbr>Name</span>
+        <span id="tablespacename_go">
+<a href="#tablespacename_go" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +468,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="template_go">
+<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -446,7 +486,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Connections</span>
+        <span id="allowconnections_nodejs">
+<a href="#allowconnections_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -457,7 +499,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Limit</span>
+        <span id="connectionlimit_nodejs">
+<a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -467,7 +511,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="encoding_nodejs">
+<a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +522,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Template</span>
+        <span id="istemplate_nodejs">
+<a href="#istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -487,7 +535,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc<wbr>Collate</span>
+        <span id="lccollate_nodejs">
+<a href="#lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -496,7 +546,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc<wbr>Ctype</span>
+        <span id="lcctype_nodejs">
+<a href="#lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -505,7 +557,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -515,7 +569,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +584,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tablespace<wbr>Name</span>
+        <span id="tablespacename_nodejs">
+<a href="#tablespacename_nodejs" style="color: inherit; text-decoration: inherit;">tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -540,7 +598,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="template_nodejs">
+<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +616,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>connections</span>
+        <span id="allow_connections_python">
+<a href="#allow_connections_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -567,7 +629,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>limit</span>
+        <span id="connection_limit_python">
+<a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -577,7 +641,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="encoding_python">
+<a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +652,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>template</span>
+        <span id="is_template_python">
+<a href="#is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -597,7 +665,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc_<wbr>collate</span>
+        <span id="lc_collate_python">
+<a href="#lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +676,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc_<wbr>ctype</span>
+        <span id="lc_ctype_python">
+<a href="#lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +687,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +699,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +714,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tablespace_<wbr>name</span>
+        <span id="tablespace_name_python">
+<a href="#tablespace_name_python" style="color: inherit; text-decoration: inherit;">tablespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -650,7 +728,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="template_python">
+<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +757,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +774,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -707,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -722,7 +808,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -863,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Connections</span>
+        <span id="state_allowconnections_csharp">
+<a href="#state_allowconnections_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -874,7 +964,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="state_connectionlimit_csharp">
+<a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -884,7 +976,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="state_encoding_csharp">
+<a href="#state_encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -893,7 +987,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="state_istemplate_csharp">
+<a href="#state_istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -904,7 +1000,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Collate</span>
+        <span id="state_lccollate_csharp">
+<a href="#state_lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -913,7 +1011,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Ctype</span>
+        <span id="state_lcctype_csharp">
+<a href="#state_lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1022,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -932,7 +1034,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="state_owner_csharp">
+<a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -945,7 +1049,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tablespace<wbr>Name</span>
+        <span id="state_tablespacename_csharp">
+<a href="#state_tablespacename_csharp" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -957,7 +1063,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="state_template_csharp">
+<a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -973,7 +1081,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Connections</span>
+        <span id="state_allowconnections_go">
+<a href="#state_allowconnections_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -984,7 +1094,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="state_connectionlimit_go">
+<a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -994,7 +1106,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="state_encoding_go">
+<a href="#state_encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1003,7 +1117,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="state_istemplate_go">
+<a href="#state_istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1014,7 +1130,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Collate</span>
+        <span id="state_lccollate_go">
+<a href="#state_lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1023,7 +1141,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lc<wbr>Ctype</span>
+        <span id="state_lcctype_go">
+<a href="#state_lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1032,7 +1152,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1042,7 +1164,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="state_owner_go">
+<a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1055,7 +1179,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tablespace<wbr>Name</span>
+        <span id="state_tablespacename_go">
+<a href="#state_tablespacename_go" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1067,7 +1193,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="state_template_go">
+<a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1083,7 +1211,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Connections</span>
+        <span id="state_allowconnections_nodejs">
+<a href="#state_allowconnections_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1094,7 +1224,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Limit</span>
+        <span id="state_connectionlimit_nodejs">
+<a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1104,7 +1236,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="state_encoding_nodejs">
+<a href="#state_encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1113,7 +1247,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Template</span>
+        <span id="state_istemplate_nodejs">
+<a href="#state_istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1124,7 +1260,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc<wbr>Collate</span>
+        <span id="state_lccollate_nodejs">
+<a href="#state_lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1133,7 +1271,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc<wbr>Ctype</span>
+        <span id="state_lcctype_nodejs">
+<a href="#state_lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1142,7 +1282,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1152,7 +1294,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="state_owner_nodejs">
+<a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1165,7 +1309,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tablespace<wbr>Name</span>
+        <span id="state_tablespacename_nodejs">
+<a href="#state_tablespacename_nodejs" style="color: inherit; text-decoration: inherit;">tablespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1177,7 +1323,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="state_template_nodejs">
+<a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1193,7 +1341,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>connections</span>
+        <span id="state_allow_connections_python">
+<a href="#state_allow_connections_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1204,7 +1354,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>limit</span>
+        <span id="state_connection_limit_python">
+<a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1214,7 +1366,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="state_encoding_python">
+<a href="#state_encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1223,7 +1377,9 @@ established to this database. `-1` (the default) means no limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>template</span>
+        <span id="state_is_template_python">
+<a href="#state_is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1234,7 +1390,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc_<wbr>collate</span>
+        <span id="state_lc_collate_python">
+<a href="#state_lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1243,7 +1401,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lc_<wbr>ctype</span>
+        <span id="state_lc_ctype_python">
+<a href="#state_lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1252,7 +1412,9 @@ superusers or the owner of the database can clone it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1262,7 +1424,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="state_owner_python">
+<a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1275,7 +1439,9 @@ the username in the provider is a superuser.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tablespace_<wbr>name</span>
+        <span id="state_tablespace_name_python">
+<a href="#state_tablespace_name_python" style="color: inherit; text-decoration: inherit;">tablespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1287,7 +1453,9 @@ created in this database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="state_template_python">
+<a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
