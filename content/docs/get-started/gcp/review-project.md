@@ -3,7 +3,7 @@ title: Review the New Project | GCP
 h1: Review the New Project
 linktitle: Review the New Project
 meta_desc: This page provides an overview on how to a review a new GCP project.
-weight: 6
+weight: 4
 menu:
   getstarted:
     parent: gcp

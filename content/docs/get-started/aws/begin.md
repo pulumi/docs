@@ -3,9 +3,11 @@ title: Before you begin | AWS
 h1: Before you begin
 linktitle: Before you begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
-weight: 10000
-block_external_search_index: true
-exclude_from_pulumi_search_index: true
+weight: 2
+menu:
+  getstarted:
+    parent: aws
+    identifier: aws-begin
 
 aliases: ["/docs/quickstart/aws/begin/"]
 ---
@@ -53,5 +55,4 @@ If you have multiple AWS profiles set up, specify a different profile using one 
 
 Next, we'll create a new project.
 
-<a data-track="previous-step" class="btn" href="/docs/get-started/aws/">&lt; PREVIOUS STEP</a>
-<a data-track="next-step" class="btn" href="/docs/get-started/aws/create-project/">CREATE A NEW PROJECT &gt;</a>
+{{< get-started-stepper >}}

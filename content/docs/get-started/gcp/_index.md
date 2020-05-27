@@ -13,6 +13,6 @@ aliases: ["/docs/quickstart/gcp/"]
 
 {{< cloud-intro "Google Cloud" >}}
 
-Let's start with installing Pulumi.
+To get started we will walk through installing Pulumi, installing your preferred language runtime (if needed), and setting up the GCP CLI. Click the button below to get started.
 
 {{< get-started-stepper >}}
