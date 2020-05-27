@@ -254,7 +254,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +265,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +276,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +287,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_csharp">
+<a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -290,7 +298,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +309,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Key<wbr>Path</span>
+        <span id="partitionkeypath_csharp">
+<a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +320,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Throughput</span>
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -317,7 +331,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Keys</span>
+        <span id="uniquekeys_csharp">
+<a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">List&lt;Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
@@ -333,7 +349,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +360,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +371,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +382,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_go">
+<a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -369,7 +393,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +404,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Key<wbr>Path</span>
+        <span id="partitionkeypath_go">
+<a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +415,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Throughput</span>
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -396,7 +426,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Keys</span>
+        <span id="uniquekeys_go">
+<a href="#uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
     </dt>
@@ -412,7 +444,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Name</span>
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -421,7 +455,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Name</span>
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +466,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -439,7 +477,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="defaultttl_nodejs">
+<a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -448,7 +488,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +499,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Key<wbr>Path</span>
+        <span id="partitionkeypath_nodejs">
+<a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +510,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>throughput</span>
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -475,7 +521,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Keys</span>
+        <span id="uniquekeys_nodejs">
+<a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sql<wbr>Container<wbr>Unique<wbr>Key[]</a></span>
     </dt>
@@ -491,7 +539,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>name</span>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -500,7 +550,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>database_<wbr>name</span>
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -509,7 +561,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +572,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>ttl</span>
+        <span id="default_ttl_python">
+<a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -527,7 +583,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -536,7 +594,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition_<wbr>key_<wbr>path</span>
+        <span id="partition_key_path_python">
+<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +605,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>throughput</span>
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -554,7 +616,9 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique_<wbr>keys</span>
+        <span id="unique_keys_python">
+<a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key]</a></span>
     </dt>
@@ -581,7 +645,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -596,7 +662,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +679,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -626,7 +696,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -767,7 +839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Name</span>
+        <span id="state_accountname_csharp">
+<a href="#state_accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +850,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Name</span>
+        <span id="state_databasename_csharp">
+<a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="state_defaultttl_csharp">
+<a href="#state_defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -794,7 +872,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Key<wbr>Path</span>
+        <span id="state_partitionkeypath_csharp">
+<a href="#state_partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -812,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -821,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Throughput</span>
+        <span id="state_throughput_csharp">
+<a href="#state_throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -830,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Keys</span>
+        <span id="state_uniquekeys_csharp">
+<a href="#state_uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">List&lt;Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
@@ -846,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Name</span>
+        <span id="state_accountname_go">
+<a href="#state_accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -855,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Name</span>
+        <span id="state_databasename_go">
+<a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -864,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="state_defaultttl_go">
+<a href="#state_defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -873,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -882,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Key<wbr>Path</span>
+        <span id="state_partitionkeypath_go">
+<a href="#state_partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -891,7 +989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -900,7 +1000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Throughput</span>
+        <span id="state_throughput_go">
+<a href="#state_throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -909,7 +1011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Keys</span>
+        <span id="state_uniquekeys_go">
+<a href="#state_uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
     </dt>
@@ -925,7 +1029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Name</span>
+        <span id="state_accountname_nodejs">
+<a href="#state_accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -934,7 +1040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>database<wbr>Name</span>
+        <span id="state_databasename_nodejs">
+<a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -943,7 +1051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="state_defaultttl_nodejs">
+<a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -952,7 +1062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -961,7 +1073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Key<wbr>Path</span>
+        <span id="state_partitionkeypath_nodejs">
+<a href="#state_partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -970,7 +1084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -979,7 +1095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>throughput</span>
+        <span id="state_throughput_nodejs">
+<a href="#state_throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -988,7 +1106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Keys</span>
+        <span id="state_uniquekeys_nodejs">
+<a href="#state_uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sql<wbr>Container<wbr>Unique<wbr>Key[]</a></span>
     </dt>
@@ -1004,7 +1124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>name</span>
+        <span id="state_account_name_python">
+<a href="#state_account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1013,7 +1135,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>database_<wbr>name</span>
+        <span id="state_database_name_python">
+<a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1146,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>ttl</span>
+        <span id="state_default_ttl_python">
+<a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1031,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1040,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition_<wbr>key_<wbr>path</span>
+        <span id="state_partition_key_path_python">
+<a href="#state_partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1049,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1058,7 +1190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>throughput</span>
+        <span id="state_throughput_python">
+<a href="#state_throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1067,7 +1201,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique_<wbr>keys</span>
+        <span id="state_unique_keys_python">
+<a href="#state_unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key]</a></span>
     </dt>
@@ -1109,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Paths</span>
+        <span id="paths_csharp">
+<a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1125,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Paths</span>
+        <span id="paths_go">
+<a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1141,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>paths</span>
+        <span id="paths_nodejs">
+<a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1157,7 +1299,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>paths</span>
+        <span id="paths_python">
+<a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

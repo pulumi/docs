@@ -14,8 +14,6 @@ Manages an EventGrid Event Subscription
 
 
 
-Deprecated: azure.eventhub.EventSubscription has been deprecated in favor of azure.eventgrid.EventSubscription
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,9 +41,7 @@ default_account = azure.storage.Account("defaultAccount",
     tags={
         "environment": "staging",
     })
-default_queue = azure.storage.Queue("defaultQueue",
-    resource_group_name=default_resource_group.name,
-    storage_account_name=default_account.name)
+default_queue = azure.storage.Queue("defaultQueue", storage_account_name=default_account.name)
 default_event_subscription = azure.eventgrid.EventSubscription("defaultEventSubscription",
     scope=default_resource_group.id,
     storage_queue_endpoint={
@@ -70,10 +66,7 @@ const defaultAccount = new azure.storage.Account("defaultAccount", {
         environment: "staging",
     },
 });
-const defaultQueue = new azure.storage.Queue("defaultQueue", {
-    resourceGroupName: defaultResourceGroup.name,
-    storageAccountName: defaultAccount.name,
-});
+const defaultQueue = new azure.storage.Queue("defaultQueue", {storageAccountName: defaultAccount.name});
 const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultEventSubscription", {
     scope: defaultResourceGroup.id,
     storage_queue_endpoint: {
@@ -271,7 +264,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,16 +275,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Schema</span>
+        <span id="eventdeliveryschema_csharp">
+<a href="#eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Endpoint</span>
+        <span id="eventhubendpoint_csharp">
+<a href="#eventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -298,7 +297,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="hybridconnectionendpoint_csharp">
+<a href="#hybridconnectionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -307,7 +308,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Event<wbr>Types</span>
+        <span id="includedeventtypes_csharp">
+<a href="#includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -316,7 +319,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -325,7 +330,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +341,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Policy</span>
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -343,7 +352,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="storageblobdeadletterdestination_csharp">
+<a href="#storageblobdeadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -352,7 +363,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="storagequeueendpoint_csharp">
+<a href="#storagequeueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -361,7 +374,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Filter</span>
+        <span id="subjectfilter_csharp">
+<a href="#subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -370,16 +385,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_csharp">
+<a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Endpoint</span>
+        <span id="webhookendpoint_csharp">
+<a href="#webhookendpoint_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -395,7 +414,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,16 +425,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Schema</span>
+        <span id="eventdeliveryschema_go">
+<a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Endpoint</span>
+        <span id="eventhubendpoint_go">
+<a href="#eventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
@@ -422,7 +447,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="hybridconnectionendpoint_go">
+<a href="#hybridconnectionendpoint_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
@@ -431,7 +458,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Event<wbr>Types</span>
+        <span id="includedeventtypes_go">
+<a href="#includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -440,7 +469,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -449,7 +480,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +491,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Policy</span>
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
@@ -467,7 +502,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="storageblobdeadletterdestination_go">
+<a href="#storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
@@ -476,7 +513,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="storagequeueendpoint_go">
+<a href="#storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
@@ -485,7 +524,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Filter</span>
+        <span id="subjectfilter_go">
+<a href="#subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
@@ -494,16 +535,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_go">
+<a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Endpoint</span>
+        <span id="webhookendpoint_go">
+<a href="#webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
@@ -519,7 +564,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,16 +575,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Delivery<wbr>Schema</span>
+        <span id="eventdeliveryschema_nodejs">
+<a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub<wbr>Endpoint</span>
+        <span id="eventhubendpoint_nodejs">
+<a href="#eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
@@ -546,7 +597,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="hybridconnectionendpoint_nodejs">
+<a href="#hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
@@ -555,7 +608,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Event<wbr>Types</span>
+        <span id="includedeventtypes_nodejs">
+<a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -564,7 +619,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -573,7 +630,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +641,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Policy</span>
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
@@ -591,7 +652,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="storageblobdeadletterdestination_nodejs">
+<a href="#storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
@@ -600,7 +663,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="storagequeueendpoint_nodejs">
+<a href="#storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
@@ -609,7 +674,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Filter</span>
+        <span id="subjectfilter_nodejs">
+<a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
@@ -618,16 +685,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>topic<wbr>Name</span>
+        <span id="topicname_nodejs">
+<a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook<wbr>Endpoint</span>
+        <span id="webhookendpoint_nodejs">
+<a href="#webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
@@ -643,7 +714,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,16 +725,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>delivery_<wbr>schema</span>
+        <span id="event_delivery_schema_python">
+<a href="#event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub_<wbr>endpoint</span>
+        <span id="eventhub_endpoint_python">
+<a href="#eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Dict[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint]</a></span>
     </dt>
@@ -670,7 +747,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>hybrid_<wbr>connection_<wbr>endpoint</span>
+        <span id="hybrid_connection_endpoint_python">
+<a href="#hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Dict[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint]</a></span>
     </dt>
@@ -679,7 +758,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>event_<wbr>types</span>
+        <span id="included_event_types_python">
+<a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -688,7 +769,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -697,7 +780,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -706,7 +791,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry_<wbr>policy</span>
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Dict[Event<wbr>Subscription<wbr>Retry<wbr>Policy]</a></span>
     </dt>
@@ -715,7 +802,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</span>
+        <span id="storage_blob_dead_letter_destination_python">
+<a href="#storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Dict[Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination]</a></span>
     </dt>
@@ -724,7 +813,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>queue_<wbr>endpoint</span>
+        <span id="storage_queue_endpoint_python">
+<a href="#storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Dict[Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint]</a></span>
     </dt>
@@ -733,7 +824,9 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject_<wbr>filter</span>
+        <span id="subject_filter_python">
+<a href="#subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Dict[Event<wbr>Subscription<wbr>Subject<wbr>Filter]</a></span>
     </dt>
@@ -742,16 +835,20 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>topic_<wbr>name</span>
+        <span id="topic_name_python">
+<a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook_<wbr>endpoint</span>
+        <span id="webhook_endpoint_python">
+<a href="#webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Dict[Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint]</a></span>
     </dt>
@@ -778,7 +875,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +892,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -808,7 +909,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -823,7 +926,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -964,16 +1069,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Schema</span>
+        <span id="state_eventdeliveryschema_csharp">
+<a href="#state_eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Endpoint</span>
+        <span id="state_eventhubendpoint_csharp">
+<a href="#state_eventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -982,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="state_hybridconnectionendpoint_csharp">
+<a href="#state_hybridconnectionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -991,7 +1102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Event<wbr>Types</span>
+        <span id="state_includedeventtypes_csharp">
+<a href="#state_includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1000,7 +1113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1009,7 +1124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1018,7 +1135,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Policy</span>
+        <span id="state_retrypolicy_csharp">
+<a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1027,7 +1146,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope</span>
+        <span id="state_scope_csharp">
+<a href="#state_scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1036,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="state_storageblobdeadletterdestination_csharp">
+<a href="#state_storageblobdeadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1045,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_storagequeueendpoint_csharp">
+<a href="#state_storagequeueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -1054,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Filter</span>
+        <span id="state_subjectfilter_csharp">
+<a href="#state_subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -1063,16 +1190,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topic<wbr>Name</span>
+        <span id="state_topicname_csharp">
+<a href="#state_topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Endpoint</span>
+        <span id="state_webhookendpoint_csharp">
+<a href="#state_webhookendpoint_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
@@ -1088,16 +1219,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Schema</span>
+        <span id="state_eventdeliveryschema_go">
+<a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Endpoint</span>
+        <span id="state_eventhubendpoint_go">
+<a href="#state_eventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
@@ -1106,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="state_hybridconnectionendpoint_go">
+<a href="#state_hybridconnectionendpoint_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
@@ -1115,7 +1252,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Event<wbr>Types</span>
+        <span id="state_includedeventtypes_go">
+<a href="#state_includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1124,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1133,7 +1274,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1142,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Policy</span>
+        <span id="state_retrypolicy_go">
+<a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
@@ -1151,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope</span>
+        <span id="state_scope_go">
+<a href="#state_scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1160,7 +1307,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="state_storageblobdeadletterdestination_go">
+<a href="#state_storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
@@ -1169,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_storagequeueendpoint_go">
+<a href="#state_storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
@@ -1178,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Filter</span>
+        <span id="state_subjectfilter_go">
+<a href="#state_subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
@@ -1187,16 +1340,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topic<wbr>Name</span>
+        <span id="state_topicname_go">
+<a href="#state_topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhook<wbr>Endpoint</span>
+        <span id="state_webhookendpoint_go">
+<a href="#state_webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
@@ -1212,16 +1369,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Delivery<wbr>Schema</span>
+        <span id="state_eventdeliveryschema_nodejs">
+<a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub<wbr>Endpoint</span>
+        <span id="state_eventhubendpoint_nodejs">
+<a href="#state_eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
@@ -1230,7 +1391,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hybrid<wbr>Connection<wbr>Endpoint</span>
+        <span id="state_hybridconnectionendpoint_nodejs">
+<a href="#state_hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
@@ -1239,7 +1402,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Event<wbr>Types</span>
+        <span id="state_includedeventtypes_nodejs">
+<a href="#state_includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1248,7 +1413,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1257,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1266,7 +1435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Policy</span>
+        <span id="state_retrypolicy_nodejs">
+<a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
@@ -1275,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope</span>
+        <span id="state_scope_nodejs">
+<a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1284,7 +1457,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
+        <span id="state_storageblobdeadletterdestination_nodejs">
+<a href="#state_storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
@@ -1293,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_storagequeueendpoint_nodejs">
+<a href="#state_storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
@@ -1302,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Filter</span>
+        <span id="state_subjectfilter_nodejs">
+<a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
@@ -1311,16 +1490,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>topic<wbr>Name</span>
+        <span id="state_topicname_nodejs">
+<a href="#state_topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook<wbr>Endpoint</span>
+        <span id="state_webhookendpoint_nodejs">
+<a href="#state_webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
@@ -1336,16 +1519,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>delivery_<wbr>schema</span>
+        <span id="state_event_delivery_schema_python">
+<a href="#state_event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+    <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub_<wbr>endpoint</span>
+        <span id="state_eventhub_endpoint_python">
+<a href="#state_eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Dict[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint]</a></span>
     </dt>
@@ -1354,7 +1541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hybrid_<wbr>connection_<wbr>endpoint</span>
+        <span id="state_hybrid_connection_endpoint_python">
+<a href="#state_hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Dict[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint]</a></span>
     </dt>
@@ -1363,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>event_<wbr>types</span>
+        <span id="state_included_event_types_python">
+<a href="#state_included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1372,7 +1563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1381,7 +1574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1390,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry_<wbr>policy</span>
+        <span id="state_retry_policy_python">
+<a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Dict[Event<wbr>Subscription<wbr>Retry<wbr>Policy]</a></span>
     </dt>
@@ -1399,7 +1596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope</span>
+        <span id="state_scope_python">
+<a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1408,7 +1607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</span>
+        <span id="state_storage_blob_dead_letter_destination_python">
+<a href="#state_storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Dict[Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination]</a></span>
     </dt>
@@ -1417,7 +1618,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>queue_<wbr>endpoint</span>
+        <span id="state_storage_queue_endpoint_python">
+<a href="#state_storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Dict[Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint]</a></span>
     </dt>
@@ -1426,7 +1629,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject_<wbr>filter</span>
+        <span id="state_subject_filter_python">
+<a href="#state_subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Dict[Event<wbr>Subscription<wbr>Subject<wbr>Filter]</a></span>
     </dt>
@@ -1435,16 +1640,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>topic_<wbr>name</span>
+        <span id="state_topic_name_python">
+<a href="#state_topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the topic to associate with the event subscription.
+    <dd>{{% md %}}(Optional) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook_<wbr>endpoint</span>
+        <span id="state_webhook_endpoint_python">
+<a href="#state_webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Dict[Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint]</a></span>
     </dt>
@@ -1486,7 +1695,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Eventhub<wbr>Id</span>
+        <span id="eventhubid_csharp">
+<a href="#eventhubid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1502,7 +1713,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Eventhub<wbr>Id</span>
+        <span id="eventhubid_go">
+<a href="#eventhubid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1518,7 +1731,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>eventhub<wbr>Id</span>
+        <span id="eventhubid_nodejs">
+<a href="#eventhubid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1534,7 +1749,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>eventhub_<wbr>id</span>
+        <span id="eventhub_id_python">
+<a href="#eventhub_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1568,7 +1785,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hybrid<wbr>Connection<wbr>Id</span>
+        <span id="hybridconnectionid_csharp">
+<a href="#hybridconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1584,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hybrid<wbr>Connection<wbr>Id</span>
+        <span id="hybridconnectionid_go">
+<a href="#hybridconnectionid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1600,7 +1821,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hybrid<wbr>Connection<wbr>Id</span>
+        <span id="hybridconnectionid_nodejs">
+<a href="#hybridconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1616,7 +1839,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hybrid<wbr>Connection<wbr>Id</span>
+        <span id="hybridconnectionid_python">
+<a href="#hybridconnectionid_python" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1650,7 +1875,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Time<wbr>To<wbr>Live</span>
+        <span id="eventtimetolive_csharp">
+<a href="#eventtimetolive_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1659,7 +1886,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Delivery<wbr>Attempts</span>
+        <span id="maxdeliveryattempts_csharp">
+<a href="#maxdeliveryattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1675,7 +1904,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Time<wbr>To<wbr>Live</span>
+        <span id="eventtimetolive_go">
+<a href="#eventtimetolive_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1684,7 +1915,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Delivery<wbr>Attempts</span>
+        <span id="maxdeliveryattempts_go">
+<a href="#maxdeliveryattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1700,7 +1933,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Time<wbr>To<wbr>Live</span>
+        <span id="eventtimetolive_nodejs">
+<a href="#eventtimetolive_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1709,7 +1944,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Delivery<wbr>Attempts</span>
+        <span id="maxdeliveryattempts_nodejs">
+<a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1725,7 +1962,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Time<wbr>To<wbr>Live</span>
+        <span id="eventtimetolive_python">
+<a href="#eventtimetolive_python" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1734,7 +1973,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Delivery<wbr>Attempts</span>
+        <span id="maxdeliveryattempts_python">
+<a href="#maxdeliveryattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1768,7 +2009,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1777,7 +2020,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Blob<wbr>Container<wbr>Name</span>
+        <span id="storageblobcontainername_csharp">
+<a href="#storageblobcontainername_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1793,7 +2038,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1802,7 +2049,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Blob<wbr>Container<wbr>Name</span>
+        <span id="storageblobcontainername_go">
+<a href="#storageblobcontainername_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1818,7 +2067,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1827,7 +2078,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Blob<wbr>Container<wbr>Name</span>
+        <span id="storageblobcontainername_nodejs">
+<a href="#storageblobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1843,7 +2096,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Blob<wbr>Container<wbr>Name</span>
+        <span id="storageblobcontainername_python">
+<a href="#storageblobcontainername_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1852,7 +2107,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>id</span>
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1886,16 +2143,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Queue<wbr>Name</span>
+        <span id="queuename_csharp">
+<a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscriptio will receive events.
+    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1911,16 +2172,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Queue<wbr>Name</span>
+        <span id="queuename_go">
+<a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscriptio will receive events.
+    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1936,16 +2201,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>queue<wbr>Name</span>
+        <span id="queuename_nodejs">
+<a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscriptio will receive events.
+    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1961,16 +2230,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>queue_<wbr>name</span>
+        <span id="queue_name_python">
+<a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscriptio will receive events.
+    <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>id</span>
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2004,7 +2277,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Case<wbr>Sensitive</span>
+        <span id="casesensitive_csharp">
+<a href="#casesensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2013,7 +2288,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Begins<wbr>With</span>
+        <span id="subjectbeginswith_csharp">
+<a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2022,7 +2299,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Ends<wbr>With</span>
+        <span id="subjectendswith_csharp">
+<a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2038,7 +2317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Case<wbr>Sensitive</span>
+        <span id="casesensitive_go">
+<a href="#casesensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2047,7 +2328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Begins<wbr>With</span>
+        <span id="subjectbeginswith_go">
+<a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2056,7 +2339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subject<wbr>Ends<wbr>With</span>
+        <span id="subjectendswith_go">
+<a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2072,7 +2357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>case<wbr>Sensitive</span>
+        <span id="casesensitive_nodejs">
+<a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2081,7 +2368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Begins<wbr>With</span>
+        <span id="subjectbeginswith_nodejs">
+<a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2090,7 +2379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Ends<wbr>With</span>
+        <span id="subjectendswith_nodejs">
+<a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2106,7 +2397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>case<wbr>Sensitive</span>
+        <span id="casesensitive_python">
+<a href="#casesensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2115,7 +2408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Begins<wbr>With</span>
+        <span id="subjectbeginswith_python">
+<a href="#subjectbeginswith_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2124,7 +2419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subject<wbr>Ends<wbr>With</span>
+        <span id="subjectendswith_python">
+<a href="#subjectendswith_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2158,7 +2455,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2174,7 +2473,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2190,7 +2491,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2206,7 +2509,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

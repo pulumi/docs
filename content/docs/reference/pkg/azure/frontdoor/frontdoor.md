@@ -315,7 +315,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="backendpoolhealthprobes_csharp">
+<a href="#backendpoolhealthprobes_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;</a></span>
     </dt>
@@ -324,7 +326,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="backendpoolloadbalancings_csharp">
+<a href="#backendpoolloadbalancings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;</a></span>
     </dt>
@@ -333,7 +337,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pools</span>
+        <span id="backendpools_csharp">
+<a href="#backendpools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
@@ -342,7 +348,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="enforcebackendpoolscertificatenamecheck_csharp">
+<a href="#enforcebackendpoolscertificatenamecheck_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -351,7 +359,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_csharp">
+<a href="#frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
@@ -360,7 +370,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +381,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Routing<wbr>Rules</span>
+        <span id="routingrules_csharp">
+<a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -378,7 +392,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="backendpoolssendreceivetimeoutseconds_csharp">
+<a href="#backendpoolssendreceivetimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -387,7 +403,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -396,7 +414,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Enabled</span>
+        <span id="loadbalancerenabled_csharp">
+<a href="#loadbalancerenabled_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -405,7 +425,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -413,7 +435,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +446,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -438,7 +464,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="backendpoolhealthprobes_go">
+<a href="#backendpoolhealthprobes_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</a></span>
     </dt>
@@ -447,7 +475,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="backendpoolloadbalancings_go">
+<a href="#backendpoolloadbalancings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</a></span>
     </dt>
@@ -456,7 +486,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pools</span>
+        <span id="backendpools_go">
+<a href="#backendpools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool</a></span>
     </dt>
@@ -465,7 +497,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="enforcebackendpoolscertificatenamecheck_go">
+<a href="#enforcebackendpoolscertificatenamecheck_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -474,7 +508,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_go">
+<a href="#frontendendpoints_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint</a></span>
     </dt>
@@ -483,7 +519,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +530,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Routing<wbr>Rules</span>
+        <span id="routingrules_go">
+<a href="#routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule</a></span>
     </dt>
@@ -501,7 +541,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="backendpoolssendreceivetimeoutseconds_go">
+<a href="#backendpoolssendreceivetimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -510,7 +552,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +563,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Enabled</span>
+        <span id="loadbalancerenabled_go">
+<a href="#loadbalancerenabled_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -528,7 +574,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -536,7 +584,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +595,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -561,7 +613,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="backendpoolhealthprobes_nodejs">
+<a href="#backendpoolhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe[]</a></span>
     </dt>
@@ -570,7 +624,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="backendpoolloadbalancings_nodejs">
+<a href="#backendpoolloadbalancings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing[]</a></span>
     </dt>
@@ -579,7 +635,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Pools</span>
+        <span id="backendpools_nodejs">
+<a href="#backendpools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool[]</a></span>
     </dt>
@@ -588,7 +646,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="enforcebackendpoolscertificatenamecheck_nodejs">
+<a href="#enforcebackendpoolscertificatenamecheck_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -597,7 +657,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_nodejs">
+<a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint[]</a></span>
     </dt>
@@ -606,7 +668,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +679,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>routing<wbr>Rules</span>
+        <span id="routingrules_nodejs">
+<a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule[]</a></span>
     </dt>
@@ -624,7 +690,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="backendpoolssendreceivetimeoutseconds_nodejs">
+<a href="#backendpoolssendreceivetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -633,7 +701,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly<wbr>Name</span>
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -642,7 +712,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Enabled</span>
+        <span id="loadbalancerenabled_nodejs">
+<a href="#loadbalancerenabled_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -651,7 +723,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -659,7 +733,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -668,7 +744,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -684,7 +762,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend_<wbr>pool_<wbr>health_<wbr>probes</span>
+        <span id="backend_pool_health_probes_python">
+<a href="#backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe]</a></span>
     </dt>
@@ -693,7 +773,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend_<wbr>pool_<wbr>load_<wbr>balancings</span>
+        <span id="backend_pool_load_balancings_python">
+<a href="#backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing]</a></span>
     </dt>
@@ -702,7 +784,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>backend_<wbr>pools</span>
+        <span id="backend_pools_python">
+<a href="#backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool]</a></span>
     </dt>
@@ -711,7 +795,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</span>
+        <span id="enforce_backend_pools_certificate_name_check_python">
+<a href="#enforce_backend_pools_certificate_name_check_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -720,7 +806,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>frontend_<wbr>endpoints</span>
+        <span id="frontend_endpoints_python">
+<a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint]</a></span>
     </dt>
@@ -729,7 +817,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +828,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>routing_<wbr>rules</span>
+        <span id="routing_rules_python">
+<a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule]</a></span>
     </dt>
@@ -747,7 +839,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</span>
+        <span id="backend_pools_send_receive_timeout_seconds_python">
+<a href="#backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -756,7 +850,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly_<wbr>name</span>
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -765,7 +861,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer_<wbr>enabled</span>
+        <span id="load_balancer_enabled_python">
+<a href="#load_balancer_enabled_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -774,7 +872,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -782,7 +882,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -791,7 +893,9 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -818,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cname</span>
+        <span id="cname_csharp">
+<a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +933,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="headerfrontdoorid_csharp">
+<a href="#headerfrontdoorid_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +961,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cname</span>
+        <span id="cname_go">
+<a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +972,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="headerfrontdoorid_go">
+<a href="#headerfrontdoorid_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -866,7 +1000,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cname</span>
+        <span id="cname_nodejs">
+<a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -875,7 +1011,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="headerfrontdoorid_nodejs">
+<a href="#headerfrontdoorid_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1039,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cname</span>
+        <span id="cname_python">
+<a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1050,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="header_frontdoor_id_python">
+<a href="#header_frontdoor_id_python" style="color: inherit; text-decoration: inherit;">header_<wbr>frontdoor_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -924,7 +1088,7 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>cname=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_pool_health_probes=None<span class="p">, </span>backend_pool_load_balancings=None<span class="p">, </span>backend_pools=None<span class="p">, </span>backend_pools_send_receive_timeout_seconds=None<span class="p">, </span>cname=None<span class="p">, </span>enforce_backend_pools_certificate_name_check=None<span class="p">, </span>friendly_name=None<span class="p">, </span>frontend_endpoints=None<span class="p">, </span>header_frontdoor_id=None<span class="p">, </span>load_balancer_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>routing_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1040,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="state_backendpoolhealthprobes_csharp">
+<a href="#state_backendpoolhealthprobes_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;</a></span>
     </dt>
@@ -1049,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="state_backendpoolloadbalancings_csharp">
+<a href="#state_backendpoolloadbalancings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;</a></span>
     </dt>
@@ -1058,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools</span>
+        <span id="state_backendpools_csharp">
+<a href="#state_backendpools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
@@ -1067,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="state_backendpoolssendreceivetimeoutseconds_csharp">
+<a href="#state_backendpoolssendreceivetimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1076,7 +1248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cname</span>
+        <span id="state_cname_csharp">
+<a href="#state_cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1085,7 +1259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="state_enforcebackendpoolscertificatenamecheck_csharp">
+<a href="#state_enforcebackendpoolscertificatenamecheck_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1094,7 +1270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="state_friendlyname_csharp">
+<a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1103,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="state_frontendendpoints_csharp">
+<a href="#state_frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
@@ -1112,7 +1292,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Enabled</span>
+        <span id="state_headerfrontdoorid_csharp">
+<a href="#state_headerfrontdoorid_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loadbalancerenabled_csharp">
+<a href="#state_loadbalancerenabled_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1121,7 +1314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1129,7 +1324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1138,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1147,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Routing<wbr>Rules</span>
+        <span id="state_routingrules_csharp">
+<a href="#state_routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1156,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1172,7 +1375,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="state_backendpoolhealthprobes_go">
+<a href="#state_backendpoolhealthprobes_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</a></span>
     </dt>
@@ -1181,7 +1386,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="state_backendpoolloadbalancings_go">
+<a href="#state_backendpoolloadbalancings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</a></span>
     </dt>
@@ -1190,7 +1397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools</span>
+        <span id="state_backendpools_go">
+<a href="#state_backendpools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool</a></span>
     </dt>
@@ -1199,7 +1408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="state_backendpoolssendreceivetimeoutseconds_go">
+<a href="#state_backendpoolssendreceivetimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1208,7 +1419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cname</span>
+        <span id="state_cname_go">
+<a href="#state_cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1217,7 +1430,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="state_enforcebackendpoolscertificatenamecheck_go">
+<a href="#state_enforcebackendpoolscertificatenamecheck_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1226,7 +1441,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="state_friendlyname_go">
+<a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1235,7 +1452,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="state_frontendendpoints_go">
+<a href="#state_frontendendpoints_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint</a></span>
     </dt>
@@ -1244,7 +1463,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Enabled</span>
+        <span id="state_headerfrontdoorid_go">
+<a href="#state_headerfrontdoorid_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loadbalancerenabled_go">
+<a href="#state_loadbalancerenabled_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1253,7 +1485,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1261,7 +1495,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1270,7 +1506,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1279,7 +1517,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Routing<wbr>Rules</span>
+        <span id="state_routingrules_go">
+<a href="#state_routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule</a></span>
     </dt>
@@ -1288,7 +1528,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1304,7 +1546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend<wbr>Pool<wbr>Health<wbr>Probes</span>
+        <span id="state_backendpoolhealthprobes_nodejs">
+<a href="#state_backendpoolhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe[]</a></span>
     </dt>
@@ -1313,7 +1557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
+        <span id="state_backendpoolloadbalancings_nodejs">
+<a href="#state_backendpoolloadbalancings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing[]</a></span>
     </dt>
@@ -1322,7 +1568,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend<wbr>Pools</span>
+        <span id="state_backendpools_nodejs">
+<a href="#state_backendpools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool[]</a></span>
     </dt>
@@ -1331,7 +1579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</span>
+        <span id="state_backendpoolssendreceivetimeoutseconds_nodejs">
+<a href="#state_backendpoolssendreceivetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1340,7 +1590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cname</span>
+        <span id="state_cname_nodejs">
+<a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1349,7 +1601,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</span>
+        <span id="state_enforcebackendpoolscertificatenamecheck_nodejs">
+<a href="#state_enforcebackendpoolscertificatenamecheck_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1358,7 +1612,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly<wbr>Name</span>
+        <span id="state_friendlyname_nodejs">
+<a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1367,7 +1623,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>frontend<wbr>Endpoints</span>
+        <span id="state_frontendendpoints_nodejs">
+<a href="#state_frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint[]</a></span>
     </dt>
@@ -1376,7 +1634,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Enabled</span>
+        <span id="state_headerfrontdoorid_nodejs">
+<a href="#state_headerfrontdoorid_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Frontdoor<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loadbalancerenabled_nodejs">
+<a href="#state_loadbalancerenabled_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1385,7 +1656,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1393,7 +1666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1402,7 +1677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1411,7 +1688,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>routing<wbr>Rules</span>
+        <span id="state_routingrules_nodejs">
+<a href="#state_routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule[]</a></span>
     </dt>
@@ -1420,7 +1699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1436,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>pool_<wbr>health_<wbr>probes</span>
+        <span id="state_backend_pool_health_probes_python">
+<a href="#state_backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe]</a></span>
     </dt>
@@ -1445,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>pool_<wbr>load_<wbr>balancings</span>
+        <span id="state_backend_pool_load_balancings_python">
+<a href="#state_backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing]</a></span>
     </dt>
@@ -1454,7 +1739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>pools</span>
+        <span id="state_backend_pools_python">
+<a href="#state_backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool]</a></span>
     </dt>
@@ -1463,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</span>
+        <span id="state_backend_pools_send_receive_timeout_seconds_python">
+<a href="#state_backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1472,7 +1761,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cname</span>
+        <span id="state_cname_python">
+<a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1481,7 +1772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</span>
+        <span id="state_enforce_backend_pools_certificate_name_check_python">
+<a href="#state_enforce_backend_pools_certificate_name_check_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1490,7 +1783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly_<wbr>name</span>
+        <span id="state_friendly_name_python">
+<a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1499,7 +1794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>frontend_<wbr>endpoints</span>
+        <span id="state_frontend_endpoints_python">
+<a href="#state_frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint]</a></span>
     </dt>
@@ -1508,7 +1805,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer_<wbr>enabled</span>
+        <span id="state_header_frontdoor_id_python">
+<a href="#state_header_frontdoor_id_python" style="color: inherit; text-decoration: inherit;">header_<wbr>frontdoor_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_load_balancer_enabled_python">
+<a href="#state_load_balancer_enabled_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1517,7 +1827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1525,7 +1837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1534,7 +1848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1543,7 +1859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>routing_<wbr>rules</span>
+        <span id="state_routing_rules_python">
+<a href="#state_routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule]</a></span>
     </dt>
@@ -1552,7 +1870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1594,7 +1914,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backends</span>
+        <span id="backends_csharp">
+<a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolbackend">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
@@ -1603,7 +1925,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Probe<wbr>Name</span>
+        <span id="healthprobename_csharp">
+<a href="#healthprobename_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1612,7 +1936,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancing<wbr>Name</span>
+        <span id="loadbalancingname_csharp">
+<a href="#loadbalancingname_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1621,7 +1947,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1630,7 +1958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1646,7 +1976,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backends</span>
+        <span id="backends_go">
+<a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolbackend">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend</a></span>
     </dt>
@@ -1655,7 +1987,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Probe<wbr>Name</span>
+        <span id="healthprobename_go">
+<a href="#healthprobename_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1664,7 +1998,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancing<wbr>Name</span>
+        <span id="loadbalancingname_go">
+<a href="#loadbalancingname_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1673,7 +2009,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1682,7 +2020,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1698,7 +2038,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backends</span>
+        <span id="backends_nodejs">
+<a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend[]</a></span>
     </dt>
@@ -1707,7 +2049,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Probe<wbr>Name</span>
+        <span id="healthprobename_nodejs">
+<a href="#healthprobename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1716,7 +2060,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancing<wbr>Name</span>
+        <span id="loadbalancingname_nodejs">
+<a href="#loadbalancingname_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1725,7 +2071,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1734,7 +2082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1750,7 +2100,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backends</span>
+        <span id="backends_python">
+<a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorbackendpoolbackend">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend]</a></span>
     </dt>
@@ -1759,7 +2111,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Probe<wbr>Name</span>
+        <span id="healthprobename_python">
+<a href="#healthprobename_python" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1768,7 +2122,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancing<wbr>Name</span>
+        <span id="loadbalancingname_python">
+<a href="#loadbalancingname_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1777,7 +2133,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1786,7 +2144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1820,7 +2180,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1829,7 +2191,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Header</span>
+        <span id="hostheader_csharp">
+<a href="#hostheader_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1838,7 +2202,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Http<wbr>Port</span>
+        <span id="httpport_csharp">
+<a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1847,7 +2213,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Https<wbr>Port</span>
+        <span id="httpsport_csharp">
+<a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1856,7 +2224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1865,7 +2235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1874,7 +2246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1890,7 +2264,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1899,7 +2275,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Header</span>
+        <span id="hostheader_go">
+<a href="#hostheader_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1908,7 +2286,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Http<wbr>Port</span>
+        <span id="httpport_go">
+<a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1917,7 +2297,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Https<wbr>Port</span>
+        <span id="httpsport_go">
+<a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1926,7 +2308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1935,7 +2319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1944,7 +2330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1960,7 +2348,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1969,7 +2359,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Header</span>
+        <span id="hostheader_nodejs">
+<a href="#hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1978,7 +2370,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>http<wbr>Port</span>
+        <span id="httpport_nodejs">
+<a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1987,7 +2381,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>https<wbr>Port</span>
+        <span id="httpsport_nodejs">
+<a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1996,7 +2392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2005,7 +2403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2014,7 +2414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2030,7 +2432,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2039,7 +2443,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Header</span>
+        <span id="hostheader_python">
+<a href="#hostheader_python" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2048,7 +2454,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>http<wbr>Port</span>
+        <span id="httpport_python">
+<a href="#httpport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2057,7 +2465,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>https<wbr>Port</span>
+        <span id="httpsport_python">
+<a href="#httpsport_python" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2066,7 +2476,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2075,7 +2487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2084,7 +2498,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2118,7 +2534,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2127,7 +2545,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2136,7 +2556,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2145,7 +2567,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_csharp">
+<a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2154,7 +2578,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2163,7 +2589,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Probe<wbr>Method</span>
+        <span id="probemethod_csharp">
+<a href="#probemethod_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2172,7 +2600,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2188,7 +2618,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2197,7 +2629,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2206,7 +2640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2215,7 +2651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_go">
+<a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2224,7 +2662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2233,7 +2673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Probe<wbr>Method</span>
+        <span id="probemethod_go">
+<a href="#probemethod_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2242,7 +2684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2258,7 +2702,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2267,7 +2713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2276,7 +2724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2285,7 +2735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_nodejs">
+<a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2294,7 +2746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2303,7 +2757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>probe<wbr>Method</span>
+        <span id="probemethod_nodejs">
+<a href="#probemethod_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2312,7 +2768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2328,7 +2786,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2337,7 +2797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2346,7 +2808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2355,7 +2819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval_<wbr>in_<wbr>seconds</span>
+        <span id="interval_in_seconds_python">
+<a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2364,7 +2830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2373,7 +2841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>probe<wbr>Method</span>
+        <span id="probemethod_python">
+<a href="#probemethod_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2382,7 +2852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2416,7 +2888,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2425,7 +2899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Latency<wbr>Milliseconds</span>
+        <span id="additionallatencymilliseconds_csharp">
+<a href="#additionallatencymilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Latency<wbr>Milliseconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2434,7 +2910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2443,7 +2921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Size</span>
+        <span id="samplesize_csharp">
+<a href="#samplesize_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2452,7 +2932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Successful<wbr>Samples<wbr>Required</span>
+        <span id="successfulsamplesrequired_csharp">
+<a href="#successfulsamplesrequired_csharp" style="color: inherit; text-decoration: inherit;">Successful<wbr>Samples<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2468,7 +2950,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2477,7 +2961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Latency<wbr>Milliseconds</span>
+        <span id="additionallatencymilliseconds_go">
+<a href="#additionallatencymilliseconds_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Latency<wbr>Milliseconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2486,7 +2972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2495,7 +2983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Size</span>
+        <span id="samplesize_go">
+<a href="#samplesize_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2504,7 +2994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Successful<wbr>Samples<wbr>Required</span>
+        <span id="successfulsamplesrequired_go">
+<a href="#successfulsamplesrequired_go" style="color: inherit; text-decoration: inherit;">Successful<wbr>Samples<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2520,7 +3012,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2529,7 +3023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Latency<wbr>Milliseconds</span>
+        <span id="additionallatencymilliseconds_nodejs">
+<a href="#additionallatencymilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2538,7 +3034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2547,7 +3045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample<wbr>Size</span>
+        <span id="samplesize_nodejs">
+<a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2556,7 +3056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>successful<wbr>Samples<wbr>Required</span>
+        <span id="successfulsamplesrequired_nodejs">
+<a href="#successfulsamplesrequired_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2572,7 +3074,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2581,7 +3085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Latency<wbr>Milliseconds</span>
+        <span id="additionallatencymilliseconds_python">
+<a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2590,7 +3096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2599,7 +3107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample<wbr>Size</span>
+        <span id="samplesize_python">
+<a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2608,7 +3118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>successful<wbr>Samples<wbr>Required</span>
+        <span id="successfulsamplesrequired_python">
+<a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2642,7 +3154,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</span>
+        <span id="customhttpsprovisioningenabled_csharp">
+<a href="#customhttpsprovisioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2651,7 +3165,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2660,7 +3176,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2669,7 +3187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Https<wbr>Configuration</span>
+        <span id="customhttpsconfiguration_csharp">
+<a href="#customhttpsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -2678,7 +3198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2687,7 +3209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Session<wbr>Affinity<wbr>Enabled</span>
+        <span id="sessionaffinityenabled_csharp">
+<a href="#sessionaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2696,7 +3220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Session<wbr>Affinity<wbr>Ttl<wbr>Seconds</span>
+        <span id="sessionaffinityttlseconds_csharp">
+<a href="#sessionaffinityttlseconds_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2705,7 +3231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</span>
+        <span id="webapplicationfirewallpolicylinkid_csharp">
+<a href="#webapplicationfirewallpolicylinkid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2721,7 +3249,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</span>
+        <span id="customhttpsprovisioningenabled_go">
+<a href="#customhttpsprovisioningenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2730,7 +3260,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2739,7 +3271,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2748,7 +3282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Https<wbr>Configuration</span>
+        <span id="customhttpsconfiguration_go">
+<a href="#customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
@@ -2757,7 +3293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2766,7 +3304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Session<wbr>Affinity<wbr>Enabled</span>
+        <span id="sessionaffinityenabled_go">
+<a href="#sessionaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2775,7 +3315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Session<wbr>Affinity<wbr>Ttl<wbr>Seconds</span>
+        <span id="sessionaffinityttlseconds_go">
+<a href="#sessionaffinityttlseconds_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2784,7 +3326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</span>
+        <span id="webapplicationfirewallpolicylinkid_go">
+<a href="#webapplicationfirewallpolicylinkid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2800,7 +3344,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Https<wbr>Provisioning<wbr>Enabled</span>
+        <span id="customhttpsprovisioningenabled_nodejs">
+<a href="#customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2809,7 +3355,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Name</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2818,7 +3366,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2827,7 +3377,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Https<wbr>Configuration</span>
+        <span id="customhttpsconfiguration_nodejs">
+<a href="#customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
@@ -2836,7 +3388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2845,7 +3399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity<wbr>Enabled</span>
+        <span id="sessionaffinityenabled_nodejs">
+<a href="#sessionaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2854,7 +3410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity<wbr>Ttl<wbr>Seconds</span>
+        <span id="sessionaffinityttlseconds_nodejs">
+<a href="#sessionaffinityttlseconds_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2863,7 +3421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</span>
+        <span id="webapplicationfirewallpolicylinkid_nodejs">
+<a href="#webapplicationfirewallpolicylinkid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2879,7 +3439,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Https<wbr>Provisioning<wbr>Enabled</span>
+        <span id="customhttpsprovisioningenabled_python">
+<a href="#customhttpsprovisioningenabled_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2888,7 +3450,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>name</span>
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2897,7 +3461,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2906,7 +3472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Https<wbr>Configuration</span>
+        <span id="customhttpsconfiguration_python">
+<a href="#customhttpsconfiguration_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Dict[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration]</a></span>
     </dt>
@@ -2915,7 +3483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2924,7 +3494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity<wbr>Enabled</span>
+        <span id="sessionaffinityenabled_python">
+<a href="#sessionaffinityenabled_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2933,7 +3505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity<wbr>Ttl<wbr>Seconds</span>
+        <span id="sessionaffinityttlseconds_python">
+<a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2942,7 +3516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</span>
+        <span id="webapplicationfirewallpolicylinkid_python">
+<a href="#webapplicationfirewallpolicylinkid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2976,7 +3552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</span>
+        <span id="azurekeyvaultcertificatesecretname_csharp">
+<a href="#azurekeyvaultcertificatesecretname_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2985,7 +3563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</span>
+        <span id="azurekeyvaultcertificatesecretversion_csharp">
+<a href="#azurekeyvaultcertificatesecretversion_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2994,7 +3574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</span>
+        <span id="azurekeyvaultcertificatevaultid_csharp">
+<a href="#azurekeyvaultcertificatevaultid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3003,7 +3585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Source</span>
+        <span id="certificatesource_csharp">
+<a href="#certificatesource_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3012,7 +3596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Tls<wbr>Version</span>
+        <span id="minimumtlsversion_csharp">
+<a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3021,7 +3607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioning<wbr>State</span>
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3030,7 +3618,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioning<wbr>Substate</span>
+        <span id="provisioningsubstate_csharp">
+<a href="#provisioningsubstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3046,7 +3636,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</span>
+        <span id="azurekeyvaultcertificatesecretname_go">
+<a href="#azurekeyvaultcertificatesecretname_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3055,7 +3647,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</span>
+        <span id="azurekeyvaultcertificatesecretversion_go">
+<a href="#azurekeyvaultcertificatesecretversion_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3064,7 +3658,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</span>
+        <span id="azurekeyvaultcertificatevaultid_go">
+<a href="#azurekeyvaultcertificatevaultid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3073,7 +3669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Source</span>
+        <span id="certificatesource_go">
+<a href="#certificatesource_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3082,7 +3680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Tls<wbr>Version</span>
+        <span id="minimumtlsversion_go">
+<a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3091,7 +3691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioning<wbr>State</span>
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3100,7 +3702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioning<wbr>Substate</span>
+        <span id="provisioningsubstate_go">
+<a href="#provisioningsubstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3116,7 +3720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</span>
+        <span id="azurekeyvaultcertificatesecretname_nodejs">
+<a href="#azurekeyvaultcertificatesecretname_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3125,7 +3731,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</span>
+        <span id="azurekeyvaultcertificatesecretversion_nodejs">
+<a href="#azurekeyvaultcertificatesecretversion_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3134,7 +3742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</span>
+        <span id="azurekeyvaultcertificatevaultid_nodejs">
+<a href="#azurekeyvaultcertificatevaultid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3143,7 +3753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate<wbr>Source</span>
+        <span id="certificatesource_nodejs">
+<a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3152,7 +3764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>Tls<wbr>Version</span>
+        <span id="minimumtlsversion_nodejs">
+<a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3161,7 +3775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioning<wbr>State</span>
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3170,7 +3786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioning<wbr>Substate</span>
+        <span id="provisioningsubstate_nodejs">
+<a href="#provisioningsubstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3186,7 +3804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</span>
+        <span id="azurekeyvaultcertificatesecretname_python">
+<a href="#azurekeyvaultcertificatesecretname_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3195,7 +3815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</span>
+        <span id="azurekeyvaultcertificatesecretversion_python">
+<a href="#azurekeyvaultcertificatesecretversion_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3204,7 +3826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</span>
+        <span id="azurekeyvaultcertificatevaultid_python">
+<a href="#azurekeyvaultcertificatevaultid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3213,7 +3837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate<wbr>Source</span>
+        <span id="certificatesource_python">
+<a href="#certificatesource_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3222,7 +3848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum_<wbr>tls_<wbr>version</span>
+        <span id="minimum_tls_version_python">
+<a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3231,7 +3859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioning<wbr>State</span>
+        <span id="provisioningstate_python">
+<a href="#provisioningstate_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3240,7 +3870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioning<wbr>Substate</span>
+        <span id="provisioningsubstate_python">
+<a href="#provisioningsubstate_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3274,7 +3906,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Accepted<wbr>Protocols</span>
+        <span id="acceptedprotocols_csharp">
+<a href="#acceptedprotocols_csharp" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3283,7 +3917,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_csharp">
+<a href="#frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3292,7 +3928,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3301,7 +3939,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Patterns<wbr>To<wbr>Matches</span>
+        <span id="patternstomatches_csharp">
+<a href="#patternstomatches_csharp" style="color: inherit; text-decoration: inherit;">Patterns<wbr>To<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3310,7 +3950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3319,7 +3961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Configuration</span>
+        <span id="forwardingconfiguration_csharp">
+<a href="#forwardingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -3328,7 +3972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3337,7 +3983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Configuration</span>
+        <span id="redirectconfiguration_csharp">
+<a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -3353,7 +4001,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Accepted<wbr>Protocols</span>
+        <span id="acceptedprotocols_go">
+<a href="#acceptedprotocols_go" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3362,7 +4012,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_go">
+<a href="#frontendendpoints_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3371,7 +4023,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3380,7 +4034,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Patterns<wbr>To<wbr>Matches</span>
+        <span id="patternstomatches_go">
+<a href="#patternstomatches_go" style="color: inherit; text-decoration: inherit;">Patterns<wbr>To<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3389,7 +4045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3398,7 +4056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Configuration</span>
+        <span id="forwardingconfiguration_go">
+<a href="#forwardingconfiguration_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
@@ -3407,7 +4067,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3416,7 +4078,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Configuration</span>
+        <span id="redirectconfiguration_go">
+<a href="#redirectconfiguration_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
@@ -3432,7 +4096,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>accepted<wbr>Protocols</span>
+        <span id="acceptedprotocols_nodejs">
+<a href="#acceptedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3441,7 +4107,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frontend<wbr>Endpoints</span>
+        <span id="frontendendpoints_nodejs">
+<a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3450,7 +4118,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3459,7 +4129,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>patterns<wbr>To<wbr>Matches</span>
+        <span id="patternstomatches_nodejs">
+<a href="#patternstomatches_nodejs" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3468,7 +4140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3477,7 +4151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Configuration</span>
+        <span id="forwardingconfiguration_nodejs">
+<a href="#forwardingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
@@ -3486,7 +4162,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3495,7 +4173,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Configuration</span>
+        <span id="redirectconfiguration_nodejs">
+<a href="#redirectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
@@ -3511,7 +4191,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>accepted<wbr>Protocols</span>
+        <span id="acceptedprotocols_python">
+<a href="#acceptedprotocols_python" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3520,7 +4202,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frontend_<wbr>endpoints</span>
+        <span id="frontend_endpoints_python">
+<a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3529,7 +4213,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3538,7 +4224,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>patterns<wbr>To<wbr>Matches</span>
+        <span id="patternstomatches_python">
+<a href="#patternstomatches_python" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3547,7 +4235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3556,7 +4246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Configuration</span>
+        <span id="forwardingconfiguration_python">
+<a href="#forwardingconfiguration_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Dict[Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration]</a></span>
     </dt>
@@ -3565,7 +4257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3574,7 +4268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Configuration</span>
+        <span id="redirectconfiguration_python">
+<a href="#redirectconfiguration_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Dict[Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration]</a></span>
     </dt>
@@ -3608,7 +4304,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Name</span>
+        <span id="backendpoolname_csharp">
+<a href="#backendpoolname_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3617,7 +4315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Enabled</span>
+        <span id="cacheenabled_csharp">
+<a href="#cacheenabled_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3626,7 +4326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</span>
+        <span id="cachequeryparameterstripdirective_csharp">
+<a href="#cachequeryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3635,7 +4337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Use<wbr>Dynamic<wbr>Compression</span>
+        <span id="cacheusedynamiccompression_csharp">
+<a href="#cacheusedynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3644,7 +4348,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Forwarding<wbr>Path</span>
+        <span id="customforwardingpath_csharp">
+<a href="#customforwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3653,7 +4359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Protocol</span>
+        <span id="forwardingprotocol_csharp">
+<a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3669,7 +4377,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Pool<wbr>Name</span>
+        <span id="backendpoolname_go">
+<a href="#backendpoolname_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3678,7 +4388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Enabled</span>
+        <span id="cacheenabled_go">
+<a href="#cacheenabled_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3687,7 +4399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</span>
+        <span id="cachequeryparameterstripdirective_go">
+<a href="#cachequeryparameterstripdirective_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3696,7 +4410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cache<wbr>Use<wbr>Dynamic<wbr>Compression</span>
+        <span id="cacheusedynamiccompression_go">
+<a href="#cacheusedynamiccompression_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3705,7 +4421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Forwarding<wbr>Path</span>
+        <span id="customforwardingpath_go">
+<a href="#customforwardingpath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3714,7 +4432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Protocol</span>
+        <span id="forwardingprotocol_go">
+<a href="#forwardingprotocol_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3730,7 +4450,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Pool<wbr>Name</span>
+        <span id="backendpoolname_nodejs">
+<a href="#backendpoolname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3739,7 +4461,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Enabled</span>
+        <span id="cacheenabled_nodejs">
+<a href="#cacheenabled_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3748,7 +4472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</span>
+        <span id="cachequeryparameterstripdirective_nodejs">
+<a href="#cachequeryparameterstripdirective_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3757,7 +4483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Use<wbr>Dynamic<wbr>Compression</span>
+        <span id="cacheusedynamiccompression_nodejs">
+<a href="#cacheusedynamiccompression_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3766,7 +4494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Forwarding<wbr>Path</span>
+        <span id="customforwardingpath_nodejs">
+<a href="#customforwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3775,7 +4505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Protocol</span>
+        <span id="forwardingprotocol_nodejs">
+<a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3791,7 +4523,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Pool<wbr>Name</span>
+        <span id="backendpoolname_python">
+<a href="#backendpoolname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3800,7 +4534,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Enabled</span>
+        <span id="cacheenabled_python">
+<a href="#cacheenabled_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3809,7 +4545,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</span>
+        <span id="cachequeryparameterstripdirective_python">
+<a href="#cachequeryparameterstripdirective_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3818,7 +4556,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cache<wbr>Use<wbr>Dynamic<wbr>Compression</span>
+        <span id="cacheusedynamiccompression_python">
+<a href="#cacheusedynamiccompression_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3827,7 +4567,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Forwarding<wbr>Path</span>
+        <span id="customforwardingpath_python">
+<a href="#customforwardingpath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3836,7 +4578,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Protocol</span>
+        <span id="forwardingprotocol_python">
+<a href="#forwardingprotocol_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3870,7 +4614,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Redirect<wbr>Protocol</span>
+        <span id="redirectprotocol_csharp">
+<a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3879,7 +4625,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Redirect<wbr>Type</span>
+        <span id="redirecttype_csharp">
+<a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3888,7 +4636,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Fragment</span>
+        <span id="customfragment_csharp">
+<a href="#customfragment_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3897,7 +4647,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Host</span>
+        <span id="customhost_csharp">
+<a href="#customhost_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3906,7 +4658,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Path</span>
+        <span id="custompath_csharp">
+<a href="#custompath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3915,7 +4669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Query<wbr>String</span>
+        <span id="customquerystring_csharp">
+<a href="#customquerystring_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3931,7 +4687,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Redirect<wbr>Protocol</span>
+        <span id="redirectprotocol_go">
+<a href="#redirectprotocol_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3940,7 +4698,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Redirect<wbr>Type</span>
+        <span id="redirecttype_go">
+<a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3949,7 +4709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Fragment</span>
+        <span id="customfragment_go">
+<a href="#customfragment_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3958,7 +4720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Host</span>
+        <span id="customhost_go">
+<a href="#customhost_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3967,7 +4731,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Path</span>
+        <span id="custompath_go">
+<a href="#custompath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3976,7 +4742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Query<wbr>String</span>
+        <span id="customquerystring_go">
+<a href="#customquerystring_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3992,7 +4760,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>redirect<wbr>Protocol</span>
+        <span id="redirectprotocol_nodejs">
+<a href="#redirectprotocol_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4001,7 +4771,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>redirect<wbr>Type</span>
+        <span id="redirecttype_nodejs">
+<a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4010,7 +4782,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Fragment</span>
+        <span id="customfragment_nodejs">
+<a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4019,7 +4793,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Host</span>
+        <span id="customhost_nodejs">
+<a href="#customhost_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4028,7 +4804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Path</span>
+        <span id="custompath_nodejs">
+<a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4037,7 +4815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Query<wbr>String</span>
+        <span id="customquerystring_nodejs">
+<a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4053,7 +4833,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>redirect<wbr>Protocol</span>
+        <span id="redirectprotocol_python">
+<a href="#redirectprotocol_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4062,7 +4844,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>redirect<wbr>Type</span>
+        <span id="redirecttype_python">
+<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4071,7 +4855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Fragment</span>
+        <span id="customfragment_python">
+<a href="#customfragment_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4080,7 +4866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Host</span>
+        <span id="customhost_python">
+<a href="#customhost_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4089,7 +4877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Path</span>
+        <span id="custompath_python">
+<a href="#custompath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4098,7 +4888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Query<wbr>String</span>
+        <span id="customquerystring_python">
+<a href="#customquerystring_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -94,7 +94,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -103,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -128,7 +134,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -144,7 +152,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -153,7 +163,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -169,7 +181,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -178,7 +192,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -207,7 +223,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_csharp">
+<a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -216,7 +234,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Kind</span>
+        <span id="accountkind_csharp">
+<a href="#accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -225,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_csharp">
+<a href="#accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -234,7 +256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Tier</span>
+        <span id="accounttier_csharp">
+<a href="#accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -243,7 +267,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Domains</span>
+        <span id="customdomains_csharp">
+<a href="#customdomains_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountcustomdomain">List&lt;Get<wbr>Account<wbr>Custom<wbr>Domain&gt;</a></span>
     </dt>
@@ -252,7 +278,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_csharp">
+<a href="#enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -262,7 +290,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +301,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_csharp">
+<a href="#ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -280,7 +312,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +323,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +334,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_csharp">
+<a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +345,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_csharp">
+<a href="#primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +356,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_csharp">
+<a href="#primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +367,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_csharp">
+<a href="#primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +378,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_csharp">
+<a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +389,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_csharp">
+<a href="#primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +400,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_csharp">
+<a href="#primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +411,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_csharp">
+<a href="#primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +422,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_csharp">
+<a href="#primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -379,7 +433,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Location</span>
+        <span id="primarylocation_csharp">
+<a href="#primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -388,7 +444,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_csharp">
+<a href="#primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -397,7 +455,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_csharp">
+<a href="#primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -406,7 +466,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_csharp">
+<a href="#primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -415,7 +477,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_csharp">
+<a href="#primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -424,7 +488,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_csharp">
+<a href="#primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +499,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_csharp">
+<a href="#primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -442,7 +510,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -450,7 +520,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_csharp">
+<a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -459,7 +531,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_csharp">
+<a href="#secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -468,7 +542,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_csharp">
+<a href="#secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -477,7 +553,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_csharp">
+<a href="#secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -486,7 +564,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_csharp">
+<a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -495,7 +575,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_csharp">
+<a href="#secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -504,7 +586,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_csharp">
+<a href="#secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -513,7 +597,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_csharp">
+<a href="#secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -522,7 +608,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_csharp">
+<a href="#secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -531,7 +619,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Location</span>
+        <span id="secondarylocation_csharp">
+<a href="#secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -540,7 +630,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_csharp">
+<a href="#secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -549,7 +641,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_csharp">
+<a href="#secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -558,7 +652,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_csharp">
+<a href="#secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -567,7 +663,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_csharp">
+<a href="#secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -576,7 +674,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_csharp">
+<a href="#secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -585,7 +685,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_csharp">
+<a href="#secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -594,7 +696,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -610,7 +714,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_go">
+<a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -619,7 +725,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Kind</span>
+        <span id="accountkind_go">
+<a href="#accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +736,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_go">
+<a href="#accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +747,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Account<wbr>Tier</span>
+        <span id="accounttier_go">
+<a href="#accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -646,7 +758,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Domains</span>
+        <span id="customdomains_go">
+<a href="#customdomains_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountcustomdomain">[]Get<wbr>Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
@@ -655,7 +769,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_go">
+<a href="#enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -665,7 +781,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +792,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_go">
+<a href="#ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -683,7 +803,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -692,7 +814,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +825,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_go">
+<a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -710,7 +836,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_go">
+<a href="#primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -719,7 +847,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_go">
+<a href="#primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -728,7 +858,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_go">
+<a href="#primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -737,7 +869,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_go">
+<a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -746,7 +880,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_go">
+<a href="#primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +891,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_go">
+<a href="#primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -764,7 +902,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_go">
+<a href="#primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +913,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_go">
+<a href="#primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +924,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Location</span>
+        <span id="primarylocation_go">
+<a href="#primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +935,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_go">
+<a href="#primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +946,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_go">
+<a href="#primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +957,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_go">
+<a href="#primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +968,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_go">
+<a href="#primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +979,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_go">
+<a href="#primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -836,7 +990,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_go">
+<a href="#primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +1001,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -853,7 +1011,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_go">
+<a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -862,7 +1022,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_go">
+<a href="#secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +1033,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_go">
+<a href="#secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -880,7 +1044,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_go">
+<a href="#secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -889,7 +1055,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_go">
+<a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -898,7 +1066,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_go">
+<a href="#secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -907,7 +1077,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_go">
+<a href="#secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -916,7 +1088,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_go">
+<a href="#secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +1099,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_go">
+<a href="#secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1110,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Location</span>
+        <span id="secondarylocation_go">
+<a href="#secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1121,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_go">
+<a href="#secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -952,7 +1132,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_go">
+<a href="#secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -961,7 +1143,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_go">
+<a href="#secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -970,7 +1154,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_go">
+<a href="#secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -979,7 +1165,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_go">
+<a href="#secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -988,7 +1176,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_go">
+<a href="#secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -997,7 +1187,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1013,7 +1205,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Tier</span>
+        <span id="accesstier_nodejs">
+<a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1022,7 +1216,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account<wbr>Kind</span>
+        <span id="accountkind_nodejs">
+<a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1031,7 +1227,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_nodejs">
+<a href="#accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1040,7 +1238,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account<wbr>Tier</span>
+        <span id="accounttier_nodejs">
+<a href="#accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1049,7 +1249,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>custom<wbr>Domains</span>
+        <span id="customdomains_nodejs">
+<a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountcustomdomain">Get<wbr>Account<wbr>Custom<wbr>Domain[]</a></span>
     </dt>
@@ -1058,7 +1260,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_nodejs">
+<a href="#enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1068,7 +1272,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1077,7 +1283,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_nodejs">
+<a href="#ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1086,7 +1294,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1095,7 +1305,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1104,7 +1316,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_nodejs">
+<a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1113,7 +1327,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_nodejs">
+<a href="#primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1122,7 +1338,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_nodejs">
+<a href="#primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1131,7 +1349,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_nodejs">
+<a href="#primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1140,7 +1360,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_nodejs">
+<a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1149,7 +1371,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_nodejs">
+<a href="#primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1382,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_nodejs">
+<a href="#primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1167,7 +1393,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_nodejs">
+<a href="#primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1176,7 +1404,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_nodejs">
+<a href="#primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1415,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Location</span>
+        <span id="primarylocation_nodejs">
+<a href="#primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1194,7 +1426,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_nodejs">
+<a href="#primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1203,7 +1437,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_nodejs">
+<a href="#primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1212,7 +1448,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_nodejs">
+<a href="#primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1221,7 +1459,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_nodejs">
+<a href="#primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1470,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_nodejs">
+<a href="#primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1481,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_nodejs">
+<a href="#primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1248,7 +1492,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1256,7 +1502,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_nodejs">
+<a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1265,7 +1513,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_nodejs">
+<a href="#secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1274,7 +1524,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_nodejs">
+<a href="#secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1283,7 +1535,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_nodejs">
+<a href="#secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1292,7 +1546,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_nodejs">
+<a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1301,7 +1557,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_nodejs">
+<a href="#secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1568,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_nodejs">
+<a href="#secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1319,7 +1579,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_nodejs">
+<a href="#secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1328,7 +1590,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_nodejs">
+<a href="#secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1337,7 +1601,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Location</span>
+        <span id="secondarylocation_nodejs">
+<a href="#secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1346,7 +1612,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_nodejs">
+<a href="#secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1355,7 +1623,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_nodejs">
+<a href="#secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1364,7 +1634,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_nodejs">
+<a href="#secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1373,7 +1645,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_nodejs">
+<a href="#secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1382,7 +1656,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_nodejs">
+<a href="#secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1391,7 +1667,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_nodejs">
+<a href="#secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1400,7 +1678,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1416,7 +1696,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>tier</span>
+        <span id="access_tier_python">
+<a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1425,7 +1707,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account_<wbr>kind</span>
+        <span id="account_kind_python">
+<a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1434,7 +1718,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account_<wbr>replication_<wbr>type</span>
+        <span id="account_replication_type_python">
+<a href="#account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1443,7 +1729,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>account_<wbr>tier</span>
+        <span id="account_tier_python">
+<a href="#account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1452,7 +1740,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>custom_<wbr>domains</span>
+        <span id="custom_domains_python">
+<a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountcustomdomain">List[Get<wbr>Account<wbr>Custom<wbr>Domain]</a></span>
     </dt>
@@ -1461,7 +1751,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>https_<wbr>traffic_<wbr>only</span>
+        <span id="enable_https_traffic_only_python">
+<a href="#enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1471,7 +1763,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1480,7 +1774,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>is_<wbr>hns_<wbr>enabled</span>
+        <span id="is_hns_enabled_python">
+<a href="#is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1489,7 +1785,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1498,7 +1796,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1507,7 +1807,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>access_<wbr>key</span>
+        <span id="primary_access_key_python">
+<a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1516,7 +1818,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="primary_blob_connection_string_python">
+<a href="#primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1525,7 +1829,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>endpoint</span>
+        <span id="primary_blob_endpoint_python">
+<a href="#primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1534,7 +1840,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>host</span>
+        <span id="primary_blob_host_python">
+<a href="#primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1543,7 +1851,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>connection_<wbr>string</span>
+        <span id="primary_connection_string_python">
+<a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1552,7 +1862,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="primary_dfs_endpoint_python">
+<a href="#primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1561,7 +1873,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>dfs_<wbr>host</span>
+        <span id="primary_dfs_host_python">
+<a href="#primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1570,7 +1884,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>file_<wbr>endpoint</span>
+        <span id="primary_file_endpoint_python">
+<a href="#primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1579,7 +1895,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>file_<wbr>host</span>
+        <span id="primary_file_host_python">
+<a href="#primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1588,7 +1906,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>location</span>
+        <span id="primary_location_python">
+<a href="#primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1597,7 +1917,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>queue_<wbr>endpoint</span>
+        <span id="primary_queue_endpoint_python">
+<a href="#primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1606,7 +1928,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>queue_<wbr>host</span>
+        <span id="primary_queue_host_python">
+<a href="#primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1615,7 +1939,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>table_<wbr>endpoint</span>
+        <span id="primary_table_endpoint_python">
+<a href="#primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1624,7 +1950,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>table_<wbr>host</span>
+        <span id="primary_table_host_python">
+<a href="#primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1633,7 +1961,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>web_<wbr>endpoint</span>
+        <span id="primary_web_endpoint_python">
+<a href="#primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1642,7 +1972,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>web_<wbr>host</span>
+        <span id="primary_web_host_python">
+<a href="#primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1651,7 +1983,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1659,7 +1993,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>access_<wbr>key</span>
+        <span id="secondary_access_key_python">
+<a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1668,7 +2004,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="secondary_blob_connection_string_python">
+<a href="#secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1677,7 +2015,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>endpoint</span>
+        <span id="secondary_blob_endpoint_python">
+<a href="#secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1686,7 +2026,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>host</span>
+        <span id="secondary_blob_host_python">
+<a href="#secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1695,7 +2037,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>connection_<wbr>string</span>
+        <span id="secondary_connection_string_python">
+<a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1704,7 +2048,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="secondary_dfs_endpoint_python">
+<a href="#secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1713,7 +2059,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>dfs_<wbr>host</span>
+        <span id="secondary_dfs_host_python">
+<a href="#secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1722,7 +2070,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>file_<wbr>endpoint</span>
+        <span id="secondary_file_endpoint_python">
+<a href="#secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1731,7 +2081,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>file_<wbr>host</span>
+        <span id="secondary_file_host_python">
+<a href="#secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1740,7 +2092,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>location</span>
+        <span id="secondary_location_python">
+<a href="#secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1749,7 +2103,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>queue_<wbr>endpoint</span>
+        <span id="secondary_queue_endpoint_python">
+<a href="#secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1758,7 +2114,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>queue_<wbr>host</span>
+        <span id="secondary_queue_host_python">
+<a href="#secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1767,7 +2125,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>table_<wbr>endpoint</span>
+        <span id="secondary_table_endpoint_python">
+<a href="#secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1776,7 +2136,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>table_<wbr>host</span>
+        <span id="secondary_table_host_python">
+<a href="#secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1785,7 +2147,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>web_<wbr>endpoint</span>
+        <span id="secondary_web_endpoint_python">
+<a href="#secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1794,7 +2158,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>web_<wbr>host</span>
+        <span id="secondary_web_host_python">
+<a href="#secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1803,7 +2169,9 @@ for more information.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1843,7 +2211,9 @@ for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1859,7 +2229,9 @@ for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1875,7 +2247,9 @@ for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1891,7 +2265,9 @@ for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

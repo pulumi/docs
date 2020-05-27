@@ -266,7 +266,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Node<wbr>Pool</span>
+        <span id="defaultnodepool_csharp">
+<a href="#defaultnodepool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
@@ -275,7 +277,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Dns<wbr>Prefix</span>
+        <span id="dnsprefix_csharp">
+<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +288,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +299,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addon<wbr>Profile</span>
+        <span id="addonprofile_csharp">
+<a href="#addonprofile_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -302,7 +310,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="apiserverauthorizedipranges_csharp">
+<a href="#apiserverauthorizedipranges_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -311,7 +321,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="enablepodsecuritypolicy_csharp">
+<a href="#enablepodsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -320,7 +332,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -329,7 +343,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Version</span>
+        <span id="kubernetesversion_csharp">
+<a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +354,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linux<wbr>Profile</span>
+        <span id="linuxprofile_csharp">
+<a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -347,7 +365,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +376,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +387,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Profile</span>
+        <span id="networkprofile_csharp">
+<a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -374,7 +398,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Resource<wbr>Group</span>
+        <span id="noderesourcegroup_csharp">
+<a href="#noderesourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -383,7 +409,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span id="privateclusterenabled_csharp">
+<a href="#privateclusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -392,7 +420,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span id="privatelinkenabled_csharp">
+<a href="#privatelinkenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -400,7 +430,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="rolebasedaccesscontrol_csharp">
+<a href="#rolebasedaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
@@ -409,7 +441,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal</span>
+        <span id="serviceprincipal_csharp">
+<a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
@@ -418,7 +452,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -427,7 +463,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Windows<wbr>Profile</span>
+        <span id="windowsprofile_csharp">
+<a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -443,7 +481,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Node<wbr>Pool</span>
+        <span id="defaultnodepool_go">
+<a href="#defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
@@ -452,7 +492,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Dns<wbr>Prefix</span>
+        <span id="dnsprefix_go">
+<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +503,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +514,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addon<wbr>Profile</span>
+        <span id="addonprofile_go">
+<a href="#addonprofile_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
@@ -479,7 +525,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="apiserverauthorizedipranges_go">
+<a href="#apiserverauthorizedipranges_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -488,7 +536,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="enablepodsecuritypolicy_go">
+<a href="#enablepodsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -497,7 +547,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
@@ -506,7 +558,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Version</span>
+        <span id="kubernetesversion_go">
+<a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +569,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linux<wbr>Profile</span>
+        <span id="linuxprofile_go">
+<a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
     </dt>
@@ -524,7 +580,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +591,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +602,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Profile</span>
+        <span id="networkprofile_go">
+<a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
@@ -551,7 +613,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Resource<wbr>Group</span>
+        <span id="noderesourcegroup_go">
+<a href="#noderesourcegroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -560,7 +624,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span id="privateclusterenabled_go">
+<a href="#privateclusterenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -569,7 +635,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span id="privatelinkenabled_go">
+<a href="#privatelinkenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -577,7 +645,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="rolebasedaccesscontrol_go">
+<a href="#rolebasedaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
@@ -586,7 +656,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal</span>
+        <span id="serviceprincipal_go">
+<a href="#serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
@@ -595,7 +667,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -604,7 +678,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Windows<wbr>Profile</span>
+        <span id="windowsprofile_go">
+<a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
     </dt>
@@ -620,7 +696,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Node<wbr>Pool</span>
+        <span id="defaultnodepool_nodejs">
+<a href="#defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
@@ -629,7 +707,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>dns<wbr>Prefix</span>
+        <span id="dnsprefix_nodejs">
+<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -638,7 +718,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -647,7 +729,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>addon<wbr>Profile</span>
+        <span id="addonprofile_nodejs">
+<a href="#addonprofile_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
@@ -656,7 +740,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="apiserverauthorizedipranges_nodejs">
+<a href="#apiserverauthorizedipranges_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -665,7 +751,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="enablepodsecuritypolicy_nodejs">
+<a href="#enablepodsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -674,7 +762,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
@@ -683,7 +773,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes<wbr>Version</span>
+        <span id="kubernetesversion_nodejs">
+<a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -692,7 +784,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>linux<wbr>Profile</span>
+        <span id="linuxprofile_nodejs">
+<a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
     </dt>
@@ -701,7 +795,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -710,7 +806,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -719,7 +817,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Profile</span>
+        <span id="networkprofile_nodejs">
+<a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
@@ -728,7 +828,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Resource<wbr>Group</span>
+        <span id="noderesourcegroup_nodejs">
+<a href="#noderesourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -737,7 +839,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Cluster<wbr>Enabled</span>
+        <span id="privateclusterenabled_nodejs">
+<a href="#privateclusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -746,7 +850,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>private<wbr>Link<wbr>Enabled</span>
+        <span id="privatelinkenabled_nodejs">
+<a href="#privatelinkenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -754,7 +860,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="rolebasedaccesscontrol_nodejs">
+<a href="#rolebasedaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
@@ -763,7 +871,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Principal</span>
+        <span id="serviceprincipal_nodejs">
+<a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
@@ -772,7 +882,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -781,7 +893,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows<wbr>Profile</span>
+        <span id="windowsprofile_nodejs">
+<a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
     </dt>
@@ -797,7 +911,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>node_<wbr>pool</span>
+        <span id="default_node_pool_python">
+<a href="#default_node_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Dict[Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool]</a></span>
     </dt>
@@ -806,7 +922,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>dns_<wbr>prefix</span>
+        <span id="dns_prefix_python">
+<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -815,7 +933,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -824,7 +944,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>addon_<wbr>profile</span>
+        <span id="addon_profile_python">
+<a href="#addon_profile_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
     </dt>
@@ -833,7 +955,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</span>
+        <span id="api_server_authorized_ip_ranges_python">
+<a href="#api_server_authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -842,7 +966,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>pod_<wbr>security_<wbr>policy</span>
+        <span id="enable_pod_security_policy_python">
+<a href="#enable_pod_security_policy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pod_<wbr>security_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -851,7 +977,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Dict[Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
@@ -860,7 +988,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes_<wbr>version</span>
+        <span id="kubernetes_version_python">
+<a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -869,7 +999,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>linux_<wbr>profile</span>
+        <span id="linux_profile_python">
+<a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
     </dt>
@@ -878,7 +1010,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -887,7 +1021,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -896,7 +1032,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>profile</span>
+        <span id="network_profile_python">
+<a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
     </dt>
@@ -905,7 +1043,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>resource_<wbr>group</span>
+        <span id="node_resource_group_python">
+<a href="#node_resource_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>resource_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1054,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>cluster_<wbr>enabled</span>
+        <span id="private_cluster_enabled_python">
+<a href="#private_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -923,7 +1065,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>private_<wbr>link_<wbr>enabled</span>
+        <span id="private_link_enabled_python">
+<a href="#private_link_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -931,7 +1075,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>based_<wbr>access_<wbr>control</span>
+        <span id="role_based_access_control_python">
+<a href="#role_based_access_control_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
     </dt>
@@ -940,7 +1086,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>principal</span>
+        <span id="service_principal_python">
+<a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
@@ -949,7 +1097,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -958,7 +1108,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows_<wbr>profile</span>
+        <span id="windows_profile_python">
+<a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Dict[Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
     </dt>
@@ -985,7 +1137,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -994,7 +1148,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1158,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="kubeadminconfigraw_csharp">
+<a href="#kubeadminconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1011,7 +1169,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Admin<wbr>Configs</span>
+        <span id="kubeadminconfigs_csharp">
+<a href="#kubeadminconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
     </dt>
@@ -1020,7 +1180,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Config<wbr>Raw</span>
+        <span id="kubeconfigraw_csharp">
+<a href="#kubeconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1029,7 +1191,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Configs</span>
+        <span id="kubeconfigs_csharp">
+<a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
@@ -1038,7 +1202,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kubelet<wbr>Identities</span>
+        <span id="kubeletidentities_csharp">
+<a href="#kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
     </dt>
@@ -1047,7 +1213,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Fqdn</span>
+        <span id="privatefqdn_csharp">
+<a href="#privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1063,7 +1231,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1072,7 +1242,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1080,7 +1252,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="kubeadminconfigraw_go">
+<a href="#kubeadminconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1089,7 +1263,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Admin<wbr>Configs</span>
+        <span id="kubeadminconfigs_go">
+<a href="#kubeadminconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</a></span>
     </dt>
@@ -1098,7 +1274,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Config<wbr>Raw</span>
+        <span id="kubeconfigraw_go">
+<a href="#kubeconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1107,7 +1285,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Configs</span>
+        <span id="kubeconfigs_go">
+<a href="#kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
@@ -1116,7 +1296,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kubelet<wbr>Identities</span>
+        <span id="kubeletidentities_go">
+<a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
@@ -1125,7 +1307,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Fqdn</span>
+        <span id="privatefqdn_go">
+<a href="#privatefqdn_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1325,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1150,7 +1336,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1346,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="kubeadminconfigraw_nodejs">
+<a href="#kubeadminconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1167,7 +1357,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube<wbr>Admin<wbr>Configs</span>
+        <span id="kubeadminconfigs_nodejs">
+<a href="#kubeadminconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config[]</a></span>
     </dt>
@@ -1176,7 +1368,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube<wbr>Config<wbr>Raw</span>
+        <span id="kubeconfigraw_nodejs">
+<a href="#kubeconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1379,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube<wbr>Configs</span>
+        <span id="kubeconfigs_nodejs">
+<a href="#kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config[]</a></span>
     </dt>
@@ -1194,7 +1390,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kubelet<wbr>Identities</span>
+        <span id="kubeletidentities_nodejs">
+<a href="#kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
@@ -1203,7 +1401,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>private<wbr>Fqdn</span>
+        <span id="privatefqdn_nodejs">
+<a href="#privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1219,7 +1419,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1228,7 +1430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1440,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube_<wbr>admin_<wbr>config_<wbr>raw</span>
+        <span id="kube_admin_config_raw_python">
+<a href="#kube_admin_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>config_<wbr>raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1245,7 +1451,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube_<wbr>admin_<wbr>configs</span>
+        <span id="kube_admin_configs_python">
+<a href="#kube_admin_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
     </dt>
@@ -1254,7 +1462,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube_<wbr>config_<wbr>raw</span>
+        <span id="kube_config_raw_python">
+<a href="#kube_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config_<wbr>raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1263,7 +1473,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube_<wbr>configs</span>
+        <span id="kube_configs_python">
+<a href="#kube_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
@@ -1272,7 +1484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kubelet_<wbr>identities</span>
+        <span id="kubelet_identities_python">
+<a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
@@ -1281,7 +1495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>private_<wbr>fqdn</span>
+        <span id="private_fqdn_python">
+<a href="#private_fqdn_python" style="color: inherit; text-decoration: inherit;">private_<wbr>fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1423,7 +1639,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addon<wbr>Profile</span>
+        <span id="state_addonprofile_csharp">
+<a href="#state_addonprofile_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -1432,7 +1650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="state_apiserverauthorizedipranges_csharp">
+<a href="#state_apiserverauthorizedipranges_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1441,7 +1661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Node<wbr>Pool</span>
+        <span id="state_defaultnodepool_csharp">
+<a href="#state_defaultnodepool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
@@ -1450,7 +1672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Prefix</span>
+        <span id="state_dnsprefix_csharp">
+<a href="#state_dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1459,7 +1683,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="state_enablepodsecuritypolicy_csharp">
+<a href="#state_enablepodsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1468,7 +1694,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_csharp">
+<a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1477,7 +1705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -1486,7 +1716,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeadminconfigraw_csharp">
+<a href="#state_kubeadminconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1495,7 +1727,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Admin<wbr>Configs</span>
+        <span id="state_kubeadminconfigs_csharp">
+<a href="#state_kubeadminconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1504,7 +1738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeconfigraw_csharp">
+<a href="#state_kubeconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1513,7 +1749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Configs</span>
+        <span id="state_kubeconfigs_csharp">
+<a href="#state_kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1522,7 +1760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubelet<wbr>Identities</span>
+        <span id="state_kubeletidentities_csharp">
+<a href="#state_kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
@@ -1531,7 +1771,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Version</span>
+        <span id="state_kubernetesversion_csharp">
+<a href="#state_kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1540,7 +1782,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linux<wbr>Profile</span>
+        <span id="state_linuxprofile_csharp">
+<a href="#state_linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -1549,7 +1793,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1558,7 +1804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1567,7 +1815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Profile</span>
+        <span id="state_networkprofile_csharp">
+<a href="#state_networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -1576,7 +1826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Resource<wbr>Group</span>
+        <span id="state_noderesourcegroup_csharp">
+<a href="#state_noderesourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1585,7 +1837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span id="state_privateclusterenabled_csharp">
+<a href="#state_privateclusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1594,7 +1848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Fqdn</span>
+        <span id="state_privatefqdn_csharp">
+<a href="#state_privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1603,7 +1859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span id="state_privatelinkenabled_csharp">
+<a href="#state_privatelinkenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1611,7 +1869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1620,7 +1880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="state_rolebasedaccesscontrol_csharp">
+<a href="#state_rolebasedaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
@@ -1629,7 +1891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal</span>
+        <span id="state_serviceprincipal_csharp">
+<a href="#state_serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
@@ -1638,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1647,7 +1913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Windows<wbr>Profile</span>
+        <span id="state_windowsprofile_csharp">
+<a href="#state_windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -1663,7 +1931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addon<wbr>Profile</span>
+        <span id="state_addonprofile_go">
+<a href="#state_addonprofile_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
@@ -1672,7 +1942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="state_apiserverauthorizedipranges_go">
+<a href="#state_apiserverauthorizedipranges_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1681,7 +1953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Node<wbr>Pool</span>
+        <span id="state_defaultnodepool_go">
+<a href="#state_defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
@@ -1690,7 +1964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Prefix</span>
+        <span id="state_dnsprefix_go">
+<a href="#state_dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1699,7 +1975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="state_enablepodsecuritypolicy_go">
+<a href="#state_enablepodsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1708,7 +1986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_go">
+<a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1717,7 +1997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
@@ -1726,7 +2008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeadminconfigraw_go">
+<a href="#state_kubeadminconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1735,7 +2019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Admin<wbr>Configs</span>
+        <span id="state_kubeadminconfigs_go">
+<a href="#state_kubeadminconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</a></span>
     </dt>
@@ -1744,7 +2030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeconfigraw_go">
+<a href="#state_kubeconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1753,7 +2041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Configs</span>
+        <span id="state_kubeconfigs_go">
+<a href="#state_kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
@@ -1762,7 +2052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubelet<wbr>Identities</span>
+        <span id="state_kubeletidentities_go">
+<a href="#state_kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
@@ -1771,7 +2063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Version</span>
+        <span id="state_kubernetesversion_go">
+<a href="#state_kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1780,7 +2074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linux<wbr>Profile</span>
+        <span id="state_linuxprofile_go">
+<a href="#state_linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
     </dt>
@@ -1789,7 +2085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1798,7 +2096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1807,7 +2107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Profile</span>
+        <span id="state_networkprofile_go">
+<a href="#state_networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
@@ -1816,7 +2118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Resource<wbr>Group</span>
+        <span id="state_noderesourcegroup_go">
+<a href="#state_noderesourcegroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1825,7 +2129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span id="state_privateclusterenabled_go">
+<a href="#state_privateclusterenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1834,7 +2140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Fqdn</span>
+        <span id="state_privatefqdn_go">
+<a href="#state_privatefqdn_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1843,7 +2151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span id="state_privatelinkenabled_go">
+<a href="#state_privatelinkenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1851,7 +2161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1860,7 +2172,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="state_rolebasedaccesscontrol_go">
+<a href="#state_rolebasedaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
@@ -1869,7 +2183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal</span>
+        <span id="state_serviceprincipal_go">
+<a href="#state_serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
@@ -1878,7 +2194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1887,7 +2205,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Windows<wbr>Profile</span>
+        <span id="state_windowsprofile_go">
+<a href="#state_windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
     </dt>
@@ -1903,7 +2223,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>addon<wbr>Profile</span>
+        <span id="state_addonprofile_nodejs">
+<a href="#state_addonprofile_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
@@ -1912,7 +2234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
+        <span id="state_apiserverauthorizedipranges_nodejs">
+<a href="#state_apiserverauthorizedipranges_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1921,7 +2245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Node<wbr>Pool</span>
+        <span id="state_defaultnodepool_nodejs">
+<a href="#state_defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
@@ -1930,7 +2256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Prefix</span>
+        <span id="state_dnsprefix_nodejs">
+<a href="#state_dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1939,7 +2267,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Pod<wbr>Security<wbr>Policy</span>
+        <span id="state_enablepodsecuritypolicy_nodejs">
+<a href="#state_enablepodsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pod<wbr>Security<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1948,7 +2278,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_nodejs">
+<a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1957,7 +2289,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
@@ -1966,7 +2300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Admin<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeadminconfigraw_nodejs">
+<a href="#state_kubeadminconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1975,7 +2311,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Admin<wbr>Configs</span>
+        <span id="state_kubeadminconfigs_nodejs">
+<a href="#state_kubeadminconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config[]</a></span>
     </dt>
@@ -1984,7 +2322,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Config<wbr>Raw</span>
+        <span id="state_kubeconfigraw_nodejs">
+<a href="#state_kubeconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config<wbr>Raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1993,7 +2333,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Configs</span>
+        <span id="state_kubeconfigs_nodejs">
+<a href="#state_kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config[]</a></span>
     </dt>
@@ -2002,7 +2344,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubelet<wbr>Identities</span>
+        <span id="state_kubeletidentities_nodejs">
+<a href="#state_kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
@@ -2011,7 +2355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes<wbr>Version</span>
+        <span id="state_kubernetesversion_nodejs">
+<a href="#state_kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2020,7 +2366,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>linux<wbr>Profile</span>
+        <span id="state_linuxprofile_nodejs">
+<a href="#state_linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
     </dt>
@@ -2029,7 +2377,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2038,7 +2388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2047,7 +2399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Profile</span>
+        <span id="state_networkprofile_nodejs">
+<a href="#state_networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
@@ -2056,7 +2410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Resource<wbr>Group</span>
+        <span id="state_noderesourcegroup_nodejs">
+<a href="#state_noderesourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Resource<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2065,7 +2421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Cluster<wbr>Enabled</span>
+        <span id="state_privateclusterenabled_nodejs">
+<a href="#state_privateclusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2074,7 +2432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Fqdn</span>
+        <span id="state_privatefqdn_nodejs">
+<a href="#state_privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2083,7 +2443,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>private<wbr>Link<wbr>Enabled</span>
+        <span id="state_privatelinkenabled_nodejs">
+<a href="#state_privatelinkenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2091,7 +2453,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2100,7 +2464,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Based<wbr>Access<wbr>Control</span>
+        <span id="state_rolebasedaccesscontrol_nodejs">
+<a href="#state_rolebasedaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Based<wbr>Access<wbr>Control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
@@ -2109,7 +2475,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Principal</span>
+        <span id="state_serviceprincipal_nodejs">
+<a href="#state_serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
@@ -2118,7 +2486,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2127,7 +2497,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows<wbr>Profile</span>
+        <span id="state_windowsprofile_nodejs">
+<a href="#state_windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
     </dt>
@@ -2143,7 +2515,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>addon_<wbr>profile</span>
+        <span id="state_addon_profile_python">
+<a href="#state_addon_profile_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofile">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
     </dt>
@@ -2152,7 +2526,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</span>
+        <span id="state_api_server_authorized_ip_ranges_python">
+<a href="#state_api_server_authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2161,7 +2537,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>node_<wbr>pool</span>
+        <span id="state_default_node_pool_python">
+<a href="#state_default_node_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>pool</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Dict[Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool]</a></span>
     </dt>
@@ -2170,7 +2548,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>prefix</span>
+        <span id="state_dns_prefix_python">
+<a href="#state_dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2179,7 +2559,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>pod_<wbr>security_<wbr>policy</span>
+        <span id="state_enable_pod_security_policy_python">
+<a href="#state_enable_pod_security_policy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pod_<wbr>security_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2188,7 +2570,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_python">
+<a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2197,7 +2581,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Dict[Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
@@ -2206,7 +2592,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube_<wbr>admin_<wbr>config_<wbr>raw</span>
+        <span id="state_kube_admin_config_raw_python">
+<a href="#state_kube_admin_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>config_<wbr>raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2215,7 +2603,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube_<wbr>admin_<wbr>configs</span>
+        <span id="state_kube_admin_configs_python">
+<a href="#state_kube_admin_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
     </dt>
@@ -2224,7 +2614,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube_<wbr>config_<wbr>raw</span>
+        <span id="state_kube_config_raw_python">
+<a href="#state_kube_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config_<wbr>raw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2233,7 +2625,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube_<wbr>configs</span>
+        <span id="state_kube_configs_python">
+<a href="#state_kube_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
@@ -2242,7 +2636,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubelet_<wbr>identities</span>
+        <span id="state_kubelet_identities_python">
+<a href="#state_kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
@@ -2251,7 +2647,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes_<wbr>version</span>
+        <span id="state_kubernetes_version_python">
+<a href="#state_kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2260,7 +2658,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>linux_<wbr>profile</span>
+        <span id="state_linux_profile_python">
+<a href="#state_linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
     </dt>
@@ -2269,7 +2669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2278,7 +2680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2287,7 +2691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>profile</span>
+        <span id="state_network_profile_python">
+<a href="#state_network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
     </dt>
@@ -2296,7 +2702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>resource_<wbr>group</span>
+        <span id="state_node_resource_group_python">
+<a href="#state_node_resource_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>resource_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2305,7 +2713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>cluster_<wbr>enabled</span>
+        <span id="state_private_cluster_enabled_python">
+<a href="#state_private_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2314,7 +2724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>fqdn</span>
+        <span id="state_private_fqdn_python">
+<a href="#state_private_fqdn_python" style="color: inherit; text-decoration: inherit;">private_<wbr>fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2323,7 +2735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>private_<wbr>link_<wbr>enabled</span>
+        <span id="state_private_link_enabled_python">
+<a href="#state_private_link_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2331,7 +2745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2340,7 +2756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>based_<wbr>access_<wbr>control</span>
+        <span id="state_role_based_access_control_python">
+<a href="#state_role_based_access_control_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>control</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
     </dt>
@@ -2349,7 +2767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>principal</span>
+        <span id="state_service_principal_python">
+<a href="#state_service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
@@ -2358,7 +2778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2367,7 +2789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows_<wbr>profile</span>
+        <span id="state_windows_profile_python">
+<a href="#state_windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Dict[Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
     </dt>
@@ -2409,7 +2833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aci<wbr>Connector<wbr>Linux</span>
+        <span id="aciconnectorlinux_csharp">
+<a href="#aciconnectorlinux_csharp" style="color: inherit; text-decoration: inherit;">Aci<wbr>Connector<wbr>Linux</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
     </dt>
@@ -2418,7 +2844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Policy</span>
+        <span id="azurepolicy_csharp">
+<a href="#azurepolicy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -2427,7 +2855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Application<wbr>Routing</span>
+        <span id="httpapplicationrouting_csharp">
+<a href="#httpapplicationrouting_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
     </dt>
@@ -2436,7 +2866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Dashboard</span>
+        <span id="kubedashboard_csharp">
+<a href="#kubedashboard_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
     </dt>
@@ -2445,7 +2877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oms<wbr>Agent</span>
+        <span id="omsagent_csharp">
+<a href="#omsagent_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
     </dt>
@@ -2461,7 +2895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aci<wbr>Connector<wbr>Linux</span>
+        <span id="aciconnectorlinux_go">
+<a href="#aciconnectorlinux_go" style="color: inherit; text-decoration: inherit;">Aci<wbr>Connector<wbr>Linux</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
     </dt>
@@ -2470,7 +2906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Policy</span>
+        <span id="azurepolicy_go">
+<a href="#azurepolicy_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
@@ -2479,7 +2917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Application<wbr>Routing</span>
+        <span id="httpapplicationrouting_go">
+<a href="#httpapplicationrouting_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
@@ -2488,7 +2928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Dashboard</span>
+        <span id="kubedashboard_go">
+<a href="#kubedashboard_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
@@ -2497,7 +2939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oms<wbr>Agent</span>
+        <span id="omsagent_go">
+<a href="#omsagent_go" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
@@ -2513,7 +2957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aci<wbr>Connector<wbr>Linux</span>
+        <span id="aciconnectorlinux_nodejs">
+<a href="#aciconnectorlinux_nodejs" style="color: inherit; text-decoration: inherit;">aci<wbr>Connector<wbr>Linux</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
     </dt>
@@ -2522,7 +2968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Policy</span>
+        <span id="azurepolicy_nodejs">
+<a href="#azurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
@@ -2531,7 +2979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Application<wbr>Routing</span>
+        <span id="httpapplicationrouting_nodejs">
+<a href="#httpapplicationrouting_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
@@ -2540,7 +2990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Dashboard</span>
+        <span id="kubedashboard_nodejs">
+<a href="#kubedashboard_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
@@ -2549,7 +3001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>oms<wbr>Agent</span>
+        <span id="omsagent_nodejs">
+<a href="#omsagent_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
@@ -2565,7 +3019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aci<wbr>Connector<wbr>Linux</span>
+        <span id="aciconnectorlinux_python">
+<a href="#aciconnectorlinux_python" style="color: inherit; text-decoration: inherit;">aci<wbr>Connector<wbr>Linux</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux]</a></span>
     </dt>
@@ -2574,7 +3030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Policy</span>
+        <span id="azurepolicy_python">
+<a href="#azurepolicy_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy]</a></span>
     </dt>
@@ -2583,7 +3041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Application<wbr>Routing</span>
+        <span id="httpapplicationrouting_python">
+<a href="#httpapplicationrouting_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
     </dt>
@@ -2592,7 +3052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Dashboard</span>
+        <span id="kubedashboard_python">
+<a href="#kubedashboard_python" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard]</a></span>
     </dt>
@@ -2601,7 +3063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>oms<wbr>Agent</span>
+        <span id="omsagent_python">
+<a href="#omsagent_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
     </dt>
@@ -2635,7 +3099,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2644,7 +3110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Name</span>
+        <span id="subnetname_csharp">
+<a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2660,7 +3128,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2669,7 +3139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Name</span>
+        <span id="subnetname_go">
+<a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2685,7 +3157,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2694,7 +3168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Name</span>
+        <span id="subnetname_nodejs">
+<a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2710,7 +3186,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2719,7 +3197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Name</span>
+        <span id="subnetname_python">
+<a href="#subnetname_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2753,7 +3233,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2769,7 +3251,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2785,7 +3269,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2801,7 +3287,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2835,7 +3323,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2844,7 +3334,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
+        <span id="httpapplicationroutingzonename_csharp">
+<a href="#httpapplicationroutingzonename_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2860,7 +3352,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2869,7 +3363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
+        <span id="httpapplicationroutingzonename_go">
+<a href="#httpapplicationroutingzonename_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2885,7 +3381,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2894,7 +3392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
+        <span id="httpapplicationroutingzonename_nodejs">
+<a href="#httpapplicationroutingzonename_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2910,7 +3410,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2919,7 +3421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
+        <span id="httpapplicationroutingzonename_python">
+<a href="#httpapplicationroutingzonename_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2953,7 +3457,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2969,7 +3475,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2985,7 +3493,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3001,7 +3511,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3035,7 +3547,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3044,7 +3558,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_csharp">
+<a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3060,7 +3576,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3069,7 +3587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_go">
+<a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3085,7 +3605,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3094,7 +3616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_nodejs">
+<a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3110,7 +3634,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3119,7 +3645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
+        <span id="log_analytics_workspace_id_python">
+<a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3153,7 +3681,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3162,7 +3692,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3171,7 +3703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="availabilityzones_csharp">
+<a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3180,7 +3714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Auto<wbr>Scaling</span>
+        <span id="enableautoscaling_csharp">
+<a href="#enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3189,7 +3725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span id="enablenodepublicip_csharp">
+<a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3198,7 +3736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Count</span>
+        <span id="maxcount_csharp">
+<a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3207,7 +3747,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Pods</span>
+        <span id="maxpods_csharp">
+<a href="#maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3216,7 +3758,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Count</span>
+        <span id="mincount_csharp">
+<a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3225,7 +3769,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_csharp">
+<a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3234,7 +3780,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Labels</span>
+        <span id="nodelabels_csharp">
+<a href="#nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3243,7 +3791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Taints</span>
+        <span id="nodetaints_csharp">
+<a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3252,7 +3802,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="osdisksizegb_csharp">
+<a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3261,7 +3813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3270,7 +3824,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3279,7 +3835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Subnet<wbr>Id</span>
+        <span id="vnetsubnetid_csharp">
+<a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3295,7 +3853,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3304,7 +3864,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3313,7 +3875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="availabilityzones_go">
+<a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3322,7 +3886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Auto<wbr>Scaling</span>
+        <span id="enableautoscaling_go">
+<a href="#enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3331,7 +3897,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span id="enablenodepublicip_go">
+<a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3340,7 +3908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Count</span>
+        <span id="maxcount_go">
+<a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3349,7 +3919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Pods</span>
+        <span id="maxpods_go">
+<a href="#maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3358,7 +3930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Count</span>
+        <span id="mincount_go">
+<a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3367,7 +3941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_go">
+<a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3376,7 +3952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Labels</span>
+        <span id="nodelabels_go">
+<a href="#nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3385,7 +3963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Taints</span>
+        <span id="nodetaints_go">
+<a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3394,7 +3974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="osdisksizegb_go">
+<a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3403,7 +3985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3412,7 +3996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3421,7 +4007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Subnet<wbr>Id</span>
+        <span id="vnetsubnetid_go">
+<a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3437,7 +4025,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3446,7 +4036,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm<wbr>Size</span>
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3455,7 +4047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zones</span>
+        <span id="availabilityzones_nodejs">
+<a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3464,7 +4058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Auto<wbr>Scaling</span>
+        <span id="enableautoscaling_nodejs">
+<a href="#enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3473,7 +4069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span id="enablenodepublicip_nodejs">
+<a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3482,7 +4080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Count</span>
+        <span id="maxcount_nodejs">
+<a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3491,7 +4091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Pods</span>
+        <span id="maxpods_nodejs">
+<a href="#maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3500,7 +4102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Count</span>
+        <span id="mincount_nodejs">
+<a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3509,7 +4113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Count</span>
+        <span id="nodecount_nodejs">
+<a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3518,7 +4124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Labels</span>
+        <span id="nodelabels_nodejs">
+<a href="#nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3527,7 +4135,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Taints</span>
+        <span id="nodetaints_nodejs">
+<a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3536,7 +4146,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="osdisksizegb_nodejs">
+<a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3545,7 +4157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3554,7 +4168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3563,7 +4179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet<wbr>Subnet<wbr>Id</span>
+        <span id="vnetsubnetid_nodejs">
+<a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3579,7 +4197,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3588,7 +4208,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm_<wbr>size</span>
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3597,7 +4219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zones</span>
+        <span id="availability_zones_python">
+<a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3606,7 +4230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>auto_<wbr>scaling</span>
+        <span id="enable_auto_scaling_python">
+<a href="#enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3615,7 +4241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>node_<wbr>public_<wbr>ip</span>
+        <span id="enable_node_public_ip_python">
+<a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3624,7 +4252,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>count</span>
+        <span id="max_count_python">
+<a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3633,7 +4263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>pods</span>
+        <span id="max_pods_python">
+<a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3642,7 +4274,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>count</span>
+        <span id="min_count_python">
+<a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3651,7 +4285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>count</span>
+        <span id="node_count_python">
+<a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3660,7 +4296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>labels</span>
+        <span id="node_labels_python">
+<a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3669,7 +4307,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>taints</span>
+        <span id="node_taints_python">
+<a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3678,7 +4318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os_<wbr>disk_<wbr>size_<wbr>gb</span>
+        <span id="os_disk_size_gb_python">
+<a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3687,7 +4329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3696,7 +4340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3705,7 +4351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet_<wbr>subnet_<wbr>id</span>
+        <span id="vnet_subnet_id_python">
+<a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3739,7 +4387,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3748,7 +4398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3757,7 +4409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3773,7 +4427,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3782,7 +4438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3791,7 +4449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3807,7 +4467,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3816,7 +4478,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal<wbr>Id</span>
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3825,7 +4489,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3841,7 +4507,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3850,7 +4518,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal_<wbr>id</span>
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3859,7 +4529,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3893,7 +4565,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate</span>
+        <span id="clientcertificate_csharp">
+<a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3902,7 +4576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Key</span>
+        <span id="clientkey_csharp">
+<a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3911,7 +4587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_csharp">
+<a href="#clustercacertificate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3920,7 +4598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3929,7 +4609,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3938,7 +4620,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3954,7 +4638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate</span>
+        <span id="clientcertificate_go">
+<a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3963,7 +4649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Key</span>
+        <span id="clientkey_go">
+<a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3972,7 +4660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_go">
+<a href="#clustercacertificate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3981,7 +4671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3990,7 +4682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3999,7 +4693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4015,7 +4711,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate</span>
+        <span id="clientcertificate_nodejs">
+<a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4024,7 +4722,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span id="clientkey_nodejs">
+<a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4033,7 +4733,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_nodejs">
+<a href="#clustercacertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4042,7 +4744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4051,7 +4755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4060,7 +4766,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4076,7 +4784,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate</span>
+        <span id="clientcertificate_python">
+<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4085,7 +4795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span id="clientkey_python">
+<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4094,7 +4806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_python">
+<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4103,7 +4817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4112,7 +4828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4121,7 +4839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4155,7 +4875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate</span>
+        <span id="clientcertificate_csharp">
+<a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4164,7 +4886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Key</span>
+        <span id="clientkey_csharp">
+<a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4173,7 +4897,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_csharp">
+<a href="#clustercacertificate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4182,7 +4908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4191,7 +4919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4200,7 +4930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4216,7 +4948,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate</span>
+        <span id="clientcertificate_go">
+<a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4225,7 +4959,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Key</span>
+        <span id="clientkey_go">
+<a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4234,7 +4970,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_go">
+<a href="#clustercacertificate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4243,7 +4981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4252,7 +4992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4261,7 +5003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4277,7 +5021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate</span>
+        <span id="clientcertificate_nodejs">
+<a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4286,7 +5032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span id="clientkey_nodejs">
+<a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4295,7 +5043,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_nodejs">
+<a href="#clustercacertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4304,7 +5054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4313,7 +5065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4322,7 +5076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4338,7 +5094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate</span>
+        <span id="clientcertificate_python">
+<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4347,7 +5105,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span id="clientkey_python">
+<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4356,7 +5116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Ca<wbr>Certificate</span>
+        <span id="clustercacertificate_python">
+<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4365,7 +5127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4374,7 +5138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4383,7 +5149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4417,7 +5185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4426,7 +5196,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4435,7 +5207,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Assigned<wbr>Identity<wbr>Id</span>
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4451,7 +5225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4460,7 +5236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4469,7 +5247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Assigned<wbr>Identity<wbr>Id</span>
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4485,7 +5265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4494,7 +5276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Id</span>
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4503,7 +5287,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Assigned<wbr>Identity<wbr>Id</span>
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4519,7 +5305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4528,7 +5316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>id</span>
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4537,7 +5327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Assigned<wbr>Identity<wbr>Id</span>
+        <span id="userassignedidentityid_python">
+<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4571,7 +5363,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_csharp">
+<a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4580,7 +5374,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ssh<wbr>Key</span>
+        <span id="sshkey_csharp">
+<a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -4596,7 +5392,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_go">
+<a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4605,7 +5403,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ssh<wbr>Key</span>
+        <span id="sshkey_go">
+<a href="#sshkey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
@@ -4621,7 +5421,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Username</span>
+        <span id="adminusername_nodejs">
+<a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4630,7 +5432,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ssh<wbr>Key</span>
+        <span id="sshkey_nodejs">
+<a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
@@ -4646,7 +5450,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>admin_<wbr>username</span>
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4655,7 +5461,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ssh_<wbr>key</span>
+        <span id="ssh_key_python">
+<a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key]</a></span>
     </dt>
@@ -4689,7 +5497,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Data</span>
+        <span id="keydata_csharp">
+<a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4705,7 +5515,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Data</span>
+        <span id="keydata_go">
+<a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4721,7 +5533,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Data</span>
+        <span id="keydata_nodejs">
+<a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4737,7 +5551,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Data</span>
+        <span id="keydata_python">
+<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4771,7 +5587,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Plugin</span>
+        <span id="networkplugin_csharp">
+<a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4780,25 +5598,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Service<wbr>Ip</span>
+        <span id="dnsserviceip_csharp">
+<a href="#dnsserviceip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Docker<wbr>Bridge<wbr>Cidr</span>
+        <span id="dockerbridgecidr_csharp">
+<a href="#dockerbridgecidr_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Profile</span>
+        <span id="loadbalancerprofile_csharp">
+<a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
@@ -4807,7 +5631,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Sku</span>
+        <span id="loadbalancersku_csharp">
+<a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4816,7 +5642,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Policy</span>
+        <span id="networkpolicy_csharp">
+<a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4825,7 +5653,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Type</span>
+        <span id="outboundtype_csharp">
+<a href="#outboundtype_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4834,7 +5664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Cidr</span>
+        <span id="podcidr_csharp">
+<a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4843,11 +5675,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Cidr</span>
+        <span id="servicecidr_csharp">
+<a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Range used by the Kubernetes service. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Network Range used by the Kubernetes service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -4859,7 +5693,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Plugin</span>
+        <span id="networkplugin_go">
+<a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4868,25 +5704,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Service<wbr>Ip</span>
+        <span id="dnsserviceip_go">
+<a href="#dnsserviceip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Docker<wbr>Bridge<wbr>Cidr</span>
+        <span id="dockerbridgecidr_go">
+<a href="#dockerbridgecidr_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Profile</span>
+        <span id="loadbalancerprofile_go">
+<a href="#loadbalancerprofile_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
@@ -4895,7 +5737,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Sku</span>
+        <span id="loadbalancersku_go">
+<a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4904,7 +5748,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Policy</span>
+        <span id="networkpolicy_go">
+<a href="#networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4913,7 +5759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Type</span>
+        <span id="outboundtype_go">
+<a href="#outboundtype_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4922,7 +5770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Cidr</span>
+        <span id="podcidr_go">
+<a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4931,11 +5781,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Cidr</span>
+        <span id="servicecidr_go">
+<a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Range used by the Kubernetes service. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Network Range used by the Kubernetes service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -4947,7 +5799,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Plugin</span>
+        <span id="networkplugin_nodejs">
+<a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4956,25 +5810,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Service<wbr>Ip</span>
+        <span id="dnsserviceip_nodejs">
+<a href="#dnsserviceip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>docker<wbr>Bridge<wbr>Cidr</span>
+        <span id="dockerbridgecidr_nodejs">
+<a href="#dockerbridgecidr_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Profile</span>
+        <span id="loadbalancerprofile_nodejs">
+<a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
@@ -4983,7 +5843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Sku</span>
+        <span id="loadbalancersku_nodejs">
+<a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4992,7 +5854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Policy</span>
+        <span id="networkpolicy_nodejs">
+<a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5001,7 +5865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Type</span>
+        <span id="outboundtype_nodejs">
+<a href="#outboundtype_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5010,7 +5876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Cidr</span>
+        <span id="podcidr_nodejs">
+<a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5019,11 +5887,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Cidr</span>
+        <span id="servicecidr_nodejs">
+<a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Network Range used by the Kubernetes service. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Network Range used by the Kubernetes service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -5035,7 +5905,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Plugin</span>
+        <span id="networkplugin_python">
+<a href="#networkplugin_python" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5044,25 +5916,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Service<wbr>Ip</span>
+        <span id="dnsserviceip_python">
+<a href="#dnsserviceip_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>docker<wbr>Bridge<wbr>Cidr</span>
+        <span id="dockerbridgecidr_python">
+<a href="#dockerbridgecidr_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Profile</span>
+        <span id="loadbalancerprofile_python">
+<a href="#loadbalancerprofile_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile]</a></span>
     </dt>
@@ -5071,7 +5949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Sku</span>
+        <span id="loadbalancersku_python">
+<a href="#loadbalancersku_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5080,7 +5960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Policy</span>
+        <span id="networkpolicy_python">
+<a href="#networkpolicy_python" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5089,7 +5971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Type</span>
+        <span id="outboundtype_python">
+<a href="#outboundtype_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5098,7 +5982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Cidr</span>
+        <span id="podcidr_python">
+<a href="#podcidr_python" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5107,11 +5993,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Cidr</span>
+        <span id="servicecidr_python">
+<a href="#servicecidr_python" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Network Range used by the Kubernetes service. This is required when `network_plugin` is set to `azure`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Network Range used by the Kubernetes service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -5141,7 +6029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effective<wbr>Outbound<wbr>Ips</span>
+        <span id="effectiveoutboundips_csharp">
+<a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5150,7 +6040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Outbound<wbr>Ip<wbr>Count</span>
+        <span id="managedoutboundipcount_csharp">
+<a href="#managedoutboundipcount_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5159,7 +6051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Ip<wbr>Address<wbr>Ids</span>
+        <span id="outboundipaddressids_csharp">
+<a href="#outboundipaddressids_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5168,7 +6062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Ip<wbr>Prefix<wbr>Ids</span>
+        <span id="outboundipprefixids_csharp">
+<a href="#outboundipprefixids_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Prefix<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5184,7 +6080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effective<wbr>Outbound<wbr>Ips</span>
+        <span id="effectiveoutboundips_go">
+<a href="#effectiveoutboundips_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5193,7 +6091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Outbound<wbr>Ip<wbr>Count</span>
+        <span id="managedoutboundipcount_go">
+<a href="#managedoutboundipcount_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5202,7 +6102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Ip<wbr>Address<wbr>Ids</span>
+        <span id="outboundipaddressids_go">
+<a href="#outboundipaddressids_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5211,7 +6113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Ip<wbr>Prefix<wbr>Ids</span>
+        <span id="outboundipprefixids_go">
+<a href="#outboundipprefixids_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Prefix<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5227,7 +6131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>effective<wbr>Outbound<wbr>Ips</span>
+        <span id="effectiveoutboundips_nodejs">
+<a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5236,7 +6142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Outbound<wbr>Ip<wbr>Count</span>
+        <span id="managedoutboundipcount_nodejs">
+<a href="#managedoutboundipcount_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5245,7 +6153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Ip<wbr>Address<wbr>Ids</span>
+        <span id="outboundipaddressids_nodejs">
+<a href="#outboundipaddressids_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Address<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5254,7 +6164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Ip<wbr>Prefix<wbr>Ids</span>
+        <span id="outboundipprefixids_nodejs">
+<a href="#outboundipprefixids_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Prefix<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5270,7 +6182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>effective<wbr>Outbound<wbr>Ips</span>
+        <span id="effectiveoutboundips_python">
+<a href="#effectiveoutboundips_python" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5279,7 +6193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Outbound<wbr>Ip<wbr>Count</span>
+        <span id="managedoutboundipcount_python">
+<a href="#managedoutboundipcount_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5288,7 +6204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Ip<wbr>Address<wbr>Ids</span>
+        <span id="outboundipaddressids_python">
+<a href="#outboundipaddressids_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Address<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5297,7 +6215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Ip<wbr>Prefix<wbr>Ids</span>
+        <span id="outboundipprefixids_python">
+<a href="#outboundipprefixids_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Prefix<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5331,7 +6251,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5340,7 +6262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory</span>
+        <span id="azureactivedirectory_csharp">
+<a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
@@ -5356,7 +6280,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5365,7 +6291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory</span>
+        <span id="azureactivedirectory_go">
+<a href="#azureactivedirectory_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
@@ -5381,7 +6309,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5390,7 +6320,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Active<wbr>Directory</span>
+        <span id="azureactivedirectory_nodejs">
+<a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
@@ -5406,7 +6338,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5415,7 +6349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>active_<wbr>directory</span>
+        <span id="azure_active_directory_python">
+<a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
     </dt>
@@ -5449,7 +6385,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>App<wbr>Id</span>
+        <span id="clientappid_csharp">
+<a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5458,7 +6396,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>App<wbr>Id</span>
+        <span id="serverappid_csharp">
+<a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5467,7 +6407,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>App<wbr>Secret</span>
+        <span id="serverappsecret_csharp">
+<a href="#serverappsecret_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5476,7 +6418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5492,7 +6436,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>App<wbr>Id</span>
+        <span id="clientappid_go">
+<a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5501,7 +6447,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>App<wbr>Id</span>
+        <span id="serverappid_go">
+<a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5510,7 +6458,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>App<wbr>Secret</span>
+        <span id="serverappsecret_go">
+<a href="#serverappsecret_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5519,7 +6469,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5535,7 +6487,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>App<wbr>Id</span>
+        <span id="clientappid_nodejs">
+<a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5544,7 +6498,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>App<wbr>Id</span>
+        <span id="serverappid_nodejs">
+<a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5553,7 +6509,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>App<wbr>Secret</span>
+        <span id="serverappsecret_nodejs">
+<a href="#serverappsecret_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5562,7 +6520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5578,7 +6538,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>App<wbr>Id</span>
+        <span id="clientappid_python">
+<a href="#clientappid_python" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5587,7 +6549,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>App<wbr>Id</span>
+        <span id="serverappid_python">
+<a href="#serverappid_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5596,7 +6560,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>App<wbr>Secret</span>
+        <span id="serverappsecret_python">
+<a href="#serverappsecret_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5605,7 +6571,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5639,7 +6607,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5648,7 +6618,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Secret</span>
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5664,7 +6636,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5673,7 +6647,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Secret</span>
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5689,7 +6665,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5698,7 +6676,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>Secret</span>
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5714,7 +6694,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5723,7 +6705,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client_<wbr>secret</span>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5757,7 +6741,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_csharp">
+<a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5766,7 +6752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Password</span>
+        <span id="adminpassword_csharp">
+<a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5782,7 +6770,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_go">
+<a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5791,7 +6781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Password</span>
+        <span id="adminpassword_go">
+<a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5807,7 +6799,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Username</span>
+        <span id="adminusername_nodejs">
+<a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5816,7 +6810,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Password</span>
+        <span id="adminpassword_nodejs">
+<a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5832,7 +6828,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>admin_<wbr>username</span>
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5841,7 +6839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>password</span>
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

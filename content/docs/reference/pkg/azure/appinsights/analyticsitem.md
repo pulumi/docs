@@ -251,7 +251,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_csharp">
+<a href="#applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +262,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +273,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +284,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +295,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Alias</span>
+        <span id="functionalias_csharp">
+<a href="#functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +306,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +324,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_go">
+<a href="#applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +335,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +346,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -339,7 +357,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +368,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Alias</span>
+        <span id="functionalias_go">
+<a href="#functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +379,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +397,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_nodejs">
+<a href="#applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -382,7 +408,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +419,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +430,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -409,7 +441,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>function<wbr>Alias</span>
+        <span id="functionalias_nodejs">
+<a href="#functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +452,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -434,7 +470,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>application_<wbr>insights_<wbr>id</span>
+        <span id="application_insights_id_python">
+<a href="#application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -443,7 +481,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -452,7 +492,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +503,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -470,7 +514,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>function_<wbr>alias</span>
+        <span id="function_alias_python">
+<a href="#function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -479,7 +525,9 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -514,7 +564,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Time<wbr>Created</span>
+        <span id="timecreated_csharp">
+<a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -523,7 +575,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Time<wbr>Modified</span>
+        <span id="timemodified_csharp">
+<a href="#timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -532,7 +586,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +604,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -556,7 +614,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Time<wbr>Created</span>
+        <span id="timecreated_go">
+<a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +625,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Time<wbr>Modified</span>
+        <span id="timemodified_go">
+<a href="#timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +636,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -590,7 +654,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>time<wbr>Created</span>
+        <span id="timecreated_nodejs">
+<a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -607,7 +675,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>time<wbr>Modified</span>
+        <span id="timemodified_nodejs">
+<a href="#timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -616,7 +686,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -632,7 +704,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +714,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>time_<wbr>created</span>
+        <span id="time_created_python">
+<a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +725,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>time_<wbr>modified</span>
+        <span id="time_modified_python">
+<a href="#time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -658,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -800,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_csharp">
+<a href="#state_applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_csharp">
+<a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Alias</span>
+        <span id="state_functionalias_csharp">
+<a href="#state_functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -836,7 +924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope</span>
+        <span id="state_scope_csharp">
+<a href="#state_scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -845,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Created</span>
+        <span id="state_timecreated_csharp">
+<a href="#state_timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -854,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Modified</span>
+        <span id="state_timemodified_csharp">
+<a href="#state_timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -863,7 +957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -872,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_csharp">
+<a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -888,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_go">
+<a href="#state_applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_go">
+<a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -906,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Alias</span>
+        <span id="state_functionalias_go">
+<a href="#state_functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -915,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +1030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope</span>
+        <span id="state_scope_go">
+<a href="#state_scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Created</span>
+        <span id="state_timecreated_go">
+<a href="#state_timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -942,7 +1052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Modified</span>
+        <span id="state_timemodified_go">
+<a href="#state_timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -951,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_go">
+<a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -976,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_nodejs">
+<a href="#state_applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -985,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_nodejs">
+<a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -994,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function<wbr>Alias</span>
+        <span id="state_functionalias_nodejs">
+<a href="#state_functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1003,7 +1125,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1012,7 +1136,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope</span>
+        <span id="state_scope_nodejs">
+<a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1021,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Created</span>
+        <span id="state_timecreated_nodejs">
+<a href="#state_timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1030,7 +1158,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Modified</span>
+        <span id="state_timemodified_nodejs">
+<a href="#state_timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1039,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1048,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_nodejs">
+<a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1064,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>insights_<wbr>id</span>
+        <span id="state_application_insights_id_python">
+<a href="#state_application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1073,7 +1209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_python">
+<a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1082,7 +1220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function_<wbr>alias</span>
+        <span id="state_function_alias_python">
+<a href="#state_function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1100,7 +1242,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope</span>
+        <span id="state_scope_python">
+<a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1109,7 +1253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time_<wbr>created</span>
+        <span id="state_time_created_python">
+<a href="#state_time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1118,7 +1264,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time_<wbr>modified</span>
+        <span id="state_time_modified_python">
+<a href="#state_time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1127,7 +1275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1136,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_python">
+<a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

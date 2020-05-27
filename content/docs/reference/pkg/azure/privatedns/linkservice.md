@@ -326,7 +326,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="loadbalancerfrontendipconfigurationids_csharp">
+<a href="#loadbalancerfrontendipconfigurationids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -335,7 +337,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Nat<wbr>Ip<wbr>Configurations</span>
+        <span id="natipconfigurations_csharp">
+<a href="#natipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">List&lt;Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
@@ -344,7 +348,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +359,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="autoapprovalsubscriptionids_csharp">
+<a href="#autoapprovalsubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -362,7 +370,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="enableproxyprotocol_csharp">
+<a href="#enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -371,7 +381,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +392,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +403,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -398,7 +414,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="visibilitysubscriptionids_csharp">
+<a href="#visibilitysubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -414,7 +432,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="loadbalancerfrontendipconfigurationids_go">
+<a href="#loadbalancerfrontendipconfigurationids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -423,7 +443,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Nat<wbr>Ip<wbr>Configurations</span>
+        <span id="natipconfigurations_go">
+<a href="#natipconfigurations_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</a></span>
     </dt>
@@ -432,7 +454,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +465,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="autoapprovalsubscriptionids_go">
+<a href="#autoapprovalsubscriptionids_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -450,7 +476,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="enableproxyprotocol_go">
+<a href="#enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -459,7 +487,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +498,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +509,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -486,7 +520,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="visibilitysubscriptionids_go">
+<a href="#visibilitysubscriptionids_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -502,7 +538,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="loadbalancerfrontendipconfigurationids_nodejs">
+<a href="#loadbalancerfrontendipconfigurationids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -511,7 +549,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>nat<wbr>Ip<wbr>Configurations</span>
+        <span id="natipconfigurations_nodejs">
+<a href="#natipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
@@ -520,7 +560,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +571,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="autoapprovalsubscriptionids_nodejs">
+<a href="#autoapprovalsubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -538,7 +582,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="enableproxyprotocol_nodejs">
+<a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -547,7 +593,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +604,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +615,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -574,7 +626,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="visibilitysubscriptionids_nodejs">
+<a href="#visibilitysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -590,7 +644,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>ids</span>
+        <span id="load_balancer_frontend_ip_configuration_ids_python">
+<a href="#load_balancer_frontend_ip_configuration_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -599,7 +655,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>nat_<wbr>ip_<wbr>configurations</span>
+        <span id="nat_ip_configurations_python">
+<a href="#nat_ip_configurations_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
@@ -608,7 +666,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +677,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>approval_<wbr>subscription_<wbr>ids</span>
+        <span id="auto_approval_subscription_ids_python">
+<a href="#auto_approval_subscription_ids_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>approval_<wbr>subscription_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -626,7 +688,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>proxy_<wbr>protocol</span>
+        <span id="enable_proxy_protocol_python">
+<a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -635,7 +699,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -644,7 +710,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +721,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -662,7 +732,9 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility_<wbr>subscription_<wbr>ids</span>
+        <span id="visibility_subscription_ids_python">
+<a href="#visibility_subscription_ids_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>subscription_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -689,7 +761,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Alias</span>
+        <span id="alias_csharp">
+<a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -698,7 +772,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -713,7 +789,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Alias</span>
+        <span id="alias_go">
+<a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -722,7 +800,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -737,7 +817,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>alias</span>
+        <span id="alias_nodejs">
+<a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -746,7 +828,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>alias</span>
+        <span id="alias_python">
+<a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -770,7 +856,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -911,7 +999,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias</span>
+        <span id="state_alias_csharp">
+<a href="#state_alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -920,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="state_autoapprovalsubscriptionids_csharp">
+<a href="#state_autoapprovalsubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -929,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="state_enableproxyprotocol_csharp">
+<a href="#state_enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -938,7 +1032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="state_loadbalancerfrontendipconfigurationids_csharp">
+<a href="#state_loadbalancerfrontendipconfigurationids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -947,7 +1043,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -956,7 +1054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -965,7 +1065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ip<wbr>Configurations</span>
+        <span id="state_natipconfigurations_csharp">
+<a href="#state_natipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">List&lt;Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
@@ -974,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -983,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -992,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="state_visibilitysubscriptionids_csharp">
+<a href="#state_visibilitysubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1008,7 +1116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias</span>
+        <span id="state_alias_go">
+<a href="#state_alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="state_autoapprovalsubscriptionids_go">
+<a href="#state_autoapprovalsubscriptionids_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1026,7 +1138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="state_enableproxyprotocol_go">
+<a href="#state_enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1035,7 +1149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="state_loadbalancerfrontendipconfigurationids_go">
+<a href="#state_loadbalancerfrontendipconfigurationids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1044,7 +1160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1053,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1062,7 +1182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ip<wbr>Configurations</span>
+        <span id="state_natipconfigurations_go">
+<a href="#state_natipconfigurations_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</a></span>
     </dt>
@@ -1071,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1080,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1089,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="state_visibilitysubscriptionids_go">
+<a href="#state_visibilitysubscriptionids_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1105,7 +1233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias</span>
+        <span id="state_alias_nodejs">
+<a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1114,7 +1244,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Approval<wbr>Subscription<wbr>Ids</span>
+        <span id="state_autoapprovalsubscriptionids_nodejs">
+<a href="#state_autoapprovalsubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Approval<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1123,7 +1255,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Proxy<wbr>Protocol</span>
+        <span id="state_enableproxyprotocol_nodejs">
+<a href="#state_enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1132,7 +1266,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</span>
+        <span id="state_loadbalancerfrontendipconfigurationids_nodejs">
+<a href="#state_loadbalancerfrontendipconfigurationids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1141,7 +1277,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1150,7 +1288,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1159,7 +1299,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat<wbr>Ip<wbr>Configurations</span>
+        <span id="state_natipconfigurations_nodejs">
+<a href="#state_natipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
@@ -1168,7 +1310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1177,7 +1321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1186,7 +1332,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility<wbr>Subscription<wbr>Ids</span>
+        <span id="state_visibilitysubscriptionids_nodejs">
+<a href="#state_visibilitysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Subscription<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1202,7 +1350,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias</span>
+        <span id="state_alias_python">
+<a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1211,7 +1361,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>approval_<wbr>subscription_<wbr>ids</span>
+        <span id="state_auto_approval_subscription_ids_python">
+<a href="#state_auto_approval_subscription_ids_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>approval_<wbr>subscription_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1220,7 +1372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>proxy_<wbr>protocol</span>
+        <span id="state_enable_proxy_protocol_python">
+<a href="#state_enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1229,7 +1383,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>ids</span>
+        <span id="state_load_balancer_frontend_ip_configuration_ids_python">
+<a href="#state_load_balancer_frontend_ip_configuration_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1238,7 +1394,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1405,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1256,7 +1416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat_<wbr>ip_<wbr>configurations</span>
+        <span id="state_nat_ip_configurations_python">
+<a href="#state_nat_ip_configurations_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
@@ -1265,7 +1427,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1274,7 +1438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1283,7 +1449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility_<wbr>subscription_<wbr>ids</span>
+        <span id="state_visibility_subscription_ids_python">
+<a href="#state_visibility_subscription_ids_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>subscription_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1325,7 +1493,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1334,7 +1504,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Primary</span>
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1343,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1352,7 +1526,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1361,7 +1537,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address<wbr>Version</span>
+        <span id="privateipaddressversion_csharp">
+<a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1377,7 +1555,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1386,7 +1566,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Primary</span>
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1395,7 +1577,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1413,7 +1599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip<wbr>Address<wbr>Version</span>
+        <span id="privateipaddressversion_go">
+<a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1429,7 +1617,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1438,7 +1628,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>primary</span>
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1447,7 +1639,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1456,7 +1650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip<wbr>Address</span>
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1465,7 +1661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip<wbr>Address<wbr>Version</span>
+        <span id="privateipaddressversion_nodejs">
+<a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1481,7 +1679,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1690,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>primary</span>
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1499,7 +1701,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1508,7 +1712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip<wbr>Address<wbr>Version</span>
+        <span id="privateipaddressversion_python">
+<a href="#privateipaddressversion_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1517,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip_<wbr>address</span>
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

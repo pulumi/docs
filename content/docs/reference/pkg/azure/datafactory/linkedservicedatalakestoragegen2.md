@@ -255,7 +255,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_csharp">
+<a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +266,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +277,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Id</span>
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +288,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Key</span>
+        <span id="serviceprincipalkey_csharp">
+<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +299,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant</span>
+        <span id="tenant_csharp">
+<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -300,7 +310,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +321,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -318,7 +332,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -327,7 +343,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +354,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Runtime<wbr>Name</span>
+        <span id="integrationruntimename_csharp">
+<a href="#integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +365,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +376,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -370,7 +394,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_go">
+<a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +405,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +416,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Id</span>
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -397,7 +427,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Key</span>
+        <span id="serviceprincipalkey_go">
+<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +438,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant</span>
+        <span id="tenant_go">
+<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +449,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +460,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -433,7 +471,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -442,7 +482,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +493,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Runtime<wbr>Name</span>
+        <span id="integrationruntimename_go">
+<a href="#integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -460,7 +504,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -469,7 +515,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -485,7 +533,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_nodejs">
+<a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -494,7 +544,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +555,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Id</span>
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +566,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Key</span>
+        <span id="serviceprincipalkey_nodejs">
+<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -521,7 +577,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>tenant</span>
+        <span id="tenant_nodejs">
+<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +588,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +599,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -548,7 +610,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -557,7 +621,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +632,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration<wbr>Runtime<wbr>Name</span>
+        <span id="integrationruntimename_nodejs">
+<a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -575,7 +643,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +654,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -600,7 +672,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +683,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +694,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>principal_<wbr>id</span>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -627,7 +705,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>principal_<wbr>key</span>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +716,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>tenant</span>
+        <span id="tenant_python">
+<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +727,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -654,7 +738,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>properties</span>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -663,7 +749,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -672,7 +760,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -681,7 +771,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration_<wbr>runtime_<wbr>name</span>
+        <span id="integration_runtime_name_python">
+<a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -690,7 +782,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +793,9 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -726,7 +822,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +839,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -756,7 +856,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -771,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -912,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="state_additionalproperties_csharp">
+<a href="#state_additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -921,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_csharp">
+<a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -930,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_csharp">
+<a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -939,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -948,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Runtime<wbr>Name</span>
+        <span id="state_integrationruntimename_csharp">
+<a href="#state_integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -957,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -966,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_csharp">
+<a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -975,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -984,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal<wbr>Id</span>
+        <span id="state_serviceprincipalid_csharp">
+<a href="#state_serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal<wbr>Key</span>
+        <span id="state_serviceprincipalkey_csharp">
+<a href="#state_serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1126,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant</span>
+        <span id="state_tenant_csharp">
+<a href="#state_tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1011,7 +1137,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1027,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="state_additionalproperties_go">
+<a href="#state_additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1036,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_go">
+<a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1045,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_go">
+<a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Runtime<wbr>Name</span>
+        <span id="state_integrationruntimename_go">
+<a href="#state_integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1072,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1081,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_go">
+<a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1090,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal<wbr>Id</span>
+        <span id="state_serviceprincipalid_go">
+<a href="#state_serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1108,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Principal<wbr>Key</span>
+        <span id="state_serviceprincipalkey_go">
+<a href="#state_serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1117,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant</span>
+        <span id="state_tenant_go">
+<a href="#state_tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1126,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1142,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span id="state_additionalproperties_nodejs">
+<a href="#state_additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1151,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_nodejs">
+<a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1160,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_nodejs">
+<a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1169,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1178,7 +1338,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration<wbr>Runtime<wbr>Name</span>
+        <span id="state_integrationruntimename_nodejs">
+<a href="#state_integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1187,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1196,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_nodejs">
+<a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1205,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1214,7 +1382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Principal<wbr>Id</span>
+        <span id="state_serviceprincipalid_nodejs">
+<a href="#state_serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1223,7 +1393,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Principal<wbr>Key</span>
+        <span id="state_serviceprincipalkey_nodejs">
+<a href="#state_serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1232,7 +1404,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant</span>
+        <span id="state_tenant_nodejs">
+<a href="#state_tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1241,7 +1415,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1257,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>properties</span>
+        <span id="state_additional_properties_python">
+<a href="#state_additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1266,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_python">
+<a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1275,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="state_data_factory_name_python">
+<a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1284,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1293,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration_<wbr>runtime_<wbr>name</span>
+        <span id="state_integration_runtime_name_python">
+<a href="#state_integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1302,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1311,7 +1499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_python">
+<a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1320,7 +1510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1329,7 +1521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>principal_<wbr>id</span>
+        <span id="state_service_principal_id_python">
+<a href="#state_service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1338,7 +1532,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>principal_<wbr>key</span>
+        <span id="state_service_principal_key_python">
+<a href="#state_service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1347,7 +1543,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant</span>
+        <span id="state_tenant_python">
+<a href="#state_tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1356,7 +1554,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

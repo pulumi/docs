@@ -242,7 +242,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="privatednszonename_csharp">
+<a href="#privatednszonename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +253,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +264,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +275,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +286,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registration<wbr>Enabled</span>
+        <span id="registrationenabled_csharp">
+<a href="#registrationenabled_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -287,7 +297,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -303,7 +315,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="privatednszonename_go">
+<a href="#privatednszonename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +326,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +337,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +348,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -339,7 +359,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registration<wbr>Enabled</span>
+        <span id="registrationenabled_go">
+<a href="#registrationenabled_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -348,7 +370,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -364,7 +388,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="privatednszonename_nodejs">
+<a href="#privatednszonename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -373,7 +399,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -382,7 +410,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +421,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +432,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>registration<wbr>Enabled</span>
+        <span id="registrationenabled_nodejs">
+<a href="#registrationenabled_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -409,7 +443,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -425,7 +461,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>private_<wbr>dns_<wbr>zone_<wbr>name</span>
+        <span id="private_dns_zone_name_python">
+<a href="#private_dns_zone_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -434,7 +472,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -443,7 +483,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>network_<wbr>id</span>
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -452,7 +494,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +505,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>registration_<wbr>enabled</span>
+        <span id="registration_enabled_python">
+<a href="#registration_enabled_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -470,7 +516,9 @@ The ZoneVirtualNetworkLink resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -497,7 +545,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -512,7 +562,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -527,7 +579,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +596,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -683,7 +739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="state_privatednszonename_csharp">
+<a href="#state_privatednszonename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -701,7 +761,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registration<wbr>Enabled</span>
+        <span id="state_registrationenabled_csharp">
+<a href="#state_registrationenabled_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -710,7 +772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -719,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -728,7 +794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="state_virtualnetworkid_csharp">
+<a href="#state_virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -744,7 +812,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="state_privatednszonename_go">
+<a href="#state_privatednszonename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -762,7 +834,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Registration<wbr>Enabled</span>
+        <span id="state_registrationenabled_go">
+<a href="#state_registrationenabled_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -771,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -780,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -789,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="state_virtualnetworkid_go">
+<a href="#state_virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -805,7 +885,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -814,7 +896,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Dns<wbr>Zone<wbr>Name</span>
+        <span id="state_privatednszonename_nodejs">
+<a href="#state_privatednszonename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -823,7 +907,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>registration<wbr>Enabled</span>
+        <span id="state_registrationenabled_nodejs">
+<a href="#state_registrationenabled_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -832,7 +918,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -841,7 +929,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -850,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Id</span>
+        <span id="state_virtualnetworkid_nodejs">
+<a href="#state_virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -875,7 +969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>dns_<wbr>zone_<wbr>name</span>
+        <span id="state_private_dns_zone_name_python">
+<a href="#state_private_dns_zone_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -884,7 +980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>registration_<wbr>enabled</span>
+        <span id="state_registration_enabled_python">
+<a href="#state_registration_enabled_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -893,7 +991,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -902,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -911,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>id</span>
+        <span id="state_virtual_network_id_python">
+<a href="#state_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

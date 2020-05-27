@@ -42,31 +42,31 @@ vault = azure.recoveryservices.Vault("vault",
     resource_group_name=rg.name,
     sku="Standard")
 sa = azure.storage.Account("sa",
-    account_replication_type="LRS",
-    account_tier="Standard",
     location=rg.location,
-    resource_group_name=rg.name)
+    resource_group_name=rg.name,
+    account_tier="Standard",
+    account_replication_type="LRS")
 example_share = azure.storage.Share("exampleShare", storage_account_name=sa.name)
 protection_container = azure.backup.ContainerStorageAccount("protection-container",
-    recovery_vault_name=vault.name,
     resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
     storage_account_id=sa.id)
 example_policy_file_share = azure.backup.PolicyFileShare("examplePolicyFileShare",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
     backup={
         "frequency": "Daily",
         "time": "23:00",
     },
-    recovery_vault_name=vault.name,
-    resource_group_name=rg.name,
     retention_daily={
         "count": 10,
     })
 share1 = azure.backup.ProtectedFileShare("share1",
-    backup_policy_id=example_policy_file_share.id,
-    recovery_vault_name=vault.name,
     resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    source_storage_account_id=protection_container.storage_account_id,
     source_file_share_name=example_share.name,
-    source_storage_account_id=protection_container.storage_account_id)
+    backup_policy_id=example_policy_file_share.id)
 ```
 {{% /example %}}
 
@@ -75,45 +75,41 @@ share1 = azure.backup.ProtectedFileShare("share1",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {
-    location: "West US",
-});
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
 const vault = new azure.recoveryservices.Vault("vault", {
     location: rg.location,
     resourceGroupName: rg.name,
     sku: "Standard",
 });
 const sa = new azure.storage.Account("sa", {
-    accountReplicationType: "LRS",
-    accountTier: "Standard",
     location: rg.location,
     resourceGroupName: rg.name,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
 });
-const exampleShare = new azure.storage.Share("example", {
-    storageAccountName: sa.name,
-});
-const protection_container = new azure.backup.ContainerStorageAccount("protection-container", {
-    recoveryVaultName: vault.name,
+const exampleShare = new azure.storage.Share("exampleShare", {storageAccountName: sa.name});
+const protection-container = new azure.backup.ContainerStorageAccount("protection-container", {
     resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
     storageAccountId: sa.id,
 });
-const examplePolicyFileShare = new azure.backup.PolicyFileShare("example", {
+const examplePolicyFileShare = new azure.backup.PolicyFileShare("examplePolicyFileShare", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
     backup: {
         frequency: "Daily",
         time: "23:00",
     },
-    recoveryVaultName: vault.name,
-    resourceGroupName: rg.name,
-    retentionDaily: {
+    retention_daily: {
         count: 10,
     },
 });
 const share1 = new azure.backup.ProtectedFileShare("share1", {
-    backupPolicyId: examplePolicyFileShare.id,
-    recoveryVaultName: vault.name,
     resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    sourceStorageAccountId: protection-container.storageAccountId,
     sourceFileShareName: exampleShare.name,
-    sourceStorageAccountId: protection_container.storageAccountId,
+    backupPolicyId: examplePolicyFileShare.id,
 });
 ```
 {{% /example %}}
@@ -304,7 +300,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_csharp">
+<a href="#backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +311,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_csharp">
+<a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +322,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +333,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="sourcefilesharename_csharp">
+<a href="#sourcefilesharename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +344,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="sourcestorageaccountid_csharp">
+<a href="#sourcestorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +362,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_go">
+<a href="#backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +373,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_go">
+<a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +384,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +395,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="sourcefilesharename_go">
+<a href="#sourcefilesharename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +406,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="sourcestorageaccountid_go">
+<a href="#sourcestorageaccountid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +424,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_nodejs">
+<a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -417,7 +435,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_nodejs">
+<a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +446,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -435,7 +457,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="sourcefilesharename_nodejs">
+<a href="#sourcefilesharename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -444,7 +468,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="sourcestorageaccountid_nodejs">
+<a href="#sourcestorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +486,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>backup_<wbr>policy_<wbr>id</span>
+        <span id="backup_policy_id_python">
+<a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -469,7 +497,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="recovery_vault_name_python">
+<a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -478,7 +508,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -487,7 +519,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>file_<wbr>share_<wbr>name</span>
+        <span id="source_file_share_name_python">
+<a href="#source_file_share_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file_<wbr>share_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -496,7 +530,9 @@ The ProtectedFileShare resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>storage_<wbr>account_<wbr>id</span>
+        <span id="source_storage_account_id_python">
+<a href="#source_storage_account_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -523,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -538,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +593,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +610,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -709,7 +753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_csharp">
+<a href="#state_backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -718,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_csharp">
+<a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -727,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -736,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="state_sourcefilesharename_csharp">
+<a href="#state_sourcefilesharename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -745,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="state_sourcestorageaccountid_csharp">
+<a href="#state_sourcestorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -761,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_go">
+<a href="#state_backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -770,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_go">
+<a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -779,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -788,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="state_sourcefilesharename_go">
+<a href="#state_sourcefilesharename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -797,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="state_sourcestorageaccountid_go">
+<a href="#state_sourcestorageaccountid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -813,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_nodejs">
+<a href="#state_backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -822,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_nodejs">
+<a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -831,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -840,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>File<wbr>Share<wbr>Name</span>
+        <span id="state_sourcefilesharename_nodejs">
+<a href="#state_sourcefilesharename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File<wbr>Share<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -849,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Storage<wbr>Account<wbr>Id</span>
+        <span id="state_sourcestorageaccountid_nodejs">
+<a href="#state_sourcestorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -865,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>policy_<wbr>id</span>
+        <span id="state_backup_policy_id_python">
+<a href="#state_backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -874,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="state_recovery_vault_name_python">
+<a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -892,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>file_<wbr>share_<wbr>name</span>
+        <span id="state_source_file_share_name_python">
+<a href="#state_source_file_share_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file_<wbr>share_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -901,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>storage_<wbr>account_<wbr>id</span>
+        <span id="state_source_storage_account_id_python">
+<a href="#state_source_storage_account_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

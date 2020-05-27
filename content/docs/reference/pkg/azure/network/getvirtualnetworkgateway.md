@@ -94,7 +94,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -103,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -128,7 +134,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -144,7 +152,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -153,7 +163,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -169,7 +181,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -178,7 +192,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -207,7 +223,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Active<wbr>Active</span>
+        <span id="activeactive_csharp">
+<a href="#activeactive_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -216,7 +234,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Settings</span>
+        <span id="bgpsettings_csharp">
+<a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting&gt;</a></span>
     </dt>
@@ -224,7 +244,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="defaultlocalnetworkgatewayid_csharp">
+<a href="#defaultlocalnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +258,9 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Bgp</span>
+        <span id="enablebgp_csharp">
+<a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -246,7 +270,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Generation</span>
+        <span id="generation_csharp">
+<a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,7 +281,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +292,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Configurations</span>
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
@@ -273,7 +303,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +314,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +325,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +335,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +346,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -317,7 +357,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +368,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Vpn<wbr>Client<wbr>Configurations</span>
+        <span id="vpnclientconfigurations_csharp">
+<a href="#vpnclientconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration&gt;</a></span>
     </dt>
@@ -335,7 +379,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Vpn<wbr>Type</span>
+        <span id="vpntype_csharp">
+<a href="#vpntype_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +397,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Active<wbr>Active</span>
+        <span id="activeactive_go">
+<a href="#activeactive_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -360,7 +408,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Settings</span>
+        <span id="bgpsettings_go">
+<a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting</a></span>
     </dt>
@@ -368,7 +418,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="defaultlocalnetworkgatewayid_go">
+<a href="#defaultlocalnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +432,9 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Bgp</span>
+        <span id="enablebgp_go">
+<a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -390,7 +444,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Generation</span>
+        <span id="generation_go">
+<a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +455,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +466,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Configurations</span>
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
     </dt>
@@ -417,7 +477,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +488,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -435,7 +499,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +509,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +520,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -461,7 +531,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +542,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Vpn<wbr>Client<wbr>Configurations</span>
+        <span id="vpnclientconfigurations_go">
+<a href="#vpnclientconfigurations_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
@@ -479,7 +553,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>Vpn<wbr>Type</span>
+        <span id="vpntype_go">
+<a href="#vpntype_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +571,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>active<wbr>Active</span>
+        <span id="activeactive_nodejs">
+<a href="#activeactive_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -504,7 +582,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>bgp<wbr>Settings</span>
+        <span id="bgpsettings_nodejs">
+<a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting[]</a></span>
     </dt>
@@ -512,7 +592,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="defaultlocalnetworkgatewayid_nodejs">
+<a href="#defaultlocalnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -524,7 +606,9 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Bgp</span>
+        <span id="enablebgp_nodejs">
+<a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -534,7 +618,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>generation</span>
+        <span id="generation_nodejs">
+<a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +629,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -552,7 +640,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>ip<wbr>Configurations</span>
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
@@ -561,7 +651,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +662,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +673,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -587,7 +683,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +694,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -605,7 +705,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +716,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>vpn<wbr>Client<wbr>Configurations</span>
+        <span id="vpnclientconfigurations_nodejs">
+<a href="#vpnclientconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration[]</a></span>
     </dt>
@@ -623,7 +727,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>vpn<wbr>Type</span>
+        <span id="vpntype_nodejs">
+<a href="#vpntype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -639,7 +745,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>active_<wbr>active</span>
+        <span id="active_active_python">
+<a href="#active_active_python" style="color: inherit; text-decoration: inherit;">active_<wbr>active</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -648,7 +756,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>bgp_<wbr>settings</span>
+        <span id="bgp_settings_python">
+<a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting]</a></span>
     </dt>
@@ -656,7 +766,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</span>
+        <span id="default_local_network_gateway_id_python">
+<a href="#default_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -668,7 +780,9 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>bgp</span>
+        <span id="enable_bgp_python">
+<a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -678,7 +792,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>generation</span>
+        <span id="generation_python">
+<a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -687,7 +803,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +814,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>ip_<wbr>configurations</span>
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
@@ -705,7 +825,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -714,7 +836,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +847,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,7 +857,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -740,7 +868,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -749,7 +879,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +890,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>vpn_<wbr>client_<wbr>configurations</span>
+        <span id="vpn_client_configurations_python">
+<a href="#vpn_client_configurations_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
     </dt>
@@ -767,7 +901,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
-        <span>vpn_<wbr>type</span>
+        <span id="vpn_type_python">
+<a href="#vpn_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -807,7 +943,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Asn</span>
+        <span id="asn_csharp">
+<a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -816,7 +954,9 @@ for this Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Weight</span>
+        <span id="peerweight_csharp">
+<a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -826,7 +966,9 @@ through BGP peering.
 
     <dt class="property-required"
             title="Required">
-        <span>Peering<wbr>Address</span>
+        <span id="peeringaddress_csharp">
+<a href="#peeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -844,7 +986,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>Asn</span>
+        <span id="asn_go">
+<a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -853,7 +997,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Weight</span>
+        <span id="peerweight_go">
+<a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -863,7 +1009,9 @@ through BGP peering.
 
     <dt class="property-required"
             title="Required">
-        <span>Peering<wbr>Address</span>
+        <span id="peeringaddress_go">
+<a href="#peeringaddress_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +1029,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>asn</span>
+        <span id="asn_nodejs">
+<a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -890,7 +1040,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>Weight</span>
+        <span id="peerweight_nodejs">
+<a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -900,7 +1052,9 @@ through BGP peering.
 
     <dt class="property-required"
             title="Required">
-        <span>peering<wbr>Address</span>
+        <span id="peeringaddress_nodejs">
+<a href="#peeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -918,7 +1072,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>asn</span>
+        <span id="asn_python">
+<a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -927,7 +1083,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>Weight</span>
+        <span id="peerweight_python">
+<a href="#peerweight_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -937,7 +1095,9 @@ through BGP peering.
 
     <dt class="property-required"
             title="Required">
-        <span>peering<wbr>Address</span>
+        <span id="peeringaddress_python">
+<a href="#peeringaddress_python" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -973,7 +1133,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -982,7 +1144,9 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Ip<wbr>Address<wbr>Allocation</span>
+        <span id="privateipaddressallocation_csharp">
+<a href="#privateipaddressallocation_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1156,9 @@ of the gateways virtual interface is assigned.
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span id="publicipaddressid_csharp">
+<a href="#publicipaddressid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1168,9 @@ with the Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1021,7 +1189,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1030,7 +1200,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Ip<wbr>Address<wbr>Allocation</span>
+        <span id="privateipaddressallocation_go">
+<a href="#privateipaddressallocation_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1040,7 +1212,9 @@ of the gateways virtual interface is assigned.
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span id="publicipaddressid_go">
+<a href="#publicipaddressid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1224,9 @@ with the Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1069,7 +1245,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1078,7 +1256,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
+        <span id="privateipaddressallocation_nodejs">
+<a href="#privateipaddressallocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1088,7 +1268,9 @@ of the gateways virtual interface is assigned.
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span id="publicipaddressid_nodejs">
+<a href="#publicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1280,9 @@ with the Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1117,7 +1301,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1126,7 +1312,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
+        <span id="privateipaddressallocation_python">
+<a href="#privateipaddressallocation_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1136,7 +1324,9 @@ of the gateways virtual interface is assigned.
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span id="publicipaddressid_python">
+<a href="#publicipaddressid_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1146,7 +1336,9 @@ with the Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1183,7 +1375,9 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_csharp">
+<a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1194,7 +1388,9 @@ in CIDR notation.
 
     <dt class="property-required"
             title="Required">
-        <span>Radius<wbr>Server<wbr>Address</span>
+        <span id="radiusserveraddress_csharp">
+<a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1204,7 +1400,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>Radius<wbr>Server<wbr>Secret</span>
+        <span id="radiusserversecret_csharp">
+<a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1214,7 +1412,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>Revoked<wbr>Certificates</span>
+        <span id="revokedcertificates_csharp">
+<a href="#revokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -1224,7 +1424,9 @@ are defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>Root<wbr>Certificates</span>
+        <span id="rootcertificates_csharp">
+<a href="#rootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -1235,7 +1437,9 @@ used by the VPN clients to connect to the gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Client<wbr>Protocols</span>
+        <span id="vpnclientprotocols_csharp">
+<a href="#vpnclientprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1252,7 +1456,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_go">
+<a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1263,7 +1469,9 @@ in CIDR notation.
 
     <dt class="property-required"
             title="Required">
-        <span>Radius<wbr>Server<wbr>Address</span>
+        <span id="radiusserveraddress_go">
+<a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1273,7 +1481,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>Radius<wbr>Server<wbr>Secret</span>
+        <span id="radiusserversecret_go">
+<a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1283,7 +1493,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>Revoked<wbr>Certificates</span>
+        <span id="revokedcertificates_go">
+<a href="#revokedcertificates_go" style="color: inherit; text-decoration: inherit;">Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate</a></span>
     </dt>
@@ -1293,7 +1505,9 @@ are defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>Root<wbr>Certificates</span>
+        <span id="rootcertificates_go">
+<a href="#rootcertificates_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate</a></span>
     </dt>
@@ -1304,7 +1518,9 @@ used by the VPN clients to connect to the gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Client<wbr>Protocols</span>
+        <span id="vpnclientprotocols_go">
+<a href="#vpnclientprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1321,7 +1537,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Spaces</span>
+        <span id="addressspaces_nodejs">
+<a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1332,7 +1550,9 @@ in CIDR notation.
 
     <dt class="property-required"
             title="Required">
-        <span>radius<wbr>Server<wbr>Address</span>
+        <span id="radiusserveraddress_nodejs">
+<a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1342,7 +1562,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>radius<wbr>Server<wbr>Secret</span>
+        <span id="radiusserversecret_nodejs">
+<a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1352,7 +1574,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>revoked<wbr>Certificates</span>
+        <span id="revokedcertificates_nodejs">
+<a href="#revokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
@@ -1362,7 +1586,9 @@ are defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>root<wbr>Certificates</span>
+        <span id="rootcertificates_nodejs">
+<a href="#rootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
@@ -1373,7 +1599,9 @@ used by the VPN clients to connect to the gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>vpn<wbr>Client<wbr>Protocols</span>
+        <span id="vpnclientprotocols_nodejs">
+<a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1390,7 +1618,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>spaces</span>
+        <span id="address_spaces_python">
+<a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1401,7 +1631,9 @@ in CIDR notation.
 
     <dt class="property-required"
             title="Required">
-        <span>radius<wbr>Server<wbr>Address</span>
+        <span id="radiusserveraddress_python">
+<a href="#radiusserveraddress_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1411,7 +1643,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>radius<wbr>Server<wbr>Secret</span>
+        <span id="radiusserversecret_python">
+<a href="#radiusserversecret_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1421,7 +1655,9 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span>revoked<wbr>Certificates</span>
+        <span id="revokedcertificates_python">
+<a href="#revokedcertificates_python" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate]</a></span>
     </dt>
@@ -1431,7 +1667,9 @@ are defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>root<wbr>Certificates</span>
+        <span id="rootcertificates_python">
+<a href="#rootcertificates_python" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate]</a></span>
     </dt>
@@ -1442,7 +1680,9 @@ used by the VPN clients to connect to the gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>vpn<wbr>Client<wbr>Protocols</span>
+        <span id="vpnclientprotocols_python">
+<a href="#vpnclientprotocols_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1477,7 +1717,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1486,7 +1728,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1501,7 +1745,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1510,7 +1756,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1525,7 +1773,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1534,7 +1784,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1549,7 +1801,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1558,7 +1812,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1591,7 +1847,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1600,7 +1858,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_csharp">
+<a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1616,7 +1876,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1625,7 +1887,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_go">
+<a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1641,7 +1905,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1650,7 +1916,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_nodejs">
+<a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1666,7 +1934,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1675,7 +1945,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_python">
+<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

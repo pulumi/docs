@@ -269,7 +269,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Gallery<wbr>Name</span>
+        <span id="galleryname_csharp">
+<a href="#galleryname_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +280,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Identifier</span>
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
@@ -287,7 +291,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +302,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +313,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +324,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eula</span>
+        <span id="eula_csharp">
+<a href="#eula_csharp" style="color: inherit; text-decoration: inherit;">Eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +335,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hyper<wbr>VGeneration</span>
+        <span id="hypervgeneration_csharp">
+<a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +346,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +357,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +368,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy<wbr>Statement<wbr>Uri</span>
+        <span id="privacystatementuri_csharp">
+<a href="#privacystatementuri_csharp" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +379,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Release<wbr>Note<wbr>Uri</span>
+        <span id="releasenoteuri_csharp">
+<a href="#releasenoteuri_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +390,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -384,7 +408,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Gallery<wbr>Name</span>
+        <span id="galleryname_go">
+<a href="#galleryname_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +419,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Identifier</span>
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
     </dt>
@@ -402,7 +430,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +441,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +452,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +463,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eula</span>
+        <span id="eula_go">
+<a href="#eula_go" style="color: inherit; text-decoration: inherit;">Eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -438,7 +474,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hyper<wbr>VGeneration</span>
+        <span id="hypervgeneration_go">
+<a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +485,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +496,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +507,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy<wbr>Statement<wbr>Uri</span>
+        <span id="privacystatementuri_go">
+<a href="#privacystatementuri_go" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -474,7 +518,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Release<wbr>Note<wbr>Uri</span>
+        <span id="releasenoteuri_go">
+<a href="#releasenoteuri_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +529,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -499,7 +547,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>gallery<wbr>Name</span>
+        <span id="galleryname_nodejs">
+<a href="#galleryname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +558,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>identifier</span>
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
     </dt>
@@ -517,7 +569,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>os<wbr>Type</span>
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -526,7 +580,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -535,7 +591,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +602,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>eula</span>
+        <span id="eula_nodejs">
+<a href="#eula_nodejs" style="color: inherit; text-decoration: inherit;">eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +613,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>hyper<wbr>VGeneration</span>
+        <span id="hypervgeneration_nodejs">
+<a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -562,7 +624,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +635,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +646,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy<wbr>Statement<wbr>Uri</span>
+        <span id="privacystatementuri_nodejs">
+<a href="#privacystatementuri_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +657,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>release<wbr>Note<wbr>Uri</span>
+        <span id="releasenoteuri_nodejs">
+<a href="#releasenoteuri_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +668,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -614,7 +686,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>gallery_<wbr>name</span>
+        <span id="gallery_name_python">
+<a href="#gallery_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -623,7 +697,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>identifier</span>
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Dict[Shared<wbr>Image<wbr>Identifier]</a></span>
     </dt>
@@ -632,7 +708,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>os_<wbr>type</span>
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -641,7 +719,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -650,7 +730,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -659,7 +741,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>eula</span>
+        <span id="eula_python">
+<a href="#eula_python" style="color: inherit; text-decoration: inherit;">eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -668,7 +752,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>hyper_<wbr>v_<wbr>generation</span>
+        <span id="hyper_v_generation_python">
+<a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +763,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -686,7 +774,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -695,7 +785,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy_<wbr>statement_<wbr>uri</span>
+        <span id="privacy_statement_uri_python">
+<a href="#privacy_statement_uri_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>statement_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +796,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>release_<wbr>note_<wbr>uri</span>
+        <span id="release_note_uri_python">
+<a href="#release_note_uri_python" style="color: inherit; text-decoration: inherit;">release_<wbr>note_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -713,7 +807,9 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -740,7 +836,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -755,7 +853,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -770,7 +870,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -785,7 +887,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eula</span>
+        <span id="state_eula_csharp">
+<a href="#state_eula_csharp" style="color: inherit; text-decoration: inherit;">Eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +1052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gallery<wbr>Name</span>
+        <span id="state_galleryname_csharp">
+<a href="#state_galleryname_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -953,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hyper<wbr>VGeneration</span>
+        <span id="state_hypervgeneration_csharp">
+<a href="#state_hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -962,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_csharp">
+<a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
@@ -971,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -989,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="state_ostype_csharp">
+<a href="#state_ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,7 +1118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy<wbr>Statement<wbr>Uri</span>
+        <span id="state_privacystatementuri_csharp">
+<a href="#state_privacystatementuri_csharp" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Release<wbr>Note<wbr>Uri</span>
+        <span id="state_releasenoteuri_csharp">
+<a href="#state_releasenoteuri_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1016,7 +1140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1041,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eula</span>
+        <span id="state_eula_go">
+<a href="#state_eula_go" style="color: inherit; text-decoration: inherit;">Eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1059,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gallery<wbr>Name</span>
+        <span id="state_galleryname_go">
+<a href="#state_galleryname_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1068,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hyper<wbr>VGeneration</span>
+        <span id="state_hypervgeneration_go">
+<a href="#state_hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_go">
+<a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
     </dt>
@@ -1086,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1095,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="state_ostype_go">
+<a href="#state_ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1113,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy<wbr>Statement<wbr>Uri</span>
+        <span id="state_privacystatementuri_go">
+<a href="#state_privacystatementuri_go" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1122,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Release<wbr>Note<wbr>Uri</span>
+        <span id="state_releasenoteuri_go">
+<a href="#state_releasenoteuri_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1131,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1140,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1156,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1165,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eula</span>
+        <span id="state_eula_nodejs">
+<a href="#state_eula_nodejs" style="color: inherit; text-decoration: inherit;">eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gallery<wbr>Name</span>
+        <span id="state_galleryname_nodejs">
+<a href="#state_galleryname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1183,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hyper<wbr>VGeneration</span>
+        <span id="state_hypervgeneration_nodejs">
+<a href="#state_hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1192,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_nodejs">
+<a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
     </dt>
@@ -1201,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1210,7 +1374,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1219,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Type</span>
+        <span id="state_ostype_nodejs">
+<a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1396,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy<wbr>Statement<wbr>Uri</span>
+        <span id="state_privacystatementuri_nodejs">
+<a href="#state_privacystatementuri_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Statement<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1237,7 +1407,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>release<wbr>Note<wbr>Uri</span>
+        <span id="state_releasenoteuri_nodejs">
+<a href="#state_releasenoteuri_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Note<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1246,7 +1418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1255,7 +1429,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1271,7 +1447,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1280,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eula</span>
+        <span id="state_eula_python">
+<a href="#state_eula_python" style="color: inherit; text-decoration: inherit;">eula</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1289,7 +1469,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gallery_<wbr>name</span>
+        <span id="state_gallery_name_python">
+<a href="#state_gallery_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1298,7 +1480,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hyper_<wbr>v_<wbr>generation</span>
+        <span id="state_hyper_v_generation_python">
+<a href="#state_hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1307,7 +1491,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_python">
+<a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedimageidentifier">Dict[Shared<wbr>Image<wbr>Identifier]</a></span>
     </dt>
@@ -1316,7 +1502,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1325,7 +1513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1334,7 +1524,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os_<wbr>type</span>
+        <span id="state_os_type_python">
+<a href="#state_os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1343,7 +1535,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy_<wbr>statement_<wbr>uri</span>
+        <span id="state_privacy_statement_uri_python">
+<a href="#state_privacy_statement_uri_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>statement_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1352,7 +1546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>release_<wbr>note_<wbr>uri</span>
+        <span id="state_release_note_uri_python">
+<a href="#state_release_note_uri_python" style="color: inherit; text-decoration: inherit;">release_<wbr>note_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1361,7 +1557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1370,7 +1568,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1412,7 +1612,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1421,7 +1623,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1430,7 +1634,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1446,7 +1652,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1455,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1464,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1480,7 +1692,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1489,7 +1703,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1498,7 +1714,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1514,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1523,7 +1743,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1532,7 +1754,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

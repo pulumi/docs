@@ -353,7 +353,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_csharp">
+<a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +364,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Lun</span>
+        <span id="lun_csharp">
+<a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -371,7 +375,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Managed<wbr>Disk<wbr>Id</span>
+        <span id="manageddiskid_csharp">
+<a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +386,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +397,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="createoption_csharp">
+<a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -398,7 +408,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_csharp">
+<a href="#writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -414,7 +426,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_go">
+<a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +437,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Lun</span>
+        <span id="lun_go">
+<a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -432,7 +448,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Managed<wbr>Disk<wbr>Id</span>
+        <span id="manageddiskid_go">
+<a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +459,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +470,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="createoption_go">
+<a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +481,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_go">
+<a href="#writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -475,7 +499,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_nodejs">
+<a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -484,7 +510,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>lun</span>
+        <span id="lun_nodejs">
+<a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -493,7 +521,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>managed<wbr>Disk<wbr>Id</span>
+        <span id="manageddiskid_nodejs">
+<a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +532,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -511,7 +543,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Option</span>
+        <span id="createoption_nodejs">
+<a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +554,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_nodejs">
+<a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -536,7 +572,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_python">
+<a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +583,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>lun</span>
+        <span id="lun_python">
+<a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -554,7 +594,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>managed_<wbr>disk_<wbr>id</span>
+        <span id="managed_disk_id_python">
+<a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -563,7 +605,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -572,7 +616,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>option</span>
+        <span id="create_option_python">
+<a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +627,9 @@ The DataDiskAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>accelerator_<wbr>enabled</span>
+        <span id="write_accelerator_enabled_python">
+<a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -608,7 +656,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -623,7 +673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -638,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -794,7 +850,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caching</span>
+        <span id="state_caching_csharp">
+<a href="#state_caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="state_createoption_csharp">
+<a href="#state_createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -812,7 +872,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lun</span>
+        <span id="state_lun_csharp">
+<a href="#state_lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -821,7 +883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Disk<wbr>Id</span>
+        <span id="state_manageddiskid_csharp">
+<a href="#state_manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -830,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_csharp">
+<a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -839,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="state_writeacceleratorenabled_csharp">
+<a href="#state_writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -855,7 +923,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caching</span>
+        <span id="state_caching_go">
+<a href="#state_caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -864,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="state_createoption_go">
+<a href="#state_createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -873,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lun</span>
+        <span id="state_lun_go">
+<a href="#state_lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -882,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Disk<wbr>Id</span>
+        <span id="state_manageddiskid_go">
+<a href="#state_manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -891,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_go">
+<a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -900,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="state_writeacceleratorenabled_go">
+<a href="#state_writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -916,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>caching</span>
+        <span id="state_caching_nodejs">
+<a href="#state_caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -925,7 +1007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Option</span>
+        <span id="state_createoption_nodejs">
+<a href="#state_createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -934,7 +1018,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lun</span>
+        <span id="state_lun_nodejs">
+<a href="#state_lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -943,7 +1029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Disk<wbr>Id</span>
+        <span id="state_manageddiskid_nodejs">
+<a href="#state_manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -952,7 +1040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_nodejs">
+<a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -961,7 +1051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="state_writeacceleratorenabled_nodejs">
+<a href="#state_writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -977,7 +1069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>caching</span>
+        <span id="state_caching_python">
+<a href="#state_caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -986,7 +1080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>option</span>
+        <span id="state_create_option_python">
+<a href="#state_create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -995,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lun</span>
+        <span id="state_lun_python">
+<a href="#state_lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1004,7 +1102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>disk_<wbr>id</span>
+        <span id="state_managed_disk_id_python">
+<a href="#state_managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1013,7 +1113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="state_virtual_machine_id_python">
+<a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>accelerator_<wbr>enabled</span>
+        <span id="state_write_accelerator_enabled_python">
+<a href="#state_write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

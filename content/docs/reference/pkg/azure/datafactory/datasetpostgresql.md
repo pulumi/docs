@@ -256,7 +256,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_csharp">
+<a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +267,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Linked<wbr>Service<wbr>Name</span>
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +278,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +289,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -292,7 +300,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -301,7 +311,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +322,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +333,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +344,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -337,7 +355,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Columns</span>
+        <span id="schemacolumns_csharp">
+<a href="#schemacolumns_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">List&lt;Dataset<wbr>Postgresql<wbr>Schema<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
@@ -346,7 +366,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Name</span>
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +384,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_go">
+<a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +395,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Linked<wbr>Service<wbr>Name</span>
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +406,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +417,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -398,7 +428,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -407,7 +439,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -416,7 +450,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +461,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +472,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -443,7 +483,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Columns</span>
+        <span id="schemacolumns_go">
+<a href="#schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">[]Dataset<wbr>Postgresql<wbr>Schema<wbr>Column</a></span>
     </dt>
@@ -452,7 +494,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Name</span>
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +512,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_nodejs">
+<a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +523,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>linked<wbr>Service<wbr>Name</span>
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +534,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +545,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -504,7 +556,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -513,7 +567,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +578,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +589,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -540,7 +600,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -549,7 +611,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema<wbr>Columns</span>
+        <span id="schemacolumns_nodejs">
+<a href="#schemacolumns_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">Dataset<wbr>Postgresql<wbr>Schema<wbr>Column[]</a></span>
     </dt>
@@ -558,7 +622,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>table<wbr>Name</span>
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -574,7 +640,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -583,7 +651,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>linked_<wbr>service_<wbr>name</span>
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -592,7 +662,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -601,7 +673,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>properties</span>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -610,7 +684,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -619,7 +695,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +706,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -637,7 +717,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -646,7 +728,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -655,7 +739,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema_<wbr>columns</span>
+        <span id="schema_columns_python">
+<a href="#schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">List[Dataset<wbr>Postgresql<wbr>Schema<wbr>Column]</a></span>
     </dt>
@@ -664,7 +750,9 @@ The DatasetPostgresql resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>table_<wbr>name</span>
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -706,7 +796,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -721,7 +813,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -736,7 +830,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -877,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="state_additionalproperties_csharp">
+<a href="#state_additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -886,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_csharp">
+<a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -895,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_csharp">
+<a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -904,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -913,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_csharp">
+<a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linked<wbr>Service<wbr>Name</span>
+        <span id="state_linkedservicename_csharp">
+<a href="#state_linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -931,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -940,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_csharp">
+<a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -949,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -958,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Columns</span>
+        <span id="state_schemacolumns_csharp">
+<a href="#state_schemacolumns_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">List&lt;Dataset<wbr>Postgresql<wbr>Schema<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
@@ -967,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Name</span>
+        <span id="state_tablename_csharp">
+<a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -983,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Properties</span>
+        <span id="state_additionalproperties_go">
+<a href="#state_additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -992,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_go">
+<a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1001,7 +1123,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_go">
+<a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1010,7 +1134,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1019,7 +1145,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_go">
+<a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1028,7 +1156,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linked<wbr>Service<wbr>Name</span>
+        <span id="state_linkedservicename_go">
+<a href="#state_linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1037,7 +1167,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1046,7 +1178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_go">
+<a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1055,7 +1189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1064,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Columns</span>
+        <span id="state_schemacolumns_go">
+<a href="#state_schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">[]Dataset<wbr>Postgresql<wbr>Schema<wbr>Column</a></span>
     </dt>
@@ -1073,7 +1211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Name</span>
+        <span id="state_tablename_go">
+<a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1089,7 +1229,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span id="state_additionalproperties_nodejs">
+<a href="#state_additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1098,7 +1240,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_nodejs">
+<a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1107,7 +1251,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_nodejs">
+<a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1116,7 +1262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1125,7 +1273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_nodejs">
+<a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1134,7 +1284,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>linked<wbr>Service<wbr>Name</span>
+        <span id="state_linkedservicename_nodejs">
+<a href="#state_linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1143,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1152,7 +1306,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_nodejs">
+<a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1161,7 +1317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1170,7 +1328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema<wbr>Columns</span>
+        <span id="state_schemacolumns_nodejs">
+<a href="#state_schemacolumns_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">Dataset<wbr>Postgresql<wbr>Schema<wbr>Column[]</a></span>
     </dt>
@@ -1179,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>table<wbr>Name</span>
+        <span id="state_tablename_nodejs">
+<a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1195,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>properties</span>
+        <span id="state_additional_properties_python">
+<a href="#state_additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1204,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_python">
+<a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1213,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="state_data_factory_name_python">
+<a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1222,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1231,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_python">
+<a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1240,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>linked_<wbr>service_<wbr>name</span>
+        <span id="state_linked_service_name_python">
+<a href="#state_linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1249,7 +1423,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1258,7 +1434,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_python">
+<a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1267,7 +1445,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1276,7 +1456,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema_<wbr>columns</span>
+        <span id="state_schema_columns_python">
+<a href="#state_schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetpostgresqlschemacolumn">List[Dataset<wbr>Postgresql<wbr>Schema<wbr>Column]</a></span>
     </dt>
@@ -1285,7 +1467,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>table_<wbr>name</span>
+        <span id="state_table_name_python">
+<a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1327,7 +1511,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1336,7 +1522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1345,7 +1533,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1361,7 +1551,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1370,7 +1562,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1379,7 +1573,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1591,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1404,7 +1602,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1413,7 +1613,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1429,7 +1631,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1438,7 +1642,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1447,7 +1653,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

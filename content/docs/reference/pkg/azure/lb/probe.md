@@ -266,7 +266,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_csharp">
+<a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +277,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -284,7 +288,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +299,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_csharp">
+<a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -302,7 +310,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +321,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Probes</span>
+        <span id="numberofprobes_csharp">
+<a href="#numberofprobes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -320,7 +332,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +343,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Path</span>
+        <span id="requestpath_csharp">
+<a href="#requestpath_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +361,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_go">
+<a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +372,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -363,7 +383,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +394,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_go">
+<a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -381,7 +405,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +416,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Probes</span>
+        <span id="numberofprobes_go">
+<a href="#numberofprobes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -399,7 +427,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +438,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Path</span>
+        <span id="requestpath_go">
+<a href="#requestpath_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +456,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_nodejs">
+<a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +467,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -442,7 +478,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +489,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_nodejs">
+<a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -460,7 +500,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +511,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Probes</span>
+        <span id="numberofprobes_nodejs">
+<a href="#numberofprobes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -478,7 +522,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +533,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Path</span>
+        <span id="requestpath_nodejs">
+<a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +551,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>loadbalancer_<wbr>id</span>
+        <span id="loadbalancer_id_python">
+<a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -512,7 +562,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -521,7 +573,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -530,7 +584,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval_<wbr>in_<wbr>seconds</span>
+        <span id="interval_in_seconds_python">
+<a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -539,7 +595,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -548,7 +606,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>probes</span>
+        <span id="number_of_probes_python">
+<a href="#number_of_probes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -557,7 +617,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +628,9 @@ The Probe resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>path</span>
+        <span id="request_path_python">
+<a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Load<wbr>Balancer<wbr>Rules</span>
+        <span id="loadbalancerrules_csharp">
+<a href="#loadbalancerrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -616,7 +684,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -624,7 +694,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Load<wbr>Balancer<wbr>Rules</span>
+        <span id="loadbalancerrules_go">
+<a href="#loadbalancerrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -639,7 +711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -647,7 +721,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>load<wbr>Balancer<wbr>Rules</span>
+        <span id="loadbalancerrules_nodejs">
+<a href="#loadbalancerrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -662,7 +738,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -670,7 +748,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>load_<wbr>balancer_<wbr>rules</span>
+        <span id="load_balancer_rules_python">
+<a href="#load_balancer_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -811,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="state_intervalinseconds_csharp">
+<a href="#state_intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -820,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Rules</span>
+        <span id="state_loadbalancerrules_csharp">
+<a href="#state_loadbalancerrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -828,7 +912,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="state_loadbalancerid_csharp">
+<a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -837,7 +923,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -846,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Probes</span>
+        <span id="state_numberofprobes_csharp">
+<a href="#state_numberofprobes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -855,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_csharp">
+<a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -864,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Path</span>
+        <span id="state_requestpath_csharp">
+<a href="#state_requestpath_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -882,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -898,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="state_intervalinseconds_go">
+<a href="#state_intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -907,7 +1007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Rules</span>
+        <span id="state_loadbalancerrules_go">
+<a href="#state_loadbalancerrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -915,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="state_loadbalancerid_go">
+<a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Probes</span>
+        <span id="state_numberofprobes_go">
+<a href="#state_numberofprobes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -942,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_go">
+<a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -951,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Path</span>
+        <span id="state_requestpath_go">
+<a href="#state_requestpath_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -969,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -985,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval<wbr>In<wbr>Seconds</span>
+        <span id="state_intervalinseconds_nodejs">
+<a href="#state_intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -994,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Rules</span>
+        <span id="state_loadbalancerrules_nodejs">
+<a href="#state_loadbalancerrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1002,7 +1122,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer<wbr>Id</span>
+        <span id="state_loadbalancerid_nodejs">
+<a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1011,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1020,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Probes</span>
+        <span id="state_numberofprobes_nodejs">
+<a href="#state_numberofprobes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1029,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_nodejs">
+<a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1038,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1047,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Path</span>
+        <span id="state_requestpath_nodejs">
+<a href="#state_requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1056,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1072,7 +1206,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval_<wbr>in_<wbr>seconds</span>
+        <span id="state_interval_in_seconds_python">
+<a href="#state_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1081,7 +1217,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer_<wbr>rules</span>
+        <span id="state_load_balancer_rules_python">
+<a href="#state_load_balancer_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1089,7 +1227,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer_<wbr>id</span>
+        <span id="state_loadbalancer_id_python">
+<a href="#state_loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1098,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1107,7 +1249,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>probes</span>
+        <span id="state_number_of_probes_python">
+<a href="#state_number_of_probes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>probes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1116,7 +1260,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_python">
+<a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1125,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1134,7 +1282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>path</span>
+        <span id="state_request_path_python">
+<a href="#state_request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1143,7 +1293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

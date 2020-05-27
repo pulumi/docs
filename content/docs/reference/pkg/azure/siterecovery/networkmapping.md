@@ -295,7 +295,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_csharp">
+<a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +306,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +317,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Network<wbr>Id</span>
+        <span id="sourcenetworkid_csharp">
+<a href="#sourcenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +328,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="sourcerecoveryfabricname_csharp">
+<a href="#sourcerecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +339,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Network<wbr>Id</span>
+        <span id="targetnetworkid_csharp">
+<a href="#targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +350,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="targetrecoveryfabricname_csharp">
+<a href="#targetrecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +361,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +379,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_go">
+<a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +390,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +401,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Network<wbr>Id</span>
+        <span id="sourcenetworkid_go">
+<a href="#sourcenetworkid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +412,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="sourcerecoveryfabricname_go">
+<a href="#sourcerecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +423,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Network<wbr>Id</span>
+        <span id="targetnetworkid_go">
+<a href="#targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +434,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="targetrecoveryfabricname_go">
+<a href="#targetrecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -419,7 +445,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -435,7 +463,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_nodejs">
+<a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -444,7 +474,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +485,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Network<wbr>Id</span>
+        <span id="sourcenetworkid_nodejs">
+<a href="#sourcenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -462,7 +496,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="sourcerecoveryfabricname_nodejs">
+<a href="#sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +507,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Network<wbr>Id</span>
+        <span id="targetnetworkid_nodejs">
+<a href="#targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +518,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="targetrecoveryfabricname_nodejs">
+<a href="#targetrecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -489,7 +529,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -505,7 +547,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="recovery_vault_name_python">
+<a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +558,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -523,7 +569,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>network_<wbr>id</span>
+        <span id="source_network_id_python">
+<a href="#source_network_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -532,7 +580,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
+        <span id="source_recovery_fabric_name_python">
+<a href="#source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +591,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>target_<wbr>network_<wbr>id</span>
+        <span id="target_network_id_python">
+<a href="#target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -550,7 +602,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>target_<wbr>recovery_<wbr>fabric_<wbr>name</span>
+        <span id="target_recovery_fabric_name_python">
+<a href="#target_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -559,7 +613,9 @@ The NetworkMapping resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +642,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +659,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -616,7 +676,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -772,7 +836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -781,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_csharp">
+<a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -790,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -799,7 +869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Network<wbr>Id</span>
+        <span id="state_sourcenetworkid_csharp">
+<a href="#state_sourcenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -808,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_sourcerecoveryfabricname_csharp">
+<a href="#state_sourcerecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Network<wbr>Id</span>
+        <span id="state_targetnetworkid_csharp">
+<a href="#state_targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -826,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_targetrecoveryfabricname_csharp">
+<a href="#state_targetrecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_go">
+<a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -860,7 +942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -869,7 +953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Network<wbr>Id</span>
+        <span id="state_sourcenetworkid_go">
+<a href="#state_sourcenetworkid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -878,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_sourcerecoveryfabricname_go">
+<a href="#state_sourcerecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Network<wbr>Id</span>
+        <span id="state_targetnetworkid_go">
+<a href="#state_targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_targetrecoveryfabricname_go">
+<a href="#state_targetrecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -912,7 +1004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -921,7 +1015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_nodejs">
+<a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -939,7 +1037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Network<wbr>Id</span>
+        <span id="state_sourcenetworkid_nodejs">
+<a href="#state_sourcenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -948,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_sourcerecoveryfabricname_nodejs">
+<a href="#state_sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Network<wbr>Id</span>
+        <span id="state_targetnetworkid_nodejs">
+<a href="#state_targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -966,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span id="state_targetrecoveryfabricname_nodejs">
+<a href="#state_targetrecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -982,7 +1088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -991,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="state_recovery_vault_name_python">
+<a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1000,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1009,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>network_<wbr>id</span>
+        <span id="state_source_network_id_python">
+<a href="#state_source_network_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1018,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
+        <span id="state_source_recovery_fabric_name_python">
+<a href="#state_source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1027,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>network_<wbr>id</span>
+        <span id="state_target_network_id_python">
+<a href="#state_target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1036,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>recovery_<wbr>fabric_<wbr>name</span>
+        <span id="state_target_recovery_fabric_name_python">
+<a href="#state_target_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

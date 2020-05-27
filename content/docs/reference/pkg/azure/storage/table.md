@@ -244,7 +244,9 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_csharp">
+<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +256,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acls</span>
+        <span id="acls_csharp">
+<a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">List&lt;Table<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
@@ -263,7 +267,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +285,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_go">
+<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -289,7 +297,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acls</span>
+        <span id="acls_go">
+<a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
     </dt>
@@ -298,7 +308,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +326,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_nodejs">
+<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -324,7 +338,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acls</span>
+        <span id="acls_nodejs">
+<a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">Table<wbr>Acl[]</a></span>
     </dt>
@@ -333,7 +349,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -349,7 +367,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>name</span>
+        <span id="storage_account_name_python">
+<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -359,7 +379,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acls</span>
+        <span id="acls_python">
+<a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">List[Table<wbr>Acl]</a></span>
     </dt>
@@ -368,7 +390,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -395,7 +419,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -410,7 +436,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +453,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +470,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +613,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acls</span>
+        <span id="state_acls_csharp">
+<a href="#state_acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">List&lt;Table<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
@@ -590,7 +624,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -599,7 +635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_csharp">
+<a href="#state_storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +654,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acls</span>
+        <span id="state_acls_go">
+<a href="#state_acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
     </dt>
@@ -625,7 +665,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -634,7 +676,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_go">
+<a href="#state_storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -651,7 +695,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acls</span>
+        <span id="state_acls_nodejs">
+<a href="#state_acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">Table<wbr>Acl[]</a></span>
     </dt>
@@ -660,7 +706,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -669,7 +717,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_nodejs">
+<a href="#state_storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -686,7 +736,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acls</span>
+        <span id="state_acls_python">
+<a href="#state_acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableacl">List[Table<wbr>Acl]</a></span>
     </dt>
@@ -695,7 +747,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +758,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>account_<wbr>name</span>
+        <span id="state_storage_account_name_python">
+<a href="#state_storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -747,7 +803,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -756,7 +814,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Policies</span>
+        <span id="accesspolicies_csharp">
+<a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableaclaccesspolicy">List&lt;Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -772,7 +832,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -781,7 +843,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Policies</span>
+        <span id="accesspolicies_go">
+<a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableaclaccesspolicy">[]Table<wbr>Acl<wbr>Access<wbr>Policy</a></span>
     </dt>
@@ -797,7 +861,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -806,7 +872,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Policies</span>
+        <span id="accesspolicies_nodejs">
+<a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableaclaccesspolicy">Table<wbr>Acl<wbr>Access<wbr>Policy[]</a></span>
     </dt>
@@ -822,7 +890,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -831,7 +901,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>policies</span>
+        <span id="access_policies_python">
+<a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tableaclaccesspolicy">List[Table<wbr>Acl<wbr>Access<wbr>Policy]</a></span>
     </dt>
@@ -865,7 +937,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Expiry</span>
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -874,7 +948,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Permissions</span>
+        <span id="permissions_csharp">
+<a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -883,7 +959,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -899,7 +977,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Expiry</span>
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +988,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Permissions</span>
+        <span id="permissions_go">
+<a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -917,7 +999,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1017,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>expiry</span>
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -942,7 +1028,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>permissions</span>
+        <span id="permissions_nodejs">
+<a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1039,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -967,7 +1057,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>expiry</span>
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -976,7 +1068,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>permissions</span>
+        <span id="permissions_python">
+<a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -985,7 +1079,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

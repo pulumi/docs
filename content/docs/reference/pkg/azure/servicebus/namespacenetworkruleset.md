@@ -289,7 +289,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_csharp">
+<a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +300,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +311,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +322,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -325,7 +333,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="networkrules_csharp">
+<a href="#networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">List&lt;Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -341,7 +351,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_go">
+<a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -350,7 +362,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -359,7 +373,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +384,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -377,7 +395,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="networkrules_go">
+<a href="#networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule</a></span>
     </dt>
@@ -393,7 +413,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Name</span>
+        <span id="namespacename_nodejs">
+<a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +424,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +435,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +446,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Rules</span>
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -429,7 +457,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rules</span>
+        <span id="networkrules_nodejs">
+<a href="#networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule[]</a></span>
     </dt>
@@ -445,7 +475,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>namespace_<wbr>name</span>
+        <span id="namespace_name_python">
+<a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -454,7 +486,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -463,7 +497,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>action</span>
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -472,7 +508,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>rules</span>
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -481,7 +519,9 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rules</span>
+        <span id="network_rules_python">
+<a href="#network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">List[Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule]</a></span>
     </dt>
@@ -508,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -523,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="state_defaultaction_csharp">
+<a href="#state_defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="state_iprules_csharp">
+<a href="#state_iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -712,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_csharp">
+<a href="#state_namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -721,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="state_networkrules_csharp">
+<a href="#state_networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">List&lt;Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -730,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -746,7 +804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="state_defaultaction_go">
+<a href="#state_defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="state_iprules_go">
+<a href="#state_iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -764,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_go">
+<a href="#state_namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="state_networkrules_go">
+<a href="#state_networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule</a></span>
     </dt>
@@ -782,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="state_defaultaction_nodejs">
+<a href="#state_defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -807,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Rules</span>
+        <span id="state_iprules_nodejs">
+<a href="#state_iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -816,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Name</span>
+        <span id="state_namespacename_nodejs">
+<a href="#state_namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rules</span>
+        <span id="state_networkrules_nodejs">
+<a href="#state_networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule[]</a></span>
     </dt>
@@ -834,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -850,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>action</span>
+        <span id="state_default_action_python">
+<a href="#state_default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>rules</span>
+        <span id="state_ip_rules_python">
+<a href="#state_ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -868,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>name</span>
+        <span id="state_namespace_name_python">
+<a href="#state_namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -877,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rules</span>
+        <span id="state_network_rules_python">
+<a href="#state_network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">List[Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule]</a></span>
     </dt>
@@ -886,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -928,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -937,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -953,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -962,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -978,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -987,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1003,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1012,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</span>
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

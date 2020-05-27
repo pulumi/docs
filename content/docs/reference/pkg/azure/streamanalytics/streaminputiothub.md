@@ -279,7 +279,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint</span>
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +290,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="eventhubconsumergroupname_csharp">
+<a href="#eventhubconsumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +301,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Iothub<wbr>Namespace</span>
+        <span id="iothubnamespace_csharp">
+<a href="#iothubnamespace_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +312,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +323,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Serialization</span>
+        <span id="serialization_csharp">
+<a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization<wbr>Args</a></span>
     </dt>
@@ -324,7 +334,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="sharedaccesspolicykey_csharp">
+<a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +345,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="sharedaccesspolicyname_csharp">
+<a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +356,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="streamanalyticsjobname_csharp">
+<a href="#streamanalyticsjobname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +367,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +385,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint</span>
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -376,7 +396,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="eventhubconsumergroupname_go">
+<a href="#eventhubconsumergroupname_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +407,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Iothub<wbr>Namespace</span>
+        <span id="iothubnamespace_go">
+<a href="#iothubnamespace_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +418,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +429,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Serialization</span>
+        <span id="serialization_go">
+<a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization</a></span>
     </dt>
@@ -412,7 +440,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="sharedaccesspolicykey_go">
+<a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +451,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="sharedaccesspolicyname_go">
+<a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +462,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="streamanalyticsjobname_go">
+<a href="#streamanalyticsjobname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +473,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +491,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint</span>
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -464,7 +502,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="eventhubconsumergroupname_nodejs">
+<a href="#eventhubconsumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +513,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>iothub<wbr>Namespace</span>
+        <span id="iothubnamespace_nodejs">
+<a href="#iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +524,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +535,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>serialization</span>
+        <span id="serialization_nodejs">
+<a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization</a></span>
     </dt>
@@ -500,7 +546,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="sharedaccesspolicykey_nodejs">
+<a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +557,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="sharedaccesspolicyname_nodejs">
+<a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +568,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="streamanalyticsjobname_nodejs">
+<a href="#streamanalyticsjobname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +579,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +597,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint</span>
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -552,7 +608,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>eventhub_<wbr>consumer_<wbr>group_<wbr>name</span>
+        <span id="eventhub_consumer_group_name_python">
+<a href="#eventhub_consumer_group_name_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>consumer_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -561,7 +619,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>iothub_<wbr>namespace</span>
+        <span id="iothub_namespace_python">
+<a href="#iothub_namespace_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -570,7 +630,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -579,7 +641,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>serialization</span>
+        <span id="serialization_python">
+<a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Dict[Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization]</a></span>
     </dt>
@@ -588,7 +652,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>shared_<wbr>access_<wbr>policy_<wbr>key</span>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -597,7 +663,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>shared_<wbr>access_<wbr>policy_<wbr>name</span>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +674,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>stream_<wbr>analytics_<wbr>job_<wbr>name</span>
+        <span id="stream_analytics_job_name_python">
+<a href="#stream_analytics_job_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>analytics_<wbr>job_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +685,9 @@ The StreamInputIotHub resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +714,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -657,7 +731,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -672,7 +748,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -687,7 +765,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -828,7 +908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint</span>
+        <span id="state_endpoint_csharp">
+<a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -837,7 +919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="state_eventhubconsumergroupname_csharp">
+<a href="#state_eventhubconsumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -846,7 +930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iothub<wbr>Namespace</span>
+        <span id="state_iothubnamespace_csharp">
+<a href="#state_iothubnamespace_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -855,7 +941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -864,7 +952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Serialization</span>
+        <span id="state_serialization_csharp">
+<a href="#state_serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization<wbr>Args</a></span>
     </dt>
@@ -882,7 +974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="state_sharedaccesspolicykey_csharp">
+<a href="#state_sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -891,7 +985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="state_sharedaccesspolicyname_csharp">
+<a href="#state_sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -900,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="state_streamanalyticsjobname_csharp">
+<a href="#state_streamanalyticsjobname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -916,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint</span>
+        <span id="state_endpoint_go">
+<a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="state_eventhubconsumergroupname_go">
+<a href="#state_eventhubconsumergroupname_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iothub<wbr>Namespace</span>
+        <span id="state_iothubnamespace_go">
+<a href="#state_iothubnamespace_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -952,7 +1058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -961,7 +1069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Serialization</span>
+        <span id="state_serialization_go">
+<a href="#state_serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization</a></span>
     </dt>
@@ -970,7 +1080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="state_sharedaccesspolicykey_go">
+<a href="#state_sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -979,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="state_sharedaccesspolicyname_go">
+<a href="#state_sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -988,7 +1102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="state_streamanalyticsjobname_go">
+<a href="#state_streamanalyticsjobname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint</span>
+        <span id="state_endpoint_nodejs">
+<a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1013,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub<wbr>Consumer<wbr>Group<wbr>Name</span>
+        <span id="state_eventhubconsumergroupname_nodejs">
+<a href="#state_eventhubconsumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1022,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iothub<wbr>Namespace</span>
+        <span id="state_iothubnamespace_nodejs">
+<a href="#state_iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1031,7 +1153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1040,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1049,7 +1175,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>serialization</span>
+        <span id="state_serialization_nodejs">
+<a href="#state_serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization</a></span>
     </dt>
@@ -1058,7 +1186,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Access<wbr>Policy<wbr>Key</span>
+        <span id="state_sharedaccesspolicykey_nodejs">
+<a href="#state_sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1067,7 +1197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Access<wbr>Policy<wbr>Name</span>
+        <span id="state_sharedaccesspolicyname_nodejs">
+<a href="#state_sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1076,7 +1208,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stream<wbr>Analytics<wbr>Job<wbr>Name</span>
+        <span id="state_streamanalyticsjobname_nodejs">
+<a href="#state_streamanalyticsjobname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Analytics<wbr>Job<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1092,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint</span>
+        <span id="state_endpoint_python">
+<a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1101,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub_<wbr>consumer_<wbr>group_<wbr>name</span>
+        <span id="state_eventhub_consumer_group_name_python">
+<a href="#state_eventhub_consumer_group_name_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>consumer_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1110,7 +1248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iothub_<wbr>namespace</span>
+        <span id="state_iothub_namespace_python">
+<a href="#state_iothub_namespace_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1119,7 +1259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1128,7 +1270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1137,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>serialization</span>
+        <span id="state_serialization_python">
+<a href="#state_serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streaminputiothubserialization">Dict[Stream<wbr>Input<wbr>Iot<wbr>Hub<wbr>Serialization]</a></span>
     </dt>
@@ -1146,7 +1292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>access_<wbr>policy_<wbr>key</span>
+        <span id="state_shared_access_policy_key_python">
+<a href="#state_shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1155,7 +1303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>access_<wbr>policy_<wbr>name</span>
+        <span id="state_shared_access_policy_name_python">
+<a href="#state_shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1164,7 +1314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stream_<wbr>analytics_<wbr>job_<wbr>name</span>
+        <span id="state_stream_analytics_job_name_python">
+<a href="#state_stream_analytics_job_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>analytics_<wbr>job_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1206,7 +1358,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1215,7 +1369,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="encoding_csharp">
+<a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1224,7 +1380,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Delimiter</span>
+        <span id="fielddelimiter_csharp">
+<a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1240,7 +1398,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1249,7 +1409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding</span>
+        <span id="encoding_go">
+<a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1258,7 +1420,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Delimiter</span>
+        <span id="fielddelimiter_go">
+<a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1274,7 +1438,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1283,7 +1449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="encoding_nodejs">
+<a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1292,7 +1460,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Delimiter</span>
+        <span id="fielddelimiter_nodejs">
+<a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1308,7 +1478,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1489,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding</span>
+        <span id="encoding_python">
+<a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1326,7 +1500,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Delimiter</span>
+        <span id="fielddelimiter_python">
+<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

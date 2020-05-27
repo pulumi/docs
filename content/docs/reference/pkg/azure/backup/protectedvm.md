@@ -38,17 +38,17 @@ example_vault = azure.recoveryservices.Vault("exampleVault",
     resource_group_name=example_resource_group.name,
     sku="Standard")
 example_policy_vm = azure.backup.PolicyVM("examplePolicyVM",
+    resource_group_name=example_resource_group.name,
+    recovery_vault_name=example_vault.name,
     backup={
         "frequency": "Daily",
         "time": "23:00",
-    },
-    recovery_vault_name=example_vault.name,
-    resource_group_name=example_resource_group.name)
+    })
 vm1 = azure.backup.ProtectedVM("vm1",
-    backup_policy_id=example_policy_vm.id,
-    recovery_vault_name=example_vault.name,
     resource_group_name=example_resource_group.name,
-    source_vm_id=azurerm_virtual_machine["example"]["id"])
+    recovery_vault_name=example_vault.name,
+    source_vm_id=azurerm_virtual_machine["example"]["id"],
+    backup_policy_id=example_policy_vm.id)
 ```
 {{% /example %}}
 
@@ -57,27 +57,25 @@ vm1 = azure.backup.ProtectedVM("vm1",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("example", {
-    location: "West US",
-});
-const exampleVault = new azure.recoveryservices.Vault("example", {
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVault = new azure.recoveryservices.Vault("exampleVault", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
     sku: "Standard",
 });
-const examplePolicyVM = new azure.backup.PolicyVM("example", {
+const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
+    resourceGroupName: exampleResourceGroup.name,
+    recoveryVaultName: exampleVault.name,
     backup: {
         frequency: "Daily",
         time: "23:00",
     },
-    recoveryVaultName: exampleVault.name,
-    resourceGroupName: exampleResourceGroup.name,
 });
 const vm1 = new azure.backup.ProtectedVM("vm1", {
-    backupPolicyId: examplePolicyVM.id,
-    recoveryVaultName: exampleVault.name,
     resourceGroupName: exampleResourceGroup.name,
-    sourceVmId: azurerm_virtual_machine_example.id,
+    recoveryVaultName: exampleVault.name,
+    sourceVmId: azurerm_virtual_machine.example.id,
+    backupPolicyId: examplePolicyVM.id,
 });
 ```
 {{% /example %}}
@@ -268,7 +266,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_csharp">
+<a href="#backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +277,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_csharp">
+<a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +288,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +299,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Vm<wbr>Id</span>
+        <span id="sourcevmid_csharp">
+<a href="#sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +310,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -320,7 +328,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_go">
+<a href="#backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +339,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_go">
+<a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +350,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +361,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Vm<wbr>Id</span>
+        <span id="sourcevmid_go">
+<a href="#sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +372,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -372,7 +390,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>backup<wbr>Policy<wbr>Id</span>
+        <span id="backuppolicyid_nodejs">
+<a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +401,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_nodejs">
+<a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -390,7 +412,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -399,7 +423,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Vm<wbr>Id</span>
+        <span id="sourcevmid_nodejs">
+<a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -408,7 +434,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -424,7 +452,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>backup_<wbr>policy_<wbr>id</span>
+        <span id="backup_policy_id_python">
+<a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -433,7 +463,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="recovery_vault_name_python">
+<a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -442,7 +474,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -451,7 +485,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>vm_<wbr>id</span>
+        <span id="source_vm_id_python">
+<a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -460,7 +496,9 @@ The ProtectedVM resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -487,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -502,7 +542,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -517,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -673,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_csharp">
+<a href="#state_backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -682,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_csharp">
+<a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -691,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -700,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vm<wbr>Id</span>
+        <span id="state_sourcevmid_csharp">
+<a href="#state_sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -709,7 +763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -725,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_go">
+<a href="#state_backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -734,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_go">
+<a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -743,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -752,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vm<wbr>Id</span>
+        <span id="state_sourcevmid_go">
+<a href="#state_sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -761,7 +825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -777,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Policy<wbr>Id</span>
+        <span id="state_backuppolicyid_nodejs">
+<a href="#state_backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -786,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_nodejs">
+<a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -795,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -804,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Vm<wbr>Id</span>
+        <span id="state_sourcevmid_nodejs">
+<a href="#state_sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -813,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -829,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>policy_<wbr>id</span>
+        <span id="state_backup_policy_id_python">
+<a href="#state_backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -838,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="state_recovery_vault_name_python">
+<a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -847,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -856,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>vm_<wbr>id</span>
+        <span id="state_source_vm_id_python">
+<a href="#state_source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -865,7 +949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>

@@ -19,77 +19,76 @@ Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("example", {
-    location: "West US",
-});
-const exampleScaleSet = new azure.compute.ScaleSet("example", {});
-const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example", {
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {});
+// ...
+const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("exampleAutoscaleSetting", {
+    resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
-    notification: {
-        email: {
-            customEmails: ["admin@contoso.com"],
-            sendToSubscriptionAdministrator: true,
-            sendToSubscriptionCoAdministrator: true,
-        },
-    },
-    profiles: [{
-        capacity: {
-            default: 1,
-            maximum: 10,
-            minimum: 1,
-        },
+    targetResourceId: exampleScaleSet.id,
+    profile: [{
         name: "Weekends",
+        capacity: {
+            "default": 1,
+            minimum: 1,
+            maximum: 10,
+        },
+        rule: [
+            {
+                metric_trigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: exampleScaleSet.id,
+                    timeGrain: "PT1M",
+                    statistic: "Average",
+                    timeWindow: "PT5M",
+                    timeAggregation: "Average",
+                    operator: "GreaterThan",
+                    threshold: 90,
+                },
+                scale_action: {
+                    direction: "Increase",
+                    type: "ChangeCount",
+                    value: "2",
+                    cooldown: "PT1M",
+                },
+            },
+            {
+                metric_trigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: exampleScaleSet.id,
+                    timeGrain: "PT1M",
+                    statistic: "Average",
+                    timeWindow: "PT5M",
+                    timeAggregation: "Average",
+                    operator: "LessThan",
+                    threshold: 10,
+                },
+                scale_action: {
+                    direction: "Decrease",
+                    type: "ChangeCount",
+                    value: "2",
+                    cooldown: "PT1M",
+                },
+            },
+        ],
         recurrence: {
+            frequency: "Week",
+            timezone: "Pacific Standard Time",
             days: [
                 "Saturday",
                 "Sunday",
             ],
-            frequency: "Week",
-            hours: 12,
-            minutes: 0,
-            timezone: "Pacific Standard Time",
+            hours: [12],
+            minutes: [0],
         },
-        rules: [
-            {
-                metricTrigger: {
-                    metricName: "Percentage CPU",
-                    metricResourceId: exampleScaleSet.id,
-                    operator: "GreaterThan",
-                    statistic: "Average",
-                    threshold: 90,
-                    timeAggregation: "Average",
-                    timeGrain: "PT1M",
-                    timeWindow: "PT5M",
-                },
-                scaleAction: {
-                    cooldown: "PT1M",
-                    direction: "Increase",
-                    type: "ChangeCount",
-                    value: 2,
-                },
-            },
-            {
-                metricTrigger: {
-                    metricName: "Percentage CPU",
-                    metricResourceId: exampleScaleSet.id,
-                    operator: "LessThan",
-                    statistic: "Average",
-                    threshold: 10,
-                    timeAggregation: "Average",
-                    timeGrain: "PT1M",
-                    timeWindow: "PT5M",
-                },
-                scaleAction: {
-                    cooldown: "PT1M",
-                    direction: "Decrease",
-                    type: "ChangeCount",
-                    value: 2,
-                },
-            },
-        ],
     }],
-    resourceGroupName: exampleResourceGroup.name,
-    targetResourceId: exampleScaleSet.id,
+    notification: {
+        email: {
+            sendToSubscriptionAdministrator: true,
+            sendToSubscriptionCoAdministrator: true,
+            customEmails: ["admin@contoso.com"],
+        },
+    },
 });
 ```
 ```python
@@ -98,73 +97,74 @@ import pulumi_azure as azure
 
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
 example_scale_set = azure.compute.ScaleSet("exampleScaleSet")
+# ...
 example_autoscale_setting = azure.monitoring.AutoscaleSetting("exampleAutoscaleSetting",
+    resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    notification={
-        "email": {
-            "customEmails": ["admin@contoso.com"],
-            "sendToSubscriptionAdministrator": True,
-            "sendToSubscriptionCoAdministrator": True,
-        },
-    },
-    profiles=[{
+    target_resource_id=example_scale_set.id,
+    profile=[{
+        "name": "Weekends",
         "capacity": {
             "default": 1,
-            "maximum": 10,
             "minimum": 1,
+            "maximum": 10,
         },
-        "name": "Weekends",
+        "rule": [
+            {
+                "metric_trigger": {
+                    "metricName": "Percentage CPU",
+                    "metricResourceId": example_scale_set.id,
+                    "timeGrain": "PT1M",
+                    "statistic": "Average",
+                    "timeWindow": "PT5M",
+                    "timeAggregation": "Average",
+                    "operator": "GreaterThan",
+                    "threshold": 90,
+                },
+                "scale_action": {
+                    "direction": "Increase",
+                    "type": "ChangeCount",
+                    "value": "2",
+                    "cooldown": "PT1M",
+                },
+            },
+            {
+                "metric_trigger": {
+                    "metricName": "Percentage CPU",
+                    "metricResourceId": example_scale_set.id,
+                    "timeGrain": "PT1M",
+                    "statistic": "Average",
+                    "timeWindow": "PT5M",
+                    "timeAggregation": "Average",
+                    "operator": "LessThan",
+                    "threshold": 10,
+                },
+                "scale_action": {
+                    "direction": "Decrease",
+                    "type": "ChangeCount",
+                    "value": "2",
+                    "cooldown": "PT1M",
+                },
+            },
+        ],
         "recurrence": {
+            "frequency": "Week",
+            "timezone": "Pacific Standard Time",
             "days": [
                 "Saturday",
                 "Sunday",
             ],
-            "frequency": "Week",
-            "hours": 12,
-            "minutes": 0,
-            "timezone": "Pacific Standard Time",
+            "hours": [12],
+            "minutes": [0],
         },
-        "rule": [
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "operator": "GreaterThan",
-                    "statistic": "Average",
-                    "threshold": 90,
-                    "timeAggregation": "Average",
-                    "timeGrain": "PT1M",
-                    "timeWindow": "PT5M",
-                },
-                "scaleAction": {
-                    "cooldown": "PT1M",
-                    "direction": "Increase",
-                    "type": "ChangeCount",
-                    "value": "2",
-                },
-            },
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "operator": "LessThan",
-                    "statistic": "Average",
-                    "threshold": 10,
-                    "timeAggregation": "Average",
-                    "timeGrain": "PT1M",
-                    "timeWindow": "PT5M",
-                },
-                "scaleAction": {
-                    "cooldown": "PT1M",
-                    "direction": "Decrease",
-                    "type": "ChangeCount",
-                    "value": "2",
-                },
-            },
-        ],
     }],
-    resource_group_name=example_resource_group.name,
-    target_resource_id=example_scale_set.id)
+    notification={
+        "email": {
+            "sendToSubscriptionAdministrator": True,
+            "sendToSubscriptionCoAdministrator": True,
+            "customEmails": ["admin@contoso.com"],
+        },
+    })
 ```
 
 ## Example Usage (for fixed dates)
@@ -649,7 +649,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Profiles</span>
+        <span id="profiles_csharp">
+<a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
@@ -658,7 +660,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -667,7 +671,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Resource<wbr>Id</span>
+        <span id="targetresourceid_csharp">
+<a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -676,7 +682,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -685,7 +693,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -694,7 +704,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +715,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification</span>
+        <span id="notification_csharp">
+<a href="#notification_csharp" style="color: inherit; text-decoration: inherit;">Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
@@ -712,7 +726,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -728,7 +744,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Profiles</span>
+        <span id="profiles_go">
+<a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile</a></span>
     </dt>
@@ -737,7 +755,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -746,7 +766,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Resource<wbr>Id</span>
+        <span id="targetresourceid_go">
+<a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +777,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -764,7 +788,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +799,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +810,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification</span>
+        <span id="notification_go">
+<a href="#notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
@@ -791,7 +821,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -807,7 +839,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>profiles</span>
+        <span id="profiles_nodejs">
+<a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">Autoscale<wbr>Setting<wbr>Profile[]</a></span>
     </dt>
@@ -816,7 +850,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +861,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Resource<wbr>Id</span>
+        <span id="targetresourceid_nodejs">
+<a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -834,7 +872,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -843,7 +883,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -852,7 +894,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +905,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification</span>
+        <span id="notification_nodejs">
+<a href="#notification_nodejs" style="color: inherit; text-decoration: inherit;">notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
@@ -870,7 +916,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -886,7 +934,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>profiles</span>
+        <span id="profiles_python">
+<a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile]</a></span>
     </dt>
@@ -895,7 +945,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -904,7 +956,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>target_<wbr>resource_<wbr>id</span>
+        <span id="target_resource_id_python">
+<a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +967,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -922,7 +978,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +989,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1000,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification</span>
+        <span id="notification_python">
+<a href="#notification_python" style="color: inherit; text-decoration: inherit;">notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
     </dt>
@@ -949,7 +1011,9 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -976,7 +1040,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -991,7 +1057,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1006,7 +1074,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1021,7 +1091,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1162,7 +1234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1171,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1180,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1189,7 +1267,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification</span>
+        <span id="state_notification_csharp">
+<a href="#state_notification_csharp" style="color: inherit; text-decoration: inherit;">Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
@@ -1198,7 +1278,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Profiles</span>
+        <span id="state_profiles_csharp">
+<a href="#state_profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
@@ -1207,7 +1289,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1216,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1225,7 +1311,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Resource<wbr>Id</span>
+        <span id="state_targetresourceid_csharp">
+<a href="#state_targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1241,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1250,7 +1340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1259,7 +1351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1268,7 +1362,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification</span>
+        <span id="state_notification_go">
+<a href="#state_notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
@@ -1277,7 +1373,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Profiles</span>
+        <span id="state_profiles_go">
+<a href="#state_profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile</a></span>
     </dt>
@@ -1286,7 +1384,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1295,7 +1395,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1304,7 +1406,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Resource<wbr>Id</span>
+        <span id="state_targetresourceid_go">
+<a href="#state_targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1320,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1329,7 +1435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1338,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1347,7 +1457,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification</span>
+        <span id="state_notification_nodejs">
+<a href="#state_notification_nodejs" style="color: inherit; text-decoration: inherit;">notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
@@ -1356,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>profiles</span>
+        <span id="state_profiles_nodejs">
+<a href="#state_profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">Autoscale<wbr>Setting<wbr>Profile[]</a></span>
     </dt>
@@ -1365,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1374,7 +1490,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1383,7 +1501,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Resource<wbr>Id</span>
+        <span id="state_targetresourceid_nodejs">
+<a href="#state_targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1399,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1408,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1417,7 +1541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1426,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification</span>
+        <span id="state_notification_python">
+<a href="#state_notification_python" style="color: inherit; text-decoration: inherit;">notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
     </dt>
@@ -1435,7 +1563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>profiles</span>
+        <span id="state_profiles_python">
+<a href="#state_profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile]</a></span>
     </dt>
@@ -1444,7 +1574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1453,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1462,7 +1596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>resource_<wbr>id</span>
+        <span id="state_target_resource_id_python">
+<a href="#state_target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1504,7 +1640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email</span>
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
     </dt>
@@ -1513,7 +1651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhooks</span>
+        <span id="webhooks_csharp">
+<a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List&lt;Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args&gt;</a></span>
     </dt>
@@ -1529,7 +1669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email</span>
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
@@ -1538,7 +1680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Webhooks</span>
+        <span id="webhooks_go">
+<a href="#webhooks_go" style="color: inherit; text-decoration: inherit;">Webhooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationwebhook">[]Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook</a></span>
     </dt>
@@ -1554,7 +1698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email</span>
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
@@ -1563,7 +1709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhooks</span>
+        <span id="webhooks_nodejs">
+<a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook[]</a></span>
     </dt>
@@ -1579,7 +1727,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email</span>
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationemail">Dict[Autoscale<wbr>Setting<wbr>Notification<wbr>Email]</a></span>
     </dt>
@@ -1588,7 +1738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhooks</span>
+        <span id="webhooks_python">
+<a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List[Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook]</a></span>
     </dt>
@@ -1622,7 +1774,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Emails</span>
+        <span id="customemails_csharp">
+<a href="#customemails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1631,7 +1785,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Send<wbr>To<wbr>Subscription<wbr>Administrator</span>
+        <span id="sendtosubscriptionadministrator_csharp">
+<a href="#sendtosubscriptionadministrator_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1640,7 +1796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
+        <span id="sendtosubscriptioncoadministrator_csharp">
+<a href="#sendtosubscriptioncoadministrator_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1656,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Emails</span>
+        <span id="customemails_go">
+<a href="#customemails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1665,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Send<wbr>To<wbr>Subscription<wbr>Administrator</span>
+        <span id="sendtosubscriptionadministrator_go">
+<a href="#sendtosubscriptionadministrator_go" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1674,7 +1836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
+        <span id="sendtosubscriptioncoadministrator_go">
+<a href="#sendtosubscriptioncoadministrator_go" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1690,7 +1854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Emails</span>
+        <span id="customemails_nodejs">
+<a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1699,7 +1865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>send<wbr>To<wbr>Subscription<wbr>Administrator</span>
+        <span id="sendtosubscriptionadministrator_nodejs">
+<a href="#sendtosubscriptionadministrator_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1708,7 +1876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
+        <span id="sendtosubscriptioncoadministrator_nodejs">
+<a href="#sendtosubscriptioncoadministrator_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1724,7 +1894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Emails</span>
+        <span id="customemails_python">
+<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1733,7 +1905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>send<wbr>To<wbr>Subscription<wbr>Administrator</span>
+        <span id="sendtosubscriptionadministrator_python">
+<a href="#sendtosubscriptionadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1742,7 +1916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
+        <span id="sendtosubscriptioncoadministrator_python">
+<a href="#sendtosubscriptioncoadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1776,7 +1952,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Uri</span>
+        <span id="serviceuri_csharp">
+<a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1785,7 +1963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1801,7 +1981,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Uri</span>
+        <span id="serviceuri_go">
+<a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1810,7 +1992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1826,7 +2010,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Uri</span>
+        <span id="serviceuri_nodejs">
+<a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1835,7 +2021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1851,7 +2039,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>uri</span>
+        <span id="service_uri_python">
+<a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1860,7 +2050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1894,7 +2086,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Capacity</span>
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity<wbr>Args</a></span>
     </dt>
@@ -1903,7 +2097,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1912,7 +2108,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Date</span>
+        <span id="fixeddate_csharp">
+<a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
     </dt>
@@ -1921,7 +2119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recurrence</span>
+        <span id="recurrence_csharp">
+<a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
     </dt>
@@ -1930,7 +2130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerule">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1946,7 +2148,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Capacity</span>
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity</a></span>
     </dt>
@@ -1955,7 +2159,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1964,7 +2170,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Date</span>
+        <span id="fixeddate_go">
+<a href="#fixeddate_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
     </dt>
@@ -1973,7 +2181,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recurrence</span>
+        <span id="recurrence_go">
+<a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
@@ -1982,7 +2192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerule">[]Autoscale<wbr>Setting<wbr>Profile<wbr>Rule</a></span>
     </dt>
@@ -1998,7 +2210,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>capacity</span>
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity</a></span>
     </dt>
@@ -2007,7 +2221,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2016,7 +2232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Date</span>
+        <span id="fixeddate_nodejs">
+<a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
     </dt>
@@ -2025,7 +2243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recurrence</span>
+        <span id="recurrence_nodejs">
+<a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
@@ -2034,7 +2254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerule">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule[]</a></span>
     </dt>
@@ -2050,7 +2272,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>capacity</span>
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilecapacity">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity]</a></span>
     </dt>
@@ -2059,7 +2283,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2068,7 +2294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Date</span>
+        <span id="fixeddate_python">
+<a href="#fixeddate_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date]</a></span>
     </dt>
@@ -2077,7 +2305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recurrence</span>
+        <span id="recurrence_python">
+<a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence]</a></span>
     </dt>
@@ -2086,7 +2316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerule">List[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule]</a></span>
     </dt>
@@ -2120,7 +2352,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2129,7 +2363,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maximum</span>
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2138,7 +2374,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Minimum</span>
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2154,7 +2392,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Default</span>
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2163,7 +2403,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maximum</span>
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2172,7 +2414,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Minimum</span>
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2188,7 +2432,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2197,7 +2443,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maximum</span>
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2206,7 +2454,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>minimum</span>
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2222,7 +2472,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>default</span>
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2231,7 +2483,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maximum</span>
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2240,7 +2494,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>minimum</span>
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2274,7 +2530,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2283,7 +2541,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2292,7 +2552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2308,7 +2570,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2317,7 +2581,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2326,7 +2592,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2342,7 +2610,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2351,7 +2621,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2360,7 +2632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2376,7 +2650,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2385,7 +2661,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2394,7 +2672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2428,7 +2708,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Days</span>
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2437,7 +2719,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hours</span>
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2446,7 +2730,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Minutes</span>
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2455,7 +2741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2471,7 +2759,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Days</span>
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2480,7 +2770,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hours</span>
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2489,7 +2781,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Minutes</span>
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2498,7 +2792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2514,7 +2810,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>days</span>
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2523,7 +2821,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hours</span>
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2532,7 +2832,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>minutes</span>
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2541,7 +2843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2557,7 +2861,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>days</span>
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2566,7 +2872,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hours</span>
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2575,7 +2883,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>minutes</span>
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2584,7 +2894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2618,7 +2930,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Trigger</span>
+        <span id="metrictrigger_csharp">
+<a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -2627,7 +2941,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Action</span>
+        <span id="scaleaction_csharp">
+<a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action<wbr>Args</a></span>
     </dt>
@@ -2643,7 +2959,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Trigger</span>
+        <span id="metrictrigger_go">
+<a href="#metrictrigger_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger</a></span>
     </dt>
@@ -2652,7 +2970,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Action</span>
+        <span id="scaleaction_go">
+<a href="#scaleaction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action</a></span>
     </dt>
@@ -2668,7 +2988,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Trigger</span>
+        <span id="metrictrigger_nodejs">
+<a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger</a></span>
     </dt>
@@ -2677,7 +2999,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Action</span>
+        <span id="scaleaction_nodejs">
+<a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action</a></span>
     </dt>
@@ -2693,7 +3017,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Trigger</span>
+        <span id="metrictrigger_python">
+<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger]</a></span>
     </dt>
@@ -2702,7 +3028,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Action</span>
+        <span id="scaleaction_python">
+<a href="#scaleaction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action]</a></span>
     </dt>
@@ -2736,7 +3064,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Name</span>
+        <span id="metricname_csharp">
+<a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2745,7 +3075,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Resource<wbr>Id</span>
+        <span id="metricresourceid_csharp">
+<a href="#metricresourceid_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2754,7 +3086,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Operator</span>
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2763,7 +3097,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Statistic</span>
+        <span id="statistic_csharp">
+<a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2772,7 +3108,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Threshold</span>
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2781,7 +3119,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Aggregation</span>
+        <span id="timeaggregation_csharp">
+<a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2790,7 +3130,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Grain</span>
+        <span id="timegrain_csharp">
+<a href="#timegrain_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2799,7 +3141,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Window</span>
+        <span id="timewindow_csharp">
+<a href="#timewindow_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2815,7 +3159,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Name</span>
+        <span id="metricname_go">
+<a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2824,7 +3170,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Resource<wbr>Id</span>
+        <span id="metricresourceid_go">
+<a href="#metricresourceid_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2833,7 +3181,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Operator</span>
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2842,7 +3192,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Statistic</span>
+        <span id="statistic_go">
+<a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2851,7 +3203,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Threshold</span>
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2860,7 +3214,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Aggregation</span>
+        <span id="timeaggregation_go">
+<a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2869,7 +3225,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Grain</span>
+        <span id="timegrain_go">
+<a href="#timegrain_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2878,7 +3236,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Window</span>
+        <span id="timewindow_go">
+<a href="#timewindow_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2894,7 +3254,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Name</span>
+        <span id="metricname_nodejs">
+<a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2903,7 +3265,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Resource<wbr>Id</span>
+        <span id="metricresourceid_nodejs">
+<a href="#metricresourceid_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2912,7 +3276,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>operator</span>
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2921,7 +3287,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>statistic</span>
+        <span id="statistic_nodejs">
+<a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2930,7 +3298,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>threshold</span>
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2939,7 +3309,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Aggregation</span>
+        <span id="timeaggregation_nodejs">
+<a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2948,7 +3320,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Grain</span>
+        <span id="timegrain_nodejs">
+<a href="#timegrain_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2957,7 +3331,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Window</span>
+        <span id="timewindow_nodejs">
+<a href="#timewindow_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2973,7 +3349,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Name</span>
+        <span id="metricname_python">
+<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2982,7 +3360,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Resource<wbr>Id</span>
+        <span id="metricresourceid_python">
+<a href="#metricresourceid_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2991,7 +3371,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>operator</span>
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3000,7 +3382,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>statistic</span>
+        <span id="statistic_python">
+<a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3009,7 +3393,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>threshold</span>
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3018,7 +3404,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Aggregation</span>
+        <span id="timeaggregation_python">
+<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3027,7 +3415,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Grain</span>
+        <span id="timegrain_python">
+<a href="#timegrain_python" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3036,7 +3426,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time_<wbr>window</span>
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3070,7 +3462,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cooldown</span>
+        <span id="cooldown_csharp">
+<a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3079,7 +3473,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3088,7 +3484,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3097,7 +3495,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3113,7 +3513,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cooldown</span>
+        <span id="cooldown_go">
+<a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3122,7 +3524,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3131,7 +3535,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3140,7 +3546,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3156,7 +3564,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cooldown</span>
+        <span id="cooldown_nodejs">
+<a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3165,7 +3575,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3174,7 +3586,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3183,7 +3597,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3199,7 +3615,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cooldown</span>
+        <span id="cooldown_python">
+<a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3208,7 +3626,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3217,7 +3637,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3226,7 +3648,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

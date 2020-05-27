@@ -242,7 +242,9 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_csharp">
+<a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -252,7 +254,9 @@ address spaces the gateway exposes.
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Address</span>
+        <span id="gatewayaddress_csharp">
+<a href="#gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +266,9 @@ connect.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +278,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Settings</span>
+        <span id="bgpsettings_csharp">
+<a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -282,7 +290,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +302,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +314,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -318,7 +332,9 @@ forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_go">
+<a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -328,7 +344,9 @@ address spaces the gateway exposes.
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Address</span>
+        <span id="gatewayaddress_go">
+<a href="#gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +356,9 @@ connect.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +368,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Settings</span>
+        <span id="bgpsettings_go">
+<a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
@@ -358,7 +380,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +392,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +404,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -394,7 +422,9 @@ forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Spaces</span>
+        <span id="addressspaces_nodejs">
+<a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -404,7 +434,9 @@ address spaces the gateway exposes.
 
     <dt class="property-required"
             title="Required">
-        <span>gateway<wbr>Address</span>
+        <span id="gatewayaddress_nodejs">
+<a href="#gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +446,9 @@ connect.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -424,7 +458,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Settings</span>
+        <span id="bgpsettings_nodejs">
+<a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
@@ -434,7 +470,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -444,7 +482,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -454,7 +494,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -470,7 +512,9 @@ forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>spaces</span>
+        <span id="address_spaces_python">
+<a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -480,7 +524,9 @@ address spaces the gateway exposes.
 
     <dt class="property-required"
             title="Required">
-        <span>gateway_<wbr>address</span>
+        <span id="gateway_address_python">
+<a href="#gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -490,7 +536,9 @@ connect.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -500,7 +548,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>settings</span>
+        <span id="bgp_settings_python">
+<a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Dict[Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings]</a></span>
     </dt>
@@ -510,7 +560,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -520,7 +572,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -530,7 +584,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -557,7 +613,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -572,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -587,7 +647,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -602,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -743,7 +807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Spaces</span>
+        <span id="state_addressspaces_csharp">
+<a href="#state_addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -753,7 +819,9 @@ address spaces the gateway exposes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Settings</span>
+        <span id="state_bgpsettings_csharp">
+<a href="#state_bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -763,7 +831,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Address</span>
+        <span id="state_gatewayaddress_csharp">
+<a href="#state_gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +843,9 @@ connect.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -783,7 +855,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +867,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +879,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -819,7 +897,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Spaces</span>
+        <span id="state_addressspaces_go">
+<a href="#state_addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -829,7 +909,9 @@ address spaces the gateway exposes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bgp<wbr>Settings</span>
+        <span id="state_bgpsettings_go">
+<a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
@@ -839,7 +921,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Address</span>
+        <span id="state_gatewayaddress_go">
+<a href="#state_gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -849,7 +933,9 @@ connect.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -859,7 +945,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -869,7 +957,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +969,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -895,7 +987,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Spaces</span>
+        <span id="state_addressspaces_nodejs">
+<a href="#state_addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -905,7 +999,9 @@ address spaces the gateway exposes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp<wbr>Settings</span>
+        <span id="state_bgpsettings_nodejs">
+<a href="#state_bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
@@ -915,7 +1011,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Address</span>
+        <span id="state_gatewayaddress_nodejs">
+<a href="#state_gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -925,7 +1023,9 @@ connect.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -935,7 +1035,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1047,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -955,7 +1059,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -971,7 +1077,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>spaces</span>
+        <span id="state_address_spaces_python">
+<a href="#state_address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -981,7 +1089,9 @@ address spaces the gateway exposes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bgp_<wbr>settings</span>
+        <span id="state_bgp_settings_python">
+<a href="#state_bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Dict[Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings]</a></span>
     </dt>
@@ -991,7 +1101,9 @@ Local Network Gateway's BGP speaker settings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>address</span>
+        <span id="state_gateway_address_python">
+<a href="#state_gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1001,7 +1113,9 @@ connect.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1011,7 +1125,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1021,7 +1137,9 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1031,7 +1149,9 @@ create the local network gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1073,7 +1193,9 @@ create the local network gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Asn</span>
+        <span id="asn_csharp">
+<a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1082,7 +1204,9 @@ create the local network gateway.
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Peering<wbr>Address</span>
+        <span id="bgppeeringaddress_csharp">
+<a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1092,7 +1216,9 @@ of this BGP speaker.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Weight</span>
+        <span id="peerweight_csharp">
+<a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1109,7 +1235,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>Asn</span>
+        <span id="asn_go">
+<a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1118,7 +1246,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>Bgp<wbr>Peering<wbr>Address</span>
+        <span id="bgppeeringaddress_go">
+<a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1128,7 +1258,9 @@ of this BGP speaker.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Weight</span>
+        <span id="peerweight_go">
+<a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1145,7 +1277,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>asn</span>
+        <span id="asn_nodejs">
+<a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1154,7 +1288,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>bgp<wbr>Peering<wbr>Address</span>
+        <span id="bgppeeringaddress_nodejs">
+<a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1164,7 +1300,9 @@ of this BGP speaker.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Weight</span>
+        <span id="peerweight_nodejs">
+<a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1181,7 +1319,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>asn</span>
+        <span id="asn_python">
+<a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1190,7 +1330,9 @@ BGP speaker.
 
     <dt class="property-required"
             title="Required">
-        <span>bgp<wbr>Peering<wbr>Address</span>
+        <span id="bgppeeringaddress_python">
+<a href="#bgppeeringaddress_python" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1200,7 +1342,9 @@ of this BGP speaker.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Weight</span>
+        <span id="peerweight_python">
+<a href="#peerweight_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

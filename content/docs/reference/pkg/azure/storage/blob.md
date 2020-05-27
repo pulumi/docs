@@ -260,7 +260,9 @@ The Blob resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_csharp">
+<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +272,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Container<wbr>Name</span>
+        <span id="storagecontainername_csharp">
+<a href="#storagecontainername_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +283,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +294,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_csharp">
+<a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +305,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +316,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -315,7 +327,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +338,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parallelism</span>
+        <span id="parallelism_csharp">
+<a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -333,16 +349,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -351,7 +371,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Content</span>
+        <span id="sourcecontent_csharp">
+<a href="#sourcecontent_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +382,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Uri</span>
+        <span id="sourceuri_csharp">
+<a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +401,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_go">
+<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +413,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Container<wbr>Name</span>
+        <span id="storagecontainername_go">
+<a href="#storagecontainername_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +424,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +435,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_go">
+<a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +446,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +457,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -432,7 +468,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +479,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parallelism</span>
+        <span id="parallelism_go">
+<a href="#parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -450,16 +490,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Asset">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -468,7 +512,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Content</span>
+        <span id="sourcecontent_go">
+<a href="#sourcecontent_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +523,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Uri</span>
+        <span id="sourceuri_go">
+<a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -494,7 +542,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Name</span>
+        <span id="storageaccountname_nodejs">
+<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +554,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Container<wbr>Name</span>
+        <span id="storagecontainername_nodejs">
+<a href="#storagecontainername_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +565,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +576,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Tier</span>
+        <span id="accesstier_nodejs">
+<a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +587,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -540,7 +598,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -549,7 +609,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +620,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parallelism</span>
+        <span id="parallelism_nodejs">
+<a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -567,16 +631,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Asset">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</a></span>
     </dt>
@@ -585,7 +653,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Content</span>
+        <span id="sourcecontent_nodejs">
+<a href="#sourcecontent_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +664,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Uri</span>
+        <span id="sourceuri_nodejs">
+<a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -611,7 +683,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>name</span>
+        <span id="storage_account_name_python">
+<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +695,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>container_<wbr>name</span>
+        <span id="storage_container_name_python">
+<a href="#storage_container_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -630,7 +706,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -639,7 +717,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>tier</span>
+        <span id="access_tier_python">
+<a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -648,7 +728,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +739,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -666,7 +750,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +761,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parallelism</span>
+        <span id="parallelism_python">
+<a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -684,16 +772,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</a></span>
     </dt>
@@ -702,7 +794,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>content</span>
+        <span id="source_content_python">
+<a href="#source_content_python" style="color: inherit; text-decoration: inherit;">source_<wbr>content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -711,7 +805,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>uri</span>
+        <span id="source_uri_python">
+<a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -739,7 +835,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -747,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -763,7 +863,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -771,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -787,7 +891,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -795,7 +901,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -811,7 +919,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -819,7 +929,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -961,7 +1073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="state_accesstier_csharp">
+<a href="#state_accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -970,7 +1084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_csharp">
+<a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -979,7 +1095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -988,7 +1106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -997,7 +1117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parallelism</span>
+        <span id="state_parallelism_csharp">
+<a href="#state_parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1006,16 +1128,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_csharp">
+<a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_csharp">
+<a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -1024,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Content</span>
+        <span id="state_sourcecontent_csharp">
+<a href="#state_sourcecontent_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Uri</span>
+        <span id="state_sourceuri_csharp">
+<a href="#state_sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1173,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_csharp">
+<a href="#state_storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1053,7 +1185,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Container<wbr>Name</span>
+        <span id="state_storagecontainername_csharp">
+<a href="#state_storagecontainername_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1062,7 +1196,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1071,7 +1207,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1087,7 +1225,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="state_accesstier_go">
+<a href="#state_accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1096,7 +1236,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_go">
+<a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1105,7 +1247,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1114,7 +1258,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1269,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parallelism</span>
+        <span id="state_parallelism_go">
+<a href="#state_parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1132,16 +1280,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_go">
+<a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_go">
+<a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Asset">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</a></span>
     </dt>
@@ -1150,7 +1302,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Content</span>
+        <span id="state_sourcecontent_go">
+<a href="#state_sourcecontent_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1159,7 +1313,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Uri</span>
+        <span id="state_sourceuri_go">
+<a href="#state_sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1169,7 +1325,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_go">
+<a href="#state_storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1179,7 +1337,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Container<wbr>Name</span>
+        <span id="state_storagecontainername_go">
+<a href="#state_storagecontainername_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1188,7 +1348,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1197,7 +1359,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1213,7 +1377,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Tier</span>
+        <span id="state_accesstier_nodejs">
+<a href="#state_accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1222,7 +1388,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="state_contenttype_nodejs">
+<a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1231,7 +1399,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1240,7 +1410,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1421,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parallelism</span>
+        <span id="state_parallelism_nodejs">
+<a href="#state_parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1258,16 +1432,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_nodejs">
+<a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_nodejs">
+<a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Asset">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</a></span>
     </dt>
@@ -1276,7 +1454,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Content</span>
+        <span id="state_sourcecontent_nodejs">
+<a href="#state_sourcecontent_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1285,7 +1465,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Uri</span>
+        <span id="state_sourceuri_nodejs">
+<a href="#state_sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1295,7 +1477,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Name</span>
+        <span id="state_storageaccountname_nodejs">
+<a href="#state_storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1305,7 +1489,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Container<wbr>Name</span>
+        <span id="state_storagecontainername_nodejs">
+<a href="#state_storagecontainername_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1314,7 +1500,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1323,7 +1511,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1339,7 +1529,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>tier</span>
+        <span id="state_access_tier_python">
+<a href="#state_access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1540,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="state_content_type_python">
+<a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,7 +1551,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1366,7 +1562,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1375,7 +1573,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parallelism</span>
+        <span id="state_parallelism_python">
+<a href="#state_parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1384,16 +1584,20 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_python">
+<a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_python">
+<a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</a></span>
     </dt>
@@ -1402,7 +1606,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>content</span>
+        <span id="state_source_content_python">
+<a href="#state_source_content_python" style="color: inherit; text-decoration: inherit;">source_<wbr>content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1411,7 +1617,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>uri</span>
+        <span id="state_source_uri_python">
+<a href="#state_source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1421,7 +1629,9 @@ for the blob to be created. Changing this forces a new resource to be created. T
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>account_<wbr>name</span>
+        <span id="state_storage_account_name_python">
+<a href="#state_storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1431,7 +1641,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>container_<wbr>name</span>
+        <span id="state_storage_container_name_python">
+<a href="#state_storage_container_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1440,7 +1652,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1449,7 +1663,9 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -36,7 +36,7 @@ example = azure.compute.get_platform_image(location="West Europe",
     publisher="Canonical",
     offer="UbuntuServer",
     sku="16.04-LTS")
-pulumi.export("version", example.version)
+pulumi.export("id", example.id)
 ```
 {{% /example %}}
 
@@ -51,7 +51,7 @@ const example = azure.compute.getPlatformImage({
     offer: "UbuntuServer",
     sku: "16.04-LTS",
 });
-export const version = example.then(example => example.version);
+export const id = example.then(example => example.id);
 ```
 {{% /example %}}
 
@@ -69,7 +69,7 @@ export const version = example.then(example => example.version);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_platform_image(</span>location=None<span class="p">, </span>offer=None<span class="p">, </span>publisher=None<span class="p">, </span>sku=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_platform_image(</span>location=None<span class="p">, </span>offer=None<span class="p">, </span>publisher=None<span class="p">, </span>sku=None<span class="p">, </span>version=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -96,7 +96,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -105,7 +107,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -114,7 +118,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -123,11 +129,24 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Platform Image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the Platform Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -139,7 +158,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -148,7 +169,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -157,7 +180,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -166,11 +191,24 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Platform Image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the Platform Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -182,7 +220,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -191,7 +231,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -200,7 +242,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -209,11 +253,24 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Platform Image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the Platform Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -225,7 +282,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -234,7 +293,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -243,7 +304,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -252,11 +315,24 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Platform Image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the Platform Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -281,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +368,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +378,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Offer</span>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +388,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +398,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,12 +408,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The latest version of the Platform Image.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -338,7 +425,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +436,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +446,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Offer</span>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -363,7 +456,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +466,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,12 +476,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The latest version of the Platform Image.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -395,7 +493,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +504,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -412,7 +514,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>offer</span>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +524,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -428,7 +534,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -436,12 +544,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The latest version of the Platform Image.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -452,7 +561,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +572,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -469,7 +582,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>offer</span>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,12 +612,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The latest version of the Platform Image.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

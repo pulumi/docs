@@ -200,7 +200,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Gallery<wbr>Image<wbr>Reference</span>
+        <span id="galleryimagereference_csharp">
+<a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -209,7 +211,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_csharp">
+<a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_csharp">
+<a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +233,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="labvirtualnetworkid_csharp">
+<a href="#labvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +244,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +255,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +266,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +277,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Type</span>
+        <span id="storagetype_csharp">
+<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +288,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +299,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Claim</span>
+        <span id="allowclaim_csharp">
+<a href="#allowclaim_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +310,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="disallowpublicipaddress_csharp">
+<a href="#disallowpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -299,7 +321,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Nat<wbr>Rules</span>
+        <span id="inboundnatrules_csharp">
+<a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -308,7 +332,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -317,7 +343,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +354,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="notes_csharp">
+<a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +365,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -351,7 +383,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Gallery<wbr>Image<wbr>Reference</span>
+        <span id="galleryimagereference_go">
+<a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -360,7 +394,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_go">
+<a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -369,7 +405,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_go">
+<a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +416,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="labvirtualnetworkid_go">
+<a href="#labvirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +427,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +438,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +449,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +460,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Type</span>
+        <span id="storagetype_go">
+<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +471,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +482,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Claim</span>
+        <span id="allowclaim_go">
+<a href="#allowclaim_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -441,7 +493,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="disallowpublicipaddress_go">
+<a href="#disallowpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -450,7 +504,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Nat<wbr>Rules</span>
+        <span id="inboundnatrules_go">
+<a href="#inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">[]Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule</a></span>
     </dt>
@@ -459,7 +515,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +526,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +537,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="notes_go">
+<a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -486,7 +548,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -502,7 +566,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>gallery<wbr>Image<wbr>Reference</span>
+        <span id="galleryimagereference_nodejs">
+<a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -511,7 +577,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Name</span>
+        <span id="labname_nodejs">
+<a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +588,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_nodejs">
+<a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +599,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="labvirtualnetworkid_nodejs">
+<a href="#labvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -538,7 +610,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -547,7 +621,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +632,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +643,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Type</span>
+        <span id="storagetype_nodejs">
+<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -574,7 +654,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +665,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Claim</span>
+        <span id="allowclaim_nodejs">
+<a href="#allowclaim_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -592,7 +676,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="disallowpublicipaddress_nodejs">
+<a href="#disallowpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -601,7 +687,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound<wbr>Nat<wbr>Rules</span>
+        <span id="inboundnatrules_nodejs">
+<a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule[]</a></span>
     </dt>
@@ -610,7 +698,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +709,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -628,7 +720,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="notes_nodejs">
+<a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -637,7 +731,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -653,7 +749,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>gallery_<wbr>image_<wbr>reference</span>
+        <span id="gallery_image_reference_python">
+<a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference]</a></span>
     </dt>
@@ -662,7 +760,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>name</span>
+        <span id="lab_name_python">
+<a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +771,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>subnet_<wbr>name</span>
+        <span id="lab_subnet_name_python">
+<a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -680,7 +782,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>virtual_<wbr>network_<wbr>id</span>
+        <span id="lab_virtual_network_id_python">
+<a href="#lab_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +793,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -698,7 +804,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -707,7 +815,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +826,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>type</span>
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -725,7 +837,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +848,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>claim</span>
+        <span id="allow_claim_python">
+<a href="#allow_claim_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -743,7 +859,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>disallow_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span id="disallow_public_ip_address_python">
+<a href="#disallow_public_ip_address_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>public_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -752,7 +870,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound_<wbr>nat_<wbr>rules</span>
+        <span id="inbound_nat_rules_python">
+<a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">List[Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule]</a></span>
     </dt>
@@ -761,7 +881,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -770,7 +892,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -779,7 +903,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="notes_python">
+<a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +914,9 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -815,7 +943,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +954,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -832,7 +964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_csharp">
+<a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -848,7 +982,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -857,7 +993,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +1003,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_go">
+<a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +1021,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1032,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -898,7 +1042,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_nodejs">
+<a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -914,7 +1060,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -923,7 +1071,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1081,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>unique_<wbr>identifier</span>
+        <span id="unique_identifier_python">
+<a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1073,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Claim</span>
+        <span id="state_allowclaim_csharp">
+<a href="#state_allowclaim_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1082,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="state_disallowpublicipaddress_csharp">
+<a href="#state_disallowpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1091,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_csharp">
+<a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1100,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gallery<wbr>Image<wbr>Reference</span>
+        <span id="state_galleryimagereference_csharp">
+<a href="#state_galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -1109,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Nat<wbr>Rules</span>
+        <span id="state_inboundnatrules_csharp">
+<a href="#state_inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1118,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Name</span>
+        <span id="state_labname_csharp">
+<a href="#state_labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1127,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="state_labsubnetname_csharp">
+<a href="#state_labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1136,7 +1302,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="state_labvirtualnetworkid_csharp">
+<a href="#state_labvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1145,7 +1313,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1154,7 +1324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1163,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="state_notes_csharp">
+<a href="#state_notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1172,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1181,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1190,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_csharp">
+<a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1199,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="state_storagetype_csharp">
+<a href="#state_storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1208,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1217,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Identifier</span>
+        <span id="state_uniqueidentifier_csharp">
+<a href="#state_uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1226,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1242,7 +1430,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Claim</span>
+        <span id="state_allowclaim_go">
+<a href="#state_allowclaim_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1251,7 +1441,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="state_disallowpublicipaddress_go">
+<a href="#state_disallowpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1260,7 +1452,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_go">
+<a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1269,7 +1463,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gallery<wbr>Image<wbr>Reference</span>
+        <span id="state_galleryimagereference_go">
+<a href="#state_galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -1278,7 +1474,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Nat<wbr>Rules</span>
+        <span id="state_inboundnatrules_go">
+<a href="#state_inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">[]Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule</a></span>
     </dt>
@@ -1287,7 +1485,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Name</span>
+        <span id="state_labname_go">
+<a href="#state_labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1296,7 +1496,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="state_labsubnetname_go">
+<a href="#state_labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1305,7 +1507,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="state_labvirtualnetworkid_go">
+<a href="#state_labvirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1314,7 +1518,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1323,7 +1529,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1332,7 +1540,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="state_notes_go">
+<a href="#state_notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1341,7 +1551,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1350,7 +1562,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1359,7 +1573,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_go">
+<a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1368,7 +1584,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="state_storagetype_go">
+<a href="#state_storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1377,7 +1595,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1386,7 +1606,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Identifier</span>
+        <span id="state_uniqueidentifier_go">
+<a href="#state_uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1617,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1411,7 +1635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Claim</span>
+        <span id="state_allowclaim_nodejs">
+<a href="#state_allowclaim_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1420,7 +1646,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disallow<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="state_disallowpublicipaddress_nodejs">
+<a href="#state_disallowpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1429,7 +1657,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_nodejs">
+<a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1438,7 +1668,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gallery<wbr>Image<wbr>Reference</span>
+        <span id="state_galleryimagereference_nodejs">
+<a href="#state_galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -1447,7 +1679,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound<wbr>Nat<wbr>Rules</span>
+        <span id="state_inboundnatrules_nodejs">
+<a href="#state_inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule[]</a></span>
     </dt>
@@ -1456,7 +1690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab<wbr>Name</span>
+        <span id="state_labname_nodejs">
+<a href="#state_labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1465,7 +1701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab<wbr>Subnet<wbr>Name</span>
+        <span id="state_labsubnetname_nodejs">
+<a href="#state_labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1474,7 +1712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab<wbr>Virtual<wbr>Network<wbr>Id</span>
+        <span id="state_labvirtualnetworkid_nodejs">
+<a href="#state_labvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1483,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1492,7 +1734,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1501,7 +1745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="state_notes_nodejs">
+<a href="#state_notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1510,7 +1756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1519,7 +1767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1528,7 +1778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_nodejs">
+<a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1537,7 +1789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Type</span>
+        <span id="state_storagetype_nodejs">
+<a href="#state_storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1546,7 +1800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1555,7 +1811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Identifier</span>
+        <span id="state_uniqueidentifier_nodejs">
+<a href="#state_uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1564,7 +1822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1580,7 +1840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>claim</span>
+        <span id="state_allow_claim_python">
+<a href="#state_allow_claim_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>claim</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1589,7 +1851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disallow_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span id="state_disallow_public_ip_address_python">
+<a href="#state_disallow_public_ip_address_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>public_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1598,7 +1862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_python">
+<a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1607,7 +1873,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gallery_<wbr>image_<wbr>reference</span>
+        <span id="state_gallery_image_reference_python">
+<a href="#state_gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinegalleryimagereference">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference]</a></span>
     </dt>
@@ -1616,7 +1884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound_<wbr>nat_<wbr>rules</span>
+        <span id="state_inbound_nat_rules_python">
+<a href="#state_inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachineinboundnatrule">List[Windows<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule]</a></span>
     </dt>
@@ -1625,7 +1895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab_<wbr>name</span>
+        <span id="state_lab_name_python">
+<a href="#state_lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1634,7 +1906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab_<wbr>subnet_<wbr>name</span>
+        <span id="state_lab_subnet_name_python">
+<a href="#state_lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1643,7 +1917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lab_<wbr>virtual_<wbr>network_<wbr>id</span>
+        <span id="state_lab_virtual_network_id_python">
+<a href="#state_lab_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1652,7 +1928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1661,7 +1939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1670,7 +1950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="state_notes_python">
+<a href="#state_notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1679,7 +1961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1688,7 +1972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1697,7 +1983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_python">
+<a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1706,7 +1994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>type</span>
+        <span id="state_storage_type_python">
+<a href="#state_storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1715,7 +2005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1724,7 +2016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique_<wbr>identifier</span>
+        <span id="state_unique_identifier_python">
+<a href="#state_unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1733,7 +2027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_python">
+<a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1775,7 +2071,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1784,7 +2082,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1793,7 +2093,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1802,7 +2104,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1818,7 +2122,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1827,7 +2133,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1836,7 +2144,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1845,7 +2155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1861,7 +2173,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1870,7 +2184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1879,7 +2195,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1888,7 +2206,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1904,7 +2224,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1913,7 +2235,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1922,7 +2246,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1931,7 +2257,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1965,7 +2293,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Port</span>
+        <span id="backendport_csharp">
+<a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1974,7 +2304,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1983,7 +2315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frontend<wbr>Port</span>
+        <span id="frontendport_csharp">
+<a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1999,7 +2333,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Backend<wbr>Port</span>
+        <span id="backendport_go">
+<a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2008,7 +2344,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2017,7 +2355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frontend<wbr>Port</span>
+        <span id="frontendport_go">
+<a href="#frontendport_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2033,7 +2373,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backend<wbr>Port</span>
+        <span id="backendport_nodejs">
+<a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2042,7 +2384,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2051,7 +2395,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>frontend<wbr>Port</span>
+        <span id="frontendport_nodejs">
+<a href="#frontendport_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2067,7 +2413,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>backend_<wbr>port</span>
+        <span id="backend_port_python">
+<a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2076,7 +2424,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2085,7 +2435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>frontend_<wbr>port</span>
+        <span id="frontend_port_python">
+<a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

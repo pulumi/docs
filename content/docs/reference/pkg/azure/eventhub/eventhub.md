@@ -259,7 +259,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Message<wbr>Retention</span>
+        <span id="messageretention_csharp">
+<a href="#messageretention_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -268,7 +270,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_csharp">
+<a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +281,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Partition<wbr>Count</span>
+        <span id="partitioncount_csharp">
+<a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -286,7 +292,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +303,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capture<wbr>Description</span>
+        <span id="capturedescription_csharp">
+<a href="#capturedescription_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
@@ -304,7 +314,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +332,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Message<wbr>Retention</span>
+        <span id="messageretention_go">
+<a href="#messageretention_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -329,7 +343,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_go">
+<a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +354,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Partition<wbr>Count</span>
+        <span id="partitioncount_go">
+<a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -347,7 +365,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +376,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capture<wbr>Description</span>
+        <span id="capturedescription_go">
+<a href="#capturedescription_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
     </dt>
@@ -365,7 +387,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +405,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>message<wbr>Retention</span>
+        <span id="messageretention_nodejs">
+<a href="#messageretention_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -390,7 +416,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Name</span>
+        <span id="namespacename_nodejs">
+<a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -399,7 +427,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>partition<wbr>Count</span>
+        <span id="partitioncount_nodejs">
+<a href="#partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -408,7 +438,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -417,7 +449,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>capture<wbr>Description</span>
+        <span id="capturedescription_nodejs">
+<a href="#capturedescription_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
     </dt>
@@ -426,7 +460,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +478,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>message_<wbr>retention</span>
+        <span id="message_retention_python">
+<a href="#message_retention_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -451,7 +489,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>namespace_<wbr>name</span>
+        <span id="namespace_name_python">
+<a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -460,7 +500,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>partition_<wbr>count</span>
+        <span id="partition_count_python">
+<a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -469,7 +511,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -478,7 +522,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>capture_<wbr>description</span>
+        <span id="capture_description_python">
+<a href="#capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description]</a></span>
     </dt>
@@ -487,7 +533,9 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +562,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -522,7 +572,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Partition<wbr>Ids</span>
+        <span id="partitionids_csharp">
+<a href="#partitionids_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -538,7 +590,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -546,7 +600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Partition<wbr>Ids</span>
+        <span id="partitionids_go">
+<a href="#partitionids_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -562,7 +618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +628,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>partition<wbr>Ids</span>
+        <span id="partitionids_nodejs">
+<a href="#partitionids_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -586,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -594,7 +656,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>partition_<wbr>ids</span>
+        <span id="partition_ids_python">
+<a href="#partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -736,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capture<wbr>Description</span>
+        <span id="state_capturedescription_csharp">
+<a href="#state_capturedescription_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
@@ -745,7 +811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Retention</span>
+        <span id="state_messageretention_csharp">
+<a href="#state_messageretention_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -754,7 +822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -763,7 +833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_csharp">
+<a href="#state_namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -772,7 +844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Count</span>
+        <span id="state_partitioncount_csharp">
+<a href="#state_partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -781,7 +855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Ids</span>
+        <span id="state_partitionids_csharp">
+<a href="#state_partitionids_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -790,7 +866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -806,7 +884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capture<wbr>Description</span>
+        <span id="state_capturedescription_go">
+<a href="#state_capturedescription_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
     </dt>
@@ -815,7 +895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message<wbr>Retention</span>
+        <span id="state_messageretention_go">
+<a href="#state_messageretention_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -824,7 +906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -833,7 +917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_go">
+<a href="#state_namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Count</span>
+        <span id="state_partitioncount_go">
+<a href="#state_partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -851,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition<wbr>Ids</span>
+        <span id="state_partitionids_go">
+<a href="#state_partitionids_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -860,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -876,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>capture<wbr>Description</span>
+        <span id="state_capturedescription_nodejs">
+<a href="#state_capturedescription_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
     </dt>
@@ -885,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>message<wbr>Retention</span>
+        <span id="state_messageretention_nodejs">
+<a href="#state_messageretention_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -894,7 +990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -903,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Name</span>
+        <span id="state_namespacename_nodejs">
+<a href="#state_namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -912,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Count</span>
+        <span id="state_partitioncount_nodejs">
+<a href="#state_partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -921,7 +1023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition<wbr>Ids</span>
+        <span id="state_partitionids_nodejs">
+<a href="#state_partitionids_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -930,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -946,7 +1052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>capture_<wbr>description</span>
+        <span id="state_capture_description_python">
+<a href="#state_capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescription">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description]</a></span>
     </dt>
@@ -955,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>message_<wbr>retention</span>
+        <span id="state_message_retention_python">
+<a href="#state_message_retention_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -964,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -973,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>name</span>
+        <span id="state_namespace_name_python">
+<a href="#state_namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -982,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition_<wbr>count</span>
+        <span id="state_partition_count_python">
+<a href="#state_partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -991,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition_<wbr>ids</span>
+        <span id="state_partition_ids_python">
+<a href="#state_partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1000,7 +1118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1042,7 +1162,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Destination</span>
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1051,7 +1173,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1060,7 +1184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Encoding</span>
+        <span id="encoding_csharp">
+<a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1069,7 +1195,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_csharp">
+<a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1078,7 +1206,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Limit<wbr>In<wbr>Bytes</span>
+        <span id="sizelimitinbytes_csharp">
+<a href="#sizelimitinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Limit<wbr>In<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1087,7 +1217,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Empty<wbr>Archives</span>
+        <span id="skipemptyarchives_csharp">
+<a href="#skipemptyarchives_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Empty<wbr>Archives</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1103,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Destination</span>
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination</a></span>
     </dt>
@@ -1112,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1121,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Encoding</span>
+        <span id="encoding_go">
+<a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1130,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_go">
+<a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1139,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Limit<wbr>In<wbr>Bytes</span>
+        <span id="sizelimitinbytes_go">
+<a href="#sizelimitinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Limit<wbr>In<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1148,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Empty<wbr>Archives</span>
+        <span id="skipemptyarchives_go">
+<a href="#skipemptyarchives_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Empty<wbr>Archives</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1164,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>destination</span>
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination</a></span>
     </dt>
@@ -1173,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1182,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>encoding</span>
+        <span id="encoding_nodejs">
+<a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1191,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval<wbr>In<wbr>Seconds</span>
+        <span id="intervalinseconds_nodejs">
+<a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1200,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Limit<wbr>In<wbr>Bytes</span>
+        <span id="sizelimitinbytes_nodejs">
+<a href="#sizelimitinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Limit<wbr>In<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1209,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Empty<wbr>Archives</span>
+        <span id="skipemptyarchives_nodejs">
+<a href="#skipemptyarchives_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Empty<wbr>Archives</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1225,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>destination</span>
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination]</a></span>
     </dt>
@@ -1234,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1243,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>encoding</span>
+        <span id="encoding_python">
+<a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1252,7 +1414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval_<wbr>in_<wbr>seconds</span>
+        <span id="interval_in_seconds_python">
+<a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1261,7 +1425,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Limit<wbr>In<wbr>Bytes</span>
+        <span id="sizelimitinbytes_python">
+<a href="#sizelimitinbytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Limit<wbr>In<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1270,7 +1436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Empty<wbr>Archives</span>
+        <span id="skipemptyarchives_python">
+<a href="#skipemptyarchives_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Empty<wbr>Archives</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1304,7 +1472,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Archive<wbr>Name<wbr>Format</span>
+        <span id="archivenameformat_csharp">
+<a href="#archivenameformat_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Name<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1313,7 +1483,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Container<wbr>Name</span>
+        <span id="blobcontainername_csharp">
+<a href="#blobcontainername_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1322,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1331,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1347,7 +1523,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Archive<wbr>Name<wbr>Format</span>
+        <span id="archivenameformat_go">
+<a href="#archivenameformat_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Name<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1356,7 +1534,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Container<wbr>Name</span>
+        <span id="blobcontainername_go">
+<a href="#blobcontainername_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1365,7 +1545,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1374,7 +1556,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1390,7 +1574,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>archive<wbr>Name<wbr>Format</span>
+        <span id="archivenameformat_nodejs">
+<a href="#archivenameformat_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Name<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1399,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Container<wbr>Name</span>
+        <span id="blobcontainername_nodejs">
+<a href="#blobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1408,7 +1596,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1417,7 +1607,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1433,7 +1625,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>archive<wbr>Name<wbr>Format</span>
+        <span id="archivenameformat_python">
+<a href="#archivenameformat_python" style="color: inherit; text-decoration: inherit;">archive<wbr>Name<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1442,7 +1636,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Container<wbr>Name</span>
+        <span id="blobcontainername_python">
+<a href="#blobcontainername_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1451,7 +1647,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1460,7 +1658,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>id</span>
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

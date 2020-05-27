@@ -311,7 +311,9 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_csharp">
+<a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -322,7 +324,9 @@ a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +336,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
+        <span id="ddosprotectionplan_csharp">
+<a href="#ddosprotectionplan_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
@@ -341,7 +347,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -350,7 +358,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +370,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +382,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnets</span>
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
@@ -380,7 +394,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -396,7 +412,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Spaces</span>
+        <span id="addressspaces_go">
+<a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -407,7 +425,9 @@ a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +437,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
+        <span id="ddosprotectionplan_go">
+<a href="#ddosprotectionplan_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
@@ -426,7 +448,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -435,7 +459,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -445,7 +471,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +483,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnets</span>
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
     </dt>
@@ -465,7 +495,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -481,7 +513,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Spaces</span>
+        <span id="addressspaces_nodejs">
+<a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -492,7 +526,9 @@ a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +538,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ddos<wbr>Protection<wbr>Plan</span>
+        <span id="ddosprotectionplan_nodejs">
+<a href="#ddosprotectionplan_nodejs" style="color: inherit; text-decoration: inherit;">ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
@@ -511,7 +549,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Servers</span>
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -520,7 +560,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +572,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -540,7 +584,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnets</span>
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
     </dt>
@@ -550,7 +596,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -566,7 +614,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>spaces</span>
+        <span id="address_spaces_python">
+<a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -577,7 +627,9 @@ a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -587,7 +639,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ddos_<wbr>protection_<wbr>plan</span>
+        <span id="ddos_protection_plan_python">
+<a href="#ddos_protection_plan_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>protection_<wbr>plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Dict[Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan]</a></span>
     </dt>
@@ -596,7 +650,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>servers</span>
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -605,7 +661,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +673,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +685,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnets</span>
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
     </dt>
@@ -635,7 +697,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -662,7 +726,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Guid</span>
+        <span id="guid_csharp">
+<a href="#guid_csharp" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -671,7 +737,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -686,7 +754,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Guid</span>
+        <span id="guid_go">
+<a href="#guid_go" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -695,7 +765,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -710,7 +782,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>guid</span>
+        <span id="guid_nodejs">
+<a href="#guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -719,7 +793,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -734,7 +810,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>guid</span>
+        <span id="guid_python">
+<a href="#guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -743,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -884,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Spaces</span>
+        <span id="state_addressspaces_csharp">
+<a href="#state_addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -895,7 +977,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
+        <span id="state_ddosprotectionplan_csharp">
+<a href="#state_ddosprotectionplan_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
@@ -904,7 +988,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="state_dnsservers_csharp">
+<a href="#state_dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -913,7 +999,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guid</span>
+        <span id="state_guid_csharp">
+<a href="#state_guid_csharp" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1010,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -932,7 +1022,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -942,7 +1034,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1046,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnets</span>
+        <span id="state_subnets_csharp">
+<a href="#state_subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
@@ -962,7 +1058,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -978,7 +1076,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Spaces</span>
+        <span id="state_addressspaces_go">
+<a href="#state_addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -989,7 +1089,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
+        <span id="state_ddosprotectionplan_go">
+<a href="#state_ddosprotectionplan_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
@@ -998,7 +1100,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="state_dnsservers_go">
+<a href="#state_dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1007,7 +1111,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guid</span>
+        <span id="state_guid_go">
+<a href="#state_guid_go" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1016,7 +1122,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1026,7 +1134,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1146,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1046,7 +1158,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnets</span>
+        <span id="state_subnets_go">
+<a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
     </dt>
@@ -1056,7 +1170,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1072,7 +1188,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Spaces</span>
+        <span id="state_addressspaces_nodejs">
+<a href="#state_addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1083,7 +1201,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ddos<wbr>Protection<wbr>Plan</span>
+        <span id="state_ddosprotectionplan_nodejs">
+<a href="#state_ddosprotectionplan_nodejs" style="color: inherit; text-decoration: inherit;">ddos<wbr>Protection<wbr>Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
@@ -1092,7 +1212,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Servers</span>
+        <span id="state_dnsservers_nodejs">
+<a href="#state_dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1101,7 +1223,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guid</span>
+        <span id="state_guid_nodejs">
+<a href="#state_guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1110,7 +1234,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1120,7 +1246,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1130,7 +1258,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1140,7 +1270,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnets</span>
+        <span id="state_subnets_nodejs">
+<a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
     </dt>
@@ -1150,7 +1282,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1166,7 +1300,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>spaces</span>
+        <span id="state_address_spaces_python">
+<a href="#state_address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1177,7 +1313,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ddos_<wbr>protection_<wbr>plan</span>
+        <span id="state_ddos_protection_plan_python">
+<a href="#state_ddos_protection_plan_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>protection_<wbr>plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Dict[Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan]</a></span>
     </dt>
@@ -1186,7 +1324,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>servers</span>
+        <span id="state_dns_servers_python">
+<a href="#state_dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1195,7 +1335,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guid</span>
+        <span id="state_guid_python">
+<a href="#state_guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1204,7 +1346,9 @@ a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1214,7 +1358,9 @@ created. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1224,7 +1370,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1234,7 +1382,9 @@ create the virtual network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnets</span>
+        <span id="state_subnets_python">
+<a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
     </dt>
@@ -1244,7 +1394,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1286,7 +1438,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Enable</span>
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1295,7 +1449,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1311,7 +1467,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Enable</span>
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1320,7 +1478,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1336,7 +1496,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>enable</span>
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1345,7 +1507,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1361,7 +1525,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>enable</span>
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1370,7 +1536,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1404,7 +1572,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Prefix</span>
+        <span id="addressprefix_csharp">
+<a href="#addressprefix_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1413,7 +1583,9 @@ subnets. Each `subnet` block supports fields documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1423,7 +1595,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1432,7 +1606,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group</span>
+        <span id="securitygroup_csharp">
+<a href="#securitygroup_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1449,7 +1625,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Prefix</span>
+        <span id="addressprefix_go">
+<a href="#addressprefix_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1458,7 +1636,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1468,7 +1648,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1477,7 +1659,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group</span>
+        <span id="securitygroup_go">
+<a href="#securitygroup_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1494,7 +1678,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Prefix</span>
+        <span id="addressprefix_nodejs">
+<a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1503,7 +1689,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1513,7 +1701,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1522,7 +1712,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group</span>
+        <span id="securitygroup_nodejs">
+<a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1539,7 +1731,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>prefix</span>
+        <span id="address_prefix_python">
+<a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1548,7 +1742,9 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1558,7 +1754,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1567,7 +1765,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group</span>
+        <span id="securitygroup_python">
+<a href="#securitygroup_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

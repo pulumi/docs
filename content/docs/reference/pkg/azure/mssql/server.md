@@ -47,6 +47,10 @@ example_server = azure.mssql.Server("exampleServer",
     version="12.0",
     administrator_login="missadministrator",
     administrator_login_password="thisIsKat11",
+    azuread_administrator={
+        "loginUsername": "AzureAD Admin",
+        "objectId": "00000000-0000-0000-0000-000000000000",
+    },
     extended_auditing_policy={
         "storageEndpoint": example_account.primary_blob_endpoint,
         "storageAccountAccessKey": example_account.primary_access_key,
@@ -77,6 +81,10 @@ const exampleServer = new azure.mssql.Server("exampleServer", {
     version: "12.0",
     administratorLogin: "missadministrator",
     administratorLoginPassword: "thisIsKat11",
+    azuread_administrator: {
+        loginUsername: "AzureAD Admin",
+        objectId: "00000000-0000-0000-0000-000000000000",
+    },
     extended_auditing_policy: {
         storageEndpoint: exampleAccount.primaryBlobEndpoint,
         storageAccountAccessKey: exampleAccount.primaryAccessKey,
@@ -102,7 +110,7 @@ const exampleServer = new azure.mssql.Server("exampleServer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>azuread_administrator=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,7 +284,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login</span>
+        <span id="administratorlogin_csharp">
+<a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +295,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login<wbr>Password</span>
+        <span id="administratorloginpassword_csharp">
+<a href="#administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +306,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +317,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +328,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Policy</span>
+        <span id="azureadadministrator_csharp">
+<a href="#azureadadministrator_csharp" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpolicy_csharp">
+<a href="#connectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +350,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_csharp">
+<a href="#extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -330,7 +361,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -339,7 +372,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -348,7 +383,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -357,15 +394,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -381,7 +423,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login</span>
+        <span id="administratorlogin_go">
+<a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +434,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login<wbr>Password</span>
+        <span id="administratorloginpassword_go">
+<a href="#administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +445,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +456,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +467,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Policy</span>
+        <span id="azureadadministrator_go">
+<a href="#azureadadministrator_go" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpolicy_go">
+<a href="#connectionpolicy_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +489,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_go">
+<a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -435,7 +500,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
     </dt>
@@ -444,7 +511,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +522,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -462,15 +533,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -486,7 +562,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>administrator<wbr>Login</span>
+        <span id="administratorlogin_nodejs">
+<a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +573,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>administrator<wbr>Login<wbr>Password</span>
+        <span id="administratorloginpassword_nodejs">
+<a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +584,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +595,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +606,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Policy</span>
+        <span id="azureadadministrator_nodejs">
+<a href="#azureadadministrator_nodejs" style="color: inherit; text-decoration: inherit;">azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpolicy_nodejs">
+<a href="#connectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +628,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_nodejs">
+<a href="#extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -540,7 +639,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
     </dt>
@@ -549,7 +650,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +661,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,15 +672,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -591,7 +701,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>administrator_<wbr>login</span>
+        <span id="administrator_login_python">
+<a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -600,7 +712,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>administrator_<wbr>login_<wbr>password</span>
+        <span id="administrator_login_password_python">
+<a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +723,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +734,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -627,7 +745,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>policy</span>
+        <span id="azuread_administrator_python">
+<a href="#azuread_administrator_python" style="color: inherit; text-decoration: inherit;">azuread_<wbr>administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Dict[Server<wbr>Azuread<wbr>Administrator]</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_policy_python">
+<a href="#connection_policy_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +767,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span id="extended_auditing_policy_python">
+<a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Dict[Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
     </dt>
@@ -645,7 +778,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
     </dt>
@@ -654,7 +789,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -663,7 +800,9 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -672,15 +811,20 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>network_<wbr>access_<wbr>enabled</span>
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -707,7 +851,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="fullyqualifieddomainname_csharp">
+<a href="#fullyqualifieddomainname_csharp" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -716,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -731,7 +879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="fullyqualifieddomainname_go">
+<a href="#fullyqualifieddomainname_go" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -740,7 +890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="fullyqualifieddomainname_nodejs">
+<a href="#fullyqualifieddomainname_nodejs" style="color: inherit; text-decoration: inherit;">fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -764,7 +918,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +935,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fully_<wbr>qualified_<wbr>domain_<wbr>name</span>
+        <span id="fully_qualified_domain_name_python">
+<a href="#fully_qualified_domain_name_python" style="color: inherit; text-decoration: inherit;">fully_<wbr>qualified_<wbr>domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +946,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -813,7 +973,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>fully_qualified_domain_name=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>azuread_administrator=None<span class="p">, </span>connection_policy=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>fully_qualified_domain_name=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -929,7 +1089,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Administrator<wbr>Login</span>
+        <span id="state_administratorlogin_csharp">
+<a href="#state_administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -938,7 +1100,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Administrator<wbr>Login<wbr>Password</span>
+        <span id="state_administratorloginpassword_csharp">
+<a href="#state_administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -947,7 +1111,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Policy</span>
+        <span id="state_azureadadministrator_csharp">
+<a href="#state_azureadadministrator_csharp" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionpolicy_csharp">
+<a href="#state_connectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -956,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_csharp">
+<a href="#state_extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -965,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="state_fullyqualifieddomainname_csharp">
+<a href="#state_fullyqualifieddomainname_csharp" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -974,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -983,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1001,15 +1188,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1018,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1027,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_csharp">
+<a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1239,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Administrator<wbr>Login</span>
+        <span id="state_administratorlogin_go">
+<a href="#state_administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1052,7 +1250,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Administrator<wbr>Login<wbr>Password</span>
+        <span id="state_administratorloginpassword_go">
+<a href="#state_administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1061,7 +1261,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Policy</span>
+        <span id="state_azureadadministrator_go">
+<a href="#state_azureadadministrator_go" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionpolicy_go">
+<a href="#state_connectionpolicy_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1070,7 +1283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_go">
+<a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -1079,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="state_fullyqualifieddomainname_go">
+<a href="#state_fullyqualifieddomainname_go" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1088,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
     </dt>
@@ -1097,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1106,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1115,15 +1338,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1132,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1141,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_go">
+<a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1157,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>administrator<wbr>Login</span>
+        <span id="state_administratorlogin_nodejs">
+<a href="#state_administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1166,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>administrator<wbr>Login<wbr>Password</span>
+        <span id="state_administratorloginpassword_nodejs">
+<a href="#state_administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1411,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Policy</span>
+        <span id="state_azureadadministrator_nodejs">
+<a href="#state_azureadadministrator_nodejs" style="color: inherit; text-decoration: inherit;">azuread<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionpolicy_nodejs">
+<a href="#state_connectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1184,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_nodejs">
+<a href="#state_extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -1193,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fully<wbr>Qualified<wbr>Domain<wbr>Name</span>
+        <span id="state_fullyqualifieddomainname_nodejs">
+<a href="#state_fullyqualifieddomainname_nodejs" style="color: inherit; text-decoration: inherit;">fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1202,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
     </dt>
@@ -1211,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1220,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1229,15 +1488,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Network<wbr>Access<wbr>Enabled</span>
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1246,7 +1510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1255,7 +1521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_nodejs">
+<a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1271,7 +1539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>administrator_<wbr>login</span>
+        <span id="state_administrator_login_python">
+<a href="#state_administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1280,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>administrator_<wbr>login_<wbr>password</span>
+        <span id="state_administrator_login_password_python">
+<a href="#state_administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1289,7 +1561,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>policy</span>
+        <span id="state_azuread_administrator_python">
+<a href="#state_azuread_administrator_python" style="color: inherit; text-decoration: inherit;">azuread_<wbr>administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Dict[Server<wbr>Azuread<wbr>Administrator]</a></span>
+    </dt>
+    <dd>{{% md %}}An `azuread_administrator` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connection_policy_python">
+<a href="#state_connection_policy_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1298,7 +1583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span id="state_extended_auditing_policy_python">
+<a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverextendedauditingpolicy">Dict[Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
     </dt>
@@ -1307,7 +1594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fully_<wbr>qualified_<wbr>domain_<wbr>name</span>
+        <span id="state_fully_qualified_domain_name_python">
+<a href="#state_fully_qualified_domain_name_python" style="color: inherit; text-decoration: inherit;">fully_<wbr>qualified_<wbr>domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1316,7 +1605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
     </dt>
@@ -1325,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1334,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1343,15 +1638,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>network_<wbr>access_<wbr>enabled</span>
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1360,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1369,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_python">
+<a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1389,6 +1693,184 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerAzureadAdministrator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerAzureadAdministrator">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#ServerAzureadAdministratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#ServerAzureadAdministratorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.ServerAzureadAdministratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.ServerAzureadAdministrator.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loginusername_csharp">
+<a href="#loginusername_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required)  The login username of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loginusername_go">
+<a href="#loginusername_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required)  The login username of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loginusername_nodejs">
+<a href="#loginusername_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required)  The login username of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="loginusername_python">
+<a href="#loginusername_python" style="color: inherit; text-decoration: inherit;">login<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Required)  The login username of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy</h4>
@@ -1411,7 +1893,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1420,7 +1904,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1429,7 +1915,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1438,7 +1926,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_csharp">
+<a href="#storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1454,7 +1944,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1463,7 +1955,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1472,7 +1966,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1481,7 +1977,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_go">
+<a href="#storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1497,7 +1995,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1506,7 +2006,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Endpoint</span>
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1515,7 +2017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1524,7 +2028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_nodejs">
+<a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1540,7 +2046,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>access_<wbr>key</span>
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1549,7 +2057,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>endpoint</span>
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1558,7 +2068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>in_<wbr>days</span>
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1567,7 +2079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_python">
+<a href="#storageaccountaccesskeyissecondary_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1601,7 +2115,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1610,7 +2126,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1619,11 +2137,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this SQL Server.
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1635,7 +2155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1644,7 +2166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1653,11 +2177,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this SQL Server.
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1669,7 +2195,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1678,7 +2206,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal<wbr>Id</span>
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1687,11 +2217,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this SQL Server.
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1703,7 +2235,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1712,7 +2246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal_<wbr>id</span>
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1721,11 +2257,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this SQL Server.
+    <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd>
 
 </dl>

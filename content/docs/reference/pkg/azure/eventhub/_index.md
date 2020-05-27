@@ -36,6 +36,7 @@ Explore the resources and functions of the eventhub module in the Azure package.
 <ul class="api">
     <li><a href="getauthorizationrule" title="GetAuthorizationRule"><span class="symbol function"></span>GetAuthorizationRule</a></li>
     <li><a href="getconsumegroup" title="GetConsumeGroup"><span class="symbol function"></span>GetConsumeGroup</a></li>
+    <li><a href="geteventhub" title="GetEventHub"><span class="symbol function"></span>GetEventHub</a></li>
     <li><a href="geteventhubnamespace" title="GetEventhubNamespace"><span class="symbol function"></span>GetEventhubNamespace</a></li>
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
@@ -51,7 +52,7 @@ Explore the resources and functions of the eventhub module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.1</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 

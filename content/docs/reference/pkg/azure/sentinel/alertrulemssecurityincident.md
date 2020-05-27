@@ -251,7 +251,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +262,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_csharp">
+<a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +273,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Product<wbr>Filter</span>
+        <span id="productfilter_csharp">
+<a href="#productfilter_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +284,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Severity<wbr>Filters</span>
+        <span id="severityfilters_csharp">
+<a href="#severityfilters_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -287,7 +295,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +306,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -305,7 +317,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +328,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Text<wbr>Whitelists</span>
+        <span id="textwhitelists_csharp">
+<a href="#textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -330,7 +346,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -339,7 +357,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_go">
+<a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +368,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Product<wbr>Filter</span>
+        <span id="productfilter_go">
+<a href="#productfilter_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +379,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Severity<wbr>Filters</span>
+        <span id="severityfilters_go">
+<a href="#severityfilters_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -366,7 +390,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +401,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -384,7 +412,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +423,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Text<wbr>Whitelists</span>
+        <span id="textwhitelists_go">
+<a href="#textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -409,7 +441,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +452,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="loganalyticsworkspaceid_nodejs">
+<a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +463,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>product<wbr>Filter</span>
+        <span id="productfilter_nodejs">
+<a href="#productfilter_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -436,7 +474,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>severity<wbr>Filters</span>
+        <span id="severityfilters_nodejs">
+<a href="#severityfilters_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -445,7 +485,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -454,7 +496,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -463,7 +507,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -472,7 +518,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>text<wbr>Whitelists</span>
+        <span id="textwhitelists_nodejs">
+<a href="#textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -488,7 +536,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -497,7 +547,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
+        <span id="log_analytics_workspace_id_python">
+<a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +558,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>product_<wbr>filter</span>
+        <span id="product_filter_python">
+<a href="#product_filter_python" style="color: inherit; text-decoration: inherit;">product_<wbr>filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -515,7 +569,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>severity_<wbr>filters</span>
+        <span id="severity_filters_python">
+<a href="#severity_filters_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -524,7 +580,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -533,7 +591,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -542,7 +602,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -551,7 +613,9 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>text_<wbr>whitelists</span>
+        <span id="text_whitelists_python">
+<a href="#text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -578,7 +642,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -593,7 +659,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -608,7 +676,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -623,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -764,7 +836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_csharp">
+<a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -782,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -791,7 +869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="state_loganalyticsworkspaceid_csharp">
+<a href="#state_loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -800,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Product<wbr>Filter</span>
+        <span id="state_productfilter_csharp">
+<a href="#state_productfilter_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Severity<wbr>Filters</span>
+        <span id="state_severityfilters_csharp">
+<a href="#state_severityfilters_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -827,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Text<wbr>Whitelists</span>
+        <span id="state_textwhitelists_csharp">
+<a href="#state_textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -843,7 +931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -852,7 +942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_go">
+<a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -861,7 +953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -870,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="state_loganalyticsworkspaceid_go">
+<a href="#state_loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Product<wbr>Filter</span>
+        <span id="state_productfilter_go">
+<a href="#state_productfilter_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Severity<wbr>Filters</span>
+        <span id="state_severityfilters_go">
+<a href="#state_severityfilters_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -906,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Text<wbr>Whitelists</span>
+        <span id="state_textwhitelists_go">
+<a href="#state_textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -922,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -931,7 +1037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="state_displayname_nodejs">
+<a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -940,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -949,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
+        <span id="state_loganalyticsworkspaceid_nodejs">
+<a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -958,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -967,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>product<wbr>Filter</span>
+        <span id="state_productfilter_nodejs">
+<a href="#state_productfilter_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -976,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>severity<wbr>Filters</span>
+        <span id="state_severityfilters_nodejs">
+<a href="#state_severityfilters_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -985,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>text<wbr>Whitelists</span>
+        <span id="state_textwhitelists_nodejs">
+<a href="#state_textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1001,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1010,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="state_display_name_python">
+<a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1019,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1028,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
+        <span id="state_log_analytics_workspace_id_python">
+<a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1037,7 +1165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1046,7 +1176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>product_<wbr>filter</span>
+        <span id="state_product_filter_python">
+<a href="#state_product_filter_python" style="color: inherit; text-decoration: inherit;">product_<wbr>filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1055,7 +1187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>severity_<wbr>filters</span>
+        <span id="state_severity_filters_python">
+<a href="#state_severity_filters_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1064,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>text_<wbr>whitelists</span>
+        <span id="state_text_whitelists_python">
+<a href="#state_text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

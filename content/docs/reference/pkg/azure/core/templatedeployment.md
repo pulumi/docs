@@ -365,7 +365,9 @@ The TemplateDeployment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Deployment<wbr>Mode</span>
+        <span id="deploymentmode_csharp">
+<a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +378,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +390,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -396,7 +402,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -405,7 +413,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters<wbr>Body</span>
+        <span id="parametersbody_csharp">
+<a href="#parametersbody_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -414,7 +424,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Body</span>
+        <span id="templatebody_csharp">
+<a href="#templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -430,7 +442,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Deployment<wbr>Mode</span>
+        <span id="deploymentmode_go">
+<a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +455,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +467,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +479,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -470,7 +490,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters<wbr>Body</span>
+        <span id="parametersbody_go">
+<a href="#parametersbody_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -479,7 +501,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Body</span>
+        <span id="templatebody_go">
+<a href="#templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +519,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>deployment<wbr>Mode</span>
+        <span id="deploymentmode_nodejs">
+<a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -506,7 +532,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -516,7 +544,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -526,7 +556,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -535,7 +567,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters<wbr>Body</span>
+        <span id="parametersbody_nodejs">
+<a href="#parametersbody_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +578,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Body</span>
+        <span id="templatebody_nodejs">
+<a href="#templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -560,7 +596,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>deployment_<wbr>mode</span>
+        <span id="deployment_mode_python">
+<a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -571,7 +609,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +621,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -591,7 +633,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -600,7 +644,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters_<wbr>body</span>
+        <span id="parameters_body_python">
+<a href="#parameters_body_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +655,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template_<wbr>body</span>
+        <span id="template_body_python">
+<a href="#template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +684,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -644,7 +694,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Outputs</span>
+        <span id="outputs_csharp">
+<a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -660,7 +712,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -668,7 +722,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Outputs</span>
+        <span id="outputs_go">
+<a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -684,7 +740,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -692,7 +750,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>outputs</span>
+        <span id="outputs_nodejs">
+<a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -708,7 +768,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +778,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>outputs</span>
+        <span id="outputs_python">
+<a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -858,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Mode</span>
+        <span id="state_deploymentmode_csharp">
+<a href="#state_deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -869,7 +935,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -879,7 +947,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="state_outputs_csharp">
+<a href="#state_outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -888,7 +958,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_csharp">
+<a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -897,7 +969,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters<wbr>Body</span>
+        <span id="state_parametersbody_csharp">
+<a href="#state_parametersbody_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -906,7 +980,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -916,7 +992,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Body</span>
+        <span id="state_templatebody_csharp">
+<a href="#state_templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -932,7 +1010,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Mode</span>
+        <span id="state_deploymentmode_go">
+<a href="#state_deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1023,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -953,7 +1035,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="state_outputs_go">
+<a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -962,7 +1046,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_go">
+<a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -971,7 +1057,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters<wbr>Body</span>
+        <span id="state_parametersbody_go">
+<a href="#state_parametersbody_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -980,7 +1068,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -990,7 +1080,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Body</span>
+        <span id="state_templatebody_go">
+<a href="#state_templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1006,7 +1098,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment<wbr>Mode</span>
+        <span id="state_deploymentmode_nodejs">
+<a href="#state_deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1017,7 +1111,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1027,7 +1123,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="state_outputs_nodejs">
+<a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1036,7 +1134,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_nodejs">
+<a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1045,7 +1145,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters<wbr>Body</span>
+        <span id="state_parametersbody_nodejs">
+<a href="#state_parametersbody_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1054,7 +1156,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1064,7 +1168,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Body</span>
+        <span id="state_templatebody_nodejs">
+<a href="#state_templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1080,7 +1186,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment_<wbr>mode</span>
+        <span id="state_deployment_mode_python">
+<a href="#state_deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1199,9 @@ specified within the template, and this provider will not be aware of this.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1101,7 +1211,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="state_outputs_python">
+<a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1110,7 +1222,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_python">
+<a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1119,7 +1233,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters_<wbr>body</span>
+        <span id="state_parameters_body_python">
+<a href="#state_parameters_body_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1128,7 +1244,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1138,7 +1256,9 @@ create the template deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template_<wbr>body</span>
+        <span id="state_template_body_python">
+<a href="#state_template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

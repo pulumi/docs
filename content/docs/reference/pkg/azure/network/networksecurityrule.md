@@ -265,7 +265,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Access</span>
+        <span id="access_csharp">
+<a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +276,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +287,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="networksecuritygroupname_csharp">
+<a href="#networksecuritygroupname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +298,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -301,7 +309,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +320,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +331,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +342,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefix</span>
+        <span id="destinationaddressprefix_csharp">
+<a href="#destinationaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -337,7 +353,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefixes</span>
+        <span id="destinationaddressprefixes_csharp">
+<a href="#destinationaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -346,7 +364,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="destinationapplicationsecuritygroupids_csharp">
+<a href="#destinationapplicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +375,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Range</span>
+        <span id="destinationportrange_csharp">
+<a href="#destinationportrange_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +386,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Ranges</span>
+        <span id="destinationportranges_csharp">
+<a href="#destinationportranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -373,7 +397,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -382,7 +408,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span id="sourceaddressprefix_csharp">
+<a href="#sourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -391,7 +419,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefixes</span>
+        <span id="sourceaddressprefixes_csharp">
+<a href="#sourceaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -400,7 +430,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="sourceapplicationsecuritygroupids_csharp">
+<a href="#sourceapplicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +441,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Range</span>
+        <span id="sourceportrange_csharp">
+<a href="#sourceportrange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -418,7 +452,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Ranges</span>
+        <span id="sourceportranges_csharp">
+<a href="#sourceportranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -434,7 +470,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Access</span>
+        <span id="access_go">
+<a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +481,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +492,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="networksecuritygroupname_go">
+<a href="#networksecuritygroupname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +503,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -470,7 +514,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -479,7 +525,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +536,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -497,7 +547,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefix</span>
+        <span id="destinationaddressprefix_go">
+<a href="#destinationaddressprefix_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +558,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefixes</span>
+        <span id="destinationaddressprefixes_go">
+<a href="#destinationaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -515,7 +569,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="destinationapplicationsecuritygroupids_go">
+<a href="#destinationapplicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -524,7 +580,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Range</span>
+        <span id="destinationportrange_go">
+<a href="#destinationportrange_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +591,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Ranges</span>
+        <span id="destinationportranges_go">
+<a href="#destinationportranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -542,7 +602,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -551,7 +613,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span id="sourceaddressprefix_go">
+<a href="#sourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -560,7 +624,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefixes</span>
+        <span id="sourceaddressprefixes_go">
+<a href="#sourceaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -569,7 +635,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="sourceapplicationsecuritygroupids_go">
+<a href="#sourceapplicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -578,7 +646,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Range</span>
+        <span id="sourceportrange_go">
+<a href="#sourceportrange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -587,7 +657,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Ranges</span>
+        <span id="sourceportranges_go">
+<a href="#sourceportranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -603,7 +675,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>access</span>
+        <span id="access_nodejs">
+<a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -612,7 +686,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -621,7 +697,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="networksecuritygroupname_nodejs">
+<a href="#networksecuritygroupname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -630,7 +708,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -639,7 +719,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -648,7 +730,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -657,7 +741,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -666,7 +752,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Address<wbr>Prefix</span>
+        <span id="destinationaddressprefix_nodejs">
+<a href="#destinationaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -675,7 +763,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Address<wbr>Prefixes</span>
+        <span id="destinationaddressprefixes_nodejs">
+<a href="#destinationaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -684,7 +774,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="destinationapplicationsecuritygroupids_nodejs">
+<a href="#destinationapplicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -693,7 +785,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port<wbr>Range</span>
+        <span id="destinationportrange_nodejs">
+<a href="#destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -702,7 +796,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port<wbr>Ranges</span>
+        <span id="destinationportranges_nodejs">
+<a href="#destinationportranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -711,7 +807,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +818,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Address<wbr>Prefix</span>
+        <span id="sourceaddressprefix_nodejs">
+<a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -729,7 +829,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Address<wbr>Prefixes</span>
+        <span id="sourceaddressprefixes_nodejs">
+<a href="#sourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -738,7 +840,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="sourceapplicationsecuritygroupids_nodejs">
+<a href="#sourceapplicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -747,7 +851,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port<wbr>Range</span>
+        <span id="sourceportrange_nodejs">
+<a href="#sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +862,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port<wbr>Ranges</span>
+        <span id="sourceportranges_nodejs">
+<a href="#sourceportranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -772,7 +880,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>access</span>
+        <span id="access_python">
+<a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -781,7 +891,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +902,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>security_<wbr>group_<wbr>name</span>
+        <span id="network_security_group_name_python">
+<a href="#network_security_group_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +913,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -808,7 +924,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -817,7 +935,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -826,7 +946,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +957,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>address_<wbr>prefix</span>
+        <span id="destination_address_prefix_python">
+<a href="#destination_address_prefix_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -844,7 +968,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>address_<wbr>prefixes</span>
+        <span id="destination_address_prefixes_python">
+<a href="#destination_address_prefixes_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -853,7 +979,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="destination_application_security_group_ids_python">
+<a href="#destination_application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -862,7 +990,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port_<wbr>range</span>
+        <span id="destination_port_range_python">
+<a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +1001,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port_<wbr>ranges</span>
+        <span id="destination_port_ranges_python">
+<a href="#destination_port_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -880,7 +1012,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -889,7 +1023,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>address_<wbr>prefix</span>
+        <span id="source_address_prefix_python">
+<a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -898,7 +1034,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>address_<wbr>prefixes</span>
+        <span id="source_address_prefixes_python">
+<a href="#source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -907,7 +1045,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="source_application_security_group_ids_python">
+<a href="#source_application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +1056,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port_<wbr>range</span>
+        <span id="source_port_range_python">
+<a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -925,7 +1067,9 @@ The NetworkSecurityRule resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port_<wbr>ranges</span>
+        <span id="source_port_ranges_python">
+<a href="#source_port_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -952,7 +1096,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -967,7 +1113,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -982,7 +1130,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -997,7 +1147,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1138,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access</span>
+        <span id="state_access_csharp">
+<a href="#state_access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1147,7 +1301,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1156,7 +1312,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefix</span>
+        <span id="state_destinationaddressprefix_csharp">
+<a href="#state_destinationaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1165,7 +1323,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefixes</span>
+        <span id="state_destinationaddressprefixes_csharp">
+<a href="#state_destinationaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1174,7 +1334,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_destinationapplicationsecuritygroupids_csharp">
+<a href="#state_destinationapplicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1183,7 +1345,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Range</span>
+        <span id="state_destinationportrange_csharp">
+<a href="#state_destinationportrange_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1192,7 +1356,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Ranges</span>
+        <span id="state_destinationportranges_csharp">
+<a href="#state_destinationportranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1201,7 +1367,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_csharp">
+<a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1210,7 +1378,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1219,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="state_networksecuritygroupname_csharp">
+<a href="#state_networksecuritygroupname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1228,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_csharp">
+<a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1237,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1246,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1255,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span id="state_sourceaddressprefix_csharp">
+<a href="#state_sourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1264,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefixes</span>
+        <span id="state_sourceaddressprefixes_csharp">
+<a href="#state_sourceaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1273,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_sourceapplicationsecuritygroupids_csharp">
+<a href="#state_sourceapplicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1282,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Range</span>
+        <span id="state_sourceportrange_csharp">
+<a href="#state_sourceportrange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1291,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Ranges</span>
+        <span id="state_sourceportranges_csharp">
+<a href="#state_sourceportranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1307,7 +1495,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access</span>
+        <span id="state_access_go">
+<a href="#state_access_go" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1316,7 +1506,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1325,7 +1517,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefix</span>
+        <span id="state_destinationaddressprefix_go">
+<a href="#state_destinationaddressprefix_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1334,7 +1528,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Address<wbr>Prefixes</span>
+        <span id="state_destinationaddressprefixes_go">
+<a href="#state_destinationaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1343,7 +1539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_destinationapplicationsecuritygroupids_go">
+<a href="#state_destinationapplicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1352,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Range</span>
+        <span id="state_destinationportrange_go">
+<a href="#state_destinationportrange_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1361,7 +1561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port<wbr>Ranges</span>
+        <span id="state_destinationportranges_go">
+<a href="#state_destinationportranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1370,7 +1572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_go">
+<a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1379,7 +1583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1388,7 +1594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="state_networksecuritygroupname_go">
+<a href="#state_networksecuritygroupname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1397,7 +1605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_go">
+<a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1406,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1415,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1424,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span id="state_sourceaddressprefix_go">
+<a href="#state_sourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1433,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Address<wbr>Prefixes</span>
+        <span id="state_sourceaddressprefixes_go">
+<a href="#state_sourceaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1442,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_sourceapplicationsecuritygroupids_go">
+<a href="#state_sourceapplicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1451,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Range</span>
+        <span id="state_sourceportrange_go">
+<a href="#state_sourceportrange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1460,7 +1682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port<wbr>Ranges</span>
+        <span id="state_sourceportranges_go">
+<a href="#state_sourceportranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1476,7 +1700,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access</span>
+        <span id="state_access_nodejs">
+<a href="#state_access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1485,7 +1711,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1494,7 +1722,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Address<wbr>Prefix</span>
+        <span id="state_destinationaddressprefix_nodejs">
+<a href="#state_destinationaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1503,7 +1733,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Address<wbr>Prefixes</span>
+        <span id="state_destinationaddressprefixes_nodejs">
+<a href="#state_destinationaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1512,7 +1744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_destinationapplicationsecuritygroupids_nodejs">
+<a href="#state_destinationapplicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1521,7 +1755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port<wbr>Range</span>
+        <span id="state_destinationportrange_nodejs">
+<a href="#state_destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1530,7 +1766,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port<wbr>Ranges</span>
+        <span id="state_destinationportranges_nodejs">
+<a href="#state_destinationportranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1539,7 +1777,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_nodejs">
+<a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1548,7 +1788,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1557,7 +1799,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Security<wbr>Group<wbr>Name</span>
+        <span id="state_networksecuritygroupname_nodejs">
+<a href="#state_networksecuritygroupname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1566,7 +1810,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_nodejs">
+<a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1575,7 +1821,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1584,7 +1832,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1593,7 +1843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Address<wbr>Prefix</span>
+        <span id="state_sourceaddressprefix_nodejs">
+<a href="#state_sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1602,7 +1854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Address<wbr>Prefixes</span>
+        <span id="state_sourceaddressprefixes_nodejs">
+<a href="#state_sourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1611,7 +1865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_sourceapplicationsecuritygroupids_nodejs">
+<a href="#state_sourceapplicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1620,7 +1876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port<wbr>Range</span>
+        <span id="state_sourceportrange_nodejs">
+<a href="#state_sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1629,7 +1887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port<wbr>Ranges</span>
+        <span id="state_sourceportranges_nodejs">
+<a href="#state_sourceportranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1645,7 +1905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access</span>
+        <span id="state_access_python">
+<a href="#state_access_python" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1654,7 +1916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1663,7 +1927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>address_<wbr>prefix</span>
+        <span id="state_destination_address_prefix_python">
+<a href="#state_destination_address_prefix_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1672,7 +1938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>address_<wbr>prefixes</span>
+        <span id="state_destination_address_prefixes_python">
+<a href="#state_destination_address_prefixes_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1681,7 +1949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="state_destination_application_security_group_ids_python">
+<a href="#state_destination_application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1690,7 +1960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port_<wbr>range</span>
+        <span id="state_destination_port_range_python">
+<a href="#state_destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1699,7 +1971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port_<wbr>ranges</span>
+        <span id="state_destination_port_ranges_python">
+<a href="#state_destination_port_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1708,7 +1982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_python">
+<a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1717,7 +1993,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1726,7 +2004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>security_<wbr>group_<wbr>name</span>
+        <span id="state_network_security_group_name_python">
+<a href="#state_network_security_group_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1735,7 +2015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_python">
+<a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1744,7 +2026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1753,7 +2037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1762,7 +2048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>address_<wbr>prefix</span>
+        <span id="state_source_address_prefix_python">
+<a href="#state_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1771,7 +2059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>address_<wbr>prefixes</span>
+        <span id="state_source_address_prefixes_python">
+<a href="#state_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1780,7 +2070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="state_source_application_security_group_ids_python">
+<a href="#state_source_application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1789,7 +2081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port_<wbr>range</span>
+        <span id="state_source_port_range_python">
+<a href="#state_source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1798,7 +2092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port_<wbr>ranges</span>
+        <span id="state_source_port_ranges_python">
+<a href="#state_source_port_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

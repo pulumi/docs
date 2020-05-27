@@ -14,8 +14,6 @@ Use this data source to access information about an existing ServiceBus Namespac
 
 
 
-Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favor of azure.servicebus.getNamespace
-
 {{% examples %}}
 ## Example Usage
 
@@ -95,7 +93,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -104,7 +104,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -120,7 +122,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -129,7 +133,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +151,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -154,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -170,7 +180,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -179,7 +191,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -208,7 +222,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Capacity</span>
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -217,7 +233,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_csharp">
+<a href="#defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +245,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_csharp">
+<a href="#defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +256,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_csharp">
+<a href="#defaultsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -246,7 +268,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_csharp">
+<a href="#defaultsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,7 +279,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +290,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +301,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +311,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +321,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +332,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -307,7 +343,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Redundant</span>
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -323,7 +361,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Capacity</span>
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -332,7 +372,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_go">
+<a href="#defaultprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +384,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_go">
+<a href="#defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +395,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_go">
+<a href="#defaultsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -361,7 +407,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_go">
+<a href="#defaultsecondarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +418,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +429,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +440,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +450,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,7 +460,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +471,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -422,7 +482,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Redundant</span>
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -438,7 +500,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>capacity</span>
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -447,7 +511,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_nodejs">
+<a href="#defaultprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +523,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_nodejs">
+<a href="#defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +534,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_nodejs">
+<a href="#defaultsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +546,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_nodejs">
+<a href="#defaultsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -485,7 +557,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -494,7 +568,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +579,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -511,7 +589,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +599,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +610,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -537,7 +621,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>zone<wbr>Redundant</span>
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -553,7 +639,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>capacity</span>
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -562,7 +650,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>primary_<wbr>connection_<wbr>string</span>
+        <span id="default_primary_connection_string_python">
+<a href="#default_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -572,7 +662,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>primary_<wbr>key</span>
+        <span id="default_primary_key_python">
+<a href="#default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +673,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>secondary_<wbr>connection_<wbr>string</span>
+        <span id="default_secondary_connection_string_python">
+<a href="#default_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -591,7 +685,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>secondary_<wbr>key</span>
+        <span id="default_secondary_key_python">
+<a href="#default_secondary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -600,7 +696,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +707,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +718,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +728,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +738,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -643,7 +749,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -652,7 +760,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>zone_<wbr>redundant</span>
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

@@ -200,7 +200,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_csharp">
+<a href="#applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -209,7 +211,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Configuration</span>
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Geo<wbr>Locations</span>
+        <span id="geolocations_csharp">
+<a href="#geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -227,7 +233,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Kind</span>
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +244,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -244,7 +254,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +265,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -262,7 +276,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -271,7 +287,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +298,9 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +310,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Enabled</span>
+        <span id="retryenabled_csharp">
+<a href="#retryenabled_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -299,7 +321,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -308,7 +332,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -324,7 +350,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_go">
+<a href="#applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +361,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Configuration</span>
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +372,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Geo<wbr>Locations</span>
+        <span id="geolocations_go">
+<a href="#geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -351,7 +383,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Kind</span>
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +394,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +404,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +415,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -386,7 +426,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -395,7 +437,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,7 +448,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +460,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Enabled</span>
+        <span id="retryenabled_go">
+<a href="#retryenabled_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -423,7 +471,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -432,7 +482,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -448,7 +500,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>application<wbr>Insights<wbr>Id</span>
+        <span id="applicationinsightsid_nodejs">
+<a href="#applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +511,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>configuration</span>
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +522,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>geo<wbr>Locations</span>
+        <span id="geolocations_nodejs">
+<a href="#geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -475,7 +533,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>kind</span>
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -484,7 +544,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +554,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +565,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -510,7 +576,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -519,7 +587,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +598,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -538,7 +610,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Enabled</span>
+        <span id="retryenabled_nodejs">
+<a href="#retryenabled_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -547,7 +621,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -556,7 +632,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -572,7 +650,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>application_<wbr>insights_<wbr>id</span>
+        <span id="application_insights_id_python">
+<a href="#application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +661,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>configuration</span>
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +672,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>geo_<wbr>locations</span>
+        <span id="geo_locations_python">
+<a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -599,7 +683,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>kind</span>
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -608,7 +694,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -616,7 +704,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +715,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -634,7 +726,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -643,7 +737,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +748,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -662,7 +760,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry_<wbr>enabled</span>
+        <span id="retry_enabled_python">
+<a href="#retry_enabled_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -671,7 +771,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -680,7 +782,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -707,7 +811,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -715,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="syntheticmonitorid_csharp">
+<a href="#syntheticmonitorid_csharp" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -730,7 +838,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -738,7 +848,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="syntheticmonitorid_go">
+<a href="#syntheticmonitorid_go" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +865,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +875,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="syntheticmonitorid_nodejs">
+<a href="#syntheticmonitorid_nodejs" style="color: inherit; text-decoration: inherit;">synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -776,7 +892,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -784,7 +902,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>synthetic_<wbr>monitor_<wbr>id</span>
+        <span id="synthetic_monitor_id_python">
+<a href="#synthetic_monitor_id_python" style="color: inherit; text-decoration: inherit;">synthetic_<wbr>monitor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -925,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_csharp">
+<a href="#state_applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -934,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="state_configuration_csharp">
+<a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -943,7 +1067,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1078,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -961,7 +1089,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="state_frequency_csharp">
+<a href="#state_frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -970,7 +1100,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geo<wbr>Locations</span>
+        <span id="state_geolocations_csharp">
+<a href="#state_geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -979,7 +1111,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="state_kind_csharp">
+<a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -988,7 +1122,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -997,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1145,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1015,7 +1155,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Enabled</span>
+        <span id="state_retryenabled_csharp">
+<a href="#state_retryenabled_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1024,7 +1166,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="state_syntheticmonitorid_csharp">
+<a href="#state_syntheticmonitorid_csharp" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1032,7 +1176,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1041,7 +1187,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_csharp">
+<a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1057,7 +1205,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_go">
+<a href="#state_applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1066,7 +1216,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="state_configuration_go">
+<a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1075,7 +1227,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1084,7 +1238,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1093,7 +1249,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="state_frequency_go">
+<a href="#state_frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1102,7 +1260,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geo<wbr>Locations</span>
+        <span id="state_geolocations_go">
+<a href="#state_geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1111,7 +1271,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="state_kind_go">
+<a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1120,7 +1282,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1129,7 +1293,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1139,7 +1305,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1147,7 +1315,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retry<wbr>Enabled</span>
+        <span id="state_retryenabled_go">
+<a href="#state_retryenabled_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1156,7 +1326,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="state_syntheticmonitorid_go">
+<a href="#state_syntheticmonitorid_go" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1164,7 +1336,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1173,7 +1347,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_go">
+<a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1189,7 +1365,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Insights<wbr>Id</span>
+        <span id="state_applicationinsightsid_nodejs">
+<a href="#state_applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1198,7 +1376,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="state_configuration_nodejs">
+<a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1207,7 +1387,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1216,7 +1398,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1225,7 +1409,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="state_frequency_nodejs">
+<a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1234,7 +1420,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geo<wbr>Locations</span>
+        <span id="state_geolocations_nodejs">
+<a href="#state_geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1243,7 +1431,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="state_kind_nodejs">
+<a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1252,7 +1442,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1261,7 +1453,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1271,7 +1465,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1279,7 +1475,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>Enabled</span>
+        <span id="state_retryenabled_nodejs">
+<a href="#state_retryenabled_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1288,7 +1486,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>synthetic<wbr>Monitor<wbr>Id</span>
+        <span id="state_syntheticmonitorid_nodejs">
+<a href="#state_syntheticmonitorid_nodejs" style="color: inherit; text-decoration: inherit;">synthetic<wbr>Monitor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1296,7 +1496,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1305,7 +1507,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_nodejs">
+<a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1321,7 +1525,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>insights_<wbr>id</span>
+        <span id="state_application_insights_id_python">
+<a href="#state_application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1330,7 +1536,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="state_configuration_python">
+<a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1339,7 +1547,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1558,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1357,7 +1569,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="state_frequency_python">
+<a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1366,7 +1580,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geo_<wbr>locations</span>
+        <span id="state_geo_locations_python">
+<a href="#state_geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1375,7 +1591,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="state_kind_python">
+<a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1384,7 +1602,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1393,7 +1613,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1403,7 +1625,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1411,7 +1635,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry_<wbr>enabled</span>
+        <span id="state_retry_enabled_python">
+<a href="#state_retry_enabled_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1420,7 +1646,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>synthetic_<wbr>monitor_<wbr>id</span>
+        <span id="state_synthetic_monitor_id_python">
+<a href="#state_synthetic_monitor_id_python" style="color: inherit; text-decoration: inherit;">synthetic_<wbr>monitor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1428,7 +1656,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1437,7 +1667,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_python">
+<a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

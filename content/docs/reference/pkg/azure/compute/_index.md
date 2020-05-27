@@ -22,6 +22,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="symbol resource"></span>LinuxVirtualMachine</a></li>
     <li><a href="linuxvirtualmachinescaleset" title="LinuxVirtualMachineScaleSet"><span class="symbol resource"></span>LinuxVirtualMachineScaleSet</a></li>
     <li><a href="manageddisk" title="ManagedDisk"><span class="symbol resource"></span>ManagedDisk</a></li>
+    <li><a href="orchestratedvirtualmachinescaleset" title="OrchestratedVirtualMachineScaleSet"><span class="symbol resource"></span>OrchestratedVirtualMachineScaleSet</a></li>
     <li><a href="scaleset" title="ScaleSet"><span class="symbol resource"></span>ScaleSet</a></li>
     <li><a href="sharedimage" title="SharedImage"><span class="symbol resource"></span>SharedImage</a></li>
     <li><a href="sharedimagegallery" title="SharedImageGallery"><span class="symbol resource"></span>SharedImageGallery</a></li>
@@ -59,7 +60,7 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.1</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 
