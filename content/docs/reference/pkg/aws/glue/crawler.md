@@ -381,7 +381,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +392,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +403,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Targets</span>
+        <span id="catalogtargets_csharp">
+<a href="#catalogtargets_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">List&lt;Crawler<wbr>Catalog<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -407,7 +413,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Classifiers</span>
+        <span id="classifiers_csharp">
+<a href="#classifiers_csharp" style="color: inherit; text-decoration: inherit;">Classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -416,7 +424,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +435,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -434,7 +446,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dynamodb<wbr>Targets</span>
+        <span id="dynamodbtargets_csharp">
+<a href="#dynamodbtargets_csharp" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">List&lt;Crawler<wbr>Dynamodb<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -443,7 +457,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jdbc<wbr>Targets</span>
+        <span id="jdbctargets_csharp">
+<a href="#jdbctargets_csharp" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">List&lt;Crawler<wbr>Jdbc<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -452,7 +468,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -461,7 +479,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Targets</span>
+        <span id="s3targets_csharp">
+<a href="#s3targets_csharp" style="color: inherit; text-decoration: inherit;">S3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">List&lt;Crawler<wbr>S3Target<wbr>Args&gt;</a></span>
     </dt>
@@ -470,7 +490,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -479,7 +501,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Change<wbr>Policy</span>
+        <span id="schemachangepolicy_csharp">
+<a href="#schemachangepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -488,7 +512,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Configuration</span>
+        <span id="securityconfiguration_csharp">
+<a href="#securityconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -497,7 +523,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Prefix</span>
+        <span id="tableprefix_csharp">
+<a href="#tableprefix_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -506,7 +534,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -522,7 +552,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -531,7 +563,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -540,7 +574,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Targets</span>
+        <span id="catalogtargets_go">
+<a href="#catalogtargets_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target</a></span>
     </dt>
@@ -548,7 +584,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Classifiers</span>
+        <span id="classifiers_go">
+<a href="#classifiers_go" style="color: inherit; text-decoration: inherit;">Classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -557,7 +595,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -566,7 +606,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +617,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dynamodb<wbr>Targets</span>
+        <span id="dynamodbtargets_go">
+<a href="#dynamodbtargets_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target</a></span>
     </dt>
@@ -584,7 +628,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jdbc<wbr>Targets</span>
+        <span id="jdbctargets_go">
+<a href="#jdbctargets_go" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
     </dt>
@@ -593,7 +639,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -602,7 +650,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Targets</span>
+        <span id="s3targets_go">
+<a href="#s3targets_go" style="color: inherit; text-decoration: inherit;">S3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target</a></span>
     </dt>
@@ -611,7 +661,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -620,7 +672,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Change<wbr>Policy</span>
+        <span id="schemachangepolicy_go">
+<a href="#schemachangepolicy_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
     </dt>
@@ -629,7 +683,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Configuration</span>
+        <span id="securityconfiguration_go">
+<a href="#securityconfiguration_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -638,7 +694,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Prefix</span>
+        <span id="tableprefix_go">
+<a href="#tableprefix_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -647,7 +705,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -663,7 +723,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Name</span>
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -672,7 +734,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +745,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog<wbr>Targets</span>
+        <span id="catalogtargets_nodejs">
+<a href="#catalogtargets_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">Crawler<wbr>Catalog<wbr>Target[]</a></span>
     </dt>
@@ -689,7 +755,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>classifiers</span>
+        <span id="classifiers_nodejs">
+<a href="#classifiers_nodejs" style="color: inherit; text-decoration: inherit;">classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -698,7 +766,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +777,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +788,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>dynamodb<wbr>Targets</span>
+        <span id="dynamodbtargets_nodejs">
+<a href="#dynamodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">Crawler<wbr>Dynamodb<wbr>Target[]</a></span>
     </dt>
@@ -725,7 +799,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>jdbc<wbr>Targets</span>
+        <span id="jdbctargets_nodejs">
+<a href="#jdbctargets_nodejs" style="color: inherit; text-decoration: inherit;">jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">Crawler<wbr>Jdbc<wbr>Target[]</a></span>
     </dt>
@@ -734,7 +810,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -743,7 +821,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Targets</span>
+        <span id="s3targets_nodejs">
+<a href="#s3targets_nodejs" style="color: inherit; text-decoration: inherit;">s3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">Crawler<wbr>S3Target[]</a></span>
     </dt>
@@ -752,7 +832,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +843,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema<wbr>Change<wbr>Policy</span>
+        <span id="schemachangepolicy_nodejs">
+<a href="#schemachangepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
     </dt>
@@ -770,7 +854,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Configuration</span>
+        <span id="securityconfiguration_nodejs">
+<a href="#securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +865,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>table<wbr>Prefix</span>
+        <span id="tableprefix_nodejs">
+<a href="#tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -788,7 +876,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -804,7 +894,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>database_<wbr>name</span>
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -813,7 +905,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -822,7 +916,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog_<wbr>targets</span>
+        <span id="catalog_targets_python">
+<a href="#catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></span>
     </dt>
@@ -830,7 +926,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>classifiers</span>
+        <span id="classifiers_python">
+<a href="#classifiers_python" style="color: inherit; text-decoration: inherit;">classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -839,7 +937,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -848,7 +948,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -857,7 +959,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>dynamodb_<wbr>targets</span>
+        <span id="dynamodb_targets_python">
+<a href="#dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></span>
     </dt>
@@ -866,7 +970,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>jdbc_<wbr>targets</span>
+        <span id="jdbc_targets_python">
+<a href="#jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></span>
     </dt>
@@ -875,7 +981,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -884,7 +992,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>targets</span>
+        <span id="s3_targets_python">
+<a href="#s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></span>
     </dt>
@@ -893,7 +1003,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -902,7 +1014,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema_<wbr>change_<wbr>policy</span>
+        <span id="schema_change_policy_python">
+<a href="#schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></span>
     </dt>
@@ -911,7 +1025,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>configuration</span>
+        <span id="security_configuration_python">
+<a href="#security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -920,7 +1036,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>table_<wbr>prefix</span>
+        <span id="table_prefix_python">
+<a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -929,7 +1047,9 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -956,7 +1076,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -965,7 +1087,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1104,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -989,7 +1115,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1132,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1013,7 +1143,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1028,7 +1160,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1037,7 +1171,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1178,7 +1314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1187,7 +1325,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Targets</span>
+        <span id="state_catalogtargets_csharp">
+<a href="#state_catalogtargets_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">List&lt;Crawler<wbr>Catalog<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -1195,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Classifiers</span>
+        <span id="state_classifiers_csharp">
+<a href="#state_classifiers_csharp" style="color: inherit; text-decoration: inherit;">Classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1204,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="state_configuration_csharp">
+<a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1213,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Name</span>
+        <span id="state_databasename_csharp">
+<a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1222,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1231,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dynamodb<wbr>Targets</span>
+        <span id="state_dynamodbtargets_csharp">
+<a href="#state_dynamodbtargets_csharp" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">List&lt;Crawler<wbr>Dynamodb<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -1240,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jdbc<wbr>Targets</span>
+        <span id="state_jdbctargets_csharp">
+<a href="#state_jdbctargets_csharp" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">List&lt;Crawler<wbr>Jdbc<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
@@ -1249,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1258,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1267,7 +1423,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Targets</span>
+        <span id="state_s3targets_csharp">
+<a href="#state_s3targets_csharp" style="color: inherit; text-decoration: inherit;">S3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">List&lt;Crawler<wbr>S3Target<wbr>Args&gt;</a></span>
     </dt>
@@ -1276,7 +1434,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="state_schedule_csharp">
+<a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1285,7 +1445,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Change<wbr>Policy</span>
+        <span id="state_schemachangepolicy_csharp">
+<a href="#state_schemachangepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1294,7 +1456,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Configuration</span>
+        <span id="state_securityconfiguration_csharp">
+<a href="#state_securityconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1303,7 +1467,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Prefix</span>
+        <span id="state_tableprefix_csharp">
+<a href="#state_tableprefix_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1312,7 +1478,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1328,7 +1496,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1337,7 +1507,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Targets</span>
+        <span id="state_catalogtargets_go">
+<a href="#state_catalogtargets_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target</a></span>
     </dt>
@@ -1345,7 +1517,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Classifiers</span>
+        <span id="state_classifiers_go">
+<a href="#state_classifiers_go" style="color: inherit; text-decoration: inherit;">Classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1354,7 +1528,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration</span>
+        <span id="state_configuration_go">
+<a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1363,7 +1539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Name</span>
+        <span id="state_databasename_go">
+<a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1372,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1381,7 +1561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dynamodb<wbr>Targets</span>
+        <span id="state_dynamodbtargets_go">
+<a href="#state_dynamodbtargets_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target</a></span>
     </dt>
@@ -1390,7 +1572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jdbc<wbr>Targets</span>
+        <span id="state_jdbctargets_go">
+<a href="#state_jdbctargets_go" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
     </dt>
@@ -1399,7 +1583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1408,7 +1594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1417,7 +1605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Targets</span>
+        <span id="state_s3targets_go">
+<a href="#state_s3targets_go" style="color: inherit; text-decoration: inherit;">S3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target</a></span>
     </dt>
@@ -1426,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="state_schedule_go">
+<a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1435,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema<wbr>Change<wbr>Policy</span>
+        <span id="state_schemachangepolicy_go">
+<a href="#state_schemachangepolicy_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
     </dt>
@@ -1444,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Configuration</span>
+        <span id="state_securityconfiguration_go">
+<a href="#state_securityconfiguration_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1453,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Table<wbr>Prefix</span>
+        <span id="state_tableprefix_go">
+<a href="#state_tableprefix_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1462,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1478,7 +1678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1487,7 +1689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog<wbr>Targets</span>
+        <span id="state_catalogtargets_nodejs">
+<a href="#state_catalogtargets_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">Crawler<wbr>Catalog<wbr>Target[]</a></span>
     </dt>
@@ -1495,7 +1699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>classifiers</span>
+        <span id="state_classifiers_nodejs">
+<a href="#state_classifiers_nodejs" style="color: inherit; text-decoration: inherit;">classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1504,7 +1710,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="state_configuration_nodejs">
+<a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1513,7 +1721,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>database<wbr>Name</span>
+        <span id="state_databasename_nodejs">
+<a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1522,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1531,7 +1743,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dynamodb<wbr>Targets</span>
+        <span id="state_dynamodbtargets_nodejs">
+<a href="#state_dynamodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">Crawler<wbr>Dynamodb<wbr>Target[]</a></span>
     </dt>
@@ -1540,7 +1754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>jdbc<wbr>Targets</span>
+        <span id="state_jdbctargets_nodejs">
+<a href="#state_jdbctargets_nodejs" style="color: inherit; text-decoration: inherit;">jdbc<wbr>Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">Crawler<wbr>Jdbc<wbr>Target[]</a></span>
     </dt>
@@ -1549,7 +1765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1558,7 +1776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1567,7 +1787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Targets</span>
+        <span id="state_s3targets_nodejs">
+<a href="#state_s3targets_nodejs" style="color: inherit; text-decoration: inherit;">s3Targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">Crawler<wbr>S3Target[]</a></span>
     </dt>
@@ -1576,7 +1798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="state_schedule_nodejs">
+<a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1585,7 +1809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema<wbr>Change<wbr>Policy</span>
+        <span id="state_schemachangepolicy_nodejs">
+<a href="#state_schemachangepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Change<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
     </dt>
@@ -1594,7 +1820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Configuration</span>
+        <span id="state_securityconfiguration_nodejs">
+<a href="#state_securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1603,7 +1831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>table<wbr>Prefix</span>
+        <span id="state_tableprefix_nodejs">
+<a href="#state_tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1612,7 +1842,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1628,7 +1860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1637,7 +1871,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog_<wbr>targets</span>
+        <span id="state_catalog_targets_python">
+<a href="#state_catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></span>
     </dt>
@@ -1645,7 +1881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>classifiers</span>
+        <span id="state_classifiers_python">
+<a href="#state_classifiers_python" style="color: inherit; text-decoration: inherit;">classifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1654,7 +1892,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration</span>
+        <span id="state_configuration_python">
+<a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1663,7 +1903,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>database_<wbr>name</span>
+        <span id="state_database_name_python">
+<a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1672,7 +1914,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1681,7 +1925,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dynamodb_<wbr>targets</span>
+        <span id="state_dynamodb_targets_python">
+<a href="#state_dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></span>
     </dt>
@@ -1690,7 +1936,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>jdbc_<wbr>targets</span>
+        <span id="state_jdbc_targets_python">
+<a href="#state_jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></span>
     </dt>
@@ -1699,7 +1947,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1708,7 +1958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1717,7 +1969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>targets</span>
+        <span id="state_s3_targets_python">
+<a href="#state_s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></span>
     </dt>
@@ -1726,7 +1980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="state_schedule_python">
+<a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1735,7 +1991,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema_<wbr>change_<wbr>policy</span>
+        <span id="state_schema_change_policy_python">
+<a href="#state_schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></span>
     </dt>
@@ -1744,7 +2002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>configuration</span>
+        <span id="state_security_configuration_python">
+<a href="#state_security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1753,7 +2013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>table_<wbr>prefix</span>
+        <span id="state_table_prefix_python">
+<a href="#state_table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1762,7 +2024,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1804,7 +2068,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1813,7 +2079,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tables</span>
+        <span id="tables_csharp">
+<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1829,7 +2097,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Name</span>
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1838,7 +2108,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tables</span>
+        <span id="tables_go">
+<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1854,7 +2126,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Name</span>
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1863,7 +2137,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tables</span>
+        <span id="tables_nodejs">
+<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1879,7 +2155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>database_<wbr>name</span>
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1888,7 +2166,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tables</span>
+        <span id="tables_python">
+<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1922,7 +2202,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1938,7 +2220,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1954,7 +2238,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1970,7 +2256,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2004,7 +2292,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>Name</span>
+        <span id="connectionname_csharp">
+<a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2013,7 +2303,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2022,7 +2314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusions</span>
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2038,7 +2332,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>Name</span>
+        <span id="connectionname_go">
+<a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2047,7 +2343,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2056,7 +2354,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusions</span>
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2072,7 +2372,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>connection<wbr>Name</span>
+        <span id="connectionname_nodejs">
+<a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2081,7 +2383,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2090,7 +2394,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusions</span>
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2106,7 +2412,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>connection<wbr>Name</span>
+        <span id="connectionname_python">
+<a href="#connectionname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2115,7 +2423,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2124,7 +2434,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusions</span>
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2158,7 +2470,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2167,7 +2481,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusions</span>
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2183,7 +2499,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2192,7 +2510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusions</span>
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2208,7 +2528,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2217,7 +2539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusions</span>
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2233,7 +2557,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2242,7 +2568,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusions</span>
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2276,7 +2604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Behavior</span>
+        <span id="deletebehavior_csharp">
+<a href="#deletebehavior_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2285,7 +2615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Behavior</span>
+        <span id="updatebehavior_csharp">
+<a href="#updatebehavior_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2301,7 +2633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Behavior</span>
+        <span id="deletebehavior_go">
+<a href="#deletebehavior_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2310,7 +2644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Behavior</span>
+        <span id="updatebehavior_go">
+<a href="#updatebehavior_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2326,7 +2662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Behavior</span>
+        <span id="deletebehavior_nodejs">
+<a href="#deletebehavior_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2335,7 +2673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Behavior</span>
+        <span id="updatebehavior_nodejs">
+<a href="#updatebehavior_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2351,7 +2691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Behavior</span>
+        <span id="deletebehavior_python">
+<a href="#deletebehavior_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2360,7 +2702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Behavior</span>
+        <span id="updatebehavior_python">
+<a href="#updatebehavior_python" style="color: inherit; text-decoration: inherit;">update<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

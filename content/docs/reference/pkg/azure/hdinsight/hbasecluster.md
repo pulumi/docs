@@ -324,7 +324,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Version</span>
+        <span id="clusterversion_csharp">
+<a href="#clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +335,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Component<wbr>Version</span>
+        <span id="componentversion_csharp">
+<a href="#componentversion_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
@@ -342,7 +346,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway</span>
+        <span id="gateway_csharp">
+<a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
@@ -351,7 +357,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +368,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
@@ -369,7 +379,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Tier</span>
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -378,7 +390,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -387,7 +401,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -396,7 +412,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Gen2</span>
+        <span id="storageaccountgen2_csharp">
+<a href="#storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
@@ -405,7 +423,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Accounts</span>
+        <span id="storageaccounts_csharp">
+<a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">List&lt;HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
@@ -414,7 +434,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -423,7 +445,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Min<wbr>Version</span>
+        <span id="tlsminversion_csharp">
+<a href="#tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -438,7 +462,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Version</span>
+        <span id="clusterversion_go">
+<a href="#clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +473,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Component<wbr>Version</span>
+        <span id="componentversion_go">
+<a href="#componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
@@ -456,7 +484,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway</span>
+        <span id="gateway_go">
+<a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
@@ -465,7 +495,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -474,7 +506,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
     </dt>
@@ -483,7 +517,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Tier</span>
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +528,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +539,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +550,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Gen2</span>
+        <span id="storageaccountgen2_go">
+<a href="#storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
@@ -519,7 +561,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Accounts</span>
+        <span id="storageaccounts_go">
+<a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">[]HBase<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
     </dt>
@@ -528,7 +572,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -537,7 +583,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Min<wbr>Version</span>
+        <span id="tlsminversion_go">
+<a href="#tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +600,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Version</span>
+        <span id="clusterversion_nodejs">
+<a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +611,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>component<wbr>Version</span>
+        <span id="componentversion_nodejs">
+<a href="#componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
@@ -570,7 +622,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>gateway</span>
+        <span id="gateway_nodejs">
+<a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
@@ -579,7 +633,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +644,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
     </dt>
@@ -597,7 +655,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>tier</span>
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -606,7 +666,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +677,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -624,7 +688,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Gen2</span>
+        <span id="storageaccountgen2_nodejs">
+<a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
@@ -633,7 +699,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Accounts</span>
+        <span id="storageaccounts_nodejs">
+<a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
     </dt>
@@ -642,7 +710,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -651,7 +721,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls<wbr>Min<wbr>Version</span>
+        <span id="tlsminversion_nodejs">
+<a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -666,7 +738,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>version</span>
+        <span id="cluster_version_python">
+<a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +749,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>component_<wbr>version</span>
+        <span id="component_version_python">
+<a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">Dict[HBase<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
     </dt>
@@ -684,7 +760,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>gateway</span>
+        <span id="gateway_python">
+<a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">Dict[HBase<wbr>Cluster<wbr>Gateway]</a></span>
     </dt>
@@ -693,7 +771,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -702,7 +782,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">Dict[HBase<wbr>Cluster<wbr>Roles]</a></span>
     </dt>
@@ -711,7 +793,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>tier</span>
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -720,7 +804,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -729,7 +815,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +826,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>account_<wbr>gen2</span>
+        <span id="storage_account_gen2_python">
+<a href="#storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">Dict[HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
     </dt>
@@ -747,7 +837,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>accounts</span>
+        <span id="storage_accounts_python">
+<a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">List[HBase<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
     </dt>
@@ -756,7 +848,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -765,7 +859,9 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls_<wbr>min_<wbr>version</span>
+        <span id="tls_min_version_python">
+<a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -791,7 +887,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Https<wbr>Endpoint</span>
+        <span id="httpsendpoint_csharp">
+<a href="#httpsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -800,7 +898,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -808,7 +908,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Endpoint</span>
+        <span id="sshendpoint_csharp">
+<a href="#sshendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +926,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Https<wbr>Endpoint</span>
+        <span id="httpsendpoint_go">
+<a href="#httpsendpoint_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -833,7 +937,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -841,7 +947,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Endpoint</span>
+        <span id="sshendpoint_go">
+<a href="#sshendpoint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -857,7 +965,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>https<wbr>Endpoint</span>
+        <span id="httpsendpoint_nodejs">
+<a href="#httpsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +976,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -874,7 +986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ssh<wbr>Endpoint</span>
+        <span id="sshendpoint_nodejs">
+<a href="#sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1004,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>https_<wbr>endpoint</span>
+        <span id="https_endpoint_python">
+<a href="#https_endpoint_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1015,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -907,7 +1025,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ssh_<wbr>endpoint</span>
+        <span id="ssh_endpoint_python">
+<a href="#ssh_endpoint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1049,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Version</span>
+        <span id="state_clusterversion_csharp">
+<a href="#state_clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1058,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Component<wbr>Version</span>
+        <span id="state_componentversion_csharp">
+<a href="#state_componentversion_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
@@ -1067,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway</span>
+        <span id="state_gateway_csharp">
+<a href="#state_gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
@@ -1076,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Endpoint</span>
+        <span id="state_httpsendpoint_csharp">
+<a href="#state_httpsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1085,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1094,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1103,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1112,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_csharp">
+<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
@@ -1121,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Endpoint</span>
+        <span id="state_sshendpoint_csharp">
+<a href="#state_sshendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1130,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Gen2</span>
+        <span id="state_storageaccountgen2_csharp">
+<a href="#state_storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
@@ -1139,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Accounts</span>
+        <span id="state_storageaccounts_csharp">
+<a href="#state_storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">List&lt;HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
@@ -1148,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1157,7 +1301,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tier</span>
+        <span id="state_tier_csharp">
+<a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1166,7 +1312,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Min<wbr>Version</span>
+        <span id="state_tlsminversion_csharp">
+<a href="#state_tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1181,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Version</span>
+        <span id="state_clusterversion_go">
+<a href="#state_clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Component<wbr>Version</span>
+        <span id="state_componentversion_go">
+<a href="#state_componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
@@ -1199,7 +1351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway</span>
+        <span id="state_gateway_go">
+<a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
@@ -1208,7 +1362,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Endpoint</span>
+        <span id="state_httpsendpoint_go">
+<a href="#state_httpsendpoint_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1217,7 +1373,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1226,7 +1384,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1235,7 +1395,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1244,7 +1406,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_go">
+<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
     </dt>
@@ -1253,7 +1417,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Endpoint</span>
+        <span id="state_sshendpoint_go">
+<a href="#state_sshendpoint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1262,7 +1428,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Gen2</span>
+        <span id="state_storageaccountgen2_go">
+<a href="#state_storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
@@ -1271,7 +1439,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Accounts</span>
+        <span id="state_storageaccounts_go">
+<a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">[]HBase<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
     </dt>
@@ -1280,7 +1450,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1289,7 +1461,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tier</span>
+        <span id="state_tier_go">
+<a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1298,7 +1472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Min<wbr>Version</span>
+        <span id="state_tlsminversion_go">
+<a href="#state_tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1313,7 +1489,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Version</span>
+        <span id="state_clusterversion_nodejs">
+<a href="#state_clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1322,7 +1500,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>component<wbr>Version</span>
+        <span id="state_componentversion_nodejs">
+<a href="#state_componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
@@ -1331,7 +1511,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway</span>
+        <span id="state_gateway_nodejs">
+<a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
@@ -1340,7 +1522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>https<wbr>Endpoint</span>
+        <span id="state_httpsendpoint_nodejs">
+<a href="#state_httpsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1349,7 +1533,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1358,7 +1544,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1367,7 +1555,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1376,7 +1566,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_nodejs">
+<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
     </dt>
@@ -1385,7 +1577,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Endpoint</span>
+        <span id="state_sshendpoint_nodejs">
+<a href="#state_sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1394,7 +1588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Gen2</span>
+        <span id="state_storageaccountgen2_nodejs">
+<a href="#state_storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
@@ -1403,7 +1599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Accounts</span>
+        <span id="state_storageaccounts_nodejs">
+<a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
     </dt>
@@ -1412,7 +1610,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1421,7 +1621,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tier</span>
+        <span id="state_tier_nodejs">
+<a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1430,7 +1632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls<wbr>Min<wbr>Version</span>
+        <span id="state_tlsminversion_nodejs">
+<a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1445,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>version</span>
+        <span id="state_cluster_version_python">
+<a href="#state_cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1454,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>component_<wbr>version</span>
+        <span id="state_component_version_python">
+<a href="#state_component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustercomponentversion">Dict[HBase<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
     </dt>
@@ -1463,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway</span>
+        <span id="state_gateway_python">
+<a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclustergateway">Dict[HBase<wbr>Cluster<wbr>Gateway]</a></span>
     </dt>
@@ -1472,7 +1682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>https_<wbr>endpoint</span>
+        <span id="state_https_endpoint_python">
+<a href="#state_https_endpoint_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1481,7 +1693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1704,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1499,7 +1715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1508,7 +1726,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_python">
+<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroles">Dict[HBase<wbr>Cluster<wbr>Roles]</a></span>
     </dt>
@@ -1517,7 +1737,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>endpoint</span>
+        <span id="state_ssh_endpoint_python">
+<a href="#state_ssh_endpoint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1526,7 +1748,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>account_<wbr>gen2</span>
+        <span id="state_storage_account_gen2_python">
+<a href="#state_storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">Dict[HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
     </dt>
@@ -1535,7 +1759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>accounts</span>
+        <span id="state_storage_accounts_python">
+<a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterstorageaccount">List[HBase<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
     </dt>
@@ -1544,7 +1770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1553,7 +1781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tier</span>
+        <span id="state_tier_python">
+<a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1562,7 +1792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls_<wbr>min_<wbr>version</span>
+        <span id="state_tls_min_version_python">
+<a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1603,7 +1835,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hbase</span>
+        <span id="hbase_csharp">
+<a href="#hbase_csharp" style="color: inherit; text-decoration: inherit;">Hbase</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1619,7 +1853,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hbase</span>
+        <span id="hbase_go">
+<a href="#hbase_go" style="color: inherit; text-decoration: inherit;">Hbase</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1635,7 +1871,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hbase</span>
+        <span id="hbase_nodejs">
+<a href="#hbase_nodejs" style="color: inherit; text-decoration: inherit;">hbase</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1651,7 +1889,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hbase</span>
+        <span id="hbase_python">
+<a href="#hbase_python" style="color: inherit; text-decoration: inherit;">hbase</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1685,7 +1925,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1694,7 +1936,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1703,7 +1947,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1719,7 +1965,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1728,7 +1976,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1737,7 +1987,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1753,7 +2005,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1762,7 +2016,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1771,7 +2027,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1787,7 +2045,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1796,7 +2056,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1805,7 +2067,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1839,7 +2103,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Head<wbr>Node</span>
+        <span id="headnode_csharp">
+<a href="#headnode_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesheadnode">HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
@@ -1848,7 +2114,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Worker<wbr>Node</span>
+        <span id="workernode_csharp">
+<a href="#workernode_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesworkernode">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
@@ -1857,7 +2125,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Zookeeper<wbr>Node</span>
+        <span id="zookeepernode_csharp">
+<a href="#zookeepernode_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroleszookeepernode">HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
@@ -1873,7 +2143,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Head<wbr>Node</span>
+        <span id="headnode_go">
+<a href="#headnode_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesheadnode">HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
@@ -1882,7 +2154,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Worker<wbr>Node</span>
+        <span id="workernode_go">
+<a href="#workernode_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesworkernode">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
@@ -1891,7 +2165,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Zookeeper<wbr>Node</span>
+        <span id="zookeepernode_go">
+<a href="#zookeepernode_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroleszookeepernode">HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
@@ -1907,7 +2183,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>head<wbr>Node</span>
+        <span id="headnode_nodejs">
+<a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesheadnode">HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
@@ -1916,7 +2194,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>worker<wbr>Node</span>
+        <span id="workernode_nodejs">
+<a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesworkernode">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
@@ -1925,7 +2205,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>zookeeper<wbr>Node</span>
+        <span id="zookeepernode_nodejs">
+<a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroleszookeepernode">HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
@@ -1941,7 +2223,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>head<wbr>Node</span>
+        <span id="headnode_python">
+<a href="#headnode_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesheadnode">Dict[HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node]</a></span>
     </dt>
@@ -1950,7 +2234,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>worker<wbr>Node</span>
+        <span id="workernode_python">
+<a href="#workernode_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterrolesworkernode">Dict[HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node]</a></span>
     </dt>
@@ -1959,7 +2245,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>zookeeper<wbr>Node</span>
+        <span id="zookeepernode_python">
+<a href="#zookeepernode_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hbaseclusterroleszookeepernode">Dict[HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node]</a></span>
     </dt>
@@ -1993,7 +2281,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2002,7 +2292,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2011,7 +2303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2020,7 +2314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_csharp">
+<a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2029,7 +2325,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2038,7 +2336,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2054,7 +2354,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2063,7 +2365,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2072,7 +2376,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2081,7 +2387,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_go">
+<a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2090,7 +2398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2099,7 +2409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2115,7 +2427,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2124,7 +2438,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm<wbr>Size</span>
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2133,7 +2449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2142,7 +2460,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_nodejs">
+<a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2151,7 +2471,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2160,7 +2482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2176,7 +2500,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2185,7 +2511,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm_<wbr>size</span>
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2194,7 +2522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2203,7 +2533,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_python">
+<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2212,7 +2544,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2221,7 +2555,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>id</span>
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2255,7 +2591,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Instance<wbr>Count</span>
+        <span id="targetinstancecount_csharp">
+<a href="#targetinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2264,7 +2602,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2273,7 +2613,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2282,7 +2624,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instance<wbr>Count</span>
+        <span id="mininstancecount_csharp">
+<a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2291,7 +2635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2300,7 +2646,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_csharp">
+<a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2309,7 +2657,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2318,7 +2668,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2334,7 +2686,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Instance<wbr>Count</span>
+        <span id="targetinstancecount_go">
+<a href="#targetinstancecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2343,7 +2697,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2352,7 +2708,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2361,7 +2719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instance<wbr>Count</span>
+        <span id="mininstancecount_go">
+<a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2370,7 +2730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2379,7 +2741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_go">
+<a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2388,7 +2752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2397,7 +2763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2413,7 +2781,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Instance<wbr>Count</span>
+        <span id="targetinstancecount_nodejs">
+<a href="#targetinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2422,7 +2792,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2431,7 +2803,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm<wbr>Size</span>
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2440,7 +2814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instance<wbr>Count</span>
+        <span id="mininstancecount_nodejs">
+<a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2449,7 +2825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2458,7 +2836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_nodejs">
+<a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2467,7 +2847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2476,7 +2858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2492,7 +2876,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Instance<wbr>Count</span>
+        <span id="targetinstancecount_python">
+<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2501,7 +2887,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2510,7 +2898,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm_<wbr>size</span>
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2519,7 +2909,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instance<wbr>Count</span>
+        <span id="mininstancecount_python">
+<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2528,7 +2920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2537,7 +2931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_python">
+<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2546,7 +2942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2555,7 +2953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>id</span>
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2589,7 +2989,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2598,7 +3000,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2607,7 +3011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2616,7 +3022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_csharp">
+<a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2625,7 +3033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2634,7 +3044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2650,7 +3062,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2659,7 +3073,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vm<wbr>Size</span>
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2668,7 +3084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2677,7 +3095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_go">
+<a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2686,7 +3106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2695,7 +3117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2711,7 +3135,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2720,7 +3146,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm<wbr>Size</span>
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2729,7 +3157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2738,7 +3168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_nodejs">
+<a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2747,7 +3179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2756,7 +3190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Id</span>
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2772,7 +3208,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2781,7 +3219,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vm_<wbr>size</span>
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2790,7 +3230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2799,7 +3241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_python">
+<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2808,7 +3252,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2817,7 +3263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>id</span>
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2851,7 +3299,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2860,7 +3310,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Key</span>
+        <span id="storageaccountkey_csharp">
+<a href="#storageaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2869,7 +3321,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Container<wbr>Id</span>
+        <span id="storagecontainerid_csharp">
+<a href="#storagecontainerid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2885,7 +3339,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2894,7 +3350,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Key</span>
+        <span id="storageaccountkey_go">
+<a href="#storageaccountkey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2903,7 +3361,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Container<wbr>Id</span>
+        <span id="storagecontainerid_go">
+<a href="#storagecontainerid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2919,7 +3379,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2928,7 +3390,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Key</span>
+        <span id="storageaccountkey_nodejs">
+<a href="#storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2937,7 +3401,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Container<wbr>Id</span>
+        <span id="storagecontainerid_nodejs">
+<a href="#storagecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2953,7 +3419,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_python">
+<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2962,7 +3430,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>key</span>
+        <span id="storage_account_key_python">
+<a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2971,7 +3441,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>container_<wbr>id</span>
+        <span id="storage_container_id_python">
+<a href="#storage_container_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3005,7 +3477,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Filesystem<wbr>Id</span>
+        <span id="filesystemid_csharp">
+<a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">Filesystem<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3014,7 +3488,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3023,7 +3499,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Managed<wbr>Identity<wbr>Resource<wbr>Id</span>
+        <span id="managedidentityresourceid_csharp">
+<a href="#managedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3032,7 +3510,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Resource<wbr>Id</span>
+        <span id="storageresourceid_csharp">
+<a href="#storageresourceid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3048,7 +3528,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Filesystem<wbr>Id</span>
+        <span id="filesystemid_go">
+<a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">Filesystem<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3057,7 +3539,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3066,7 +3550,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Managed<wbr>Identity<wbr>Resource<wbr>Id</span>
+        <span id="managedidentityresourceid_go">
+<a href="#managedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3075,7 +3561,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Resource<wbr>Id</span>
+        <span id="storageresourceid_go">
+<a href="#storageresourceid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3091,7 +3579,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>filesystem<wbr>Id</span>
+        <span id="filesystemid_nodejs">
+<a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3100,7 +3590,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3109,7 +3601,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>managed<wbr>Identity<wbr>Resource<wbr>Id</span>
+        <span id="managedidentityresourceid_nodejs">
+<a href="#managedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3118,7 +3612,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Resource<wbr>Id</span>
+        <span id="storageresourceid_nodejs">
+<a href="#storageresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3134,7 +3630,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>filesystem<wbr>Id</span>
+        <span id="filesystemid_python">
+<a href="#filesystemid_python" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3143,7 +3641,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_python">
+<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3152,7 +3652,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>managed<wbr>Identity<wbr>Resource<wbr>Id</span>
+        <span id="managedidentityresourceid_python">
+<a href="#managedidentityresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3161,7 +3663,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Resource<wbr>Id</span>
+        <span id="storageresourceid_python">
+<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

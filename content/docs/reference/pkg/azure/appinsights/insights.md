@@ -244,7 +244,9 @@ The Insights resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Type</span>
+        <span id="applicationtype_csharp">
+<a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +255,9 @@ The Insights resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +267,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="dailydatacapingb_csharp">
+<a href="#dailydatacapingb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -272,7 +278,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="dailydatacapnotificationsdisabled_csharp">
+<a href="#dailydatacapnotificationsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -281,7 +289,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Ip<wbr>Masking</span>
+        <span id="disableipmasking_csharp">
+<a href="#disableipmasking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +300,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +311,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,16 +323,20 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sampling<wbr>Percentage</span>
+        <span id="samplingpercentage_csharp">
+<a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -327,7 +345,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -343,7 +363,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Application<wbr>Type</span>
+        <span id="applicationtype_go">
+<a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +374,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +386,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="dailydatacapingb_go">
+<a href="#dailydatacapingb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -371,7 +397,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="dailydatacapnotificationsdisabled_go">
+<a href="#dailydatacapnotificationsdisabled_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -380,7 +408,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Ip<wbr>Masking</span>
+        <span id="disableipmasking_go">
+<a href="#disableipmasking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -389,7 +419,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +430,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,16 +442,20 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sampling<wbr>Percentage</span>
+        <span id="samplingpercentage_go">
+<a href="#samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -426,7 +464,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -442,7 +482,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>application<wbr>Type</span>
+        <span id="applicationtype_nodejs">
+<a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +493,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -461,7 +505,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="dailydatacapingb_nodejs">
+<a href="#dailydatacapingb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -470,7 +516,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="dailydatacapnotificationsdisabled_nodejs">
+<a href="#dailydatacapnotificationsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -479,7 +527,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Ip<wbr>Masking</span>
+        <span id="disableipmasking_nodejs">
+<a href="#disableipmasking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -488,7 +538,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -497,7 +549,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -507,16 +561,20 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>sampling<wbr>Percentage</span>
+        <span id="samplingpercentage_nodejs">
+<a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -525,7 +583,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -541,7 +601,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>application_<wbr>type</span>
+        <span id="application_type_python">
+<a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -550,7 +612,9 @@ new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +624,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</span>
+        <span id="daily_data_cap_in_gb_python">
+<a href="#daily_data_cap_in_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -569,7 +635,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</span>
+        <span id="daily_data_cap_notifications_disabled_python">
+<a href="#daily_data_cap_notifications_disabled_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -578,7 +646,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>ip_<wbr>masking</span>
+        <span id="disable_ip_masking_python">
+<a href="#disable_ip_masking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>ip_<wbr>masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -587,7 +657,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -596,7 +668,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,16 +680,20 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>in_<wbr>days</span>
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>sampling_<wbr>percentage</span>
+        <span id="sampling_percentage_python">
+<a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -624,7 +702,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -651,7 +731,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Id</span>
+        <span id="appid_csharp">
+<a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -660,7 +742,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -668,7 +752,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_csharp">
+<a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +770,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Id</span>
+        <span id="appid_go">
+<a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -693,7 +781,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_go">
+<a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -717,7 +809,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>app<wbr>Id</span>
+        <span id="appid_nodejs">
+<a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -726,7 +820,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -734,7 +830,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_nodejs">
+<a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -750,7 +848,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>app_<wbr>id</span>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +859,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -767,7 +869,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>instrumentation_<wbr>key</span>
+        <span id="instrumentation_key_python">
+<a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_csharp">
+<a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -918,7 +1024,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Type</span>
+        <span id="state_applicationtype_csharp">
+<a href="#state_applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -927,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="state_dailydatacapingb_csharp">
+<a href="#state_dailydatacapingb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -936,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="state_dailydatacapnotificationsdisabled_csharp">
+<a href="#state_dailydatacapnotificationsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -945,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Ip<wbr>Masking</span>
+        <span id="state_disableipmasking_csharp">
+<a href="#state_disableipmasking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -954,7 +1068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="state_instrumentationkey_csharp">
+<a href="#state_instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -972,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -982,7 +1102,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,16 +1114,20 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="state_retentionindays_csharp">
+<a href="#state_retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sampling<wbr>Percentage</span>
+        <span id="state_samplingpercentage_csharp">
+<a href="#state_samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1010,7 +1136,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1026,7 +1154,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_go">
+<a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1035,7 +1165,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Type</span>
+        <span id="state_applicationtype_go">
+<a href="#state_applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1044,7 +1176,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="state_dailydatacapingb_go">
+<a href="#state_dailydatacapingb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1053,7 +1187,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="state_dailydatacapnotificationsdisabled_go">
+<a href="#state_dailydatacapnotificationsdisabled_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1062,7 +1198,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Ip<wbr>Masking</span>
+        <span id="state_disableipmasking_go">
+<a href="#state_disableipmasking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1071,7 +1209,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="state_instrumentationkey_go">
+<a href="#state_instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1080,7 +1220,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1089,7 +1231,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1243,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1109,16 +1255,20 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="state_retentionindays_go">
+<a href="#state_retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sampling<wbr>Percentage</span>
+        <span id="state_samplingpercentage_go">
+<a href="#state_samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1127,7 +1277,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1143,7 +1295,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Id</span>
+        <span id="state_appid_nodejs">
+<a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1152,7 +1306,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Type</span>
+        <span id="state_applicationtype_nodejs">
+<a href="#state_applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1161,7 +1317,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</span>
+        <span id="state_dailydatacapingb_nodejs">
+<a href="#state_dailydatacapingb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1170,7 +1328,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</span>
+        <span id="state_dailydatacapnotificationsdisabled_nodejs">
+<a href="#state_dailydatacapnotificationsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1179,7 +1339,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Ip<wbr>Masking</span>
+        <span id="state_disableipmasking_nodejs">
+<a href="#state_disableipmasking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Ip<wbr>Masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1188,7 +1350,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instrumentation<wbr>Key</span>
+        <span id="state_instrumentationkey_nodejs">
+<a href="#state_instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1197,7 +1361,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1206,7 +1372,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1216,7 +1384,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1226,16 +1396,20 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>In<wbr>Days</span>
+        <span id="state_retentionindays_nodejs">
+<a href="#state_retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>sampling<wbr>Percentage</span>
+        <span id="state_samplingpercentage_nodejs">
+<a href="#state_samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1244,7 +1418,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1260,7 +1436,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>id</span>
+        <span id="state_app_id_python">
+<a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1269,7 +1447,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>type</span>
+        <span id="state_application_type_python">
+<a href="#state_application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1278,7 +1458,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</span>
+        <span id="state_daily_data_cap_in_gb_python">
+<a href="#state_daily_data_cap_in_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1287,7 +1469,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</span>
+        <span id="state_daily_data_cap_notifications_disabled_python">
+<a href="#state_daily_data_cap_notifications_disabled_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1296,7 +1480,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>ip_<wbr>masking</span>
+        <span id="state_disable_ip_masking_python">
+<a href="#state_disable_ip_masking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>ip_<wbr>masking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1305,7 +1491,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instrumentation_<wbr>key</span>
+        <span id="state_instrumentation_key_python">
+<a href="#state_instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1314,7 +1502,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1323,7 +1513,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1333,7 +1525,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1343,16 +1537,20 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>in_<wbr>days</span>
+        <span id="state_retention_in_days_python">
+<a href="#state_retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
+    <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>sampling_<wbr>percentage</span>
+        <span id="state_sampling_percentage_python">
+<a href="#state_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1361,7 +1559,9 @@ create the Application Insights component.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>

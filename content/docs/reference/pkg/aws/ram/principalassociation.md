@@ -283,7 +283,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Principal</span>
+        <span id="principal_csharp">
+<a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +294,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Share<wbr>Arn</span>
+        <span id="resourcesharearn_csharp">
+<a href="#resourcesharearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +312,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Principal</span>
+        <span id="principal_go">
+<a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +323,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Share<wbr>Arn</span>
+        <span id="resourcesharearn_go">
+<a href="#resourcesharearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +341,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>principal</span>
+        <span id="principal_nodejs">
+<a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +352,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Share<wbr>Arn</span>
+        <span id="resourcesharearn_nodejs">
+<a href="#resourcesharearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -358,7 +370,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>principal</span>
+        <span id="principal_python">
+<a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -367,7 +381,9 @@ The PrincipalAssociation resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>share_<wbr>arn</span>
+        <span id="resource_share_arn_python">
+<a href="#resource_share_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>share_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +410,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +427,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +444,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -439,7 +461,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal</span>
+        <span id="state_principal_csharp">
+<a href="#state_principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -589,7 +615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Share<wbr>Arn</span>
+        <span id="state_resourcesharearn_csharp">
+<a href="#state_resourcesharearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -605,7 +633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal</span>
+        <span id="state_principal_go">
+<a href="#state_principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -614,7 +644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Share<wbr>Arn</span>
+        <span id="state_resourcesharearn_go">
+<a href="#state_resourcesharearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -630,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal</span>
+        <span id="state_principal_nodejs">
+<a href="#state_principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -639,7 +673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Share<wbr>Arn</span>
+        <span id="state_resourcesharearn_nodejs">
+<a href="#state_resourcesharearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Share<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -655,7 +691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal</span>
+        <span id="state_principal_python">
+<a href="#state_principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -664,7 +702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>share_<wbr>arn</span>
+        <span id="state_resource_share_arn_python">
+<a href="#state_resource_share_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>share_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

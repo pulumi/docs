@@ -240,7 +240,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +252,9 @@ lowercase
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_csharp">
+<a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +265,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Type</span>
+        <span id="nodetype_csharp">
+<a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +277,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>Replication<wbr>Factor</span>
+        <span id="replicationfactor_csharp">
+<a href="#replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -282,7 +290,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="availabilityzones_csharp">
+<a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -292,7 +302,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +313,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +327,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topic<wbr>Arn</span>
+        <span id="notificationtopicarn_csharp">
+<a href="#notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +340,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_csharp">
+<a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +352,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -344,7 +364,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_csharp">
+<a href="#serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
@@ -353,7 +375,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Group<wbr>Name</span>
+        <span id="subnetgroupname_csharp">
+<a href="#subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +387,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -379,7 +405,9 @@ cluster
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +417,9 @@ lowercase
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_go">
+<a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +430,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Type</span>
+        <span id="nodetype_go">
+<a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +442,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>Replication<wbr>Factor</span>
+        <span id="replicationfactor_go">
+<a href="#replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -421,7 +455,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="availabilityzones_go">
+<a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -431,7 +467,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +478,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +492,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topic<wbr>Arn</span>
+        <span id="notificationtopicarn_go">
+<a href="#notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +505,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_go">
+<a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +517,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -483,7 +529,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_go">
+<a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -492,7 +540,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Group<wbr>Name</span>
+        <span id="subnetgroupname_go">
+<a href="#subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +552,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -518,7 +570,9 @@ cluster
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +582,9 @@ lowercase
 
     <dt class="property-required"
             title="Required">
-        <span>iam<wbr>Role<wbr>Arn</span>
+        <span id="iamrolearn_nodejs">
+<a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +595,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Type</span>
+        <span id="nodetype_nodejs">
+<a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -549,7 +607,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>replication<wbr>Factor</span>
+        <span id="replicationfactor_nodejs">
+<a href="#replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -560,7 +620,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zones</span>
+        <span id="availabilityzones_nodejs">
+<a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -570,7 +632,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +643,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance<wbr>Window</span>
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +657,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification<wbr>Topic<wbr>Arn</span>
+        <span id="notificationtopicarn_nodejs">
+<a href="#notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -602,7 +670,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_nodejs">
+<a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -612,7 +682,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -622,7 +694,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="serversideencryption_nodejs">
+<a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -631,7 +705,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Group<wbr>Name</span>
+        <span id="subnetgroupname_nodejs">
+<a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -641,7 +717,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -657,7 +735,9 @@ cluster
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +747,9 @@ lowercase
 
     <dt class="property-required"
             title="Required">
-        <span>iam_<wbr>role_<wbr>arn</span>
+        <span id="iam_role_arn_python">
+<a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +760,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>node_<wbr>type</span>
+        <span id="node_type_python">
+<a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +772,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-required"
             title="Required">
-        <span>replication_<wbr>factor</span>
+        <span id="replication_factor_python">
+<a href="#replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -699,7 +785,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zones</span>
+        <span id="availability_zones_python">
+<a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -709,7 +797,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -718,7 +808,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance_<wbr>window</span>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +822,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification_<wbr>topic_<wbr>arn</span>
+        <span id="notification_topic_arn_python">
+<a href="#notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -741,7 +835,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>group_<wbr>name</span>
+        <span id="parameter_group_name_python">
+<a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -751,7 +847,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -761,7 +859,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="server_side_encryption_python">
+<a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Dict[Cluster<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
     </dt>
@@ -770,7 +870,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>group_<wbr>name</span>
+        <span id="subnet_group_name_python">
+<a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -780,7 +882,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -807,7 +911,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -816,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Address</span>
+        <span id="clusteraddress_csharp">
+<a href="#clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -825,7 +933,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Configuration<wbr>Endpoint</span>
+        <span id="configurationendpoint_csharp">
+<a href="#configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +945,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -843,7 +955,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Nodes</span>
+        <span id="nodes_csharp">
+<a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">List&lt;Cluster<wbr>Node&gt;</a></span>
     </dt>
@@ -854,7 +968,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -870,7 +986,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +997,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Address</span>
+        <span id="clusteraddress_go">
+<a href="#clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +1008,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Configuration<wbr>Endpoint</span>
+        <span id="configurationendpoint_go">
+<a href="#configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -898,7 +1020,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -906,7 +1030,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Nodes</span>
+        <span id="nodes_go">
+<a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">[]Cluster<wbr>Node</a></span>
     </dt>
@@ -917,7 +1043,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -933,7 +1061,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -942,7 +1072,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Address</span>
+        <span id="clusteraddress_nodejs">
+<a href="#clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1083,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>configuration<wbr>Endpoint</span>
+        <span id="configurationendpoint_nodejs">
+<a href="#configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -961,7 +1095,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -969,7 +1105,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>nodes</span>
+        <span id="nodes_nodejs">
+<a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">Cluster<wbr>Node[]</a></span>
     </dt>
@@ -980,7 +1118,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -996,7 +1136,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1005,7 +1147,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>address</span>
+        <span id="cluster_address_python">
+<a href="#cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1014,7 +1158,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>configuration_<wbr>endpoint</span>
+        <span id="configuration_endpoint_python">
+<a href="#configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1024,7 +1170,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1032,7 +1180,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>nodes</span>
+        <span id="nodes_python">
+<a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">List[Cluster<wbr>Node]</a></span>
     </dt>
@@ -1043,7 +1193,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-"
             title="">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1185,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1194,7 +1348,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="state_availabilityzones_csharp">
+<a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1204,7 +1360,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Address</span>
+        <span id="state_clusteraddress_csharp">
+<a href="#state_clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1213,7 +1371,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_csharp">
+<a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1223,7 +1383,9 @@ lowercase
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration<wbr>Endpoint</span>
+        <span id="state_configurationendpoint_csharp">
+<a href="#state_configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1233,7 +1395,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1242,7 +1406,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_csharp">
+<a href="#state_iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1253,7 +1419,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_csharp">
+<a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1265,7 +1433,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="state_nodetype_csharp">
+<a href="#state_nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1275,7 +1445,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodes</span>
+        <span id="state_nodes_csharp">
+<a href="#state_nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">List&lt;Cluster<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
@@ -1286,7 +1458,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topic<wbr>Arn</span>
+        <span id="state_notificationtopicarn_csharp">
+<a href="#state_notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1297,7 +1471,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_csharp">
+<a href="#state_parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1307,7 +1483,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_csharp">
+<a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1316,7 +1494,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Factor</span>
+        <span id="state_replicationfactor_csharp">
+<a href="#state_replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1327,7 +1507,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1337,7 +1519,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_csharp">
+<a href="#state_serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
@@ -1346,7 +1530,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Group<wbr>Name</span>
+        <span id="state_subnetgroupname_csharp">
+<a href="#state_subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1356,7 +1542,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1372,7 +1560,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1381,7 +1571,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zones</span>
+        <span id="state_availabilityzones_go">
+<a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1391,7 +1583,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Address</span>
+        <span id="state_clusteraddress_go">
+<a href="#state_clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1400,7 +1594,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_go">
+<a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1410,7 +1606,9 @@ lowercase
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configuration<wbr>Endpoint</span>
+        <span id="state_configurationendpoint_go">
+<a href="#state_configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1420,7 +1618,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1429,7 +1629,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_go">
+<a href="#state_iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1440,7 +1642,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_go">
+<a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1452,7 +1656,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Type</span>
+        <span id="state_nodetype_go">
+<a href="#state_nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1462,7 +1668,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodes</span>
+        <span id="state_nodes_go">
+<a href="#state_nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">[]Cluster<wbr>Node</a></span>
     </dt>
@@ -1473,7 +1681,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topic<wbr>Arn</span>
+        <span id="state_notificationtopicarn_go">
+<a href="#state_notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1484,7 +1694,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_go">
+<a href="#state_parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1494,7 +1706,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_go">
+<a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1503,7 +1717,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Factor</span>
+        <span id="state_replicationfactor_go">
+<a href="#state_replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1514,7 +1730,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1524,7 +1742,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_go">
+<a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -1533,7 +1753,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Group<wbr>Name</span>
+        <span id="state_subnetgroupname_go">
+<a href="#state_subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1543,7 +1765,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1559,7 +1783,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1568,7 +1794,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zones</span>
+        <span id="state_availabilityzones_nodejs">
+<a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1578,7 +1806,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Address</span>
+        <span id="state_clusteraddress_nodejs">
+<a href="#state_clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1587,7 +1817,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span id="state_clustername_nodejs">
+<a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1597,7 +1829,9 @@ lowercase
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration<wbr>Endpoint</span>
+        <span id="state_configurationendpoint_nodejs">
+<a href="#state_configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1607,7 +1841,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1616,7 +1852,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Role<wbr>Arn</span>
+        <span id="state_iamrolearn_nodejs">
+<a href="#state_iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1627,7 +1865,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_nodejs">
+<a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1639,7 +1879,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Type</span>
+        <span id="state_nodetype_nodejs">
+<a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1649,7 +1891,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodes</span>
+        <span id="state_nodes_nodejs">
+<a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">Cluster<wbr>Node[]</a></span>
     </dt>
@@ -1660,7 +1904,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification<wbr>Topic<wbr>Arn</span>
+        <span id="state_notificationtopicarn_nodejs">
+<a href="#state_notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1671,7 +1917,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_nodejs">
+<a href="#state_parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1681,7 +1929,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_nodejs">
+<a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1690,7 +1940,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Factor</span>
+        <span id="state_replicationfactor_nodejs">
+<a href="#state_replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1701,7 +1953,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1711,7 +1965,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Side<wbr>Encryption</span>
+        <span id="state_serversideencryption_nodejs">
+<a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
@@ -1720,7 +1976,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Group<wbr>Name</span>
+        <span id="state_subnetgroupname_nodejs">
+<a href="#state_subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1730,7 +1988,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1746,7 +2006,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1755,7 +2017,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zones</span>
+        <span id="state_availability_zones_python">
+<a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1765,7 +2029,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>address</span>
+        <span id="state_cluster_address_python">
+<a href="#state_cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1774,7 +2040,9 @@ nodes will be created
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>name</span>
+        <span id="state_cluster_name_python">
+<a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1784,7 +2052,9 @@ lowercase
 
     <dt class="property-optional"
             title="Optional">
-        <span>configuration_<wbr>endpoint</span>
+        <span id="state_configuration_endpoint_python">
+<a href="#state_configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1794,7 +2064,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1803,7 +2075,9 @@ consisting of a DNS name and a port number
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>role_<wbr>arn</span>
+        <span id="state_iam_role_arn_python">
+<a href="#state_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1814,7 +2088,9 @@ permissions to access DynamoDB on your behalf
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance_<wbr>window</span>
+        <span id="state_maintenance_window_python">
+<a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1826,7 +2102,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>type</span>
+        <span id="state_node_type_python">
+<a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1836,7 +2114,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodes</span>
+        <span id="state_nodes_python">
+<a href="#state_nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternode">List[Cluster<wbr>Node]</a></span>
     </dt>
@@ -1847,7 +2127,9 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification_<wbr>topic_<wbr>arn</span>
+        <span id="state_notification_topic_arn_python">
+<a href="#state_notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1858,7 +2140,9 @@ SNS topic to send DAX notifications to. Example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>group_<wbr>name</span>
+        <span id="state_parameter_group_name_python">
+<a href="#state_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1868,7 +2152,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_python">
+<a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1877,7 +2163,9 @@ with this DAX cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication_<wbr>factor</span>
+        <span id="state_replication_factor_python">
+<a href="#state_replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1888,7 +2176,9 @@ replicas
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1898,7 +2188,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>side_<wbr>encryption</span>
+        <span id="state_server_side_encryption_python">
+<a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterserversideencryption">Dict[Cluster<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
     </dt>
@@ -1907,7 +2199,9 @@ with the cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>group_<wbr>name</span>
+        <span id="state_subnet_group_name_python">
+<a href="#state_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1917,7 +2211,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1959,7 +2255,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1967,7 +2265,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1975,7 +2275,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1983,7 +2285,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1999,7 +2303,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2007,7 +2313,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2015,7 +2323,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2023,7 +2333,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2039,7 +2351,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2047,7 +2361,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2055,7 +2371,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2063,7 +2381,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2079,7 +2399,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2087,7 +2409,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2095,7 +2419,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2103,7 +2429,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2137,7 +2465,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2153,7 +2483,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2169,7 +2501,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2185,7 +2519,9 @@ cluster
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

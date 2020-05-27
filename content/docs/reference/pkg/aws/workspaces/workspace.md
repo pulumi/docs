@@ -203,7 +203,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Bundle<wbr>Id</span>
+        <span id="bundleid_csharp">
+<a href="#bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -212,7 +214,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Directory<wbr>Id</span>
+        <span id="directoryid_csharp">
+<a href="#directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -221,7 +225,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Name</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -230,7 +236,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="rootvolumeencryptionenabled_csharp">
+<a href="#rootvolumeencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -239,7 +247,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -248,7 +258,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="uservolumeencryptionenabled_csharp">
+<a href="#uservolumeencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -257,7 +269,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Encryption<wbr>Key</span>
+        <span id="volumeencryptionkey_csharp">
+<a href="#volumeencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +280,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Properties</span>
+        <span id="workspaceproperties_csharp">
+<a href="#workspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -282,7 +298,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Bundle<wbr>Id</span>
+        <span id="bundleid_go">
+<a href="#bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -291,7 +309,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Directory<wbr>Id</span>
+        <span id="directoryid_go">
+<a href="#directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -300,7 +320,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Name</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -309,7 +331,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="rootvolumeencryptionenabled_go">
+<a href="#rootvolumeencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -318,7 +342,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -327,7 +353,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="uservolumeencryptionenabled_go">
+<a href="#uservolumeencryptionenabled_go" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -336,7 +364,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Encryption<wbr>Key</span>
+        <span id="volumeencryptionkey_go">
+<a href="#volumeencryptionkey_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +375,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Properties</span>
+        <span id="workspaceproperties_go">
+<a href="#workspaceproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties</a></span>
     </dt>
@@ -361,7 +393,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>bundle<wbr>Id</span>
+        <span id="bundleid_nodejs">
+<a href="#bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -370,7 +404,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>directory<wbr>Id</span>
+        <span id="directoryid_nodejs">
+<a href="#directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -379,7 +415,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Name</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +426,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="rootvolumeencryptionenabled_nodejs">
+<a href="#rootvolumeencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -397,7 +437,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -406,7 +448,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="uservolumeencryptionenabled_nodejs">
+<a href="#uservolumeencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -415,7 +459,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Encryption<wbr>Key</span>
+        <span id="volumeencryptionkey_nodejs">
+<a href="#volumeencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -424,7 +470,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace<wbr>Properties</span>
+        <span id="workspaceproperties_nodejs">
+<a href="#workspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties</a></span>
     </dt>
@@ -440,7 +488,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>bundle_<wbr>id</span>
+        <span id="bundle_id_python">
+<a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +499,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>directory_<wbr>id</span>
+        <span id="directory_id_python">
+<a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -458,7 +510,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>user_<wbr>name</span>
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -467,7 +521,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>volume_<wbr>encryption_<wbr>enabled</span>
+        <span id="root_volume_encryption_enabled_python">
+<a href="#root_volume_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>encryption_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -476,7 +532,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -485,7 +543,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>volume_<wbr>encryption_<wbr>enabled</span>
+        <span id="user_volume_encryption_enabled_python">
+<a href="#user_volume_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">user_<wbr>volume_<wbr>encryption_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -494,7 +554,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>encryption_<wbr>key</span>
+        <span id="volume_encryption_key_python">
+<a href="#volume_encryption_key_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -503,7 +565,9 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace_<wbr>properties</span>
+        <span id="workspace_properties_python">
+<a href="#workspace_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Dict[Workspace<wbr>Workspace<wbr>Properties]</a></span>
     </dt>
@@ -530,7 +594,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Computer<wbr>Name</span>
+        <span id="computername_csharp">
+<a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +605,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -547,7 +615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -556,7 +626,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -572,7 +644,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Computer<wbr>Name</span>
+        <span id="computername_go">
+<a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -581,7 +655,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -589,7 +665,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -598,7 +676,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -614,7 +694,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>computer<wbr>Name</span>
+        <span id="computername_nodejs">
+<a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -623,7 +705,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +715,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +726,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -656,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>computer_<wbr>name</span>
+        <span id="computer_name_python">
+<a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -665,7 +755,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -673,7 +765,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -682,7 +776,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -824,7 +920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bundle<wbr>Id</span>
+        <span id="state_bundleid_csharp">
+<a href="#state_bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name</span>
+        <span id="state_computername_csharp">
+<a href="#state_computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directory<wbr>Id</span>
+        <span id="state_directoryid_csharp">
+<a href="#state_directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -851,7 +953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_csharp">
+<a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_rootvolumeencryptionenabled_csharp">
+<a href="#state_rootvolumeencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -869,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_state_csharp">
+<a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -878,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -887,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Name</span>
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -896,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_uservolumeencryptionenabled_csharp">
+<a href="#state_uservolumeencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -905,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Encryption<wbr>Key</span>
+        <span id="state_volumeencryptionkey_csharp">
+<a href="#state_volumeencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -914,7 +1030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Properties</span>
+        <span id="state_workspaceproperties_csharp">
+<a href="#state_workspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -930,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bundle<wbr>Id</span>
+        <span id="state_bundleid_go">
+<a href="#state_bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -939,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name</span>
+        <span id="state_computername_go">
+<a href="#state_computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -948,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directory<wbr>Id</span>
+        <span id="state_directoryid_go">
+<a href="#state_directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -957,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_go">
+<a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -966,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_rootvolumeencryptionenabled_go">
+<a href="#state_rootvolumeencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -975,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_state_go">
+<a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -984,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -993,7 +1125,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Name</span>
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1002,7 +1136,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_uservolumeencryptionenabled_go">
+<a href="#state_uservolumeencryptionenabled_go" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1011,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Encryption<wbr>Key</span>
+        <span id="state_volumeencryptionkey_go">
+<a href="#state_volumeencryptionkey_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1020,7 +1158,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Properties</span>
+        <span id="state_workspaceproperties_go">
+<a href="#state_workspaceproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties</a></span>
     </dt>
@@ -1036,7 +1176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bundle<wbr>Id</span>
+        <span id="state_bundleid_nodejs">
+<a href="#state_bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1045,7 +1187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer<wbr>Name</span>
+        <span id="state_computername_nodejs">
+<a href="#state_computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1054,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>directory<wbr>Id</span>
+        <span id="state_directoryid_nodejs">
+<a href="#state_directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1063,7 +1209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="state_ipaddress_nodejs">
+<a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1072,7 +1220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_rootvolumeencryptionenabled_nodejs">
+<a href="#state_rootvolumeencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1081,7 +1231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_state_nodejs">
+<a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1090,7 +1242,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1099,7 +1253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Name</span>
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1108,7 +1264,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Volume<wbr>Encryption<wbr>Enabled</span>
+        <span id="state_uservolumeencryptionenabled_nodejs">
+<a href="#state_uservolumeencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Volume<wbr>Encryption<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1117,7 +1275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Encryption<wbr>Key</span>
+        <span id="state_volumeencryptionkey_nodejs">
+<a href="#state_volumeencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Encryption<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1126,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace<wbr>Properties</span>
+        <span id="state_workspaceproperties_nodejs">
+<a href="#state_workspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Workspace<wbr>Workspace<wbr>Properties</a></span>
     </dt>
@@ -1142,7 +1304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bundle_<wbr>id</span>
+        <span id="state_bundle_id_python">
+<a href="#state_bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1151,7 +1315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer_<wbr>name</span>
+        <span id="state_computer_name_python">
+<a href="#state_computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1160,7 +1326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>directory_<wbr>id</span>
+        <span id="state_directory_id_python">
+<a href="#state_directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1169,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="state_ip_address_python">
+<a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1178,7 +1348,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>volume_<wbr>encryption_<wbr>enabled</span>
+        <span id="state_root_volume_encryption_enabled_python">
+<a href="#state_root_volume_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>encryption_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1187,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_state_python">
+<a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1196,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1205,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>name</span>
+        <span id="state_user_name_python">
+<a href="#state_user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1214,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>volume_<wbr>encryption_<wbr>enabled</span>
+        <span id="state_user_volume_encryption_enabled_python">
+<a href="#state_user_volume_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">user_<wbr>volume_<wbr>encryption_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1223,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>encryption_<wbr>key</span>
+        <span id="state_volume_encryption_key_python">
+<a href="#state_volume_encryption_key_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>encryption_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1232,7 +1414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace_<wbr>properties</span>
+        <span id="state_workspace_properties_python">
+<a href="#state_workspace_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspaceworkspaceproperties">Dict[Workspace<wbr>Workspace<wbr>Properties]</a></span>
     </dt>
@@ -1274,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Type<wbr>Name</span>
+        <span id="computetypename_csharp">
+<a href="#computetypename_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1283,7 +1469,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="rootvolumesizegib_csharp">
+<a href="#rootvolumesizegib_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1292,7 +1480,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Running<wbr>Mode</span>
+        <span id="runningmode_csharp">
+<a href="#runningmode_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1301,7 +1491,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="runningmodeautostoptimeoutinminutes_csharp">
+<a href="#runningmodeautostoptimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1310,7 +1502,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="uservolumesizegib_csharp">
+<a href="#uservolumesizegib_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1326,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Type<wbr>Name</span>
+        <span id="computetypename_go">
+<a href="#computetypename_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1335,7 +1531,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="rootvolumesizegib_go">
+<a href="#rootvolumesizegib_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1344,7 +1542,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Running<wbr>Mode</span>
+        <span id="runningmode_go">
+<a href="#runningmode_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1353,7 +1553,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="runningmodeautostoptimeoutinminutes_go">
+<a href="#runningmodeautostoptimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1362,7 +1564,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="uservolumesizegib_go">
+<a href="#uservolumesizegib_go" style="color: inherit; text-decoration: inherit;">User<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1378,7 +1582,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute<wbr>Type<wbr>Name</span>
+        <span id="computetypename_nodejs">
+<a href="#computetypename_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1387,7 +1593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="rootvolumesizegib_nodejs">
+<a href="#rootvolumesizegib_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1396,7 +1604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>running<wbr>Mode</span>
+        <span id="runningmode_nodejs">
+<a href="#runningmode_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1405,7 +1615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="runningmodeautostoptimeoutinminutes_nodejs">
+<a href="#runningmodeautostoptimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1414,7 +1626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="uservolumesizegib_nodejs">
+<a href="#uservolumesizegib_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1430,7 +1644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute<wbr>Type<wbr>Name</span>
+        <span id="computetypename_python">
+<a href="#computetypename_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1439,7 +1655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="rootvolumesizegib_python">
+<a href="#rootvolumesizegib_python" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1448,7 +1666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>running<wbr>Mode</span>
+        <span id="runningmode_python">
+<a href="#runningmode_python" style="color: inherit; text-decoration: inherit;">running<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1457,7 +1677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="runningmodeautostoptimeoutinminutes_python">
+<a href="#runningmodeautostoptimeoutinminutes_python" style="color: inherit; text-decoration: inherit;">running<wbr>Mode<wbr>Auto<wbr>Stop<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1466,7 +1688,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Volume<wbr>Size<wbr>Gib</span>
+        <span id="uservolumesizegib_python">
+<a href="#uservolumesizegib_python" style="color: inherit; text-decoration: inherit;">user<wbr>Volume<wbr>Size<wbr>Gib</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

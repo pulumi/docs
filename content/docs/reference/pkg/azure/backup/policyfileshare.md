@@ -40,16 +40,16 @@ vault = azure.recoveryservices.Vault("vault",
     resource_group_name=rg.name,
     sku="Standard")
 policy = azure.backup.PolicyFileShare("policy",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    timezone="UTC",
     backup={
         "frequency": "Daily",
         "time": "23:00",
     },
-    recovery_vault_name=vault.name,
-    resource_group_name=rg.name,
     retention_daily={
         "count": 10,
-    },
-    timezone="UTC")
+    })
 ```
 {{% /example %}}
 
@@ -58,25 +58,23 @@ policy = azure.backup.PolicyFileShare("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {
-    location: "West US",
-});
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
 const vault = new azure.recoveryservices.Vault("vault", {
     location: rg.location,
     resourceGroupName: rg.name,
     sku: "Standard",
 });
 const policy = new azure.backup.PolicyFileShare("policy", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    timezone: "UTC",
     backup: {
         frequency: "Daily",
         time: "23:00",
     },
-    recoveryVaultName: vault.name,
-    resourceGroupName: rg.name,
-    retentionDaily: {
+    retention_daily: {
         count: 10,
     },
-    timezone: "UTC",
 });
 ```
 {{% /example %}}
@@ -267,7 +265,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Backup</span>
+        <span id="backup_csharp">
+<a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
@@ -276,7 +276,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_csharp">
+<a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +287,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +298,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Daily</span>
+        <span id="retentiondaily_csharp">
+<a href="#retentiondaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
@@ -303,7 +309,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +320,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +338,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Backup</span>
+        <span id="backup_go">
+<a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
     </dt>
@@ -337,7 +349,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_go">
+<a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -346,7 +360,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +371,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Daily</span>
+        <span id="retentiondaily_go">
+<a href="#retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
     </dt>
@@ -364,7 +382,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +393,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +411,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>backup</span>
+        <span id="backup_nodejs">
+<a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
     </dt>
@@ -398,7 +422,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="recoveryvaultname_nodejs">
+<a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -407,7 +433,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -416,7 +444,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>retention<wbr>Daily</span>
+        <span id="retentiondaily_nodejs">
+<a href="#retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
     </dt>
@@ -425,7 +455,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -434,7 +466,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +484,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>backup</span>
+        <span id="backup_python">
+<a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Dict[Policy<wbr>File<wbr>Share<wbr>Backup]</a></span>
     </dt>
@@ -459,7 +495,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="recovery_vault_name_python">
+<a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -468,7 +506,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +517,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>retention_<wbr>daily</span>
+        <span id="retention_daily_python">
+<a href="#retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Dict[Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily]</a></span>
     </dt>
@@ -486,7 +528,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +539,9 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -522,7 +568,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -537,7 +585,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +602,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +619,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -708,7 +762,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup</span>
+        <span id="state_backup_csharp">
+<a href="#state_backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
@@ -717,7 +773,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -726,7 +784,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_csharp">
+<a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -735,7 +795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -744,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Daily</span>
+        <span id="state_retentiondaily_csharp">
+<a href="#state_retentiondaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
@@ -753,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup</span>
+        <span id="state_backup_go">
+<a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
     </dt>
@@ -778,7 +846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -787,7 +857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_go">
+<a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -796,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -805,7 +879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Daily</span>
+        <span id="state_retentiondaily_go">
+<a href="#state_retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
     </dt>
@@ -814,7 +890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -830,7 +908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup</span>
+        <span id="state_backup_nodejs">
+<a href="#state_backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
     </dt>
@@ -839,7 +919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -848,7 +930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery<wbr>Vault<wbr>Name</span>
+        <span id="state_recoveryvaultname_nodejs">
+<a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -857,7 +941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Daily</span>
+        <span id="state_retentiondaily_nodejs">
+<a href="#state_retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
     </dt>
@@ -875,7 +963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -891,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup</span>
+        <span id="state_backup_python">
+<a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfilesharebackup">Dict[Policy<wbr>File<wbr>Share<wbr>Backup]</a></span>
     </dt>
@@ -900,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span id="state_recovery_vault_name_python">
+<a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -918,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>daily</span>
+        <span id="state_retention_daily_python">
+<a href="#state_retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyfileshareretentiondaily">Dict[Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily]</a></span>
     </dt>
@@ -936,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_python">
+<a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -978,7 +1080,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency</span>
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -987,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time</span>
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1108,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency</span>
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1011,7 +1119,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time</span>
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1026,7 +1136,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency</span>
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1035,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time</span>
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1050,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency</span>
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1059,7 +1175,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time</span>
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1092,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Count</span>
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1108,7 +1228,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Count</span>
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1124,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>count</span>
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1140,7 +1264,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>count</span>
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

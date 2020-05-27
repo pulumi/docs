@@ -255,7 +255,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Counter<wbr>Name</span>
+        <span id="countername_csharp">
+<a href="#countername_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +266,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Name</span>
+        <span id="instancename_csharp">
+<a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +277,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Interval<wbr>Seconds</span>
+        <span id="intervalseconds_csharp">
+<a href="#intervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -282,7 +288,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Object<wbr>Name</span>
+        <span id="objectname_csharp">
+<a href="#objectname_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +299,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -300,7 +310,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Workspace<wbr>Name</span>
+        <span id="workspacename_csharp">
+<a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +321,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +339,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Counter<wbr>Name</span>
+        <span id="countername_go">
+<a href="#countername_go" style="color: inherit; text-decoration: inherit;">Counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +350,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Name</span>
+        <span id="instancename_go">
+<a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +361,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Interval<wbr>Seconds</span>
+        <span id="intervalseconds_go">
+<a href="#intervalseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -352,7 +372,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Object<wbr>Name</span>
+        <span id="objectname_go">
+<a href="#objectname_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -361,7 +383,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +394,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>Workspace<wbr>Name</span>
+        <span id="workspacename_go">
+<a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +405,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -395,7 +423,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>counter<wbr>Name</span>
+        <span id="countername_nodejs">
+<a href="#countername_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +434,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Name</span>
+        <span id="instancename_nodejs">
+<a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -413,7 +445,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>interval<wbr>Seconds</span>
+        <span id="intervalseconds_nodejs">
+<a href="#intervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -422,7 +456,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>object<wbr>Name</span>
+        <span id="objectname_nodejs">
+<a href="#objectname_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -431,7 +467,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +478,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>workspace<wbr>Name</span>
+        <span id="workspacename_nodejs">
+<a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -449,7 +489,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -465,7 +507,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>counter_<wbr>name</span>
+        <span id="counter_name_python">
+<a href="#counter_name_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -474,7 +518,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>name</span>
+        <span id="instance_name_python">
+<a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -483,7 +529,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>interval_<wbr>seconds</span>
+        <span id="interval_seconds_python">
+<a href="#interval_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -492,7 +540,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>object_<wbr>name</span>
+        <span id="object_name_python">
+<a href="#object_name_python" style="color: inherit; text-decoration: inherit;">object_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -501,7 +551,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +562,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-required"
             title="Required">
-        <span>workspace_<wbr>name</span>
+        <span id="workspace_name_python">
+<a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -519,7 +573,9 @@ The DataSourceWindowsPerformanceCounter resource accepts the following [input]({
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -546,7 +602,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -561,7 +619,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -576,7 +636,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +653,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -732,7 +796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Counter<wbr>Name</span>
+        <span id="state_countername_csharp">
+<a href="#state_countername_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="state_instancename_csharp">
+<a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -750,7 +818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>Seconds</span>
+        <span id="state_intervalseconds_csharp">
+<a href="#state_intervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -759,7 +829,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -768,7 +840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Name</span>
+        <span id="state_objectname_csharp">
+<a href="#state_objectname_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -777,7 +851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -786,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Name</span>
+        <span id="state_workspacename_csharp">
+<a href="#state_workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -802,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Counter<wbr>Name</span>
+        <span id="state_countername_go">
+<a href="#state_countername_go" style="color: inherit; text-decoration: inherit;">Counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -811,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="state_instancename_go">
+<a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -820,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval<wbr>Seconds</span>
+        <span id="state_intervalseconds_go">
+<a href="#state_intervalseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -829,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -838,7 +924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Name</span>
+        <span id="state_objectname_go">
+<a href="#state_objectname_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -847,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workspace<wbr>Name</span>
+        <span id="state_workspacename_go">
+<a href="#state_workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -872,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>counter<wbr>Name</span>
+        <span id="state_countername_nodejs">
+<a href="#state_countername_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -881,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Name</span>
+        <span id="state_instancename_nodejs">
+<a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval<wbr>Seconds</span>
+        <span id="state_intervalseconds_nodejs">
+<a href="#state_intervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -899,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Name</span>
+        <span id="state_objectname_nodejs">
+<a href="#state_objectname_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -917,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -926,7 +1030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace<wbr>Name</span>
+        <span id="state_workspacename_nodejs">
+<a href="#state_workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -942,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>counter_<wbr>name</span>
+        <span id="state_counter_name_python">
+<a href="#state_counter_name_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>name</span>
+        <span id="state_instance_name_python">
+<a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -960,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval_<wbr>seconds</span>
+        <span id="state_interval_seconds_python">
+<a href="#state_interval_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -969,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -978,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>name</span>
+        <span id="state_object_name_python">
+<a href="#state_object_name_python" style="color: inherit; text-decoration: inherit;">object_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -987,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -996,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workspace_<wbr>name</span>
+        <span id="state_workspace_name_python">
+<a href="#state_workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

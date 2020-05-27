@@ -308,7 +308,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Password</span>
+        <span id="adminpassword_csharp">
+<a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -317,7 +319,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_csharp">
+<a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +330,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Instances</span>
+        <span id="instances_csharp">
+<a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -335,7 +341,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interfaces</span>
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -344,7 +352,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Os<wbr>Disk</span>
+        <span id="osdisk_csharp">
+<a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
@@ -353,7 +363,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +374,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -371,7 +385,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Capabilities</span>
+        <span id="additionalcapabilities_csharp">
+<a href="#additionalcapabilities_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
@@ -380,7 +396,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Unattend<wbr>Contents</span>
+        <span id="additionalunattendcontents_csharp">
+<a href="#additionalunattendcontents_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args&gt;</a></span>
     </dt>
@@ -389,7 +407,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Instance<wbr>Repair</span>
+        <span id="automaticinstancerepair_csharp">
+<a href="#automaticinstancerepair_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
@@ -398,7 +418,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="automaticosupgradepolicy_csharp">
+<a href="#automaticosupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -407,7 +429,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Diagnostics</span>
+        <span id="bootdiagnostics_csharp">
+<a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
@@ -416,7 +440,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name<wbr>Prefix</span>
+        <span id="computernameprefix_csharp">
+<a href="#computernameprefix_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +451,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Data</span>
+        <span id="customdata_csharp">
+<a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -434,7 +462,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="datadisks_csharp">
+<a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -443,7 +473,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="donotrunextensionsonoverprovisionedmachines_csharp">
+<a href="#donotrunextensionsonoverprovisionedmachines_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -452,7 +484,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Automatic<wbr>Updates</span>
+        <span id="enableautomaticupdates_csharp">
+<a href="#enableautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -461,7 +495,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eviction<wbr>Policy</span>
+        <span id="evictionpolicy_csharp">
+<a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -470,7 +506,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Probe<wbr>Id</span>
+        <span id="healthprobeid_csharp">
+<a href="#healthprobeid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -479,7 +517,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -488,7 +528,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_csharp">
+<a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -497,7 +539,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -506,7 +550,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_csharp">
+<a href="#maxbidprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -515,7 +561,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -524,7 +572,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overprovision</span>
+        <span id="overprovision_csharp">
+<a href="#overprovision_csharp" style="color: inherit; text-decoration: inherit;">Overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -533,7 +583,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
@@ -541,7 +593,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +604,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provision<wbr>Vm<wbr>Agent</span>
+        <span id="provisionvmagent_csharp">
+<a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -559,7 +615,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="proximityplacementgroupid_csharp">
+<a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -568,7 +626,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="rollingupgradepolicy_csharp">
+<a href="#rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -577,7 +637,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>In<wbr>Policy</span>
+        <span id="scaleinpolicy_csharp">
+<a href="#scaleinpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -586,7 +648,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
@@ -595,7 +659,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Single<wbr>Placement<wbr>Group</span>
+        <span id="singleplacementgroup_csharp">
+<a href="#singleplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -604,7 +670,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Id</span>
+        <span id="sourceimageid_csharp">
+<a href="#sourceimageid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -613,7 +681,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Reference</span>
+        <span id="sourceimagereference_csharp">
+<a href="#sourceimagereference_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -622,7 +692,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -631,7 +703,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Notification</span>
+        <span id="terminatenotification_csharp">
+<a href="#terminatenotification_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
@@ -640,7 +714,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -649,7 +725,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Mode</span>
+        <span id="upgrademode_csharp">
+<a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -658,7 +736,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Winrm<wbr>Listeners</span>
+        <span id="winrmlisteners_csharp">
+<a href="#winrmlisteners_csharp" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener<wbr>Args&gt;</a></span>
     </dt>
@@ -667,7 +747,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Balance</span>
+        <span id="zonebalance_csharp">
+<a href="#zonebalance_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -676,7 +758,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zones</span>
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -692,7 +776,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Password</span>
+        <span id="adminpassword_go">
+<a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +787,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Username</span>
+        <span id="adminusername_go">
+<a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -710,7 +798,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Instances</span>
+        <span id="instances_go">
+<a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -719,7 +809,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interfaces</span>
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -728,7 +820,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Os<wbr>Disk</span>
+        <span id="osdisk_go">
+<a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
     </dt>
@@ -737,7 +831,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -746,7 +842,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +853,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Capabilities</span>
+        <span id="additionalcapabilities_go">
+<a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
@@ -764,7 +864,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Unattend<wbr>Contents</span>
+        <span id="additionalunattendcontents_go">
+<a href="#additionalunattendcontents_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content</a></span>
     </dt>
@@ -773,7 +875,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Instance<wbr>Repair</span>
+        <span id="automaticinstancerepair_go">
+<a href="#automaticinstancerepair_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
     </dt>
@@ -782,7 +886,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="automaticosupgradepolicy_go">
+<a href="#automaticosupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -791,7 +897,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Diagnostics</span>
+        <span id="bootdiagnostics_go">
+<a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
@@ -800,7 +908,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name<wbr>Prefix</span>
+        <span id="computernameprefix_go">
+<a href="#computernameprefix_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +919,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Data</span>
+        <span id="customdata_go">
+<a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +930,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="datadisks_go">
+<a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk</a></span>
     </dt>
@@ -827,7 +941,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="donotrunextensionsonoverprovisionedmachines_go">
+<a href="#donotrunextensionsonoverprovisionedmachines_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -836,7 +952,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Automatic<wbr>Updates</span>
+        <span id="enableautomaticupdates_go">
+<a href="#enableautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -845,7 +963,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eviction<wbr>Policy</span>
+        <span id="evictionpolicy_go">
+<a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -854,7 +974,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Probe<wbr>Id</span>
+        <span id="healthprobeid_go">
+<a href="#healthprobeid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -863,7 +985,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
@@ -872,7 +996,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_go">
+<a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +1007,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -890,7 +1018,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_go">
+<a href="#maxbidprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -899,7 +1029,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +1040,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overprovision</span>
+        <span id="overprovision_go">
+<a href="#overprovision_go" style="color: inherit; text-decoration: inherit;">Overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -917,7 +1051,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
@@ -925,7 +1061,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1072,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provision<wbr>Vm<wbr>Agent</span>
+        <span id="provisionvmagent_go">
+<a href="#provisionvmagent_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -943,7 +1083,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="proximityplacementgroupid_go">
+<a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -952,7 +1094,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="rollingupgradepolicy_go">
+<a href="#rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -961,7 +1105,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>In<wbr>Policy</span>
+        <span id="scaleinpolicy_go">
+<a href="#scaleinpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -970,7 +1116,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret</a></span>
     </dt>
@@ -979,7 +1127,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Single<wbr>Placement<wbr>Group</span>
+        <span id="singleplacementgroup_go">
+<a href="#singleplacementgroup_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -988,7 +1138,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Id</span>
+        <span id="sourceimageid_go">
+<a href="#sourceimageid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -997,7 +1149,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Reference</span>
+        <span id="sourceimagereference_go">
+<a href="#sourceimagereference_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -1006,7 +1160,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1015,7 +1171,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Notification</span>
+        <span id="terminatenotification_go">
+<a href="#terminatenotification_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
     </dt>
@@ -1024,7 +1182,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1033,7 +1193,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Mode</span>
+        <span id="upgrademode_go">
+<a href="#upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1042,7 +1204,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Winrm<wbr>Listeners</span>
+        <span id="winrmlisteners_go">
+<a href="#winrmlisteners_go" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener</a></span>
     </dt>
@@ -1051,7 +1215,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Balance</span>
+        <span id="zonebalance_go">
+<a href="#zonebalance_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1060,7 +1226,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zones</span>
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1076,7 +1244,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Password</span>
+        <span id="adminpassword_nodejs">
+<a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1085,7 +1255,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Username</span>
+        <span id="adminusername_nodejs">
+<a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1094,7 +1266,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>instances</span>
+        <span id="instances_nodejs">
+<a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1103,7 +1277,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Interfaces</span>
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -1112,7 +1288,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>os<wbr>Disk</span>
+        <span id="osdisk_nodejs">
+<a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
     </dt>
@@ -1121,7 +1299,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1130,7 +1310,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1139,7 +1321,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Capabilities</span>
+        <span id="additionalcapabilities_nodejs">
+<a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
@@ -1148,7 +1332,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Unattend<wbr>Contents</span>
+        <span id="additionalunattendcontents_nodejs">
+<a href="#additionalunattendcontents_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content[]</a></span>
     </dt>
@@ -1157,7 +1343,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Instance<wbr>Repair</span>
+        <span id="automaticinstancerepair_nodejs">
+<a href="#automaticinstancerepair_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
     </dt>
@@ -1166,7 +1354,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="automaticosupgradepolicy_nodejs">
+<a href="#automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -1175,7 +1365,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Diagnostics</span>
+        <span id="bootdiagnostics_nodejs">
+<a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
@@ -1184,7 +1376,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer<wbr>Name<wbr>Prefix</span>
+        <span id="computernameprefix_nodejs">
+<a href="#computernameprefix_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1193,7 +1387,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Data</span>
+        <span id="customdata_nodejs">
+<a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1202,7 +1398,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Disks</span>
+        <span id="datadisks_nodejs">
+<a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk[]</a></span>
     </dt>
@@ -1211,7 +1409,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="donotrunextensionsonoverprovisionedmachines_nodejs">
+<a href="#donotrunextensionsonoverprovisionedmachines_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1220,7 +1420,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Automatic<wbr>Updates</span>
+        <span id="enableautomaticupdates_nodejs">
+<a href="#enableautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1229,7 +1431,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>eviction<wbr>Policy</span>
+        <span id="evictionpolicy_nodejs">
+<a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1238,7 +1442,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Probe<wbr>Id</span>
+        <span id="healthprobeid_nodejs">
+<a href="#healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1247,7 +1453,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
@@ -1256,7 +1464,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="licensetype_nodejs">
+<a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1265,7 +1475,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1274,7 +1486,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_nodejs">
+<a href="#maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1283,7 +1497,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1292,7 +1508,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>overprovision</span>
+        <span id="overprovision_nodejs">
+<a href="#overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1301,7 +1519,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
@@ -1309,7 +1529,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1318,7 +1540,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>provision<wbr>Vm<wbr>Agent</span>
+        <span id="provisionvmagent_nodejs">
+<a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1327,7 +1551,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="proximityplacementgroupid_nodejs">
+<a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1336,7 +1562,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="rollingupgradepolicy_nodejs">
+<a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -1345,7 +1573,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>In<wbr>Policy</span>
+        <span id="scaleinpolicy_nodejs">
+<a href="#scaleinpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1354,7 +1584,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret[]</a></span>
     </dt>
@@ -1363,7 +1595,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>single<wbr>Placement<wbr>Group</span>
+        <span id="singleplacementgroup_nodejs">
+<a href="#singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1372,7 +1606,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Image<wbr>Id</span>
+        <span id="sourceimageid_nodejs">
+<a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1381,7 +1617,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Image<wbr>Reference</span>
+        <span id="sourceimagereference_nodejs">
+<a href="#sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -1390,7 +1628,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1399,7 +1639,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Notification</span>
+        <span id="terminatenotification_nodejs">
+<a href="#terminatenotification_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
     </dt>
@@ -1408,7 +1650,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1417,7 +1661,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade<wbr>Mode</span>
+        <span id="upgrademode_nodejs">
+<a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1426,7 +1672,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>winrm<wbr>Listeners</span>
+        <span id="winrmlisteners_nodejs">
+<a href="#winrmlisteners_nodejs" style="color: inherit; text-decoration: inherit;">winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener[]</a></span>
     </dt>
@@ -1435,7 +1683,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Balance</span>
+        <span id="zonebalance_nodejs">
+<a href="#zonebalance_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1444,7 +1694,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>zones</span>
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1460,7 +1712,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>admin_<wbr>password</span>
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1469,7 +1723,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>admin_<wbr>username</span>
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1478,7 +1734,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>instances</span>
+        <span id="instances_python">
+<a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1487,7 +1745,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>interfaces</span>
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface]</a></span>
     </dt>
@@ -1496,7 +1756,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>os_<wbr>disk</span>
+        <span id="os_disk_python">
+<a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk]</a></span>
     </dt>
@@ -1505,7 +1767,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1514,7 +1778,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1523,7 +1789,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>capabilities</span>
+        <span id="additional_capabilities_python">
+<a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities]</a></span>
     </dt>
@@ -1532,7 +1800,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>unattend_<wbr>contents</span>
+        <span id="additional_unattend_contents_python">
+<a href="#additional_unattend_contents_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content]</a></span>
     </dt>
@@ -1541,7 +1811,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic_<wbr>instance_<wbr>repair</span>
+        <span id="automatic_instance_repair_python">
+<a href="#automatic_instance_repair_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>instance_<wbr>repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair]</a></span>
     </dt>
@@ -1550,7 +1822,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic_<wbr>os_<wbr>upgrade_<wbr>policy</span>
+        <span id="automatic_os_upgrade_policy_python">
+<a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy]</a></span>
     </dt>
@@ -1559,7 +1833,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot_<wbr>diagnostics</span>
+        <span id="boot_diagnostics_python">
+<a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
     </dt>
@@ -1568,7 +1844,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer_<wbr>name_<wbr>prefix</span>
+        <span id="computer_name_prefix_python">
+<a href="#computer_name_prefix_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1577,7 +1855,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>data</span>
+        <span id="custom_data_python">
+<a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1586,7 +1866,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>disks</span>
+        <span id="data_disks_python">
+<a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
     </dt>
@@ -1595,7 +1877,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>do_<wbr>not_<wbr>run_<wbr>extensions_<wbr>on_<wbr>overprovisioned_<wbr>machines</span>
+        <span id="do_not_run_extensions_on_overprovisioned_machines_python">
+<a href="#do_not_run_extensions_on_overprovisioned_machines_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>run_<wbr>extensions_<wbr>on_<wbr>overprovisioned_<wbr>machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1604,7 +1888,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>automatic_<wbr>updates</span>
+        <span id="enable_automatic_updates_python">
+<a href="#enable_automatic_updates_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1613,7 +1899,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>eviction_<wbr>policy</span>
+        <span id="eviction_policy_python">
+<a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1622,7 +1910,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>probe_<wbr>id</span>
+        <span id="health_probe_id_python">
+<a href="#health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1631,7 +1921,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity]</a></span>
     </dt>
@@ -1640,7 +1932,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="license_type_python">
+<a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1649,7 +1943,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1658,7 +1954,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bid_<wbr>price</span>
+        <span id="max_bid_price_python">
+<a href="#max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1667,7 +1965,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1676,7 +1976,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>overprovision</span>
+        <span id="overprovision_python">
+<a href="#overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1685,7 +1987,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan]</a></span>
     </dt>
@@ -1693,7 +1997,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1702,7 +2008,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>provision_<wbr>vm_<wbr>agent</span>
+        <span id="provision_vm_agent_python">
+<a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1711,7 +2019,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>proximity_<wbr>placement_<wbr>group_<wbr>id</span>
+        <span id="proximity_placement_group_id_python">
+<a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1720,7 +2030,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling_<wbr>upgrade_<wbr>policy</span>
+        <span id="rolling_upgrade_policy_python">
+<a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
     </dt>
@@ -1729,7 +2041,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale_<wbr>in_<wbr>policy</span>
+        <span id="scale_in_policy_python">
+<a href="#scale_in_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1738,7 +2052,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret]</a></span>
     </dt>
@@ -1747,7 +2063,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>single_<wbr>placement_<wbr>group</span>
+        <span id="single_placement_group_python">
+<a href="#single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1756,7 +2074,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>image_<wbr>id</span>
+        <span id="source_image_id_python">
+<a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1765,7 +2085,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>image_<wbr>reference</span>
+        <span id="source_image_reference_python">
+<a href="#source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference]</a></span>
     </dt>
@@ -1774,7 +2096,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1783,7 +2107,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>notification</span>
+        <span id="terminate_notification_python">
+<a href="#terminate_notification_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification]</a></span>
     </dt>
@@ -1792,7 +2118,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1801,7 +2129,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade_<wbr>mode</span>
+        <span id="upgrade_mode_python">
+<a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1810,7 +2140,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>winrm_<wbr>listeners</span>
+        <span id="winrm_listeners_python">
+<a href="#winrm_listeners_python" style="color: inherit; text-decoration: inherit;">winrm_<wbr>listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener]</a></span>
     </dt>
@@ -1819,7 +2151,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>balance</span>
+        <span id="zone_balance_python">
+<a href="#zone_balance_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1828,7 +2162,9 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 
     <dt class="property-optional"
             title="Optional">
-        <span>zones</span>
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1855,7 +2191,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1863,7 +2201,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Id</span>
+        <span id="uniqueid_csharp">
+<a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1879,7 +2219,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1887,7 +2229,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Id</span>
+        <span id="uniqueid_go">
+<a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1903,7 +2247,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1911,7 +2257,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>unique<wbr>Id</span>
+        <span id="uniqueid_nodejs">
+<a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1927,7 +2275,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1935,7 +2285,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>unique_<wbr>id</span>
+        <span id="unique_id_python">
+<a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2077,7 +2429,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Capabilities</span>
+        <span id="state_additionalcapabilities_csharp">
+<a href="#state_additionalcapabilities_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
@@ -2086,7 +2440,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Unattend<wbr>Contents</span>
+        <span id="state_additionalunattendcontents_csharp">
+<a href="#state_additionalunattendcontents_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args&gt;</a></span>
     </dt>
@@ -2095,7 +2451,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Password</span>
+        <span id="state_adminpassword_csharp">
+<a href="#state_adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2104,7 +2462,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Username</span>
+        <span id="state_adminusername_csharp">
+<a href="#state_adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2113,7 +2473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Instance<wbr>Repair</span>
+        <span id="state_automaticinstancerepair_csharp">
+<a href="#state_automaticinstancerepair_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
@@ -2122,7 +2484,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_automaticosupgradepolicy_csharp">
+<a href="#state_automaticosupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -2131,7 +2495,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Diagnostics</span>
+        <span id="state_bootdiagnostics_csharp">
+<a href="#state_bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
@@ -2140,7 +2506,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name<wbr>Prefix</span>
+        <span id="state_computernameprefix_csharp">
+<a href="#state_computernameprefix_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2149,7 +2517,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Data</span>
+        <span id="state_customdata_csharp">
+<a href="#state_customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2158,7 +2528,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="state_datadisks_csharp">
+<a href="#state_datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -2167,7 +2539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="state_donotrunextensionsonoverprovisionedmachines_csharp">
+<a href="#state_donotrunextensionsonoverprovisionedmachines_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2176,7 +2550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Automatic<wbr>Updates</span>
+        <span id="state_enableautomaticupdates_csharp">
+<a href="#state_enableautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2185,7 +2561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eviction<wbr>Policy</span>
+        <span id="state_evictionpolicy_csharp">
+<a href="#state_evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2194,7 +2572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Probe<wbr>Id</span>
+        <span id="state_healthprobeid_csharp">
+<a href="#state_healthprobeid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2203,7 +2583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -2212,7 +2594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instances</span>
+        <span id="state_instances_csharp">
+<a href="#state_instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2221,7 +2605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_csharp">
+<a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2230,7 +2616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2239,7 +2627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_csharp">
+<a href="#state_maxbidprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2248,7 +2638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2257,7 +2649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_csharp">
+<a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -2266,7 +2660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Disk</span>
+        <span id="state_osdisk_csharp">
+<a href="#state_osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
@@ -2275,7 +2671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overprovision</span>
+        <span id="state_overprovision_csharp">
+<a href="#state_overprovision_csharp" style="color: inherit; text-decoration: inherit;">Overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2284,7 +2682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="state_plan_csharp">
+<a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
@@ -2292,7 +2692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_csharp">
+<a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2301,7 +2703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provision<wbr>Vm<wbr>Agent</span>
+        <span id="state_provisionvmagent_csharp">
+<a href="#state_provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2310,7 +2714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="state_proximityplacementgroupid_csharp">
+<a href="#state_proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2319,7 +2725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2328,7 +2736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_rollingupgradepolicy_csharp">
+<a href="#state_rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -2337,7 +2747,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>In<wbr>Policy</span>
+        <span id="state_scaleinpolicy_csharp">
+<a href="#state_scaleinpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2346,7 +2758,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="state_secrets_csharp">
+<a href="#state_secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
@@ -2355,7 +2769,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Single<wbr>Placement<wbr>Group</span>
+        <span id="state_singleplacementgroup_csharp">
+<a href="#state_singleplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2364,7 +2780,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku</span>
+        <span id="state_sku_csharp">
+<a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2373,7 +2791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Id</span>
+        <span id="state_sourceimageid_csharp">
+<a href="#state_sourceimageid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2382,7 +2802,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Reference</span>
+        <span id="state_sourceimagereference_csharp">
+<a href="#state_sourceimagereference_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -2391,7 +2813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2400,7 +2824,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Notification</span>
+        <span id="state_terminatenotification_csharp">
+<a href="#state_terminatenotification_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
@@ -2409,7 +2835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2418,7 +2846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Id</span>
+        <span id="state_uniqueid_csharp">
+<a href="#state_uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2427,7 +2857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Mode</span>
+        <span id="state_upgrademode_csharp">
+<a href="#state_upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2436,7 +2868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Winrm<wbr>Listeners</span>
+        <span id="state_winrmlisteners_csharp">
+<a href="#state_winrmlisteners_csharp" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener<wbr>Args&gt;</a></span>
     </dt>
@@ -2445,7 +2879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Balance</span>
+        <span id="state_zonebalance_csharp">
+<a href="#state_zonebalance_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2454,7 +2890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zones</span>
+        <span id="state_zones_csharp">
+<a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2470,7 +2908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Capabilities</span>
+        <span id="state_additionalcapabilities_go">
+<a href="#state_additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
@@ -2479,7 +2919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Unattend<wbr>Contents</span>
+        <span id="state_additionalunattendcontents_go">
+<a href="#state_additionalunattendcontents_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content</a></span>
     </dt>
@@ -2488,7 +2930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Password</span>
+        <span id="state_adminpassword_go">
+<a href="#state_adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2497,7 +2941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Username</span>
+        <span id="state_adminusername_go">
+<a href="#state_adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2506,7 +2952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Instance<wbr>Repair</span>
+        <span id="state_automaticinstancerepair_go">
+<a href="#state_automaticinstancerepair_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
     </dt>
@@ -2515,7 +2963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_automaticosupgradepolicy_go">
+<a href="#state_automaticosupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -2524,7 +2974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Diagnostics</span>
+        <span id="state_bootdiagnostics_go">
+<a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
@@ -2533,7 +2985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computer<wbr>Name<wbr>Prefix</span>
+        <span id="state_computernameprefix_go">
+<a href="#state_computernameprefix_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2542,7 +2996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Data</span>
+        <span id="state_customdata_go">
+<a href="#state_customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2551,7 +3007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="state_datadisks_go">
+<a href="#state_datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk</a></span>
     </dt>
@@ -2560,7 +3018,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="state_donotrunextensionsonoverprovisionedmachines_go">
+<a href="#state_donotrunextensionsonoverprovisionedmachines_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2569,7 +3029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Automatic<wbr>Updates</span>
+        <span id="state_enableautomaticupdates_go">
+<a href="#state_enableautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2578,7 +3040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eviction<wbr>Policy</span>
+        <span id="state_evictionpolicy_go">
+<a href="#state_evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2587,7 +3051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Probe<wbr>Id</span>
+        <span id="state_healthprobeid_go">
+<a href="#state_healthprobeid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2596,7 +3062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
@@ -2605,7 +3073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instances</span>
+        <span id="state_instances_go">
+<a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2614,7 +3084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_go">
+<a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2623,7 +3095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2632,7 +3106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_go">
+<a href="#state_maxbidprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2641,7 +3117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2650,7 +3128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_go">
+<a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -2659,7 +3139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Disk</span>
+        <span id="state_osdisk_go">
+<a href="#state_osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
     </dt>
@@ -2668,7 +3150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overprovision</span>
+        <span id="state_overprovision_go">
+<a href="#state_overprovision_go" style="color: inherit; text-decoration: inherit;">Overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2677,7 +3161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="state_plan_go">
+<a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
@@ -2685,7 +3171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_go">
+<a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2694,7 +3182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provision<wbr>Vm<wbr>Agent</span>
+        <span id="state_provisionvmagent_go">
+<a href="#state_provisionvmagent_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2703,7 +3193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="state_proximityplacementgroupid_go">
+<a href="#state_proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2712,7 +3204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2721,7 +3215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_rollingupgradepolicy_go">
+<a href="#state_rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -2730,7 +3226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>In<wbr>Policy</span>
+        <span id="state_scaleinpolicy_go">
+<a href="#state_scaleinpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2739,7 +3237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="state_secrets_go">
+<a href="#state_secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret</a></span>
     </dt>
@@ -2748,7 +3248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Single<wbr>Placement<wbr>Group</span>
+        <span id="state_singleplacementgroup_go">
+<a href="#state_singleplacementgroup_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2757,7 +3259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku</span>
+        <span id="state_sku_go">
+<a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2766,7 +3270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Id</span>
+        <span id="state_sourceimageid_go">
+<a href="#state_sourceimageid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2775,7 +3281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Image<wbr>Reference</span>
+        <span id="state_sourceimagereference_go">
+<a href="#state_sourceimagereference_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -2784,7 +3292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2793,7 +3303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Notification</span>
+        <span id="state_terminatenotification_go">
+<a href="#state_terminatenotification_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
     </dt>
@@ -2802,7 +3314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2811,7 +3325,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unique<wbr>Id</span>
+        <span id="state_uniqueid_go">
+<a href="#state_uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2820,7 +3336,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Mode</span>
+        <span id="state_upgrademode_go">
+<a href="#state_upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2829,7 +3347,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Winrm<wbr>Listeners</span>
+        <span id="state_winrmlisteners_go">
+<a href="#state_winrmlisteners_go" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener</a></span>
     </dt>
@@ -2838,7 +3358,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Balance</span>
+        <span id="state_zonebalance_go">
+<a href="#state_zonebalance_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2847,7 +3369,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zones</span>
+        <span id="state_zones_go">
+<a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2863,7 +3387,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Capabilities</span>
+        <span id="state_additionalcapabilities_nodejs">
+<a href="#state_additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
@@ -2872,7 +3398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Unattend<wbr>Contents</span>
+        <span id="state_additionalunattendcontents_nodejs">
+<a href="#state_additionalunattendcontents_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content[]</a></span>
     </dt>
@@ -2881,7 +3409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Password</span>
+        <span id="state_adminpassword_nodejs">
+<a href="#state_adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2890,7 +3420,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Username</span>
+        <span id="state_adminusername_nodejs">
+<a href="#state_adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2899,7 +3431,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Instance<wbr>Repair</span>
+        <span id="state_automaticinstancerepair_nodejs">
+<a href="#state_automaticinstancerepair_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Instance<wbr>Repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
     </dt>
@@ -2908,7 +3442,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Os<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_automaticosupgradepolicy_nodejs">
+<a href="#state_automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -2917,7 +3453,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Diagnostics</span>
+        <span id="state_bootdiagnostics_nodejs">
+<a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
@@ -2926,7 +3464,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer<wbr>Name<wbr>Prefix</span>
+        <span id="state_computernameprefix_nodejs">
+<a href="#state_computernameprefix_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2935,7 +3475,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Data</span>
+        <span id="state_customdata_nodejs">
+<a href="#state_customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2944,7 +3486,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Disks</span>
+        <span id="state_datadisks_nodejs">
+<a href="#state_datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk[]</a></span>
     </dt>
@@ -2953,7 +3497,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</span>
+        <span id="state_donotrunextensionsonoverprovisionedmachines_nodejs">
+<a href="#state_donotrunextensionsonoverprovisionedmachines_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Run<wbr>Extensions<wbr>On<wbr>Overprovisioned<wbr>Machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2962,7 +3508,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Automatic<wbr>Updates</span>
+        <span id="state_enableautomaticupdates_nodejs">
+<a href="#state_enableautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2971,7 +3519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eviction<wbr>Policy</span>
+        <span id="state_evictionpolicy_nodejs">
+<a href="#state_evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2980,7 +3530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Probe<wbr>Id</span>
+        <span id="state_healthprobeid_nodejs">
+<a href="#state_healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2989,7 +3541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
@@ -2998,7 +3552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instances</span>
+        <span id="state_instances_nodejs">
+<a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3007,7 +3563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="state_licensetype_nodejs">
+<a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3016,7 +3574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3025,7 +3585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_nodejs">
+<a href="#state_maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -3034,7 +3596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3043,7 +3607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Interfaces</span>
+        <span id="state_networkinterfaces_nodejs">
+<a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -3052,7 +3618,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Disk</span>
+        <span id="state_osdisk_nodejs">
+<a href="#state_osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
     </dt>
@@ -3061,7 +3629,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>overprovision</span>
+        <span id="state_overprovision_nodejs">
+<a href="#state_overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3070,7 +3640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="state_plan_nodejs">
+<a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
@@ -3078,7 +3650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_nodejs">
+<a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3087,7 +3661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provision<wbr>Vm<wbr>Agent</span>
+        <span id="state_provisionvmagent_nodejs">
+<a href="#state_provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3096,7 +3672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proximity<wbr>Placement<wbr>Group<wbr>Id</span>
+        <span id="state_proximityplacementgroupid_nodejs">
+<a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3105,7 +3683,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3114,7 +3694,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling<wbr>Upgrade<wbr>Policy</span>
+        <span id="state_rollingupgradepolicy_nodejs">
+<a href="#state_rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
@@ -3123,7 +3705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>In<wbr>Policy</span>
+        <span id="state_scaleinpolicy_nodejs">
+<a href="#state_scaleinpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3132,7 +3716,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="state_secrets_nodejs">
+<a href="#state_secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret[]</a></span>
     </dt>
@@ -3141,7 +3727,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>single<wbr>Placement<wbr>Group</span>
+        <span id="state_singleplacementgroup_nodejs">
+<a href="#state_singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3150,7 +3738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku</span>
+        <span id="state_sku_nodejs">
+<a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3159,7 +3749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Image<wbr>Id</span>
+        <span id="state_sourceimageid_nodejs">
+<a href="#state_sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3168,7 +3760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Image<wbr>Reference</span>
+        <span id="state_sourceimagereference_nodejs">
+<a href="#state_sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
@@ -3177,7 +3771,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3186,7 +3782,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Notification</span>
+        <span id="state_terminatenotification_nodejs">
+<a href="#state_terminatenotification_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
     </dt>
@@ -3195,7 +3793,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3204,7 +3804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Id</span>
+        <span id="state_uniqueid_nodejs">
+<a href="#state_uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3213,7 +3815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade<wbr>Mode</span>
+        <span id="state_upgrademode_nodejs">
+<a href="#state_upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3222,7 +3826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>winrm<wbr>Listeners</span>
+        <span id="state_winrmlisteners_nodejs">
+<a href="#state_winrmlisteners_nodejs" style="color: inherit; text-decoration: inherit;">winrm<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener[]</a></span>
     </dt>
@@ -3231,7 +3837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Balance</span>
+        <span id="state_zonebalance_nodejs">
+<a href="#state_zonebalance_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3240,7 +3848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zones</span>
+        <span id="state_zones_nodejs">
+<a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3256,7 +3866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>capabilities</span>
+        <span id="state_additional_capabilities_python">
+<a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities]</a></span>
     </dt>
@@ -3265,7 +3877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>unattend_<wbr>contents</span>
+        <span id="state_additional_unattend_contents_python">
+<a href="#state_additional_unattend_contents_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>contents</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content]</a></span>
     </dt>
@@ -3274,7 +3888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>password</span>
+        <span id="state_admin_password_python">
+<a href="#state_admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3283,7 +3899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>username</span>
+        <span id="state_admin_username_python">
+<a href="#state_admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3292,7 +3910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic_<wbr>instance_<wbr>repair</span>
+        <span id="state_automatic_instance_repair_python">
+<a href="#state_automatic_instance_repair_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>instance_<wbr>repair</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair]</a></span>
     </dt>
@@ -3301,7 +3921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic_<wbr>os_<wbr>upgrade_<wbr>policy</span>
+        <span id="state_automatic_os_upgrade_policy_python">
+<a href="#state_automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy]</a></span>
     </dt>
@@ -3310,7 +3932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot_<wbr>diagnostics</span>
+        <span id="state_boot_diagnostics_python">
+<a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
     </dt>
@@ -3319,7 +3943,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>computer_<wbr>name_<wbr>prefix</span>
+        <span id="state_computer_name_prefix_python">
+<a href="#state_computer_name_prefix_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3328,7 +3954,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>data</span>
+        <span id="state_custom_data_python">
+<a href="#state_custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3337,7 +3965,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>disks</span>
+        <span id="state_data_disks_python">
+<a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
     </dt>
@@ -3346,7 +3976,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>do_<wbr>not_<wbr>run_<wbr>extensions_<wbr>on_<wbr>overprovisioned_<wbr>machines</span>
+        <span id="state_do_not_run_extensions_on_overprovisioned_machines_python">
+<a href="#state_do_not_run_extensions_on_overprovisioned_machines_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>run_<wbr>extensions_<wbr>on_<wbr>overprovisioned_<wbr>machines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3355,7 +3987,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>automatic_<wbr>updates</span>
+        <span id="state_enable_automatic_updates_python">
+<a href="#state_enable_automatic_updates_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>updates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3364,7 +3998,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eviction_<wbr>policy</span>
+        <span id="state_eviction_policy_python">
+<a href="#state_eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3373,7 +4009,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>probe_<wbr>id</span>
+        <span id="state_health_probe_id_python">
+<a href="#state_health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3382,7 +4020,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity]</a></span>
     </dt>
@@ -3391,7 +4031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instances</span>
+        <span id="state_instances_python">
+<a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3400,7 +4042,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="state_license_type_python">
+<a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3409,7 +4053,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3418,7 +4064,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bid_<wbr>price</span>
+        <span id="state_max_bid_price_python">
+<a href="#state_max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3427,7 +4075,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3436,7 +4086,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>interfaces</span>
+        <span id="state_network_interfaces_python">
+<a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface]</a></span>
     </dt>
@@ -3445,7 +4097,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os_<wbr>disk</span>
+        <span id="state_os_disk_python">
+<a href="#state_os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk]</a></span>
     </dt>
@@ -3454,7 +4108,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>overprovision</span>
+        <span id="state_overprovision_python">
+<a href="#state_overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3463,7 +4119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="state_plan_python">
+<a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan]</a></span>
     </dt>
@@ -3471,7 +4129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_python">
+<a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3480,7 +4140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provision_<wbr>vm_<wbr>agent</span>
+        <span id="state_provision_vm_agent_python">
+<a href="#state_provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3489,7 +4151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proximity_<wbr>placement_<wbr>group_<wbr>id</span>
+        <span id="state_proximity_placement_group_id_python">
+<a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3498,7 +4162,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3507,7 +4173,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling_<wbr>upgrade_<wbr>policy</span>
+        <span id="state_rolling_upgrade_policy_python">
+<a href="#state_rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
     </dt>
@@ -3516,7 +4184,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale_<wbr>in_<wbr>policy</span>
+        <span id="state_scale_in_policy_python">
+<a href="#state_scale_in_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3525,7 +4195,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="state_secrets_python">
+<a href="#state_secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret]</a></span>
     </dt>
@@ -3534,7 +4206,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>single_<wbr>placement_<wbr>group</span>
+        <span id="state_single_placement_group_python">
+<a href="#state_single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3543,7 +4217,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku</span>
+        <span id="state_sku_python">
+<a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3552,7 +4228,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>image_<wbr>id</span>
+        <span id="state_source_image_id_python">
+<a href="#state_source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3561,7 +4239,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>image_<wbr>reference</span>
+        <span id="state_source_image_reference_python">
+<a href="#state_source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference]</a></span>
     </dt>
@@ -3570,7 +4250,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3579,7 +4261,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>notification</span>
+        <span id="state_terminate_notification_python">
+<a href="#state_terminate_notification_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification]</a></span>
     </dt>
@@ -3588,7 +4272,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_python">
+<a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3597,7 +4283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique_<wbr>id</span>
+        <span id="state_unique_id_python">
+<a href="#state_unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3606,7 +4294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade_<wbr>mode</span>
+        <span id="state_upgrade_mode_python">
+<a href="#state_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3615,7 +4305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>winrm_<wbr>listeners</span>
+        <span id="state_winrm_listeners_python">
+<a href="#state_winrm_listeners_python" style="color: inherit; text-decoration: inherit;">winrm_<wbr>listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener]</a></span>
     </dt>
@@ -3624,7 +4316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>balance</span>
+        <span id="state_zone_balance_python">
+<a href="#state_zone_balance_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>balance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3633,7 +4327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zones</span>
+        <span id="state_zones_python">
+<a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3675,7 +4371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ultra<wbr>Ssd<wbr>Enabled</span>
+        <span id="ultrassdenabled_csharp">
+<a href="#ultrassdenabled_csharp" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3691,7 +4389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ultra<wbr>Ssd<wbr>Enabled</span>
+        <span id="ultrassdenabled_go">
+<a href="#ultrassdenabled_go" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3707,7 +4407,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ultra<wbr>Ssd<wbr>Enabled</span>
+        <span id="ultrassdenabled_nodejs">
+<a href="#ultrassdenabled_nodejs" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3723,7 +4425,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ultra<wbr>Ssd<wbr>Enabled</span>
+        <span id="ultrassdenabled_python">
+<a href="#ultrassdenabled_python" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3757,7 +4461,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3766,7 +4472,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Setting</span>
+        <span id="setting_csharp">
+<a href="#setting_csharp" style="color: inherit; text-decoration: inherit;">Setting</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3782,7 +4490,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3791,7 +4501,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Setting</span>
+        <span id="setting_go">
+<a href="#setting_go" style="color: inherit; text-decoration: inherit;">Setting</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3807,7 +4519,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3816,7 +4530,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>setting</span>
+        <span id="setting_nodejs">
+<a href="#setting_nodejs" style="color: inherit; text-decoration: inherit;">setting</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3832,7 +4548,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3841,7 +4559,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>setting</span>
+        <span id="setting_python">
+<a href="#setting_python" style="color: inherit; text-decoration: inherit;">setting</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3875,7 +4595,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3884,7 +4606,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_csharp">
+<a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3900,7 +4624,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3909,7 +4635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_go">
+<a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3925,7 +4653,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3934,7 +4664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace<wbr>Period</span>
+        <span id="graceperiod_nodejs">
+<a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3950,7 +4682,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3959,7 +4693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace<wbr>Period</span>
+        <span id="graceperiod_python">
+<a href="#graceperiod_python" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3993,7 +4729,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Disable<wbr>Automatic<wbr>Rollback</span>
+        <span id="disableautomaticrollback_csharp">
+<a href="#disableautomaticrollback_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Automatic<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4002,7 +4740,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enable<wbr>Automatic<wbr>Os<wbr>Upgrade</span>
+        <span id="enableautomaticosupgrade_csharp">
+<a href="#enableautomaticosupgrade_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Os<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4018,7 +4758,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Disable<wbr>Automatic<wbr>Rollback</span>
+        <span id="disableautomaticrollback_go">
+<a href="#disableautomaticrollback_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Automatic<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4027,7 +4769,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enable<wbr>Automatic<wbr>Os<wbr>Upgrade</span>
+        <span id="enableautomaticosupgrade_go">
+<a href="#enableautomaticosupgrade_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Os<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4043,7 +4787,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>disable<wbr>Automatic<wbr>Rollback</span>
+        <span id="disableautomaticrollback_nodejs">
+<a href="#disableautomaticrollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Automatic<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4052,7 +4798,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enable<wbr>Automatic<wbr>Os<wbr>Upgrade</span>
+        <span id="enableautomaticosupgrade_nodejs">
+<a href="#enableautomaticosupgrade_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Os<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4068,7 +4816,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>disable<wbr>Automatic<wbr>Rollback</span>
+        <span id="disableautomaticrollback_python">
+<a href="#disableautomaticrollback_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Automatic<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4077,7 +4827,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enable<wbr>Automatic<wbr>Os<wbr>Upgrade</span>
+        <span id="enableautomaticosupgrade_python">
+<a href="#enableautomaticosupgrade_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Os<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4111,7 +4863,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Uri</span>
+        <span id="storageaccounturi_csharp">
+<a href="#storageaccounturi_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4127,7 +4881,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Uri</span>
+        <span id="storageaccounturi_go">
+<a href="#storageaccounturi_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4143,7 +4899,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Uri</span>
+        <span id="storageaccounturi_nodejs">
+<a href="#storageaccounturi_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4159,7 +4917,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Uri</span>
+        <span id="storageaccounturi_python">
+<a href="#storageaccounturi_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4193,7 +4953,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_csharp">
+<a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4202,7 +4964,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4211,7 +4975,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Lun</span>
+        <span id="lun_csharp">
+<a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4220,7 +4986,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_csharp">
+<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4229,7 +4997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="createoption_csharp">
+<a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4238,7 +5008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4247,7 +5019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_csharp">
+<a href="#writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4263,7 +5037,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_go">
+<a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4272,7 +5048,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4281,7 +5059,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Lun</span>
+        <span id="lun_go">
+<a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4290,7 +5070,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_go">
+<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4299,7 +5081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Option</span>
+        <span id="createoption_go">
+<a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4308,7 +5092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4317,7 +5103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_go">
+<a href="#writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4333,7 +5121,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_nodejs">
+<a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4342,7 +5132,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4351,7 +5143,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>lun</span>
+        <span id="lun_nodejs">
+<a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4360,7 +5154,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_nodejs">
+<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4369,7 +5165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Option</span>
+        <span id="createoption_nodejs">
+<a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4378,7 +5176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4387,7 +5187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_nodejs">
+<a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4403,7 +5205,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_python">
+<a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4412,7 +5216,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4421,7 +5227,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>lun</span>
+        <span id="lun_python">
+<a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4430,7 +5238,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>type</span>
+        <span id="storage_account_type_python">
+<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4439,7 +5249,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>option</span>
+        <span id="create_option_python">
+<a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4448,7 +5260,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>encryption_<wbr>set_<wbr>id</span>
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4457,7 +5271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>accelerator_<wbr>enabled</span>
+        <span id="write_accelerator_enabled_python">
+<a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4491,7 +5307,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4500,7 +5318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Ids</span>
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4509,7 +5329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4525,7 +5347,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4534,7 +5358,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Ids</span>
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4543,7 +5369,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4559,7 +5387,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4568,7 +5398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity<wbr>Ids</span>
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4577,7 +5409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal<wbr>Id</span>
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4593,7 +5427,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4602,7 +5438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity<wbr>Ids</span>
+        <span id="identityids_python">
+<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4611,7 +5449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal_<wbr>id</span>
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4645,7 +5485,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Configurations</span>
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
@@ -4654,7 +5496,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4663,7 +5507,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4672,7 +5518,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Accelerated<wbr>Networking</span>
+        <span id="enableacceleratednetworking_csharp">
+<a href="#enableacceleratednetworking_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4681,7 +5529,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Ip<wbr>Forwarding</span>
+        <span id="enableipforwarding_csharp">
+<a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Forwarding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4690,7 +5540,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Security<wbr>Group<wbr>Id</span>
+        <span id="networksecuritygroupid_csharp">
+<a href="#networksecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4699,7 +5551,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary</span>
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4715,7 +5569,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Configurations</span>
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration</a></span>
     </dt>
@@ -4724,7 +5580,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4733,7 +5591,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Servers</span>
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4742,7 +5602,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Accelerated<wbr>Networking</span>
+        <span id="enableacceleratednetworking_go">
+<a href="#enableacceleratednetworking_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4751,7 +5613,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Ip<wbr>Forwarding</span>
+        <span id="enableipforwarding_go">
+<a href="#enableipforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Forwarding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4760,7 +5624,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Security<wbr>Group<wbr>Id</span>
+        <span id="networksecuritygroupid_go">
+<a href="#networksecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4769,7 +5635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary</span>
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4785,7 +5653,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Configurations</span>
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
@@ -4794,7 +5664,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4803,7 +5675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Servers</span>
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4812,7 +5686,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Accelerated<wbr>Networking</span>
+        <span id="enableacceleratednetworking_nodejs">
+<a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4821,7 +5697,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Ip<wbr>Forwarding</span>
+        <span id="enableipforwarding_nodejs">
+<a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ip<wbr>Forwarding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4830,7 +5708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Security<wbr>Group<wbr>Id</span>
+        <span id="networksecuritygroupid_nodejs">
+<a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4839,7 +5719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary</span>
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4855,7 +5737,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>configurations</span>
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
@@ -4864,7 +5748,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4873,7 +5759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>servers</span>
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4882,7 +5770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>accelerated_<wbr>networking</span>
+        <span id="enable_accelerated_networking_python">
+<a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4891,7 +5781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>ip_<wbr>forwarding</span>
+        <span id="enable_ip_forwarding_python">
+<a href="#enable_ip_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ip_<wbr>forwarding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4900,7 +5792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>security_<wbr>group_<wbr>id</span>
+        <span id="network_security_group_id_python">
+<a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4909,7 +5803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary</span>
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4943,7 +5839,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4952,7 +5850,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="applicationgatewaybackendaddresspoolids_csharp">
+<a href="#applicationgatewaybackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4961,7 +5861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="applicationsecuritygroupids_csharp">
+<a href="#applicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4970,7 +5872,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="loadbalancerbackendaddresspoolids_csharp">
+<a href="#loadbalancerbackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4979,7 +5883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</span>
+        <span id="loadbalancerinboundnatrulesids_csharp">
+<a href="#loadbalancerinboundnatrulesids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4988,7 +5894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary</span>
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4997,7 +5905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip<wbr>Addresses</span>
+        <span id="publicipaddresses_csharp">
+<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
@@ -5006,7 +5916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5015,7 +5927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5031,7 +5945,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5040,7 +5956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="applicationgatewaybackendaddresspoolids_go">
+<a href="#applicationgatewaybackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5049,7 +5967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="applicationsecuritygroupids_go">
+<a href="#applicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5058,7 +5978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="loadbalancerbackendaddresspoolids_go">
+<a href="#loadbalancerbackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5067,7 +5989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</span>
+        <span id="loadbalancerinboundnatrulesids_go">
+<a href="#loadbalancerinboundnatrulesids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5076,7 +6000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary</span>
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5085,7 +6011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip<wbr>Addresses</span>
+        <span id="publicipaddresses_go">
+<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address</a></span>
     </dt>
@@ -5094,7 +6022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5103,7 +6033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5119,7 +6051,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5128,7 +6062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="applicationgatewaybackendaddresspoolids_nodejs">
+<a href="#applicationgatewaybackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5137,7 +6073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="applicationsecuritygroupids_nodejs">
+<a href="#applicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5146,7 +6084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="loadbalancerbackendaddresspoolids_nodejs">
+<a href="#loadbalancerbackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5155,7 +6095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</span>
+        <span id="loadbalancerinboundnatrulesids_nodejs">
+<a href="#loadbalancerinboundnatrulesids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5164,7 +6106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary</span>
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5173,7 +6117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Ip<wbr>Addresses</span>
+        <span id="publicipaddresses_nodejs">
+<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address[]</a></span>
     </dt>
@@ -5182,7 +6128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5191,7 +6139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5207,7 +6157,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5216,7 +6168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="applicationgatewaybackendaddresspoolids_python">
+<a href="#applicationgatewaybackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5225,7 +6179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="applicationsecuritygroupids_python">
+<a href="#applicationsecuritygroupids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5234,7 +6190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</span>
+        <span id="loadbalancerbackendaddresspoolids_python">
+<a href="#loadbalancerbackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5243,7 +6201,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</span>
+        <span id="loadbalancerinboundnatrulesids_python">
+<a href="#loadbalancerinboundnatrulesids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5252,7 +6212,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary</span>
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5261,7 +6223,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>ip_<wbr>addresses</span>
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address]</a></span>
     </dt>
@@ -5270,7 +6234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5279,7 +6245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5313,7 +6281,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5322,7 +6292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name<wbr>Label</span>
+        <span id="domainnamelabel_csharp">
+<a href="#domainnamelabel_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5331,7 +6303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="idletimeoutinminutes_csharp">
+<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5340,7 +6314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Tags</span>
+        <span id="iptags_csharp">
+<a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -5349,7 +6325,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip<wbr>Prefix<wbr>Id</span>
+        <span id="publicipprefixid_csharp">
+<a href="#publicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5365,7 +6343,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5374,7 +6354,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name<wbr>Label</span>
+        <span id="domainnamelabel_go">
+<a href="#domainnamelabel_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5383,7 +6365,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="idletimeoutinminutes_go">
+<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5392,7 +6376,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Tags</span>
+        <span id="iptags_go">
+<a href="#iptags_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag</a></span>
     </dt>
@@ -5401,7 +6387,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip<wbr>Prefix<wbr>Id</span>
+        <span id="publicipprefixid_go">
+<a href="#publicipprefixid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5417,7 +6405,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5426,7 +6416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Name<wbr>Label</span>
+        <span id="domainnamelabel_nodejs">
+<a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5435,7 +6427,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Timeout<wbr>In<wbr>Minutes</span>
+        <span id="idletimeoutinminutes_nodejs">
+<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5444,7 +6438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Tags</span>
+        <span id="iptags_nodejs">
+<a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag[]</a></span>
     </dt>
@@ -5453,7 +6449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Ip<wbr>Prefix<wbr>Id</span>
+        <span id="publicipprefixid_nodejs">
+<a href="#publicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5469,7 +6467,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5478,7 +6478,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>name_<wbr>label</span>
+        <span id="domain_name_label_python">
+<a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5487,7 +6489,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle_<wbr>timeout_<wbr>in_<wbr>minutes</span>
+        <span id="idle_timeout_in_minutes_python">
+<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5496,7 +6500,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Tags</span>
+        <span id="iptags_python">
+<a href="#iptags_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag]</a></span>
     </dt>
@@ -5505,7 +6511,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>ip_<wbr>prefix_<wbr>id</span>
+        <span id="public_ip_prefix_id_python">
+<a href="#public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5539,7 +6547,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tag</span>
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5548,7 +6558,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5564,7 +6576,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tag</span>
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5573,7 +6587,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5589,7 +6605,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tag</span>
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5598,7 +6616,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5614,7 +6634,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tag</span>
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5623,7 +6645,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5657,7 +6681,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_csharp">
+<a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5666,7 +6692,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_csharp">
+<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5675,7 +6703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Diff<wbr>Disk<wbr>Settings</span>
+        <span id="diffdisksettings_csharp">
+<a href="#diffdisksettings_csharp" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -5684,7 +6714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5693,7 +6725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5702,7 +6736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_csharp">
+<a href="#writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5718,7 +6754,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Caching</span>
+        <span id="caching_go">
+<a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5727,7 +6765,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_go">
+<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5736,7 +6776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Diff<wbr>Disk<wbr>Settings</span>
+        <span id="diffdisksettings_go">
+<a href="#diffdisksettings_go" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
@@ -5745,7 +6787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5754,7 +6798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5763,7 +6809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_go">
+<a href="#writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5779,7 +6827,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_nodejs">
+<a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5788,7 +6838,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Type</span>
+        <span id="storageaccounttype_nodejs">
+<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5797,7 +6849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>diff<wbr>Disk<wbr>Settings</span>
+        <span id="diffdisksettings_nodejs">
+<a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
@@ -5806,7 +6860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Encryption<wbr>Set<wbr>Id</span>
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5815,7 +6871,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Size<wbr>Gb</span>
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5824,7 +6882,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Accelerator<wbr>Enabled</span>
+        <span id="writeacceleratorenabled_nodejs">
+<a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5840,7 +6900,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>caching</span>
+        <span id="caching_python">
+<a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5849,7 +6911,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>type</span>
+        <span id="storage_account_type_python">
+<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5858,7 +6922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>diff<wbr>Disk<wbr>Settings</span>
+        <span id="diffdisksettings_python">
+<a href="#diffdisksettings_python" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Dict[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings]</a></span>
     </dt>
@@ -5867,7 +6933,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>encryption_<wbr>set_<wbr>id</span>
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5876,7 +6944,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5885,7 +6955,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>accelerator_<wbr>enabled</span>
+        <span id="write_accelerator_enabled_python">
+<a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5919,7 +6991,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Option</span>
+        <span id="option_csharp">
+<a href="#option_csharp" style="color: inherit; text-decoration: inherit;">Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5934,7 +7008,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Option</span>
+        <span id="option_go">
+<a href="#option_go" style="color: inherit; text-decoration: inherit;">Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5949,7 +7025,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>option</span>
+        <span id="option_nodejs">
+<a href="#option_nodejs" style="color: inherit; text-decoration: inherit;">option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5964,7 +7042,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>option</span>
+        <span id="option_python">
+<a href="#option_python" style="color: inherit; text-decoration: inherit;">option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5997,7 +7077,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6006,7 +7088,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Product</span>
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6014,11 +7098,14 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6029,7 +7116,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6038,7 +7127,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Product</span>
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6046,11 +7137,14 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6061,7 +7155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6070,7 +7166,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>product</span>
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6078,11 +7176,14 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6093,7 +7194,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6102,7 +7205,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>product</span>
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6110,11 +7215,14 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6143,7 +7251,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Batch<wbr>Instance<wbr>Percent</span>
+        <span id="maxbatchinstancepercent_csharp">
+<a href="#maxbatchinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6152,7 +7262,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyinstancepercent_csharp">
+<a href="#maxunhealthyinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6161,7 +7273,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyupgradedinstancepercent_csharp">
+<a href="#maxunhealthyupgradedinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6170,7 +7284,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pause<wbr>Time<wbr>Between<wbr>Batches</span>
+        <span id="pausetimebetweenbatches_csharp">
+<a href="#pausetimebetweenbatches_csharp" style="color: inherit; text-decoration: inherit;">Pause<wbr>Time<wbr>Between<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6186,7 +7302,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Batch<wbr>Instance<wbr>Percent</span>
+        <span id="maxbatchinstancepercent_go">
+<a href="#maxbatchinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6195,7 +7313,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyinstancepercent_go">
+<a href="#maxunhealthyinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6204,7 +7324,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyupgradedinstancepercent_go">
+<a href="#maxunhealthyupgradedinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6213,7 +7335,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pause<wbr>Time<wbr>Between<wbr>Batches</span>
+        <span id="pausetimebetweenbatches_go">
+<a href="#pausetimebetweenbatches_go" style="color: inherit; text-decoration: inherit;">Pause<wbr>Time<wbr>Between<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6229,7 +7353,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Batch<wbr>Instance<wbr>Percent</span>
+        <span id="maxbatchinstancepercent_nodejs">
+<a href="#maxbatchinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6238,7 +7364,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Unhealthy<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyinstancepercent_nodejs">
+<a href="#maxunhealthyinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6247,7 +7375,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyupgradedinstancepercent_nodejs">
+<a href="#maxunhealthyupgradedinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6256,7 +7386,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pause<wbr>Time<wbr>Between<wbr>Batches</span>
+        <span id="pausetimebetweenbatches_nodejs">
+<a href="#pausetimebetweenbatches_nodejs" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6272,7 +7404,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Batch<wbr>Instance<wbr>Percent</span>
+        <span id="maxbatchinstancepercent_python">
+<a href="#maxbatchinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6281,7 +7415,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Unhealthy<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyinstancepercent_python">
+<a href="#maxunhealthyinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6290,7 +7426,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</span>
+        <span id="maxunhealthyupgradedinstancepercent_python">
+<a href="#maxunhealthyupgradedinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6299,7 +7437,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pause<wbr>Time<wbr>Between<wbr>Batches</span>
+        <span id="pausetimebetweenbatches_python">
+<a href="#pausetimebetweenbatches_python" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6333,7 +7473,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Certificates</span>
+        <span id="certificates_csharp">
+<a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -6342,7 +7484,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Id</span>
+        <span id="keyvaultid_csharp">
+<a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6358,7 +7502,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Certificates</span>
+        <span id="certificates_go">
+<a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">[]Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate</a></span>
     </dt>
@@ -6367,7 +7513,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Id</span>
+        <span id="keyvaultid_go">
+<a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6383,7 +7531,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>certificates</span>
+        <span id="certificates_nodejs">
+<a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate[]</a></span>
     </dt>
@@ -6392,7 +7542,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Vault<wbr>Id</span>
+        <span id="keyvaultid_nodejs">
+<a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6408,7 +7560,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>certificates</span>
+        <span id="certificates_python">
+<a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">List[Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate]</a></span>
     </dt>
@@ -6417,7 +7571,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>vault_<wbr>id</span>
+        <span id="key_vault_id_python">
+<a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6451,7 +7607,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Store</span>
+        <span id="store_csharp">
+<a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6460,7 +7618,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6476,7 +7636,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Store</span>
+        <span id="store_go">
+<a href="#store_go" style="color: inherit; text-decoration: inherit;">Store</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6485,7 +7647,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6501,7 +7665,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>store</span>
+        <span id="store_nodejs">
+<a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6510,7 +7676,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6526,7 +7694,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>store</span>
+        <span id="store_python">
+<a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6535,7 +7705,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6569,36 +7741,46 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Publisher</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Virtual Machine SKU for the Scale Set, such as `Standard_F2`.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Internet Protocol Version which should be used for this IP Configuration. Possible values are `IPv4` and `IPv6`. Defaults to `IPv4`.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -6610,36 +7792,46 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Offer</span>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Publisher</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Virtual Machine SKU for the Scale Set, such as `Standard_F2`.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Internet Protocol Version which should be used for this IP Configuration. Possible values are `IPv4` and `IPv6`. Defaults to `IPv4`.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -6651,36 +7843,46 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publisher</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Virtual Machine SKU for the Scale Set, such as `Standard_F2`.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Internet Protocol Version which should be used for this IP Configuration. Possible values are `IPv4` and `IPv6`. Defaults to `IPv4`.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -6692,36 +7894,46 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>offer</span>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publisher</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Virtual Machine SKU for the Scale Set, such as `Standard_F2`.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Internet Protocol Version which should be used for this IP Configuration. Possible values are `IPv4` and `IPv6`. Defaults to `IPv4`.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -6751,7 +7963,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -6760,7 +7974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6776,7 +7992,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -6785,7 +8003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6801,7 +8021,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6810,7 +8032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6826,7 +8050,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6835,7 +8061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6869,7 +8097,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6878,7 +8108,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Url</span>
+        <span id="certificateurl_csharp">
+<a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6894,7 +8126,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6903,7 +8137,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate<wbr>Url</span>
+        <span id="certificateurl_go">
+<a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6919,7 +8155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6928,7 +8166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate<wbr>Url</span>
+        <span id="certificateurl_nodejs">
+<a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6944,7 +8184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6953,7 +8195,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>certificate<wbr>Url</span>
+        <span id="certificateurl_python">
+<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

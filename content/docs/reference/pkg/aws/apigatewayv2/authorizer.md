@@ -283,7 +283,9 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Id</span>
+        <span id="apiid_csharp">
+<a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +294,9 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Authorizer<wbr>Type</span>
+        <span id="authorizertype_csharp">
+<a href="#authorizertype_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +307,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Sources</span>
+        <span id="identitysources_csharp">
+<a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -314,7 +320,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="authorizercredentialsarn_csharp">
+<a href="#authorizercredentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +332,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Uri</span>
+        <span id="authorizeruri_csharp">
+<a href="#authorizeruri_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +345,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jwt<wbr>Configuration</span>
+        <span id="jwtconfiguration_csharp">
+<a href="#jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -345,7 +357,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +375,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Id</span>
+        <span id="apiid_go">
+<a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +386,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>Authorizer<wbr>Type</span>
+        <span id="authorizertype_go">
+<a href="#authorizertype_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +399,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-required"
             title="Required">
-        <span>Identity<wbr>Sources</span>
+        <span id="identitysources_go">
+<a href="#identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -392,7 +412,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="authorizercredentialsarn_go">
+<a href="#authorizercredentialsarn_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +424,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Uri</span>
+        <span id="authorizeruri_go">
+<a href="#authorizeruri_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +437,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jwt<wbr>Configuration</span>
+        <span id="jwtconfiguration_go">
+<a href="#jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
@@ -423,7 +449,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +467,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>api<wbr>Id</span>
+        <span id="apiid_nodejs">
+<a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -448,7 +478,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>authorizer<wbr>Type</span>
+        <span id="authorizertype_nodejs">
+<a href="#authorizertype_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +491,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-required"
             title="Required">
-        <span>identity<wbr>Sources</span>
+        <span id="identitysources_nodejs">
+<a href="#identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -470,7 +504,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="authorizercredentialsarn_nodejs">
+<a href="#authorizercredentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +516,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer<wbr>Uri</span>
+        <span id="authorizeruri_nodejs">
+<a href="#authorizeruri_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +529,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>jwt<wbr>Configuration</span>
+        <span id="jwtconfiguration_nodejs">
+<a href="#jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
@@ -501,7 +541,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -517,7 +559,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>api_<wbr>id</span>
+        <span id="api_id_python">
+<a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -526,7 +570,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-required"
             title="Required">
-        <span>authorizer_<wbr>type</span>
+        <span id="authorizer_type_python">
+<a href="#authorizer_type_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -537,7 +583,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-required"
             title="Required">
-        <span>identity_<wbr>sources</span>
+        <span id="identity_sources_python">
+<a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -548,7 +596,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer_<wbr>credentials_<wbr>arn</span>
+        <span id="authorizer_credentials_arn_python">
+<a href="#authorizer_credentials_arn_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>credentials_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -558,7 +608,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer_<wbr>uri</span>
+        <span id="authorizer_uri_python">
+<a href="#authorizer_uri_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +621,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>jwt_<wbr>configuration</span>
+        <span id="jwt_configuration_python">
+<a href="#jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Dict[Authorizer<wbr>Jwt<wbr>Configuration]</a></span>
     </dt>
@@ -579,7 +633,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +662,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -621,7 +679,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -636,7 +696,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +713,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -792,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Id</span>
+        <span id="state_apiid_csharp">
+<a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="state_authorizercredentialsarn_csharp">
+<a href="#state_authorizercredentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -811,7 +879,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Type</span>
+        <span id="state_authorizertype_csharp">
+<a href="#state_authorizertype_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -822,7 +892,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Uri</span>
+        <span id="state_authorizeruri_csharp">
+<a href="#state_authorizeruri_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +905,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Sources</span>
+        <span id="state_identitysources_csharp">
+<a href="#state_identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -844,7 +918,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jwt<wbr>Configuration</span>
+        <span id="state_jwtconfiguration_csharp">
+<a href="#state_jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -854,7 +930,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -870,7 +948,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Id</span>
+        <span id="state_apiid_go">
+<a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +959,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="state_authorizercredentialsarn_go">
+<a href="#state_authorizercredentialsarn_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -889,7 +971,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Type</span>
+        <span id="state_authorizertype_go">
+<a href="#state_authorizertype_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -900,7 +984,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorizer<wbr>Uri</span>
+        <span id="state_authorizeruri_go">
+<a href="#state_authorizeruri_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -911,7 +997,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity<wbr>Sources</span>
+        <span id="state_identitysources_go">
+<a href="#state_identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -922,7 +1010,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jwt<wbr>Configuration</span>
+        <span id="state_jwtconfiguration_go">
+<a href="#state_jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
@@ -932,7 +1022,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -948,7 +1040,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Id</span>
+        <span id="state_apiid_nodejs">
+<a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1051,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer<wbr>Credentials<wbr>Arn</span>
+        <span id="state_authorizercredentialsarn_nodejs">
+<a href="#state_authorizercredentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Credentials<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -967,7 +1063,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer<wbr>Type</span>
+        <span id="state_authorizertype_nodejs">
+<a href="#state_authorizertype_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -978,7 +1076,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer<wbr>Uri</span>
+        <span id="state_authorizeruri_nodejs">
+<a href="#state_authorizeruri_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -989,7 +1089,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity<wbr>Sources</span>
+        <span id="state_identitysources_nodejs">
+<a href="#state_identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1000,7 +1102,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>jwt<wbr>Configuration</span>
+        <span id="state_jwtconfiguration_nodejs">
+<a href="#state_jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
@@ -1010,7 +1114,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1026,7 +1132,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>id</span>
+        <span id="state_api_id_python">
+<a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1035,7 +1143,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer_<wbr>credentials_<wbr>arn</span>
+        <span id="state_authorizer_credentials_arn_python">
+<a href="#state_authorizer_credentials_arn_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>credentials_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1045,7 +1155,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer_<wbr>type</span>
+        <span id="state_authorizer_type_python">
+<a href="#state_authorizer_type_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1056,7 +1168,9 @@ For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorizer_<wbr>uri</span>
+        <span id="state_authorizer_uri_python">
+<a href="#state_authorizer_uri_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1067,7 +1181,9 @@ Supported only for `REQUEST` authorizers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity_<wbr>sources</span>
+        <span id="state_identity_sources_python">
+<a href="#state_identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1078,7 +1194,9 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 
     <dt class="property-optional"
             title="Optional">
-        <span>jwt_<wbr>configuration</span>
+        <span id="state_jwt_configuration_python">
+<a href="#state_jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Dict[Authorizer<wbr>Jwt<wbr>Configuration]</a></span>
     </dt>
@@ -1088,7 +1206,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1130,7 +1250,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Audiences</span>
+        <span id="audiences_csharp">
+<a href="#audiences_csharp" style="color: inherit; text-decoration: inherit;">Audiences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1139,7 +1261,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="issuer_csharp">
+<a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1155,7 +1279,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Audiences</span>
+        <span id="audiences_go">
+<a href="#audiences_go" style="color: inherit; text-decoration: inherit;">Audiences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1164,7 +1290,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="issuer_go">
+<a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1180,7 +1308,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>audiences</span>
+        <span id="audiences_nodejs">
+<a href="#audiences_nodejs" style="color: inherit; text-decoration: inherit;">audiences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1189,7 +1319,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="issuer_nodejs">
+<a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1205,7 +1337,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>audiences</span>
+        <span id="audiences_python">
+<a href="#audiences_python" style="color: inherit; text-decoration: inherit;">audiences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1214,7 +1348,9 @@ Supported only for HTTP APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="issuer_python">
+<a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

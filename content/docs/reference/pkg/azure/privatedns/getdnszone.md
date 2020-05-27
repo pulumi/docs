@@ -92,7 +92,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -101,7 +103,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +123,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -128,7 +134,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -146,7 +154,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -155,7 +165,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -173,7 +185,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -182,7 +196,9 @@ DNS Zones in your subscription that matches `name` will be returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -213,7 +229,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -222,7 +240,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="maxnumberofrecordsets_csharp">
+<a href="#maxnumberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -231,7 +251,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</span>
+        <span id="maxnumberofvirtualnetworklinks_csharp">
+<a href="#maxnumberofvirtualnetworklinks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -240,7 +262,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</span>
+        <span id="maxnumberofvirtualnetworklinkswithregistration_csharp">
+<a href="#maxnumberofvirtualnetworklinkswithregistration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -249,7 +273,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +283,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="numberofrecordsets_csharp">
+<a href="#numberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -266,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -290,7 +322,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -299,7 +333,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="maxnumberofrecordsets_go">
+<a href="#maxnumberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -308,7 +344,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</span>
+        <span id="maxnumberofvirtualnetworklinks_go">
+<a href="#maxnumberofvirtualnetworklinks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -317,7 +355,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</span>
+        <span id="maxnumberofvirtualnetworklinkswithregistration_go">
+<a href="#maxnumberofvirtualnetworklinkswithregistration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -326,7 +366,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +376,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="numberofrecordsets_go">
+<a href="#numberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -343,7 +387,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +397,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -367,7 +415,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -376,7 +426,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="maxnumberofrecordsets_nodejs">
+<a href="#maxnumberofrecordsets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -385,7 +437,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</span>
+        <span id="maxnumberofvirtualnetworklinks_nodejs">
+<a href="#maxnumberofvirtualnetworklinks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -394,7 +448,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</span>
+        <span id="maxnumberofvirtualnetworklinkswithregistration_nodejs">
+<a href="#maxnumberofvirtualnetworklinkswithregistration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -403,7 +459,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +469,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>number<wbr>Of<wbr>Record<wbr>Sets</span>
+        <span id="numberofrecordsets_nodejs">
+<a href="#numberofrecordsets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Record<wbr>Sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -420,7 +480,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -428,7 +490,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -444,7 +508,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -453,7 +519,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</span>
+        <span id="max_number_of_record_sets_python">
+<a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -462,7 +530,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</span>
+        <span id="max_number_of_virtual_network_links_python">
+<a href="#max_number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -471,7 +541,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</span>
+        <span id="max_number_of_virtual_network_links_with_registration_python">
+<a href="#max_number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -480,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -488,7 +562,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>number_<wbr>of_<wbr>record_<wbr>sets</span>
+        <span id="number_of_record_sets_python">
+<a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -497,7 +573,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +583,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>

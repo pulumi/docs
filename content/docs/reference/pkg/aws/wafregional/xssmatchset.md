@@ -259,7 +259,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +270,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Xss<wbr>Match<wbr>Tuples</span>
+        <span id="xssmatchtuples_csharp">
+<a href="#xssmatchtuples_csharp" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">List&lt;Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
@@ -284,7 +288,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -293,7 +299,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Xss<wbr>Match<wbr>Tuples</span>
+        <span id="xssmatchtuples_go">
+<a href="#xssmatchtuples_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></span>
     </dt>
@@ -309,7 +317,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -318,7 +328,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>xss<wbr>Match<wbr>Tuples</span>
+        <span id="xssmatchtuples_nodejs">
+<a href="#xssmatchtuples_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
@@ -334,7 +346,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -343,7 +357,9 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>xss_<wbr>match_<wbr>tuples</span>
+        <span id="xss_match_tuples_python">
+<a href="#xss_match_tuples_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>match_<wbr>tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">List[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple]</a></span>
     </dt>
@@ -370,7 +386,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -385,7 +403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +420,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +437,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -556,7 +580,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -565,7 +591,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Xss<wbr>Match<wbr>Tuples</span>
+        <span id="state_xssmatchtuples_csharp">
+<a href="#state_xssmatchtuples_csharp" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">List&lt;Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
@@ -581,7 +609,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -590,7 +620,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Xss<wbr>Match<wbr>Tuples</span>
+        <span id="state_xssmatchtuples_go">
+<a href="#state_xssmatchtuples_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></span>
     </dt>
@@ -606,7 +638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>xss<wbr>Match<wbr>Tuples</span>
+        <span id="state_xssmatchtuples_nodejs">
+<a href="#state_xssmatchtuples_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
@@ -631,7 +667,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>xss_<wbr>match_<wbr>tuples</span>
+        <span id="state_xss_match_tuples_python">
+<a href="#state_xss_match_tuples_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>match_<wbr>tuples</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuple">List[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple]</a></span>
     </dt>
@@ -682,7 +722,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_csharp">
+<a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
@@ -691,7 +733,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Text<wbr>Transformation</span>
+        <span id="texttransformation_csharp">
+<a href="#texttransformation_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -707,7 +751,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_go">
+<a href="#fieldtomatch_go" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
@@ -716,7 +762,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Text<wbr>Transformation</span>
+        <span id="texttransformation_go">
+<a href="#texttransformation_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -732,7 +780,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_nodejs">
+<a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
@@ -741,7 +791,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>text<wbr>Transformation</span>
+        <span id="texttransformation_nodejs">
+<a href="#texttransformation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +809,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_python">
+<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Dict[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></span>
     </dt>
@@ -766,7 +820,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>text<wbr>Transformation</span>
+        <span id="texttransformation_python">
+<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -800,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -825,7 +885,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -834,7 +896,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -850,7 +914,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +925,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -875,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -884,7 +954,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

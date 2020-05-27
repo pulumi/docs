@@ -301,7 +301,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_csharp">
+<a href="#policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -310,7 +312,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -326,7 +330,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_go">
+<a href="#policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -335,7 +341,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -351,7 +359,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Arn</span>
+        <span id="policyarn_nodejs">
+<a href="#policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -360,7 +370,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
@@ -376,7 +388,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>policy_<wbr>arn</span>
+        <span id="policy_arn_python">
+<a href="#policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -385,7 +399,9 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -412,7 +428,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +462,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +479,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -598,7 +622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_csharp">
+<a href="#state_policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -607,7 +633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -623,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_go">
+<a href="#state_policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -632,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -648,7 +680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Arn</span>
+        <span id="state_policyarn_nodejs">
+<a href="#state_policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -657,7 +691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
@@ -673,7 +709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>arn</span>
+        <span id="state_policy_arn_python">
+<a href="#state_policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -682,7 +720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>

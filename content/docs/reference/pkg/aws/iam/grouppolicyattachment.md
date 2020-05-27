@@ -248,7 +248,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group</span>
+        <span id="group_csharp">
+<a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -257,7 +259,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_csharp">
+<a href="#policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -273,7 +277,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group</span>
+        <span id="group_go">
+<a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -282,7 +288,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Arn</span>
+        <span id="policyarn_go">
+<a href="#policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -298,7 +306,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group</span>
+        <span id="group_nodejs">
+<a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Group</span>
     </dt>
@@ -307,7 +317,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Arn</span>
+        <span id="policyarn_nodejs">
+<a href="#policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -323,7 +335,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group</span>
+        <span id="group_python">
+<a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -332,7 +346,9 @@ The GroupPolicyAttachment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>policy_<wbr>arn</span>
+        <span id="policy_arn_python">
+<a href="#policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -359,7 +375,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +392,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +409,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +426,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group</span>
+        <span id="state_group_csharp">
+<a href="#state_group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -554,7 +580,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_csharp">
+<a href="#state_policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -570,7 +598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group</span>
+        <span id="state_group_go">
+<a href="#state_group_go" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -579,7 +609,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arn</span>
+        <span id="state_policyarn_go">
+<a href="#state_policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -595,7 +627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group</span>
+        <span id="state_group_nodejs">
+<a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Group</span>
     </dt>
@@ -604,7 +638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Arn</span>
+        <span id="state_policyarn_nodejs">
+<a href="#state_policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
@@ -620,7 +656,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group</span>
+        <span id="state_group_python">
+<a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -629,7 +667,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>arn</span>
+        <span id="state_policy_arn_python">
+<a href="#state_policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

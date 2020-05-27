@@ -379,7 +379,9 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +391,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +403,9 @@ be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Type<wbr>Handler<wbr>Version</span>
+        <span id="typehandlerversion_csharp">
+<a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +415,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -418,7 +426,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="autoupgrademinorversion_csharp">
+<a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -428,7 +438,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -438,7 +450,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected<wbr>Settings</span>
+        <span id="protectedsettings_csharp">
+<a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -448,7 +462,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -458,7 +474,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -474,7 +492,9 @@ specified as a JSON object in a string.
 
     <dt class="property-required"
             title="Required">
-        <span>Publisher</span>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -484,7 +504,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -494,7 +516,9 @@ be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Type<wbr>Handler<wbr>Version</span>
+        <span id="typehandlerversion_go">
+<a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -504,7 +528,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -513,7 +539,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="autoupgrademinorversion_go">
+<a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -523,7 +551,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +563,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected<wbr>Settings</span>
+        <span id="protectedsettings_go">
+<a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +575,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +587,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -569,7 +605,9 @@ specified as a JSON object in a string.
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +617,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +629,9 @@ be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>type<wbr>Handler<wbr>Version</span>
+        <span id="typehandlerversion_nodejs">
+<a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -599,7 +641,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -608,7 +652,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="autoupgrademinorversion_nodejs">
+<a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -618,7 +664,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -628,7 +676,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected<wbr>Settings</span>
+        <span id="protectedsettings_nodejs">
+<a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -638,7 +688,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -648,7 +700,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -664,7 +718,9 @@ specified as a JSON object in a string.
 
     <dt class="property-required"
             title="Required">
-        <span>publisher</span>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -674,7 +730,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -684,7 +742,9 @@ be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>type_<wbr>handler_<wbr>version</span>
+        <span id="type_handler_version_python">
+<a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +754,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -703,7 +765,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>upgrade_<wbr>minor_<wbr>version</span>
+        <span id="auto_upgrade_minor_version_python">
+<a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -713,7 +777,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +789,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected_<wbr>settings</span>
+        <span id="protected_settings_python">
+<a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -733,7 +801,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -743,7 +813,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -770,7 +842,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +859,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -815,7 +893,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -956,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="state_autoupgrademinorversion_csharp">
+<a href="#state_autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -966,7 +1048,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -976,7 +1060,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected<wbr>Settings</span>
+        <span id="state_protectedsettings_csharp">
+<a href="#state_protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -986,7 +1072,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publisher</span>
+        <span id="state_publisher_csharp">
+<a href="#state_publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -996,7 +1084,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="state_settings_csharp">
+<a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1006,7 +1096,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1015,7 +1107,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1119,9 @@ be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type<wbr>Handler<wbr>Version</span>
+        <span id="state_typehandlerversion_csharp">
+<a href="#state_typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1035,7 +1131,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_csharp">
+<a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1051,7 +1149,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="state_autoupgrademinorversion_go">
+<a href="#state_autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1061,7 +1161,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1071,7 +1173,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected<wbr>Settings</span>
+        <span id="state_protectedsettings_go">
+<a href="#state_protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1081,7 +1185,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publisher</span>
+        <span id="state_publisher_go">
+<a href="#state_publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1091,7 +1197,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="state_settings_go">
+<a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1101,7 +1209,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1110,7 +1220,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1120,7 +1232,9 @@ be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type<wbr>Handler<wbr>Version</span>
+        <span id="state_typehandlerversion_go">
+<a href="#state_typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1130,7 +1244,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_go">
+<a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1146,7 +1262,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Upgrade<wbr>Minor<wbr>Version</span>
+        <span id="state_autoupgrademinorversion_nodejs">
+<a href="#state_autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1156,7 +1274,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1166,7 +1286,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected<wbr>Settings</span>
+        <span id="state_protectedsettings_nodejs">
+<a href="#state_protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1176,7 +1298,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publisher</span>
+        <span id="state_publisher_nodejs">
+<a href="#state_publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1186,7 +1310,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="state_settings_nodejs">
+<a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1196,7 +1322,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1205,7 +1333,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1215,7 +1345,9 @@ be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type<wbr>Handler<wbr>Version</span>
+        <span id="state_typehandlerversion_nodejs">
+<a href="#state_typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1225,7 +1357,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_nodejs">
+<a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1241,7 +1375,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>upgrade_<wbr>minor_<wbr>version</span>
+        <span id="state_auto_upgrade_minor_version_python">
+<a href="#state_auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1251,7 +1387,9 @@ the latest minor version update to the `type_handler_version` specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1261,7 +1399,9 @@ this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected_<wbr>settings</span>
+        <span id="state_protected_settings_python">
+<a href="#state_protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1271,7 +1411,9 @@ extension, like settings, these are specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publisher</span>
+        <span id="state_publisher_python">
+<a href="#state_publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1281,7 +1423,9 @@ can be found by using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="state_settings_python">
+<a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1291,7 +1435,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1300,7 +1446,9 @@ specified as a JSON object in a string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1310,7 +1458,9 @@ be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type_<wbr>handler_<wbr>version</span>
+        <span id="state_type_handler_version_python">
+<a href="#state_type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1320,7 +1470,9 @@ use, available versions can be found using the Azure CLI.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="state_virtual_machine_id_python">
+<a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

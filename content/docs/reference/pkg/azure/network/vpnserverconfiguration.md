@@ -288,7 +288,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +299,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span id="vpnauthenticationtypes_csharp">
+<a href="#vpnauthenticationtypes_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +310,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="azureactivedirectoryauthentications_csharp">
+<a href="#azureactivedirectoryauthentications_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
@@ -315,7 +321,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
+        <span id="clientrevokedcertificates_csharp">
+<a href="#clientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -324,7 +332,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_csharp">
+<a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -333,7 +343,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Policy</span>
+        <span id="ipsecpolicy_csharp">
+<a href="#ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -342,7 +354,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +365,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +376,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Radius<wbr>Server</span>
+        <span id="radiusserver_csharp">
+<a href="#radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
@@ -369,7 +387,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -378,7 +398,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Protocols</span>
+        <span id="vpnprotocols_csharp">
+<a href="#vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -394,7 +416,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +427,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span id="vpnauthenticationtypes_go">
+<a href="#vpnauthenticationtypes_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +438,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="azureactivedirectoryauthentications_go">
+<a href="#azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
     </dt>
@@ -421,7 +449,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
+        <span id="clientrevokedcertificates_go">
+<a href="#clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
     </dt>
@@ -430,7 +460,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_go">
+<a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
@@ -439,7 +471,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Policy</span>
+        <span id="ipsecpolicy_go">
+<a href="#ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
@@ -448,7 +482,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +493,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +504,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Radius<wbr>Server</span>
+        <span id="radiusserver_go">
+<a href="#radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
@@ -475,7 +515,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -484,7 +526,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Protocols</span>
+        <span id="vpnprotocols_go">
+<a href="#vpnprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -500,7 +544,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +555,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>vpn<wbr>Authentication<wbr>Types</span>
+        <span id="vpnauthenticationtypes_nodejs">
+<a href="#vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +566,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="azureactivedirectoryauthentications_nodejs">
+<a href="#azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
@@ -527,7 +577,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Revoked<wbr>Certificates</span>
+        <span id="clientrevokedcertificates_nodejs">
+<a href="#clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
@@ -536,7 +588,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_nodejs">
+<a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
@@ -545,7 +599,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Policy</span>
+        <span id="ipsecpolicy_nodejs">
+<a href="#ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
@@ -554,7 +610,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +621,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +632,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>radius<wbr>Server</span>
+        <span id="radiusserver_nodejs">
+<a href="#radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
@@ -581,7 +643,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -590,7 +654,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn<wbr>Protocols</span>
+        <span id="vpnprotocols_nodejs">
+<a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -606,7 +672,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +683,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>vpn_<wbr>authentication_<wbr>types</span>
+        <span id="vpn_authentication_types_python">
+<a href="#vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -624,7 +694,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>active_<wbr>directory_<wbr>authentications</span>
+        <span id="azure_active_directory_authentications_python">
+<a href="#azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication]</a></span>
     </dt>
@@ -633,7 +705,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>revoked_<wbr>certificates</span>
+        <span id="client_revoked_certificates_python">
+<a href="#client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate]</a></span>
     </dt>
@@ -642,7 +716,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>root_<wbr>certificates</span>
+        <span id="client_root_certificates_python">
+<a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
@@ -651,7 +727,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec_<wbr>policy</span>
+        <span id="ipsec_policy_python">
+<a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
@@ -660,7 +738,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +749,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +760,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>radius_<wbr>server</span>
+        <span id="radius_server_python">
+<a href="#radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server]</a></span>
     </dt>
@@ -687,7 +771,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -696,7 +782,9 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn_<wbr>protocols</span>
+        <span id="vpn_protocols_python">
+<a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -723,7 +811,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -738,7 +828,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -768,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="state_azureactivedirectoryauthentications_csharp">
+<a href="#state_azureactivedirectoryauthentications_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
@@ -918,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
+        <span id="state_clientrevokedcertificates_csharp">
+<a href="#state_clientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -927,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="state_clientrootcertificates_csharp">
+<a href="#state_clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -936,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Policy</span>
+        <span id="state_ipsecpolicy_csharp">
+<a href="#state_ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -945,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -954,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Radius<wbr>Server</span>
+        <span id="state_radiusserver_csharp">
+<a href="#state_radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
@@ -972,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -981,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -990,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span id="state_vpnauthenticationtypes_csharp">
+<a href="#state_vpnauthenticationtypes_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -999,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Protocols</span>
+        <span id="state_vpnprotocols_csharp">
+<a href="#state_vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1015,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="state_azureactivedirectoryauthentications_go">
+<a href="#state_azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
     </dt>
@@ -1024,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
+        <span id="state_clientrevokedcertificates_go">
+<a href="#state_clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
     </dt>
@@ -1033,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="state_clientrootcertificates_go">
+<a href="#state_clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
@@ -1042,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Policy</span>
+        <span id="state_ipsecpolicy_go">
+<a href="#state_ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
@@ -1051,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1069,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Radius<wbr>Server</span>
+        <span id="state_radiusserver_go">
+<a href="#state_radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
@@ -1078,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1087,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1096,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span id="state_vpnauthenticationtypes_go">
+<a href="#state_vpnauthenticationtypes_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1105,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Protocols</span>
+        <span id="state_vpnprotocols_go">
+<a href="#state_vpnprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1121,7 +1261,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
+        <span id="state_azureactivedirectoryauthentications_nodejs">
+<a href="#state_azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
@@ -1130,7 +1272,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Revoked<wbr>Certificates</span>
+        <span id="state_clientrevokedcertificates_nodejs">
+<a href="#state_clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
@@ -1139,7 +1283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Root<wbr>Certificates</span>
+        <span id="state_clientrootcertificates_nodejs">
+<a href="#state_clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
@@ -1148,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Policy</span>
+        <span id="state_ipsecpolicy_nodejs">
+<a href="#state_ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
@@ -1157,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1166,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>radius<wbr>Server</span>
+        <span id="state_radiusserver_nodejs">
+<a href="#state_radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
@@ -1184,7 +1338,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1193,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1202,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn<wbr>Authentication<wbr>Types</span>
+        <span id="state_vpnauthenticationtypes_nodejs">
+<a href="#state_vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1211,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn<wbr>Protocols</span>
+        <span id="state_vpnprotocols_nodejs">
+<a href="#state_vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1227,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>active_<wbr>directory_<wbr>authentications</span>
+        <span id="state_azure_active_directory_authentications_python">
+<a href="#state_azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication]</a></span>
     </dt>
@@ -1236,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>revoked_<wbr>certificates</span>
+        <span id="state_client_revoked_certificates_python">
+<a href="#state_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate]</a></span>
     </dt>
@@ -1245,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>root_<wbr>certificates</span>
+        <span id="state_client_root_certificates_python">
+<a href="#state_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
@@ -1254,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec_<wbr>policy</span>
+        <span id="state_ipsec_policy_python">
+<a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
@@ -1263,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1272,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1281,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>radius_<wbr>server</span>
+        <span id="state_radius_server_python">
+<a href="#state_radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server]</a></span>
     </dt>
@@ -1290,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1299,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1308,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn_<wbr>authentication_<wbr>types</span>
+        <span id="state_vpn_authentication_types_python">
+<a href="#state_vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn_<wbr>protocols</span>
+        <span id="state_vpn_protocols_python">
+<a href="#state_vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1359,7 +1543,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Audience</span>
+        <span id="audience_csharp">
+<a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1368,7 +1554,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Issuer</span>
+        <span id="issuer_csharp">
+<a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1377,7 +1565,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant</span>
+        <span id="tenant_csharp">
+<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1393,7 +1583,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Audience</span>
+        <span id="audience_go">
+<a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1402,7 +1594,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Issuer</span>
+        <span id="issuer_go">
+<a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1411,7 +1605,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant</span>
+        <span id="tenant_go">
+<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1427,7 +1623,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>audience</span>
+        <span id="audience_nodejs">
+<a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1436,7 +1634,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>issuer</span>
+        <span id="issuer_nodejs">
+<a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1445,7 +1645,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant</span>
+        <span id="tenant_nodejs">
+<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1461,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>audience</span>
+        <span id="audience_python">
+<a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1470,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>issuer</span>
+        <span id="issuer_python">
+<a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1479,7 +1685,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant</span>
+        <span id="tenant_python">
+<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1513,7 +1721,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1522,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1538,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1547,7 +1761,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1563,7 +1779,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1572,7 +1790,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1588,7 +1808,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1597,7 +1819,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1631,7 +1855,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1640,7 +1866,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_csharp">
+<a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1656,7 +1884,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1665,7 +1895,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_go">
+<a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1681,7 +1913,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1690,7 +1924,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_nodejs">
+<a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1706,7 +1942,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1715,7 +1953,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_python">
+<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1749,7 +1989,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dh<wbr>Group</span>
+        <span id="dhgroup_csharp">
+<a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1758,7 +2000,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Encryption</span>
+        <span id="ikeencryption_csharp">
+<a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1767,7 +2011,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Integrity</span>
+        <span id="ikeintegrity_csharp">
+<a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1776,7 +2022,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_csharp">
+<a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1785,7 +2033,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_csharp">
+<a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1794,7 +2044,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pfs<wbr>Group</span>
+        <span id="pfsgroup_csharp">
+<a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1803,7 +2055,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
+        <span id="sadatasizekilobytes_csharp">
+<a href="#sadatasizekilobytes_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1812,7 +2066,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Lifetime<wbr>Seconds</span>
+        <span id="salifetimeseconds_csharp">
+<a href="#salifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1828,7 +2084,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dh<wbr>Group</span>
+        <span id="dhgroup_go">
+<a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1837,7 +2095,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Encryption</span>
+        <span id="ikeencryption_go">
+<a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1846,7 +2106,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Integrity</span>
+        <span id="ikeintegrity_go">
+<a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1855,7 +2117,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_go">
+<a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1864,7 +2128,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_go">
+<a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1873,7 +2139,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pfs<wbr>Group</span>
+        <span id="pfsgroup_go">
+<a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1882,7 +2150,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
+        <span id="sadatasizekilobytes_go">
+<a href="#sadatasizekilobytes_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1891,7 +2161,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Lifetime<wbr>Seconds</span>
+        <span id="salifetimeseconds_go">
+<a href="#salifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1907,7 +2179,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dh<wbr>Group</span>
+        <span id="dhgroup_nodejs">
+<a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1916,7 +2190,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Encryption</span>
+        <span id="ikeencryption_nodejs">
+<a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1925,7 +2201,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Integrity</span>
+        <span id="ikeintegrity_nodejs">
+<a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1934,7 +2212,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_nodejs">
+<a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1943,7 +2223,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_nodejs">
+<a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1952,7 +2234,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pfs<wbr>Group</span>
+        <span id="pfsgroup_nodejs">
+<a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1961,7 +2245,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
+        <span id="sadatasizekilobytes_nodejs">
+<a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1970,7 +2256,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Lifetime<wbr>Seconds</span>
+        <span id="salifetimeseconds_nodejs">
+<a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1986,7 +2274,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dh<wbr>Group</span>
+        <span id="dhgroup_python">
+<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1995,7 +2285,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Encryption</span>
+        <span id="ikeencryption_python">
+<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2004,7 +2296,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Integrity</span>
+        <span id="ikeintegrity_python">
+<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2013,7 +2307,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_python">
+<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2022,7 +2318,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_python">
+<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2031,7 +2329,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pfs<wbr>Group</span>
+        <span id="pfsgroup_python">
+<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2040,7 +2340,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
+        <span id="sadatasizekilobytes_python">
+<a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2049,7 +2351,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Lifetime<wbr>Seconds</span>
+        <span id="salifetimeseconds_python">
+<a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2083,7 +2387,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2092,7 +2398,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret</span>
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2101,7 +2409,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Root<wbr>Certificates</span>
+        <span id="serverrootcertificates_csharp">
+<a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -2110,7 +2420,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_csharp">
+<a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
@@ -2126,7 +2438,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2135,7 +2449,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret</span>
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2144,7 +2460,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Root<wbr>Certificates</span>
+        <span id="serverrootcertificates_go">
+<a href="#serverrootcertificates_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate</a></span>
     </dt>
@@ -2153,7 +2471,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_go">
+<a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
@@ -2169,7 +2489,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2178,7 +2500,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret</span>
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2187,7 +2511,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Root<wbr>Certificates</span>
+        <span id="serverrootcertificates_nodejs">
+<a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
@@ -2196,7 +2522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Root<wbr>Certificates</span>
+        <span id="clientrootcertificates_nodejs">
+<a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
@@ -2212,7 +2540,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2221,7 +2551,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret</span>
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2230,7 +2562,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Root<wbr>Certificates</span>
+        <span id="serverrootcertificates_python">
+<a href="#serverrootcertificates_python" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate]</a></span>
     </dt>
@@ -2239,7 +2573,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>root_<wbr>certificates</span>
+        <span id="client_root_certificates_python">
+<a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
@@ -2273,7 +2609,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2282,7 +2620,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2298,7 +2638,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2307,7 +2649,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Thumbprint</span>
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2323,7 +2667,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2332,7 +2678,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2348,7 +2696,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2357,7 +2707,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>thumbprint</span>
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2391,7 +2743,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2400,7 +2754,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_csharp">
+<a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2416,7 +2772,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2425,7 +2783,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_go">
+<a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2441,7 +2801,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2450,7 +2812,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_nodejs">
+<a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2466,7 +2830,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2475,7 +2841,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>public<wbr>Cert<wbr>Data</span>
+        <span id="publiccertdata_python">
+<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

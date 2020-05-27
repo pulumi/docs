@@ -262,7 +262,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sql<wbr>License<wbr>Type</span>
+        <span id="sqllicensetype_csharp">
+<a href="#sqllicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +273,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +284,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Patching</span>
+        <span id="autopatching_csharp">
+<a href="#autopatching_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
@@ -289,7 +295,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault<wbr>Credential</span>
+        <span id="keyvaultcredential_csharp">
+<a href="#keyvaultcredential_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
@@ -298,7 +306,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>RServices<wbr>Enabled</span>
+        <span id="rservicesenabled_csharp">
+<a href="#rservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -307,7 +317,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
+        <span id="sqlconnectivityport_csharp">
+<a href="#sqlconnectivityport_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -316,7 +328,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
+        <span id="sqlconnectivitytype_csharp">
+<a href="#sqlconnectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +339,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="sqlconnectivityupdatepassword_csharp">
+<a href="#sqlconnectivityupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +350,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="sqlconnectivityupdateusername_csharp">
+<a href="#sqlconnectivityupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +361,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -359,7 +379,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sql<wbr>License<wbr>Type</span>
+        <span id="sqllicensetype_go">
+<a href="#sqllicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +390,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +401,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Patching</span>
+        <span id="autopatching_go">
+<a href="#autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
@@ -386,7 +412,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault<wbr>Credential</span>
+        <span id="keyvaultcredential_go">
+<a href="#keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
@@ -395,7 +423,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>RServices<wbr>Enabled</span>
+        <span id="rservicesenabled_go">
+<a href="#rservicesenabled_go" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -404,7 +434,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
+        <span id="sqlconnectivityport_go">
+<a href="#sqlconnectivityport_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -413,7 +445,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
+        <span id="sqlconnectivitytype_go">
+<a href="#sqlconnectivitytype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +456,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="sqlconnectivityupdatepassword_go">
+<a href="#sqlconnectivityupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -431,7 +467,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="sqlconnectivityupdateusername_go">
+<a href="#sqlconnectivityupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +478,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -456,7 +496,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sql<wbr>License<wbr>Type</span>
+        <span id="sqllicensetype_nodejs">
+<a href="#sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -465,7 +507,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -474,7 +518,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Patching</span>
+        <span id="autopatching_nodejs">
+<a href="#autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
@@ -483,7 +529,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Vault<wbr>Credential</span>
+        <span id="keyvaultcredential_nodejs">
+<a href="#keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
@@ -492,7 +540,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>r<wbr>Services<wbr>Enabled</span>
+        <span id="rservicesenabled_nodejs">
+<a href="#rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -501,7 +551,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Port</span>
+        <span id="sqlconnectivityport_nodejs">
+<a href="#sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -510,7 +562,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Type</span>
+        <span id="sqlconnectivitytype_nodejs">
+<a href="#sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +573,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="sqlconnectivityupdatepassword_nodejs">
+<a href="#sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +584,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="sqlconnectivityupdateusername_nodejs">
+<a href="#sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -537,7 +595,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -553,7 +613,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sql_<wbr>license_<wbr>type</span>
+        <span id="sql_license_type_python">
+<a href="#sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -562,7 +624,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -571,7 +635,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>patching</span>
+        <span id="auto_patching_python">
+<a href="#auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Dict[Virtual<wbr>Machine<wbr>Auto<wbr>Patching]</a></span>
     </dt>
@@ -580,7 +646,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>vault_<wbr>credential</span>
+        <span id="key_vault_credential_python">
+<a href="#key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Dict[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential]</a></span>
     </dt>
@@ -589,7 +657,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>r_<wbr>services_<wbr>enabled</span>
+        <span id="r_services_enabled_python">
+<a href="#r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -598,7 +668,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>port</span>
+        <span id="sql_connectivity_port_python">
+<a href="#sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -607,7 +679,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>type</span>
+        <span id="sql_connectivity_type_python">
+<a href="#sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -616,7 +690,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>password</span>
+        <span id="sql_connectivity_update_password_python">
+<a href="#sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +701,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>username</span>
+        <span id="sql_connectivity_update_username_python">
+<a href="#sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +712,9 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -661,7 +741,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -676,7 +758,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -691,7 +775,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -706,7 +792,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -847,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Patching</span>
+        <span id="state_autopatching_csharp">
+<a href="#state_autopatching_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
@@ -856,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault<wbr>Credential</span>
+        <span id="state_keyvaultcredential_csharp">
+<a href="#state_keyvaultcredential_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
@@ -865,7 +957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>RServices<wbr>Enabled</span>
+        <span id="state_rservicesenabled_csharp">
+<a href="#state_rservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -874,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
+        <span id="state_sqlconnectivityport_csharp">
+<a href="#state_sqlconnectivityport_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -883,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
+        <span id="state_sqlconnectivitytype_csharp">
+<a href="#state_sqlconnectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -892,7 +990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="state_sqlconnectivityupdatepassword_csharp">
+<a href="#state_sqlconnectivityupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -901,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="state_sqlconnectivityupdateusername_csharp">
+<a href="#state_sqlconnectivityupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -910,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>License<wbr>Type</span>
+        <span id="state_sqllicensetype_csharp">
+<a href="#state_sqllicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -919,7 +1023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -928,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_csharp">
+<a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +1052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Patching</span>
+        <span id="state_autopatching_go">
+<a href="#state_autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
@@ -953,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault<wbr>Credential</span>
+        <span id="state_keyvaultcredential_go">
+<a href="#state_keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
@@ -962,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>RServices<wbr>Enabled</span>
+        <span id="state_rservicesenabled_go">
+<a href="#state_rservicesenabled_go" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -971,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
+        <span id="state_sqlconnectivityport_go">
+<a href="#state_sqlconnectivityport_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -980,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
+        <span id="state_sqlconnectivitytype_go">
+<a href="#state_sqlconnectivitytype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -989,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="state_sqlconnectivityupdatepassword_go">
+<a href="#state_sqlconnectivityupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -998,7 +1118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="state_sqlconnectivityupdateusername_go">
+<a href="#state_sqlconnectivityupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1007,7 +1129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sql<wbr>License<wbr>Type</span>
+        <span id="state_sqllicensetype_go">
+<a href="#state_sqllicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1016,7 +1140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1025,7 +1151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_go">
+<a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1041,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Patching</span>
+        <span id="state_autopatching_nodejs">
+<a href="#state_autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
@@ -1050,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Vault<wbr>Credential</span>
+        <span id="state_keyvaultcredential_nodejs">
+<a href="#state_keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
@@ -1059,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>r<wbr>Services<wbr>Enabled</span>
+        <span id="state_rservicesenabled_nodejs">
+<a href="#state_rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1068,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Port</span>
+        <span id="state_sqlconnectivityport_nodejs">
+<a href="#state_sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1077,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Type</span>
+        <span id="state_sqlconnectivitytype_nodejs">
+<a href="#state_sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1086,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
+        <span id="state_sqlconnectivityupdatepassword_nodejs">
+<a href="#state_sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1095,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
+        <span id="state_sqlconnectivityupdateusername_nodejs">
+<a href="#state_sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1104,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql<wbr>License<wbr>Type</span>
+        <span id="state_sqllicensetype_nodejs">
+<a href="#state_sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1113,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1122,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_nodejs">
+<a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1138,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>patching</span>
+        <span id="state_auto_patching_python">
+<a href="#state_auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineautopatching">Dict[Virtual<wbr>Machine<wbr>Auto<wbr>Patching]</a></span>
     </dt>
@@ -1147,7 +1297,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>vault_<wbr>credential</span>
+        <span id="state_key_vault_credential_python">
+<a href="#state_key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Dict[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential]</a></span>
     </dt>
@@ -1156,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>r_<wbr>services_<wbr>enabled</span>
+        <span id="state_r_services_enabled_python">
+<a href="#state_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1165,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>port</span>
+        <span id="state_sql_connectivity_port_python">
+<a href="#state_sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1174,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>type</span>
+        <span id="state_sql_connectivity_type_python">
+<a href="#state_sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1183,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>password</span>
+        <span id="state_sql_connectivity_update_password_python">
+<a href="#state_sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1192,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>username</span>
+        <span id="state_sql_connectivity_update_username_python">
+<a href="#state_sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1201,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sql_<wbr>license_<wbr>type</span>
+        <span id="state_sql_license_type_python">
+<a href="#state_sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1210,7 +1374,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1219,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="state_virtual_machine_id_python">
+<a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1261,7 +1429,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Day<wbr>Of<wbr>Week</span>
+        <span id="dayofweek_csharp">
+<a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1270,7 +1440,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
+        <span id="maintenancewindowdurationinminutes_csharp">
+<a href="#maintenancewindowdurationinminutes_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1279,7 +1451,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
+        <span id="maintenancewindowstartinghour_csharp">
+<a href="#maintenancewindowstartinghour_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1295,7 +1469,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Day<wbr>Of<wbr>Week</span>
+        <span id="dayofweek_go">
+<a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1304,7 +1480,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
+        <span id="maintenancewindowdurationinminutes_go">
+<a href="#maintenancewindowdurationinminutes_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1313,7 +1491,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
+        <span id="maintenancewindowstartinghour_go">
+<a href="#maintenancewindowstartinghour_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1329,7 +1509,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>day<wbr>Of<wbr>Week</span>
+        <span id="dayofweek_nodejs">
+<a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1338,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
+        <span id="maintenancewindowdurationinminutes_nodejs">
+<a href="#maintenancewindowdurationinminutes_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1347,7 +1531,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
+        <span id="maintenancewindowstartinghour_nodejs">
+<a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1363,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>day<wbr>Of<wbr>Week</span>
+        <span id="dayofweek_python">
+<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1372,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
+        <span id="maintenancewindowdurationinminutes_python">
+<a href="#maintenancewindowdurationinminutes_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1381,7 +1571,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
+        <span id="maintenancewindowstartinghour_python">
+<a href="#maintenancewindowstartinghour_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1415,7 +1607,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Url</span>
+        <span id="keyvaulturl_csharp">
+<a href="#keyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1424,7 +1618,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1433,7 +1629,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Name</span>
+        <span id="serviceprincipalname_csharp">
+<a href="#serviceprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1442,7 +1640,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Secret</span>
+        <span id="serviceprincipalsecret_csharp">
+<a href="#serviceprincipalsecret_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1458,7 +1658,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Url</span>
+        <span id="keyvaulturl_go">
+<a href="#keyvaulturl_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1467,7 +1669,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1476,7 +1680,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Name</span>
+        <span id="serviceprincipalname_go">
+<a href="#serviceprincipalname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1485,7 +1691,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Principal<wbr>Secret</span>
+        <span id="serviceprincipalsecret_go">
+<a href="#serviceprincipalsecret_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1501,7 +1709,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Vault<wbr>Url</span>
+        <span id="keyvaulturl_nodejs">
+<a href="#keyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1510,7 +1720,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1519,7 +1731,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Name</span>
+        <span id="serviceprincipalname_nodejs">
+<a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1528,7 +1742,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Secret</span>
+        <span id="serviceprincipalsecret_nodejs">
+<a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1544,7 +1760,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Vault<wbr>Url</span>
+        <span id="keyvaulturl_python">
+<a href="#keyvaulturl_python" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1553,7 +1771,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1562,7 +1782,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Name</span>
+        <span id="serviceprincipalname_python">
+<a href="#serviceprincipalname_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1571,7 +1793,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Principal<wbr>Secret</span>
+        <span id="serviceprincipalsecret_python">
+<a href="#serviceprincipalsecret_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

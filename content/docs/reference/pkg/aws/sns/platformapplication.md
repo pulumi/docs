@@ -270,7 +270,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Platform</span>
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +281,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Platform<wbr>Credential</span>
+        <span id="platformcredential_csharp">
+<a href="#platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +292,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="eventdeliveryfailuretopicarn_csharp">
+<a href="#eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +303,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointcreatedtopicarn_csharp">
+<a href="#eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +314,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointdeletedtopicarn_csharp">
+<a href="#eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +325,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointupdatedtopicarn_csharp">
+<a href="#eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +336,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="failurefeedbackrolearn_csharp">
+<a href="#failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +347,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +358,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Principal</span>
+        <span id="platformprincipal_csharp">
+<a href="#platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +369,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="successfeedbackrolearn_csharp">
+<a href="#successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +380,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="successfeedbacksamplerate_csharp">
+<a href="#successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +398,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Platform</span>
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +409,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Platform<wbr>Credential</span>
+        <span id="platformcredential_go">
+<a href="#platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +420,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="eventdeliveryfailuretopicarn_go">
+<a href="#eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +431,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointcreatedtopicarn_go">
+<a href="#eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +442,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointdeletedtopicarn_go">
+<a href="#eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +453,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointupdatedtopicarn_go">
+<a href="#eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +464,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="failurefeedbackrolearn_go">
+<a href="#failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +475,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +486,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Principal</span>
+        <span id="platformprincipal_go">
+<a href="#platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +497,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="successfeedbackrolearn_go">
+<a href="#successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +508,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="successfeedbacksamplerate_go">
+<a href="#successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +526,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>platform</span>
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +537,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>platform<wbr>Credential</span>
+        <span id="platformcredential_nodejs">
+<a href="#platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -500,7 +548,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="eventdeliveryfailuretopicarn_nodejs">
+<a href="#eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +559,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointcreatedtopicarn_nodejs">
+<a href="#eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +570,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointdeletedtopicarn_nodejs">
+<a href="#eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +581,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="eventendpointupdatedtopicarn_nodejs">
+<a href="#eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -536,7 +592,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="failurefeedbackrolearn_nodejs">
+<a href="#failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +603,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +614,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Principal</span>
+        <span id="platformprincipal_nodejs">
+<a href="#platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +625,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="successfeedbackrolearn_nodejs">
+<a href="#successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +636,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="successfeedbacksamplerate_nodejs">
+<a href="#successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +654,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>platform</span>
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -597,7 +665,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>platform_<wbr>credential</span>
+        <span id="platform_credential_python">
+<a href="#platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +676,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</span>
+        <span id="event_delivery_failure_topic_arn_python">
+<a href="#event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +687,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</span>
+        <span id="event_endpoint_created_topic_arn_python">
+<a href="#event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -624,7 +698,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</span>
+        <span id="event_endpoint_deleted_topic_arn_python">
+<a href="#event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -633,7 +709,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</span>
+        <span id="event_endpoint_updated_topic_arn_python">
+<a href="#event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +720,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
+        <span id="failure_feedback_role_arn_python">
+<a href="#failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -651,7 +731,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +742,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform_<wbr>principal</span>
+        <span id="platform_principal_python">
+<a href="#platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +753,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
+        <span id="success_feedback_role_arn_python">
+<a href="#success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +764,9 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
+        <span id="success_feedback_sample_rate_python">
+<a href="#success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +793,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -714,7 +804,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -729,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -738,7 +832,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +849,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -762,7 +860,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -777,7 +877,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -786,7 +888,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -936,7 +1042,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventdeliveryfailuretopicarn_csharp">
+<a href="#state_eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -945,7 +1053,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointcreatedtopicarn_csharp">
+<a href="#state_eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -954,7 +1064,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointdeletedtopicarn_csharp">
+<a href="#state_eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1075,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointupdatedtopicarn_csharp">
+<a href="#state_eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -972,7 +1086,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_failurefeedbackrolearn_csharp">
+<a href="#state_failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -981,7 +1097,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -990,7 +1108,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="state_platform_csharp">
+<a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -999,7 +1119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Credential</span>
+        <span id="state_platformcredential_csharp">
+<a href="#state_platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1008,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Principal</span>
+        <span id="state_platformprincipal_csharp">
+<a href="#state_platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_successfeedbackrolearn_csharp">
+<a href="#state_successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1026,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="state_successfeedbacksamplerate_csharp">
+<a href="#state_successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1042,7 +1170,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1051,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventdeliveryfailuretopicarn_go">
+<a href="#state_eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointcreatedtopicarn_go">
+<a href="#state_eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1069,7 +1203,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointdeletedtopicarn_go">
+<a href="#state_eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1078,7 +1214,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointupdatedtopicarn_go">
+<a href="#state_eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1087,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_failurefeedbackrolearn_go">
+<a href="#state_failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1096,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1105,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="state_platform_go">
+<a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1114,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Credential</span>
+        <span id="state_platformcredential_go">
+<a href="#state_platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Principal</span>
+        <span id="state_platformprincipal_go">
+<a href="#state_platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1132,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_successfeedbackrolearn_go">
+<a href="#state_successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="state_successfeedbacksamplerate_go">
+<a href="#state_successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1157,7 +1309,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1166,7 +1320,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventdeliveryfailuretopicarn_nodejs">
+<a href="#state_eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1331,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointcreatedtopicarn_nodejs">
+<a href="#state_eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1184,7 +1342,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointdeletedtopicarn_nodejs">
+<a href="#state_eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1193,7 +1353,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
+        <span id="state_eventendpointupdatedtopicarn_nodejs">
+<a href="#state_eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1202,7 +1364,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_failurefeedbackrolearn_nodejs">
+<a href="#state_failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1211,7 +1375,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1220,7 +1386,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="state_platform_nodejs">
+<a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1229,7 +1397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Credential</span>
+        <span id="state_platformcredential_nodejs">
+<a href="#state_platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1238,7 +1408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Principal</span>
+        <span id="state_platformprincipal_nodejs">
+<a href="#state_platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1247,7 +1419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>success<wbr>Feedback<wbr>Role<wbr>Arn</span>
+        <span id="state_successfeedbackrolearn_nodejs">
+<a href="#state_successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1256,7 +1430,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
+        <span id="state_successfeedbacksamplerate_nodejs">
+<a href="#state_successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1272,7 +1448,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1281,7 +1459,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</span>
+        <span id="state_event_delivery_failure_topic_arn_python">
+<a href="#state_event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1290,7 +1470,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</span>
+        <span id="state_event_endpoint_created_topic_arn_python">
+<a href="#state_event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1299,7 +1481,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</span>
+        <span id="state_event_endpoint_deleted_topic_arn_python">
+<a href="#state_event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1308,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</span>
+        <span id="state_event_endpoint_updated_topic_arn_python">
+<a href="#state_event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1503,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
+        <span id="state_failure_feedback_role_arn_python">
+<a href="#state_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1326,7 +1514,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1335,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="state_platform_python">
+<a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1344,7 +1536,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform_<wbr>credential</span>
+        <span id="state_platform_credential_python">
+<a href="#state_platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1353,7 +1547,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform_<wbr>principal</span>
+        <span id="state_platform_principal_python">
+<a href="#state_platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1362,7 +1558,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
+        <span id="state_success_feedback_role_arn_python">
+<a href="#state_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1371,7 +1569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
+        <span id="state_success_feedback_sample_rate_python">
+<a href="#state_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

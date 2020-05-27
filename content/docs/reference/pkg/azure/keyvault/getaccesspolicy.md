@@ -92,7 +92,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +112,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -128,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -146,7 +152,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -177,7 +185,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Permissions</span>
+        <span id="certificatepermissions_csharp">
+<a href="#certificatepermissions_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -186,7 +196,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -195,7 +207,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Permissions</span>
+        <span id="keypermissions_csharp">
+<a href="#keypermissions_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -204,7 +218,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -212,7 +228,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Permissions</span>
+        <span id="secretpermissions_csharp">
+<a href="#secretpermissions_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -228,7 +246,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Permissions</span>
+        <span id="certificatepermissions_go">
+<a href="#certificatepermissions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -237,7 +257,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -246,7 +268,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Permissions</span>
+        <span id="keypermissions_go">
+<a href="#keypermissions_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -255,7 +279,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -263,7 +289,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Permissions</span>
+        <span id="secretpermissions_go">
+<a href="#secretpermissions_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -279,7 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Permissions</span>
+        <span id="certificatepermissions_nodejs">
+<a href="#certificatepermissions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -288,7 +318,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -297,7 +329,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Permissions</span>
+        <span id="keypermissions_nodejs">
+<a href="#keypermissions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -306,7 +340,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -314,7 +350,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret<wbr>Permissions</span>
+        <span id="secretpermissions_nodejs">
+<a href="#secretpermissions_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -330,7 +368,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>permissions</span>
+        <span id="certificate_permissions_python">
+<a href="#certificate_permissions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -339,7 +379,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -348,7 +390,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>permissions</span>
+        <span id="key_permissions_python">
+<a href="#key_permissions_python" style="color: inherit; text-decoration: inherit;">key_<wbr>permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -357,7 +401,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -365,7 +411,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>secret_<wbr>permissions</span>
+        <span id="secret_permissions_python">
+<a href="#secret_permissions_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

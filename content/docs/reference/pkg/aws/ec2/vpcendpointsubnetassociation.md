@@ -242,7 +242,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +253,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="vpcendpointid_csharp">
+<a href="#vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +271,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -276,7 +282,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="vpcendpointid_go">
+<a href="#vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +300,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -301,7 +311,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="vpcendpointid_nodejs">
+<a href="#vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -317,7 +329,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -326,7 +340,9 @@ The VpcEndpointSubnetAssociation resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>vpc_<wbr>endpoint_<wbr>id</span>
+        <span id="vpc_endpoint_id_python">
+<a href="#vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -353,7 +369,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +386,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -398,7 +420,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -539,7 +563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_csharp">
+<a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="state_vpcendpointid_csharp">
+<a href="#state_vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -564,7 +592,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_go">
+<a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -573,7 +603,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="state_vpcendpointid_go">
+<a href="#state_vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -589,7 +621,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="state_subnetid_nodejs">
+<a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Endpoint<wbr>Id</span>
+        <span id="state_vpcendpointid_nodejs">
+<a href="#state_vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="state_subnet_id_python">
+<a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -623,7 +661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>endpoint_<wbr>id</span>
+        <span id="state_vpc_endpoint_id_python">
+<a href="#state_vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

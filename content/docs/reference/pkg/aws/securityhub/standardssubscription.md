@@ -239,7 +239,9 @@ The StandardsSubscription resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Standards<wbr>Arn</span>
+        <span id="standardsarn_csharp">
+<a href="#standardsarn_csharp" style="color: inherit; text-decoration: inherit;">Standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,7 +257,9 @@ The StandardsSubscription resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Standards<wbr>Arn</span>
+        <span id="standardsarn_go">
+<a href="#standardsarn_go" style="color: inherit; text-decoration: inherit;">Standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -271,7 +275,9 @@ The StandardsSubscription resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>standards<wbr>Arn</span>
+        <span id="standardsarn_nodejs">
+<a href="#standardsarn_nodejs" style="color: inherit; text-decoration: inherit;">standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -287,7 +293,9 @@ The StandardsSubscription resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>standards_<wbr>arn</span>
+        <span id="standards_arn_python">
+<a href="#standards_arn_python" style="color: inherit; text-decoration: inherit;">standards_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -314,7 +322,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +339,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -344,7 +356,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -359,7 +373,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -500,7 +516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standards<wbr>Arn</span>
+        <span id="state_standardsarn_csharp">
+<a href="#state_standardsarn_csharp" style="color: inherit; text-decoration: inherit;">Standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -516,7 +534,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standards<wbr>Arn</span>
+        <span id="state_standardsarn_go">
+<a href="#state_standardsarn_go" style="color: inherit; text-decoration: inherit;">Standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -532,7 +552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>standards<wbr>Arn</span>
+        <span id="state_standardsarn_nodejs">
+<a href="#state_standardsarn_nodejs" style="color: inherit; text-decoration: inherit;">standards<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +570,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>standards_<wbr>arn</span>
+        <span id="state_standards_arn_python">
+<a href="#state_standards_arn_python" style="color: inherit; text-decoration: inherit;">standards_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

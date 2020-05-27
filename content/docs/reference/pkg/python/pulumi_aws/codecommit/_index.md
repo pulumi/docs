@@ -58,11 +58,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codecommit.Repository">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codecommit.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Repository Resource.</p>
-<blockquote>
-<div><p><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
-in all regions - available regions are listed
-<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
@@ -197,11 +192,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codecommit.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codecommit.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Trigger Resource.</p>
-<blockquote>
-<div><p><strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
-in all regions - available regions are listed
-<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 

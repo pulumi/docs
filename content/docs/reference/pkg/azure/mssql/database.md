@@ -290,7 +290,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Id</span>
+        <span id="serverid_csharp">
+<a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +301,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="autopausedelayinminutes_csharp">
+<a href="#autopausedelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -308,7 +312,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collation</span>
+        <span id="collation_csharp">
+<a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -317,7 +323,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Mode</span>
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +334,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="creationsourcedatabaseid_csharp">
+<a href="#creationsourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +345,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Pool<wbr>Id</span>
+        <span id="elasticpoolid_csharp">
+<a href="#elasticpoolid_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +356,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_csharp">
+<a href="#extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -353,7 +367,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_csharp">
+<a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +378,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>Gb</span>
+        <span id="maxsizegb_csharp">
+<a href="#maxsizegb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -371,7 +389,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_csharp">
+<a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -380,7 +400,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +411,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Replica<wbr>Count</span>
+        <span id="readreplicacount_csharp">
+<a href="#readreplicacount_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -398,7 +422,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Scale</span>
+        <span id="readscale_csharp">
+<a href="#readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -407,7 +433,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="restorepointintime_csharp">
+<a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -416,7 +444,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Name</span>
+        <span id="samplename_csharp">
+<a href="#samplename_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +455,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku<wbr>Name</span>
+        <span id="skuname_csharp">
+<a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -434,7 +466,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -443,7 +477,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threat<wbr>Detection<wbr>Policy</span>
+        <span id="threatdetectionpolicy_csharp">
+<a href="#threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -452,7 +488,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Redundant</span>
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -468,7 +506,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Id</span>
+        <span id="serverid_go">
+<a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +517,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="autopausedelayinminutes_go">
+<a href="#autopausedelayinminutes_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -486,7 +528,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collation</span>
+        <span id="collation_go">
+<a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +539,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Mode</span>
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -504,7 +550,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="creationsourcedatabaseid_go">
+<a href="#creationsourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -513,7 +561,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Pool<wbr>Id</span>
+        <span id="elasticpoolid_go">
+<a href="#elasticpoolid_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +572,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_go">
+<a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -531,7 +583,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_go">
+<a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -540,7 +594,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>Gb</span>
+        <span id="maxsizegb_go">
+<a href="#maxsizegb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -549,7 +605,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_go">
+<a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -558,7 +616,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -567,7 +627,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Replica<wbr>Count</span>
+        <span id="readreplicacount_go">
+<a href="#readreplicacount_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -576,7 +638,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Scale</span>
+        <span id="readscale_go">
+<a href="#readscale_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -585,7 +649,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="restorepointintime_go">
+<a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -594,7 +660,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Name</span>
+        <span id="samplename_go">
+<a href="#samplename_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -603,7 +671,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku<wbr>Name</span>
+        <span id="skuname_go">
+<a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -612,7 +682,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -621,7 +693,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threat<wbr>Detection<wbr>Policy</span>
+        <span id="threatdetectionpolicy_go">
+<a href="#threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
@@ -630,7 +704,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Redundant</span>
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -646,7 +722,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Id</span>
+        <span id="serverid_nodejs">
+<a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -655,7 +733,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="autopausedelayinminutes_nodejs">
+<a href="#autopausedelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -664,7 +744,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>collation</span>
+        <span id="collation_nodejs">
+<a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -673,7 +755,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Mode</span>
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -682,7 +766,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="creationsourcedatabaseid_nodejs">
+<a href="#creationsourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +777,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Pool<wbr>Id</span>
+        <span id="elasticpoolid_nodejs">
+<a href="#elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -700,7 +788,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span id="extendedauditingpolicy_nodejs">
+<a href="#extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -709,7 +799,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="licensetype_nodejs">
+<a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -718,7 +810,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size<wbr>Gb</span>
+        <span id="maxsizegb_nodejs">
+<a href="#maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -727,7 +821,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Capacity</span>
+        <span id="mincapacity_nodejs">
+<a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -736,7 +832,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -745,7 +843,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Replica<wbr>Count</span>
+        <span id="readreplicacount_nodejs">
+<a href="#readreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -754,7 +854,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Scale</span>
+        <span id="readscale_nodejs">
+<a href="#readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -763,7 +865,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="restorepointintime_nodejs">
+<a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +876,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample<wbr>Name</span>
+        <span id="samplename_nodejs">
+<a href="#samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -781,7 +887,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku<wbr>Name</span>
+        <span id="skuname_nodejs">
+<a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -790,7 +898,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -799,7 +909,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>threat<wbr>Detection<wbr>Policy</span>
+        <span id="threatdetectionpolicy_nodejs">
+<a href="#threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
@@ -808,7 +920,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Redundant</span>
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -824,7 +938,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>server_<wbr>id</span>
+        <span id="server_id_python">
+<a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +949,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</span>
+        <span id="auto_pause_delay_in_minutes_python">
+<a href="#auto_pause_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -842,7 +960,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>collation</span>
+        <span id="collation_python">
+<a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +971,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>mode</span>
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -860,7 +982,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>source_<wbr>database_<wbr>id</span>
+        <span id="creation_source_database_id_python">
+<a href="#creation_source_database_id_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>source_<wbr>database_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -869,7 +993,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>pool_<wbr>id</span>
+        <span id="elastic_pool_id_python">
+<a href="#elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -878,7 +1004,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span id="extended_auditing_policy_python">
+<a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Dict[Database<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
     </dt>
@@ -887,7 +1015,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="license_type_python">
+<a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -896,7 +1026,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size_<wbr>gb</span>
+        <span id="max_size_gb_python">
+<a href="#max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -905,7 +1037,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>capacity</span>
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -914,7 +1048,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -923,7 +1059,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>replica_<wbr>count</span>
+        <span id="read_replica_count_python">
+<a href="#read_replica_count_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -932,7 +1070,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>scale</span>
+        <span id="read_scale_python">
+<a href="#read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -941,7 +1081,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore_<wbr>point_<wbr>in_<wbr>time</span>
+        <span id="restore_point_in_time_python">
+<a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -950,7 +1092,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample_<wbr>name</span>
+        <span id="sample_name_python">
+<a href="#sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -959,7 +1103,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku_<wbr>name</span>
+        <span id="sku_name_python">
+<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -968,7 +1114,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -977,7 +1125,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>threat_<wbr>detection_<wbr>policy</span>
+        <span id="threat_detection_policy_python">
+<a href="#threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Dict[Database<wbr>Threat<wbr>Detection<wbr>Policy]</a></span>
     </dt>
@@ -986,7 +1136,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>redundant</span>
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1013,7 +1165,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1028,7 +1182,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1043,7 +1199,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1058,7 +1216,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1199,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="state_autopausedelayinminutes_csharp">
+<a href="#state_autopausedelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1208,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collation</span>
+        <span id="state_collation_csharp">
+<a href="#state_collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1217,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Mode</span>
+        <span id="state_createmode_csharp">
+<a href="#state_createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1226,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="state_creationsourcedatabaseid_csharp">
+<a href="#state_creationsourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1235,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Pool<wbr>Id</span>
+        <span id="state_elasticpoolid_csharp">
+<a href="#state_elasticpoolid_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1244,7 +1414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_csharp">
+<a href="#state_extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1253,7 +1425,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_csharp">
+<a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1262,7 +1436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>Gb</span>
+        <span id="state_maxsizegb_csharp">
+<a href="#state_maxsizegb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1271,7 +1447,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="state_mincapacity_csharp">
+<a href="#state_mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1280,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1289,7 +1469,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Replica<wbr>Count</span>
+        <span id="state_readreplicacount_csharp">
+<a href="#state_readreplicacount_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1298,7 +1480,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Scale</span>
+        <span id="state_readscale_csharp">
+<a href="#state_readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1307,7 +1491,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="state_restorepointintime_csharp">
+<a href="#state_restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1316,7 +1502,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Name</span>
+        <span id="state_samplename_csharp">
+<a href="#state_samplename_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1325,7 +1513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Id</span>
+        <span id="state_serverid_csharp">
+<a href="#state_serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1334,7 +1524,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku<wbr>Name</span>
+        <span id="state_skuname_csharp">
+<a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1343,7 +1535,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1352,7 +1546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threat<wbr>Detection<wbr>Policy</span>
+        <span id="state_threatdetectionpolicy_csharp">
+<a href="#state_threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1361,7 +1557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Redundant</span>
+        <span id="state_zoneredundant_csharp">
+<a href="#state_zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1377,7 +1575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="state_autopausedelayinminutes_go">
+<a href="#state_autopausedelayinminutes_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1386,7 +1586,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collation</span>
+        <span id="state_collation_go">
+<a href="#state_collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1597,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Mode</span>
+        <span id="state_createmode_go">
+<a href="#state_createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="state_creationsourcedatabaseid_go">
+<a href="#state_creationsourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1413,7 +1619,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elastic<wbr>Pool<wbr>Id</span>
+        <span id="state_elasticpoolid_go">
+<a href="#state_elasticpoolid_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1422,7 +1630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_go">
+<a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -1431,7 +1641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_go">
+<a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1440,7 +1652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>Gb</span>
+        <span id="state_maxsizegb_go">
+<a href="#state_maxsizegb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1449,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="state_mincapacity_go">
+<a href="#state_mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1458,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1467,7 +1685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Replica<wbr>Count</span>
+        <span id="state_readreplicacount_go">
+<a href="#state_readreplicacount_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1476,7 +1696,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Scale</span>
+        <span id="state_readscale_go">
+<a href="#state_readscale_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1485,7 +1707,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="state_restorepointintime_go">
+<a href="#state_restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1494,7 +1718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sample<wbr>Name</span>
+        <span id="state_samplename_go">
+<a href="#state_samplename_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1503,7 +1729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Id</span>
+        <span id="state_serverid_go">
+<a href="#state_serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1512,7 +1740,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku<wbr>Name</span>
+        <span id="state_skuname_go">
+<a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1521,7 +1751,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1530,7 +1762,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threat<wbr>Detection<wbr>Policy</span>
+        <span id="state_threatdetectionpolicy_go">
+<a href="#state_threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
@@ -1539,7 +1773,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Redundant</span>
+        <span id="state_zoneredundant_go">
+<a href="#state_zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1555,7 +1791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</span>
+        <span id="state_autopausedelayinminutes_nodejs">
+<a href="#state_autopausedelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1564,7 +1802,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>collation</span>
+        <span id="state_collation_nodejs">
+<a href="#state_collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1573,7 +1813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Mode</span>
+        <span id="state_createmode_nodejs">
+<a href="#state_createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1582,7 +1824,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Source<wbr>Database<wbr>Id</span>
+        <span id="state_creationsourcedatabaseid_nodejs">
+<a href="#state_creationsourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Source<wbr>Database<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1591,7 +1835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic<wbr>Pool<wbr>Id</span>
+        <span id="state_elasticpoolid_nodejs">
+<a href="#state_elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1600,7 +1846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span id="state_extendedauditingpolicy_nodejs">
+<a href="#state_extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
@@ -1609,7 +1857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="state_licensetype_nodejs">
+<a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1618,7 +1868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size<wbr>Gb</span>
+        <span id="state_maxsizegb_nodejs">
+<a href="#state_maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1627,7 +1879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Capacity</span>
+        <span id="state_mincapacity_nodejs">
+<a href="#state_mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1636,7 +1890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1645,7 +1901,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Replica<wbr>Count</span>
+        <span id="state_readreplicacount_nodejs">
+<a href="#state_readreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1654,7 +1912,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Scale</span>
+        <span id="state_readscale_nodejs">
+<a href="#state_readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1663,7 +1923,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore<wbr>Point<wbr>In<wbr>Time</span>
+        <span id="state_restorepointintime_nodejs">
+<a href="#state_restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1672,7 +1934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample<wbr>Name</span>
+        <span id="state_samplename_nodejs">
+<a href="#state_samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1681,7 +1945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Id</span>
+        <span id="state_serverid_nodejs">
+<a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1690,7 +1956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku<wbr>Name</span>
+        <span id="state_skuname_nodejs">
+<a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1699,7 +1967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1708,7 +1978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>threat<wbr>Detection<wbr>Policy</span>
+        <span id="state_threatdetectionpolicy_nodejs">
+<a href="#state_threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
@@ -1717,7 +1989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Redundant</span>
+        <span id="state_zoneredundant_nodejs">
+<a href="#state_zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1733,7 +2007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</span>
+        <span id="state_auto_pause_delay_in_minutes_python">
+<a href="#state_auto_pause_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1742,7 +2018,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>collation</span>
+        <span id="state_collation_python">
+<a href="#state_collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1751,7 +2029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>mode</span>
+        <span id="state_create_mode_python">
+<a href="#state_create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1760,7 +2040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>source_<wbr>database_<wbr>id</span>
+        <span id="state_creation_source_database_id_python">
+<a href="#state_creation_source_database_id_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>source_<wbr>database_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1769,7 +2051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>elastic_<wbr>pool_<wbr>id</span>
+        <span id="state_elastic_pool_id_python">
+<a href="#state_elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1778,7 +2062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span id="state_extended_auditing_policy_python">
+<a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Dict[Database<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
     </dt>
@@ -1787,7 +2073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="state_license_type_python">
+<a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1796,7 +2084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size_<wbr>gb</span>
+        <span id="state_max_size_gb_python">
+<a href="#state_max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1805,7 +2095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>capacity</span>
+        <span id="state_min_capacity_python">
+<a href="#state_min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1814,7 +2106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1823,7 +2117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>replica_<wbr>count</span>
+        <span id="state_read_replica_count_python">
+<a href="#state_read_replica_count_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1832,7 +2128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>scale</span>
+        <span id="state_read_scale_python">
+<a href="#state_read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1841,7 +2139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore_<wbr>point_<wbr>in_<wbr>time</span>
+        <span id="state_restore_point_in_time_python">
+<a href="#state_restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1850,7 +2150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sample_<wbr>name</span>
+        <span id="state_sample_name_python">
+<a href="#state_sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1859,7 +2161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>id</span>
+        <span id="state_server_id_python">
+<a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1868,7 +2172,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku_<wbr>name</span>
+        <span id="state_sku_name_python">
+<a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1877,7 +2183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1886,7 +2194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>threat_<wbr>detection_<wbr>policy</span>
+        <span id="state_threat_detection_policy_python">
+<a href="#state_threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Dict[Database<wbr>Threat<wbr>Detection<wbr>Policy]</a></span>
     </dt>
@@ -1895,7 +2205,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>redundant</span>
+        <span id="state_zone_redundant_python">
+<a href="#state_zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1937,7 +2249,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1946,7 +2260,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1955,7 +2271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1964,7 +2282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_csharp">
+<a href="#storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1980,7 +2300,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1989,7 +2311,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1998,7 +2322,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2007,7 +2333,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_go">
+<a href="#storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2023,7 +2351,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2032,7 +2362,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Endpoint</span>
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2041,7 +2373,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>In<wbr>Days</span>
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2050,7 +2384,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_nodejs">
+<a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2066,7 +2402,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>access_<wbr>key</span>
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2075,7 +2413,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>endpoint</span>
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2084,7 +2424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>in_<wbr>days</span>
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2093,7 +2435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span id="storageaccountaccesskeyissecondary_python">
+<a href="#storageaccountaccesskeyissecondary_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2127,7 +2471,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled<wbr>Alerts</span>
+        <span id="disabledalerts_csharp">
+<a href="#disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2136,7 +2482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email<wbr>Account<wbr>Admins</span>
+        <span id="emailaccountadmins_csharp">
+<a href="#emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2145,7 +2493,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email<wbr>Addresses</span>
+        <span id="emailaddresses_csharp">
+<a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2154,7 +2504,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Days</span>
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2163,7 +2515,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2172,7 +2526,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2181,7 +2537,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2190,7 +2548,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Server<wbr>Default</span>
+        <span id="useserverdefault_csharp">
+<a href="#useserverdefault_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Server<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2206,7 +2566,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled<wbr>Alerts</span>
+        <span id="disabledalerts_go">
+<a href="#disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2215,7 +2577,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email<wbr>Account<wbr>Admins</span>
+        <span id="emailaccountadmins_go">
+<a href="#emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2224,7 +2588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Email<wbr>Addresses</span>
+        <span id="emailaddresses_go">
+<a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2233,7 +2599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Days</span>
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2242,7 +2610,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2251,7 +2621,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2260,7 +2632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Endpoint</span>
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2269,7 +2643,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Server<wbr>Default</span>
+        <span id="useserverdefault_go">
+<a href="#useserverdefault_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Server<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2285,7 +2661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled<wbr>Alerts</span>
+        <span id="disabledalerts_nodejs">
+<a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2294,7 +2672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email<wbr>Account<wbr>Admins</span>
+        <span id="emailaccountadmins_nodejs">
+<a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2303,7 +2683,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email<wbr>Addresses</span>
+        <span id="emailaddresses_nodejs">
+<a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2312,7 +2694,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Days</span>
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2321,7 +2705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2330,7 +2716,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2339,7 +2727,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Endpoint</span>
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2348,7 +2738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Server<wbr>Default</span>
+        <span id="useserverdefault_nodejs">
+<a href="#useserverdefault_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Server<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2364,7 +2756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled_<wbr>alerts</span>
+        <span id="disabled_alerts_python">
+<a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2373,7 +2767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email_<wbr>account_<wbr>admins</span>
+        <span id="email_account_admins_python">
+<a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2382,7 +2778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>email_<wbr>addresses</span>
+        <span id="email_addresses_python">
+<a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2391,7 +2789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>days</span>
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2400,7 +2800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2409,7 +2811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>account_<wbr>access_<wbr>key</span>
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2418,7 +2822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>endpoint</span>
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2427,7 +2833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Server<wbr>Default</span>
+        <span id="useserverdefault_python">
+<a href="#useserverdefault_python" style="color: inherit; text-decoration: inherit;">use<wbr>Server<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

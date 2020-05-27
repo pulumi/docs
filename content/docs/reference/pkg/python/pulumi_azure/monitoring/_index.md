@@ -755,73 +755,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
 <span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
 <span class="n">example_autoscale_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AutoscaleSetting</span><span class="p">(</span><span class="s2">&quot;exampleAutoscaleSetting&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">notification</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;customEmails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;sendToSubscriptionAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;sendToSubscriptionCoAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="n">profiles</span><span class="o">=</span><span class="p">[{</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">profile</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Weekends&quot;</span><span class="p">,</span>
         <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
             <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="p">},</span>
-        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Weekends&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Increase&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Decrease&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
         <span class="s2">&quot;recurrence&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Week&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
             <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
             <span class="p">],</span>
-            <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Week&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;hours&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-            <span class="s2">&quot;minutes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hours&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span>
+            <span class="s2">&quot;minutes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
         <span class="p">},</span>
-        <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;metricTrigger&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
-                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="s2">&quot;scaleAction&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Increase&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                <span class="p">},</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;metricTrigger&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="s2">&quot;scaleAction&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Decrease&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                <span class="p">},</span>
-            <span class="p">},</span>
-        <span class="p">],</span>
     <span class="p">}],</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">notification</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sendToSubscriptionAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;sendToSubscriptionCoAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;customEmails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1255,21 +1256,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_key_vault</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-vault&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
 <span class="n">example_diagnostic_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">DiagnosticSetting</span><span class="p">(</span><span class="s2">&quot;exampleDiagnosticSetting&quot;</span><span class="p">,</span>
-    <span class="n">logs</span><span class="o">=</span><span class="p">[{</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">log</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;AuditEvent&quot;</span><span class="p">,</span>
         <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;retention_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">}],</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="p">[{</span>
+    <span class="n">metric</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;AllMetrics&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;retention_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
-    <span class="p">}],</span>
-    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="p">}])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

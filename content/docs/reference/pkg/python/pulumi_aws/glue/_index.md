@@ -753,6 +753,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet ID used by the connection.</p></li>
 </ul>
 <dl class="py attribute">
+<dt id="pulumi_aws.glue.Connection.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Glue Connection.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.glue.Connection.catalog_id">
 <code class="sig-name descname">catalog_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.catalog_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p>
@@ -801,7 +807,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.glue.Connection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_criterias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_connection_requirements</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_criterias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_connection_requirements</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -810,6 +816,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Glue Connection.</p></li>
 <li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
 <li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
 <li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>, <code class="docutils literal notranslate"><span class="pre">KAFKA</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>

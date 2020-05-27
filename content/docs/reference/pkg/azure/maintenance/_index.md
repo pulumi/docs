@@ -28,7 +28,7 @@ Explore the resources and functions of the maintenance module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.1</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 

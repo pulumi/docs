@@ -240,7 +240,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Lists</span>
+        <span id="clientlists_csharp">
+<a href="#clientlists_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -249,7 +251,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Arn</span>
+        <span id="gatewayarn_csharp">
+<a href="#gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +262,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Location<wbr>Arn</span>
+        <span id="locationarn_csharp">
+<a href="#locationarn_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +273,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +284,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Storage<wbr>Class</span>
+        <span id="defaultstorageclass_csharp">
+<a href="#defaultstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +295,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="guessmimetypeenabled_csharp">
+<a href="#guessmimetypeenabled_csharp" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -294,7 +306,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted</span>
+        <span id="kmsencrypted_csharp">
+<a href="#kmsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -303,7 +317,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +328,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="nfsfilesharedefaults_csharp">
+<a href="#nfsfilesharedefaults_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
@@ -321,7 +339,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Acl</span>
+        <span id="objectacl_csharp">
+<a href="#objectacl_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -330,7 +350,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Only</span>
+        <span id="readonly_csharp">
+<a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -339,7 +361,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requester<wbr>Pays</span>
+        <span id="requesterpays_csharp">
+<a href="#requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -348,7 +372,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Squash</span>
+        <span id="squash_csharp">
+<a href="#squash_csharp" style="color: inherit; text-decoration: inherit;">Squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -357,7 +383,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -373,7 +401,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Lists</span>
+        <span id="clientlists_go">
+<a href="#clientlists_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -382,7 +412,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Gateway<wbr>Arn</span>
+        <span id="gatewayarn_go">
+<a href="#gatewayarn_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +423,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Location<wbr>Arn</span>
+        <span id="locationarn_go">
+<a href="#locationarn_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +434,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +445,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Storage<wbr>Class</span>
+        <span id="defaultstorageclass_go">
+<a href="#defaultstorageclass_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +456,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="guessmimetypeenabled_go">
+<a href="#guessmimetypeenabled_go" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -427,7 +467,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted</span>
+        <span id="kmsencrypted_go">
+<a href="#kmsencrypted_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -436,7 +478,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -445,7 +489,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="nfsfilesharedefaults_go">
+<a href="#nfsfilesharedefaults_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
@@ -454,7 +500,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Acl</span>
+        <span id="objectacl_go">
+<a href="#objectacl_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +511,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Only</span>
+        <span id="readonly_go">
+<a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -472,7 +522,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requester<wbr>Pays</span>
+        <span id="requesterpays_go">
+<a href="#requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -481,7 +533,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Squash</span>
+        <span id="squash_go">
+<a href="#squash_go" style="color: inherit; text-decoration: inherit;">Squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +544,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -506,7 +562,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>Lists</span>
+        <span id="clientlists_nodejs">
+<a href="#clientlists_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -515,7 +573,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>gateway<wbr>Arn</span>
+        <span id="gatewayarn_nodejs">
+<a href="#gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -524,7 +584,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>location<wbr>Arn</span>
+        <span id="locationarn_nodejs">
+<a href="#locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -533,7 +595,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +606,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Storage<wbr>Class</span>
+        <span id="defaultstorageclass_nodejs">
+<a href="#defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -551,7 +617,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="guessmimetypeenabled_nodejs">
+<a href="#guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -560,7 +628,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted</span>
+        <span id="kmsencrypted_nodejs">
+<a href="#kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -569,7 +639,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +650,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="nfsfilesharedefaults_nodejs">
+<a href="#nfsfilesharedefaults_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
@@ -587,7 +661,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Acl</span>
+        <span id="objectacl_nodejs">
+<a href="#objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +672,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span id="readonly_nodejs">
+<a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -605,7 +683,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>requester<wbr>Pays</span>
+        <span id="requesterpays_nodejs">
+<a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -614,7 +694,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>squash</span>
+        <span id="squash_nodejs">
+<a href="#squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -623,7 +705,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -639,7 +723,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>client_<wbr>lists</span>
+        <span id="client_lists_python">
+<a href="#client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -648,7 +734,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>gateway_<wbr>arn</span>
+        <span id="gateway_arn_python">
+<a href="#gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +745,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>location_<wbr>arn</span>
+        <span id="location_arn_python">
+<a href="#location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -666,7 +756,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +767,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>storage_<wbr>class</span>
+        <span id="default_storage_class_python">
+<a href="#default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -684,7 +778,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>guess_<wbr>mime_<wbr>type_<wbr>enabled</span>
+        <span id="guess_mime_type_enabled_python">
+<a href="#guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -693,7 +789,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted</span>
+        <span id="kms_encrypted_python">
+<a href="#kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -702,7 +800,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -711,7 +811,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>file_<wbr>share_<wbr>defaults</span>
+        <span id="nfs_file_share_defaults_python">
+<a href="#nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></span>
     </dt>
@@ -720,7 +822,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>acl</span>
+        <span id="object_acl_python">
+<a href="#object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -729,7 +833,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>only</span>
+        <span id="read_only_python">
+<a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -738,7 +844,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>requester_<wbr>pays</span>
+        <span id="requester_pays_python">
+<a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -747,7 +855,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>squash</span>
+        <span id="squash_python">
+<a href="#squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -756,7 +866,9 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -783,7 +895,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -792,7 +906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fileshare<wbr>Id</span>
+        <span id="fileshareid_csharp">
+<a href="#fileshareid_csharp" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +927,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -825,7 +945,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -834,7 +956,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fileshare<wbr>Id</span>
+        <span id="fileshareid_go">
+<a href="#fileshareid_go" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -843,7 +967,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +977,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -867,7 +995,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -876,7 +1006,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fileshare<wbr>Id</span>
+        <span id="fileshareid_nodejs">
+<a href="#fileshareid_nodejs" style="color: inherit; text-decoration: inherit;">fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -885,7 +1017,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -893,7 +1027,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -909,7 +1045,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -918,7 +1056,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fileshare_<wbr>id</span>
+        <span id="fileshare_id_python">
+<a href="#fileshare_id_python" style="color: inherit; text-decoration: inherit;">fileshare_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1067,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -935,7 +1077,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1077,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Lists</span>
+        <span id="state_clientlists_csharp">
+<a href="#state_clientlists_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1095,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Storage<wbr>Class</span>
+        <span id="state_defaultstorageclass_csharp">
+<a href="#state_defaultstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fileshare<wbr>Id</span>
+        <span id="state_fileshareid_csharp">
+<a href="#state_fileshareid_csharp" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1113,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Arn</span>
+        <span id="state_gatewayarn_csharp">
+<a href="#state_gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1122,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="state_guessmimetypeenabled_csharp">
+<a href="#state_guessmimetypeenabled_csharp" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1131,7 +1287,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted</span>
+        <span id="state_kmsencrypted_csharp">
+<a href="#state_kmsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1140,7 +1298,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="state_kmskeyarn_csharp">
+<a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1149,7 +1309,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location<wbr>Arn</span>
+        <span id="state_locationarn_csharp">
+<a href="#state_locationarn_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1158,7 +1320,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="state_nfsfilesharedefaults_csharp">
+<a href="#state_nfsfilesharedefaults_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
@@ -1167,7 +1331,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Acl</span>
+        <span id="state_objectacl_csharp">
+<a href="#state_objectacl_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1176,7 +1342,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1185,7 +1353,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Only</span>
+        <span id="state_readonly_csharp">
+<a href="#state_readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1194,7 +1364,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requester<wbr>Pays</span>
+        <span id="state_requesterpays_csharp">
+<a href="#state_requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1203,7 +1375,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_csharp">
+<a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1212,7 +1386,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Squash</span>
+        <span id="state_squash_csharp">
+<a href="#state_squash_csharp" style="color: inherit; text-decoration: inherit;">Squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1221,7 +1397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1237,7 +1415,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1246,7 +1426,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Lists</span>
+        <span id="state_clientlists_go">
+<a href="#state_clientlists_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1255,7 +1437,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Storage<wbr>Class</span>
+        <span id="state_defaultstorageclass_go">
+<a href="#state_defaultstorageclass_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1264,7 +1448,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fileshare<wbr>Id</span>
+        <span id="state_fileshareid_go">
+<a href="#state_fileshareid_go" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1273,7 +1459,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Arn</span>
+        <span id="state_gatewayarn_go">
+<a href="#state_gatewayarn_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1282,7 +1470,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="state_guessmimetypeenabled_go">
+<a href="#state_guessmimetypeenabled_go" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1291,7 +1481,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted</span>
+        <span id="state_kmsencrypted_go">
+<a href="#state_kmsencrypted_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1300,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span id="state_kmskeyarn_go">
+<a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1309,7 +1503,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location<wbr>Arn</span>
+        <span id="state_locationarn_go">
+<a href="#state_locationarn_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1318,7 +1514,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="state_nfsfilesharedefaults_go">
+<a href="#state_nfsfilesharedefaults_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
@@ -1327,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Acl</span>
+        <span id="state_objectacl_go">
+<a href="#state_objectacl_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1336,7 +1536,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1345,7 +1547,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Only</span>
+        <span id="state_readonly_go">
+<a href="#state_readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1354,7 +1558,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requester<wbr>Pays</span>
+        <span id="state_requesterpays_go">
+<a href="#state_requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1363,7 +1569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_go">
+<a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1372,7 +1580,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Squash</span>
+        <span id="state_squash_go">
+<a href="#state_squash_go" style="color: inherit; text-decoration: inherit;">Squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1381,7 +1591,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1397,7 +1609,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1406,7 +1620,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Lists</span>
+        <span id="state_clientlists_nodejs">
+<a href="#state_clientlists_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1415,7 +1631,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Storage<wbr>Class</span>
+        <span id="state_defaultstorageclass_nodejs">
+<a href="#state_defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1424,7 +1642,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fileshare<wbr>Id</span>
+        <span id="state_fileshareid_nodejs">
+<a href="#state_fileshareid_nodejs" style="color: inherit; text-decoration: inherit;">fileshare<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1433,7 +1653,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Arn</span>
+        <span id="state_gatewayarn_nodejs">
+<a href="#state_gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1442,7 +1664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
+        <span id="state_guessmimetypeenabled_nodejs">
+<a href="#state_guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1451,7 +1675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted</span>
+        <span id="state_kmsencrypted_nodejs">
+<a href="#state_kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1460,7 +1686,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
+        <span id="state_kmskeyarn_nodejs">
+<a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1469,7 +1697,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location<wbr>Arn</span>
+        <span id="state_locationarn_nodejs">
+<a href="#state_locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1478,7 +1708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>File<wbr>Share<wbr>Defaults</span>
+        <span id="state_nfsfilesharedefaults_nodejs">
+<a href="#state_nfsfilesharedefaults_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>File<wbr>Share<wbr>Defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
@@ -1487,7 +1719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Acl</span>
+        <span id="state_objectacl_nodejs">
+<a href="#state_objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1496,7 +1730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1505,7 +1741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span id="state_readonly_nodejs">
+<a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1514,7 +1752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requester<wbr>Pays</span>
+        <span id="state_requesterpays_nodejs">
+<a href="#state_requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1523,7 +1763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arn</span>
+        <span id="state_rolearn_nodejs">
+<a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1532,7 +1774,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>squash</span>
+        <span id="state_squash_nodejs">
+<a href="#state_squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1541,7 +1785,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1557,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1566,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>lists</span>
+        <span id="state_client_lists_python">
+<a href="#state_client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1575,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>storage_<wbr>class</span>
+        <span id="state_default_storage_class_python">
+<a href="#state_default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1584,7 +1836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fileshare_<wbr>id</span>
+        <span id="state_fileshare_id_python">
+<a href="#state_fileshare_id_python" style="color: inherit; text-decoration: inherit;">fileshare_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1593,7 +1847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>arn</span>
+        <span id="state_gateway_arn_python">
+<a href="#state_gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1602,7 +1858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>guess_<wbr>mime_<wbr>type_<wbr>enabled</span>
+        <span id="state_guess_mime_type_enabled_python">
+<a href="#state_guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1611,7 +1869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted</span>
+        <span id="state_kms_encrypted_python">
+<a href="#state_kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1620,7 +1880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>arn</span>
+        <span id="state_kms_key_arn_python">
+<a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1629,7 +1891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location_<wbr>arn</span>
+        <span id="state_location_arn_python">
+<a href="#state_location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1638,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>file_<wbr>share_<wbr>defaults</span>
+        <span id="state_nfs_file_share_defaults_python">
+<a href="#state_nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></span>
     </dt>
@@ -1647,7 +1913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>acl</span>
+        <span id="state_object_acl_python">
+<a href="#state_object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1656,7 +1924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1665,7 +1935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>only</span>
+        <span id="state_read_only_python">
+<a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1674,7 +1946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requester_<wbr>pays</span>
+        <span id="state_requester_pays_python">
+<a href="#state_requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1683,7 +1957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arn</span>
+        <span id="state_role_arn_python">
+<a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1692,7 +1968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>squash</span>
+        <span id="state_squash_python">
+<a href="#state_squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1701,7 +1979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1743,7 +2023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directory<wbr>Mode</span>
+        <span id="directorymode_csharp">
+<a href="#directorymode_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1752,7 +2034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Mode</span>
+        <span id="filemode_csharp">
+<a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1761,7 +2045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1770,7 +2056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1786,7 +2074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directory<wbr>Mode</span>
+        <span id="directorymode_go">
+<a href="#directorymode_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1795,7 +2085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Mode</span>
+        <span id="filemode_go">
+<a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1804,7 +2096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1813,7 +2107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>Id</span>
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1829,7 +2125,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>directory<wbr>Mode</span>
+        <span id="directorymode_nodejs">
+<a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1838,7 +2136,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Mode</span>
+        <span id="filemode_nodejs">
+<a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1847,7 +2147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1856,7 +2158,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>Id</span>
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1872,7 +2176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>directory<wbr>Mode</span>
+        <span id="directorymode_python">
+<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1881,7 +2187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Mode</span>
+        <span id="filemode_python">
+<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1890,7 +2198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Id</span>
+        <span id="groupid_python">
+<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1899,7 +2209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner_<wbr>id</span>
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

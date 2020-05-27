@@ -3516,6 +3516,13 @@ like <code class="docutils literal notranslate"><span class="pre">type</span> <s
             <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;trusted_role_arn&quot;</span><span class="p">]],</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
         <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="sa">f</span><span class="s2">&quot;arn:aws:iam::</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;account_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:saml-provider/</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;provider_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cognito-identity.amazonaws.com&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Federated&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
     <span class="p">],</span>
 <span class="p">}])</span>
 </pre></div>
@@ -3645,8 +3652,8 @@ listed.</p></li>
 the statement does <em>not</em> apply to.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">identifiers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of identifiers for principals. When <code class="docutils literal notranslate"><span class="pre">type</span></code>
-is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”.</p></li>
+is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Federated”, these are web identity users or SAML provider ARNs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”. For Federated access the type is “Federated”.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notResources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource ARNs that this statement
@@ -3656,8 +3663,8 @@ does <em>not</em> apply to. Used to apply a policy statement to all resources
 specifying a resource (or resource pattern) to which this statement applies.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">identifiers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of identifiers for principals. When <code class="docutils literal notranslate"><span class="pre">type</span></code>
-is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”.</p></li>
+is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Federated”, these are web identity users or SAML provider ARNs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”. For Federated access the type is “Federated”.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource ARNs that this statement applies

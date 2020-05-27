@@ -4893,14 +4893,14 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcPeeringConnectionResult.accepter">
 <code class="sig-name descname">accepter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcPeeringConnectionResult.accepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the accepter VPC.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetVpcPeeringConnectionResult.requester">
 <code class="sig-name descname">requester</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcPeeringConnectionResult.requester" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the requester VPC.</p>
 </dd></dl>
 
 </dd></dl>
@@ -8137,10 +8137,10 @@ cross-account scenarios.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC peering connection.</p></li>
 </ul>
@@ -8172,7 +8172,7 @@ connection. This option is not supported for inter-region VPC peering.</p></li>
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions.accepter">
 <code class="sig-name descname">accepter</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions.accepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
@@ -8190,7 +8190,7 @@ connection. This option is not supported for inter-region VPC peering.</p></li>
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions.requester">
 <code class="sig-name descname">requester</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions.requester" title="Permalink to this definition">¶</a></dt>
 <dd><p>A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
@@ -8222,10 +8222,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC peering connection.</p></li>
 </ul>
@@ -13500,7 +13500,7 @@ or accept the connection manually using the AWS Management Console, AWS CLI, thr
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the peer VPC.
@@ -13509,7 +13509,7 @@ Defaults to the account ID the <a class="reference external" href="https://www.t
 and use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> to manage the accepter side.</p></li>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC with which you are creating the VPC Peering Connection.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
@@ -13552,7 +13552,7 @@ connection.</p></li>
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.accepter">
 <code class="sig-name descname">accepter</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.accepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
@@ -13598,7 +13598,7 @@ and use the <code class="docutils literal notranslate"><span class="pre">ec2.Vpc
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.requester">
 <code class="sig-name descname">requester</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.requester" title="Permalink to this definition">¶</a></dt>
 <dd><p>A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
@@ -13639,7 +13639,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accept_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the VPC Peering Connection request.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The AWS account ID of the owner of the peer VPC.
@@ -13649,7 +13649,7 @@ Defaults to the account ID the <a class="reference external" href="https://www.t
 and use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> to manage the accepter side.</p></li>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC with which you are creating the VPC Peering Connection.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
@@ -13765,10 +13765,10 @@ connection into management.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p></li>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the accepter VPC.</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p></li>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the requester VPC.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Peering Connection ID to manage.</p></li>
 </ul>
@@ -13802,7 +13802,7 @@ connection in the peer VPC over the VPC Peering Connection.</p></li>
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.accepter">
 <code class="sig-name descname">accepter</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.accepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the accepter VPC.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.</p></li>
@@ -13841,7 +13841,7 @@ connection in the peer VPC over the VPC Peering Connection.</p></li>
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.requester">
 <code class="sig-name descname">requester</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.requester" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the requester VPC.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.</p></li>
@@ -13883,13 +13883,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accept_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the VPC Peering Connection request.</p></li>
 <li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p></li>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the accepter VPC.</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the requester VPC.</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC.</p></li>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
-(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p></li>
+(<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html</a>) options set for the requester VPC.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the accepter VPC.</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Peering Connection ID to manage.</p></li>

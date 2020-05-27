@@ -37,12 +37,12 @@ import pulumi_azure as azure
 
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
 example_store = azure.datalake.Store("exampleStore",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name)
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
 example_store_file = azure.datalake.StoreFile("exampleStoreFile",
+    resource_group_name=example_resource_group.name,
     local_file_path="/path/to/local/file",
-    remote_file_path="/path/created/for/remote/file",
-    resource_group_name=example_resource_group.name)
+    remote_file_path="/path/created/for/remote/file")
 ```
 {{% /example %}}
 
@@ -51,17 +51,15 @@ example_store_file = azure.datalake.StoreFile("exampleStoreFile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("example", {
-    location: "northeurope",
-});
-const exampleStore = new azure.datalake.Store("example", {
-    location: exampleResourceGroup.location,
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleStore = new azure.datalake.Store("exampleStore", {
     resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
 });
-const exampleStoreFile = new azure.datalake.StoreFile("example", {
+const exampleStoreFile = new azure.datalake.StoreFile("exampleStoreFile", {
+    resourceGroupName: exampleResourceGroup.name,
     localFilePath: "/path/to/local/file",
     remoteFilePath: "/path/created/for/remote/file",
-    resourceGroupName: exampleResourceGroup.name,
 });
 ```
 {{% /example %}}
@@ -252,7 +250,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +261,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_csharp">
+<a href="#localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +272,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>File<wbr>Path</span>
+        <span id="remotefilepath_csharp">
+<a href="#remotefilepath_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +290,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +301,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_go">
+<a href="#localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +312,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>File<wbr>Path</span>
+        <span id="remotefilepath_go">
+<a href="#remotefilepath_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -320,7 +330,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Name</span>
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -329,7 +341,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_nodejs">
+<a href="#localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -338,7 +352,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>remote<wbr>File<wbr>Path</span>
+        <span id="remotefilepath_nodejs">
+<a href="#remotefilepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -354,7 +370,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>name</span>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +381,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>local_<wbr>file_<wbr>path</span>
+        <span id="local_file_path_python">
+<a href="#local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -372,7 +392,9 @@ The StoreFile resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>remote_<wbr>file_<wbr>path</span>
+        <span id="remote_file_path_python">
+<a href="#remote_file_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -399,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -414,7 +438,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +455,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -444,7 +472,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -585,7 +615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Name</span>
+        <span id="state_accountname_csharp">
+<a href="#state_accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -594,7 +626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_csharp">
+<a href="#state_localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -603,7 +637,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>File<wbr>Path</span>
+        <span id="state_remotefilepath_csharp">
+<a href="#state_remotefilepath_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -619,7 +655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Name</span>
+        <span id="state_accountname_go">
+<a href="#state_accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_go">
+<a href="#state_localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>File<wbr>Path</span>
+        <span id="state_remotefilepath_go">
+<a href="#state_remotefilepath_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -653,7 +695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Name</span>
+        <span id="state_accountname_nodejs">
+<a href="#state_accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -662,7 +706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_nodejs">
+<a href="#state_localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>File<wbr>Path</span>
+        <span id="state_remotefilepath_nodejs">
+<a href="#state_remotefilepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -687,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>name</span>
+        <span id="state_account_name_python">
+<a href="#state_account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>file_<wbr>path</span>
+        <span id="state_local_file_path_python">
+<a href="#state_local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>file_<wbr>path</span>
+        <span id="state_remote_file_path_python">
+<a href="#state_remote_file_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

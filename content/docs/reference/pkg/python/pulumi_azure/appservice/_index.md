@@ -309,6 +309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Does this restriction <code class="docutils literal notranslate"><span class="pre">Allow</span></code> or <code class="docutils literal notranslate"><span class="pre">Deny</span></code> access for this IP range. Defaults to <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
@@ -562,6 +563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Does this restriction <code class="docutils literal notranslate"><span class="pre">Allow</span></code> or <code class="docutils literal notranslate"><span class="pre">Deny</span></code> access for this IP range. Defaults to <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
@@ -784,6 +786,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Does this restriction <code class="docutils literal notranslate"><span class="pre">Allow</span></code> or <code class="docutils literal notranslate"><span class="pre">Deny</span></code> access for this IP range. Defaults to <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
@@ -1433,7 +1436,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azure.appservice.Environment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Environment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">front_end_scale_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_load_balancing_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pricing_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Environment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Environment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">front_end_scale_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_load_balancing_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pricing_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Environment.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
@@ -1465,7 +1468,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>front_end_scale_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Scale factor for front end instances. Possible values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service Environment. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>pricing_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Pricing tier for the front end instances. Possible values are <code class="docutils literal notranslate"><span class="pre">I1</span></code>, <code class="docutils literal notranslate"><span class="pre">I2</span></code> and <code class="docutils literal notranslate"><span class="pre">I3</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">I1</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>).</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet which the App Service Environment should be connected to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1496,13 +1501,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.Environment.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Environment.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Resource Group where the App Service Environment exists.</p>
+<dd><p>The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>).</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.Environment.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Environment.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Subnet which the App Service Environment should be connected to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.Environment.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Environment.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1520,8 +1531,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the App Service Environment exists.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service Environment. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>pricing_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Pricing tier for the front end instances. Possible values are <code class="docutils literal notranslate"><span class="pre">I1</span></code>, <code class="docutils literal notranslate"><span class="pre">I2</span></code> and <code class="docutils literal notranslate"><span class="pre">I3</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">I1</span></code>.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the App Service Environment exists.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>).</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet which the App Service Environment should be connected to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1589,8 +1601,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1614,8 +1625,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1640,6 +1650,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p></li>
 <li><p><strong>storage_account_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key which will be used to access the backend storage account for the Function App.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend storage account name which will be used by this Function App (such as the dashboard, logs).</p></li>
+<li><p><strong>storage_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string to the backend storage account which will be used by this Function App (such as the dashboard, logs). Typically set to the <code class="docutils literal notranslate"><span class="pre">primary_connection_string</span></code> of a storage account resource.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
 </ul>
@@ -1942,6 +1953,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionApp.storage_connection_string">
+<code class="sig-name descname">storage_connection_string</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.storage_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The connection string to the backend storage account which will be used by this Function App (such as the dashboard, logs). Typically set to the <code class="docutils literal notranslate"><span class="pre">primary_connection_string</span></code> of a storage account resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_azure.appservice.FunctionApp.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -1986,6 +2003,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>site_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p></li>
 <li><p><strong>storage_account_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key which will be used to access the backend storage account for the Function App.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend storage account name which will be used by this Function App (such as the dashboard, logs).</p></li>
+<li><p><strong>storage_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string to the backend storage account which will be used by this Function App (such as the dashboard, logs). Typically set to the <code class="docutils literal notranslate"><span class="pre">primary_connection_string</span></code> of a storage account resource.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
 </ul>
@@ -2142,13 +2160,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
 <span class="n">example_function_app_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionAppSlot</span><span class="p">(</span><span class="s2">&quot;exampleFunctionAppSlot&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">function_app_name</span><span class="o">=</span><span class="n">example_function_app</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2156,21 +2176,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App.</p></li>
+<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App Slot.</p></li>
 <li><p><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</p></li>
 <li><p><strong>auth_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p></li>
 <li><p><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</p></li>
 <li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p></li>
 <li><p><strong>daily_memory_time_quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of the Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Function App enabled?</p></li>
 <li><p><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Function App. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string indicating the Operating System type for this function app.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App Slot.</p></li>
 <li><p><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p></li>
+<li><p><strong>storage_account_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key which will be used to access the backend storage account for the Function App.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend storage account name which will be used by the Function App (such as the dashboard, logs).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
 </ul>
@@ -2261,7 +2283,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.FunctionAppSlot.app_service_plan_id">
 <code class="sig-name descname">app_service_plan_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.app_service_plan_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the App Service Plan within which to create this Function App.</p>
+<dd><p>The ID of the App Service Plan within which to create this Function App Slot.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2353,7 +2375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.FunctionAppSlot.enable_builtin_logging">
 <code class="sig-name descname">enable_builtin_logging</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.enable_builtin_logging" title="Permalink to this definition">¶</a></dt>
-<dd><p>Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<dd><p>Should the built-in logging of the Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2419,7 +2441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.FunctionAppSlot.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to create the Function App.</p>
+<dd><p>The name of the resource group in which to create the Function App Slot.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2453,11 +2475,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.FunctionAppSlot.site_credentials">
 <code class="sig-name descname">site_credentials</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.site_credentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this Function App Slot.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the username, which can be used to publish to this App Service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username which can be used to publish to this App Service</p></li>
 </ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.storage_account_access_key">
+<code class="sig-name descname">storage_account_access_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.storage_account_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access key which will be used to access the backend storage account for the Function App.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.storage_account_name">
+<code class="sig-name descname">storage_account_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.storage_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The backend storage account name which will be used by the Function App (such as the dashboard, logs).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2483,14 +2517,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App.</p></li>
+<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App Slot.</p></li>
 <li><p><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</p></li>
 <li><p><strong>auth_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p></li>
 <li><p><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</p></li>
 <li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p></li>
 <li><p><strong>daily_memory_time_quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
 <li><p><strong>default_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default hostname associated with the Function App - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code></p></li>
-<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of the Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Function App enabled?</p></li>
 <li><p><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
@@ -2500,9 +2534,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string indicating the Operating System type for this function app.</p></li>
 <li><p><strong>outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code></p></li>
 <li><p><strong>possible_outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App Slot.</p></li>
 <li><p><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p></li>
-<li><p><strong>site_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p></li>
+<li><p><strong>site_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this Function App Slot.</p></li>
+<li><p><strong>storage_account_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key which will be used to access the backend storage account for the Function App.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend storage account name which will be used by the Function App (such as the dashboard, logs).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
 </ul>
@@ -3530,6 +3566,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -3707,6 +3744,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address used for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -3884,6 +3922,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>

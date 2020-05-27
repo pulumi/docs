@@ -486,12 +486,12 @@ taint the resource so the <code class="docutils literal notranslate"><span class
 
 <span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
 <span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
-    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
 <span class="n">example_store_file</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">StoreFile</span><span class="p">(</span><span class="s2">&quot;exampleStoreFile&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">local_file_path</span><span class="o">=</span><span class="s2">&quot;/path/to/local/file&quot;</span><span class="p">,</span>
-    <span class="n">remote_file_path</span><span class="o">=</span><span class="s2">&quot;/path/created/for/remote/file&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">remote_file_path</span><span class="o">=</span><span class="s2">&quot;/path/created/for/remote/file&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

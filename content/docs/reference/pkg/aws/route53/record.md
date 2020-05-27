@@ -422,7 +422,9 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +433,9 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -440,7 +444,9 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +455,9 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="aliases_csharp">
+<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List&lt;Record<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
@@ -459,7 +467,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Overwrite</span>
+        <span id="allowoverwrite_csharp">
+<a href="#allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -468,7 +478,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failover<wbr>Routing<wbr>Policies</span>
+        <span id="failoverroutingpolicies_csharp">
+<a href="#failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -477,7 +489,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="geolocationroutingpolicies_csharp">
+<a href="#geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -486,7 +500,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Id</span>
+        <span id="healthcheckid_csharp">
+<a href="#healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -495,7 +511,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latency<wbr>Routing<wbr>Policies</span>
+        <span id="latencyroutingpolicies_csharp">
+<a href="#latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -504,7 +522,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="multivalueanswerroutingpolicy_csharp">
+<a href="#multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -513,7 +533,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Records</span>
+        <span id="records_csharp">
+<a href="#records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -522,7 +544,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Identifier</span>
+        <span id="setidentifier_csharp">
+<a href="#setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -531,7 +555,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -540,7 +566,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Routing<wbr>Policies</span>
+        <span id="weightedroutingpolicies_csharp">
+<a href="#weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -556,7 +584,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +595,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -574,7 +606,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -583,7 +617,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="aliases_go">
+<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
     </dt>
@@ -593,7 +629,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Overwrite</span>
+        <span id="allowoverwrite_go">
+<a href="#allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -602,7 +640,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failover<wbr>Routing<wbr>Policies</span>
+        <span id="failoverroutingpolicies_go">
+<a href="#failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -611,7 +651,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="geolocationroutingpolicies_go">
+<a href="#geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -620,7 +662,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Id</span>
+        <span id="healthcheckid_go">
+<a href="#healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -629,7 +673,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latency<wbr>Routing<wbr>Policies</span>
+        <span id="latencyroutingpolicies_go">
+<a href="#latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -638,7 +684,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="multivalueanswerroutingpolicy_go">
+<a href="#multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -647,7 +695,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Records</span>
+        <span id="records_go">
+<a href="#records_go" style="color: inherit; text-decoration: inherit;">Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -656,7 +706,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Identifier</span>
+        <span id="setidentifier_go">
+<a href="#setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -665,7 +717,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -674,7 +728,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Routing<wbr>Policies</span>
+        <span id="weightedroutingpolicies_go">
+<a href="#weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -690,7 +746,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -699,7 +757,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Record<wbr>Type</span>
     </dt>
@@ -708,7 +768,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -717,7 +779,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="aliases_nodejs">
+<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">Record<wbr>Alias[]</a></span>
     </dt>
@@ -727,7 +791,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Overwrite</span>
+        <span id="allowoverwrite_nodejs">
+<a href="#allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -736,7 +802,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failover<wbr>Routing<wbr>Policies</span>
+        <span id="failoverroutingpolicies_nodejs">
+<a href="#failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -745,7 +813,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="geolocationroutingpolicies_nodejs">
+<a href="#geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -754,7 +824,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Id</span>
+        <span id="healthcheckid_nodejs">
+<a href="#healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -763,7 +835,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latency<wbr>Routing<wbr>Policies</span>
+        <span id="latencyroutingpolicies_nodejs">
+<a href="#latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -772,7 +846,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="multivalueanswerroutingpolicy_nodejs">
+<a href="#multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -781,7 +857,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>records</span>
+        <span id="records_nodejs">
+<a href="#records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -790,7 +868,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Identifier</span>
+        <span id="setidentifier_nodejs">
+<a href="#setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -799,7 +879,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -808,7 +890,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Routing<wbr>Policies</span>
+        <span id="weightedroutingpolicies_nodejs">
+<a href="#weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -824,7 +908,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +919,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -842,7 +930,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +941,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="aliases_python">
+<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
     </dt>
@@ -861,7 +953,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>overwrite</span>
+        <span id="allow_overwrite_python">
+<a href="#allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -870,7 +964,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failover_<wbr>routing_<wbr>policies</span>
+        <span id="failover_routing_policies_python">
+<a href="#failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -879,7 +975,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geolocation_<wbr>routing_<wbr>policies</span>
+        <span id="geolocation_routing_policies_python">
+<a href="#geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -888,7 +986,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>id</span>
+        <span id="health_check_id_python">
+<a href="#health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -897,7 +997,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latency_<wbr>routing_<wbr>policies</span>
+        <span id="latency_routing_policies_python">
+<a href="#latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -906,7 +1008,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalue_<wbr>answer_<wbr>routing_<wbr>policy</span>
+        <span id="multivalue_answer_routing_policy_python">
+<a href="#multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -915,7 +1019,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>records</span>
+        <span id="records_python">
+<a href="#records_python" style="color: inherit; text-decoration: inherit;">records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -924,7 +1030,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set_<wbr>identifier</span>
+        <span id="set_identifier_python">
+<a href="#set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -933,7 +1041,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -942,7 +1052,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted_<wbr>routing_<wbr>policies</span>
+        <span id="weighted_routing_policies_python">
+<a href="#weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -969,7 +1081,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -978,7 +1092,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1109,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Fqdn</span>
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1002,7 +1120,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1137,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1026,7 +1148,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1041,7 +1165,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>fqdn</span>
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1050,7 +1176,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1191,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="state_aliases_csharp">
+<a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List&lt;Record<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
@@ -1201,7 +1331,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Overwrite</span>
+        <span id="state_allowoverwrite_csharp">
+<a href="#state_allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1210,7 +1342,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failover<wbr>Routing<wbr>Policies</span>
+        <span id="state_failoverroutingpolicies_csharp">
+<a href="#state_failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -1219,7 +1353,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_csharp">
+<a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1228,7 +1364,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="state_geolocationroutingpolicies_csharp">
+<a href="#state_geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -1237,7 +1375,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Id</span>
+        <span id="state_healthcheckid_csharp">
+<a href="#state_healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1246,7 +1386,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latency<wbr>Routing<wbr>Policies</span>
+        <span id="state_latencyroutingpolicies_csharp">
+<a href="#state_latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -1255,7 +1397,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="state_multivalueanswerroutingpolicy_csharp">
+<a href="#state_multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1264,7 +1408,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1273,7 +1419,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Records</span>
+        <span id="state_records_csharp">
+<a href="#state_records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1282,7 +1430,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Identifier</span>
+        <span id="state_setidentifier_csharp">
+<a href="#state_setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1291,7 +1441,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_csharp">
+<a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1300,7 +1452,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1309,7 +1463,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Routing<wbr>Policies</span>
+        <span id="state_weightedroutingpolicies_csharp">
+<a href="#state_weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -1318,7 +1474,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1334,7 +1492,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="state_aliases_go">
+<a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
     </dt>
@@ -1344,7 +1504,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Overwrite</span>
+        <span id="state_allowoverwrite_go">
+<a href="#state_allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1353,7 +1515,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failover<wbr>Routing<wbr>Policies</span>
+        <span id="state_failoverroutingpolicies_go">
+<a href="#state_failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -1362,7 +1526,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fqdn</span>
+        <span id="state_fqdn_go">
+<a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1371,7 +1537,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="state_geolocationroutingpolicies_go">
+<a href="#state_geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -1380,7 +1548,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Id</span>
+        <span id="state_healthcheckid_go">
+<a href="#state_healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1389,7 +1559,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latency<wbr>Routing<wbr>Policies</span>
+        <span id="state_latencyroutingpolicies_go">
+<a href="#state_latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -1398,7 +1570,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="state_multivalueanswerroutingpolicy_go">
+<a href="#state_multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1407,7 +1581,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1416,7 +1592,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Records</span>
+        <span id="state_records_go">
+<a href="#state_records_go" style="color: inherit; text-decoration: inherit;">Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1425,7 +1603,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Identifier</span>
+        <span id="state_setidentifier_go">
+<a href="#state_setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1434,7 +1614,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_go">
+<a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1443,7 +1625,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -1452,7 +1636,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Routing<wbr>Policies</span>
+        <span id="state_weightedroutingpolicies_go">
+<a href="#state_weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
@@ -1461,7 +1647,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1477,7 +1665,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="state_aliases_nodejs">
+<a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">Record<wbr>Alias[]</a></span>
     </dt>
@@ -1487,7 +1677,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Overwrite</span>
+        <span id="state_allowoverwrite_nodejs">
+<a href="#state_allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1496,7 +1688,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failover<wbr>Routing<wbr>Policies</span>
+        <span id="state_failoverroutingpolicies_nodejs">
+<a href="#state_failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -1505,7 +1699,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_nodejs">
+<a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1514,7 +1710,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geolocation<wbr>Routing<wbr>Policies</span>
+        <span id="state_geolocationroutingpolicies_nodejs">
+<a href="#state_geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -1523,7 +1721,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Id</span>
+        <span id="state_healthcheckid_nodejs">
+<a href="#state_healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1532,7 +1732,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latency<wbr>Routing<wbr>Policies</span>
+        <span id="state_latencyroutingpolicies_nodejs">
+<a href="#state_latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -1541,7 +1743,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalue<wbr>Answer<wbr>Routing<wbr>Policy</span>
+        <span id="state_multivalueanswerroutingpolicy_nodejs">
+<a href="#state_multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1550,7 +1754,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1559,7 +1765,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>records</span>
+        <span id="state_records_nodejs">
+<a href="#state_records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1568,7 +1776,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Identifier</span>
+        <span id="state_setidentifier_nodejs">
+<a href="#state_setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1577,7 +1787,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_nodejs">
+<a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1586,7 +1798,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Record<wbr>Type</span>
     </dt>
@@ -1595,7 +1809,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Routing<wbr>Policies</span>
+        <span id="state_weightedroutingpolicies_nodejs">
+<a href="#state_weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
@@ -1604,7 +1820,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1620,7 +1838,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="state_aliases_python">
+<a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
     </dt>
@@ -1630,7 +1850,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>overwrite</span>
+        <span id="state_allow_overwrite_python">
+<a href="#state_allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1639,7 +1861,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failover_<wbr>routing_<wbr>policies</span>
+        <span id="state_failover_routing_policies_python">
+<a href="#state_failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -1648,7 +1872,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fqdn</span>
+        <span id="state_fqdn_python">
+<a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1657,7 +1883,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>geolocation_<wbr>routing_<wbr>policies</span>
+        <span id="state_geolocation_routing_policies_python">
+<a href="#state_geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -1666,7 +1894,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>id</span>
+        <span id="state_health_check_id_python">
+<a href="#state_health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1675,7 +1905,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latency_<wbr>routing_<wbr>policies</span>
+        <span id="state_latency_routing_policies_python">
+<a href="#state_latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -1684,7 +1916,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalue_<wbr>answer_<wbr>routing_<wbr>policy</span>
+        <span id="state_multivalue_answer_routing_policy_python">
+<a href="#state_multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1693,7 +1927,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1702,7 +1938,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>records</span>
+        <span id="state_records_python">
+<a href="#state_records_python" style="color: inherit; text-decoration: inherit;">records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1711,7 +1949,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set_<wbr>identifier</span>
+        <span id="state_set_identifier_python">
+<a href="#state_set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1720,7 +1960,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_python">
+<a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1729,7 +1971,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -1738,7 +1982,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted_<wbr>routing_<wbr>policies</span>
+        <span id="state_weighted_routing_policies_python">
+<a href="#state_weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
     </dt>
@@ -1747,7 +1993,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1789,7 +2037,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluate<wbr>Target<wbr>Health</span>
+        <span id="evaluatetargethealth_csharp">
+<a href="#evaluatetargethealth_csharp" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1798,7 +2048,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1807,7 +2059,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1823,7 +2077,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Evaluate<wbr>Target<wbr>Health</span>
+        <span id="evaluatetargethealth_go">
+<a href="#evaluatetargethealth_go" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1832,7 +2088,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1841,7 +2099,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1857,7 +2117,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluate<wbr>Target<wbr>Health</span>
+        <span id="evaluatetargethealth_nodejs">
+<a href="#evaluatetargethealth_nodejs" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1866,7 +2128,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1875,7 +2139,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1891,7 +2157,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>evaluate<wbr>Target<wbr>Health</span>
+        <span id="evaluatetargethealth_python">
+<a href="#evaluatetargethealth_python" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1900,7 +2168,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1909,7 +2179,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1943,7 +2215,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1959,7 +2233,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1975,7 +2251,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1991,7 +2269,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2025,7 +2305,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continent</span>
+        <span id="continent_csharp">
+<a href="#continent_csharp" style="color: inherit; text-decoration: inherit;">Continent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2034,7 +2316,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Country</span>
+        <span id="country_csharp">
+<a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2043,7 +2327,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subdivision</span>
+        <span id="subdivision_csharp">
+<a href="#subdivision_csharp" style="color: inherit; text-decoration: inherit;">Subdivision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2059,7 +2345,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continent</span>
+        <span id="continent_go">
+<a href="#continent_go" style="color: inherit; text-decoration: inherit;">Continent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2068,7 +2356,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Country</span>
+        <span id="country_go">
+<a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2077,7 +2367,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subdivision</span>
+        <span id="subdivision_go">
+<a href="#subdivision_go" style="color: inherit; text-decoration: inherit;">Subdivision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2093,7 +2385,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>continent</span>
+        <span id="continent_nodejs">
+<a href="#continent_nodejs" style="color: inherit; text-decoration: inherit;">continent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2102,7 +2396,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>country</span>
+        <span id="country_nodejs">
+<a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2111,7 +2407,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subdivision</span>
+        <span id="subdivision_nodejs">
+<a href="#subdivision_nodejs" style="color: inherit; text-decoration: inherit;">subdivision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2127,7 +2425,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>continent</span>
+        <span id="continent_python">
+<a href="#continent_python" style="color: inherit; text-decoration: inherit;">continent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2136,7 +2436,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>country</span>
+        <span id="country_python">
+<a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2145,7 +2447,9 @@ Alias record documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subdivision</span>
+        <span id="subdivision_python">
+<a href="#subdivision_python" style="color: inherit; text-decoration: inherit;">subdivision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2179,7 +2483,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2195,7 +2501,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2211,7 +2519,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2227,7 +2537,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2261,7 +2573,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2277,7 +2591,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2293,7 +2609,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2309,7 +2627,9 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

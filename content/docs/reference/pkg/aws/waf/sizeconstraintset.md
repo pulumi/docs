@@ -247,7 +247,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -256,7 +258,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Constraints</span>
+        <span id="sizeconstraints_csharp">
+<a href="#sizeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
@@ -272,7 +276,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -281,7 +287,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Constraints</span>
+        <span id="sizeconstraints_go">
+<a href="#sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
     </dt>
@@ -297,7 +305,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -306,7 +316,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Constraints</span>
+        <span id="sizeconstraints_nodejs">
+<a href="#sizeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
@@ -322,7 +334,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -331,7 +345,9 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>size_<wbr>constraints</span>
+        <span id="size_constraints_python">
+<a href="#size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></span>
     </dt>
@@ -358,7 +374,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +385,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -382,7 +402,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +413,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +441,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +458,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -439,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +612,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -589,7 +623,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -598,7 +634,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Constraints</span>
+        <span id="state_sizeconstraints_csharp">
+<a href="#state_sizeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
@@ -614,7 +652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -623,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -632,7 +674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Constraints</span>
+        <span id="state_sizeconstraints_go">
+<a href="#state_sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
     </dt>
@@ -648,7 +692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -657,7 +703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -666,7 +714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Constraints</span>
+        <span id="state_sizeconstraints_nodejs">
+<a href="#state_sizeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
@@ -682,7 +732,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +743,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -700,7 +754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>size_<wbr>constraints</span>
+        <span id="state_size_constraints_python">
+<a href="#state_size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></span>
     </dt>
@@ -742,18 +798,22 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Comparison<wbr>Operator</span>
+        <span id="comparisonoperator_csharp">
+<a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
-See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator) for all supported values.
+See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_csharp">
+<a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
@@ -762,7 +822,9 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -772,7 +834,9 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
 
     <dt class="property-required"
             title="Required">
-        <span>Text<wbr>Transformation</span>
+        <span id="texttransformation_csharp">
+<a href="#texttransformation_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,18 +857,22 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span>Comparison<wbr>Operator</span>
+        <span id="comparisonoperator_go">
+<a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
-See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator) for all supported values.
+See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_go">
+<a href="#fieldtomatch_go" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
@@ -813,7 +881,9 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -823,7 +893,9 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
 
     <dt class="property-required"
             title="Required">
-        <span>Text<wbr>Transformation</span>
+        <span id="texttransformation_go">
+<a href="#texttransformation_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -844,18 +916,22 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span>comparison<wbr>Operator</span>
+        <span id="comparisonoperator_nodejs">
+<a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
-See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator) for all supported values.
+See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_nodejs">
+<a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
@@ -864,7 +940,9 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -874,7 +952,9 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
 
     <dt class="property-required"
             title="Required">
-        <span>text<wbr>Transformation</span>
+        <span id="texttransformation_nodejs">
+<a href="#texttransformation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -895,18 +975,22 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span>comparison_<wbr>operator</span>
+        <span id="comparison_operator_python">
+<a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
-See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator) for all supported values.
+See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>field<wbr>To<wbr>Match</span>
+        <span id="fieldtomatch_python">
+<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Dict[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match]</a></span>
     </dt>
@@ -915,7 +999,9 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -925,7 +1011,9 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
 
     <dt class="property-required"
             title="Required">
-        <span>text<wbr>Transformation</span>
+        <span id="texttransformation_python">
+<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -964,7 +1052,9 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -976,7 +1066,9 @@ for all supported values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1085,9 @@ If `type` is any other value, omit this field.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1005,7 +1099,9 @@ for all supported values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1022,7 +1118,9 @@ If `type` is any other value, omit this field.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1034,7 +1132,9 @@ for all supported values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1051,7 +1151,9 @@ If `type` is any other value, omit this field.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1063,7 +1165,9 @@ for all supported values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

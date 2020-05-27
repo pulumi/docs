@@ -320,7 +320,9 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +338,9 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +356,9 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -368,7 +374,9 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -395,7 +403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Caller<wbr>Reference</span>
+        <span id="callerreference_csharp">
+<a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -405,7 +415,9 @@ updates to the origin access identity.
 
     <dt class="property-"
             title="">
-        <span>Cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="cloudfrontaccessidentitypath_csharp">
+<a href="#cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -415,7 +427,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +439,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Arn</span>
+        <span id="iamarn_csharp">
+<a href="#iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +452,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +462,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>S3Canonical<wbr>User<wbr>Id</span>
+        <span id="s3canonicaluserid_csharp">
+<a href="#s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -462,7 +482,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-"
             title="">
-        <span>Caller<wbr>Reference</span>
+        <span id="callerreference_go">
+<a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +494,9 @@ updates to the origin access identity.
 
     <dt class="property-"
             title="">
-        <span>Cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="cloudfrontaccessidentitypath_go">
+<a href="#cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +506,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +518,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Arn</span>
+        <span id="iamarn_go">
+<a href="#iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +531,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -511,7 +541,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>S3Canonical<wbr>User<wbr>Id</span>
+        <span id="s3canonicaluserid_go">
+<a href="#s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +561,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-"
             title="">
-        <span>caller<wbr>Reference</span>
+        <span id="callerreference_nodejs">
+<a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +573,9 @@ updates to the origin access identity.
 
     <dt class="property-"
             title="">
-        <span>cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="cloudfrontaccessidentitypath_nodejs">
+<a href="#cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -549,7 +585,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -559,7 +597,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>iam<wbr>Arn</span>
+        <span id="iamarn_nodejs">
+<a href="#iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +610,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +620,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>s3Canonical<wbr>User<wbr>Id</span>
+        <span id="s3canonicaluserid_nodejs">
+<a href="#s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +640,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-"
             title="">
-        <span>caller_<wbr>reference</span>
+        <span id="caller_reference_python">
+<a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +652,9 @@ updates to the origin access identity.
 
     <dt class="property-"
             title="">
-        <span>cloudfront_<wbr>access_<wbr>identity_<wbr>path</span>
+        <span id="cloudfront_access_identity_path_python">
+<a href="#cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -616,7 +664,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +676,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>iam_<wbr>arn</span>
+        <span id="iam_arn_python">
+<a href="#iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -637,7 +689,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +699,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
-        <span>s3_<wbr>canonical_<wbr>user_<wbr>id</span>
+        <span id="s3_canonical_user_id_python">
+<a href="#s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -789,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caller<wbr>Reference</span>
+        <span id="state_callerreference_csharp">
+<a href="#state_callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -799,7 +857,9 @@ updates to the origin access identity.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="state_cloudfrontaccessidentitypath_csharp">
+<a href="#state_cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +869,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_csharp">
+<a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +880,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -828,7 +892,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Arn</span>
+        <span id="state_iamarn_csharp">
+<a href="#state_iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -839,7 +905,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Canonical<wbr>User<wbr>Id</span>
+        <span id="state_s3canonicaluserid_csharp">
+<a href="#state_s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -857,7 +925,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caller<wbr>Reference</span>
+        <span id="state_callerreference_go">
+<a href="#state_callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -867,7 +937,9 @@ updates to the origin access identity.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="state_cloudfrontaccessidentitypath_go">
+<a href="#state_cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -877,7 +949,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_go">
+<a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -886,7 +960,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +972,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Arn</span>
+        <span id="state_iamarn_go">
+<a href="#state_iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -907,7 +985,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Canonical<wbr>User<wbr>Id</span>
+        <span id="state_s3canonicaluserid_go">
+<a href="#state_s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +1005,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-optional"
             title="Optional">
-        <span>caller<wbr>Reference</span>
+        <span id="state_callerreference_nodejs">
+<a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -935,7 +1017,9 @@ updates to the origin access identity.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudfront<wbr>Access<wbr>Identity<wbr>Path</span>
+        <span id="state_cloudfrontaccessidentitypath_nodejs">
+<a href="#state_cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1029,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_nodejs">
+<a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -954,7 +1040,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -964,7 +1052,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Arn</span>
+        <span id="state_iamarn_nodejs">
+<a href="#state_iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -975,7 +1065,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Canonical<wbr>User<wbr>Id</span>
+        <span id="state_s3canonicaluserid_nodejs">
+<a href="#state_s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1085,9 @@ permission to an object in Amazon S3.
 
     <dt class="property-optional"
             title="Optional">
-        <span>caller_<wbr>reference</span>
+        <span id="state_caller_reference_python">
+<a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1003,7 +1097,9 @@ updates to the origin access identity.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudfront_<wbr>access_<wbr>identity_<wbr>path</span>
+        <span id="state_cloudfront_access_identity_path_python">
+<a href="#state_cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1013,7 +1109,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_python">
+<a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1120,9 @@ origin access identity to use in CloudFront, see below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1032,7 +1132,9 @@ For example: `E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>arn</span>
+        <span id="state_iam_arn_python">
+<a href="#state_iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1043,7 +1145,9 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>canonical_<wbr>user_<wbr>id</span>
+        <span id="state_s3_canonical_user_id_python">
+<a href="#state_s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

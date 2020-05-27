@@ -489,7 +489,9 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Cache<wbr>Behavior</span>
+        <span id="defaultcachebehavior_csharp">
+<a href="#defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
@@ -499,7 +501,9 @@ one).
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -509,7 +513,9 @@ user requests for content.
 
     <dt class="property-required"
             title="Required">
-        <span>Origins</span>
+        <span id="origins_csharp">
+<a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">List&lt;Distribution<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
@@ -519,7 +525,9 @@ distribution (multiples allowed).
 
     <dt class="property-required"
             title="Required">
-        <span>Restrictions</span>
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
@@ -529,7 +537,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Certificate</span>
+        <span id="viewercertificate_csharp">
+<a href="#viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
@@ -540,7 +550,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="aliases_csharp">
+<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -550,7 +562,9 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +574,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Error<wbr>Responses</span>
+        <span id="customerrorresponses_csharp">
+<a href="#customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
@@ -569,7 +585,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Root<wbr>Object</span>
+        <span id="defaultrootobject_csharp">
+<a href="#defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -579,7 +597,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Version</span>
+        <span id="httpversion_csharp">
+<a href="#httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -590,7 +610,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Ipv6Enabled</span>
+        <span id="isipv6enabled_csharp">
+<a href="#isipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -599,7 +621,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -610,7 +634,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="orderedcachebehaviors_csharp">
+<a href="#orderedcachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;</a></span>
     </dt>
@@ -621,7 +647,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Groups</span>
+        <span id="origingroups_csharp">
+<a href="#origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -631,7 +659,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Class</span>
+        <span id="priceclass_csharp">
+<a href="#priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -641,7 +671,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>On<wbr>Delete</span>
+        <span id="retainondelete_csharp">
+<a href="#retainondelete_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -652,7 +684,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -661,7 +695,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Deployment</span>
+        <span id="waitfordeployment_csharp">
+<a href="#waitfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -672,7 +708,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Acl<wbr>Id</span>
+        <span id="webaclid_csharp">
+<a href="#webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +730,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Cache<wbr>Behavior</span>
+        <span id="defaultcachebehavior_go">
+<a href="#defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -702,7 +742,9 @@ one).
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -712,7 +754,9 @@ user requests for content.
 
     <dt class="property-required"
             title="Required">
-        <span>Origins</span>
+        <span id="origins_go">
+<a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
     </dt>
@@ -722,7 +766,9 @@ distribution (multiples allowed).
 
     <dt class="property-required"
             title="Required">
-        <span>Restrictions</span>
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
@@ -732,7 +778,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Certificate</span>
+        <span id="viewercertificate_go">
+<a href="#viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
@@ -743,7 +791,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="aliases_go">
+<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -753,7 +803,9 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -763,7 +815,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Error<wbr>Responses</span>
+        <span id="customerrorresponses_go">
+<a href="#customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
     </dt>
@@ -772,7 +826,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Root<wbr>Object</span>
+        <span id="defaultrootobject_go">
+<a href="#defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +838,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Version</span>
+        <span id="httpversion_go">
+<a href="#httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -793,7 +851,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Ipv6Enabled</span>
+        <span id="isipv6enabled_go">
+<a href="#isipv6enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -802,7 +862,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -813,7 +875,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="orderedcachebehaviors_go">
+<a href="#orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -824,7 +888,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Groups</span>
+        <span id="origingroups_go">
+<a href="#origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></span>
     </dt>
@@ -834,7 +900,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Class</span>
+        <span id="priceclass_go">
+<a href="#priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -844,7 +912,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>On<wbr>Delete</span>
+        <span id="retainondelete_go">
+<a href="#retainondelete_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -855,7 +925,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -864,7 +936,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Deployment</span>
+        <span id="waitfordeployment_go">
+<a href="#waitfordeployment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -875,7 +949,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Acl<wbr>Id</span>
+        <span id="webaclid_go">
+<a href="#webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -895,7 +971,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Cache<wbr>Behavior</span>
+        <span id="defaultcachebehavior_nodejs">
+<a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -905,7 +983,9 @@ one).
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -915,7 +995,9 @@ user requests for content.
 
     <dt class="property-required"
             title="Required">
-        <span>origins</span>
+        <span id="origins_nodejs">
+<a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
     </dt>
@@ -925,7 +1007,9 @@ distribution (multiples allowed).
 
     <dt class="property-required"
             title="Required">
-        <span>restrictions</span>
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
@@ -935,7 +1019,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>viewer<wbr>Certificate</span>
+        <span id="viewercertificate_nodejs">
+<a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
@@ -946,7 +1032,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="aliases_nodejs">
+<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -956,7 +1044,9 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -966,7 +1056,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Error<wbr>Responses</span>
+        <span id="customerrorresponses_nodejs">
+<a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
@@ -975,7 +1067,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Root<wbr>Object</span>
+        <span id="defaultrootobject_nodejs">
+<a href="#defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -985,7 +1079,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Version</span>
+        <span id="httpversion_nodejs">
+<a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -996,7 +1092,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Ipv6Enabled</span>
+        <span id="isipv6enabled_nodejs">
+<a href="#isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1005,7 +1103,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -1016,7 +1116,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="orderedcachebehaviors_nodejs">
+<a href="#orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
     </dt>
@@ -1027,7 +1129,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Groups</span>
+        <span id="origingroups_nodejs">
+<a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
     </dt>
@@ -1037,7 +1141,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>price<wbr>Class</span>
+        <span id="priceclass_nodejs">
+<a href="#priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1047,7 +1153,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain<wbr>On<wbr>Delete</span>
+        <span id="retainondelete_nodejs">
+<a href="#retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1058,7 +1166,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1067,7 +1177,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Deployment</span>
+        <span id="waitfordeployment_nodejs">
+<a href="#waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1078,7 +1190,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Acl<wbr>Id</span>
+        <span id="webaclid_nodejs">
+<a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1212,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>cache_<wbr>behavior</span>
+        <span id="default_cache_behavior_python">
+<a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></span>
     </dt>
@@ -1108,7 +1224,9 @@ one).
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1118,7 +1236,9 @@ user requests for content.
 
     <dt class="property-required"
             title="Required">
-        <span>origins</span>
+        <span id="origins_python">
+<a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></span>
     </dt>
@@ -1128,7 +1248,9 @@ distribution (multiples allowed).
 
     <dt class="property-required"
             title="Required">
-        <span>restrictions</span>
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></span>
     </dt>
@@ -1138,7 +1260,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>viewer_<wbr>certificate</span>
+        <span id="viewer_certificate_python">
+<a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></span>
     </dt>
@@ -1149,7 +1273,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="aliases_python">
+<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1159,7 +1285,9 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1169,7 +1297,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>error_<wbr>responses</span>
+        <span id="custom_error_responses_python">
+<a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
     </dt>
@@ -1178,7 +1308,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>root_<wbr>object</span>
+        <span id="default_root_object_python">
+<a href="#default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1188,7 +1320,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>version</span>
+        <span id="http_version_python">
+<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1199,7 +1333,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>ipv6_<wbr>enabled</span>
+        <span id="is_ipv6_enabled_python">
+<a href="#is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1208,7 +1344,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging_<wbr>config</span>
+        <span id="logging_config_python">
+<a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -1219,7 +1357,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ordered_<wbr>cache_<wbr>behaviors</span>
+        <span id="ordered_cache_behaviors_python">
+<a href="#ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></span>
     </dt>
@@ -1230,7 +1370,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>groups</span>
+        <span id="origin_groups_python">
+<a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></span>
     </dt>
@@ -1240,7 +1382,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>price_<wbr>class</span>
+        <span id="price_class_python">
+<a href="#price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1250,7 +1394,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain_<wbr>on_<wbr>delete</span>
+        <span id="retain_on_delete_python">
+<a href="#retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1261,7 +1407,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1270,7 +1418,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>deployment</span>
+        <span id="wait_for_deployment_python">
+<a href="#wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1281,7 +1431,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>acl_<wbr>id</span>
+        <span id="web_acl_id_python">
+<a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1312,7 +1464,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Active<wbr>Trusted<wbr>Signers</span>
+        <span id="activetrustedsigners_csharp">
+<a href="#activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1323,16 +1477,20 @@ with signed URLs.
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Caller<wbr>Reference</span>
+        <span id="callerreference_csharp">
+<a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1342,7 +1500,9 @@ updates to the distribution configuration.
 
     <dt class="property-"
             title="">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1352,7 +1512,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1362,7 +1524,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_csharp">
+<a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1373,7 +1537,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1381,7 +1547,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="inprogressvalidationbatches_csharp">
+<a href="#inprogressvalidationbatches_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1391,7 +1559,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_csharp">
+<a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1400,7 +1570,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1418,7 +1590,9 @@ CloudFront system.
 
     <dt class="property-"
             title="">
-        <span>Active<wbr>Trusted<wbr>Signers</span>
+        <span id="activetrustedsigners_go">
+<a href="#activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1429,16 +1603,20 @@ with signed URLs.
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Caller<wbr>Reference</span>
+        <span id="callerreference_go">
+<a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1448,7 +1626,9 @@ updates to the distribution configuration.
 
     <dt class="property-"
             title="">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1458,7 +1638,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1468,7 +1650,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_go">
+<a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1479,7 +1663,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1487,7 +1673,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="inprogressvalidationbatches_go">
+<a href="#inprogressvalidationbatches_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1497,7 +1685,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_go">
+<a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1506,7 +1696,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1524,7 +1716,9 @@ CloudFront system.
 
     <dt class="property-"
             title="">
-        <span>active<wbr>Trusted<wbr>Signers</span>
+        <span id="activetrustedsigners_nodejs">
+<a href="#activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1535,16 +1729,20 @@ with signed URLs.
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>caller<wbr>Reference</span>
+        <span id="callerreference_nodejs">
+<a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1554,7 +1752,9 @@ updates to the distribution configuration.
 
     <dt class="property-"
             title="">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1564,7 +1764,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1574,7 +1776,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_nodejs">
+<a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1585,7 +1789,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1593,7 +1799,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>in<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="inprogressvalidationbatches_nodejs">
+<a href="#inprogressvalidationbatches_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1603,7 +1811,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_nodejs">
+<a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1612,7 +1822,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1630,7 +1842,9 @@ CloudFront system.
 
     <dt class="property-"
             title="">
-        <span>active_<wbr>trusted_<wbr>signers</span>
+        <span id="active_trusted_signers_python">
+<a href="#active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1641,16 +1855,20 @@ with signed URLs.
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>caller_<wbr>reference</span>
+        <span id="caller_reference_python">
+<a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1660,7 +1878,9 @@ updates to the distribution configuration.
 
     <dt class="property-"
             title="">
-        <span>domain_<wbr>name</span>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1670,7 +1890,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1680,7 +1902,9 @@ web site of your custom origin.
 
     <dt class="property-"
             title="">
-        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span id="hosted_zone_id_python">
+<a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1691,7 +1915,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1699,7 +1925,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
-        <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
+        <span id="in_progress_validation_batches_python">
+<a href="#in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1709,7 +1937,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>modified_<wbr>time</span>
+        <span id="last_modified_time_python">
+<a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1718,7 +1948,9 @@ currently in progress.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1862,7 +2094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Trusted<wbr>Signers</span>
+        <span id="state_activetrustedsigners_csharp">
+<a href="#state_activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1873,7 +2107,9 @@ with signed URLs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="state_aliases_csharp">
+<a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1883,16 +2119,20 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caller<wbr>Reference</span>
+        <span id="state_callerreference_csharp">
+<a href="#state_callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1902,7 +2142,9 @@ updates to the distribution configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_csharp">
+<a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1912,7 +2154,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Error<wbr>Responses</span>
+        <span id="state_customerrorresponses_csharp">
+<a href="#state_customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
@@ -1921,7 +2165,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Cache<wbr>Behavior</span>
+        <span id="state_defaultcachebehavior_csharp">
+<a href="#state_defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
@@ -1931,7 +2177,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Root<wbr>Object</span>
+        <span id="state_defaultrootobject_csharp">
+<a href="#state_defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1941,7 +2189,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_csharp">
+<a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1951,7 +2201,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1961,7 +2213,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1971,7 +2225,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_csharp">
+<a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1982,7 +2238,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Version</span>
+        <span id="state_httpversion_csharp">
+<a href="#state_httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1993,7 +2251,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="state_inprogressvalidationbatches_csharp">
+<a href="#state_inprogressvalidationbatches_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2003,7 +2263,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Ipv6Enabled</span>
+        <span id="state_isipv6enabled_csharp">
+<a href="#state_isipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2012,7 +2274,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_csharp">
+<a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2021,7 +2285,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="state_loggingconfig_csharp">
+<a href="#state_loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2032,7 +2298,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="state_orderedcachebehaviors_csharp">
+<a href="#state_orderedcachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;</a></span>
     </dt>
@@ -2043,7 +2311,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Groups</span>
+        <span id="state_origingroups_csharp">
+<a href="#state_origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -2053,7 +2323,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origins</span>
+        <span id="state_origins_csharp">
+<a href="#state_origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">List&lt;Distribution<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
@@ -2063,7 +2335,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Class</span>
+        <span id="state_priceclass_csharp">
+<a href="#state_priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2073,7 +2347,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_csharp">
+<a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
@@ -2083,7 +2359,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>On<wbr>Delete</span>
+        <span id="state_retainondelete_csharp">
+<a href="#state_retainondelete_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2094,7 +2372,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2105,7 +2385,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2114,7 +2396,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viewer<wbr>Certificate</span>
+        <span id="state_viewercertificate_csharp">
+<a href="#state_viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
@@ -2125,7 +2409,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Deployment</span>
+        <span id="state_waitfordeployment_csharp">
+<a href="#state_waitfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2136,7 +2422,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Acl<wbr>Id</span>
+        <span id="state_webaclid_csharp">
+<a href="#state_webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2156,7 +2444,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Trusted<wbr>Signers</span>
+        <span id="state_activetrustedsigners_go">
+<a href="#state_activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2167,7 +2457,9 @@ with signed URLs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aliases</span>
+        <span id="state_aliases_go">
+<a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2177,16 +2469,20 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Caller<wbr>Reference</span>
+        <span id="state_callerreference_go">
+<a href="#state_callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2196,7 +2492,9 @@ updates to the distribution configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_go">
+<a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2206,7 +2504,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Error<wbr>Responses</span>
+        <span id="state_customerrorresponses_go">
+<a href="#state_customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
     </dt>
@@ -2215,7 +2515,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Cache<wbr>Behavior</span>
+        <span id="state_defaultcachebehavior_go">
+<a href="#state_defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -2225,7 +2527,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Root<wbr>Object</span>
+        <span id="state_defaultrootobject_go">
+<a href="#state_defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2235,7 +2539,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_go">
+<a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2245,7 +2551,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2255,7 +2563,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2265,7 +2575,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_go">
+<a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2276,7 +2588,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Version</span>
+        <span id="state_httpversion_go">
+<a href="#state_httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2287,7 +2601,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="state_inprogressvalidationbatches_go">
+<a href="#state_inprogressvalidationbatches_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2297,7 +2613,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Ipv6Enabled</span>
+        <span id="state_isipv6enabled_go">
+<a href="#state_isipv6enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2306,7 +2624,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_go">
+<a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2315,7 +2635,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="state_loggingconfig_go">
+<a href="#state_loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2326,7 +2648,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="state_orderedcachebehaviors_go">
+<a href="#state_orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -2337,7 +2661,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Groups</span>
+        <span id="state_origingroups_go">
+<a href="#state_origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></span>
     </dt>
@@ -2347,7 +2673,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origins</span>
+        <span id="state_origins_go">
+<a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
     </dt>
@@ -2357,7 +2685,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Class</span>
+        <span id="state_priceclass_go">
+<a href="#state_priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2367,7 +2697,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_go">
+<a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
@@ -2377,7 +2709,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retain<wbr>On<wbr>Delete</span>
+        <span id="state_retainondelete_go">
+<a href="#state_retainondelete_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2388,7 +2722,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2399,7 +2735,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2408,7 +2746,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viewer<wbr>Certificate</span>
+        <span id="state_viewercertificate_go">
+<a href="#state_viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
@@ -2419,7 +2759,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Deployment</span>
+        <span id="state_waitfordeployment_go">
+<a href="#state_waitfordeployment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2430,7 +2772,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Acl<wbr>Id</span>
+        <span id="state_webaclid_go">
+<a href="#state_webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2450,7 +2794,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Trusted<wbr>Signers</span>
+        <span id="state_activetrustedsigners_nodejs">
+<a href="#state_activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2461,7 +2807,9 @@ with signed URLs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="state_aliases_nodejs">
+<a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2471,16 +2819,20 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>caller<wbr>Reference</span>
+        <span id="state_callerreference_nodejs">
+<a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2490,7 +2842,9 @@ updates to the distribution configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_nodejs">
+<a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2500,7 +2854,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Error<wbr>Responses</span>
+        <span id="state_customerrorresponses_nodejs">
+<a href="#state_customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
@@ -2509,7 +2865,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Cache<wbr>Behavior</span>
+        <span id="state_defaultcachebehavior_nodejs">
+<a href="#state_defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
@@ -2519,7 +2877,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Root<wbr>Object</span>
+        <span id="state_defaultrootobject_nodejs">
+<a href="#state_defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2529,7 +2889,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Name</span>
+        <span id="state_domainname_nodejs">
+<a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2539,7 +2901,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2549,7 +2913,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2559,7 +2925,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_nodejs">
+<a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2570,7 +2938,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Version</span>
+        <span id="state_httpversion_nodejs">
+<a href="#state_httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2581,7 +2951,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>in<wbr>Progress<wbr>Validation<wbr>Batches</span>
+        <span id="state_inprogressvalidationbatches_nodejs">
+<a href="#state_inprogressvalidationbatches_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Validation<wbr>Batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2591,7 +2963,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Ipv6Enabled</span>
+        <span id="state_isipv6enabled_nodejs">
+<a href="#state_isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2600,7 +2974,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_nodejs">
+<a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2609,7 +2985,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="state_loggingconfig_nodejs">
+<a href="#state_loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2620,7 +2998,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ordered<wbr>Cache<wbr>Behaviors</span>
+        <span id="state_orderedcachebehaviors_nodejs">
+<a href="#state_orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
     </dt>
@@ -2631,7 +3011,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Groups</span>
+        <span id="state_origingroups_nodejs">
+<a href="#state_origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
     </dt>
@@ -2641,7 +3023,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>origins</span>
+        <span id="state_origins_nodejs">
+<a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
     </dt>
@@ -2651,7 +3035,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>price<wbr>Class</span>
+        <span id="state_priceclass_nodejs">
+<a href="#state_priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2661,7 +3047,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_nodejs">
+<a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
@@ -2671,7 +3059,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain<wbr>On<wbr>Delete</span>
+        <span id="state_retainondelete_nodejs">
+<a href="#state_retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2682,7 +3072,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2693,7 +3085,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2702,7 +3096,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>viewer<wbr>Certificate</span>
+        <span id="state_viewercertificate_nodejs">
+<a href="#state_viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
@@ -2713,7 +3109,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Deployment</span>
+        <span id="state_waitfordeployment_nodejs">
+<a href="#state_waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2724,7 +3122,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Acl<wbr>Id</span>
+        <span id="state_webaclid_nodejs">
+<a href="#state_webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2744,7 +3144,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>trusted_<wbr>signers</span>
+        <span id="state_active_trusted_signers_python">
+<a href="#state_active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2755,7 +3157,9 @@ with signed URLs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aliases</span>
+        <span id="state_aliases_python">
+<a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2765,16 +3169,20 @@ this distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+    <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>caller_<wbr>reference</span>
+        <span id="state_caller_reference_python">
+<a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2784,7 +3192,9 @@ updates to the distribution configuration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_python">
+<a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2794,7 +3204,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>error_<wbr>responses</span>
+        <span id="state_custom_error_responses_python">
+<a href="#state_custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
     </dt>
@@ -2803,7 +3215,9 @@ distribution.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>cache_<wbr>behavior</span>
+        <span id="state_default_cache_behavior_python">
+<a href="#state_default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></span>
     </dt>
@@ -2813,7 +3227,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>root_<wbr>object</span>
+        <span id="state_default_root_object_python">
+<a href="#state_default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2823,7 +3239,9 @@ return (for example, index.html) when an end user requests the root URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>name</span>
+        <span id="state_domain_name_python">
+<a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2833,7 +3251,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2843,7 +3263,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2853,7 +3275,9 @@ user requests for content.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span id="state_hosted_zone_id_python">
+<a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2864,7 +3288,9 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>version</span>
+        <span id="state_http_version_python">
+<a href="#state_http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2875,7 +3301,9 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
+        <span id="state_in_progress_validation_batches_python">
+<a href="#state_in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2885,7 +3313,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>ipv6_<wbr>enabled</span>
+        <span id="state_is_ipv6_enabled_python">
+<a href="#state_is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2894,7 +3324,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>modified_<wbr>time</span>
+        <span id="state_last_modified_time_python">
+<a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2903,7 +3335,9 @@ currently in progress.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging_<wbr>config</span>
+        <span id="state_logging_config_python">
+<a href="#state_logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -2914,7 +3348,9 @@ to your distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ordered_<wbr>cache_<wbr>behaviors</span>
+        <span id="state_ordered_cache_behaviors_python">
+<a href="#state_ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></span>
     </dt>
@@ -2925,7 +3361,9 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin_<wbr>groups</span>
+        <span id="state_origin_groups_python">
+<a href="#state_origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></span>
     </dt>
@@ -2935,7 +3373,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>origins</span>
+        <span id="state_origins_python">
+<a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></span>
     </dt>
@@ -2945,7 +3385,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>price_<wbr>class</span>
+        <span id="state_price_class_python">
+<a href="#state_price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2955,7 +3397,9 @@ distribution (multiples allowed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_python">
+<a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></span>
     </dt>
@@ -2965,7 +3409,9 @@ configuration for this distribution (maximum one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>retain_<wbr>on_<wbr>delete</span>
+        <span id="state_retain_on_delete_python">
+<a href="#state_retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2976,7 +3422,9 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2987,7 +3435,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2996,7 +3446,9 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
-        <span>viewer_<wbr>certificate</span>
+        <span id="state_viewer_certificate_python">
+<a href="#state_viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></span>
     </dt>
@@ -3007,7 +3459,9 @@ one).
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>deployment</span>
+        <span id="state_wait_for_deployment_python">
+<a href="#state_wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3018,7 +3472,9 @@ this to`false` will skip the process. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>acl_<wbr>id</span>
+        <span id="state_web_acl_id_python">
+<a href="#state_web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3064,7 +3520,9 @@ region and the credentials configuring this argument must have
 
     <dt class="property-required"
             title="Required">
-        <span>Error<wbr>Code</span>
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3074,7 +3532,9 @@ customize.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error<wbr>Caching<wbr>Min<wbr>Ttl</span>
+        <span id="errorcachingminttl_csharp">
+<a href="#errorcachingminttl_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Caching<wbr>Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3085,7 +3545,9 @@ origin to see whether the object has been updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Response<wbr>Code</span>
+        <span id="responsecode_csharp">
+<a href="#responsecode_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3095,7 +3557,9 @@ to return with the custom error page to the viewer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Response<wbr>Page<wbr>Path</span>
+        <span id="responsepagepath_csharp">
+<a href="#responsepagepath_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Page<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3112,7 +3576,9 @@ example, `/custom_404.html`).
 
     <dt class="property-required"
             title="Required">
-        <span>Error<wbr>Code</span>
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3122,7 +3588,9 @@ customize.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error<wbr>Caching<wbr>Min<wbr>Ttl</span>
+        <span id="errorcachingminttl_go">
+<a href="#errorcachingminttl_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Caching<wbr>Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3133,7 +3601,9 @@ origin to see whether the object has been updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Response<wbr>Code</span>
+        <span id="responsecode_go">
+<a href="#responsecode_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3143,7 +3613,9 @@ to return with the custom error page to the viewer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Response<wbr>Page<wbr>Path</span>
+        <span id="responsepagepath_go">
+<a href="#responsepagepath_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Page<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3160,7 +3632,9 @@ example, `/custom_404.html`).
 
     <dt class="property-required"
             title="Required">
-        <span>error<wbr>Code</span>
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3170,7 +3644,9 @@ customize.
 
     <dt class="property-optional"
             title="Optional">
-        <span>error<wbr>Caching<wbr>Min<wbr>Ttl</span>
+        <span id="errorcachingminttl_nodejs">
+<a href="#errorcachingminttl_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Caching<wbr>Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3181,7 +3657,9 @@ origin to see whether the object has been updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>response<wbr>Code</span>
+        <span id="responsecode_nodejs">
+<a href="#responsecode_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3191,7 +3669,9 @@ to return with the custom error page to the viewer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>response<wbr>Page<wbr>Path</span>
+        <span id="responsepagepath_nodejs">
+<a href="#responsepagepath_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Page<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3208,7 +3688,9 @@ example, `/custom_404.html`).
 
     <dt class="property-required"
             title="Required">
-        <span>error<wbr>Code</span>
+        <span id="errorcode_python">
+<a href="#errorcode_python" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3218,7 +3700,9 @@ customize.
 
     <dt class="property-optional"
             title="Optional">
-        <span>error<wbr>Caching<wbr>Min<wbr>Ttl</span>
+        <span id="errorcachingminttl_python">
+<a href="#errorcachingminttl_python" style="color: inherit; text-decoration: inherit;">error<wbr>Caching<wbr>Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3229,7 +3713,9 @@ origin to see whether the object has been updated.
 
     <dt class="property-optional"
             title="Optional">
-        <span>response<wbr>Code</span>
+        <span id="responsecode_python">
+<a href="#responsecode_python" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3239,7 +3725,9 @@ to return with the custom error page to the viewer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>response<wbr>Page<wbr>Path</span>
+        <span id="responsepagepath_python">
+<a href="#responsepagepath_python" style="color: inherit; text-decoration: inherit;">response<wbr>Page<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3274,7 +3762,9 @@ example, `/custom_404.html`).
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3284,7 +3774,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Cached<wbr>Methods</span>
+        <span id="cachedmethods_csharp">
+<a href="#cachedmethods_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3294,7 +3786,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>Forwarded<wbr>Values</span>
+        <span id="forwardedvalues_csharp">
+<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
@@ -3304,7 +3798,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_csharp">
+<a href="#targetoriginid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3315,7 +3811,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_csharp">
+<a href="#viewerprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3327,7 +3825,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compress</span>
+        <span id="compress_csharp">
+<a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3338,7 +3838,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_csharp">
+<a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3350,7 +3852,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_csharp">
+<a href="#fieldlevelencryptionid_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3359,7 +3863,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_csharp">
+<a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
     </dt>
@@ -3369,7 +3875,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_csharp">
+<a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3382,7 +3890,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ttl</span>
+        <span id="minttl_csharp">
+<a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3393,7 +3903,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_csharp">
+<a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3404,7 +3916,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trusted<wbr>Signers</span>
+        <span id="trustedsigners_csharp">
+<a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3421,7 +3935,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3431,7 +3947,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Cached<wbr>Methods</span>
+        <span id="cachedmethods_go">
+<a href="#cachedmethods_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3441,7 +3959,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>Forwarded<wbr>Values</span>
+        <span id="forwardedvalues_go">
+<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
@@ -3451,7 +3971,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_go">
+<a href="#targetoriginid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3462,7 +3984,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_go">
+<a href="#viewerprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3474,7 +3998,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compress</span>
+        <span id="compress_go">
+<a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3485,7 +4011,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_go">
+<a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3497,7 +4025,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_go">
+<a href="#fieldlevelencryptionid_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3506,7 +4036,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_go">
+<a href="#lambdafunctionassociations_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></span>
     </dt>
@@ -3516,7 +4048,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_go">
+<a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3529,7 +4063,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ttl</span>
+        <span id="minttl_go">
+<a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3540,7 +4076,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_go">
+<a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3551,7 +4089,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trusted<wbr>Signers</span>
+        <span id="trustedsigners_go">
+<a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3568,7 +4108,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3578,7 +4120,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>cached<wbr>Methods</span>
+        <span id="cachedmethods_nodejs">
+<a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3588,7 +4132,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>forwarded<wbr>Values</span>
+        <span id="forwardedvalues_nodejs">
+<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
@@ -3598,7 +4144,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_nodejs">
+<a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3609,7 +4157,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_nodejs">
+<a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3621,7 +4171,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compress</span>
+        <span id="compress_nodejs">
+<a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3632,7 +4184,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="defaultttl_nodejs">
+<a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3644,7 +4198,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_nodejs">
+<a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3653,7 +4209,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_nodejs">
+<a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
@@ -3663,7 +4221,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="maxttl_nodejs">
+<a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3676,7 +4236,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ttl</span>
+        <span id="minttl_nodejs">
+<a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3687,7 +4249,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_nodejs">
+<a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3698,7 +4262,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trusted<wbr>Signers</span>
+        <span id="trustedsigners_nodejs">
+<a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3715,7 +4281,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_python">
+<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3725,7 +4293,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>cached<wbr>Methods</span>
+        <span id="cachedmethods_python">
+<a href="#cachedmethods_python" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3735,7 +4305,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>forwarded<wbr>Values</span>
+        <span id="forwardedvalues_python">
+<a href="#forwardedvalues_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></span>
     </dt>
@@ -3745,7 +4317,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_python">
+<a href="#targetoriginid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3756,7 +4330,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_python">
+<a href="#viewerprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3768,7 +4344,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compress</span>
+        <span id="compress_python">
+<a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3779,7 +4357,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="defaultttl_python">
+<a href="#defaultttl_python" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3791,7 +4371,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_python">
+<a href="#fieldlevelencryptionid_python" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3800,7 +4382,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_python">
+<a href="#lambdafunctionassociations_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
     </dt>
@@ -3810,7 +4394,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="maxttl_python">
+<a href="#maxttl_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3823,7 +4409,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ttl</span>
+        <span id="minttl_python">
+<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3834,7 +4422,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_python">
+<a href="#smoothstreaming_python" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3845,7 +4435,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trusted<wbr>Signers</span>
+        <span id="trustedsigners_python">
+<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3880,7 +4472,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>Cookies</span>
+        <span id="cookies_csharp">
+<a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
@@ -3890,7 +4484,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Query<wbr>String</span>
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3900,7 +4496,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3911,7 +4509,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_csharp">
+<a href="#querystringcachekeys_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3930,7 +4530,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>Cookies</span>
+        <span id="cookies_go">
+<a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
@@ -3940,7 +4542,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Query<wbr>String</span>
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3950,7 +4554,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3961,7 +4567,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_go">
+<a href="#querystringcachekeys_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3980,7 +4588,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>cookies</span>
+        <span id="cookies_nodejs">
+<a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
@@ -3990,7 +4600,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>query<wbr>String</span>
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4000,7 +4612,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4011,7 +4625,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_nodejs">
+<a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4030,7 +4646,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>cookies</span>
+        <span id="cookies_python">
+<a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></span>
     </dt>
@@ -4040,7 +4658,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>query<wbr>String</span>
+        <span id="querystring_python">
+<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4050,7 +4670,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4061,7 +4683,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_python">
+<a href="#querystringcachekeys_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4098,7 +4722,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>Forward</span>
+        <span id="forward_csharp">
+<a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4110,7 +4736,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Whitelisted<wbr>Names</span>
+        <span id="whitelistednames_csharp">
+<a href="#whitelistednames_csharp" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4128,7 +4756,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Forward</span>
+        <span id="forward_go">
+<a href="#forward_go" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4140,7 +4770,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Whitelisted<wbr>Names</span>
+        <span id="whitelistednames_go">
+<a href="#whitelistednames_go" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4158,7 +4790,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>forward</span>
+        <span id="forward_nodejs">
+<a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4170,7 +4804,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>whitelisted<wbr>Names</span>
+        <span id="whitelistednames_nodejs">
+<a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4188,7 +4824,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>forward</span>
+        <span id="forward_python">
+<a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4200,7 +4838,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>whitelisted<wbr>Names</span>
+        <span id="whitelistednames_python">
+<a href="#whitelistednames_python" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4236,7 +4876,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type</span>
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4247,7 +4889,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Lambda<wbr>Arn</span>
+        <span id="lambdaarn_csharp">
+<a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4256,7 +4900,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Body</span>
+        <span id="includebody_csharp">
+<a href="#includebody_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4272,7 +4918,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type</span>
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4283,7 +4931,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Lambda<wbr>Arn</span>
+        <span id="lambdaarn_go">
+<a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4292,7 +4942,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Body</span>
+        <span id="includebody_go">
+<a href="#includebody_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4308,7 +4960,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Type</span>
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4319,7 +4973,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>lambda<wbr>Arn</span>
+        <span id="lambdaarn_nodejs">
+<a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4328,7 +4984,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Body</span>
+        <span id="includebody_nodejs">
+<a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4344,7 +5002,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Type</span>
+        <span id="eventtype_python">
+<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4355,7 +5015,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>lambda<wbr>Arn</span>
+        <span id="lambdaarn_python">
+<a href="#lambdaarn_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4364,7 +5026,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Body</span>
+        <span id="includebody_python">
+<a href="#includebody_python" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4398,7 +5062,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4408,7 +5074,9 @@ example, `myawslogbucket.s3.amazonaws.com`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Cookies</span>
+        <span id="includecookies_csharp">
+<a href="#includecookies_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4418,7 +5086,9 @@ include cookies in access logs (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4435,7 +5105,9 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4445,7 +5117,9 @@ example, `myawslogbucket.s3.amazonaws.com`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Cookies</span>
+        <span id="includecookies_go">
+<a href="#includecookies_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4455,7 +5129,9 @@ include cookies in access logs (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4472,7 +5148,9 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4482,7 +5160,9 @@ example, `myawslogbucket.s3.amazonaws.com`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Cookies</span>
+        <span id="includecookies_nodejs">
+<a href="#includecookies_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4492,7 +5172,9 @@ include cookies in access logs (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4509,7 +5191,9 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4519,7 +5203,9 @@ example, `myawslogbucket.s3.amazonaws.com`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Cookies</span>
+        <span id="includecookies_python">
+<a href="#includecookies_python" style="color: inherit; text-decoration: inherit;">include<wbr>Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4529,7 +5215,9 @@ include cookies in access logs (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4564,7 +5252,9 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4574,7 +5264,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Cached<wbr>Methods</span>
+        <span id="cachedmethods_csharp">
+<a href="#cachedmethods_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4584,7 +5276,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>Forwarded<wbr>Values</span>
+        <span id="forwardedvalues_csharp">
+<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
@@ -4594,7 +5288,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Path<wbr>Pattern</span>
+        <span id="pathpattern_csharp">
+<a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4604,7 +5300,9 @@ specifies which requests you want this cache behavior to apply to.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_csharp">
+<a href="#targetoriginid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4615,7 +5313,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_csharp">
+<a href="#viewerprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4627,7 +5327,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compress</span>
+        <span id="compress_csharp">
+<a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4638,7 +5340,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_csharp">
+<a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4650,7 +5354,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_csharp">
+<a href="#fieldlevelencryptionid_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4659,7 +5365,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_csharp">
+<a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
     </dt>
@@ -4669,7 +5377,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_csharp">
+<a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4682,7 +5392,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ttl</span>
+        <span id="minttl_csharp">
+<a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4693,7 +5405,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_csharp">
+<a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4704,7 +5418,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trusted<wbr>Signers</span>
+        <span id="trustedsigners_csharp">
+<a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4721,7 +5437,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4731,7 +5449,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Cached<wbr>Methods</span>
+        <span id="cachedmethods_go">
+<a href="#cachedmethods_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4741,7 +5461,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>Forwarded<wbr>Values</span>
+        <span id="forwardedvalues_go">
+<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
@@ -4751,7 +5473,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Path<wbr>Pattern</span>
+        <span id="pathpattern_go">
+<a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4761,7 +5485,9 @@ specifies which requests you want this cache behavior to apply to.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_go">
+<a href="#targetoriginid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4772,7 +5498,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>Viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_go">
+<a href="#viewerprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4784,7 +5512,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compress</span>
+        <span id="compress_go">
+<a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4795,7 +5525,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Ttl</span>
+        <span id="defaultttl_go">
+<a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4807,7 +5539,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_go">
+<a href="#fieldlevelencryptionid_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4816,7 +5550,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_go">
+<a href="#lambdafunctionassociations_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></span>
     </dt>
@@ -4826,7 +5562,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_go">
+<a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4839,7 +5577,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ttl</span>
+        <span id="minttl_go">
+<a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4850,7 +5590,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_go">
+<a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4861,7 +5603,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trusted<wbr>Signers</span>
+        <span id="trustedsigners_go">
+<a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4878,7 +5622,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4888,7 +5634,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>cached<wbr>Methods</span>
+        <span id="cachedmethods_nodejs">
+<a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4898,7 +5646,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>forwarded<wbr>Values</span>
+        <span id="forwardedvalues_nodejs">
+<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
@@ -4908,7 +5658,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>path<wbr>Pattern</span>
+        <span id="pathpattern_nodejs">
+<a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4918,7 +5670,9 @@ specifies which requests you want this cache behavior to apply to.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_nodejs">
+<a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4929,7 +5683,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_nodejs">
+<a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4941,7 +5697,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compress</span>
+        <span id="compress_nodejs">
+<a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4952,7 +5710,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="defaultttl_nodejs">
+<a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4964,7 +5724,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_nodejs">
+<a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4973,7 +5735,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_nodejs">
+<a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
@@ -4983,7 +5747,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="maxttl_nodejs">
+<a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4996,7 +5762,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ttl</span>
+        <span id="minttl_nodejs">
+<a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5007,7 +5775,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_nodejs">
+<a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5018,7 +5788,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trusted<wbr>Signers</span>
+        <span id="trustedsigners_nodejs">
+<a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5035,7 +5807,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_python">
+<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5045,7 +5819,9 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>cached<wbr>Methods</span>
+        <span id="cachedmethods_python">
+<a href="#cachedmethods_python" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5055,7 +5831,9 @@ response to requests using the specified HTTP methods.
 
     <dt class="property-required"
             title="Required">
-        <span>forwarded<wbr>Values</span>
+        <span id="forwardedvalues_python">
+<a href="#forwardedvalues_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></span>
     </dt>
@@ -5065,7 +5843,9 @@ handles query strings, cookies and headers (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>path<wbr>Pattern</span>
+        <span id="pathpattern_python">
+<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5075,7 +5855,9 @@ specifies which requests you want this cache behavior to apply to.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Origin<wbr>Id</span>
+        <span id="targetoriginid_python">
+<a href="#targetoriginid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5086,7 +5868,9 @@ either for a cache behavior or for the default cache behavior.
 
     <dt class="property-required"
             title="Required">
-        <span>viewer<wbr>Protocol<wbr>Policy</span>
+        <span id="viewerprotocolpolicy_python">
+<a href="#viewerprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5098,7 +5882,9 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compress</span>
+        <span id="compress_python">
+<a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5109,7 +5895,9 @@ the request header (default: `false`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Ttl</span>
+        <span id="defaultttl_python">
+<a href="#defaultttl_python" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5121,7 +5909,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
+        <span id="fieldlevelencryptionid_python">
+<a href="#fieldlevelencryptionid_python" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5130,7 +5920,9 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>lambda<wbr>Function<wbr>Associations</span>
+        <span id="lambdafunctionassociations_python">
+<a href="#lambdafunctionassociations_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
     </dt>
@@ -5140,7 +5932,9 @@ specific actions. Defined below, maximum 4.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="maxttl_python">
+<a href="#maxttl_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5153,7 +5947,9 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ttl</span>
+        <span id="minttl_python">
+<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5164,7 +5960,9 @@ whether the object has been updated. Defaults to 0 seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smooth<wbr>Streaming</span>
+        <span id="smoothstreaming_python">
+<a href="#smoothstreaming_python" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5175,7 +5973,9 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trusted<wbr>Signers</span>
+        <span id="trustedsigners_python">
+<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5210,7 +6010,9 @@ allow to create signed URLs for private content.
 
     <dt class="property-required"
             title="Required">
-        <span>Cookies</span>
+        <span id="cookies_csharp">
+<a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
@@ -5220,7 +6022,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Query<wbr>String</span>
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5230,7 +6034,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5241,7 +6047,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_csharp">
+<a href="#querystringcachekeys_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5260,7 +6068,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>Cookies</span>
+        <span id="cookies_go">
+<a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
@@ -5270,7 +6080,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>Query<wbr>String</span>
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5280,7 +6092,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5291,7 +6105,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_go">
+<a href="#querystringcachekeys_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5310,7 +6126,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>cookies</span>
+        <span id="cookies_nodejs">
+<a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
@@ -5320,7 +6138,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>query<wbr>String</span>
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5330,7 +6150,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5341,7 +6163,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_nodejs">
+<a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5360,7 +6184,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>cookies</span>
+        <span id="cookies_python">
+<a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></span>
     </dt>
@@ -5370,7 +6196,9 @@ that specifies how CloudFront handles cookies (maximum one).
 
     <dt class="property-required"
             title="Required">
-        <span>query<wbr>String</span>
+        <span id="querystring_python">
+<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5380,7 +6208,9 @@ query strings to the origin that is associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5391,7 +6221,9 @@ headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
+        <span id="querystringcachekeys_python">
+<a href="#querystringcachekeys_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5428,7 +6260,9 @@ value of `true` for `query_string`, all query string keys are cached.
 
     <dt class="property-required"
             title="Required">
-        <span>Forward</span>
+        <span id="forward_csharp">
+<a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5440,7 +6274,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Whitelisted<wbr>Names</span>
+        <span id="whitelistednames_csharp">
+<a href="#whitelistednames_csharp" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5458,7 +6294,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Forward</span>
+        <span id="forward_go">
+<a href="#forward_go" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5470,7 +6308,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Whitelisted<wbr>Names</span>
+        <span id="whitelistednames_go">
+<a href="#whitelistednames_go" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5488,7 +6328,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>forward</span>
+        <span id="forward_nodejs">
+<a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5500,7 +6342,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>whitelisted<wbr>Names</span>
+        <span id="whitelistednames_nodejs">
+<a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5518,7 +6362,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>forward</span>
+        <span id="forward_python">
+<a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5530,7 +6376,9 @@ subsequent `whitelisted_names`
 
     <dt class="property-optional"
             title="Optional">
-        <span>whitelisted<wbr>Names</span>
+        <span id="whitelistednames_python">
+<a href="#whitelistednames_python" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5566,7 +6414,9 @@ your origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type</span>
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5577,7 +6427,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Lambda<wbr>Arn</span>
+        <span id="lambdaarn_csharp">
+<a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5586,7 +6438,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Body</span>
+        <span id="includebody_csharp">
+<a href="#includebody_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5602,7 +6456,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Type</span>
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5613,7 +6469,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Lambda<wbr>Arn</span>
+        <span id="lambdaarn_go">
+<a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5622,7 +6480,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Body</span>
+        <span id="includebody_go">
+<a href="#includebody_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5638,7 +6498,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Type</span>
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5649,7 +6511,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>lambda<wbr>Arn</span>
+        <span id="lambdaarn_nodejs">
+<a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5658,7 +6522,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Body</span>
+        <span id="includebody_nodejs">
+<a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5674,7 +6540,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Type</span>
+        <span id="eventtype_python">
+<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5685,7 +6553,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>lambda<wbr>Arn</span>
+        <span id="lambdaarn_python">
+<a href="#lambdaarn_python" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5694,7 +6564,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Body</span>
+        <span id="includebody_python">
+<a href="#includebody_python" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5728,7 +6600,9 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5738,7 +6612,9 @@ web site of your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_csharp">
+<a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5747,7 +6623,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Headers</span>
+        <span id="customheaders_csharp">
+<a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomheader">List&lt;Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -5758,7 +6636,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Origin<wbr>Config</span>
+        <span id="customoriginconfig_csharp">
+<a href="#customoriginconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -5769,7 +6649,9 @@ origin is required, use `s3_origin_config` instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Path</span>
+        <span id="originpath_csharp">
+<a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5780,7 +6662,9 @@ custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Origin<wbr>Config</span>
+        <span id="s3originconfig_csharp">
+<a href="#s3originconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -5798,7 +6682,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5808,7 +6694,9 @@ web site of your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_go">
+<a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5817,7 +6705,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Headers</span>
+        <span id="customheaders_go">
+<a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomheader">[]Distribution<wbr>Origin<wbr>Custom<wbr>Header</a></span>
     </dt>
@@ -5828,7 +6718,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Origin<wbr>Config</span>
+        <span id="customoriginconfig_go">
+<a href="#customoriginconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
@@ -5839,7 +6731,9 @@ origin is required, use `s3_origin_config` instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Path</span>
+        <span id="originpath_go">
+<a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5850,7 +6744,9 @@ custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Origin<wbr>Config</span>
+        <span id="s3originconfig_go">
+<a href="#s3originconfig_go" style="color: inherit; text-decoration: inherit;">S3Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
@@ -5868,7 +6764,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5878,7 +6776,9 @@ web site of your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_nodejs">
+<a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5887,7 +6787,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Headers</span>
+        <span id="customheaders_nodejs">
+<a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header[]</a></span>
     </dt>
@@ -5898,7 +6800,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Origin<wbr>Config</span>
+        <span id="customoriginconfig_nodejs">
+<a href="#customoriginconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
@@ -5909,7 +6813,9 @@ origin is required, use `s3_origin_config` instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Path</span>
+        <span id="originpath_nodejs">
+<a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5920,7 +6826,9 @@ custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Origin<wbr>Config</span>
+        <span id="s3originconfig_nodejs">
+<a href="#s3originconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
@@ -5938,7 +6846,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>domain_<wbr>name</span>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5948,7 +6858,9 @@ web site of your custom origin.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_python">
+<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5957,7 +6869,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Headers</span>
+        <span id="customheaders_python">
+<a href="#customheaders_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomheader">List[Distribution<wbr>Origin<wbr>Custom<wbr>Header]</a></span>
     </dt>
@@ -5968,7 +6882,9 @@ web site of your custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Origin<wbr>Config</span>
+        <span id="customoriginconfig_python">
+<a href="#customoriginconfig_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigincustomoriginconfig">Dict[Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config]</a></span>
     </dt>
@@ -5979,7 +6895,9 @@ origin is required, use `s3_origin_config` instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Path</span>
+        <span id="originpath_python">
+<a href="#originpath_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5990,7 +6908,9 @@ custom origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Origin<wbr>Config</span>
+        <span id="s3originconfig_python">
+<a href="#s3originconfig_python" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigins3originconfig">Dict[Distribution<wbr>Origin<wbr>S3Origin<wbr>Config]</a></span>
     </dt>
@@ -6026,7 +6946,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6034,7 +6956,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6049,7 +6973,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6057,7 +6983,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6072,7 +7000,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6080,7 +7010,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6095,7 +7027,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6103,7 +7037,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6136,7 +7072,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Http<wbr>Port</span>
+        <span id="httpport_csharp">
+<a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6145,7 +7083,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Https<wbr>Port</span>
+        <span id="httpsport_csharp">
+<a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6154,7 +7094,9 @@ configuration information. If a custom origin is required, use
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Protocol<wbr>Policy</span>
+        <span id="originprotocolpolicy_csharp">
+<a href="#originprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6164,7 +7106,9 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Ssl<wbr>Protocols</span>
+        <span id="originsslprotocols_csharp">
+<a href="#originsslprotocols_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Ssl<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -6175,7 +7119,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Keepalive<wbr>Timeout</span>
+        <span id="originkeepalivetimeout_csharp">
+<a href="#originkeepalivetimeout_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Keepalive<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6184,7 +7130,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Read<wbr>Timeout</span>
+        <span id="originreadtimeout_csharp">
+<a href="#originreadtimeout_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Read<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -6200,7 +7148,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Http<wbr>Port</span>
+        <span id="httpport_go">
+<a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6209,7 +7159,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Https<wbr>Port</span>
+        <span id="httpsport_go">
+<a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6218,7 +7170,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Protocol<wbr>Policy</span>
+        <span id="originprotocolpolicy_go">
+<a href="#originprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6228,7 +7182,9 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Ssl<wbr>Protocols</span>
+        <span id="originsslprotocols_go">
+<a href="#originsslprotocols_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Ssl<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -6239,7 +7195,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Keepalive<wbr>Timeout</span>
+        <span id="originkeepalivetimeout_go">
+<a href="#originkeepalivetimeout_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Keepalive<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6248,7 +7206,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin<wbr>Read<wbr>Timeout</span>
+        <span id="originreadtimeout_go">
+<a href="#originreadtimeout_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Read<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -6264,7 +7224,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>http<wbr>Port</span>
+        <span id="httpport_nodejs">
+<a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6273,7 +7235,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>https<wbr>Port</span>
+        <span id="httpsport_nodejs">
+<a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6282,7 +7246,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Protocol<wbr>Policy</span>
+        <span id="originprotocolpolicy_nodejs">
+<a href="#originprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6292,7 +7258,9 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Ssl<wbr>Protocols</span>
+        <span id="originsslprotocols_nodejs">
+<a href="#originsslprotocols_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Ssl<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -6303,7 +7271,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Keepalive<wbr>Timeout</span>
+        <span id="originkeepalivetimeout_nodejs">
+<a href="#originkeepalivetimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Keepalive<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6312,7 +7282,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Read<wbr>Timeout</span>
+        <span id="originreadtimeout_nodejs">
+<a href="#originreadtimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Read<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6328,7 +7300,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>http<wbr>Port</span>
+        <span id="httpport_python">
+<a href="#httpport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6337,7 +7311,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>https<wbr>Port</span>
+        <span id="httpsport_python">
+<a href="#httpsport_python" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6346,7 +7322,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Protocol<wbr>Policy</span>
+        <span id="originprotocolpolicy_python">
+<a href="#originprotocolpolicy_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Protocol<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6356,7 +7334,9 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Ssl<wbr>Protocols</span>
+        <span id="originsslprotocols_python">
+<a href="#originsslprotocols_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Ssl<wbr>Protocols</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -6367,7 +7347,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Keepalive<wbr>Timeout</span>
+        <span id="originkeepalivetimeout_python">
+<a href="#originkeepalivetimeout_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Keepalive<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6376,7 +7358,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin<wbr>Read<wbr>Timeout</span>
+        <span id="originreadtimeout_python">
+<a href="#originreadtimeout_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Read<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6410,7 +7394,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Failover<wbr>Criteria</span>
+        <span id="failovercriteria_csharp">
+<a href="#failovercriteria_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Criteria</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
@@ -6419,7 +7405,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_csharp">
+<a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
@@ -6428,7 +7416,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_csharp">
+<a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6444,7 +7434,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Failover<wbr>Criteria</span>
+        <span id="failovercriteria_go">
+<a href="#failovercriteria_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Criteria</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
@@ -6453,7 +7445,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_go">
+<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupmember">[]Distribution<wbr>Origin<wbr>Group<wbr>Member</a></span>
     </dt>
@@ -6462,7 +7456,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_go">
+<a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6478,7 +7474,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>failover<wbr>Criteria</span>
+        <span id="failovercriteria_nodejs">
+<a href="#failovercriteria_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
@@ -6487,7 +7485,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_nodejs">
+<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member[]</a></span>
     </dt>
@@ -6496,7 +7496,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_nodejs">
+<a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6512,7 +7514,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>failover<wbr>Criteria</span>
+        <span id="failovercriteria_python">
+<a href="#failovercriteria_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Dict[Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria]</a></span>
     </dt>
@@ -6521,7 +7525,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_python">
+<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorigingroupmember">List[Distribution<wbr>Origin<wbr>Group<wbr>Member]</a></span>
     </dt>
@@ -6530,7 +7536,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_python">
+<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6564,7 +7572,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Status<wbr>Codes</span>
+        <span id="statuscodes_csharp">
+<a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -6580,7 +7590,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Status<wbr>Codes</span>
+        <span id="statuscodes_go">
+<a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -6596,7 +7608,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>status<wbr>Codes</span>
+        <span id="statuscodes_nodejs">
+<a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -6612,7 +7626,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>status<wbr>Codes</span>
+        <span id="statuscodes_python">
+<a href="#statuscodes_python" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -6646,7 +7662,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_csharp">
+<a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6662,7 +7680,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Id</span>
+        <span id="originid_go">
+<a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6678,7 +7698,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_nodejs">
+<a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6694,7 +7716,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Id</span>
+        <span id="originid_python">
+<a href="#originid_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6728,7 +7752,9 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Access<wbr>Identity</span>
+        <span id="originaccessidentity_csharp">
+<a href="#originaccessidentity_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Access<wbr>Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6745,7 +7771,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Origin<wbr>Access<wbr>Identity</span>
+        <span id="originaccessidentity_go">
+<a href="#originaccessidentity_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Access<wbr>Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6762,7 +7790,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Access<wbr>Identity</span>
+        <span id="originaccessidentity_nodejs">
+<a href="#originaccessidentity_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Access<wbr>Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6779,7 +7809,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>origin<wbr>Access<wbr>Identity</span>
+        <span id="originaccessidentity_python">
+<a href="#originaccessidentity_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Access<wbr>Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6814,7 +7846,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Geo<wbr>Restriction</span>
+        <span id="georestriction_csharp">
+<a href="#georestriction_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restriction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
@@ -6829,7 +7863,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Geo<wbr>Restriction</span>
+        <span id="georestriction_go">
+<a href="#georestriction_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restriction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
@@ -6844,7 +7880,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>geo<wbr>Restriction</span>
+        <span id="georestriction_nodejs">
+<a href="#georestriction_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
@@ -6859,7 +7897,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>geo<wbr>Restriction</span>
+        <span id="georestriction_python">
+<a href="#georestriction_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Dict[Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction]</a></span>
     </dt>
@@ -6892,7 +7932,9 @@ identity][5] to associate with the origin.
 
     <dt class="property-required"
             title="Required">
-        <span>Restriction<wbr>Type</span>
+        <span id="restrictiontype_csharp">
+<a href="#restrictiontype_csharp" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6903,7 +7945,9 @@ distribution of your content by country: `none`, `whitelist`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locations</span>
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -6921,7 +7965,9 @@ distribute your content (`blacklist`).
 
     <dt class="property-required"
             title="Required">
-        <span>Restriction<wbr>Type</span>
+        <span id="restrictiontype_go">
+<a href="#restrictiontype_go" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6932,7 +7978,9 @@ distribution of your content by country: `none`, `whitelist`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locations</span>
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -6950,7 +7998,9 @@ distribute your content (`blacklist`).
 
     <dt class="property-required"
             title="Required">
-        <span>restriction<wbr>Type</span>
+        <span id="restrictiontype_nodejs">
+<a href="#restrictiontype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6961,7 +8011,9 @@ distribution of your content by country: `none`, `whitelist`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>locations</span>
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -6979,7 +8031,9 @@ distribute your content (`blacklist`).
 
     <dt class="property-required"
             title="Required">
-        <span>restriction<wbr>Type</span>
+        <span id="restrictiontype_python">
+<a href="#restrictiontype_python" style="color: inherit; text-decoration: inherit;">restriction<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6990,7 +8044,9 @@ distribution of your content by country: `none`, `whitelist`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>locations</span>
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -7026,7 +8082,9 @@ distribute your content (`blacklist`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acm<wbr>Certificate<wbr>Arn</span>
+        <span id="acmcertificatearn_csharp">
+<a href="#acmcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Acm<wbr>Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7038,7 +8096,9 @@ certificate must be in  US-EAST-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudfront<wbr>Default<wbr>Certificate</span>
+        <span id="cloudfrontdefaultcertificate_csharp">
+<a href="#cloudfrontdefaultcertificate_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Default<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -7049,7 +8109,9 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Certificate<wbr>Id</span>
+        <span id="iamcertificateid_csharp">
+<a href="#iamcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7060,7 +8122,9 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Protocol<wbr>Version</span>
+        <span id="minimumprotocolversion_csharp">
+<a href="#minimumprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7078,7 +8142,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssl<wbr>Support<wbr>Method</span>
+        <span id="sslsupportmethod_csharp">
+<a href="#sslsupportmethod_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Support<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7093,7 +8159,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acm<wbr>Certificate<wbr>Arn</span>
+        <span id="acmcertificatearn_go">
+<a href="#acmcertificatearn_go" style="color: inherit; text-decoration: inherit;">Acm<wbr>Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7105,7 +8173,9 @@ certificate must be in  US-EAST-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cloudfront<wbr>Default<wbr>Certificate</span>
+        <span id="cloudfrontdefaultcertificate_go">
+<a href="#cloudfrontdefaultcertificate_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Default<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -7116,7 +8186,9 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Certificate<wbr>Id</span>
+        <span id="iamcertificateid_go">
+<a href="#iamcertificateid_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7127,7 +8199,9 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Protocol<wbr>Version</span>
+        <span id="minimumprotocolversion_go">
+<a href="#minimumprotocolversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7145,7 +8219,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssl<wbr>Support<wbr>Method</span>
+        <span id="sslsupportmethod_go">
+<a href="#sslsupportmethod_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Support<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7160,7 +8236,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acm<wbr>Certificate<wbr>Arn</span>
+        <span id="acmcertificatearn_nodejs">
+<a href="#acmcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">acm<wbr>Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7172,7 +8250,9 @@ certificate must be in  US-EAST-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudfront<wbr>Default<wbr>Certificate</span>
+        <span id="cloudfrontdefaultcertificate_nodejs">
+<a href="#cloudfrontdefaultcertificate_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Default<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -7183,7 +8263,9 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Certificate<wbr>Id</span>
+        <span id="iamcertificateid_nodejs">
+<a href="#iamcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7194,7 +8276,9 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>Protocol<wbr>Version</span>
+        <span id="minimumprotocolversion_nodejs">
+<a href="#minimumprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7212,7 +8296,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssl<wbr>Support<wbr>Method</span>
+        <span id="sslsupportmethod_nodejs">
+<a href="#sslsupportmethod_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Support<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7227,7 +8313,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acm<wbr>Certificate<wbr>Arn</span>
+        <span id="acmcertificatearn_python">
+<a href="#acmcertificatearn_python" style="color: inherit; text-decoration: inherit;">acm<wbr>Certificate<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7239,7 +8327,9 @@ certificate must be in  US-EAST-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cloudfront<wbr>Default<wbr>Certificate</span>
+        <span id="cloudfrontdefaultcertificate_python">
+<a href="#cloudfrontdefaultcertificate_python" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Default<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7250,7 +8340,9 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Certificate<wbr>Id</span>
+        <span id="iamcertificateid_python">
+<a href="#iamcertificateid_python" style="color: inherit; text-decoration: inherit;">iam<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7261,7 +8353,9 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>Protocol<wbr>Version</span>
+        <span id="minimumprotocolversion_python">
+<a href="#minimumprotocolversion_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7279,7 +8373,9 @@ must be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssl<wbr>Support<wbr>Method</span>
+        <span id="sslsupportmethod_python">
+<a href="#sslsupportmethod_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Support<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

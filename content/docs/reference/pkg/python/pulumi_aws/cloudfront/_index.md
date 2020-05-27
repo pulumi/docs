@@ -486,7 +486,7 @@ this distribution.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.arn">
 <code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p>
+<dd><p>The ARN (Amazon Resource Name) for the distribution. For example: <code class="docutils literal notranslate"><span class="pre">arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5</span></code>, where <code class="docutils literal notranslate"><span class="pre">123456789012</span></code> is your AWS account ID.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -935,7 +935,7 @@ each trusted signer, if the distribution is set up to serve private content
 with signed URLs.</p></li>
 <li><p><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
 this distribution.</p></li>
-<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the distribution. For example: <code class="docutils literal notranslate"><span class="pre">arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5</span></code>, where <code class="docutils literal notranslate"><span class="pre">123456789012</span></code> is your AWS account ID.</p></li>
 <li><p><strong>caller_reference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internal value used by CloudFront to allow future
 updates to the distribution configuration.</p></li>
 <li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Any comments you want to include about the

@@ -37,7 +37,7 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_insights = azure.appinsights.Insights("exampleInsights",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    application_type="Other")
+    application_type="other")
 example_service = azure.apimanagement.Service("exampleService",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -62,7 +62,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    applicationType: "Other",
+    applicationType: "other",
 });
 const exampleService = new azure.apimanagement.Service("exampleService", {
     location: exampleResourceGroup.location,
@@ -267,7 +267,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Management<wbr>Name</span>
+        <span id="apimanagementname_csharp">
+<a href="#apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +278,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +289,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights</span>
+        <span id="applicationinsights_csharp">
+<a href="#applicationinsights_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
@@ -294,7 +300,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffered</span>
+        <span id="buffered_csharp">
+<a href="#buffered_csharp" style="color: inherit; text-decoration: inherit;">Buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -303,7 +311,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +322,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub</span>
+        <span id="eventhub_csharp">
+<a href="#eventhub_csharp" style="color: inherit; text-decoration: inherit;">Eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
@@ -321,7 +333,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -337,7 +351,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Management<wbr>Name</span>
+        <span id="apimanagementname_go">
+<a href="#apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -346,7 +362,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +373,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights</span>
+        <span id="applicationinsights_go">
+<a href="#applicationinsights_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
     </dt>
@@ -364,7 +384,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffered</span>
+        <span id="buffered_go">
+<a href="#buffered_go" style="color: inherit; text-decoration: inherit;">Buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -373,7 +395,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +406,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub</span>
+        <span id="eventhub_go">
+<a href="#eventhub_go" style="color: inherit; text-decoration: inherit;">Eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
     </dt>
@@ -391,7 +417,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +435,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>api<wbr>Management<wbr>Name</span>
+        <span id="apimanagementname_nodejs">
+<a href="#apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -416,7 +446,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +457,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Insights</span>
+        <span id="applicationinsights_nodejs">
+<a href="#applicationinsights_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
     </dt>
@@ -434,7 +468,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffered</span>
+        <span id="buffered_nodejs">
+<a href="#buffered_nodejs" style="color: inherit; text-decoration: inherit;">buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -443,7 +479,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +490,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub</span>
+        <span id="eventhub_nodejs">
+<a href="#eventhub_nodejs" style="color: inherit; text-decoration: inherit;">eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
     </dt>
@@ -461,7 +501,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +519,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>api_<wbr>management_<wbr>name</span>
+        <span id="api_management_name_python">
+<a href="#api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -486,7 +530,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +541,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>insights</span>
+        <span id="application_insights_python">
+<a href="#application_insights_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Dict[Logger<wbr>Application<wbr>Insights]</a></span>
     </dt>
@@ -504,7 +552,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffered</span>
+        <span id="buffered_python">
+<a href="#buffered_python" style="color: inherit; text-decoration: inherit;">buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -513,7 +563,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -522,7 +574,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub</span>
+        <span id="eventhub_python">
+<a href="#eventhub_python" style="color: inherit; text-decoration: inherit;">eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Dict[Logger<wbr>Eventhub]</a></span>
     </dt>
@@ -531,7 +585,9 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -558,7 +614,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -573,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -588,7 +648,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -603,7 +665,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -744,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Management<wbr>Name</span>
+        <span id="state_apimanagementname_csharp">
+<a href="#state_apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -753,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights</span>
+        <span id="state_applicationinsights_csharp">
+<a href="#state_applicationinsights_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
@@ -762,7 +830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffered</span>
+        <span id="state_buffered_csharp">
+<a href="#state_buffered_csharp" style="color: inherit; text-decoration: inherit;">Buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -771,7 +841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -780,7 +852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub</span>
+        <span id="state_eventhub_csharp">
+<a href="#state_eventhub_csharp" style="color: inherit; text-decoration: inherit;">Eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
@@ -789,7 +863,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -798,7 +874,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -814,7 +892,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Management<wbr>Name</span>
+        <span id="state_apimanagementname_go">
+<a href="#state_apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -823,7 +903,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Insights</span>
+        <span id="state_applicationinsights_go">
+<a href="#state_applicationinsights_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
     </dt>
@@ -832,7 +914,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Buffered</span>
+        <span id="state_buffered_go">
+<a href="#state_buffered_go" style="color: inherit; text-decoration: inherit;">Buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -841,7 +925,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -850,7 +936,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eventhub</span>
+        <span id="state_eventhub_go">
+<a href="#state_eventhub_go" style="color: inherit; text-decoration: inherit;">Eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
     </dt>
@@ -859,7 +947,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -868,7 +958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -884,7 +976,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Management<wbr>Name</span>
+        <span id="state_apimanagementname_nodejs">
+<a href="#state_apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -893,7 +987,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Insights</span>
+        <span id="state_applicationinsights_nodejs">
+<a href="#state_applicationinsights_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
     </dt>
@@ -902,7 +998,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffered</span>
+        <span id="state_buffered_nodejs">
+<a href="#state_buffered_nodejs" style="color: inherit; text-decoration: inherit;">buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -911,7 +1009,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -920,7 +1020,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub</span>
+        <span id="state_eventhub_nodejs">
+<a href="#state_eventhub_nodejs" style="color: inherit; text-decoration: inherit;">eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
     </dt>
@@ -929,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -938,7 +1042,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -954,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>management_<wbr>name</span>
+        <span id="state_api_management_name_python">
+<a href="#state_api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -963,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>insights</span>
+        <span id="state_application_insights_python">
+<a href="#state_application_insights_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggerapplicationinsights">Dict[Logger<wbr>Application<wbr>Insights]</a></span>
     </dt>
@@ -972,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>buffered</span>
+        <span id="state_buffered_python">
+<a href="#state_buffered_python" style="color: inherit; text-decoration: inherit;">buffered</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -981,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -990,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eventhub</span>
+        <span id="state_eventhub_python">
+<a href="#state_eventhub_python" style="color: inherit; text-decoration: inherit;">eventhub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggereventhub">Dict[Logger<wbr>Eventhub]</a></span>
     </dt>
@@ -999,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1008,7 +1126,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1050,7 +1170,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_csharp">
+<a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1066,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_go">
+<a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1082,7 +1206,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>instrumentation<wbr>Key</span>
+        <span id="instrumentationkey_nodejs">
+<a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>instrumentation_<wbr>key</span>
+        <span id="instrumentation_key_python">
+<a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1132,7 +1260,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>String</span>
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1141,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1157,7 +1289,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>String</span>
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1166,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1182,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>connection<wbr>String</span>
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1191,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1207,7 +1347,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>connection_<wbr>string</span>
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1216,7 +1358,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
