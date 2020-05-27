@@ -17,8 +17,6 @@ Configuration allows you to author flexible Policy Packs that can be reused acro
 
 Configuration schema is defined per policy, and then the actual configuration can be set via a form in the Pulumi Console or using a JSON file.
 
-Configuration is currently supported for the Node.js Policy SDK (TypeScript/JavaScript). Python support for configuration is [coming soon](https://github.com/pulumi/pulumi-policy/issues/210).
-
 ## Writing Configurable Policy Packs
 
 ### Enforcement Level
@@ -49,16 +47,20 @@ As a convenience, when only configuring an enforcement level for a policy, its v
 
 ### Custom Configuration
 
-Policy authors can denote the schema for a particular Policy's configuration using the `configSchema` field. The configuration schema uses [JSON Schema](https://json-schema.org/) to describe the acceptable configuration for a Policy.
+Policy authors can denote the schema for a particular Policy's configuration using the {{< policy-configschema >}} field. The configuration schema uses [JSON Schema](https://json-schema.org/) to describe the acceptable configuration for a Policy.
 
-At the top level, the `configSchema` for each Policy has only the `properties` and `required` fields. Within the `properties` field, you may use the entire breadth of [validations keywords provided by the JSON Schema](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6). Validation keywords are fields like `minLength` and `maxLength` in the below example.
+At the top level, the {{< policy-configschema >}} for each Policy has only the `properties` and `required` arguments. Within `properties`, you may use the entire breadth of [validations keywords provided by the JSON Schema](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6). Validation keywords are fields like `minLength` and `maxLength` in the below example.
 
-The below example shows a  `ResourceValidationPolicy` that has an optional `message` field, which must be between five and fifty characters. Then, from within the `validateResource` function the configuration value can be accessed using `args.getConfig`. All property fields are optional by default.  
+The below example shows a  `ResourceValidationPolicy` that has an optional `message` config property, which must be between five and fifty characters. Then, from within the {{< policy-validateresource >}} function the configuration value can be accessed using {{< policy-args-getconfig >}}. All config properties are optional by default.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const examplePolicy: ResourceValidationPolicy = {
     name: "example-policy-with-schema",
-    ...
+    description: "Example policy with schema.",
     configSchema: {
         properties: {
             message: {
@@ -78,16 +80,50 @@ const examplePolicy: ResourceValidationPolicy = {
 }
 ```
 
-The schema in the above example includes an optional property. If the property value is not set, a reasonable message is set from within the `validateResource` function. It's generally better to provide policies that have reasonable defaults and can run without setting any configuration values. Configuration should be used to change behavior or opt-in to more specific checks in the case that a specific configuration property is set. For example, a policy that checks encryption is enabled can be done without any configuration, but an optional configuration property for an "id of the encryption key" can be specified to further enforce that a specific key is being used for the encryption.
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+def example_policy_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    config = args.get_config()
+    if "message" not in config:
+        config["message"] = "Setting reasonable defaults is recommended!"
+    report_violation(f"Here is the configurable message: {config['message']}")
+
+example_policy = ResourceValidationPolicy(
+    name="example-policy-with-schema",
+    description="Example policy with schema.",
+    config_schema=PolicyConfigSchema(
+        properties={
+            "message": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 50,
+            },
+        }
+    ),
+    validate=example_policy_validator,
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The schema in the above example includes an optional property. If the property value is not set, a reasonable message is set from within the {{< policy-validateresource >}} function. It's generally better to provide policies that have reasonable defaults and can run without setting any configuration values. Configuration should be used to change behavior or opt-in to more specific checks in the case that a specific configuration property is set. For example, a policy that checks encryption is enabled can be done without any configuration, but an optional configuration property for an "id of the encryption key" can be specified to further enforce that a specific key is being used for the encryption.
 
 #### Required Properties
 
 In some cases, you may need to require a property be set via configuration. This can be done by adding the property to the `required` list as shown in the example below.
 
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 const examplePolicy: ResourceValidationPolicy = {
     name: "example-policy-with-schema",
-    ...
+    description: "Example policy with schema.",
     configSchema: {
         properties: {
             message: {
@@ -106,6 +142,35 @@ const examplePolicy: ResourceValidationPolicy = {
     }),
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+def example_policy_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    config = args.get_config()
+    report_violation(f"Here is the configurable message: {config['message']}")
+
+example_policy = ResourceValidationPolicy(
+    name="example-policy-with-schema",
+    description="Example policy with schema.",
+    config_schema=PolicyConfigSchema(
+        properties={
+            "message": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 50,
+            },
+        },
+        required=["message"]
+    ),
+    validate=example_policy_validator,
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Running Policy Packs Locally
 
